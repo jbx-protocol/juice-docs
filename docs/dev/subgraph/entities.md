@@ -40,7 +40,7 @@ Notes:
 
 ## ProtocolLog
 
-**Description:** High level view of the Juicebox Protocol<br/>
+**Description:** High level overview of the Juicebox Protocol.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                  | Type                                     | Description                               |
@@ -57,7 +57,7 @@ Notes:
 
 ## ProjectCreateEvent
 
-**Description:** Entity detailing info about the creation of a project<br/>
+**Description:** Entity detailing info about the creation of a project.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field     | Type     | Description                                       |
@@ -72,7 +72,7 @@ Notes:
 
 ## Project
 
-**Description:**<br/>
+**Description:** Overview of a specific project.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                                | Type                                                                   | Description                           |
@@ -119,7 +119,7 @@ Notes:
 
 ## Participant
 
-**Description:** A users participation with a project. This is the M:M link between users:projects<br/>
+**Description:** A users participation with a project. This is the M:M link between users:projects.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field             | Type     | Description                                                    |
@@ -137,7 +137,7 @@ Notes:
 
 ## ProjectEvent
 
-**Description:**<br/>
+**Description:** Events shown in a project's activity feed on [juicebox.money](https://juicebox.money), including payments and distributions.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                               | Type                                | Description                                                     |
@@ -165,7 +165,7 @@ Notes:
 
 ## PayEvent
 
-**Description:**<br/>
+**Description:** Pay events across the protocol.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field            | Type     | Description                                          |
@@ -184,7 +184,7 @@ Notes:
 
 ## MintTokensEvent
 
-**Description:**<br/>
+**Description:** Token minting events across the protocol.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field       | Type     | Description                                |
@@ -202,7 +202,7 @@ Notes:
 
 ## RedeemEvent
 
-**Description:**<br/>
+**Description:** Overflow redemption events across the protocol.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field        | Type     | Description                                      |
@@ -221,7 +221,7 @@ Notes:
 
 ## DeployedERC20Event
 
-**Description:**<br/>
+**Description:** View deployments of new [`JBToken`](/dev/api/contracts/jbtoken/)s.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field     | Type     | Description                       |
@@ -237,7 +237,7 @@ Notes:
 
 ## ProtocolV1Log
 
-**Description:**<br/>
+**Description:** High level view of Juicebox v1.<br/>
 **Applicable Versions:** `v1.0`, `v1.1`
 
 | Field          | Type         | Description                                  |
@@ -334,7 +334,7 @@ Notes:
 
 ## ProtocolV2Log
 
-**Description:**<br/>
+**Description:** High level view of Juicebox v2.<br/>
 **Applicable Versions:** `v2`
 
 | Field          | Type         | Description                                |
@@ -350,7 +350,7 @@ Notes:
 
 ## DistributePayoutsEvent
 
-**Description:**<br/>
+**Description:** View of payout distributions. See [`JBSingleTokenPaymentTerminalStore.distributePayoutsOf`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/).<br/>
 **Applicable Versions:** `v2`
 
 | Field                         | Type                                                                          | Description                                        |
@@ -398,7 +398,7 @@ Notes:
 
 ## DistributeReservedTokensEvent
 
-**Description:**<br/>
+**Description:** View of reserved token distributions. See [`JBController.distributeReservedTokensOf`](/dev/api/contracts/or-controllers/jbcontroller/write/distributereservedtokensof/).<br/>
 **Applicable Versions:** `v2`
 
 | Field                 | Type                                                                                      | Description                                                |
@@ -440,7 +440,7 @@ Notes:
 
 ## UseAllowanceEvent
 
-**Description:**<br/>
+**Description:** View overflow allowance use. See [`JBController.overflowAllowanceOf`](/dev/api/contracts/or-controllers/jbcontroller/read/overflowallowanceof/).<br/>
 **Applicable Versions:** `v2`
 
 | Field                     | Type     | Description                                     |
@@ -461,7 +461,7 @@ Notes:
 
 ## DeployETHERC20ProjectPayerEvent
 
-**Description:**<br/>
+**Description:** View new deployments of `ETHERC20ProjectPayer`s. See [`JBETHERC20ProjectPayerDeployer`](/dev/api/contracts/or-utilities/jbetherc20projectpayerdeployer/).<br/>
 **Applicable Versions:** `v2`
 
 | Field               | Type     | Description                                |
@@ -483,7 +483,7 @@ Notes:
 
 ## ETHERC20ProjectPayer
 
-**Description:**<br/>
+**Description:** View [`JBETHERC20ProjectPayer`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/) events.<br/>
 **Applicable Versions:** `v2`
 
 | Field               | Type     | Description                       |
