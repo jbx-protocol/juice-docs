@@ -14,7 +14,7 @@ Juicebox is an **Ethereum funding protocol** which can help you fund, operate, a
 It takes about 10 minutes to create a Juicebox project, which you can use to:
 
 - Crowdfund your project with ETH.
-- Issue tokens and NFTs to your supporters — and reserve a percentage of those tokens/NFTs for you, your team, or a community stockpile. You can use these tokens/NFTs for governance rights, community access, or other perks.
+- Mint tokens and NFTs to your supporters — and reserve a percentage of those tokens/NFTs for you, your team, or a community stockpile. You can use these tokens/NFTs for governance rights, community access, or other perks.
 - Build trust with *Cycles*.
     - With unlocked cycles, you can edit your project's rules at any time.
     - With locked cycles, you can lock your project's rules for a period of time (like 3 minutes, 2 years, or 14 days), helping you build trust with your supporters.

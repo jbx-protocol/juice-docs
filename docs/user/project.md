@@ -66,32 +66,32 @@ For example: with a 3-day edit deadline, edits must be made at least 3 days befo
 ## Token
 
 :::tip
-Project tokens are not ERC-20 tokens by default. Once you deploy your project, you can issue an ERC-20 for your supporters to claim, making them compatible with tools like Uniswap. This is optional.
+Project tokens are not ERC-20 tokens by default. Once you create your project, you can create an ERC-20 for your supporters to claim, making them compatible with tools like Uniswap. This is optional.
 :::
 
-#### Total issuance rate
+#### Total mint rate
 
-The total number of tokens issued when this project is paid 1 ETH. Some of these tokens may be reserved by the project, and the rest are sent to the payer.
+The total number of tokens minted when this project is paid 1 ETH. Some of these tokens may be reserved by the project, and the rest are sent to the payer.
 
 *How to choose:* The protocol calculates everything proportionately, so this number doesn't matter too much. 1,000,000 is a good starting point for most projects.
 
 #### Reserved rate
 
-As tokens are issued, you can set aside a percentage of them for the wallets and Juicebox projects of your choosing. With a reserved rate of 20%, 20% of tokens are redirected towards whoever is on your list.
+As tokens are minted, you can set aside a percentage of them for the wallets and Juicebox projects of your choosing. With a reserved rate of 20%, 20% of tokens are redirected towards whoever is on your list.
 
 *How to choose:* If you need to offer full refunds, set this to 0%. Reserved rates can vary widely — projects set this anywhere from 0% to 50%.
 
-#### Issuance reduction rate
+#### Mint rate reduction
 
-This makes your token more expensive over time. With an issuance reduction rate of 5%, your tokens will get 5% more expensive each cycle, even if you don't edit the cycle.
+This makes your token more expensive over time. With a 5% mint rate reduction, your tokens will get 5% more expensive each cycle, even if you don't edit the cycle.
 
-*How to choose:* The issuance reduction rate can have a dramatic effect: the higher you set it, the more you reward earlier supporters over later ones. Most projects will keep this disabled, or use a rate from 1-3%.
+*How to choose:* A mint rate reduction can have a dramatic effect: the higher you set it, the more you reward earlier supporters over later ones. Most projects will keep this disabled, or use a rate from 1-3%.
 
 #### Redemption rate
 
 Supporters can burn their tokens to reclaim some of the ETH not needed for payouts. The amount of ETH they receive depends on the redemption rate.
 
-At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the overflow. At 0%, redemptions are turned off. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH per token redeemed, and later redeemers will get more.
+At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the ETH not needed for payouts. At 0%, redemptions are turned off. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH per token redeemed, and later redeemers will get more.
 
 The lower this rate is, the less of an incentive there is to redeem tokens before others.
 
@@ -99,7 +99,7 @@ The lower this rate is, the less of an incentive there is to redeem tokens befor
 
 #### Owner token minting
 
-If this is enabled, you (the project owner) can issue tokens on demand.
+If this is enabled, you (the project owner) can mint tokens on demand.
 
 *How to choose:* This will appear risky to supporters, so keep this off unless you're completely sure you need to enable it.
 

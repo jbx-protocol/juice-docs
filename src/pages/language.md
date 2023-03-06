@@ -6,27 +6,28 @@ In [this PR to juicebox.money](https://github.com/jbx-protocol/juice-interface/p
 
 A summary of the changes:
 
-| Original Phrase                                      | Revised Phrase          |
-| ---------------------------------------------------- | ----------------------- |
-| Funding Cycle                                        | Cycle                   |
-| Configuration                                        | Rules                   |
-| Reconfigure                                          | Edit                    |
-| Reconfiguration Delay                                | Edit Deadline           |
-| Treasury                                             | Project                 |
-| Funds                                                | ETH                     |
-| Project NFT                                          | Owner NFT               |
-| Distributions/Distribution Limit/Funding Target      | Payouts                 |
-| Allocation                                           | Recipient               |
-| Distribute                                           | Send                    |
-| Overflow                                             | Contextual[^2]          |
-| Contribute                                           | Pay                     |
-| Contributors (people who have paid a project)        | Supporters              |
-| Initial Mint Rate, Token Minting Rate                | Total Issuance Rate     |
-| Contributor Rate                                     | Payer Issuance Rate     |
-| Reserved Rate (when referring to # of tokens minted) | Reserved Issuance Rate  |
-| Discount Rate                                        | Issuance Reduction Rate |
-| Token Minting                                        | Owner Token Minting     |
-| Payment Address                                      | Project Payer Address   |
+| Original Phrase                                      | Revised Phrase        |
+| ---------------------------------------------------- | --------------------- |
+| Funding Cycle                                        | Cycle                 |
+| Configuration                                        | Rules                 |
+| Reconfigure                                          | Edit                  |
+| Reconfiguration Delay                                | Edit Deadline         |
+| Treasury                                             | Project               |
+| Funds                                                | ETH                   |
+| Project NFT                                          | Owner NFT             |
+| Distributions/Distribution Limit/Funding Target      | Payouts               |
+| Distribute                                           | Send                  |
+| Allocation                                           | Recipient             |
+| Overflow                                             | Contextual[^2]        |
+| Contribute                                           | Pay                   |
+| Contributors (people who have paid a project)        | Supporters            |
+| Initial Mint Rate, Token Minting Rate                | Total Mint Rate       |
+| Contributor Rate                                     | Payer Mint Rate       |
+| Reserved Rate (when referring to # of tokens minted) | Reserved Mint Rate    |
+| Discount Rate                                        | Mint Rate Reduction   |
+| Token Minting                                        | Owner Token Minting   |
+| Payment Address                                      | Project Payer Address |
+| Deploy/Launch/Issue                                  | Create                |
 
 To see the terms in context, read the updated [project guide](/user/project/). **We should consistently use the updated terms in content we make and messages we send.**
 
