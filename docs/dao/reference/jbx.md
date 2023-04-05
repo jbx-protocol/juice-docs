@@ -45,15 +45,21 @@ You can see current JBX holders ranked below:
   width: 100%;
   min-height: 400px;
   display: inline-block;
+  background-color: #f5f5f5;
+  border-radius: 5px;
 }
 
-tr {
-  background-color: white;
-}`}</style>
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
 
-<iframe src="https://dune.com/embeds/2331798/3817364"></iframe>
+`}</style>
 
-<iframe src="https://dune.com/embeds/2331798/3817394"></iframe>
+<div class="wrapper">
+  <iframe src="https://dune.com/embeds/2331798/3817364"></iframe>
+  <iframe src="https://dune.com/embeds/2331798/3817394"></iframe>
+</div>
 
 ## About Fees
 
