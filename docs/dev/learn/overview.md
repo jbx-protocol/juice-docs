@@ -51,7 +51,7 @@ The Juicebox protocol is a framework for funding and operating projects openly o
 
 ##### Distribution limit
 <p>
-  The amount of funds that can be distributed out from the project's treasury during a funding cycle. The project owner can pre-program a list of addresses, other Juicebox projects, and contracts that adhere to <a href="/dev/api/interfaces/ijbsplitsallocator.md">IJBSplitsAllocator</a> to split distributions between. Treasury funds in excess of the distribution limit is considered overflow, which can serve as runway or be reclaimed by token holders who redeem their tokens.
+  The amount of funds that can be distributed out from the project's treasury during a funding cycle. The project owner can pre-program a list of addresses, other Juicebox projects, and contracts that adhere to <a href="/dev/api/interfaces/ijbsplitallocator"><code>IJBSplitAllocator</code></a> to split distributions between. Treasury funds in excess of the distribution limit is considered overflow, which can serve as runway or be reclaimed by token holders who redeem their tokens.
 </p>
 <p>
   Distributing is a public transaction that anyone can call on a project's behalf. The project owner can also include a split that sends a percentage of the distributed funds to the address who executes this transaction.
@@ -119,7 +119,7 @@ The protocol charges a <a href="#jbx-membership-fee">JBX membership fee</a> on f
 
 ##### Reserved rate
 <p>
-  The percentage of newly minted tokens that a project wishes to withhold for custom distributions. The project owner can pre-program a list of addresses, other Juicebox project owners, and contracts that adhere to <a href="/dev/api/interfaces/ijbsplitsallocator.md">IJBSplitsAllocator</a> to split reserved tokens between.
+  The percentage of newly minted tokens that a project wishes to withhold for custom distributions. The project owner can pre-program a list of addresses, other Juicebox project owners, and contracts that adhere to <a href="/dev/api/interfaces/ijbsplitallocator"><code>IJBSplitAllocator</code></a> to split reserved tokens between.
 </p>
 <p>
   <a href="/dev/learn/glossary/reserved-tokens">Learn more about reserved rate</a>
