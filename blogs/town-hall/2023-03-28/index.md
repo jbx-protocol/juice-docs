@@ -6,7 +6,7 @@ image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](/Users/zhape/Library/Mobile Documents/com~apple~CloudDocs/Documents/Juicebox_townhalls/2023-03-28/townhall.webp) 
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## JBX V3 Migration by Jango
 
