@@ -5,6 +5,10 @@ sidebar_position: 1
 
 # Juicebox Emergency Procedures
 
+:::info
+This procedure is based on practices established by [Yearn Finance](https://docs.yearn.finance/developers/v2/EMERGENCY).
+:::
+
 ## Introduction
 
 The following procedures and guidelines have been written to minimize potential for loss of funds in the event of an emergency.

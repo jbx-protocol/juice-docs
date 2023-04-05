@@ -4,14 +4,18 @@ sidebar_position: 1
 
 # About JuiceboxDAO
 
+:::info
+To learn more about JuiceboxDAO and JBX, read [JBX & Fees](/dao/reference/jbx/).
+:::
+
 JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their treasuries and tokens.
 
 JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
 
-- Learn about the DAO's core values in the **[Foundation](foundation).**
-- Learn how the DAO makes decisions in the **[Governance Process](process).**
-- Learn how to become a contributor with the **[Contributor Guide](contribute).**
-- Visit the DAO's **[Snapshot](https://juicetool.xyz/snapshot/jbdao.eth).**
+- Learn about the DAO's core values in the [Foundation](foundation).
+- Learn how the DAO makes decisions in the [Governance Process](process).
+- Learn how to become a contributor with the [Contributor Guide](contribute).
+- Visit the DAO's [Governance Portal](https://jbdao.org).
 
 <details>
 
@@ -63,6 +67,30 @@ Juicebox governance runs on a [14 day cycle](process). Discord temperature check
 
 ### Partners
 
-- [Peel](https://juicebox.money/#/p/peel) is a group of immensely talented frontend devs. Peel's contributors are the masterminds behind [juicebox.money](https://www.juicebox.money).
-- [WAGMI Studios](https://juicebox.money/#/p/wagmistudios) is a collective of quirky creatives behind Juicebox DAO's visual identity. WAGMI Studios' contributors are masters of storytelling, visual art, and animation.
-- [Lexicon Devils](https://juicebox.money/#/p/lexicondevils) is a collective architecting hyperverse experiences in Cryptovoxels and Substrata. Lexicon Devils is behind the magical [Juicebox Lounge](http://juicebox.lexicondevils.xyz/) and orchestrate its many live events, metaverse parties, and DJ sets.
+[Peel](https://juicebox.money/@peel) is a group of immensely talented frontend devs. Peel's contributors are the masterminds behind [juicebox.money](https://www.juicebox.money). Contact them on [Discord](https://discord.gg/XvmfY4Hkcz).
+
+[WAGMI Studios](https://juicebox.money/@wagmi-studios) is a collective of quirky creatives behind Juicebox DAO's visual identity. WAGMI Studios' contributors are masters of storytelling, visual art, and animation. Contact them on [Discord](https://discord.gg/XnYFFGaXsu).
+
+[Nance](https://juicebox.money/v2/p/477) is building tools to facilitate and automate cyclic governance processes. Nance contributors are behind [Juicetool](https://juicetool.xyz/), [jbdao.org](https://jbdao.org), and [Nance](https://nance.app), the tool automating JuiceboxDAO's governance. Contact them on [Discord](https://discord.gg/zshrVC3Jhc).
+
+### Who is Juicebox DAO?
+
+From [JBX & Fees](/dao/reference/jbx/):
+
+> The Juicebox protocol is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed via the JBX token. "DAO" stands for _Decentralized Autonomous Organization_ — by utilizing token governance and the Juicebox protocol itself, JuiceboxDAO is able to manage strategic decisions, payouts to contributors, and to consistently deliver upgrades to a best-in-class Ethereum protocol, along with a powerful suite of tools to support it.
+> 
+> You can see current JBX holders ranked below:
+
+<style>{`iframe {
+  width: 100%;
+  min-height: 400px;
+  display: inline-block;
+}
+
+tr {
+  background-color: white;
+}`}</style>
+
+<iframe src="https://dune.com/embeds/2331798/3817364"></iframe>
+
+<iframe src="https://dune.com/embeds/2331798/3817394"></iframe>

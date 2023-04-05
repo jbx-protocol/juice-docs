@@ -4,7 +4,9 @@ sidebar_position: 5
 
 # Make a Governance Proposal
 
-> Juicebox DAO runs on a [14 day governance cycle](../process). Follow along in the [Juicebox DAO Discord Server](https://discord.gg/juicebox).
+:::info
+Juicebox DAO runs on a [14 day governance cycle](../process). Follow along in the [Juicebox DAO Discord Server](https://discord.gg/juicebox) and on our [Governance Portal](https://jbdao.org).
+:::
 
 #### To create a new proposal:
 
