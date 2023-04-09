@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 :::info
-We also have a [video tutorial](https://www.youtube.com/watch?v=2s2OyxG_rvo). If you need help, [contact onboarding](https://juicebox.money/contact).
+We also have a [video tutorial](https://www.youtube.com/watch?v=2s2OyxG_rvo). If you need help, [join our Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact).
 :::
 
 What to know beforehand:

@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 :::info
-Can't find what you need? [Contact Onboarding](https://juicebox.money/contact).
+Can't find what you need? [Join our Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact).
 :::
 
 #### Welcome to the Juicebox User Docs!
