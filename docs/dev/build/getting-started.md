@@ -5,7 +5,7 @@ sidebar_position: 1
 # Getting started
 
 :::info
-You can also use the [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template).
+If you're interested in building a Juicebox smart contract, see the `juice-contract-template` [GitHub Repository](https://github.com/jbx-protocol/juice-contract-template). If you need any help, join our [Discord server](https://discord.gg/juicebox).
 :::
 
 #### Import
