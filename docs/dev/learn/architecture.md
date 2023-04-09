@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # Architecture
 
+:::info
+See [JuiceboxDAO's Protocol Evolution: Navigating Updates and Enhancements](https://jango.eth.limo/31469E9F-8C0D-49E9-8003-0077674708A6/).
+:::
+
 The protocol is made up of 7 core contracts and 3 surface contracts.
 
 * Core contracts store all the independent components that make the protocol work.
