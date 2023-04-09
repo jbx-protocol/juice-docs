@@ -14,7 +14,7 @@ Many projects have no need for formal governance — the project creator or a sm
 ## 2. Offchain Governance (Recommended)
 
 :::info
-Most projects ratify a Governance Process to use alongside Snapshot voting. Feel free to use [our process](https://docs.juicebox.money/dao/process/) as a starting point. You can also join the [Juicebox Discord](https://discord.gg/juicebox) and tag `filipv#0001` and `0xSTVG.eth (stevie g)#7744` for help.
+Most projects ratify a Governance Process to use alongside Snapshot voting. Feel free to use [our process](/dao/process/) as a starting point. You can also join our [Discord](https://discord.gg/juicebox) and tag `filipv#0001` and `0xSTVG.eth (stevie g)#7744` for help creating a new one.
 :::
 
 Although this could be as simple as conducting polls in a Discord server, project creators are advised to use [Snapshot](https://snapshot.org):
@@ -25,16 +25,16 @@ Although this could be as simple as conducting polls in a Discord server, projec
 
 You can deploy a Snapshot space for your project on [snapshot.org](https://snapshot.org/#/setup), or you can:
 
-1. Visit your project's page on [juicebox.money](https://juicebox.money).
-2. Open your project settings by clicking the gear in the upper right-hand corner.
-3. Selecting `Governance` in the left-hand sidebar.
+1. Visit your project's page on [juicebox.money](https://juicebox.money) with the project owner wallet connected.
+2. Open your project's settings by clicking the gear in the upper right-hand corner.
+3. Selecting `Governance` in the left-hand sidebar, and following the instructions on that page.
 
 Both of these options will require you to have an ENS address (this is a short name ending with `.eth` that refers to your wallet). If you don't have an ENS, visit [app.ens.domains](https://app.ens.domains).
 
-Once you have your space set up, you can use one of the [pre-written Snapshot strategies for Juicebox projects](/user/resources/snapshot/). If you're looking for something else, tag `filipv#0001` in the [Juicebox Discord](https://discord.gg/juicebox).
+Once you have your space set up, you can use one of our [pre-written Snapshot strategies for Juicebox projects](/user/resources/snapshot/). If you're looking for something else, tag `filipv#0001` in the [Juicebox Discord](https://discord.gg/juicebox).
 
 :::info
-JuiceboxDAO contributors have built an [alternative Snapshot interface](https://juicetool.xyz/snapshot) with extra features (like search, filtering, and more stats).
+JuiceboxDAO contributors have built an [alternative Snapshot interface](https://juicetool.xyz/snapshot) with additional features (like search, filtering, and additional analytics).
 :::
 
 ## 3. Onchain Governance
