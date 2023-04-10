@@ -1,8 +1,8 @@
-# Namespaces
+# Namespaces & Indices
 
-Some Juicebox protocol functionality uses shared namespaces and indices across different versions and implementations of contracts.
+Some Juicebox protocol contracts uses shared namespaces and indices.
 
-## Operator Indices
+## Operator Permissions
 
 [`JBOperatorStore`](/dev/api/contracts/jboperatorstore/) allows addresses to give permissions to any other address to take specific actions on their behalf. Typically, a project owner or protocol user would grant a proxy contract or an EOA (called an *operator*) administrative protocol permissions. This is administered through the [`requirePermission`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermission/) and [`requirePermissionAllowingOverride`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride/) modifiers from [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/). When granting permissions to an operator, an address can pass a `domain` to limit these permissions to a certain project ID (where the domain is the project's ID), or can pass a domain of `0` to grant permissions across all domains (see [Operator](/dev/learn/glossary/operator/)).
 
@@ -49,7 +49,7 @@ These groups must be specified when passing [`JBGroupedSplits`](/dev/api/data-st
 
 You can find a terminal's splits group index by accessing the relevant [`JBPayoutRedemptionPaymentTerminal3_1.payoutSplitsGroup`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#payoutsplitsgroup) property.
 
-## Currencies
+## Currency Prices
 
 Juicebox uses [`JBPrices`](/dev/api/contracts/jbprices/) to manage and normalize prices for various currencies, with each currency having its own index:
 
