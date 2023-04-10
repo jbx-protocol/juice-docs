@@ -55,7 +55,7 @@ Juicebox uses [`JBPrices`](/dev/api/contracts/jbprices/) to manage and normalize
 
 | Index | Name | Found on | Description |
 | --- | --- | --- | --- |
-| 1 | `ETH` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | |
-| 2 | `USD` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | |
+| 1 | `ETH` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | 1 ETH = 1 ETH. |
+| 2 | `USD` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | Uses [`JBChainlinkV3PriceFeed`](/dev/api/contracts/or-price-feeds/jbchainlinkv3pricefeed/), a generalized price feed for Chainlink's [`AggregatorV3Interface`](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol). |
 
 The protocol uses this to allow projects to do their accounting in any number of currencies, but manage all funds in ETH or other assets (regardless of accounting denomination). Price feeds must adhere to [`IJBPriceFeed`](/dev/api/interfaces/ijbpricefeed/). New price feeds can be added via [`JBPrices.addFeedFor(...)`](/dev/api/contracts/jbprices/write/addfeed/), which can only be called by the [JuiceboxDAO multisig](/dev/learn/administration/).
