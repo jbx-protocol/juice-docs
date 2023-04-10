@@ -4,28 +4,25 @@ sidebar_position: 1
 
 # About JuiceboxDAO
 
-:::info
-To learn more about JuiceboxDAO and JBX, read [JBX & Fees](/dao/reference/jbx/).
-:::
-
 JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their treasuries and tokens.
 
 JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
 
 - Learn about the DAO's core values in the [Foundation](foundation).
-- Learn how the DAO makes decisions in the [Governance Process](process).
-- Learn how to become a contributor with the [Contributor Guide](contribute).
-- Visit the DAO's [Governance Portal](https://jbdao.org).
+- If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
+- Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
+- To learn more about JBX, read [JBX & Fees](/dao/reference/jbx/).
 
 <details>
 
-<summary>Important Links</summary>
+<summary>Links</summary>
 
 #### Website
 
-[Juicebox](https://juicebox.money/)<br/>
-[Goerli Juicebox](https://goerli.juicebox.money/)<br/>
-[JuiceboxDAO](https://juicebox.money/@juicebox)
+[juicebox.money](https://juicebox.money/)<br/>
+[Goerli juicebox.money](https://goerli.juicebox.money/)<br/>
+[JuiceboxDAO v1 Project](https://juicebox.money/p/juicebox)<br/>
+[JuiceboxDAO v2/v3 Project](https://juicebox.money/@juicebox)
 
 #### Community
 
@@ -37,8 +34,7 @@ JuiceboxDAO contributors build in the open — to participate, read the [contrib
 #### Resources
 
 [Github](https://github.com/jbx-protocol)<br/>
-[Governance](https://jbdao.org)<br/>
-[Analytics](reference/analytics)<br/>
+[Analytics](reference/analytics/)<br/>
 [JuiceTool](https://juicetool.xyz/)<br/>
 [Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3)<br/>
 [Brand Kit](/user/brand-kit/)
@@ -49,15 +45,15 @@ JuiceboxDAO contributors build in the open — to participate, read the [contrib
 
 <summary>Governance</summary>
 
-Juicebox governance runs on a [14 day cycle](process). Discord temperature checks take place at the start of each funding cycle. Proposals are then uploaded to the DAO's [Snapshot space](https://juicetool.xyz/snapshot/jbdao.eth) for offchain voting. Read our [governance process](process) to learn more.
+Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [Snapshot space](https://juicetool.xyz/snapshot/jbdao.eth). You can follow this through our governance portal [jbdao.org](https://jbdao.org), or read our [Governance Process](process) to learn more.
 
-#### Vote Here
+#### Main Links
 
 [Governance Portal](https://jbdao.org)<br/>
 [Juicebox Snapshot](https://snapshot.org/#/jbdao.eth)<br/>
 [Snapshot Delegation](https://vote.juicebox.money/#/delegate/jbdao.eth)
 
-#### DAO Documents and Resources
+#### Resources
 
 [How to Make a Governance Proposal](proposals)<br/>
 [Governance Process](process)<br/>
