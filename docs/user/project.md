@@ -7,11 +7,16 @@ sidebar_position: 2
 We also have a [video tutorial](https://www.youtube.com/watch?v=2s2OyxG_rvo). If you need help, [join our Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact).
 :::
 
+To begin, visit [juicebox.money/create](https://juicebox.money/create). You will need to have an Ethereum wallet and some ETH to pay for gas fees.
+
+- If you need an Ethereum wallet, visit [Metamask.io](https://metamask.io/) to set one up.
+- To experiment before committing to mainnet, you can use the [Goerli Testnet juicebox.money](https://goerli.juicebox.money/).
+
 What to know beforehand:
 
 - You can edit all of your project's rules over time — this allows your project to evolve as your community does.
 - When you create a Juicebox project, an *Owner NFT* is minted to your wallet. Only the holder of that NFT (you, the "project owner") can edit the project's rules. Nobody else can edit your project's rules — not even JuiceboxDAO.
-- This guide is based on [juicebox.money](https://juicebox.money). If you're setting up your project somewhere else, the steps might be different.
+- This guide is based on [juicebox.money](https://juicebox.money/create). If you're setting up your project somewhere else, the steps might be different.
 
 ## Project Settings
 
