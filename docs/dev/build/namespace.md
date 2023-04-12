@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Namespaces & Indices
 
 Some Juicebox protocol contracts uses shared namespaces and indices.
