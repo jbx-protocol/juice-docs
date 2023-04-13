@@ -20,7 +20,6 @@ Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a 
 If you run into trouble, check:
 
 - The Graph's [Documentation](https://thegraph.com/docs/)
-- [*Querying The Graph*](https://thegraph.com/docs/querying/querying-the-graph/)
 - Peel's [Discord server](https://discord.gg/XvmfY4Hkcz)
 - The juicebox.money [implementation](https://github.com/jbx-protocol/juice-interface/blob/main/src/utils/graph.ts)
 
