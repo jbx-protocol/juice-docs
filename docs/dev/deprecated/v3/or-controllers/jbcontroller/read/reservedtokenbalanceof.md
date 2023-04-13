@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBController`](/dev/deprecated/v3/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -27,7 +27,7 @@ function reservedTokenBalanceOf(uint256 _projectId, uint256 _reservedRate)
   * `_reservedRate` is the reserved rate to use when making the calculation.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns the reserved token balance.
 
 #### Body

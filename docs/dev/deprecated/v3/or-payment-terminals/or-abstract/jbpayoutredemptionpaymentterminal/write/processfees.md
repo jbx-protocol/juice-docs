@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v3/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
-Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md)
+Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -35,7 +35,7 @@ function processFees(uint256 _projectId)
 * Through the [`requirePermissionAllowingOverride`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) modifier, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.PROCESS_FEES`](/dev/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, or from the owner of this contract.
 * The function can be overriden by inheriting contracts.
 * The function cannot be accessed recursively or while other `nonReentrant` functions in this contract are in progress.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal) interface.
 * The function doesn't return anything.
 
 #### Body

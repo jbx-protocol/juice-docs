@@ -15,7 +15,7 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abstract/
 
 | Name                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBSingleTokenPaymentTerminal`**](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBSingleTokenPaymentTerminal`**](/dev/api/interfaces/ijbsingletokenpaymentterminal/) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBController`](/dev/deprecated/v3/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -25,7 +25,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
   * `_from` is the controller being migrated from.
 * The function can be accessed externally by anyone.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -117,7 +117,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
 | Name                                        | Data                                                                                                                                                                                                                                                       |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`PrepMigration`**](/dev/deprecated/v3/or-controllers/jbcontroller/events/prepmigration.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/api/interfaces/ijbcontroller.md) from</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
+| [**`PrepMigration`**](/dev/deprecated/v3/or-controllers/jbcontroller/events/prepmigration.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/deprecated/v3/interfaces/ijbcontroller.md) from</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
 {
 
 </TabItem>

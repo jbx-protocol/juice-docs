@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBController`](/dev/deprecated/v3/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -42,7 +42,7 @@ function reconfigureFundingCyclesOf(
   * `_fundAccessConstraints` is an array of [`JBFundAccessConstraints`](/dev/api/data-structures/jbfundaccessconstraints.md) data structures containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`. The `_distributionLimit` applies for each funding cycle, and the `_overflowAllowance` applies for the entirety of the configuration.
 * Through the [`requirePermission`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.RECONFIGURE`](/dev/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns the configuration of the funding cycle that was successfully updated.
 
 #### Body

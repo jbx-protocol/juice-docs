@@ -8,7 +8,7 @@ Mainnet: [`0xA139D37275d1fF7275e6F33821898934Bc8Cb7B6`](https://etherscan.io/add
 
 Goerli: [`0x696f8175E114C5C89248Fb254185Df3Df4cD03f3`](https://goerli.etherscan.io/address/0x696f8175E114C5C89248Fb254185Df3Df4cD03f3)
 
-Inherits: [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController`](/dev/api/interfaces/ijbcontroller/), [`IJBController3_0_1`](/dev/api/interfaces/ijbcontroller3_0_1/), [`IJBMigratable`](/dev/api/interfaces/ijbmigratable/)
+Inherits: [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController`](/dev/api/interfaces/ijbcontroller/), [`IJBController3_0_1`](/dev/deprecated/v3/interfaces/ijbcontroller3_0_1/), [`IJBMigratable`](/dev/api/interfaces/ijbmigratable/)
 
 This Controller manages a project's reserved tokens explicitly instead of through a passive tracker property.
 
@@ -16,7 +16,7 @@ It is backwards compatible with the original [`IJBController`](/dev/api/interfac
 
 Adheres to:
 
-- [`IJBController3_0_1`](/dev/api/interfaces/ijbcontroller3_0_1/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+- [`IJBController3_0_1`](/dev/deprecated/v3/interfaces/ijbcontroller3_0_1/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
 - [`IJBMigratable`](/dev/api/interfaces/ijbmigratable/): Allows migrating to this contract, with a hook called to prepare for the migration.
 
 Inherits from:

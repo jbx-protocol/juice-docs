@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBController`](/dev/deprecated/v3/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -36,7 +36,7 @@ function mintTokensOf(
   * `_useReservedRate` is whether to use the current funding cycle's reserved rate in the mint calculation.
 * Through the [_requirePermissionAllowingOverride`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) internal function call, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.MINT`](/dev/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, from one of the project's terminals, or from the project's current funding cycle data source.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns the amount of tokens minted for the beneficiary.
 
 #### Body

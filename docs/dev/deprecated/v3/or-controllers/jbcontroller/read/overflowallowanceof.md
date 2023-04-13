@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBController`](/dev/deprecated/v3/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -32,7 +32,7 @@ function overflowAllowanceOf(
 * `_token` is the token for which the overflow allowance applies.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns:
   * `overflowAllowance` is the overflow allowance, as a fixed point number with the same number of decimals as the provided terminal.
   * `overflowAllowanceCurrency` is the currency from [`JBCurrencies`](/dev/api/libraries/jbcurrencies.md) that the returned overflow allowance is in terms of.

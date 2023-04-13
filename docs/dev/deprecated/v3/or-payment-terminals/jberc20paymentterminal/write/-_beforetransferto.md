@@ -20,7 +20,7 @@ function _beforeTransferTo(address, uint256) internal override { ...}
   * `_to` is the address to which the transfer is going.
   * `_amount` is the amount of the transfer, as a fixed point number with the same number of decimals as this terminal.
 * The resulting function is internal to this contract and its inheriters.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal) interface.
 
 #### Body
 

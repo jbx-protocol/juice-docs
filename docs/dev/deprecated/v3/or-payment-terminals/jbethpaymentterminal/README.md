@@ -16,7 +16,7 @@ Goerli testnet: [`0x55d4dfb578daA4d60380995ffF7a706471d7c719`](https://goerli.et
 
 | Contract                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
+| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
 
 #### Constructor
 
