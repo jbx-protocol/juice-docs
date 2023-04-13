@@ -99,7 +99,7 @@ The snippet below will log a list of the 10 most recent payments to v2 project #
 ```js
 const juicebox_subgraph_endpoint = "https://api.studio.thegraph.com/query/30654/mainnet-dev/6.2.0"
 
-// Queries can be GraphQL stored as a template literal
+// Queries can be a GraphQL template literal
 const query = `{
   payEvents(first: 10, where: {project: "2-1"}, orderBy: timestamp, orderDirection: desc){
     beneficiary
@@ -110,7 +110,6 @@ const query = `{
 
 const json = await fetch(juicebox_subgraph_endpoint, {
   headers: { 'Content-Type': 'application/json' },
-  // method must be POST to pass the query
   method: 'POST',
   body: JSON.stringify({ query }),
 }).then(res => res.json())
