@@ -1,11 +1,12 @@
 ---
-sidebar_position: 1
-title: Example Queries
+sidebar_position: 2
 ---
+
+# Example Queries
 
 Below are some sample queries you can use to gather information from the Juicebox contracts.
 
-You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql)—enter your endpoint to limit your queries to the exact data desired.
+You can experiment on the [subgraph playground](https://thegraph.com/explorer/subgraphs/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC?view=Playground) or on a GraphiQL Explorer – open one of the endpoints listed in [*Subgraph*](/dev/frontend/subgraph/) in your browser.
 
 ### Get Project Metrics By Owner
 
