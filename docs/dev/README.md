@@ -14,9 +14,13 @@ The protocol is nuanced, however. The goal of the protocol docs is for you to fi
 
 #### Directory
 
-[Learn](learn/overview.md) - General info on how the protocol works.<br/>
-[Build](build/getting-started.md) - Guides to launch, program, and extend a treasury.<br/>
-[API](api/contracts/README.md) - Specifications of each contract and function, and a deep dive through each line of code.
+1. [Learn](learn/overview) - General info on how the protocol works.
+2. [Build](build/getting-started) - Guides to launch, program, and extend a treasury.
+3. [API](api/contracts) - Specifications of each contract and function in base protocol, and a deep dive through each line of code.
+4. [Extensions](extensions) - Specifications for contracts which extend the base protocol.
+5. [Resources](resources/addresses) - Miscellaneous useful information. Contract addresses, audits, and more.
+6. [Frontend](frontend) - Resources for people building new clients for the Juicebox protocol.
+7. [Deprecated](deprecated/v1) - API documentation and resources for older versions of the Juicebox protocol.
 
 Documentation for Juicebox Protocol V1 (live on mainnet since July 2021) is available [here](protocol-v1/).
 

@@ -14,7 +14,7 @@ TerminalV1: [`0xd569D3CCE55b71a8a3f3C418c329A66e5f714431`](https://etherscan.io/
 
 TerminalV1_1: [`0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68`](https://etherscan.io/address/0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68)
 
-Projects: [`0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418`](https://etherscan.io/address/0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418)\`\`
+Projects: [`0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418`](https://etherscan.io/address/0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418)
 
 TicketBooth: [`0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc`](https://etherscan.io/address/0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc)
 
@@ -32,7 +32,7 @@ Active1DayFundingCycleBallot: N/A
 
 Governance: [`0xAc43e14c018490D045a774008648c701cda8C6b3`](https://etherscan.io/address/0xAc43e14c018490D045a774008648c701cda8C6b3)
 
-Prices: [`0xa9537Cc42555564206D4E57c0eb6943d56E83A30`](https://etherscan.io/address/0xa9537Cc42555564206D4E57c0eb6943d56E83A30)\`\`
+Prices: [`0xa9537Cc42555564206D4E57c0eb6943d56E83A30`](https://etherscan.io/address/0xa9537Cc42555564206D4E57c0eb6943d56E83A30)
 
 ### Rinkeby
 
