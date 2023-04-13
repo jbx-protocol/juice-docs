@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Contract Examples
 
-Simple contract examples which integrate with Juicebox.
+Simple contract examples which integrate with Juicebox. If you're building new Juicebox-related contracts, join our [Discord server](https://discord.gg/juicebox) for help!
 
 ## Pay
 
@@ -98,3 +98,5 @@ contract JBProjectViewUtil {
 ```
 
 [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/)s are required to report how much ETH's worth of tokens it holds for a project in excess of funds needed for the current funding cycle's payouts via [`IJBPaymentTerminal.currentEthOverflowOf(uint256 _projectId)`](/dev/api/interfaces/ijbpaymentterminal/). The terminal can be written to assume a conversion rate to ETH of 0, meaning it could have a balance of 10,000 shitcoins but still have an ETH overflow of 0.
+
+This requirement allows for straightforwards calculation of a project's total redeemable balance for use in redemption calculations and custom [data sources](/dev/learn/glossary/data-source/).
