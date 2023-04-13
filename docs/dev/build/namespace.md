@@ -63,3 +63,24 @@ Juicebox uses [`JBPrices`](/dev/api/contracts/jbprices/) to manage and normalize
 | 2 | `USD` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | Uses [`JBChainlinkV3PriceFeed`](/dev/api/contracts/or-price-feeds/jbchainlinkv3pricefeed/), a generalized price feed for Chainlink's [`AggregatorV3Interface`](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol). |
 
 The protocol uses this to allow projects to do their accounting in any number of currencies, but manage all funds in ETH or other assets (regardless of accounting denomination). Price feeds must adhere to [`IJBPriceFeed`](/dev/api/interfaces/ijbpricefeed/). New price feeds can be added via [`JBPrices.addFeedFor(...)`](/dev/api/contracts/jbprices/write/addfeed/), which can only be called by the [JuiceboxDAO multisig](/dev/learn/administration/).
+
+## Metadata
+
+Juicebox project metadata (such as a project's name, logo, and description) are stored on [IPFS](https://ipfs.tech/). A project's metadata IPFS hash can be found by accessing the [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof/) property, which takes two arguments:
+
+- `_projectId` is the ID of the project to which the metadata belongs.
+- `_domain` is the **domain within which the metadata applies.**
+
+As of 2023-04-13, all projects store their metadata within domain `0`, but future frontends or contracts with unique metadata needs might consider utilizing new domains.
+
+#### Example
+
+If one calls [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof/) with `_projectId` as `1` and `_domain` as `0`, the contract will return the IPFS hash `QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`.
+
+Now, one can navigate to a [public IPFS gateway](https://ipfs.github.io/public-gateway-checker/) or a dedicated gateway (from [Infura](https://www.infura.io/), [Cloudflare](https://developers.cloudflare.com/web3/ipfs-gateway/), or another provider) to read the project's metadata:
+
+```json
+{"name":"JuiceboxDAO","description":"Supports projects built using the Juicebox protocol, and the development of the protocol itself. All projects withdrawing funds from their treasury pay a 2.5% membership fee and receive JBX at the current issuance rate. JBX members govern the NFT that represents ownership over this treasury.","logoUri":"https://jbx.mypinata.cloud/ipfs/QmWXCt1zYAJBkNb7cLXTNRNisuWu9mRAmXTaW9CLFYkWVS","infoUri":"https://snapshot.org/#/jbdao.eth","twitter":"juiceboxETH","discord":"https://discord.gg/W9mTVG4QhD","payButton":"Add juice","tokens":[],"version":4}
+```
+
+See it yourself at [`https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`](https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF). To learn more about IPFS, visit the [IPFS docs](https://docs.ipfs.tech/).
