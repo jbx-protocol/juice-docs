@@ -96,3 +96,5 @@ contract JBProjectViewUtil {
   }
 }
 ```
+
+[`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/)s are required to report how much ETH's worth of tokens it holds for a project in excess of funds needed for the current funding cycle's payouts via [`IJBPaymentTerminal.currentEthOverflowOf(uint256 _projectId)`](/dev/api/interfaces/ijbpaymentterminal/). The terminal can be written to assume a conversion rate to ETH of 0, meaning it could have a balance of 10,000 shitcoins but still have an ETH overflow of 0.
