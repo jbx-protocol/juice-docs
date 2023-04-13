@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Basic Examples
+# Contract Examples
 
 Simple contract examples which integrate with Juicebox.
 
@@ -46,7 +46,7 @@ contract MyBangarangApp {
 
 ## Read Balance
 
-A simple project which reads a project's balance in their primary ETH terminal.
+A simple contract which reads a project's balance in their primary ETH terminal.
 
 ```
 import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
@@ -67,6 +67,32 @@ contract JBProjectViewUtil {
 
     // Assumes the terminal is a IJBETHPaymentTerminal3_1. If the terminal could be a lesser version, a ERC165 check should be done before casting.
     return IJBETHPaymentTerminal3_1(_ethTerminal).store().balanceOf(_ethTerminal, projectId);
+  }
+}
+```
+
+## Read Overflow
+
+A simple project which reads a project's overflow in their primary ETH terminal. A project's [*Overflow*](/dev/learn/glossary/overflow/) is the funds it holds which aren't needed for the current funding cycle's payouts.
+
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/libraries/JBTokens.sol';
+
+contract JBProjectViewUtil {
+  // Keep a reference to the directory in which project's current payment terminal's can be found.
+  IJBDirectory directory;
+
+  constructor(IJBDirectory _directory, uint256 _projectId) {
+    directory = _directory;
+  }
+
+  function getETHBalance(uint256 _projectId) external returns (uint256) {
+    // Get the payment terminal the project currently prefers to accept ETH through.
+    IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_projectId, JBTokens.ETH);
+    
+    // Return a project's balance in excess of any commitments already made but not yet distributed. 
+    return _terminal.currentEthOverflowOf(_projectId);
   }
 }
 ```
