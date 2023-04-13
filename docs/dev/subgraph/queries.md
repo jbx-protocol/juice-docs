@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-title: Sample Queries
+sidebar_position: 1
+title: Example Queries
 ---
 
 Below are some sample queries you can use to gather information from the Juicebox contracts.
