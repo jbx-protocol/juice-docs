@@ -6,7 +6,7 @@ title: Payment Terminals
 
 Juicebox project can be configured to use any contract that adheres to [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/) to manage inflows and outflows of tokens. To understand the basics, read the [glossary](/dev/learn/glossary/payment-terminal/).
 
-In practice, terminal functionality is implemented across several interfaces, abstract contracts, and implementation contracts.
+In practice, terminal functionality is implemented across several interfaces, abstract contracts, and implementation contracts. This modular architecture allows for greater flexibility when extending the protocol.[^1]
 
 #### Interfaces
 
@@ -35,3 +35,5 @@ Finally, these contracts implement the abstract contracts above:
 
 - [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/) (is `JBPayoutRedemptionPaymentTerminal3_1`) - an implementation of a fully capable ETH terminal.
 - [`JBERC20PaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1/) (is `JBPayoutRedemptionPaymentTerminal3_1`) - an implementation of a fully capable ERC-20 terminal.
+
+[^1]: To register a terminal with [`JBDirectory`](/dev/api/contracts/jbdirectory/), that terminal only needs to adhere to [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/), a basic interface which requires a consistent way of sending funds to the terminal (via `pay` or `addToBalance`). Protocol extensions can ensure their unique requirements are met by utilizing a different interface or abstract contract – for example, an extension which depends on standard redemption functionality can ensure adherence to [`IJBRedemptionTerminal`](/dev/api/interfaces/ijbredemptionterminal/). This allows for easier extension interoperability.
