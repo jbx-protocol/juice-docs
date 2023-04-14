@@ -101,7 +101,7 @@ The most recent JSON schema (version 8):
 | `twitter` | The project's Twitter *handle* (**not** the full URL). |
 | `discord` | An invite link to the project's Discord server. |
 | `telegram` | An invite link to the project's Telegram group/channel. |
-| `tokens` | An array objects with information about the project's tokens. |
+| `tokens` | An array containing tokens to be shown under the project owner's assets on [juicebox.money](https://juicebox.money). |
 | `value` | (Within a `token` object) the token's address. |
 | `type` | (Within a `token` object) the token's standard (such as `erc20`). |
 | `tags` | An array of project tags. |
@@ -153,7 +153,7 @@ Example: Project `1-28`, hash [`QmNnExgSYMg5ekLRRxb6wMefA94Ry8uDKVCSKGmF4rGVvK`]
 
 - Added `version` - the metadata schema version.
 - Added `payText` - text on the project's payment button on [juicebox.money](https://juicebox.money).
-- Added `tokens[]` - information about the project's tokens.
+- Added `tokens[]` - an array containing tokens to be shown under the project owner's assets on [juicebox.money](https://juicebox.money). |
 
 ### Version 3
 
