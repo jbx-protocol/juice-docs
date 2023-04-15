@@ -13,12 +13,9 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "webp": "bash scripts/webp.sh",
-    "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'",
-    "crowdin": "crowdin",
-    "crowdin:sync": "docusaurus write-translations && crowdin upload && crowdin download"
+    "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'"
   },
   "dependencies": {
-    "@crowdin/cli": "^3.10.1",
     "@docusaurus/core": "^2.4.0",
     "@docusaurus/module-type-aliases": "^2.4.0",
     "@docusaurus/plugin-content-docs": "^2.4.0",
