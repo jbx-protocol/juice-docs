@@ -14,13 +14,13 @@ tags: [protocol, jbx, update]
 
 ## 相关链接
 
-JuiceboxDAO V1 项目金库：https://juicebox.money/p/juicebox 
+JuiceboxDAO V1 项目金库：https://juicebox.money/p/juicebox
 
-JuiceboxDAO V2 项目金库：https://juicebox.money/@juicebox?cv=2 
+JuiceboxDAO V2 项目金库：https://juicebox.money/@juicebox?cv=2
 
-JuiceboxDAO V3 项目金库：https://juicebox.money/@juicebox 
+JuiceboxDAO V3 项目金库：https://juicebox.money/@juicebox
 
-旧的 V1 JBX 代币地址：0x3abF2A4f8452cCC2CF7b4C1e4663147600646f66 
+旧的 V1 JBX 代币地址：0x3abF2A4f8452cCC2CF7b4C1e4663147600646f66
 
 新的 V3 JBX 代币地址：0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2
 
@@ -30,7 +30,7 @@ JuiceboxDAO V3 项目金库：https://juicebox.money/@juicebox
 
 1. 可以在语言菜单选择中文，翻译目前基本都同步上了；
 2. 会有三至四个交易需要确认（如果你有 V2 代币，会多一个交易），分别是授权迁移、批准使用旧代币和确认迁移；
-3. 整个迁移大概耗时五分钟左右。 
+3. 整个迁移大概耗时五分钟左右。
 4. 迁移暂时没有时间限制，可以挑选 gas 比较低的时间或者其他自己合适的时机来操作。
 5. 迁移指引的视频中文版也已经完成，不想看文字版本的，请直接去到本页面最下方。
 
@@ -86,7 +86,7 @@ JuiceboxDAO V3 项目金库：https://juicebox.money/@juicebox
 
 ### 8. 其他
 
-你现在点击上图的红框处 ” 添加至 METAMASK 钱包“ 把 V3 JBX 的合约地址添加到 Metamask 钱包，这样在钱包内就可以正常显示我们的代币余额了。 
+你现在点击上图的红框处 ” 添加至 METAMASK 钱包“ 把 V3 JBX 的合约地址添加到 Metamask 钱包，这样在钱包内就可以正常显示我们的代币余额了。
 
 JBX 代币迁移流程的中文视频：
 

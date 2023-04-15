@@ -74,7 +74,7 @@ Juicebox governance runs on a [14 day cycle](process) – proposals receive "tem
 From [JBX & Fees](/dao/reference/jbx/):
 
 > The Juicebox protocol is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed via the JBX token. "DAO" stands for _Decentralized Autonomous Organization_ — by utilizing token governance and the Juicebox protocol itself, JuiceboxDAO is able to manage strategic decisions, payouts to contributors, and to consistently deliver upgrades to a best-in-class Ethereum protocol, along with a powerful suite of tools to support it.
-> 
+>
 > You can see current JBX holders ranked below:
 
 <style>{`iframe {

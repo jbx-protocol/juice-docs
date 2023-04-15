@@ -6,13 +6,13 @@ image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp) 
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## Peel Updates
 
 ### Website update walkthrough by Strath
 
-This is a project that includes redesigning the home page and then creating some supporting pages, such as About Us, creating some case studies, activity feed, and so on. 
+This is a project that includes redesigning the home page and then creating some supporting pages, such as About Us, creating some case studies, activity feed, and so on.
 
 The purpose of this project was to make the project page a lot more functional, highlight the project creators, highlight the projects themselves, and then increase contributions as well as project credit, making it a lot more clear and concise for users to come in there, getting a few different value competitions.
 
@@ -24,7 +24,7 @@ The section of trending projects have been pulled up in this iteration. And also
 
 - Hero section discussion
 
-Jango thought that the main sticking point right now seems to be the character set, art and style, so pulling Banny off the hero section seems a trade-off here. 
+Jango thought that the main sticking point right now seems to be the character set, art and style, so pulling Banny off the hero section seems a trade-off here.
 
 Strath was initially hesitant to pull it off due to the new hero illustration being very nice, but they have leaned more towards having a functional homepage to balance aesthetics and functionality. Strath thought that functionality will be the one really drives people to use our protocol, especially by pulling the trending projects above the fold, which will help people understand immediately what it is and inspire them to create their own projects. Tjl also mentioned that highlighting the project art here is important and a chance to let creators and their art to shine as well.
 
@@ -62,7 +62,7 @@ This is a really cool section which is just giving people a run-through of some 
 
 The idea behind this is: each month we will select five projects and give them the tag of "Juicy picks" and then they will jump into this section.
 
-And we will have 1 featured project, which is like a huge call-out. This would be really interesting to use as a kind of marketing tool, where we can run various competitions to get projects featured on Juicebox for the month, which could help drive a lot of engagement. 
+And we will have 1 featured project, which is like a huge call-out. This would be really interesting to use as a kind of marketing tool, where we can run various competitions to get projects featured on Juicebox for the month, which could help drive a lot of engagement.
 
 There should be a lot we can do with this in the marketing visibility sense.
 
@@ -84,7 +84,7 @@ We will have project tags coming soon, so there will be full project categories 
 
 ### Project Tags by Peri
 
-The background of this project tags is that we want to allow project owners to tag their projects with up to 3 labels that they can pick from a pre-defined list of 10 different tags. And the main goal is to increase discoverability of projects. 
+The background of this project tags is that we want to allow project owners to tag their projects with up to 3 labels that they can pick from a pre-defined list of 10 different tags. And the main goal is to increase discoverability of projects.
 
 ![predefined project tags](project_tags.png)
 
@@ -106,12 +106,12 @@ Jango said it's fun to reiterate the function of legacy JBX and that of the new 
 
 The journey we've travelled so far to get here, was really the motivation for all the versioning work we've done. Jango was very relieved and very impressed in many ways by the effort it took to get here and the fact that we have pulled it off.
 
-Jango has moved his JBX holdings over to V3. 
+Jango has moved his JBX holdings over to V3.
 
 The instructions for JBX migration:
 
 -  [JBX V3 Migration Guide by Aeolian;](https://docs.juicebox.money/updates/jbx-v3-migration-guide/)
--  JBX migration video tutorial by Matthew and Brileigh 
+-  JBX migration video tutorial by Matthew and Brileigh
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mk2GdYri1mU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Versioning History by Jango
@@ -144,7 +144,7 @@ Also they plan for a special ETH Tokyo Peel episode to chat with Peel team membe
 
 STVG created a Juicebox project for this purpose, where the grants from JuiceboxDAO will go into that project while the top 3 winners of this open round will be added to the payouts of this project and distributed with 0.3 ETH each after the voting is ended.
 
-STVG said this is a really good opportunity for us to create some sort of intersection between Nouns and Juicebox, and give a little bit more visibility to Juicebox, 
+STVG said this is a really good opportunity for us to create some sort of intersection between Nouns and Juicebox, and give a little bit more visibility to Juicebox,
 
 ## Thirsty Thirsty Updaes by Bruxa
 

@@ -29,7 +29,7 @@ contract MyBangarangApp {
   function doSomething() external payable {
     // Get the payment terminal the project currently prefers to accept ETH through.
     IJBPaymentTerminal _ethTerminal = directory.primaryTerminalOf(projectId, JBTokens.ETH);
-    
+
     _ethTerminal.pay{ value: msg.value }(
       projectId, // pay the correct project.
       amount, // pay the full amount sent to this function.
@@ -90,8 +90,8 @@ contract JBProjectViewUtil {
   function getETHBalance(uint256 _projectId) external returns (uint256) {
     // Get the payment terminal the project currently prefers to accept ETH through.
     IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_projectId, JBTokens.ETH);
-    
-    // Return a project's balance in excess of any commitments already made but not yet distributed. 
+
+    // Return a project's balance in excess of any commitments already made but not yet distributed.
     return _terminal.currentEthOverflowOf(_projectId);
   }
 }

@@ -12,7 +12,7 @@ tags: [town-hall]
 
 The JBX V3 migration is on the final finish line. Jango has moved some of his tokens into a vault to test stuff out.
 
-We are just wrapping up a very clean and safe UX for the migration purpose. Next week we will have more to announce together with the actual instructions to migrate tokens. Huge ups to the versioning efforts, and shoutout to Aeolian for his great effort in putting all this togerther. 
+We are just wrapping up a very clean and safe UX for the migration purpose. Next week we will have more to announce together with the actual instructions to migrate tokens. Huge ups to the versioning efforts, and shoutout to Aeolian for his great effort in putting all this togerther.
 
 ![upcoming token migration process](token_migration.png)
 
@@ -64,7 +64,7 @@ Next week, we will provide clear instructions and visuals to assist with the mig
 
 ### Pay Modal by Peri
 
-Peri is currently working on a improved pay modal, which is the window that will pop up when people are going to pay a project. 
+Peri is currently working on a improved pay modal, which is the window that will pop up when people are going to pay a project.
 
 ![Pay modal by Peri](pay_modal.png)
 
