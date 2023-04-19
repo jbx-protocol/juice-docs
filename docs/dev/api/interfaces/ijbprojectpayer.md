@@ -1,47 +1,90 @@
 # IJBProjectPayer
 
-#### Code
+[Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/interfaces/IJBProjectPayer.sol)
 
-https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/interfaces/IJBProjectPayer.sol
+Inherits: [`IERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165)
 
-#### Definition
+## Functions
 
+### directory
+
+```solidity
+function directory() external view returns (IJBDirectory);
 ```
-interface IJBProjectPayer is IERC165 {
-  event SetDefaultValues(
-    uint256 indexed projectId,
-    address indexed beneficiary,
-    bool preferClaimedTokens,
-    string memo,
-    bytes metadata,
-    bool preferAddToBalance,
-    address caller
-  );
 
-  function directory() external view returns (IJBDirectory);
+### projectPayerDeployer
 
-  function defaultProjectId() external view returns (uint256);
+```solidity
+function projectPayerDeployer() external view returns (address);
+```
 
-  function defaultBeneficiary() external view returns (address payable);
+### defaultProjectId
 
-  function defaultPreferClaimedTokens() external view returns (bool);
+```solidity
+function defaultProjectId() external view returns (uint256);
+```
 
-  function defaultMemo() external view returns (string memory);
+### defaultBeneficiary
 
-  function defaultMetadata() external view returns (bytes memory);
+```solidity
+function defaultBeneficiary() external view returns (address payable);
+```
 
-  function defaultPreferAddToBalance() external view returns (bool);
+### defaultPreferClaimedTokens
 
-  function setDefaultValues(
+```solidity
+function defaultPreferClaimedTokens() external view returns (bool);
+```
+
+### defaultMemo
+
+```solidity
+function defaultMemo() external view returns (string memory);
+```
+
+### defaultMetadata
+
+```solidity
+function defaultMetadata() external view returns (bytes memory);
+```
+
+### defaultPreferAddToBalance
+
+```solidity
+function defaultPreferAddToBalance() external view returns (bool);
+```
+
+### initialize
+
+```solidity
+function initialize(
+    uint256 _defaultProjectId,
+    address payable _defaultBeneficiary,
+    bool _defaultPreferClaimedTokens,
+    string memory _defaultMemo,
+    bytes memory _defaultMetadata,
+    bool _defaultPreferAddToBalance,
+    address _owner
+) external;
+```
+
+### setDefaultValues
+
+```solidity
+function setDefaultValues(
     uint256 _projectId,
     address payable _beneficiary,
     bool _preferClaimedTokens,
     string memory _memo,
     bytes memory _metadata,
     bool _defaultPreferAddToBalance
-  ) external;
+) external;
+```
 
-  function pay(
+### pay
+
+```solidity
+function pay(
     uint256 _projectId,
     address _token,
     uint256 _amount,
@@ -51,19 +94,40 @@ interface IJBProjectPayer is IERC165 {
     bool _preferClaimedTokens,
     string memory _memo,
     bytes memory _metadata
-  ) external payable;
+) external payable;
+```
 
-  function addToBalanceOf(
+### addToBalanceOf
+
+```solidity
+function addToBalanceOf(
     uint256 _projectId,
     address _token,
     uint256 _amount,
     uint256 _decimals,
     string memory _memo,
     bytes memory _metadata
-  ) external payable;
-
-  receive() external payable;
-}
+) external payable;
 ```
 
+### receive
 
+```solidity
+receive() external payable;
+```
+
+## Events
+
+### SetDefaultValues
+
+```solidity
+event SetDefaultValues(
+    uint256 indexed projectId,
+    address indexed beneficiary,
+    bool preferClaimedTokens,
+    string memo,
+    bytes metadata,
+    bool preferAddToBalance,
+    address caller
+);
+```

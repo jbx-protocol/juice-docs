@@ -1,14 +1,29 @@
 # IJBETHERC20ProjectPayerDeployer
 
-#### Code
+[Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/interfaces/IJBETHERC20ProjectPayerDeployer.sol)
 
-https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/interfaces/IJBETHERC20ProjectPayerDeployer.sol
+## Functions
 
-#### Definition
+### deployProjectPayer
 
+```solidity
+function deployProjectPayer(
+    uint256 _defaultProjectId,
+    address payable _defaultBeneficiary,
+    bool _defaultPreferClaimedTokens,
+    string memory _defaultMemo,
+    bytes memory _defaultMetadata,
+    bool _preferAddToBalance,
+    address _owner
+) external returns (IJBProjectPayer projectPayer);
 ```
-interface IJBETHERC20ProjectPayerDeployer {
-  event DeployProjectPayer(
+
+## Events
+
+### DeployProjectPayer
+
+```solidity
+event DeployProjectPayer(
     IJBProjectPayer indexed projectPayer,
     uint256 defaultProjectId,
     address defaultBeneficiary,
@@ -19,17 +34,6 @@ interface IJBETHERC20ProjectPayerDeployer {
     IJBDirectory directory,
     address owner,
     address caller
-  );
-
-  function deployProjectPayer(
-    uint256 _defaultProjectId,
-    address payable _defaultBeneficiary,
-    bool _defaultPreferClaimedTokens,
-    string memory _defaultMemo,
-    bytes memory _defaultMetadata,
-    bool _preferAddToBalance,
-    IJBDirectory _directory,
-    address _owner
-  ) external returns (IJBProjectPayer projectPayer);
-}
+);
 ```
+
