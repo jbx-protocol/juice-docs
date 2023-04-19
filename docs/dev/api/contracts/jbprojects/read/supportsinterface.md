@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBProjects`](/dev/api/contracts/jbprojects/)
 
 Interface: [`IERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165)
 
