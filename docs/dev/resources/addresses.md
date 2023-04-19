@@ -26,9 +26,9 @@ JBDelegatesRegistry: [`0x7A53cAA1dC4d752CAD283d039501c0Ee45719FaC`](https://ethe
 
 JBDirectory: [`0x65572FB928b46f9aDB7cfe5A4c41226F636161ea`](https://etherscan.io/address/0x65572FB928b46f9aDB7cfe5A4c41226F636161ea)
 
-JBETHERC20ProjectPayerDeployer: [`0x144F5F5Fdbe0fC8d4A758f33Bf14F68bdFe6feBD`](https://etherscan.io/address/0x144F5F5Fdbe0fC8d4A758f33Bf14F68bdFe6feBD)
+JBETHERC20ProjectPayerDeployer: [`0xa5ca9CEa71Df4b680484e5Ff753a1b1185ba5b43`](https://etherscan.io/address/0xa5ca9CEa71Df4b680484e5Ff753a1b1185ba5b43)
 
-JBETHERC20SplitsPayerDeployer: [`0xc2faBc1bDDB9Fb7F2C59a0F05ADc0106D82B1f2f`](https://etherscan.io/address/0xc2faBc1bDDB9Fb7F2C59a0F05ADc0106D82B1f2f)
+JBETHERC20SplitsPayerDeployer: [`0x3ff1f0583a41CE8B9463F74a1227C75FC13f7C27`](https://etherscan.io/address/0x3ff1f0583a41CE8B9463F74a1227C75FC13f7C27)
 
 JBETHPaymentTerminal: [`0x594Cb208b5BB48db1bcbC9354d1694998864ec63`](https://etherscan.io/address/0x594Cb208b5BB48db1bcbC9354d1694998864ec63)
 
@@ -76,9 +76,9 @@ JBDelegatesRegistry: [`0xCe3Ebe8A7339D1f7703bAF363d26cD2b15D23C23`](https://goer
 
 JBDirectory: [`0x8E05bcD2812E1449f0EC3aE24E2C395F533d9A99`](https://goerli.etherscan.io/address/0x8E05bcD2812E1449f0EC3aE24E2C395F533d9A99)
 
-JBETHERC20ProjectPayerDeployer: [`0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68`](https://goerli.etherscan.io/address/0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68)
+JBETHERC20ProjectPayerDeployer: [`0x483bFC77f28DB242d40aa456D801354fEEBb502E`](https://goerli.etherscan.io/address/0x483bFC77f28DB242d40aa456D801354fEEBb502E)
 
-JBETHERC20SplitsPayerDeployer: [`0xE05605882C3F34B4Ef3586D70dE294f3f9654Ee8`](https://goerli.etherscan.io/address/0xE05605882C3F34B4Ef3586D70dE294f3f9654Ee8)
+JBETHERC20SplitsPayerDeployer: [`0x4C466008867c471316Be2606E5D76D1940fC4765`](https://goerli.etherscan.io/address/0x4C466008867c471316Be2606E5D76D1940fC4765)
 
 JBETHPaymentTerminal: [`0x55d4dfb578daA4d60380995ffF7a706471d7c719`](https://goerli.etherscan.io/address/0x55d4dfb578daA4d60380995ffF7a706471d7c719)
 
