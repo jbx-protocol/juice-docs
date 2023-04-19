@@ -1,75 +1,63 @@
 # JBETHERC20SplitsPayer
-[Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/JBETHERC20SplitsPayer.sol)
-
-**Inherits:**
-[`JBETHERC20ProjectPayer`](/dev/api/extensions/juice-contracts-v3/contracts/JBETHERC20ProjectPayer.md), ReentrancyGuard, [`IJBSplitsPayer`](/dev/api/extensions/juice-contracts-v3/interfaces/interface.IJBSplitsPayer.md)
-
 
 Sends ETH or ERC20's to a group of splits as it receives direct payments or has its functions called.
 
-*
-Inherit from this contract or borrow from its logic to forward ETH or ERC20's to a group of splits from within other contracts.*
+[Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/JBETHERC20SplitsPayer.sol)
 
-*
-Adheres to -
-IJBSplitsPayer:  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.*
+Inherits: [`JBETHERC20ProjectPayer`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/), [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer/)
 
-*
-Inherits from -
-JBETHERC20ProjectPayer: Sends ETH or ERC20's to a project treasury as it receives direct payments or has it's functions called.
-ReentrancyGuard: Contract module that helps prevent reentrant calls to a function.*
+*Inherit from this contract or borrow from its logic to forward ETH or ERC20's to a group of splits from within other contracts.*
 
+Adheres to:
+
+- [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer/):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+
+Inherits from:
+
+- [`JBETHERC20ProjectPayer`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/): Sends ETH or ERC20's to a project treasury as it receives direct payments or has it's functions called.
+- [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard): Contract module that helps prevent reentrant calls to a function.
 
 ## State Variables
+
 ### splitsStore
 
 The contract that stores splits for each project.
-
 
 ```solidity
 IJBSplitsStore public immutable override splitsStore;
 ```
 
-
 ### defaultSplitsProjectId
 
 The ID of project for which the default splits are stored.
-
 
 ```solidity
 uint256 public override defaultSplitsProjectId;
 ```
 
-
 ### defaultSplitsDomain
 
 The domain within which the default splits are stored.
-
 
 ```solidity
 uint256 public override defaultSplitsDomain;
 ```
 
-
 ### defaultSplitsGroup
 
 The group within which the default splits are stored.
-
 
 ```solidity
 uint256 public override defaultSplitsGroup;
 ```
 
-
 ## Functions
-### supportsInterface
 
+### supportsInterface
 
 Indicates if this contract adheres to the specified interface.
 
-*
-See {IERC165-supportsInterface}.*
-
+*See {IERC165-supportsInterface}.*
 
 ```solidity
 function supportsInterface(bytes4 _interfaceId)
@@ -79,6 +67,7 @@ function supportsInterface(bytes4 _interfaceId)
     override(JBETHERC20ProjectPayer, IERC165)
     returns (bool);
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -91,24 +80,21 @@ function supportsInterface(bytes4 _interfaceId)
 |----|----|-----------|
 |`<none>`|`bool`|A flag indicating if this contract adheres to the specified interface.|
 
-
 ### constructor
-
 
 ```solidity
 constructor(IJBSplitsStore _splitsStore) JBETHERC20ProjectPayer(_splitsStore.directory());
 ```
+
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
 |`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
 
-
 ### initialize
 
 *The re-initialize check is done in the inherited paroject payer*
-
 
 ```solidity
 function initialize(
@@ -124,6 +110,7 @@ function initialize(
     address _owner
 ) external override;
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -139,15 +126,11 @@ function initialize(
 |`_preferAddToBalance`|`bool`| A flag indicating if received payments should call the `pay` function or the `addToBalance` function of a project.|
 |`_owner`|`address`|The address that will own the contract.|
 
-
 ### receive
-
 
 Received funds are paid to the default split group using the stored default properties.
 
-*
-This function is called automatically when the contract receives an ETH payment.*
-
+*This function is called automatically when the contract receives an ETH payment.*
 
 ```solidity
 receive() external payable virtual override nonReentrant;
@@ -155,9 +138,7 @@ receive() external payable virtual override nonReentrant;
 
 ### setDefaultSplits
 
-
 Sets the splits in the splits store that payments this contract receives will be split between.
-
 
 ```solidity
 function setDefaultSplits(
@@ -167,6 +148,7 @@ function setDefaultSplits(
     JBGroupedSplits[] memory _groupedSplits
 ) external virtual override onlyOwner;
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -176,12 +158,9 @@ function setDefaultSplits(
 |`_group`|`uint256`|The group within which the default splits are stored.|
 |`_groupedSplits`|`JBGroupedSplits[]`|The split groups to set.|
 
-
 ### setDefaultSplitsReference
 
-
 Sets the location of the splits that payments this contract receives will be split between.
-
 
 ```solidity
 function setDefaultSplitsReference(uint256 _projectId, uint256 _domain, uint256 _group)
@@ -190,6 +169,7 @@ function setDefaultSplitsReference(uint256 _projectId, uint256 _domain, uint256 
     override
     onlyOwner;
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -198,12 +178,9 @@ function setDefaultSplitsReference(uint256 _projectId, uint256 _domain, uint256 
 |`_domain`|`uint256`|The domain within which the default splits are stored.|
 |`_group`|`uint256`|The group within which the default splits are stored.|
 
-
 ### pay
 
-
 Make a payment to the specified project after first splitting the amount among the stored default splits.
-
 
 ```solidity
 function pay(
@@ -218,6 +195,7 @@ function pay(
     bytes calldata _metadata
 ) public payable virtual override nonReentrant;
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -232,12 +210,9 @@ function pay(
 |`_memo`|`string`|A memo to pass along to the emitted event, and passed along the the funding cycle's data source and delegate. A data source can alter the memo before emitting in the event and forwarding to the delegate.|
 |`_metadata`|`bytes`|Bytes to send along to the data source, delegate, and emitted event, if provided.|
 
-
 ### addToBalanceOf
 
-
 Add to the balance of the specified project after first splitting the amount among the stored default splits.
-
 
 ```solidity
 function addToBalanceOf(
@@ -249,6 +224,7 @@ function addToBalanceOf(
     bytes calldata _metadata
 ) public payable virtual override nonReentrant;
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -260,12 +236,9 @@ function addToBalanceOf(
 |`_memo`|`string`|A memo to pass along to the emitted event.|
 |`_metadata`|`bytes`|Extra data to pass along to the terminal.|
 
-
 ### _payToSplits
 
-
 Split an amount between all splits.
-
 
 ```solidity
 function _payToSplits(
@@ -278,6 +251,7 @@ function _payToSplits(
     address _defaultBeneficiary
 ) internal virtual returns (uint256 leftoverAmount);
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -296,12 +270,9 @@ function _payToSplits(
 |----|----|-----------|
 |`leftoverAmount`|`uint256`|The amount leftover after all splits were paid.|
 
-
 ### _payTo
 
-
 Split an amount between all splits.
-
 
 ```solidity
 function _payTo(
@@ -312,6 +283,7 @@ function _payTo(
     address _defaultBeneficiary
 ) internal virtual returns (uint256 leftoverAmount);
 ```
+
 **Parameters**
 
 |Name|Type|Description|
@@ -327,5 +299,3 @@ function _payTo(
 |Name|Type|Description|
 |----|----|-----------|
 |`leftoverAmount`|`uint256`|The amount leftover after all splits were paid.|
-
-
