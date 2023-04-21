@@ -10,7 +10,7 @@
 #### What you'll want to know if you're building
 
 * There are two types of delegates: [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md)s and [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate.md)s. Any contract that adheres to these interfaces can be used as a delegate in a project's funding cycles.
-* Delegate contracts to use should be specified by the funding cycle's [`dataSource`](data-source.md).
+* The funding cycle's [`dataSource`](data-source.md) specifies the active Delegate contracts.
 * The [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md)'s `didPay(...)` hook is triggered in [`JBPayoutRedemptionPaymentTerminal3_1._pay(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#_pay), and the [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate.md)'s `didRedeem(...)` hook is triggered in [`JBPayoutRedemptionPaymentTerminal3_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#redeemtokensof).
 * The redemption delegate hook is called before funds are dispersed.
 
