@@ -186,7 +186,7 @@ function heldFeesOf(uint256 _projectId) external view override returns (JBFee[] 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`JBFee[]`|An array of fees that are being held.|
+|`<none>`|[`JBFee[]`](docs/dev/api/data-structures/jbfee.md)|An array of fees that are being held.|
 
 ### supportsInterface
 
@@ -251,12 +251,12 @@ constructor(
 |`_currency`|`uint256`|The currency that this terminal's token adheres to for price feeds.|
 |`_baseWeightCurrency`|`uint256`|The currency to base token issuance on.|
 |`_payoutSplitsGroup`|`uint256`|The group that denotes payout splits from this terminal in the splits store.|
-|`_operatorStore`|`IJBOperatorStore`|A contract storing operator assignments.|
-|`_projects`|`IJBProjects`|A contract which mints ERC-721's that represent project ownership and transfers.|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
-|`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
-|`_prices`|`IJBPrices`|A contract that exposes price feeds.|
-|`_store`|`IJBSingleTokenPaymentTerminalStore`|A contract that stores the terminal's data.|
+|`_operatorStore`|[`IJBOperatorStore`](docs/dev/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
+|`_projects`|[`IJBProjects`](docs/dev/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_splitsStore`|[`IJBSplitsStore`](docs/dev/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
+|`_prices`|[`IJBPrices`](docs/dev/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
+|`_store`|[`IJBSingleTokenPaymentTerminalStore`](docs/dev/api/interfaces/ijbsingletokenpaymentterminalstore.md)|A contract that stores the terminal's data.|
 |`_owner`|`address`|The address that will own this contract.|
 
 ### pay
@@ -441,7 +441,7 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project being migrated.|
-|`_to`|`IJBPaymentTerminal`|The terminal contract that will gain the project's funds.|
+|`_to`|[`IJBPaymentTerminal`](docs/dev/api/interfaces/ijbpaymentterminal.md)|The terminal contract that will gain the project's funds.|
 
 **Returns**
 
@@ -528,7 +528,7 @@ function setFeeGauge(IJBFeeGauge _feeGauge) external virtual override onlyOwner;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_feeGauge`|`IJBFeeGauge`|The new fee gauge.|
+|`_feeGauge`|[`IJBFeeGauge`](docs/dev/api/interfaces/ijbfeegauge.md)|The new fee gauge.|
 
 ### setFeelessAddress
 
@@ -778,7 +778,7 @@ function _distributeToPayoutSplit(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_split`|`JBSplit`|The split to distribute payouts to.|
+|`_split`|[`JBSplit`](docs/dev/api/data-structures/jbsplit.md)|The split to distribute payouts to.|
 |`_projectId`|`uint256`||
 |`_group`|`uint256`||
 |`_amount`|`uint256`|The total amount being distributed to the split, as a fixed point number with the same number of decimals as this terminal.|
@@ -809,7 +809,7 @@ function _takeFeeFrom(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project having fees taken from.|
-|`_fundingCycle`|`JBFundingCycle`|The funding cycle during which the fee is being taken.|
+|`_fundingCycle`|[`JBFundingCycle`](docs/dev/api/data-structures/jbfundingcycle.md)|The funding cycle during which the fee is being taken.|
 |`_amount`|`uint256`|The amount of the fee to take, as a floating point number with 18 decimals.|
 |`_beneficiary`|`address`|The address to mint the platforms tokens for.|
 |`_feeDiscount`|`uint256`|The amount of discount to apply to the fee, out of the MAX_FEE.|

@@ -84,7 +84,7 @@ function distributionLimitOf(
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project to get the distribution limit of.|
 |`_configuration`|`uint256`|The configuration during which the distribution limit applies.|
-|`_terminal`|`IJBPaymentTerminal`|The terminal from which distributions are being limited.|
+|`_terminal`|[`IJBPaymentTerminal`](docs/dev/api/interfaces/ijbpaymentterminal.md)|The terminal from which distributions are being limited.|
 |`_token`|`address`|The token for which the distribution limit applies.|
 
 **Returns**
@@ -115,7 +115,7 @@ function overflowAllowanceOf(
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project to get the overflow allowance of.|
 |`_configuration`|`uint256`|The configuration of the during which the allowance applies.|
-|`_terminal`|`IJBPaymentTerminal`|The terminal managing the overflow.|
+|`_terminal`|[`IJBPaymentTerminal`](docs/dev/api/interfaces/ijbpaymentterminal.md)|The terminal managing the overflow.|
 |`_token`|`address`|The token for which the overflow allowance applies.|
 
 **Returns**
@@ -135,7 +135,7 @@ constructor(IJBDirectory _directory) JBControllerUtility(_directory);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
 
 ### setFor
 
@@ -157,7 +157,7 @@ function setFor(
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project whose fund access constraints are being set.|
 |`_configuration`|`uint256`|The funding cycle configuration the constraints apply within.|
-|`_fundAccessConstraints`|`JBFundAccessConstraints[]`|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
+|`_fundAccessConstraints`|[`JBFundAccessConstraints[]`](docs/dev/api/data-structures/jbfundaccessconstraints.md)|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
 
 ## Errors
 

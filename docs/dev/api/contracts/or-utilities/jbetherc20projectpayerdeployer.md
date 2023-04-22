@@ -38,7 +38,7 @@ constructor(IJBDirectory _directory);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
 
 ### deployProjectPayer
 
@@ -72,5 +72,5 @@ function deployProjectPayer(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`projectPayer`|`IJBProjectPayer`|The project payer contract.|
+|`projectPayer`|[`IJBProjectPayer`](docs/dev/api/interfaces/ijbprojectpayer.md)|The project payer contract.|
 

@@ -70,12 +70,12 @@ constructor(
 |`_currency`|`uint256`|The currency that this terminal's token adheres to for price feeds.|
 |`_baseWeightCurrency`|`uint256`|The currency to base token issuance on.|
 |`_payoutSplitsGroup`|`uint256`|The group that denotes payout splits from this terminal in the splits store.|
-|`_operatorStore`|`IJBOperatorStore`|A contract storing operator assignments.|
-|`_projects`|`IJBProjects`|A contract which mints ERC-721's that represent project ownership and transfers.|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
-|`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
-|`_prices`|`IJBPrices`|A contract that exposes price feeds.|
-|`_store`|`IJBSingleTokenPaymentTerminalStore`|A contract that stores the terminal's data.|
+|`_operatorStore`|[`IJBOperatorStore`](docs/dev/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
+|`_projects`|[`IJBProjects`](docs/dev/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_splitsStore`|[`IJBSplitsStore`](docs/dev/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
+|`_prices`|[`IJBPrices`](docs/dev/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
+|`_store`|[`IJBSingleTokenPaymentTerminalStore`](docs/dev/api/interfaces/ijbsingletokenpaymentterminalstore.md)|A contract that stores the terminal's data.|
 |`_owner`|`address`|The address that will own this contract.|
 
 ### _transferFrom

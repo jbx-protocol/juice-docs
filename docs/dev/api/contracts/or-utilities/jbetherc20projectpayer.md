@@ -119,7 +119,7 @@ constructor(IJBDirectory _directory);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
 
 ### initialize
 

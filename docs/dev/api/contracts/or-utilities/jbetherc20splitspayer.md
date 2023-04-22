@@ -90,7 +90,7 @@ constructor(IJBSplitsStore _splitsStore) JBETHERC20ProjectPayer(_splitsStore.dir
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
+|`_splitsStore`|[`IJBSplitsStore`](docs/dev/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
 
 ### initialize
 
@@ -156,7 +156,7 @@ function setDefaultSplits(
 |`_projectId`|`uint256`|The ID of project for which the default splits are stored.|
 |`_domain`|`uint256`|The domain within which the default splits are stored.|
 |`_group`|`uint256`|The group within which the default splits are stored.|
-|`_groupedSplits`|`JBGroupedSplits[]`|The split groups to set.|
+|`_groupedSplits`|[`JBGroupedSplits[]`](docs/dev/api/data-structures/jbgroupedsplits.md)|The split groups to set.|
 
 ### setDefaultSplitsReference
 
@@ -288,7 +288,7 @@ function _payTo(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_splits`|`JBSplit[]`|The splits.|
+|`_splits`|[`JBSplit[]`](docs/dev/api/data-structures/jbsplit.md)|The splits.|
 |`_token`|`address`|The token the amonut being split is in.|
 |`_amount`|`uint256`|The amount of tokens being split, as a fixed point number. If the `_token` is ETH, this is ignored and msg.value is used in its place.|
 |`_decimals`|`uint256`|The number of decimals in the `_amount` fixed point number.|

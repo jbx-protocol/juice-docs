@@ -62,8 +62,8 @@ function deploySplitsPayerWithSplits(
 |Name|Type|Description|
 |----|----|-----------|
 |`_defaultSplitsProjectId`|`uint256`|The ID of project for which the default splits are stored.|
-|`_defaultSplits`|`JBSplit[]`|The splits to payout when this contract receives direct payments.|
-|`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
+|`_defaultSplits`|[`JBSplit[]`](docs/dev/api/data-structures/jbsplit.md)|The splits to payout when this contract receives direct payments.|
+|`_splitsStore`|[`IJBSplitsStore`](docs/dev/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
 |`_defaultProjectId`|`uint256`|The ID of the project whose treasury should be forwarded the splits payer contract's received payment leftovers after distributing to the default splits group.|
 |`_defaultBeneficiary`|`address payable`|The address that'll receive the project's tokens when the splits payer receives payments.|
 |`_defaultPreferClaimedTokens`|`bool`|A flag indicating whether issued tokens from the splits payer's received payments should be automatically claimed into the beneficiary's wallet.|
@@ -76,7 +76,7 @@ function deploySplitsPayerWithSplits(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`splitsPayer`|`IJBSplitsPayer`|The splits payer contract.|
+|`splitsPayer`|[`IJBSplitsPayer`](docs/dev/api/interfaces/ijbsplitspayer.md)|The splits payer contract.|
 
 ### deploySplitsPayer
 
@@ -116,4 +116,4 @@ function deploySplitsPayer(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`splitsPayer`|`IJBSplitsPayer`|The splits payer contract.|
+|`splitsPayer`|[`IJBSplitsPayer`](docs/dev/api/interfaces/ijbsplitspayer.md)|The splits payer contract.|

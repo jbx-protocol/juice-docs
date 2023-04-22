@@ -44,7 +44,7 @@ constructor(IJBDirectory _directory);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
 
 ### migrate
 
@@ -64,8 +64,8 @@ function migrate(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The project id whose controller & terminal are to be migrated|
-|`_newController`|`IJBMigratable`|Controller 3.1 address to migrate to.|
-|`_newJbTerminal`|`IJBPaymentTerminal`|Terminal 3.1 address to migrate to.|
+|`_newController`|[`IJBMigratable`](docs/dev/api/interfaces/ijbmigratable.md)|Controller 3.1 address to migrate to.|
+|`_newJbTerminal`|[`IJBPaymentTerminal`](docs/dev/api/interfaces/ijbpaymentterminal.md)|Terminal 3.1 address to migrate to.|
 |`_oldJbTerminal`|`IJBPayoutRedemptionPaymentTerminal`|Old terminal address to migrate from.|
 
 ## Errors

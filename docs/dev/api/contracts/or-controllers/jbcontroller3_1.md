@@ -144,8 +144,8 @@ function getFundingCycleOf(uint256 _projectId, uint256 _configuration)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|`JBFundingCycle`|The funding cycle.|
-|`metadata`|`JBFundingCycleMetadata`|The funding cycle's metadata.|
+|`fundingCycle`|[`JBFundingCycle`](docs/dev/api/data-structures/jbfundingcycle.md)|The funding cycle.|
+|`metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|The funding cycle's metadata.|
 
 ### latestConfiguredFundingCycleOf
 
@@ -169,8 +169,8 @@ function latestConfiguredFundingCycleOf(uint256 _projectId)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|`JBFundingCycle`|The latest configured funding cycle.|
-|`metadata`|`JBFundingCycleMetadata`|The latest configured funding cycle's metadata.|
+|`fundingCycle`|[`JBFundingCycle`](docs/dev/api/data-structures/jbfundingcycle.md)|The latest configured funding cycle.|
+|`metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|The latest configured funding cycle's metadata.|
 |`ballotState`|`JBBallotState`|The state of the configuration.|
 
 ### currentFundingCycleOf
@@ -195,8 +195,8 @@ function currentFundingCycleOf(uint256 _projectId)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|`JBFundingCycle`|The current funding cycle.|
-|`metadata`|`JBFundingCycleMetadata`|The current funding cycle's metadata.|
+|`fundingCycle`|[`JBFundingCycle`](docs/dev/api/data-structures/jbfundingcycle.md)|The current funding cycle.|
+|`metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|The current funding cycle's metadata.|
 
 ### queuedFundingCycleOf
 
@@ -220,8 +220,8 @@ function queuedFundingCycleOf(uint256 _projectId)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|`JBFundingCycle`|The queued funding cycle.|
-|`metadata`|`JBFundingCycleMetadata`|The queued funding cycle's metadata.|
+|`fundingCycle`|[`JBFundingCycle`](docs/dev/api/data-structures/jbfundingcycle.md)|The queued funding cycle.|
+|`metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|The queued funding cycle's metadata.|
 
 ### totalOutstandingTokensOf
 
@@ -277,13 +277,13 @@ constructor(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_operatorStore`|`IJBOperatorStore`|A contract storing operator assignments.|
-|`_projects`|`IJBProjects`|A contract which mints ERC-721's that represent project ownership and transfers.|
-|`_directory`|`IJBDirectory`|A contract storing directories of terminals and controllers for each project.|
-|`_fundingCycleStore`|`IJBFundingCycleStore`|A contract storing all funding cycle configurations.|
-|`_tokenStore`|`IJBTokenStore`|A contract that manages token minting and burning.|
-|`_splitsStore`|`IJBSplitsStore`|A contract that stores splits for each project.|
-|`_fundAccessConstraintsStore`|`IJBFundAccessConstraintsStore`|A contract that stores fund access constraints for each project.|
+|`_operatorStore`|[`IJBOperatorStore`](docs/dev/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
+|`_projects`|[`IJBProjects`](docs/dev/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
+|`_directory`|[`IJBDirectory`](docs/dev/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_fundingCycleStore`|[`IJBFundingCycleStore`](docs/dev/api/interfaces/ijbfundingcyclestore.md)|A contract storing all funding cycle configurations.|
+|`_tokenStore`|[`IJBTokenStore`](docs/dev/api/interfaces/ijbtokenstore.md)|A contract that manages token minting and burning.|
+|`_splitsStore`|[`IJBSplitsStore`](docs/dev/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
+|`_fundAccessConstraintsStore`|[`IJBFundAccessConstraintsStore`](docs/dev/api/interfaces/ijbfundaccessconstraintsstore.md)|A contract that stores fund access constraints for each project.|
 
 ### launchProjectFor
 
@@ -312,13 +312,13 @@ function launchProjectFor(
 |Name|Type|Description|
 |----|----|-----------|
 |`_owner`|`address`|The address to set as the owner of the project. The project ERC-721 will be owned by this address.|
-|`_projectMetadata`|`JBProjectMetadata`|Metadata to associate with the project within a particular domain. This can be updated any time by the owner of the project.|
-|`_data`|`JBFundingCycleData`|Data that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.|
-|`_metadata`|`JBFundingCycleMetadata`|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
+|`_projectMetadata`|[`JBProjectMetadata`](docs/dev/api/data-structures/jbprojectmetadata.md)|Metadata to associate with the project within a particular domain. This can be updated any time by the owner of the project.|
+|`_data`|[`JBFundingCycleData`](docs/dev/api/data-structures/jbfundingcycledata.md)|Data that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.|
+|`_metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
 |`_mustStartAtOrAfter`|`uint256`|The time before which the configured funding cycle cannot start.|
-|`_groupedSplits`|`JBGroupedSplits[]`|An array of splits to set for any number of groups.|
-|`_fundAccessConstraints`|`JBFundAccessConstraints[]`|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
-|`_terminals`|`IJBPaymentTerminal[]`|Payment terminals to add for the project.|
+|`_groupedSplits`|[`JBGroupedSplits[]`](docs/dev/api/data-structures/jbgroupedsplits.md)|An array of splits to set for any number of groups.|
+|`_fundAccessConstraints`|[`JBFundAccessConstraints[]`](docs/dev/api/data-structures/jbfundaccessconstraints.md)|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
+|`_terminals`|[`IJBPaymentTerminal[]`](docs/dev/api/interfaces/ijbpaymentterminal.md)|Payment terminals to add for the project.|
 |`_memo`|`string`|A memo to pass along to the emitted event.|
 
 **Returns**
@@ -358,12 +358,12 @@ function launchFundingCyclesFor(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project to launch funding cycles for.|
-|`_data`|`JBFundingCycleData`|Data that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.|
-|`_metadata`|`JBFundingCycleMetadata`|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
+|`_data`|[`JBFundingCycleData`](docs/dev/api/data-structures/jbfundingcycledata.md)|Data that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.|
+|`_metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
 |`_mustStartAtOrAfter`|`uint256`|The time before which the configured funding cycle cannot start.|
-|`_groupedSplits`|`JBGroupedSplits[]`|An array of splits to set for any number of groups.|
-|`_fundAccessConstraints`|`JBFundAccessConstraints[]`|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
-|`_terminals`|`IJBPaymentTerminal[]`|Payment terminals to add for the project.|
+|`_groupedSplits`|[`JBGroupedSplits[]`](docs/dev/api/data-structures/jbgroupedsplits.md)|An array of splits to set for any number of groups.|
+|`_fundAccessConstraints`|[`JBFundAccessConstraints[]`](docs/dev/api/data-structures/jbfundaccessconstraints.md)|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
+|`_terminals`|[`IJBPaymentTerminal[]`](docs/dev/api/interfaces/ijbpaymentterminal.md)|Payment terminals to add for the project.|
 |`_memo`|`string`|A memo to pass along to the emitted event.|
 
 **Returns**
@@ -400,11 +400,11 @@ function reconfigureFundingCyclesOf(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project whose funding cycles are being reconfigured.|
-|`_data`|`JBFundingCycleData`|Data that defines the funding cycle. These properties will remain fixed for the duration of the funding cycle.|
-|`_metadata`|`JBFundingCycleMetadata`|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
+|`_data`|[`JBFundingCycleData`](docs/dev/api/data-structures/jbfundingcycledata.md)|Data that defines the funding cycle. These properties will remain fixed for the duration of the funding cycle.|
+|`_metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
 |`_mustStartAtOrAfter`|`uint256`|The time before which the configured funding cycle cannot start.|
-|`_groupedSplits`|`JBGroupedSplits[]`|An array of splits to set for any number of groups.|
-|`_fundAccessConstraints`|`JBFundAccessConstraints[]`|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
+|`_groupedSplits`|[`JBGroupedSplits[]`](docs/dev/api/data-structures/jbgroupedsplits.md)|An array of splits to set for any number of groups.|
+|`_fundAccessConstraints`|[`JBFundAccessConstraints[]`](docs/dev/api/data-structures/jbfundaccessconstraints.md)|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.|
 |`_memo`|`string`|A memo to pass along to the emitted event.|
 
 **Returns**
@@ -543,7 +543,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project that will be migrated from this controller.|
-|`_to`|`IJBMigratable`|The controller to which the project is migrating.|
+|`_to`|[`IJBMigratable`](docs/dev/api/interfaces/ijbmigratable.md)|The controller to which the project is migrating.|
 
 ### _distributeReservedTokensOf
 
@@ -611,11 +611,11 @@ function _configure(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project whose funding cycles are being reconfigured.|
-|`_data`|`JBFundingCycleData`|Data that defines the funding cycle. These properties will remain fixed for the duration of the funding cycle.|
-|`_metadata`|`JBFundingCycleMetadata`|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
+|`_data`|[`JBFundingCycleData`](docs/dev/api/data-structures/jbfundingcycledata.md)|Data that defines the funding cycle. These properties will remain fixed for the duration of the funding cycle.|
+|`_metadata`|[`JBFundingCycleMetadata`](docs/dev/api/data-structures/jbfundingcyclemetadata.md)|Metadata specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.|
 |`_mustStartAtOrAfter`|`uint256`|The time before which the configured funding cycle cannot start.|
-|`_groupedSplits`|`JBGroupedSplits[]`|An array of splits to set for any number of groups.|
-|`_fundAccessConstraints`|`JBFundAccessConstraints[]`|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal.|
+|`_groupedSplits`|[`JBGroupedSplits[]`](docs/dev/api/data-structures/jbgroupedsplits.md)|An array of splits to set for any number of groups.|
+|`_fundAccessConstraints`|[`JBFundAccessConstraints[]`](docs/dev/api/data-structures/jbfundaccessconstraints.md)|An array containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal.|
 
 **Returns**
 
