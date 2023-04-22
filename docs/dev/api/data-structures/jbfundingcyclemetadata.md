@@ -62,7 +62,9 @@ struct JBFundingCycleMetadata {
 * `allowTerminalMigration` is a flag indicating if migrating terminals should be allowed during this funding cycle.
 * `allowControllerMigration` is a flag indicating if migrating controllers should be allowed during this funding cycle.
 * `holdFees` is a flag indicating if fees should be held during this funding cycle.
+* `preferClaimedTokenOverride` is a flag indicating if claimed tokens should always be prefered to unclaimed tokens when minting.
 * `useTotalOverflowForRedemptions` is a flag indicating if redemptions should use the project's balance held in all terminals instead of the project's local terminal balance from which the redemption is being fulfilled.
 * `useDataSourceForPay` is a flag indicating if the data source should be used for pay transactions during this funding cycle.
 * `useDataSourceForRedeem` is a flag indicating if the data source should be used for redeem transactions during this funding cycle.
 * `dataSource` is the data source to use during this funding cycle.
+* `metadata` is the metadata of the metadata, up to `uint8` in size. This metadata can be used by [delegates](/dev/learn/glossary/delegate/).
