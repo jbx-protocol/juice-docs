@@ -53,10 +53,33 @@ do
   rm -r $SOL
 done
 
-# Rename .md files: remove prefixes, make lowercase
+# Properly format documents & rename .md files: remove prefixes, make lowercase.
 for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md")
 do
-  mv "$FILE_PATH" "$(dirname $FILE_PATH)/$(basename $FILE_PATH | awk -F. '{ print $2 }' | tr '[:upper:]' '[:lower:]').md"
+  awk 'BEGIN {prev_blank=0; prev_hash=0; prev_backticks=0} 
+  {
+    if ($0 ~ /^_/) {print "- " $0}
+    else if ($0 ~ /^\*$/) {getline next_line; print $0 next_line}
+    else if ($0 ~ /^#/) {
+      if (prev_hash) {print ""}
+      print $0; prev_hash=1
+   }
+    else if ($0 ~ /^$/) {
+      if (!prev_blank) {print ""}
+      prev_blank=1
+    }
+    else if ($0 ~ /^```$/) {
+      print $0; prev_backticks=1
+    }
+    else {
+      if (prev_backticks || prev_hash) {print ""}
+      print $0
+    }
+    if ($0 !~ /^#/) {prev_hash=0}
+    if ($0 !~ /^$/) {prev_blank=0}
+    if ($0 !~ /^```$/) {prev_backticks=0}
+  }' "$FILE_PATH" > "$(dirname $FILE_PATH)/$(basename $FILE_PATH | awk -F. '{ print $(NF-1) }' | tr '[:upper:]' '[:lower:]').md"
+  rm "$FILE_PATH"
 done
 
 # Create Docusaurus category files and READMEs for each directory
