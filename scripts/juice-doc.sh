@@ -60,6 +60,22 @@ do
   {
     if ($0 ~ /^_/) {print "- " $0}
     else if ($0 ~ /^\*$/) {getline next_line; print $0 next_line}
+    else if ($0 ~ /^\*\*Inherits:\*\*$/) {
+      getline next_line
+      split(next_line, fields, ", ")
+      formatted_line = "Inherits: "
+      for (i = 1; i <= length(fields); i++) {
+        if (fields[i] ~ /\[(.*)\]\((.*)\)/) {
+          formatted_line = formatted_line gensub(/\[(.*)\]\((.*)\)/, "[`\\1`](/)", "g", fields[i])
+        } else {
+          formatted_line = formatted_line gensub(/(.*)/, "[`\\1`](/)", "g", fields[i])
+        }
+        if (i < length(fields)) {
+          formatted_line = formatted_line ", "
+        }
+      }
+      print formatted_line
+    }
     else if ($0 ~ /^#/) {
       if (prev_hash) {print ""}
       print $0; prev_hash=1
@@ -88,4 +104,12 @@ do
   DIR_CLEAN=${DIR%/}
   echo -e "{\n  \"label\": \"${DIR_CLEAN^}\"\n}" > "$DIR_CLEAN"/_category_.json
 	echo -e "---\ntitle: ${DIR_CLEAN^}\n---\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList/>" > "$DIR_CLEAN"/README.md
+done
+
+# Insert links to the relevant pages within type columns of parameter tables
+for PAGE in $(find "$OUTPUT_PATH" "$JUICE_DOCS_PATH"docs/dev/api/interfaces "$JUICE_DOCS_PATH"docs/dev/api/data-structures -type f -name "*.md" ! -name "README.md")
+do
+  NAME=$(awk '{print $2; exit}' $PAGE)
+  RELATIVE_PATH="/$(realpath --relative-to="$JUICE_DOCS_PATH" "$PAGE")"
+  grep -rl "\|\`$NAME" "$OUTPUT_PATH" | xargs sed -i "s#|\`\\(${NAME}\\)\\(\\[\\?\\]\\?\\)\`#|[\`\1\2\`](${RELATIVE_PATH})#g"
 done
