@@ -2,22 +2,23 @@
 #
 # Documents a Juicebox protocol extension using `forge doc`.
 # Update $JUICE_DOCS_PATH and $EXTENSIONS_PATH before running.
+# Ensure that you have forge and jq installed
 
 JUICE_DOCS_PATH="/home/f/work/juice-docs/"
 EXTENSIONS_PATH="/home/f/work/juice-docs/docs/dev/extensions/"
 
 # Check if an argument was provided
 if [ -z "$1" ]; then
-    echo "Usage: ./juice-doc.sh <target_path>"
-    exit 1
+  echo "Usage: ./juice-doc.sh <target_path>"
+  exit 1
 fi
 
 TARGET_PATH=$(realpath "$1")
 
 # Check if Forge is installed
 if ! command -v forge >/dev/null 2>&1; then
-    echo "Error: Foundry (forge) was not found in your path. See https://getfoundry.sh/";
-    exit 1;
+  echo "Error: Foundry (forge) was not found in your path. See https://getfoundry.sh/";
+  exit 1;
 fi
 
 # Generate forge docs, store GitHub URL & forge src
@@ -47,15 +48,13 @@ mv $FORGE_SRC/* .
 rm -r $FORGE_SRC
 
 # Move documents out of .sol directories
-for SOL in $(find ~+ -name "*.sol" -type d)
-do
+for SOL in $(find ~+ -name "*.sol" -type d); do
   mv "$SOL"/* "$SOL"/..
   rm -r $SOL
 done
 
 # Properly format documents & rename .md files: remove prefixes, make lowercase.
-for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md")
-do
+for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md"); do
   awk 'BEGIN {prev_blank=0; prev_hash=0; prev_backticks=0} 
   {
     if ($0 ~ /^_/) {print "- " $0}
@@ -99,17 +98,67 @@ do
 done
 
 # Create Docusaurus category files and READMEs for each directory
-for DIR in $(ls -d */)
-do
+for DIR in $(ls -d */); do
   DIR_CLEAN=${DIR%/}
   echo -e "{\n  \"label\": \"${DIR_CLEAN^}\"\n}" > "$DIR_CLEAN"/_category_.json
 	echo -e "---\ntitle: ${DIR_CLEAN^}\n---\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList/>" > "$DIR_CLEAN"/README.md
 done
 
 # Insert links to the relevant pages within type columns of parameter tables
-for PAGE in $(find "$OUTPUT_PATH" "$JUICE_DOCS_PATH"docs/dev/api/interfaces "$JUICE_DOCS_PATH"docs/dev/api/data-structures -type f -name "*.md" ! -name "README.md")
-do
+for PAGE in $(find "$OUTPUT_PATH" "$JUICE_DOCS_PATH"docs/dev/api/interfaces "$JUICE_DOCS_PATH"docs/dev/api/data-structures -type f -name "*.md" ! -name "README.md"); do
   NAME=$(awk '{print $2; exit}' $PAGE)
   RELATIVE_PATH="/$(realpath --relative-to="$JUICE_DOCS_PATH" "$PAGE")"
-  grep -rl "\|\`$NAME" "$OUTPUT_PATH" | xargs sed -i "s#|\`\\(${NAME}\\)\\(\\[\\?\\]\\?\\)\`#|[\`\1\2\`](${RELATIVE_PATH})#g"
+  grep -rl "\|\`$NAME" "$OUTPUT_PATH" | xargs sed -i "s#|\`\\(${NAME}\\)\\(\\[\\?\\]\\?\\)\`#|[\`\1\2\`]($RELATIVE_PATH)#g" 2>/dev/null
+  grep -rl "\[\`$NAME\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s#\[\`$NAME\`\](/)#[\`$NAME\`]($RELATIVE_PATH)#g" 2>/dev/null
 done
+
+# Insert links to common OpenZeppelin contracts
+grep -rl "\[\`ERC165\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`ERC165\`\](/)|[\`ERC165\`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165)|g" 2>/dev/null
+grep -rl "\[\`IERC165\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`IERC165\`\](/)|[\`IERC165\`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165)|g" 2>/dev/null
+grep -rl "\[\`Ownable\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`Ownable\`\](/)|[\`Ownable\`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)|g" 2>/dev/null
+grep -rl "\[\`ReentrancyGuard\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`ReentrancyGuard\`\](/)|[\`ReentrancyGuard\`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard)|g" 2>/dev/null
+grep -rl "\[\`ERC20Permit\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`ERC20Permit\`\](/)|[\`ERC20Permit\`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit)|g" 2>/dev/null
+grep -rl "\[\`ERC20Votes\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`ERC20Votes\`\](/)|[\`ERC20Votes\`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Votes)|g" 2>/dev/null
+grep -rl "\[\`ERC721Votes\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`ERC721Votes\`\](/)|[\`ERC721Votes\`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes)|g" 2>/dev/null
+grep -rl "\[\`IERC721\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`IERC721\`\](/)|[\`IERC721\`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721)|g" 2>/dev/null
+grep -rl "\[\`IERC2981\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`IERC2981\`\](/)|[\`IERC2981\`](https://docs.openzeppelin.com/contracts/4.x/api/interfaces#IERC2981)|g" 2>/dev/null
+
+# Add goerli deployment addresses if they exist
+GOERLI_DEPLOY="$(find $TARGET_PATH -type d -name '5')/run-latest.json"
+if [ -e  "$GOERLI_DEPLOY" ]; then
+  echo "Goerli deployments: $GOERLI_DEPLOY"
+  while read -r contract_name contract_address; do
+    grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nGoerli: \[\`$contract_address\`\](https:\/\/goerli.etherscan.io\/address\/$contract_address)
+:loop;n;b loop;}"
+  done <<< $(jq -r '.transactions[] | "\(.contractName) \(.contractAddress)"' $GOERLI_DEPLOY)
+else
+  GOERLI_DIR="$(find $TARGET_PATH -type d -name 'goerli')"
+  if [ -d "$GOERLI_DIR" ]; then
+    for JSON in $(find "$GOERLI_DIR" -maxdepth 1 -type f -iname "*.json"); do
+      contract_name=$(basename $JSON | awk -F. '{ print $(NF-1) }')
+      contract_address=$(jq -r '.address' $JSON)
+      grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nGoerli: \[\`$contract_address\`\](https:\/\/goerli.etherscan.io\/address\/$contract_address)
+:loop;n;b loop;}"
+    done
+  fi
+fi
+
+# Add mainnet deployment addresses if they exist
+MAINNET_DEPLOY="$(find $TARGET_PATH -type d -name '1')/run-latest.json"
+if [ -e  "$MAINNET_DEPLOY" ]; then
+  echo "Mainnet deployments: $MAINNET_DEPLOY"
+  while read -r contract_name contract_address; do
+    grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nMainnet: \[\`$contract_address\`\](https:\/\/etherscan.io\/address\/$contract_address)
+:loop;n;b loop;}"
+  done <<< $(jq -r '.transactions[] | "\(.contractName) \(.contractAddress)"' $MAINNET_DEPLOY)
+else
+  MAINNET_DIR="$(find $TARGET_PATH -type d -name 'mainnet')"
+  if [ -d "$MAINNET_DIR" ]; then
+    for JSON in $(find "$MAINNET_DIR" -maxdepth 1 -type f -iname "*.json"); do
+      contract_name=$(basename $JSON | awk -F. '{ print $(NF-1) }')
+      contract_address=$(jq -r '.address' $JSON)
+      grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nMainnet: \[\`$contract_address\`\](https:\/\/etherscan.io\/address\/$contract_address)
+:loop;n;b loop;}"
+    done
+  fi
+fi
