@@ -1,6 +1,6 @@
 # JBTiered721FundingCycleMetadataResolver
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/24c33179caef17b169ec5b6eb95923f5da66bf32/contracts/libraries/JBTiered721FundingCycleMetadataResolver.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/libraries/JBTiered721FundingCycleMetadataResolver.sol)
 
 ## Functions
 
@@ -31,7 +31,7 @@ function packFundingCycleGlobalMetadata(JBTiered721FundingCycleMetadata memory _
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_metadata`|`JBTiered721FundingCycleMetadata`|The metadata to validate and pack.|
+|`_metadata`|[`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md)|The metadata to validate and pack.|
 
 **Returns**
 
@@ -60,5 +60,5 @@ function expandMetadata(uint8 _packedMetadata)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`metadata`|`JBTiered721FundingCycleMetadata`|The tiered 721 metadata object.|
+|`metadata`|[`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md)|The tiered 721 metadata object.|
 

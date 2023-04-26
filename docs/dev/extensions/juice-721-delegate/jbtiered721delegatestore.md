@@ -1,14 +1,17 @@
 # JBTiered721DelegateStore
 
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JBTiered721DelegateStore.sol)
+
+Mainnet: [`0x167ea060D75727Aa93C1c02873f189d22ef98856`](https://etherscan.io/address/0x167ea060D75727Aa93C1c02873f189d22ef98856)
+
+Goerli: [`0xF85DC8C2b9dFfeab95c614A306141882048dE467`](https://goerli.etherscan.io/address/0xF85DC8C2b9dFfeab95c614A306141882048dE467)
+
+Inherits: [`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)
+
 The contract that stores and manages the NFT's data.
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/24c33179caef17b169ec5b6eb95923f5da66bf32/contracts/JBTiered721DelegateStore.sol)
-
-Inherits: [`IJBTiered721DelegateStore`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore/)
-
-Adheres to:
-
-- [`IJBTiered721DelegateStore`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore/): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+Adheres to -
+- [`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 ## State Variables
 
@@ -39,7 +42,6 @@ uint256 private constant _BASE_LOCK_TIMESTAMP = 1672531200;
 The tier ID that should come after the given tier ID when sorting by contribution floor.
 
 *If empty, assume the next tier ID should come after.
-
 - _nft The NFT contract to get ordered tier ID from.
 - _tierId The tier ID to get a tier after relative to.*
 
@@ -50,7 +52,6 @@ mapping(address => mapping(uint256 => uint256)) internal _tierIdAfter;
 ### _reservedTokenBeneficiaryOf
 
 An optional beneficiary for the reserved token of a given tier.
-
 - _nft The NFT contract to which the reserved token beneficiary belongs.
 - _tierId the ID of the tier.
 
@@ -61,7 +62,6 @@ mapping(address => mapping(uint256 => address)) internal _reservedTokenBeneficia
 ### _royaltyBeneficiaryOf
 
 An optional beneficiary for the royalty of a given tier.
-
 - _nft The NFT contract to which the royalty beneficiary belongs.
 - _tierId the ID of the tier.
 
@@ -72,7 +72,6 @@ mapping(address => mapping(uint256 => address)) internal _royaltyBeneficiaryOf;
 ### _storedTierOf
 
 The stored reward tier.
-
 - _nft The NFT contract to which the tiers belong.
 - _tierId The incremental ID of the tier, starting with 1.
 
@@ -83,7 +82,6 @@ mapping(address => mapping(uint256 => JBStored721Tier)) internal _storedTierOf;
 ### _flagsOf
 
 Flags that influence the behavior of each NFT.
-
 - _nft The NFT for which the flags apply.
 
 ```solidity
@@ -93,7 +91,6 @@ mapping(address => JBTiered721Flags) internal _flagsOf;
 ### _isTierRemovedBitmapWord
 
 For each tier ID, a bitmap containing flags indicating if the tier has been removed.
-
 - _nft The NFT contract to which the tier belong.
 - _depth The bitmap row.
 - _word The row content bitmap.
@@ -107,7 +104,6 @@ mapping(address => mapping(uint256 => uint256)) internal _isTierRemovedBitmapWor
 For each NFT, the tier ID that comes last when sorting.
 
 *If not set, it is assumed the `maxTierIdOf` is the last sorted.
-
 - _nft The NFT contract to which the tier belongs.*
 
 ```solidity
@@ -117,7 +113,6 @@ mapping(address => uint256) internal _trackedLastSortTierIdOf;
 ### _startingTierIdOfCategory
 
 The ID of the first tier in each category.
-
 - _nft The NFT contract to get the tier ID of.
 - _category The category to get the first tier ID of.
 
@@ -130,7 +125,6 @@ mapping(address => mapping(uint256 => uint256)) internal _startingTierIdOfCatego
 The biggest tier ID used.
 
 *This may not include the last tier ID if it has been removed.
-
 - _nft The NFT contract to get the number of tiers.*
 
 ```solidity
@@ -140,7 +134,6 @@ mapping(address => uint256) public override maxTierIdOf;
 ### tierBalanceOf
 
 Each account's balance within a specific tier.
-
 - _nft The NFT contract to which the tier balances belong.
 - _owner The address to get a balance for.
 - _tierId The ID of the tier to get a balance within.
@@ -152,7 +145,6 @@ mapping(address => mapping(address => mapping(uint256 => uint256))) public overr
 ### numberOfReservesMintedFor
 
 The number of reserved tokens that have been minted for each tier.
-
 - _nft The NFT contract to which the reserve data belong.
 - _tierId The ID of the tier to get a minted reserved token count for.
 
@@ -163,7 +155,6 @@ mapping(address => mapping(uint256 => uint256)) public override numberOfReserves
 ### numberOfBurnedFor
 
 The number of tokens that have been burned for each tier.
-
 - _nft The NFT contract to which the burned data belong.
 - _tierId The ID of the tier to get a burned token count for.
 
@@ -174,7 +165,6 @@ mapping(address => mapping(uint256 => uint256)) public override numberOfBurnedFo
 ### defaultReservedTokenBeneficiaryOf
 
 The beneficiary of reserved tokens when the tier doesn't specify a beneficiary.
-
 - _nft The NFT contract to which the reserved token beneficiary applies.
 
 ```solidity
@@ -184,7 +174,6 @@ mapping(address => address) public override defaultReservedTokenBeneficiaryOf;
 ### defaultRoyaltyBeneficiaryOf
 
 The beneficiary of royalties when the tier doesn't specify a beneficiary.
-
 - _nft The NFT contract to which the royalty beneficiary applies.
 
 ```solidity
@@ -194,7 +183,6 @@ mapping(address => address) public override defaultRoyaltyBeneficiaryOf;
 ### firstOwnerOf
 
 The first owner of each token ID, stored on first transfer out.
-
 - _nft The NFT contract to which the token belongs.
 - _tokenId The ID of the token to get the stored first owner of.
 
@@ -205,7 +193,6 @@ mapping(address => mapping(uint256 => address)) public override firstOwnerOf;
 ### baseUriOf
 
 The common base for the tokenUri's
-
 - _nft The NFT for which the base URI applies.
 
 ```solidity
@@ -215,7 +202,6 @@ mapping(address => string) public override baseUriOf;
 ### tokenUriResolverOf
 
 Custom token URI resolver, supersedes base URI.
-
 - _nft The NFT for which the token URI resolver applies.
 
 ```solidity
@@ -225,7 +211,6 @@ mapping(address => IJBTokenUriResolver) public override tokenUriResolverOf;
 ### contractUriOf
 
 Contract metadata uri.
-
 - _nft The NFT for which the contract URI resolver applies.
 
 ```solidity
@@ -235,7 +220,6 @@ mapping(address => string) public override contractUriOf;
 ### encodedIPFSUriOf
 
 When using this contract to manage token uri's, those are stored as 32bytes, based on IPFS hashes stripped down.
-
 - _nft The NFT contract to which the encoded upfs uri belongs.
 - _tierId the ID of the tier
 
@@ -270,7 +254,7 @@ function tiers(address _nft, uint256 _category, uint256 _startingId, uint256 _si
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tiers`|`JB721Tier[]`|All the tiers.|
+|`_tiers`|[`JB721Tier[]`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|All the tiers.|
 
 ### tier
 
@@ -291,7 +275,7 @@ function tier(address _nft, uint256 _id) external view override returns (JB721Ti
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`JB721Tier`|The tier.|
+|`<none>`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier.|
 
 ### tierOfTokenId
 
@@ -312,7 +296,7 @@ function tierOfTokenId(address _nft, uint256 _tokenId) external view override re
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`JB721Tier`|The tier.|
+|`<none>`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier.|
 
 ### totalSupply
 
@@ -442,7 +426,7 @@ function flagsOf(address _nft) external view override returns (JBTiered721Flags 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`JBTiered721Flags`|The flags.|
+|`<none>`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|The flags.|
 
 ### isTierRemoved
 
@@ -609,7 +593,7 @@ function recordAddTiers(JB721TierParams[] calldata _tiersToAdd) external overrid
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tiersToAdd`|`JB721TierParams[]`|The tiers to add.|
+|`_tiersToAdd`|[`JB721TierParams[]`](/docs/dev/extensions/juice-721-delegate/structs/jb721tierparams.md)|The tiers to add.|
 
 **Returns**
 
@@ -779,7 +763,7 @@ function recordSetTokenUriResolver(IJBTokenUriResolver _resolver) external overr
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_resolver`|`IJBTokenUriResolver`|The resolver to set.|
+|`_resolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|The resolver to set.|
 
 ### recordSetEncodedIPFSUriOf
 
@@ -808,7 +792,7 @@ function recordFlags(JBTiered721Flags calldata _flags) external override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_flags`|`JBTiered721Flags`|The flag to sets.|
+|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|The flag to sets.|
 
 ### cleanTiers
 
@@ -862,7 +846,7 @@ function _numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId, JB
 |----|----|-----------|
 |`_nft`|`address`|The NFT to get reserved tokens outstanding.|
 |`_tierId`|`uint256`|The ID of the tier to get a number of reserved tokens outstanding.|
-|`_storedTier`|`JBStored721Tier`|The tier to get a number of reserved tokens outstanding.|
+|`_storedTier`|[`JBStored721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jbstored721tier.md)|The tier to get a number of reserved tokens outstanding.|
 
 **Returns**
 

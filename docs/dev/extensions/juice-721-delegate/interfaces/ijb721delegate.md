@@ -1,6 +1,6 @@
 # IJB721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/24c33179caef17b169ec5b6eb95923f5da66bf32/contracts/interfaces/IJB721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/interfaces/IJB721Delegate.sol)
 
 ## Functions
 

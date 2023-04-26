@@ -1,21 +1,23 @@
 # JBTiered721Delegate
 
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JBTiered721Delegate.sol)
+
+Mainnet: [`0x27ACA2b923CeF119D2414b4E400e7173f34294C8`](https://etherscan.io/address/0x27ACA2b923CeF119D2414b4E400e7173f34294C8)
+
+Goerli: [`0x151a80b5a1Ffc16AFCB32688dB9a5850Df15027b`](https://goerli.etherscan.io/address/0x151a80b5a1Ffc16AFCB32688dB9a5850Df15027b)
+
+Inherits: [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md), [`IERC2981`](https://docs.openzeppelin.com/contracts/4.x/api/interfaces#IERC2981)
+
 Delegate that offers project contributors NFTs with tiered price floors upon payment and the ability to redeem NFTs for treasury assets based based on price floor.
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/24c33179caef17b169ec5b6eb95923f5da66bf32/contracts/JBTiered721Delegate.sol)
+Adheres to -
+- [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IERC2981`](https://docs.openzeppelin.com/contracts/4.x/api/interfaces#IERC2981):  Royalty standard.
 
-Inherits: [`JB721Delegate`](/dev/extensions/juice-721-delegate/contracts/abstract/jb721delegate/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBTiered721Delegate`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate/), [`IERC2981`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC2981.sol)
-
-Adheres to:
-
-- [`IJBTiered721Delegate`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate/): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
-- [`IERC2981`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/IERC2981.sol): Royalty standard.
-
-Inherits from:
-
-- [`JB721Delegate`](/dev/extensions/juice-721-delegate/contracts/abstract/jb721delegate/): A generic NFT delegate.
-- [`Votes`](/dev/extensions/juice-721-delegate/contracts/abstract/votes/): A helper for voting balance snapshots.
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
+Inherits from -
+- [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md):  A generic NFT delegate.
+- [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md):  A helper for voting balance snapshots.
+- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable):  Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
 
 ## State Variables
 
@@ -194,7 +196,7 @@ function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calld
 |Name|Type|Description|
 |----|----|-----------|
 |`_tokenIds`|`uint256[]`|The IDs of the tokens to get the cumulative redemption weight of.|
-|`<none>`|`JBRedeemParamsData`||
+|`<none>`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)||
 
 **Returns**
 
@@ -220,7 +222,7 @@ function totalRedemptionWeight(JBRedeemParamsData calldata) public view virtual 
 
 Indicates if this contract adheres to the specified interface.
 
-*See [`IERC165-supportsInterface`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165).*
+*See {IERC165-supportsInterface}.*
 
 ```solidity
 function supportsInterface(bytes4 _interfaceId) public view override(JB721Delegate, IERC165) returns (bool);
@@ -261,16 +263,16 @@ function initialize(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
-|`_directory`|`IJBDirectory`|The directory of terminals and controllers for projects.|
+|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
 |`_name`|`string`|The name of the token.|
 |`_symbol`|`string`|The symbol that the token should be represented by.|
-|`_fundingCycleStore`|`IJBFundingCycleStore`|A contract storing all funding cycle configurations.|
+|`_fundingCycleStore`|[`IJBFundingCycleStore`](/docs/dev/api/interfaces/ijbfundingcyclestore.md)|A contract storing all funding cycle configurations.|
 |`_baseUri`|`string`|A URI to use as a base for full token URIs.|
-|`_tokenUriResolver`|`IJBTokenUriResolver`|A contract responsible for resolving the token URI for each token ID.|
+|`_tokenUriResolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|A contract responsible for resolving the token URI for each token ID.|
 |`_contractUri`|`string`|A URI where contract metadata can be found.|
-|`_pricing`|`JB721PricingParams`|The tier pricing according to which token distribution will be made. Must be passed in order of contribution floor, with implied increasing value.|
-|`_store`|`IJBTiered721DelegateStore`|A contract that stores the NFT's data.|
-|`_flags`|`JBTiered721Flags`|A set of flags that help define how this contract works.|
+|`_pricing`|[`JB721PricingParams`](/docs/dev/extensions/juice-721-delegate/structs/jb721pricingparams.md)|The tier pricing according to which token distribution will be made. Must be passed in order of contribution floor, with implied increasing value.|
+|`_store`|[`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)|A contract that stores the NFT's data.|
+|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|A set of flags that help define how this contract works.|
 
 ### mintReservesFor
 
@@ -284,7 +286,7 @@ function mintReservesFor(JBTiered721MintReservesForTiersData[] calldata _mintRes
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_mintReservesForTiersData`|`JBTiered721MintReservesForTiersData[]`|Contains information about how many reserved tokens to mint for each tier.|
+|`_mintReservesForTiersData`|[`JBTiered721MintReservesForTiersData[]`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721mintreservesfortiersdata.md)|Contains information about how many reserved tokens to mint for each tier.|
 
 ### mintFor
 
@@ -298,7 +300,7 @@ function mintFor(JBTiered721MintForTiersData[] calldata _mintForTiersData) exter
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_mintForTiersData`|`JBTiered721MintForTiersData[]`|Contains information about how who to mint tokens for from each tier.|
+|`_mintForTiersData`|[`JBTiered721MintForTiersData[]`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721mintfortiersdata.md)|Contains information about how who to mint tokens for from each tier.|
 
 ### adjustTiers
 
@@ -317,7 +319,7 @@ function adjustTiers(JB721TierParams[] calldata _tiersToAdd, uint256[] calldata 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tiersToAdd`|`JB721TierParams[]`|An array of tier data to add.|
+|`_tiersToAdd`|[`JB721TierParams[]`](/docs/dev/extensions/juice-721-delegate/structs/jb721tierparams.md)|An array of tier data to add.|
 |`_tierIdsToRemove`|`uint256[]`|An array of tier IDs to remove.|
 
 ### setDefaultReservedTokenBeneficiary
@@ -382,7 +384,7 @@ function setTokenUriResolver(IJBTokenUriResolver _tokenUriResolver) external ove
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tokenUriResolver`|`IJBTokenUriResolver`|The new URI resolver.|
+|`_tokenUriResolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|The new URI resolver.|
 
 ### setEncodedIPFSUriOf
 
@@ -446,14 +448,14 @@ function mintFor(uint16[] calldata _tierIds, address _beneficiary)
 Mints for a given contribution to the beneficiary.
 
 ```solidity
-function _processPayment(JBDidPayData calldata _data) internal override;
+function _processPayment(JBDidPayData calldata _data) internal virtual override;
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|`JBDidPayData`|The Juicebox standard project contribution data.|
+|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|The Juicebox standard project contribution data.|
 
 ### _didBurn
 
@@ -542,7 +544,7 @@ function _afterTokenTransferAccounting(address _from, address _to, uint256 _toke
 |`_from`|`address`|The account to transfer voting units from.|
 |`_to`|`address`|The account to transfer voting units to.|
 |`_tokenId`|`uint256`|The ID of the token for which voting units are being transferred.|
-|`_tier`|`JB721Tier`|The tier the token ID is part of.|
+|`_tier`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier the token ID is part of.|
 
 ## Errors
 

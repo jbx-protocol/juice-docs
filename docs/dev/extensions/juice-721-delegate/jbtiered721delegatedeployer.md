@@ -1,14 +1,17 @@
 # JBTiered721DelegateDeployer
 
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JBTiered721DelegateDeployer.sol)
+
+Mainnet: [`0xC3279bAbe48c43955932570694f3aDb55027eB8e`](https://etherscan.io/address/0xC3279bAbe48c43955932570694f3aDb55027eB8e)
+
+Goerli: [`0xF9d5Bc54f54eBEE30dE3e960992a343481073B3d`](https://goerli.etherscan.io/address/0xF9d5Bc54f54eBEE30dE3e960992a343481073B3d)
+
+Inherits: [`IJBTiered721DelegateDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md)
+
 Deploys a tier delegate.
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/24c33179caef17b169ec5b6eb95923f5da66bf32/contracts/JBTiered721DelegateDeployer.sol)
-
-Inherits: [`IJBTiered721DelegateDeployer`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer/)
-
-Adheres to:
-
-- [`IJBTiered721DelegateDeployer`](/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+Adheres to -
+- [`IJBTiered721DelegateDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md):  General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
 
 ## State Variables
 
@@ -82,14 +85,14 @@ function deployDelegateFor(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
-|`_deployTiered721DelegateData`|`JBDeployTiered721DelegateData`|Data necessary to fulfill the transaction to deploy a delegate.|
-|`_directory`|`IJBDirectory`|The directory of terminals and controllers for projects.|
+|`_deployTiered721DelegateData`|[`JBDeployTiered721DelegateData`](/docs/dev/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md)|Data necessary to fulfill the transaction to deploy a delegate.|
+|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`newDelegate`|`IJBTiered721Delegate`|The address of the newly deployed delegate.|
+|`newDelegate`|[`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)|The address of the newly deployed delegate.|
 
 ## Errors
 
