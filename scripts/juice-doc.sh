@@ -55,10 +55,27 @@ done
 
 # Properly format documents & rename .md files: remove prefixes, make lowercase.
 for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md"); do
-  awk 'BEGIN {prev_blank=0; prev_hash=0; prev_backticks=0} 
+  awk 'BEGIN {prev_blank=0; prev_hash=0; prev_backticks=0; in_section=0} 
   {
     if ($0 ~ /^_/) {print "- " $0}
-    else if ($0 ~ /^\*$/) {getline next_line; print $0 next_line}
+    else if ($0 ~ /^\*$/) {
+      getline next_line;
+      if(next_line == "Adheres to -") {in_section=1; print next_line}
+      else if(next_line == "Inherits from -") {in_section=1; print next_line}
+      else {print $0 next_line}
+    }
+    else if ($0 ~ /^$/) {
+      if (!prev_blank) {print ""}
+      prev_blank=1
+      in_section=0
+    }
+    else if (in_section) {
+      if($0 ~ /\*$/) {$0 = substr($0, 1, length($0) - 1)}
+      split($0, parts, ":")
+      interface_name = parts[1]
+      description = substr($0, length(interface_name) + 2)
+      printf("- [`%s`](/): %s\n", interface_name, description)
+    }
     else if ($0 ~ /^\*\*Inherits:\*\*$/) {
       getline next_line
       split(next_line, fields, ", ")
@@ -79,10 +96,6 @@ for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md"); do
       if (prev_hash) {print ""}
       print $0; prev_hash=1
    }
-    else if ($0 ~ /^$/) {
-      if (!prev_blank) {print ""}
-      prev_blank=1
-    }
     else if ($0 ~ /^```$/) {
       print $0; prev_backticks=1
     }
@@ -126,7 +139,6 @@ grep -rl "\[\`IERC2981\`\](/)" "$OUTPUT_PATH" | xargs sed -i "s|\[\`IERC2981\`\]
 # Add goerli deployment addresses if they exist
 GOERLI_DEPLOY="$(find $TARGET_PATH -type d -name '5')/run-latest.json"
 if [ -e  "$GOERLI_DEPLOY" ]; then
-  echo "Goerli deployments: $GOERLI_DEPLOY"
   while read -r contract_name contract_address; do
     grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nGoerli: \[\`$contract_address\`\](https:\/\/goerli.etherscan.io\/address\/$contract_address)
 :loop;n;b loop;}"
@@ -146,7 +158,6 @@ fi
 # Add mainnet deployment addresses if they exist
 MAINNET_DEPLOY="$(find $TARGET_PATH -type d -name '1')/run-latest.json"
 if [ -e  "$MAINNET_DEPLOY" ]; then
-  echo "Mainnet deployments: $MAINNET_DEPLOY"
   while read -r contract_name contract_address; do
     grep -rl "# $contract_name$" "$OUTPUT_PATH" | xargs sed -i "/^\[Git Source\]/{a\\\nMainnet: \[\`$contract_address\`\](https:\/\/etherscan.io\/address\/$contract_address)
 :loop;n;b loop;}"
