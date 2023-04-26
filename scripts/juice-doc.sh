@@ -114,7 +114,7 @@ done
 for DIR in $(ls -d */); do
   DIR_CLEAN=${DIR%/}
   echo -e "{\n  \"label\": \"${DIR_CLEAN^}\"\n}" > "$DIR_CLEAN"/_category_.json
-	echo -e "---\ntitle: ${DIR_CLEAN^}\n---\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList/>" > "$DIR_CLEAN"/README.md
+#	echo -e "---\ntitle: ${DIR_CLEAN^}\n---\n\nimport DocCardList from '@theme/DocCardList';\n\n<DocCardList/>" > "$DIR_CLEAN"/README.md
 done
 
 # Insert links to the relevant pages within type columns of parameter tables
