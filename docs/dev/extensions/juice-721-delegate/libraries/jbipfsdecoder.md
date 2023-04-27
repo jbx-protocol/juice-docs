@@ -6,7 +6,7 @@ Utilities to decode an IPFS hash.
 
 *This is fairly gas intensive, due to multiple nested loops, onchain
 IPFS hash decoding is therefore not advised (storing them as a string,
-in that use-case, *might* be more efficient).*
+in that use-case, *might* be more efficient).
 
 ## State Variables
 

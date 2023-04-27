@@ -43,7 +43,7 @@ The tier ID that should come after the given tier ID when sorting by contributio
 
 *If empty, assume the next tier ID should come after.
 - _nft The NFT contract to get ordered tier ID from.
-- _tierId The tier ID to get a tier after relative to.*
+- _tierId The tier ID to get a tier after relative to.
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) internal _tierIdAfter;
@@ -104,7 +104,7 @@ mapping(address => mapping(uint256 => uint256)) internal _isTierRemovedBitmapWor
 For each NFT, the tier ID that comes last when sorting.
 
 *If not set, it is assumed the `maxTierIdOf` is the last sorted.
-- _nft The NFT contract to which the tier belongs.*
+- _nft The NFT contract to which the tier belongs.
 
 ```solidity
 mapping(address => uint256) internal _trackedLastSortTierIdOf;
@@ -125,7 +125,7 @@ mapping(address => mapping(uint256 => uint256)) internal _startingTierIdOfCatego
 The biggest tier ID used.
 
 *This may not include the last tier ID if it has been removed.
-- _nft The NFT contract to get the number of tiers.*
+- _nft The NFT contract to get the number of tiers.
 
 ```solidity
 mapping(address => uint256) public override maxTierIdOf;
