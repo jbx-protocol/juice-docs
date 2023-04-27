@@ -126,4 +126,24 @@ JBX holders but are not required to claim their JBX as the ERC-20 tokens above. 
 
 Mainnet: [`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://etherscan.io/address/0xaf28bcb48c40dbc86f52d459a6562f658fc94b1e)
 
-Safe App: https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e
+Safe: App: https://app.safe.global/`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`
+
+## Juicebox Token Resolver
+
+:::info
+See [`juice-token-resolver`](/dev/extensions/juice-token-resolver/) and its [git source](https://github.com/jbx-protocol/juice-token-resolver.git).
+:::
+
+### Mainnet
+
+- StringSlicer: [`0xaDE1ae7bCcc2Cb84De0431a70cceB5f1DE0E2c9b`](https://etherscan.io/address/0xade1ae7bccc2cb84de0431a70cceb5f1de0e2c9b)
+- LibColor: [`0x53aD3C068B6bf487c1bFE8694C8a5b5546b43063`](https://etherscan.io/address/0x53ad3c068b6bf487c1bfe8694c8a5b5546b43063)
+- DefaultUriResolver: [`0x9D63AFc505C6b2c9387ad837A1Acf23e1e4fa520`](https://etherscan.io/address/0x9D63AFc505C6b2c9387ad837A1Acf23e1e4fa520)
+- TokenUriResolver: [`0x2c39bb41e2af6bec6c3bb102c07c15eda648a366`](https://etherscan.io/address/0x2c39bb41e2af6bec6c3bb102c07c15eda648a366)
+
+### Goerli
+
+- StringSlicer: [`0x2cfab22421a948dc7dc27f2b95ade16f108b6639`](https://goerli.etherscan.io/address/0x2cfab22421a948dc7dc27f2b95ade16f108b6639)
+- LibColor: [`0xb594f2a65dbe407e579bb1a6aef4fae641408812`](https://goerli.etherscan.io/address/0xb594f2a65dbe407e579bb1a6aef4fae641408812)
+- DefaultUriResolver: [`0x9d7a1a7296fd2debd5fd9f48c15830d0aac3c092`](https://goerli.etherscan.io/address/0x9d7a1a7296fd2debd5fd9f48c15830d0aac3c092)
+- TokenUriResolver: [`0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c`](https://goerli.etherscan.io/address/0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c)
