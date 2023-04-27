@@ -57,6 +57,8 @@ done
 for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md"); do
   awk 'BEGIN {prev_blank=0; prev_hash=0; prev_backticks=0; in_section=0} 
   {
+    if ($0 ~ /^\*/ && $0 !~ /\*$/) {$0 = substr($0, 2, length($0))}
+    if ($0 ~ /\*$/ && $0 !~ /^\*/) {$0 = substr($0, 1, length($0) - 1)}
     if ($0 ~ /^_/) {print "- " $0}
     else if ($0 ~ /^\*$/) {
       getline next_line;
@@ -70,7 +72,6 @@ for FILE_PATH in $(find ~+ -name "*.md" -type f ! -name "README.md"); do
       in_section=0
     }
     else if (in_section) {
-      if($0 ~ /\*$/) {$0 = substr($0, 1, length($0) - 1)}
       split($0, parts, ":")
       interface_name = parts[1]
       description = substr($0, length(interface_name) + 2)
