@@ -7,8 +7,8 @@ Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.m
 A contract can become a treasury redemption delegate by adhering to [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate.md):
 
 ```
-interface IJBRedemptionDelegate {
-  function didRedeem(JBDidRedeemData calldata _data) external;
+interface IJBRedemptionDelegate is IERC165 {
+  function didRedeem(JBDidRedeemData calldata _data) external payable;
 }
 ```
 

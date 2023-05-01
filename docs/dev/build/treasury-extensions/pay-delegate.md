@@ -6,8 +6,8 @@ Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.m
 A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md):
 
 ```
-interface IJBPayDelegate {
-  function didPay(JBDidPayData calldata _data) external;
+interface IJBPayDelegate is IERC165 {
+  function didPay(JBDidPayData calldata _data) external payable;
 }
 ```
 
