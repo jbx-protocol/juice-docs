@@ -61,7 +61,7 @@ Here are some examples, starting with the simplest version:
         pauseTransfers: false
       },
       reservedRate: 0,
-      redemptionRate: 0,
+      redemptionRate: 10000,
       ballotRedemptionRate: 0,
       pausePay: false,
       pauseDistributions: false,
@@ -93,7 +93,7 @@ Under these conditions:
 * All tokens minted as a result of received ETH will go to the beneficiary address specified by the payer of the ETH since the configured `_metadata.reservedRate` is 0.
 * Nothing fancy will happen outside of the default token minting behavior since the configured `_metadata.useDataSourceForPay` is `false`.
 * Nothing fancy will happen outside of the default token redemption behavior since the configured `_metadata.useDataSourceForRedeem` is `false`.
-* None of the funds in the treasury can be distributed to the project owner since no `_fundAccessConstraints` were specified. This means all funds in the treasury are considered overflow. Since the configured `_metadata.redemptionRate` sent is 0 (which represents 100%), all outstanding tokens can be redeemed/burned to claim a proportional part of the overflow. This lets everyone who contributed funds reclaim their ETH if desired.
+* None of the funds in the treasury can be distributed to the project owner since no `_fundAccessConstraints` were specified. This means all funds in the treasury are considered overflow. Since the configured `_metadata.redemptionRate` sent is `10000` (which represents [100%](/dev/api/libraries/jbconstants/)), all outstanding tokens can be redeemed/burned to claim a proportional part of the overflow. This lets everyone who contributed funds reclaim their ETH if desired.
 * A new funding cycle with an updated configuration can be triggered at any time by the project owner since the configured `_data.duration` of 0 and `_data.ballot` of `0x0000000000000000000000000000000000000000`. This lets the project owner capture an arbitrary amount of what is in the treasury at any given point by sending a reconfiguration transaction with `_fundAccessConstraints` specified.
 * Your project will have basic project info with the IPFS file on `ipfs://QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw` (Juicebox Frontend use domain `0` to locate project metadata through IPFS, such as project name, logo, description, twitter handle and discord link)
 
