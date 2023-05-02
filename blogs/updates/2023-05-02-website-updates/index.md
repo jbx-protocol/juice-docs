@@ -2,6 +2,7 @@
 slug: website-updates
 title: Juicebox.money Website Updates and New Features
 description: New homepage, About Page, Success Stories, and Project Tags
+image: https://docs.juicebox.money/img/website-updates.png
 authors: [brileigh, matthew]
 tags: [protocol, update]
 ---
