@@ -213,7 +213,7 @@ const config = {
             },
             {
               label: "Newsletter",
-              to: "https://juicenews.beehiiv.com/",
+              to: "https://subscribepage.io/juicenews",
             },
             {
               label: "Podcast",

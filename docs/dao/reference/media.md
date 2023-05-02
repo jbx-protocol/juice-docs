@@ -14,7 +14,7 @@ sidebar_position: 2
 | [Blog](https://docs.juicebox.money/blog)            | filipv                      |
 | [Podcast](https://anchor.fm/thejuicecast)           | Brileigh & Matthew          |
 | [YouTube](https://youtube.com/c/juiceboxdao)        | filipv                      |
-| [Newletter](https://juicenews.beehiiv.com)          | Brileigh & Matthew          |
+| [Newletter](https://subscribepage.io/juicenews)     | Brileigh & Matthew          |
 | [Instagram](https://www.instagram.com/juiceboxeth/) | 0xSTVG                      |
 | [TikTok](https://www.tiktok.com/@juiceboxeth)       | Brileigh & Matthew          |
 

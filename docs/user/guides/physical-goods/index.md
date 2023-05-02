@@ -60,7 +60,7 @@ Now when a supporter purchases an NFT from your Juicebox project, they'll be pro
 
 If you need help along the way, jump into the Support channel in [Juicebox Discord](https://discord.gg/juicebox).
 
-📰 [Subscribe to the Juicebox newsletter](https://newsletter.juicebox.money)
+📰 [Subscribe to the Juicebox newsletter](https://subscribepage.io/juicenews)
 
 🚀 [Browse trending projects on Juicebox](https://juicebox.money/projects)
 
