@@ -34,6 +34,7 @@ These permissions are represented by the following indices:
 | 18 | `SET_SPLITS` | [`JBOperations`](/dev/api/libraries/jboperations/) | Allow an operator to call [`JBSplitsStore.set(...)`](/dev/api/contracts/jbsplitsstore/write/set/) on an address' behalf. This sets a project's [splits](/dev/learn/glossary/splits/). |
 | 19 | `SET_ENS_NAME_FOR` | [`JBOperations2`](/dev/api/libraries/jboperations2/) | Allow an operator to call [`JBProjectHandles.setEnsNamePartsFor(...)`](/dev/api/contracts/or-utilities/jbprojecthandles/write/setensnamepartsfor/) on an address' behalf, associating an ENS name with a project. |
 | 20 | `SET_TOKEN_URI` | [`JBUriOperations`](/dev/extensions/juice-token-resolver/libraries/jburioperations/) | Allow an operator to call [`TokenUriResolver.setTokenUriResolverForProject(...)`](/dev/extensions/juice-token-resolver/tokenuriresolver/#settokenuriresolverforproject), setting a project's [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver/). This is the URI resolver used for the [Project NFT](/dev/build/project-nft/). |
+| 21 | `ADJUST_TIERS` | [`JB721Operations`](https://github.com/jbx-protocol/juice-721-delegate/blob/6b2e2852c26726ec4c1a57cbb7dc78599c36a85b/contracts/libraries/JB721Operations.sol) | **Not yet in production.** Allow an operator to call `JBTiered721Delegate.adjustTiers(...)` on an address' behalf. |
 
 ## Splits Groups
 
