@@ -19,13 +19,13 @@ Peel 团队最近一直在与 WAGMI Studios 合作，进行品牌重塑的项目
 
 感谢 Strath 主导这个项目，Sage 精彩的插图，还有其他团队成员，尤其是 JohnnyD 和 Aeolian，他们全都做了很了不起的工作。这是团队的一个巨大的努力成果。两周前我们还在讨论这个工作方向，两周后团队就成功确定方向、与 WAGMI 工作室展开合作、进行整个品牌的更新、通过 DAO 的批准并最终在我们的网站上发布出来。
 
-![Refreshed brand and reskinned website by Peel](refreshed_brand_website.png)
+![Refreshed brand and reskinned website by Peel](refreshed_brand_website.webp)
 
 我们希望能够从社区获得关于这个新的品牌重塑的意见及反馈。
 
 不单止网站主页，整个应用的各个页面，如果创建流程、项目发现及项目页面等等都进行了更新。
 
-![Sample of refreshed project page](project_cartjark.png)
+![Sample of refreshed project page](project_cartjark.webp)
 
 ### 待发布的功能
 
@@ -56,7 +56,7 @@ Jango 写了一篇[博文](https://jango.eth.limo/03EDF541-0137-45F7-834B-B346DD
 
 Juicebox 协议中的项目新的令牌解析器大致是这个样式。
 
-![New token resolver](newtokenresolver.png)
+![New token resolver](newtokenresolver.webp)
 
 如果项目方想尝试自定义项目的令牌解析器的主题，他们可以使用[默认令牌解析器合约](https://goerli.etherscan.io/address/0x280dd5911677ADcA9411936F0EEA97510284f4a6#readContract)，或从[这个 etherfunk 界面](https://goerli.etherfunk.io/address/0x280dd5911677ADcA9411936F0EEA97510284f4a6?fn=setTheme&args=%5B%22340%22%2C%22FF6B93%22%2C%22FFB3C7%22%2C%22FFB3D&run=21%5) 只需输入项目 ID 和相关的 HEX 颜色，这样会更方便。
 
@@ -70,7 +70,7 @@ Juicebox 协议中的项目新的令牌解析器大致是这个样式。
 
 以下是在 WAGMI Studios 和 Nicholas 的努力下创作的图片。 我们将提交给 ComicsDAO 并印刷在 Nouns DAO 的第一版漫画书内。
 
-![Artwork for Ad page in Nouns comic book](pool-party.png)
+![Artwork for Ad page in Nouns comic book](pool-party.webp)
 
 通过底部的二维码，人们可以去到一个 Juicebox 项目，并在那里铸造这幅图的限量版 NFT。NFT 销售的收益将分配给 WAGMI Studios（50%）、ComicsDAO（25%）和 JuiceboxDAO（25%），这也是展示 Juicebox 协议分发机制的好方法。
 

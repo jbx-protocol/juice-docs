@@ -15,17 +15,17 @@ tags: [town-hall]
 - 新的 UI 设计，页面上配置了更多图像；
 - 通过一个投票进度条来展示投票的状态；
 
-![jbdao.org votes bar](votesbar_jbdao.png)
+![jbdao.org votes bar](votesbar_jbdao.webp)
 
 - 提案可以按多项不同属性进行排序，如状态、标题、参与人数等；
 - 实现了提案的短链接，如：https://www.jbdao.org/p/353；
 - 以及展示投票情况的边栏（如下）；
 
-![A side bar to display votes](sidebar_jbdao.png)
+![A side bar to display votes](sidebar_jbdao.webp)
 
 - 鼠标悬停在投票人地址会展示投票人信息，如委托投票状态、投票历史及投票权重等，同时也支持投票委托的方便操作。
 
-![voter's profile and delegate function](voterprofile_jbdao.png)
+![voter's profile and delegate function](voterprofile_jbdao.webp)
 
 
 
@@ -67,7 +67,7 @@ STVG 目前也在与 GeniiDAO 合作开展类似的工作，并计划在 Juicebo
 
 ComicsDAO 正在为 NounsDAO 出版一本实体漫画书，他们最近开始了一个[Nouns 第 1 期漫画生成封面的 NFT 开放式铸造](https://zora.co/collections/0xf3d27d5143c92b5b2618ab46db1b7666350353b7)活动，销售所得将用于购买实体漫画书并捐赠给北美的儿童医院。
 
-![ComicsDAO Nouns Comic #1 Generative NFT](comicsdao_comicnft.png)
+![ComicsDAO Nouns Comic #1 Generative NFT](comicsdao_comicnft.webp)
 
 
 
@@ -87,7 +87,7 @@ Peel 上周实现的品牌重塑，目前获得了社区正面的响应，同时
 
 上周我们发布了支持编辑用户个人资料的功能，大家现在可以在个人页面添加头像、个人简介、推特账号、网址等等。
 
-![user's profile edit](jbm_userprofileedit.png)
+![user's profile edit](jbm_userprofileedit.webp)
 
 我们下一步将要整合的功能是在用户的邮件地址和钱包地址之间形成联系。这一功能计划在下周推出，将支持项目的事件通知，这样一来，如果某人向一个项目付款，那么将来这个项目发生“支付事件”时就可以收到邮件通知。
 
@@ -105,7 +105,7 @@ Peel 上周实现的品牌重塑，目前获得了社区正面的响应，同时
 
 他们计划筹款来退还给 DAO，同时也进行 Sage Kellyn 的全新作品的开放式 NFT 铸造试验，因此他们创建了一个叫 [Cosmic Bake Sale](https://juicebox.money/v2/p/466) 的 Juicebox 项目。
 
-![WAGMI Bake Sale project page](wagmi_bakesale.png)
+![WAGMI Bake Sale project page](wagmi_bakesale.webp)
 
 
 

@@ -14,7 +14,7 @@ The JBX V3 migration is on the final finish line. Jango has moved some of his to
 
 We are just wrapping up a very clean and safe UX for the migration purpose. Next week we will have more to announce together with the actual instructions to migrate tokens. Huge ups to the versioning efforts, and shoutout to Aeolian for his great effort in putting all this togerther.
 
-![upcoming token migration process](token_migration.png)
+![upcoming token migration process](token_migration.webp)
 
 ## Peel Updates
 
@@ -28,23 +28,23 @@ Peri's project tags will be prominently displayed at the top, significantly enha
 
 In the central section, they have incorporated project cards that will showcase trending projects.
 
-![The header of new home page design](homepage_new_header.png)
+![The header of new home page design](homepage_new_header.webp)
 
 They are also planning to feature a 'Success Stories' section that will showcase case studies of previous projects. Rather than linking directly to the projects, this section is likely to provide information about the successes of each project. The team may use Filipviz's excellent work on case studies for this purpose.
 
-![success stories section of new design](homepage_new_success.png)
+![success stories section of new design](homepage_new_success.webp)
 
 And an area for docs:
 
-![Docs section of new design](homepage_new_docs.png)
+![Docs section of new design](homepage_new_docs.webp)
 
 Additionally, they plan to introduce a new section called 'Juicy Picks', which will feature the most popular projects as voted on by the community on a monthly basis through polls hosted on Discord. These results will be displayed on the website using an exclusive project tag named "Juicy Picks".
 
-![juicy picks section of new design](homepage_new_juicypicks.png)
+![juicy picks section of new design](homepage_new_juicypicks.webp)
 
 Lastly, we will have exploration section by categories:
 
-![category section of new design](homepage_new_category.png)
+![category section of new design](homepage_new_category.webp)
 
 ### Email Pay Event by Wraeth
 
@@ -52,7 +52,7 @@ Now users can edit the profile to add their bio, email address, Twitter accounts
 
 - If someone makes a payment now on Juicebox, they will receive a transaction receipt by email if they have added in their profile:
 
-![transaction receipt](JBM-Payment-Receipt.png)
+![transaction receipt](JBM-Payment-Receipt.webp)
 
 - If there is any activity in a project that a user has subscribed to, such as payment events, they will receive email notifications about the events to their registered email address.
 
@@ -66,7 +66,7 @@ Next week, we will provide clear instructions and visuals to assist with the mig
 
 Peri is currently working on a improved pay modal, which is the window that will pop up when people are going to pay a project.
 
-![Pay modal by Peri](pay_modal.png)
+![Pay modal by Peri](pay_modal.webp)
 
 ### Upcoming Projects by Tjl
 
@@ -82,7 +82,7 @@ This token resolver comes with several features, including the ability to view l
 
 For more information on how this token resolver works, you can check out the documentation [here](https://docs.juicebox.money/dev/api/extensions/juice-token-resolver/).
 
-![token resolver by nicholas](token_resolver_juicebox.png)
+![token resolver by nicholas](token_resolver_juicebox.webp)
 
 
 
@@ -96,11 +96,11 @@ Meanwhile, production for the Ticket to Space film has recently begun, with Fern
 
 STVG has launched an open funding round for Juicebox on Prop House, inviting anyone to propose ideas that they believe will benefit the creator ecosystem using a Juicebox programmable treasury. Once submissions are closed, JBX holders will vote on the proposals, and the top three will be awarded 0.3 ETH each in funding.
 
-![Prop House open round for Juicebox](prop_house_openround.png)
+![Prop House open round for Juicebox](prop_house_openround.webp)
 
 ## Defifa Updates by Jango
 
 In mid-April, they plan to launch a competition for the NBA playoffs, along with a create flow that enables anyone to design their own tournament game. Mieos and Sage are developing exciting ideas for the NBA competition, including the use of canned beverage artwork to represent each NBA team.
 
-![idea of Defifa new tournament](defifa_nba.png)
+![idea of Defifa new tournament](defifa_nba.webp)
 

@@ -16,13 +16,13 @@ The Peel team has been working on a brand refresh project recently, in collabora
 
 We should shout out to Strath for leading this effort, to Sage for the incredible illustrations, and to the rest of the team, especially JohnnyD and Aeolian. All of them has done an amazing job together. This is absolutely a tremendous effort from the entire team. It was only two weeks ago that we started to discuss and work together on this direction. Then in this period of time, the team managed to define the direction, collaborate with WAGMI Studios, make the entire brand refresh, get it approved by the DAO and finally publish it on our website.
 
-![Refreshed brand and reskinned website by Peel](refreshed_brand_website.png)
+![Refreshed brand and reskinned website by Peel](refreshed_brand_website.webp)
 
 Hopefully we will get some comments and feedback from the community around the new brand refresh.
 
 Not just the home page, literally the whole APP is taking on a very different look, in areas such as create flow, project discovery, project pages, etc.
 
-![Sample of refreshed project page](project_cartjark.png)
+![Sample of refreshed project page](project_cartjark.webp)
 
 ### Features to be released
 
@@ -53,7 +53,7 @@ Jango wrote a [blog post](https://jango.eth.limo/03EDF541-0137-45F7-834B-B346DD0
 
 The new token resolver will look something like this for projects in Juicebox protocol.
 
-![New token resolver](newtokenresolver.png)
+![New token resolver](newtokenresolver.webp)
 
 If project owners want to try a customized theme for their token resolver, they can do it with the [default token resolver contract](https://goerli.etherscan.io/address/0x280dd5911677ADcA9411936F0EEA97510284f4a6#readContract),  or implement from [this etherfunk interface](https://goerli.etherfunk.io/address/0x280dd5911677ADcA9411936F0EEA97510284f4a6?fn=setTheme&args=%5B%22340%22%2C%22FF6B93%22%2C%22FFB3C7%22%2C%22FFB3C7%22%5D&run=1) which will be more convenient by just inputting project ID and relevant HEX colors.
 
@@ -67,7 +67,7 @@ This feature has been deployed on Goerli testnet, when [the proposal to extend t
 
 Here is the artwork delivered with the efforts of WAGMI Studios and Nicholas. It will be submitted to ComicsDAO and printed on the first edition comic book of Nouns DAO.
 
-![Artwork for Ad page in Nouns comic book](pool-party.png)
+![Artwork for Ad page in Nouns comic book](pool-party.webp)
 
 Through the QR code on the bottom, people will be linked to a Juicebox project and can mint a limited edition NFT of this artwork. The proceeds from this NFT sale will be split between WAGMI Studios (50%), ComicsDAO (25%) and JuiceboxDAO (25%), which is also a good way to showcase the distribution mechanism of Juicebox protocol.
 

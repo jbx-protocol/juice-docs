@@ -15,17 +15,17 @@ In the town hall, Twodam presented the improvements he and Jigglyjams made to [j
 - New UI design, now we have more graphics;
 - We now have a VotesBar to indicate the status of voting;
 
-![jbdao.org votes bar](votesbar_jbdao.png)
+![jbdao.org votes bar](votesbar_jbdao.webp)
 
 - Sorting by fields, desc or asc;
 - Now we have unique short link for proposals, e.g.: https://www.jbdao.org/p/353;
 - And a sidebar to display votes
 
-![A side bar to display votes](sidebar_jbdao.png)
+![A side bar to display votes](sidebar_jbdao.webp)
 
 - A pop-up for information of voters, showing their delegation status, voting history and voting power, as well as enabling more convenient voting delegation.
 
-![voter's profile and delegate function](voterprofile_jbdao.png)
+![voter's profile and delegate function](voterprofile_jbdao.webp)
 
 
 
@@ -67,7 +67,7 @@ STVG is currently also working with GeniiDAO, which has a plan to set up a proje
 
 ComicsDAO recently started [an open edition NFT mint of Nouns Comics #1 Generative Cover](https://zora.co/collections/0xf3d27d5143c92b5b2618ab46db1b7666350353b7), at the time when they are about to publish the physical comic book for Nouns DAO, and all the proceeds from this sale will be used to purchase physical comic books which will be donated to children's hospitals in North America.
 
-![ComicsDAO Nouns Comic #1 Generative NFT](comicsdao_comicnft.png)
+![ComicsDAO Nouns Comic #1 Generative NFT](comicsdao_comicnft.webp)
 
 
 
@@ -87,7 +87,7 @@ We'll be able to highlight projects in certain categories across the APP, so as 
 
 Last week we shipped the function to support editting user's profiles, where people can add their profile picture, bio, Twitter handle, website and etc.
 
-![user's profile edit](jbm_userprofileedit.png)
+![user's profile edit](jbm_userprofileedit.webp)
 
 Another useful function that we are going to integrate is the association between email address and wallet address of the users. This function, which will hopefully be shipped within this week, supports the event notification of projects, so that if someone pays a project, they will be able to receive notifications of any future "pay events" happen in that project.
 
@@ -105,7 +105,7 @@ At the beginning of February, when WAGMI Studios renewed its recurring payout, t
 
 Both for a purpose of crowdfunding to return the funds back to the DAO, and for a purpose of experimenting an open edtion NFT mint with Sage Kellyn's new artwork, they set up a Juicebox project called [Cosmic Bake Sale](https://juicebox.money/v2/p/466).
 
-![WAGMI Bake Sale project page](wagmi_bakesale.png)
+![WAGMI Bake Sale project page](wagmi_bakesale.webp)
 
 
 

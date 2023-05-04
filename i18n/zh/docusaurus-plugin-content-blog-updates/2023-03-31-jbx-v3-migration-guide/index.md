@@ -46,41 +46,41 @@ JuiceboxDAO V3 项目金库：https://juicebox.money/@juicebox
 
 点击页面红圈处的 `代币` 标签，在最下方可以看到你的待迁移代币总余额。（请注意，如果你持有 V2 的未领取代币，这里会显示你 V1 JBX 和 V2 代币的总数量。） 然后点击 `迁移代币` 。
 
-![token tab](token_tab.png)
+![token tab](token_tab.webp)
 
 ### 3. 授权迁移 V1 代币
 
 接下来，会弹出一个窗口，提示我们要进行迁移授权，授权 V3 JBX 合约迁移你的 V1 JBX。点击 `授予权限` 并在钱包弹窗确认交易。
 
-![Grant migration permission for v1 token](grant_permission_v1.png)
+![Grant migration permission for v1 token](grant_permission_v1.webp)
 
 ### 4. 授权迁移 V2 代币
 
 继续授权 V2 代币，同样是点击 `授予权限` 并在钱包弹窗确认交易。
 
-![Grant migration permission for v2 token](grant_permission_v2.png)
+![Grant migration permission for v2 token](grant_permission_v2.webp)
 
 ### 5. 批准使用
 
 授权完成之后，还需要批准 V3 JBX 合约使用你的旧代币。因为迁移其实就是把旧代币发送到新代币合约地址，再由新代币合约相应地发行出来新代币，因此就需要批准新代币合约使用旧代币。点击 “批准”。
 
-![Approve spending of V1 Erc-20 token](approve_spend_v1.png)
+![Approve spending of V1 Erc-20 token](approve_spend_v1.webp)
 
 设置批准使用的限额，这里可以点击 “Max”，也就是你持有旧代币的最大数量。如果要分批迁移，这里填入具体迁移的数量就可以了。然后点击 “NEXT（下一步）” ，再在下一步点击 “ Approve（批准）”。
 
-![approve spending cap](approve_spend_cap.png)
+![approve spending cap](approve_spend_cap.webp)
 
 ### 6. 迁移批准的代币
 
 弹窗会变成这个样子，分别是显示的是 ”授权迁移 V1 代币“、”授权迁移 V2 代币“ 和 ”批准使用 V1 ERC-20 代币“ 都已经完成。然后就是迁移的最后一步，点击 `迁移所有批准的代币`，并在钱包的弹窗确认交易。
 
-![approve final migration](approve_migration.png)
+![approve final migration](approve_migration.webp)
 
 ### 7. 迁移完成
 
 然后会出现 ”交易进行中“ 的界面，再稍等片刻，弹窗消失回到项目页面。再点击`代币` 标签，可以看到，待迁移代币余额变成 0， 而你的余额中已经正确显示出 V3 JBX 代币的余额。
 
-![State after migration](final_state.png)
+![State after migration](final_state.webp)
 
 恭喜你！现在 JBX 代币的迁移工作就完成了。
 

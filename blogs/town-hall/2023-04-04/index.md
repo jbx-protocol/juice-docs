@@ -20,7 +20,7 @@ The purpose of this project was to make the project page a lot more functional, 
 
 The section of trending projects have been pulled up in this iteration. And also we are about to implement project tags and introduce them immediately more as a sub-heading, so that when someone lands on the page, we can give them the option to take a look at the different categories of projects and click into them. It also serves to free up this space and have only one primary call-to-action, which should be working very well.
 
-![Hero section of new home page design](newhomepage_herosection.png)
+![Hero section of new home page design](newhomepage_herosection.webp)
 
 - Hero section discussion
 
@@ -38,25 +38,25 @@ Nicholas asked about the "create a project" feature and the reasoning behind hav
 
 This section is just reassuring people like "This is what we can do and for people like you. " We help DAOs, Crowdfunding, NFT, Creators and builder. Big shoutout to Sage for these epic illustrations which are super nice.
 
-![Features section: built for ideas like yours](feature_builtforideas.png)
+![Features section: built for ideas like yours](feature_builtforideas.webp)
 
 #### Features Section: Success stories
 
 During the user testing, the main reason most people had used Juicebox or felt trustworthy to use it was the fact that all the these big projects have put so much money through it and it worked without anything bad ever happened. We are really highlighting the fact that we've had a ton of ETH come through the platform and people have used it successfully, which really helps cement that trust with new users.
 
-![features: success stories](feature_successstories.png)
+![features: success stories](feature_successstories.webp)
 
 #### Features Section: How Juicebox works
 
 This section is pretty straightforward and Filipv's new copy has been implemented here. And in the actual build of this, there will be an animated effect with this line going down with scrolling.
 
-![feature how juicebox works](feature_howjbworks.png)
+![feature how juicebox works](feature_howjbworks.webp)
 
 #### Features Section: Why Juicebox?
 
 This is a really cool section which is just giving people a run-through of some of the benefits to use Juicebox, really highlighting why Juicebox is so good and giving them the tools to explore without having to read the docs and really do their own research.
 
-![feature why juicebox](feature_yjb.png)
+![feature why juicebox](feature_yjb.webp)
 
 #### Features Section: Juicy Picks
 
@@ -68,17 +68,17 @@ There should be a lot we can do with this in the marketing visibility sense.
 
 
 
-![feature juicy picks](feature_juicypicks.png)
+![feature juicy picks](feature_juicypicks.webp)
 
 #### Features Section: Explore categories
 
 We will have project tags coming soon, so there will be full project categories that people can scroll through here and browse the various categories, whether they are fundraisers, DAOs, NFTs, Art projects, Photography, etc.
 
-![feature explore categories](feature_explore.png)
+![feature explore categories](feature_explore.webp)
 
 #### Final call to action
 
-![final call to action on home page](final_calltoaction.png)
+![final call to action on home page](final_calltoaction.webp)
 
 
 
@@ -86,7 +86,7 @@ We will have project tags coming soon, so there will be full project categories 
 
 The background of this project tags is that we want to allow project owners to tag their projects with up to 3 labels that they can pick from a pre-defined list of 10 different tags. And the main goal is to increase discoverability of projects.
 
-![predefined project tags](project_tags.png)
+![predefined project tags](project_tags.webp)
 
 For people who are coming to Juicebox right now, it's pretty hard to find random projects that fit particular interests unless they already know the name of them, or they will be just browsing trending or the latest projects that were created.
 
@@ -118,7 +118,7 @@ The instructions for JBX migration:
 
 Jango wrote a [blog post](https://jango.eth.limo/31469E9F-8C0D-49E9-8003-0077674708A6/) in the day when he migrated all his JBX over to V3, which is one that he has been wanting to write for a long time to recap our versioning history.
 
-![versioning history reflection by Jango](blog_versioning.png)
+![versioning history reflection by Jango](blog_versioning.webp)
 
 He felt very good to write and recall all the steps to get to where we are, giving a very broad stroke reflection on where we started and how we got to where we are today. It's not perfectly linked to other pieces of content over time, but hopefully it at least serves to tell the versioning story and give some rationales to the trade-offs that we made along the way.
 
@@ -162,7 +162,7 @@ Nicholas developed an experimental contract, [the Juicebox project cards contrac
 
 People can use [the etherfunk dedicated page](https://etherfunk.io/address/0xe601eae33a0109147a6f3cd5f81997233d42fedd?fn=mint&args=%5B%221%22%5D) to interact with this contract and mint a project card of Juicebox project, by inputting the relevant project ID and at least 0.01 ETH.
 
-![mint project cards](project_cards.png)
+![mint project cards](project_cards.webp)
 
 And the project cards minted can be found on OpenSea at this [page](https://opensea.io/collection/juicebox-project-cards).
 
@@ -170,7 +170,7 @@ And the project cards minted can be found on OpenSea at this [page](https://open
 
 [The DefaultTokenUriResolver contract](https://etherscan.io/address/0x9D63AFc505C6b2c9387ad837A1Acf23e1e4fa520#writeContract) is the one that generates the default orange theme for project NFT metadata in Juicebox. On this contract, Juicebox project owners can have access to the function called `setTheme`, where they can pass their projectID and HEX colors to update the theme colors of the metadata to whatever they like.
 
-![default token resolver setTheme](resolver_settheme.png)
+![default token resolver setTheme](resolver_settheme.webp)
 
 Another more visual option to do this is at [the etherfunk setTheme page](https://etherfunk.io/address/0x9D63AFc505C6b2c9387ad837A1Acf23e1e4fa520?fn=setTheme&args=%5B%22%22%2C%22EB4334%22%2C%22EBAAA0%22%2C%22BFA09B%22%5D).
 

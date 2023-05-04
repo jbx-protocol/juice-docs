@@ -18,7 +18,7 @@ Peel has implemented a clear and concise approach on their homepage to immediate
 
 During the town hall, Strath shared his screen to demonstrate different sections of the homepage, including "Built for ideas like yours," "Success stories," "How Juicebox works," "Why Juicebox," and "Juicy picks," among others.
 
-![New homepage](Peel_newhomepage.png)
+![New homepage](Peel_newhomepage.webp)
 
 The upcoming works from Peel include two major initiatives:
 
@@ -97,7 +97,7 @@ And also the reach is huge, there is expected to be around 40,000 people that wi
 
 They spent time learning and navigating Eventive, a film festival platform, and have successfully included two documentaries and a video podcast in their movie festival. They are also incorporating NFTs as membership passes, allowing fiat-paying users access to the films.
 
-![Eventive platform](studiodao_eventive.png)
+![Eventive platform](studiodao_eventive.webp)
 
 A particularly exciting aspect is that Eventive's API provides a clear record of all user actions, which they plan to leverage for retroactive rewards to those who participate in the festival, fund the films, and share them. By using the data to generate a record of these activities and implementing token rewards, they hope to scale the token economy and integrate it into the festival.
 

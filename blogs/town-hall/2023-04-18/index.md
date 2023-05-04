@@ -17,7 +17,7 @@ A dedicated [Bananapus Discord server](https://discord.gg/E2FHqxhVhU) has been c
 
 Right now there is no roadmap or game plan for Bananapus, but there are several steps we want to take as  depicted in the general gist that Jango posted in the discord thread.
 
-![Bananapus steps to be taken](bananapus_steps.png)
+![Bananapus steps to be taken](bananapus_steps.webp)
 
 These can been considered as the three objectives of Bananapus:
 
@@ -45,7 +45,7 @@ This project has been in development for a while, and it's meant to solve a simp
 
 You can try out the [Blunt Finance](https://testnet.blunt.finance/) create flow, which is only available on Goerli testnet right now. It's a very simple create flow which allows to set a funding target, a hard cap and an optional issuance rate.
 
-![Blunt create flow](blunt_createflow.png)
+![Blunt create flow](blunt_createflow.webp)
 
 Also it allows to set a time frame for the fundraising, so that it gives everyone confidence that if a project doesn't raise its funding target within a certain amount of time,  a funding cycle No.2 will be automatically triggered to open up refunds which takes the burden of management away from that process.
 
@@ -75,15 +75,15 @@ Project tags are being used now, which is also a product by Peri and a huge win 
 
 Peel is making some progress with the website update. In the town hall, Wraeth is showcasing the new About page that will be shipped together with all the other website updates by end of this week.
 
-![New About Page](aboutpage_new.png)
+![New About Page](aboutpage_new.webp)
 
 And in the Mission section of the About page, Tjl suggests that we could discuss about some ideas to use community monetization milestones, such as 250m, 500m, 750m or 1b to do an airdrop or something similar to the community and bring them in on that mission.
 
-![New About page - mission](aboutpage_mission.png)
+![New About page - mission](aboutpage_mission.webp)
 
 Secondly, he suggests that we add an + button in the contributor section to link to the specific docs that show visitors how to contribute to Juicebox, so as to encourage new contributors to come onto JuiceboxDAO. 
 
-![New About page - contributors](aboutpage_contributors.png)
+![New About page - contributors](aboutpage_contributors.webp)
 
 ### Feedback From Jango
 

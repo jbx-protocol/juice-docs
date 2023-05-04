@@ -18,13 +18,13 @@ The goal for this brand refresh: Give Juicebox a refreshed look, while paying tr
 
 The No.1 thing that we want to be is trustworthy because people are exchanging a lot of money here in Juicebox, but we also want to bring the fun, cheeky human element into it, especially with this brand refresh to keep it clean while still having that bold and cheeky Juicebox vibe that we all know and love.
 
-![The goal of brand refresh](goal_brandrefresh.png)
+![The goal of brand refresh](goal_brandrefresh.webp)
 
 #### Vision
 
 Strath put toger a mood board, collaborating with WAGMI Studios on creating illustrations and really bringing out the Juicebox vibe.
 
-![vision of brand refresh](vision_brandrefresh.png)
+![vision of brand refresh](vision_brandrefresh.webp)
 
  #### Logo
 
@@ -32,21 +32,21 @@ For the logo, we are giving Juice a fresh, clean and unique feel while keeping t
 
 Thanks to Sage, the current logo has been serving us really really well. And the refreshed logo is quite similar to the old one, basically just taking what we had and making it able to be scaled, able to be used on different color backgrounds, pair a little bit better with different fonts, etc. We're just tidying it up a little so that we can use it across a broader range of use cases.
 
-![comparison of old and new logos](logo_comparison.png)
+![comparison of old and new logos](logo_comparison.webp)
 
 As we don't have an official logo lockup yet, what we've come up with is like this:
 
-![Juicebox logo lockup](logo_lockup.png)
+![Juicebox logo lockup](logo_lockup.webp)
 
 A comparison to other industry standard branding. It sits really well next to some of these tech companies, but still holds its own unique and interesting feel.
 
-![Comparison with other branding](lockup_comparison.png)
+![Comparison with other branding](lockup_comparison.webp)
 
 #### Color Palette
 
 This is obviously very important for us. Strath wanted to go with something that really fits Juicebox, inspired by tropical and good times. The new Juicebox color palette conveys our playful nature while building trust and setting us aside from the crowd.
 
-![JB color palette](color_palette.png)
+![JB color palette](color_palette.webp)
 
 #### Typography
 
@@ -54,7 +54,7 @@ There has been a lot of contention around this topic. Obviously it will be a ver
 
 Agrandir is a contemporary sans serif that celebrates the beauty of being imperfect. It was designed to be a brave antipode to the nuetral modernist font. Agrandir accepts its own shapes as they are, unaligned, quirky and funky. It celebrates humanity, not machines.
 
-![new choice of typeface](typeface_agrandir.png)
+![new choice of typeface](typeface_agrandir.webp)
 
 #### Iconography
 
@@ -62,7 +62,7 @@ Another thing that will obviously get refreshed as we go into the brand refresh.
 
 In a lot of the user interviews that Strath has done, people said they'd love to see more visual representations, because there're quite many reading and complex terms.  He thought that we can use the illustrations to pair with the iconography to really bring some of that to life and make it easier to use.
 
-![sample of iconograph by Sage](icon_coins.png)
+![sample of iconograph by Sage](icon_coins.webp)
 
 #### Illustration
 
@@ -70,7 +70,7 @@ With the help of Sage, we will be using the same sort of stuff we've had before,
 
 This is where we create the super unique identity that nobody can copy.
 
-![sample of illustration by Sage from WAGMI](illustration_sample.png)
+![sample of illustration by Sage from WAGMI](illustration_sample.webp)
 
 #### User Interface
 
@@ -78,15 +78,15 @@ This is probably a question that everyone is having. What will it be looking lik
 
 What we really need to move into is, making the experience a  lot more fun and playful, but still really drawing the user into some of those main call-to-actions.
 
-![sample of new UI 1](new_ui.png)
+![sample of new UI 1](new_ui.webp)
 
-![sample fo new UI 2](new_project_page.png)
+![sample fo new UI 2](new_project_page.webp)
 
 #### Timeline
 
 There'll be a phased rollout. We will have a very structured plan of how we are going to phase the branding in, updating the type face, rolling out the new colors and then starting by slowly redesigning some of those UI elements. It will seamlessly migrates over to the refreshed brand.
 
-![timeline of brand refresh](timeline.png)
+![timeline of brand refresh](timeline.webp)
 
 ### Discussion After The Presentation
 
@@ -128,7 +128,7 @@ Also StudioDAO is going to launch a Juicebox project to support this effort, and
 
 The [Krause House 50pt Game Charity Bounty](https://juicebox.money/v2/p/436) is a Juicebox project created by Acidicsantana. This project is crowdfunding and offering its treasury to a NBA player who scores more than 50 point in one single game. The eligible player can unlock the funds in this Juicebox treasury and have them sent to a charity of his choice, by interacting with this fandom project as outlined in the project description.
 
-![project page of Krause House project](project_krausehouse.png)
+![project page of Krause House project](project_krausehouse.webp)
 
 Nicholas is very interested in the overall mechanics and he thinks there are couple of takeaways that are worth thinking about for future projects.
 

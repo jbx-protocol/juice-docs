@@ -41,7 +41,7 @@ Connect your wallet and navigate to the JuiceboxDAO project: [https://juicebox.m
 
 Select the **Tokens** tab and refer to the **Legacy tokens** section. If you have JBX from JuiceboxDAO's V1 or V2 project, you should have legacy tokens. Click `Migrate tokens`.
 
-![Tokens section](tokens-0.png)
+![Tokens section](tokens-0.webp)
 
 ## Step 3: Grant permission for V1 tokens
 
@@ -49,7 +49,7 @@ Click `Grant permission` for your V1 JBX and confirm the transaction in your bro
 
 This transaction grants the V3 JBX contract permission to transfer your JBX on your behalf. If you have V1 JBX, this step is required for migration.
 
-![Grant V1 permission](grant-v1.png)
+![Grant V1 permission](grant-v1.webp)
 
 ## Step 4: Grant permission for V2 tokens
 
@@ -57,21 +57,21 @@ Click `Grant permission` for your V2 JBX and confirm the transaction in your bro
 
 This transaction grants the V3 JBX contract permission to transfer your Juicebox V2 tokens on your behalf. If you have Juicebox V2 tokens, this step is required for migration.
 
-![Grant V2 permission](grant-v2.png)
+![Grant V2 permission](grant-v2.webp)
 
 ## Step 5: Approve migration and set spending cap
 
 This transaction approves the V3 JBX contract to spend your V1 JBX on your behalf. If you have V1 JBX, this step is required for migration.
 
-![Approve token spend](approve.png)
+![Approve token spend](approve.webp)
 
 Click `Approve` and in Metamask select **Use Default**. This will approve the spend of your total claimed V1 JBX balance.
 
-![Metamask set spending cap part 1](metamask-0.png)
+![Metamask set spending cap part 1](metamask-0.webp)
 
 Click **Next** to proceed and then **Approve** to confirm the transaction.
 
-![Metamask set spending cap part 2](metamask-1.png)
+![Metamask set spending cap part 2](metamask-1.webp)
 
 ## Step 6: Migrate all approved tokens
 
@@ -79,7 +79,7 @@ Click `Migrate all approved tokens` and confirm the transaction in your browser 
 
 This transaction migrates all approved V1 JBX and unclaimed Juicebox V2 tokens to JBX V3.
 
-![Migration final step](migrate-final.png)
+![Migration final step](migrate-final.webp)
 
 ## Step 7: Success!
 
