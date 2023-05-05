@@ -17,9 +17,9 @@ Goerli testnet: [`0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c`](https://goerli.et
 
 #### Notes
 
-*The default metadata for all projects can be updated by the contract owner.*
+The default metadata for all projects can be updated by the contract owner. The [Token Resolver Template repo](https://github.com/nnnnicholas/juice-token-resolver-template) can help you get started. To get started making onchain SVGs, consult the [Juice SVG Template repo](https://github.com/nnnnicholas/juice-svg-template). 
 
-*Juicebox project owners and operators can override the default metadata for their project with their own IJBTokenUriResolver contracts.*
+Juicebox project owners and operators can override the default metadata for their project with their own IJBTokenUriResolver contracts.
 
 #### Inheritance
 Inherits: [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver/), [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
