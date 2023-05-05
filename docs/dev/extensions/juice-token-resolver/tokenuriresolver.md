@@ -6,12 +6,22 @@ sidebar_position: 1
 
 The registry serves metadata for all Juciebox Protocol v2 projects.
 
+#### Code
+https://github.com/jbx-protocol/juice-token-resolver/blob/main/src/TokenUriResolver.sol
+
+#### Addresses
+
+Ethereum mainnet: [`0x2c39bb41e2af6bec6c3bb102c07c15eda648a366`](https://etherscan.io/address/0x2c39bb41e2af6bec6c3bb102c07c15eda648a366)
+
+Goerli testnet: [`0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c`](https://goerli.etherscan.io/address/0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c)
+
+#### Notes
+
 *The default metadata for all projects can be updated by the contract owner.*
 
 *Juicebox project owners and operators can override the default metadata for their project with their own IJBTokenUriResolver contracts.*
 
-[Git Source](https://github.com/jbx-protocol/juice-token-resolver/blob/c700bd075c789c4790d30ba15ea2b31b7fc0791e/src/TokenUriResolver.sol)
-
+#### Inheritance
 Inherits: [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver/), [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
 
 ## State Variables
