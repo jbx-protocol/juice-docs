@@ -1,12 +1,13 @@
 ---
-title: 2023-06-05 – v1 Payouts
+title: 2023-05-06 – Medium Severity
 ---
 
 # v1 Payouts Post Mortem
 
 ```md
 Author: filipv
-Date: 2023-06-05
+Date: 2023-05-06
+Severity: Medium
 Status: Resolved
 ```
 
@@ -65,7 +66,7 @@ The `v3` icon indicates that the payout is allocated to the project's v3 payment
 
 In other words, the payout remained the same but with the allocator removed. I failed to identify this discrepancy when [queuing or simulating the transaction](https://discord.com/channels/775859454780244028/991382812718551060/1102004295479595019). Multisig signers similarly failed to identify this discrepancy when reviewing the transaction: the transaction received the 9 requisite signatures and was executed on 2023-05-03 at 17:31 UTC.
 
-The cycle went into effect on 2023-05-06 at 19:19 UTC. While the incorrect `_payoutMods` were active, an exploiter could have called the public [`TerminalV1.Tap(...)`](/dev/deprecated/juice-contracts-v1/terminalv1/#tap) transaction, causing the v1 JuiceboxDAO project to pay its balance to itself, keeping ETH balances the same but cumulatively issuing ~26,021,536 v1 JBX to the multisig and v1 reserved recipients in the process. Because the ETH would have remained in the v1 JuiceboxDAO project, an exploiter could have executed this transaction multiple times until they reached the funding target of 100,000,000 ETH.
+The cycle went into effect on 2023-05-06 at 19:19 UTC. While the incorrect `_payoutMods` were active, an exploiter could have called the public [`TerminalV1.Tap(...)`](/dev/deprecated/juice-contracts-v1/terminalv1/#tap) transaction, causing the v1 JuiceboxDAO project to pay its balance to itself, keeping ETH balances the same but cumulatively issuing ~26,021,536 v1 JBX to the multisig and v1 reserved recipients in the process. Because the ETH would have remained in the v1 JuiceboxDAO project, an exploiter could have executed this transaction multiple times until they reached the funding target of 100,000,000 ETH.[^1]
 
 At 22:46 UTC on 2023-05-06, jango directly messaged me via Discord:
 
@@ -101,7 +102,7 @@ At 23:14 UTC, jango queued the [`ModStore.setPayoutMods(...)`](/dev/deprecated/j
 
 At 23:43, 0XBA5ED confirmed the issue via simulation.
 
-Multisig signers verified and signed transaction 234, which was executed by Dr. Gorilla on 2023-05-07 at 01:01 UTC.
+Multisig signers verified and signed [transaction 234](https://app.safe.global/transactions/tx?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e&id=multisig_0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e_0xa4061f82799c89de266baaa16e92eaf484bfba5c35bbfa175e38383faf38441e), which was executed by Dr. Gorilla on 2023-05-07 at 01:01 UTC.
 
 The "Send payouts" button was restored in commit [610e65e](https://github.com/jbx-protocol/juice-interface/commit/610e65ea4899f4269a6bfdc03ca839e47d0de4ae).
 
@@ -112,3 +113,6 @@ To prevent a similar situation from taking place in the future:
 1. I have created [v1 API Documentation](/dev/deprecated/juice-contracts-v1/). The existing v1 documentation was disorganized and difficult to use, making it difficult for signers to accurately verify transactions.
 2. The multisig should create a better simulation/fork testing process for transactions. Simulating an attempt to send the payouts after the cycle had been updated would have caught this issue.
 3. The issues in [juicebox.money](https://juicebox.money) should be identified and fixed.
+4. We should continue to work towards winding down the DAO's v1 and v2 projects, which I [proposed this cycle](https://snapshot.org/#/jbdao.eth/proposal/0x622de9370ec22833962b5630680f93dd9e1b8380af9a42d747a166337a7ab229). The DAO's best tooling is built for the most recent protocol contracts, and multisig signers are most familiar with their transactions.
+
+[^1]: The v1 project had a reserved rate of 50%, of which each individual recipient is given 2.8% (1.4% of total issuance). In a theoretical worst-case scenario, one or more malicious reserved rate recipients could have called the [`TerminalV1.Tap(...)`](/dev/deprecated/juice-contracts-v1/terminalv1/#tap) function 111,460 times, at which point the project would have paid 100,000,000 ETH into itself and issued 2,900,360,429,290 JBX. Calling [`TerminalV1.Tap(...)`](/dev/deprecated/juice-contracts-v1/terminalv1/#tap) with the needed input data uses 210,851 gas. At block [17205270](https://etherscan.io/block/17205270) the base fee per gas was 107.086095215 Gwei. At this cost, assuming no further optimizations, it would cost an attacker ~0.023 ETH per `Tap`, for which each reserved rate recipient would receive ~364,301.5 JBX. It would cost ~2,516.68 ETH to execute the theoretical maximum number of `Tap`s. Given that the v1 project had no ETH available for redemption, and that the v3 project has redemptions disabled, this would not lead to a loss of funds, but would still pose a risk to [JuiceboxDAO governance](https://docs.juicebox.money/dao/process/). Each reserved rate recipient's JBX balance would tend towards 1.4% of the total JBX supply, but given that the multisig's JBX is not used for voting, other JBX holders would be rapidly diluted and each of the 25 v1 reserved rate recipients would constitute one twenty-fifth, or 4% of the total vote. Given the current Snapshot approval threshold of 66%, at least 17 of the recipients would need to conspire to guarantee overtaking JuiceboxDAO governance, which would cost them massive amounts of ETH in the process. Given how unlikely this scenario would be, griefing was the most pressing risk.
