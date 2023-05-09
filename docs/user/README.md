@@ -23,7 +23,7 @@ It takes about 10 minutes to create a Juicebox project, which you can use to:
 - Allow your supporters to redeem their tokens or NFTs to get back some of the ETH you don't need for payouts. This can be a full refund, a partial refund, or it can be turned off completely.
 - Add a deadline for edits, making last second edits to your Cycle impossible (and preventing rug pulls). With a 3-day deadline, your community is guaranteed 3 days to verify any queued edits.
 
-When you create your Juicebox project, an *Owner NFT* will be sent to your wallet, which is the only way to control your project — the project's rules are managed directly on the Ethereum blockchain, making your project independent, transparent, and uncensorable.
+When you create your Juicebox project, the project's NFT will be sent to your wallet. This NFT is the only way to control your project — the project's rules are managed directly on the Ethereum blockchain, making your project independent, transparent, and uncensorable.
 
 You can change these rules over time, making Juicebox very effective for scaling communities. As your community evolves, so can your project.
 

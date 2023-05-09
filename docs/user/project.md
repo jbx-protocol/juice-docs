@@ -15,7 +15,7 @@ To begin, visit [juicebox.money/create](https://juicebox.money/create). You will
 What to know beforehand:
 
 - You can edit all of your project's rules over time — this allows your project to evolve as your community does.
-- When you create a Juicebox project, an *Owner NFT* is minted to your wallet. Only the holder of that NFT (you, the "project owner") can edit the project's rules. Nobody else can edit your project's rules — not even JuiceboxDAO.
+- When you create a Juicebox project, the project's NFT is minted to your wallet. Only the holder of that NFT (the project owner) can edit the project's rules. Nobody else can edit your project's rules — not even JuiceboxDAO.
 - This guide is based on [juicebox.money](https://juicebox.money/create). If you're setting up your project somewhere else, the steps might be different.
 
 ## Project Settings
