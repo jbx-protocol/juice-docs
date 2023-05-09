@@ -19,7 +19,7 @@ As of 2023-04-13, all projects store their metadata within domain `0`, but futur
 
 If one calls [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof/) with `_projectId` as `1` and `_domain` as `0`, the contract will return the IPFS hash `QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`.
 
-Now, one can navigate to a to read the project's metadata:
+Now, one can navigate to an IPFS endpoint to read the project's metadata:
 
 ```json
 {
