@@ -152,7 +152,7 @@ To recount and analyze this bug, Filipv had posted a post mortem [here](https://
 
 ## Community Feedback by Gogo
 
-Gogo came to our [town hall two weeks ago]() and announce that he wanted to suggest the DAO to attend the NFT Brazil event but he didn't have a chance to fully explain his thoughts and instead suggested to submit a proposal. And he did put up [the proposal for NFT Brazil](https://www.jbdao.org/p/378) and came to [our town hall last week](https://docs.juicebox.money/town-hall/23-05-02/#nft-brazil-proposal-by-gogo) again to advise folks to brainstorm what cool things we can do on this event. This proposal was turned down by the DAO in the phase of community temprature check.
+Gogo came to our [town hall two weeks ago](https://docs.juicebox.money/town-hall/23-04-25/#thoughts-on-nft-brazil-by-gogo) and announced that he wanted to suggest the DAO to attend the NFT Brazil event but he didn't have a chance to fully explain his thoughts and instead suggested to submit a proposal. And he did put up [the proposal for NFT Brazil](https://www.jbdao.org/p/378) and came to [our town hall last week](https://docs.juicebox.money/town-hall/23-05-02/#nft-brazil-proposal-by-gogo) again to advise folks to brainstorm what cool things we can do on this event. This proposal was turned down by the DAO in the phase of community temprature check.
 
 He thought that there isn't a space in our community to brainstorm and give ideas. As a OG Juiceboxmember ever since 2021, Gogo felt he had been very passionate about our community. And this was the first time he want to do something for Juicebox directly and specifically, together with the community. He had not felt very welcome and neither had a space to discuss with the rest of the community.
 
