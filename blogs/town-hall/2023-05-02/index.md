@@ -10,7 +10,7 @@ tags: [town-hall]
 
 ## Nance Updates by Jigglyjams
 
-During the Town Hall, Jigglyjams introduced the new homepage for [JBDAO.org](https://jbdao.org/). 
+During the Town Hall, Jigglyjams introduced the new homepage for [JBDAO.org](https://jbdao.org/).
 
 One notable feature of the updated proposal process is that proposals now include links to the relevant discussion threads in Discord during the Community Temp Check stage.
 
@@ -44,17 +44,17 @@ Jango has suggested the idea of a Town Hall minting session in the near future, 
 
 ## Thirsty Thirsty Updates by Bruxa
 
-Bruxa has written a document about the Season 1 treasury and membership NFTs for the Thirsty Thirsty community, which she plans to publish on the Thirsty Thirsty Community Journal and formally announce on May 13th. 
+Bruxa has written a document about the Season 1 treasury and membership NFTs for the Thirsty Thirsty community, which she plans to publish on the Thirsty Thirsty Community Journal and formally announce on May 13th.
 
 ![Thirsty Thirsty Season 1 treasury and NFT](TT_season1.webp)
 
-New contributors will be able to mint their Season 1 membership NFTs and join the governance, building together with the rest of the community. Additionally, there will be an airdrop of $THIRSTY tokens to Season 0 membership holders. 
+New contributors will be able to mint their Season 1 membership NFTs and join the governance, building together with the rest of the community. Additionally, there will be an airdrop of $THIRSTY tokens to Season 0 membership holders.
 
-Bruxa believes that this will provide a strong foundation for the community to explore further in the Web3 world and help new potential users understand the mechanisms of IRL communities in this space. 
+Bruxa believes that this will provide a strong foundation for the community to explore further in the Web3 world and help new potential users understand the mechanisms of IRL communities in this space.
 
 ## NFT Brazil Proposal by Gogo
 
-Gogo put up a proposal this week concerning the thoughts of suggesting JuiceboxDAO to attend the NFT Brazil event, which he mentioned in our last Town Hall. 
+Gogo put up a proposal this week concerning the thoughts of suggesting JuiceboxDAO to attend the NFT Brazil event, which he mentioned in our last Town Hall.
 
 ![NFT Brazil proposal](NFTBrazil_proposal.webp)
 

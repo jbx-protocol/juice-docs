@@ -9,7 +9,7 @@ tags: [protocol, update]
 
 ***New website just dropped for the Juicebox Protocol***
 
-After countless workshops, discussions, and pull requests, the website for [juicebox.money](http://juicebox.money) is now live featuring the new homepage, About page, and Success Stories, as well as some exciting new features like improved search and project tags. The new website was made possible by [PeelDAO](https://juicebox.money/@peel), the front end team building and maintaining juicebox.money, and [WAGMI Studios](https://juicebox.money/@wagmi-studios), whose juicy artwork is featured throughout. 
+After countless workshops, discussions, and pull requests, the website for [juicebox.money](http://juicebox.money) is now live featuring the new homepage, About page, and Success Stories, as well as some exciting new features like improved search and project tags. The new website was made possible by [PeelDAO](https://juicebox.money/@peel), the front end team building and maintaining juicebox.money, and [WAGMI Studios](https://juicebox.money/@wagmi-studios), whose juicy artwork is featured throughout.
 
 You can follow along in the video below or in this article.
 
@@ -28,7 +28,7 @@ You’ll also notice some categories at the top like DAO, NFT, and Fundraising. 
 
 ### Explore Projects
 
-Once you’re on the Explore page, you’ll also notice that search has been completely revamped so it’s now way easier to find specific projects or browse to find new ones. Looking for projects by [Krause House](https://juicebox.money/v2/p/436)? Try searching terms like “NBA”. If you’re feeling nounish you can search “nouns” and find projects in the Nouns ecosystem like [SharkDAO](https://juicebox.money/p/sharkdao). 
+Once you’re on the Explore page, you’ll also notice that search has been completely revamped so it’s now way easier to find specific projects or browse to find new ones. Looking for projects by [Krause House](https://juicebox.money/v2/p/436)? Try searching terms like “NBA”. If you’re feeling nounish you can search “nouns” and find projects in the Nouns ecosystem like [SharkDAO](https://juicebox.money/p/sharkdao).
 
 ![Project tags on the Explore page](exploreprojects.webp)
 
@@ -52,7 +52,7 @@ If you’d like to know more about past projects that have been successful, we�
 
 ### How, What, and Why you should Juicebox
 
-Back to the homepage, next we have a quick summary of how Juicebox works, including setting up your project with rules to build trust, managing your treasury onchain, and building your community with token and NFT issuance. You can also find a link to the docs if you want to learn more. Next we have a section highlighting some of Juicebox’s core strengths. Juicebox is: 
+Back to the homepage, next we have a quick summary of how Juicebox works, including setting up your project with rules to build trust, managing your treasury onchain, and building your community with token and NFT issuance. You can also find a link to the docs if you want to learn more. Next we have a section highlighting some of Juicebox’s core strengths. Juicebox is:
 
 - Community owned
 - Reliable and transparent
@@ -64,7 +64,7 @@ Back to the homepage, next we have a quick summary of how Juicebox works, includ
 
 ### What is Juicy Picks?
 
-After that we have the Juicy Picks section, which is a new section of curated projects on Juicebox that really stand out from the crowd. These projects will rotate on a monthly basis and will be chosen by the Juicebox community. Below this section you’ll find a number of categories you choose to find a project that’s right for you. 
+After that we have the Juicy Picks section, which is a new section of curated projects on Juicebox that really stand out from the crowd. These projects will rotate on a monthly basis and will be chosen by the Juicebox community. Below this section you’ll find a number of categories you choose to find a project that’s right for you.
 
 ![New Juicy Picks section](juicypicks.webp)
 
@@ -87,23 +87,23 @@ Shoutout to [Sage Kellyn](https://twitter.com/SageKellyn) from [WAGMI Studios](h
 <p class="subtitle">New hero illustration for juicebox.money by Sage Kellyn</p>
 
 Banny, along with a fruity assortment of new characters have been reimagined to embrace Juicebox’s new brand identity. Paired with a slick sans serif Agrandir, a font that “celebrates the beauty of being imperfect,” the Juicebox brand update keeps the protocol fresh while acknowledging its punk origins.
- 
+
 
 ### New About Page
 
-Under Resources in the top navigation bar you’ll find a new About page for Juicebox. Here you can read about our mission statement, goals, learn about about the protocol and Juicebox DAO, the contributors at Juicebox, as well as our values. 
+Under Resources in the top navigation bar you’ll find a new About page for Juicebox. Here you can read about our mission statement, goals, learn about about the protocol and Juicebox DAO, the contributors at Juicebox, as well as our values.
 
 ![New About page on Juicebox](jb-about.webp)
 
 <p class="subtitle">Sections of the new About page on juicebox.money</p>
 
-The Juicebox protocol has grown a lot since its launch in July 2021. From contract versioning and audits to feature developments like tiered NFTs, to metaverse concerts at the Juice Lounge, countless members of Juicebox DAO have shaped what it is today through its active governance. Juicebox doesn’t drink from the kool-aid, it leverages the power of collective action through its community to help passionate creators and builders successfully launch and scale projects, openly on the Ethereum blockchain. 
+The Juicebox protocol has grown a lot since its launch in July 2021. From contract versioning and audits to feature developments like tiered NFTs, to metaverse concerts at the Juice Lounge, countless members of Juicebox DAO have shaped what it is today through its active governance. Juicebox doesn’t drink from the kool-aid, it leverages the power of collective action through its community to help passionate creators and builders successfully launch and scale projects, openly on the Ethereum blockchain.
 
 ![Screenshot of old create flow on juicebox.money](oldJB.webp)
 
 <p class="subtitle">Screenshot of old version of juicebox.money</p>
 
-What are you waiting for, anon? Come explore the world of community-owned DAOs, fundraisers, non-profits, and other projects running on Juicebox today. 
+What are you waiting for, anon? Come explore the world of community-owned DAOs, fundraisers, non-profits, and other projects running on Juicebox today.
 
 
 🐦 Follow Juicebox on Twitter: [@JuiceboxETH](https://twitter.com/juiceboxETH)

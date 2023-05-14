@@ -89,9 +89,9 @@ At 23:02 UTC I hid the "Send payouts" button from the v1 JuiceboxDAO project pag
 At 23:09 UTC, I created a private channel in the JuiceboxDAO Discord server and shared the following message:
 
 > @Multisig URGENT:
-> 
+>
 > The most recent `configure` transaction to the v1 project had incorrectly programmed `_payoutMods`, meaning the payouts would be sent into treasury itself rather than going to the `V1Allocator` as intended.
-> 
+>
 > We have disabled the `Send payouts` button in the frontend, and @jango#0420 is queuing a transaction to fix this by updating the payout within the current target
 >
 > @Multisig get access to your wallets as soon as possible and stay on standby for a quick sign + execution.

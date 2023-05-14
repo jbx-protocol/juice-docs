@@ -17,9 +17,9 @@ Goerli testnet: [`0x082d3969f2b7988b0362e8bd4f2af9bbd2fed36c`](https://goerli.et
 
 #### Notes
 
-The default metadata for all projects can be updated by the contract owner. 
+The default metadata for all projects can be updated by the contract owner.
 
-Juicebox project owners and operators can override the default metadata for their project with their own IJBTokenUriResolver contracts. The [Token Resolver Template repo](https://github.com/nnnnicholas/juice-token-resolver-template) can help you get started writing a custom Juicebox project token resolver. To get started making onchain SVGs, consult the [Juice SVG Template repo](https://github.com/nnnnicholas/juice-svg-template). 
+Juicebox project owners and operators can override the default metadata for their project with their own IJBTokenUriResolver contracts. The [Token Resolver Template repo](https://github.com/nnnnicholas/juice-token-resolver-template) can help you get started writing a custom Juicebox project token resolver. To get started making onchain SVGs, consult the [Juice SVG Template repo](https://github.com/nnnnicholas/juice-svg-template).
 
 
 #### Inheritance

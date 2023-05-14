@@ -41,9 +41,9 @@ You may go to blunt.finance and give it a try on Goerli testnet now.
 
 ### Defifa
 
-Defifa didn't make it to the initial NBA playoff run. However, Viraz completed the last tests yesterday morning and we reviewed some things over the weekend. Currently, DeFIFA feels good and we're planning to run a contest next week that's more relevant to one NBA playoff game or series. 
+Defifa didn't make it to the initial NBA playoff run. However, Viraz completed the last tests yesterday morning and we reviewed some things over the weekend. Currently, DeFIFA feels good and we're planning to run a contest next week that's more relevant to one NBA playoff game or series.
 
-Our goal is to be able to play a Defifa style tournament with everything updated, updated front end with the create flow and updated contracts, in time for the semi-finals of the playoff and definitely the finals. 
+Our goal is to be able to play a Defifa style tournament with everything updated, updated front end with the create flow and updated contracts, in time for the semi-finals of the playoff and definitely the finals.
 
 ### Thirsty Thirsty
 
@@ -89,9 +89,9 @@ At this stage, it's still early days, and we need to explore the right moment an
 
 ## Thoughts on NFT Brazil by Gogo
 
-There will be an NFT Brazil event from June 2nd - 4th in Bienal, Brazil, which will be the largest Web3 event in Brazil this year, with Bienal be an iconic art venue in Brazil. The event is targeting an audience such as creators, gamers, artists, developers, investors and etc. to onboard people into Web3. 
+There will be an NFT Brazil event from June 2nd - 4th in Bienal, Brazil, which will be the largest Web3 event in Brazil this year, with Bienal be an iconic art venue in Brazil. The event is targeting an audience such as creators, gamers, artists, developers, investors and etc. to onboard people into Web3.
 
-And also the reach is huge, there is expected to be around 40,000 people that will go to this event, so Gogo thought that it will be an incredible opportunity to showcase Juicebox and connect with the Web3 communities there. He had the plan to submit a proposal to suggest JuiceboxDAO to attend this event in a certain way. 
+And also the reach is huge, there is expected to be around 40,000 people that will go to this event, so Gogo thought that it will be an incredible opportunity to showcase Juicebox and connect with the Web3 communities there. He had the plan to submit a proposal to suggest JuiceboxDAO to attend this event in a certain way.
 
 ## StudioDAO Update with Kenbot
 

@@ -21,7 +21,7 @@ Right now there is no roadmap or game plan for Bananapus, but there are several 
 
 These can been considered as the three objectives of Bananapus:
 
-1. To allow active stakeholders to participate in a treasury's growth. Part of the treasury's reserved tokens can be allocated to token staker. 
+1. To allow active stakeholders to participate in a treasury's growth. Part of the treasury's reserved tokens can be allocated to token staker.
 
    For example, JuiceboxDAO could route 10% of its reserved token issuance to be claimed by those staking JBX, so that the treasury's growth which is measured in reserved rate issuance is claimable by those who already have a part of the community and are staked.
 
@@ -39,7 +39,7 @@ These can been considered as the three objectives of Bananapus:
 
 ## Blunt Recap by Jango
 
-JuiceboxDAO also approved the [proposal to support Blunt Finance project](https://www.jbdao.org/p/369) in the same governance cycle. 
+JuiceboxDAO also approved the [proposal to support Blunt Finance project](https://www.jbdao.org/p/369) in the same governance cycle.
 
 This project has been in development for a while, and it's meant to solve a simplification problem of Juicebox project's first funding cycle.
 
@@ -57,7 +57,7 @@ At the same time, Blunt has got some business models within its system, so there
 
 ### Fee structure of Blunt
 
-When a project successfully raises its target within a certain point in time, the project's ownership will be transferred from the Blunt contract to the pre-specified project owner address. 
+When a project successfully raises its target within a certain point in time, the project's ownership will be transferred from the Blunt contract to the pre-specified project owner address.
 
 Right before that transfer happens, the Blunt contract will schedule another funding cycle and set a payout from this project to [Blunt's Juicebox treasury](https://juicebox.money/v2/p/490) as the fees charged by Blunt in this fundraising. And in turn, BLUNT tokens will be issued back out to the project as the on-chain governance tokens of Blunt.
 
@@ -81,7 +81,7 @@ And in the Mission section of the About page, Tjl suggests that we could discuss
 
 ![New About page - mission](aboutpage_mission.webp)
 
-Secondly, he suggests that we add an + button in the contributor section to link to the specific docs that show visitors how to contribute to Juicebox, so as to encourage new contributors to come onto JuiceboxDAO. 
+Secondly, he suggests that we add an + button in the contributor section to link to the specific docs that show visitors how to contribute to Juicebox, so as to encourage new contributors to come onto JuiceboxDAO.
 
 ![New About page - contributors](aboutpage_contributors.webp)
 
@@ -91,11 +91,11 @@ Jango suggest that we put in a JBX token ditribution information, pie chart or s
 
 ## Buyback Delegate Update by Jango
 
-This is a project that has been in discussion for a while since last year, and it was something that we couldn't really do until we've stitched together the entirety of versioning since it involves the actual JBX token as well as treasuries. 
+This is a project that has been in discussion for a while since last year, and it was something that we couldn't really do until we've stitched together the entirety of versioning since it involves the actual JBX token as well as treasuries.
 
 Now we're at a good point after all the versioning work is done, and we have built and tested this delegate. The only next steps would be formal audits and then DAO's approval to actually stitch it onto our funding cycle.
 
-We all know that, for each ETH that comes into our treasuries, the DAO will create new JBX according to its issuance rate and issue them outwards to those either are paying fees or just clicking the contributing button. Also we acknowledge that there is just someone out there willing to sell JBX in an open market like Uniswap for a different rate. 
+We all know that, for each ETH that comes into our treasuries, the DAO will create new JBX according to its issuance rate and issue them outwards to those either are paying fees or just clicking the contributing button. Also we acknowledge that there is just someone out there willing to sell JBX in an open market like Uniswap for a different rate.
 
 So in the case of open market price is lower than our issuance rate, what the buyback delegate will be proposing is that DAO will forgo taking ETH into its treasury and instead route ETH into the market, to make sure that whoever pays into our treasury will get the most JBX possible for the ETH they pay in.
 
@@ -117,7 +117,7 @@ There're still a few things from the current version that the front end has yet 
 
 For now, Jango is hesitant to publish or push for prioritization of any new 721 delegates, rather just to make sure everyone know that it's changeable. We can make changes to that contract and publish new versions, and that's not a big weighty taxing versioning process as the other stuff has been.
 
-We can also publish new types of 721 delegates, like the staking delegate that Bananpus is proposing. There are various ways you can imagine NFT working on Juicebox. Right now we're opinionated towards one because that's where we started, and we've created a flexible one to make it workable by a wide variety of applications. 
+We can also publish new types of 721 delegates, like the staking delegate that Bananpus is proposing. There are various ways you can imagine NFT working on Juicebox. Right now we're opinionated towards one because that's where we started, and we've created a flexible one to make it workable by a wide variety of applications.
 
 We can go narrow, we can go broader, we can go specific in various ways. But it's a tricky thing to build front ends that cater towards one specifically, more so to build for something that handles a variety of different types of extensions. So, it will be a long term patient process, but hopefully we manage to capture this open-mindedness of how delegates can work on Juicebox.
 

@@ -32,7 +32,7 @@ On the town hall, Tjl gave a walkthrough of this document, identifying some of m
 
 ### Solution
 
-The solution here is using JBM as the key vehicle in the market to 
+The solution here is using JBM as the key vehicle in the market to
 
 - firstly, define a core set of features that provide clarify to what Juicebox is, and are essentially 100% valuable to 100% of projects, while everything else that is in contention to every single other project made available as a plugin;
 
@@ -70,10 +70,10 @@ If we were to go down this path, there are a few things to make it work:
 
 - We need complete alignment and support from the DAO. We're all working towards a single goal, we talk about it in a single way and we have a kind of a single destiny.
 
-- A slight shift in priorities for the Peel, even though we've kind of put all of the building blocks in place for this, it would be a slight shift in priorities for us in the way that we build some things. 
+- A slight shift in priorities for the Peel, even though we've kind of put all of the building blocks in place for this, it would be a slight shift in priorities for us in the way that we build some things.
 
 - And cooperation from existing JB-funded projects.
-- And Contract crew development support 
+- And Contract crew development support
 - Documentation from Filip.
 
 ## Discussions On App Framework
@@ -86,7 +86,7 @@ And I want a bit more certainty that App Store not only is a convenient solution
 
 Secondly, we definitely have a Product Market Fit (PMF) problem that we have yet to solve. And we haven't nailed our positioning, which is a product of the fact that we can't get consistent with talking about it.
 
-**NIcholas**: To get that process started, it would be interesting to have a single front end which is compatible with separate work streams, updateing them at the same time. If Blunt is something that can be executed inside of an optional add-on tab instead of a project, then a handful of devs, internal or external, Peel or non-Peel, can start working on that. And it can be integrated into juicebox.money immediately, rather that having to either spin up an entirely new site, or to redirect Peel resources to it. 
+**NIcholas**: To get that process started, it would be interesting to have a single front end which is compatible with separate work streams, updateing them at the same time. If Blunt is something that can be executed inside of an optional add-on tab instead of a project, then a handful of devs, internal or external, Peel or non-Peel, can start working on that. And it can be integrated into juicebox.money immediately, rather that having to either spin up an entirely new site, or to redirect Peel resources to it.
 
 **Tjl**: Totally. That's definitely one of the biggest motivations. Let's tidy everything up, move everything towards a single source,  and start to grow that as an ecosystem, rather than crumbling off in different directions.
 
@@ -98,7 +98,7 @@ I don't know if it's possible to achieve, but it would allow for a faster, simul
 
 **Kenbot**: I don't think that Juicebox is a fundraising protocol. The complexity of it is beyond the scope of what most people who are looking for fundraising capability are looking for.
 
-I think the strength of the protocol, the platform and even everything that's been created so far, is a fundraising solution. It's a smart treasury that remembers who contributes and can reward them later on, making it a powerful tool for managing money flow. 
+I think the strength of the protocol, the platform and even everything that's been created so far, is a fundraising solution. It's a smart treasury that remembers who contributes and can reward them later on, making it a powerful tool for managing money flow.
 
 I think that Juicebox's strength lies in its general purpose treasury tooling, and then the more specific interaction interfaces are where we will win.
 
@@ -114,7 +114,7 @@ So I am aligned with the conversation in large part, but I think it will be real
 
 **Tjl**: I think it's incredibly important to try to at least nail down where we are going, Even if you do think it's impossible, I think having many and frequent discussions about this will be important in moving us into a direction which makes sense. And that should be a priority over everything else, because it seems to be too many narratives over there.
 
-**Nicholas**: I feel that we need clarity. It's okay to have some clarity what this thing is about. I don't think that's the enemy of chaos or productivity or creativity. In fact, I think it's enabling of creativity and chaos. 
+**Nicholas**: I feel that we need clarity. It's okay to have some clarity what this thing is about. I don't think that's the enemy of chaos or productivity or creativity. In fact, I think it's enabling of creativity and chaos.
 
 
 
@@ -132,17 +132,17 @@ Though he is going to make a dedicated website to help people mint those project
 
 ![Project cards](project_cards.webp)
 
-Filipv had made a [PR for the earlier contracts shipped by Nicholas](https://github.com/jbx-protocol/juice-interface/pull/3521), as soon as it gets reviewed and merged, project owners can go to the projects' settings to set their custom metadata, instead of interacting with the contracts directly themselves. 
+Filipv had made a [PR for the earlier contracts shipped by Nicholas](https://github.com/jbx-protocol/juice-interface/pull/3521), as soon as it gets reviewed and merged, project owners can go to the projects' settings to set their custom metadata, instead of interacting with the contracts directly themselves.
 
 ![tokenUriResolver in project setting](tokenuri_setting.webp)
 
 ## Post Mortem of V1 Payouts by Filipv
 
-Filipv had put up a proposal recently to move all the ETH from JuiceboxDAO V1 treasury to V3 treasury. 
+Filipv had put up a proposal recently to move all the ETH from JuiceboxDAO V1 treasury to V3 treasury.
 
-After this proposal got approved, Filipv went to queue a transaction to increase the funding target of V1 treasury to 100m ETH, the total amount that can be paid out of the treasury, and set the payout beneficiary as the address of V3 treasury. This transaction was approved and signed by the multisig later. 
+After this proposal got approved, Filipv went to queue a transaction to increase the funding target of V1 treasury to 100m ETH, the total amount that can be paid out of the treasury, and set the payout beneficiary as the address of V3 treasury. This transaction was approved and signed by the multisig later.
 
-But later Jango noticed that the payout beneficiary was set as the V1 treasury itself instead of V3 treasury, and the team soon found this was a bug which would set the allocator to the zero address when the funding target of a V1 project was changed, which meant that the V1 treasury will pay itself and mint some new JBX tokens. 
+But later Jango noticed that the payout beneficiary was set as the V1 treasury itself instead of V3 treasury, and the team soon found this was a bug which would set the allocator to the zero address when the funding target of a V1 project was changed, which meant that the V1 treasury will pay itself and mint some new JBX tokens.
 
 Theoretically, this could be exploited to make the V1 treasury keep paying itself until the 100m funding target is reached and mint out an astronomical number of JBX to be allocated to the multisig and other reserved rate recepients.
 
@@ -164,7 +164,7 @@ Jango expressed his gratitude to Gogo for bringing this up. He felt that we spen
 
 Jango also emphasized the importance of focusing on individuals rather than revenue and product market fit. He believed in fostering a community of passionate builders who can work together to create innovative solutions.
 
-Mieos thought that we need to find a nice balance between pushing the family vibe where we all feel welcom, loved, appreciated and motivated to take risks, and a place where we are trimed and efficient towards a product that the world wants and makes profit to make it more sustainable. 
+Mieos thought that we need to find a nice balance between pushing the family vibe where we all feel welcom, loved, appreciated and motivated to take risks, and a place where we are trimed and efficient towards a product that the world wants and makes profit to make it more sustainable.
 
 And he thougt that we recently got a little too serious in the proposals, maybe it was because we had been hot and loose for a while and the pendulum had swung back a bit. He suggested that we find a way to add more productive feedback and be more open to giving and receiving. He also was grateful for Gogo to catch the vibe and be willing to step in and say something about it.
 
@@ -174,13 +174,13 @@ Livid introduced that [Planet](https://www.planetable.xyz/) is an App that lets 
 
 On the town hall, Livid demonstrated posting a screenshot onto a website of ENS domain, and then collecting one of the images on [Jango's ENS website](https://jango.eth.limo/) as an NFT.
 
-Jango then took over and introduced the mechanism of this Croptop template for Planet App. 
+Jango then took over and introduced the mechanism of this Croptop template for Planet App.
 
 As you create websites using Planet App and post content, you are esentially hosting it on your computer. Anyone who follows your planet can then access and distribute the content in a peer-to-peer network.
 
 The model from the peer-to-peer perspective is that the content kind of lives in this peer-to-peer network, and it can be removed or de-referenced. But once someone collects the content, then it lives forever, it's stored and permanent, and can't be removed or deleted by the person who made the content and posted it in the peer-to-peer network in the first place.
 
-This might be a path to build the unstoppable sites that are hosted on the Ethereum network, and the content is peer-to-peer. And then the only step missing is to really make this a fundraising tool, to let these images be posted and mintable on a Juicebox treasury.  
+This might be a path to build the unstoppable sites that are hosted on the Ethereum network, and the content is peer-to-peer. And then the only step missing is to really make this a fundraising tool, to let these images be posted and mintable on a Juicebox treasury.
 
 Recently, Jango developed a Croptop contract and made these content collectible/mintable as NFTs and be posted onto a Juicebox project.
 
@@ -196,4 +196,4 @@ In the example above, one of the images on [Jango's ENS website](https://jango.e
 
 So then anyone can basically post art or things they want onto a project page, which can be a project page or something specific for this feed aggregation. In order to post on someone's feed with Croptop contract, you will both add the NFT and mint the first copy, so you're basically paying the project to post a new piece of content.
 
-Maybe there will be a reverted model, where project owner is not posting NFTs, but its community is getting together and deciding which items should be posted on a certain project. 
+Maybe there will be a reverted model, where project owner is not posting NFTs, but its community is getting together and deciding which items should be posted on a certain project.
