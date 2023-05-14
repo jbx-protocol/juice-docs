@@ -12,7 +12,7 @@ tags: [town-hall]
 
 In response to some of the relevant discussion lately in the Discord, Tjl had been working on the [App ecosystem framework](https://grand-popcorn-c81.notion.site/Juicebox-Apps-Ecosystem-dfd59363bc894f328897e37a3b2bec54) that he believed can be enabling an extensive ecosystem of Apps to extend the Juicebox fuctionalities and drive continued development.
 
-![app framework blog post](appframe_post.png)
+![app framework blog post](appframe_post.webp)
 
 On the town hall, Tjl gave a walkthrough of this document, identifying some of main problems in the Juicebox ecosystem, givinng some suggestions and corresponding solution, projecting the potential changes this framework is going to bring to our ecosystem, as well as some opportunities that will be opened up with this initiative.
 
@@ -28,7 +28,7 @@ On the town hall, Tjl gave a walkthrough of this document, identifying some of m
 
 ### Suggestions
 
-![app framework suggestions](appframe_suggestions.png)
+![app framework suggestions](appframe_suggestions.webp)
 
 ### Solution
 
@@ -56,13 +56,13 @@ Tjl also demonstrated some very early stage wireframes as the visual indiction o
 
 He also showed the audience some rudimentary mockups to visually represent how this framework might work within the current setup, in areas such as App Store, Developer assets, List an app, Create flow, Project page and Project setting.
 
-![mockup of app store](appstore_mockup.png)
+![mockup of app store](appstore_mockup.webp)
 
 ### Opportunities
 
 What Tjl saw as the opportunities of take this initiative:
 
-![Opportunities](appframe_opportunities.png)
+![Opportunities](appframe_opportunities.webp)
 
 ### What do we need to make this work?
 
@@ -130,11 +130,11 @@ Though he is going to make a dedicated website to help people mint those project
 2. Call `setUri` on this contract, passing the project ID and URI from step 1 (eg `ipfs://...`)[here]( https://etherfunk.io/address/0xbd6cf252598bbfd87a429ded71adf9f8d2bb9558?fn=setUri&args=%5B%22500%22%2C%22ipfs%3A%2F%2FQm..........%22%5D);
 3. Set the token uri registry as your custom token resolver by passing it's address and the project ID of your project  [here](https://etherfunk.io/address/0x2c39bb41e2af6bec6c3bb102c07c15eda648a366?fn=setTokenUriResolverForProject&args=%5Bnull%2C%220xbD6cf252598BBFD87a429dED71aDF9f8d2bb9558%22%5D).
 
-![Project cards](project_cards.png)
+![Project cards](project_cards.webp)
 
 Filipv had made a [PR for the earlier contracts shipped by Nicholas](https://github.com/jbx-protocol/juice-interface/pull/3521), as soon as it gets reviewed and merged, project owners can go to the projects' settings to set their custom metadata, instead of interacting with the contracts directly themselves. 
 
-![tokenUriResolver in project setting](tokenuri_setting.png)
+![tokenUriResolver in project setting](tokenuri_setting.webp)
 
 ## Post Mortem of V1 Payouts by Filipv
 
@@ -188,9 +188,9 @@ Any project on Juicebox can give this contract permission to post a new NFT onto
 
 And then the project owner can also set some thresholds like the minimum price and the minimum quantity of NFTs can be posted on their project page.  So that when someone goes to a project and post their own NFTs with the Croptop contract, they can set the price for that NFT, as long as the price is higher than the threshold set by the project owner before.
 
-![custom price by ppl posting NFT](croptop_customprice.png)
+![custom price by ppl posting NFT](croptop_customprice.webp)
 
-![NFT posted on the project page](croptop_NFTposted.png)
+![NFT posted on the project page](croptop_NFTposted.webp)
 
 In the example above, one of the images on [Jango's ENS website](https://jango.eth.limo/) was collected/minted and posted to the project page of  [Test Croptop](https://goerli.juicebox.money/v2/p/670) (Goerli testnet), at the same time a 5% fee was paid into another [Croptop Publishing Network](https://goerli.juicebox.money/v2/p/669) (Goerli testnet) for using the Croptop contract. ( Right now, Croptop is still an experiment that lives in Goerli testnet.)
 
