@@ -58,7 +58,6 @@ struct JBFundingCycleMetadata {
 * `pauseRedeem` is a flag indicating if the redeem functionality should be paused during the funding cycle.
 * `pauseBurn` is a flag indicating if the burn functionality should be paused during the funding cycle.
 * `allowMinting` is a flag indicating if the mint functionality should be allowed during the funding cycle.
-* `allowChangeToken` is a flag indicating if changing tokens should be allowed during this funding cycle.
 * `allowTerminalMigration` is a flag indicating if migrating terminals should be allowed during this funding cycle.
 * `allowControllerMigration` is a flag indicating if migrating controllers should be allowed during this funding cycle.
 * `holdFees` is a flag indicating if fees should be held during this funding cycle.
