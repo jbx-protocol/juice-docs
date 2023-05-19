@@ -22,7 +22,4 @@ The protocol is nuanced, however. The goal of the protocol docs is for you to fi
 6. [Frontend](frontend) - Resources for people building new clients for the Juicebox protocol.
 7. [Deprecated](deprecated/v1) - API documentation and resources for older versions of the Juicebox protocol.
 
-Documentation for Juicebox Protocol V1 (live on mainnet since July 2021) is available [here](protocol-v1/).
-
-Reach out to contributors of the DAO on [Discord](https://www.discord.gg/juicebox) to call attention to something that could be improved. You can also submit PR's directly to the [documentation repo](https://github.com/jbx-protocol/juice-docs-v2) on GitHub.
-
+Reach out to contributors of the DAO on [Discord](https://www.discord.gg/juicebox) to call attention to something that could be improved. You can also submit PR's directly to the [documentation repo](https://github.com/jbx-protocol/juice-docs) on GitHub.
