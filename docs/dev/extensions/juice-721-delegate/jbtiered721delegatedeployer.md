@@ -1,10 +1,10 @@
 # JBTiered721DelegateDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JBTiered721DelegateDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721DelegateDeployer.sol)
 
-Mainnet: [`0xC3279bAbe48c43955932570694f3aDb55027eB8e`](https://etherscan.io/address/0xC3279bAbe48c43955932570694f3aDb55027eB8e)
+Mainnet: [`0x428Eed06233305cB833d8BB924CA8A3f0fF273D5`](https://etherscan.io/address/0x428Eed06233305cB833d8BB924CA8A3f0fF273D5)
 
-Goerli: [`0xF9d5Bc54f54eBEE30dE3e960992a343481073B3d`](https://goerli.etherscan.io/address/0xF9d5Bc54f54eBEE30dE3e960992a343481073B3d)
+Goerli: [`0xFc5337788f3554834Cb3C381A95AAC7F25Ff6278`](https://goerli.etherscan.io/address/0xFc5337788f3554834Cb3C381A95AAC7F25Ff6278)
 
 Inherits: [`IJBTiered721DelegateDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md)
 
@@ -15,20 +15,12 @@ Adheres to -
 
 ## State Variables
 
-### globalGovernance
+### onchainGovernance
 
 The contract that supports on-chain governance across all tiers.
 
 ```solidity
-JB721GlobalGovernance public immutable globalGovernance;
-```
-
-### tieredGovernance
-
-The contract that supports on-chain governance per-tier.
-
-```solidity
-JB721TieredGovernance public immutable tieredGovernance;
+JBTiered721GovernanceDelegate public immutable onchainGovernance;
 ```
 
 ### noGovernance
@@ -61,8 +53,7 @@ uint256 private _nonce;
 
 ```solidity
 constructor(
-    JB721GlobalGovernance _globalGovernance,
-    JB721TieredGovernance _tieredGovernance,
+    JBTiered721GovernanceDelegate _onchainGovernance,
     JBTiered721Delegate _noGovernance,
     IJBDelegatesRegistry _delegatesRegistry
 );

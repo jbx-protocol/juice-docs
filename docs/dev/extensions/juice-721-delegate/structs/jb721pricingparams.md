@@ -1,12 +1,12 @@
 # JB721PricingParams
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/structs/JB721PricingParams.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/structs/JB721PricingParams.sol)
 
 ```solidity
 struct JB721PricingParams {
     JB721TierParams[] tiers;
-    uint256 currency;
-    uint256 decimals;
+    uint48 currency;
+    uint48 decimals;
     IJBPrices prices;
 }
 ```

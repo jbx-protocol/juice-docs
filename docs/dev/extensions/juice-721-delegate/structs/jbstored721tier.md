@@ -1,19 +1,16 @@
 # JBStored721Tier
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/structs/JBStored721Tier.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/structs/JBStored721Tier.sol)
 
 ```solidity
 struct JBStored721Tier {
-    uint80 contributionFloor;
-    uint40 lockedUntil;
-    uint40 remainingQuantity;
-    uint40 initialQuantity;
-    uint16 votingUnits;
+    uint104 price;
+    uint32 remainingQuantity;
+    uint32 initialQuantity;
+    uint40 votingUnits;
+    uint24 category;
     uint16 reservedRate;
-    uint8 royaltyRate;
-    uint8 category;
-    bool allowManualMint;
-    bool transfersPausable;
+    uint8 packedBools;
 }
 ```
 

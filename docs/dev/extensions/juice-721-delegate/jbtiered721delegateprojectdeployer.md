@@ -1,12 +1,12 @@
 # JBTiered721DelegateProjectDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JBTiered721DelegateProjectDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721DelegateProjectDeployer.sol)
 
-Mainnet: [`0x266FEec5BCA3AA005E23Dc2BCD9B36d43061C66B`](https://etherscan.io/address/0x266FEec5BCA3AA005E23Dc2BCD9B36d43061C66B)
+Mainnet: [`0xB8bc7d74C0CFe75d93C0844D3f49679dcc86f477`](https://etherscan.io/address/0xB8bc7d74C0CFe75d93C0844D3f49679dcc86f477)
 
-Goerli: [`0xf8Be526d55dE7A2C05834AB278569aAcD2F6027A`](https://goerli.etherscan.io/address/0xf8Be526d55dE7A2C05834AB278569aAcD2F6027A)
+Goerli: [`0xba89412849C354AE4350F2c339bFc0720EDB7C7B`](https://goerli.etherscan.io/address/0xba89412849C354AE4350F2c339bFc0720EDB7C7B)
 
-Inherits: [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`IJBTiered721DelegateProjectDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md)
+Inherits: [`JBOperatable`](/), [`IJBTiered721DelegateProjectDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md)
 
 Deploys a project with a tiered tier delegate.
 
@@ -14,7 +14,7 @@ Adheres to -
 - [`IJBTiered721DelegateProjectDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md):  General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
 
 Inherits from -
-- [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/):  Several functions in this contract can only be accessed by a project owner, or an address that has been preconfigured to be an operator of the project.
+- [`JBOperatable`](/):  Several functions in this contract can only be accessed by a project owner, or an address that has been preconfigured to be an operator of the project.
 
 ## State Variables
 

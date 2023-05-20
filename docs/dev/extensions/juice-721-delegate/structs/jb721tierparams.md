@@ -1,23 +1,20 @@
 # JB721TierParams
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/structs/JB721TierParams.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/structs/JB721TierParams.sol)
 
 ```solidity
 struct JB721TierParams {
-    uint80 contributionFloor;
-    uint48 lockedUntil;
-    uint40 initialQuantity;
-    uint16 votingUnits;
+    uint104 price;
+    uint32 initialQuantity;
+    uint32 votingUnits;
     uint16 reservedRate;
     address reservedTokenBeneficiary;
-    uint8 royaltyRate;
-    address royaltyBeneficiary;
     bytes32 encodedIPFSUri;
-    uint8 category;
+    uint24 category;
     bool allowManualMint;
     bool shouldUseReservedTokenBeneficiaryAsDefault;
-    bool shouldUseRoyaltyBeneficiaryAsDefault;
     bool transfersPausable;
+    bool useVotingUnits;
 }
 ```
 

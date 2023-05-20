@@ -1,12 +1,11 @@
 # JB721GovernanceType
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/enums/JB721GovernanceType.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/enums/JB721GovernanceType.sol)
 
 ```solidity
 enum JB721GovernanceType {
     NONE,
-    TIERED,
-    GLOBAL
+    ONCHAIN
 }
 ```
 

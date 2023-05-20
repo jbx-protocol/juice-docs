@@ -1,10 +1,10 @@
-# JB721GlobalGovernance
+# JBTiered721GovernanceDelegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/JB721GlobalGovernance.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721GovernanceDelegate.sol)
 
-Mainnet: [`0x401B114e2cE98EE8a01A96D91e0185b0937F7BDc`](https://etherscan.io/address/0x401B114e2cE98EE8a01A96D91e0185b0937F7BDc)
+Mainnet: [`0x784C8AcB7A0109E483804D683727124ad2C2ba10`](https://etherscan.io/address/0x784C8AcB7A0109E483804D683727124ad2C2ba10)
 
-Goerli: [`0xB3344d2ebE52e83E718f59B16eDFDa37d5370a26`](https://goerli.etherscan.io/address/0xB3344d2ebE52e83E718f59B16eDFDa37d5370a26)
+Goerli: [`0xA67B8d02863E09BE61a75BAeFD58c818a54c12ba`](https://goerli.etherscan.io/address/0xA67B8d02863E09BE61a75BAeFD58c818a54c12ba)
 
 Inherits: [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md), [`JBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721delegate.md)
 
@@ -15,6 +15,19 @@ Inherits from -
 - [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md):  A helper for voting balance snapshots.
 
 ## Functions
+
+### constructor
+
+```solidity
+constructor(IJBProjects _projects, IJBOperatorStore _operatorStore) JBTiered721Delegate(_projects, _operatorStore);
+```
+
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`_projects`|[`IJBProjects`](/docs/dev/api/interfaces/ijbprojects.md)|the IJBProjects that will be used to check ownership of a project|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/dev/api/interfaces/ijboperatorstore.md)|the operatorStore to be used to check permissions|
 
 ### _getVotingUnits
 

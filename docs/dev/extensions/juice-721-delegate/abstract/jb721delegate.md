@@ -1,8 +1,8 @@
 # JB721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/abstract/JB721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/abstract/JB721Delegate.sol)
 
-Inherits: [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md), [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md), [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md), [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md)
+Inherits: [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md), [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md), [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md)
 
 Delegate that offers project contributors NFTs upon payment and the ability to redeem NFTs for treasury assets.
 
@@ -240,10 +240,10 @@ error INVALID_PAYMENT_EVENT();
 error INVALID_REDEMPTION_EVENT();
 ```
 
-### UNAUTHORIZED
+### UNAUTHORIZED_TOKEN
 
 ```solidity
-error UNAUTHORIZED();
+error UNAUTHORIZED_TOKEN(uint256 _tokenId);
 ```
 
 ### UNEXPECTED_TOKEN_REDEEMED

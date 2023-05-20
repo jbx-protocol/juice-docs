@@ -1,6 +1,6 @@
 # IJBTiered721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/interfaces/IJBTiered721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/interfaces/IJBTiered721Delegate.sol)
 
 Inherits: [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md)
 
@@ -24,28 +24,10 @@ function store() external view returns (IJBTiered721DelegateStore);
 function fundingCycleStore() external view returns (IJBFundingCycleStore);
 ```
 
-### prices
+### pricingContext
 
 ```solidity
-function prices() external view returns (IJBPrices);
-```
-
-### pricingCurrency
-
-```solidity
-function pricingCurrency() external view returns (uint256);
-```
-
-### pricingDecimals
-
-```solidity
-function pricingDecimals() external view returns (uint256);
-```
-
-### contractURI
-
-```solidity
-function contractURI() external view returns (string memory);
+function pricingContext() external view returns (uint256, uint256, IJBPrices);
 ```
 
 ### creditsOf
@@ -58,6 +40,18 @@ function creditsOf(address _address) external view returns (uint256);
 
 ```solidity
 function firstOwnerOf(uint256 _tokenId) external view returns (address);
+```
+
+### baseURI
+
+```solidity
+function baseURI() external view returns (string memory);
+```
+
+### contractURI
+
+```solidity
+function contractURI() external view returns (string memory);
 ```
 
 ### adjustTiers
@@ -81,25 +75,19 @@ function mintReservesFor(uint256 _tierId, uint256 _count) external;
 ### mintFor
 
 ```solidity
-function mintFor(JBTiered721MintForTiersData[] memory _mintForTiersData) external;
-```
-
-### mintFor
-
-```solidity
 function mintFor(uint16[] calldata _tierIds, address _beneficiary) external returns (uint256[] memory tokenIds);
 ```
 
-### setDefaultReservedTokenBeneficiary
+### setMetadata
 
 ```solidity
-function setDefaultReservedTokenBeneficiary(address _beneficiary) external;
-```
-
-### setEncodedIPFSUriOf
-
-```solidity
-function setEncodedIPFSUriOf(uint256 _tierId, bytes32 _encodedIPFSUri) external;
+function setMetadata(
+    string memory _baseUri,
+    string calldata _contractMetadataUri,
+    IJBTokenUriResolver _tokenUriResolver,
+    uint256 _encodedIPFSUriTierId,
+    bytes32 _encodedIPFSUri
+) external;
 ```
 
 ### initialize
@@ -162,6 +150,24 @@ event SetDefaultReservedTokenBeneficiary(address indexed beneficiary, address ca
 
 ```solidity
 event SetEncodedIPFSUri(uint256 indexed tierId, bytes32 encodedIPFSUri, address caller);
+```
+
+### SetBaseUri
+
+```solidity
+event SetBaseUri(string indexed baseUri, address caller);
+```
+
+### SetContractUri
+
+```solidity
+event SetContractUri(string indexed contractUri, address caller);
+```
+
+### SetTokenUriResolver
+
+```solidity
+event SetTokenUriResolver(IJBTokenUriResolver indexed newResolver, address caller);
 ```
 
 ### AddCredits

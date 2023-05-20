@@ -1,14 +1,8 @@
 # IJBTiered721DelegateStore
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/0032066684f3154c956fbb736a7376333174171f/contracts/interfaces/IJBTiered721DelegateStore.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/interfaces/IJBTiered721DelegateStore.sol)
 
 ## Functions
-
-### MAX_ROYALTY_RATE
-
-```solidity
-function MAX_ROYALTY_RATE() external view returns (uint256);
-```
 
 ### totalSupply
 
@@ -28,19 +22,22 @@ function balanceOf(address _nft, address _owner) external view returns (uint256)
 function maxTierIdOf(address _nft) external view returns (uint256);
 ```
 
-### tiers
+### tiersOf
 
 ```solidity
-function tiers(address _nft, uint256 _category, uint256 _startingSortIndex, uint256 _size)
-    external
-    view
-    returns (JB721Tier[] memory tiers);
+function tiersOf(
+    address _nft,
+    uint256[] calldata _categories,
+    bool _includeResolvedUri,
+    uint256 _startingSortIndex,
+    uint256 _size
+) external view returns (JB721Tier[] memory tiers);
 ```
 
-### tier
+### tierOf
 
 ```solidity
-function tier(address _nft, uint256 _id) external view returns (JB721Tier memory tier);
+function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) external view returns (JB721Tier memory tier);
 ```
 
 ### tierBalanceOf
@@ -52,7 +49,10 @@ function tierBalanceOf(address _nft, address _owner, uint256 _tier) external vie
 ### tierOfTokenId
 
 ```solidity
-function tierOfTokenId(address _nft, uint256 _tokenId) external view returns (JB721Tier memory tier);
+function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
+    external
+    view
+    returns (JB721Tier memory tier);
 ```
 
 ### tierIdOfToken
@@ -65,12 +65,6 @@ function tierIdOfToken(uint256 _tokenId) external pure returns (uint256);
 
 ```solidity
 function encodedIPFSUriOf(address _nft, uint256 _tierId) external view returns (bytes32);
-```
-
-### firstOwnerOf
-
-```solidity
-function firstOwnerOf(address _nft, uint256 _tokenId) external view returns (address);
 ```
 
 ### redemptionWeightOf
@@ -133,28 +127,10 @@ function tierVotingUnitsOf(address _nft, address _account, uint256 _tierId) exte
 function defaultReservedTokenBeneficiaryOf(address _nft) external view returns (address);
 ```
 
-### defaultRoyaltyBeneficiaryOf
-
-```solidity
-function defaultRoyaltyBeneficiaryOf(address _nft) external view returns (address);
-```
-
 ### reservedTokenBeneficiaryOf
 
 ```solidity
 function reservedTokenBeneficiaryOf(address _nft, uint256 _tierId) external view returns (address);
-```
-
-### baseUriOf
-
-```solidity
-function baseUriOf(address _nft) external view returns (string memory);
-```
-
-### contractUriOf
-
-```solidity
-function contractUriOf(address _nft) external view returns (string memory);
 ```
 
 ### tokenUriResolverOf
@@ -167,15 +143,6 @@ function tokenUriResolverOf(address _nft) external view returns (IJBTokenUriReso
 
 ```solidity
 function encodedTierIPFSUriOf(address _nft, uint256 _tokenId) external view returns (bytes32);
-```
-
-### royaltyInfo
-
-```solidity
-function royaltyInfo(address _nft, uint256 _tokenId, uint256 _salePrice)
-    external
-    view
-    returns (address receiver, uint256 royaltyAmount);
 ```
 
 ### recordAddTiers
@@ -196,12 +163,6 @@ function recordMintReservesFor(uint256 _tierId, uint256 _count) external returns
 function recordBurn(uint256[] memory _tokenIds) external;
 ```
 
-### recordSetDefaultReservedTokenBeneficiary
-
-```solidity
-function recordSetDefaultReservedTokenBeneficiary(address _beneficiary) external;
-```
-
 ### recordMint
 
 ```solidity
@@ -220,24 +181,6 @@ function recordTransferForTier(uint256 _tierId, address _from, address _to) exte
 
 ```solidity
 function recordRemoveTierIds(uint256[] memory _tierIds) external;
-```
-
-### recordSetFirstOwnerOf
-
-```solidity
-function recordSetFirstOwnerOf(uint256 _tokenId, address _owner) external;
-```
-
-### recordSetBaseUri
-
-```solidity
-function recordSetBaseUri(string memory _uri) external;
-```
-
-### recordSetContractUri
-
-```solidity
-function recordSetContractUri(string memory _uri) external;
 ```
 
 ### recordSetTokenUriResolver
