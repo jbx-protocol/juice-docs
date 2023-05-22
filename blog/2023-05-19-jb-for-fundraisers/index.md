@@ -1,7 +1,7 @@
 ---
-slug: jb-for-fundraiser
+slug: jb-for-fundraising
 title: Juicebox for Fundraising - crypto crowdfunding campaigns that raised millions & how Juicebox works
-description: Success stories of past crypto crowdfunding campaigns that raised millions on Juicebox
+description: Success stories of past campaigns that raised millions on Juicebox
 image: https://docs.juicebox.money/assets/images/2-642e61e64bcae02881cabd398fc62679.png
 authors: [brileigh, matthew]
 tags: [highlight]
