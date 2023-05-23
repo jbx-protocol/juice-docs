@@ -2,6 +2,7 @@
 slug: indiegogo-vs-juicebox
 title: Indiegogo vs Juicebox - how to boost your crowdfunding campaign using crypto
 description: Comparing the pros and cons of Indiegogo and Juicebox
+image: https://docs.juicebox.money/assets/images/indiegogo-vs-juicebox-3b0fe93e72a120220eb53c1d3bd1ebc7.png
 authors: [brileigh, matthew]
 tags: [guide]
 ---
