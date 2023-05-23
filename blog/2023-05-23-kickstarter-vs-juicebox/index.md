@@ -53,7 +53,7 @@ In this scenario, none of the project's ETH can be withdrawn by the project owne
 
 ![Juicebox Payout Settings](juicebox-payout-settings.png)
 
-<p class="subtitle">Overview of Payout Settings on Juicebox</a></p>
+<p class="subtitle">Overview of Payout Settings on Juicebox</p>
 
 
 Unlike Kickstarter's rigid campaign duration, Juicebox enables projects to adapt over time. You can modify Payout limits and Cycles as your project evolves. For example: your first cycle could be 60-days long with a limit of 50 ETH for your initial fundraise to cover manufacturing costs, followed by a 120-day cycle with a limit of 20 ETH dedicated to marketing efforts. On Juicebox, you're not constrained by fixed campaign lengths, allowing you to fundraise on your terms. Moreover, you have the freedom to pause your project and stop accepting payments if needed.
