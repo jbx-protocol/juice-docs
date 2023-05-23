@@ -1,6 +1,6 @@
 # JB721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/abstract/JB721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/abstract/JB721Delegate.sol)
 
 Inherits: [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md), [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md), [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md)
 

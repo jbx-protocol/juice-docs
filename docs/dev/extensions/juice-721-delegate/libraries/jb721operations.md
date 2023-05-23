@@ -1,6 +1,6 @@
 # JB721Operations
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/libraries/JB721Operations.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/libraries/JB721Operations.sol)
 
 ## State Variables
 
@@ -19,6 +19,6 @@ uint256 public constant UPDATE_METADATA = 22;
 ### MINT
 
 ```solidity
-uint256 public constant MINT = 24;
+uint256 public constant MINT = 23;
 ```
 

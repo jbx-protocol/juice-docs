@@ -1,10 +1,10 @@
 # JBTiered721DelegateProjectDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721DelegateProjectDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721DelegateProjectDeployer.sol)
 
-Mainnet: [`0xB8bc7d74C0CFe75d93C0844D3f49679dcc86f477`](https://etherscan.io/address/0xB8bc7d74C0CFe75d93C0844D3f49679dcc86f477)
+Mainnet: [`0xaC3F740e3aD847850DEd92E0F2b40B6F1c8c7b79`](https://etherscan.io/address/0xaC3F740e3aD847850DEd92E0F2b40B6F1c8c7b79)
 
-Goerli: [`0xba89412849C354AE4350F2c339bFc0720EDB7C7B`](https://goerli.etherscan.io/address/0xba89412849C354AE4350F2c339bFc0720EDB7C7B)
+Goerli: [`0xFf2FC0238d17e4B7892fca999b6865A112Ee1539`](https://goerli.etherscan.io/address/0xFf2FC0238d17e4B7892fca999b6865A112Ee1539)
 
 Inherits: [`JBOperatable`](/), [`IJBTiered721DelegateProjectDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md)
 

@@ -1,6 +1,6 @@
 # JBTiered721Flags
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/structs/JBTiered721Flags.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/structs/JBTiered721Flags.sol)
 
 ```solidity
 struct JBTiered721Flags {

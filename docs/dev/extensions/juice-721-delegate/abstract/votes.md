@@ -1,6 +1,6 @@
 # Votes
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/abstract/Votes.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/abstract/Votes.sol)
 
 This is a base abstract contract that tracks voting units, which are a measure of voting power that can be
 transferred, and provides a system of vote delegation, where an account can delegate its voting units to a sort of

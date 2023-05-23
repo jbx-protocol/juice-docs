@@ -1,10 +1,10 @@
 # JBTiered721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721Delegate.sol)
 
-Mainnet: [`0x77975A265A845FB0790CE3615D4A1C29F5503058`](https://etherscan.io/address/0x77975A265A845FB0790CE3615D4A1C29F5503058)
+Mainnet: [`0x2B4991520AC9a18E4d139aD1EAd5cA359E745a32`](https://etherscan.io/address/0x2B4991520AC9a18E4d139aD1EAd5cA359E745a32)
 
-Goerli: [`0x4a437419403f9b0aEA9a103c7E09082A01c0102E`](https://goerli.etherscan.io/address/0x4a437419403f9b0aEA9a103c7E09082A01c0102E)
+Goerli: [`0x0d97311d948635147AF8797A0B86Fc4b7F42f72A`](https://goerli.etherscan.io/address/0x0d97311d948635147AF8797A0B86Fc4b7F42f72A)
 
 Inherits: [`JBOwnable`](/), [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md), [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)
 
@@ -273,7 +273,7 @@ Manually mint NFTs from tiers.
 function mintFor(uint16[] calldata _tierIds, address _beneficiary)
     external
     override
-    requirePermissionFromOwner(JB721Operations.MINT)
+    requirePermission(owner(), projectId, JB721Operations.MINT)
     returns (uint256[] memory tokenIds);
 ```
 
@@ -314,7 +314,7 @@ Adjust the tiers mintable through this contract, adhering to any locked tier con
 function adjustTiers(JB721TierParams[] calldata _tiersToAdd, uint256[] calldata _tierIdsToRemove)
     external
     override
-    requirePermissionFromOwner(JB721Operations.ADJUST_TIERS);
+    requirePermission(owner(), projectId, JB721Operations.ADJUST_TIERS);
 ```
 
 **Parameters**
@@ -337,7 +337,7 @@ function setMetadata(
     IJBTokenUriResolver _tokenUriResolver,
     uint256 _encodedIPFSUriTierId,
     bytes32 _encodedIPFSUri
-) external override requirePermissionFromOwner(JB721Operations.UPDATE_METADATA);
+) external override requirePermission(owner(), projectId, JB721Operations.UPDATE_METADATA);
 ```
 
 **Parameters**

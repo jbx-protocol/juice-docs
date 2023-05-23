@@ -1,10 +1,10 @@
 # JBTiered721GovernanceDelegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/331ed61b7ae1a4c4536bcd78f5e0b7d4a67c2869/contracts/JBTiered721GovernanceDelegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721GovernanceDelegate.sol)
 
-Mainnet: [`0x784C8AcB7A0109E483804D683727124ad2C2ba10`](https://etherscan.io/address/0x784C8AcB7A0109E483804D683727124ad2C2ba10)
+Mainnet: [`0xd72065178Ad5Ca60b33153f883572A52A080531d`](https://etherscan.io/address/0xd72065178Ad5Ca60b33153f883572A52A080531d)
 
-Goerli: [`0xA67B8d02863E09BE61a75BAeFD58c818a54c12ba`](https://goerli.etherscan.io/address/0xA67B8d02863E09BE61a75BAeFD58c818a54c12ba)
+Goerli: [`0x84C965522bE83dC925726B3Cc4288c089D5Abe9a`](https://goerli.etherscan.io/address/0x84C965522bE83dC925726B3Cc4288c089D5Abe9a)
 
 Inherits: [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md), [`JBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721delegate.md)
 
