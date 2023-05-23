@@ -36,7 +36,7 @@ These permissions are represented by the following indices:
 | 20 | `SET_TOKEN_URI` | [`JBUriOperations`](/dev/extensions/juice-token-resolver/libraries/jburioperations/) | Allow an operator to call [`TokenUriResolver.setTokenUriResolverForProject(...)`](/dev/extensions/juice-token-resolver/tokenuriresolver/#settokenuriresolverforproject), setting a project's [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver/). This is the URI resolver used for the [Project NFT](/dev/build/project-nft/). |
 | 21 | `ADJUST_TIERS` | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/) | Allow an operator to call [`JBTiered721Delegate.adjustTiers(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#adjusttiers) on an address' behalf. |
 | 22 | `UPDATE_METADATA` | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/) | Allow an operator to call [`JBTiered721Delegate.setMetadata(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#setmetadata) on an addresses' behalf. |
-| 24 | `MINT` | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/) | Allow an operator to call [`JBTiered721Delegate.mintFor(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#mintfor) on an addresses' behalf. |
+| 23 | `MINT` | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/) | Allow an operator to call [`JBTiered721Delegate.mintFor(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#mintfor) on an addresses' behalf. |
 
 ## Splits Groups
 
