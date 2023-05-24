@@ -234,12 +234,5 @@ const config = {
     mermaid: true,
   },
   themes: ["@docusaurus/theme-mermaid"],
-  scripts: [
-    {
-      src: "https://energetic-unwavering.juicebox.money/script.js",
-      defer: true,
-      "data-site": "UMYOVGDG",
-    },
-  ],
 };
 module.exports = config;
