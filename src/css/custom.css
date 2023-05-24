@@ -58,11 +58,6 @@ article iframe {
   margin: auto;
 }
 
-.docusaurus-mermaid-container svg {
-  display: block;
-  margin: auto;
-}
-
 .subtitle {
   text-align: center;
   font-style: italic;

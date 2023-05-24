@@ -119,9 +119,6 @@ const config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    mermaid: {
-      theme: { light: "default", dark: "dark" },
-    },
     navbar: {
       logo: {
         alt: "Juicebox Logo",
@@ -230,9 +227,5 @@ const config = {
       additionalLanguages: ["solidity"],
     },
   },
-  markdown: {
-    mermaid: true,
-  },
-  themes: ["@docusaurus/theme-mermaid"],
 };
 module.exports = config;
