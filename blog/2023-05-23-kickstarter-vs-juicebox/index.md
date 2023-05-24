@@ -2,18 +2,20 @@
 slug: kickstarter-vs-juicebox
 title: Kickstarter vs Juicebox - how to get the most out of a crowdfund using crypto
 description: Comparing the differences between Kickstarter and crypto fundraising on Juicebox
+image: https://docs.juicebox.money/assets/images/kickstarter-vs-juicebox-538b2b2cdd738cc750333fe2975c5139.png
 authors: [brileigh, matthew]
 tags: [guide]
 ---
-## Juicebox vs Kickstarter: how to get the most out of a crowdfund using crypto
 
 ![Kickstarter vs Juicebox](kickstarter-vs-juicebox.png)
 
-When it comes to launching a campaign, the choices for crowdfunding are abundant. Kickstarter is one of the most recognized traditional crowdfunding platforms, while Juicebox has recently emerged as a pivotal force when it comes to crypto fundraising. In this article, we’ll look at the advantages and disadvantages of both tools in terms of fees, funding models, rewards, global reach, payout time, and customization. You can follow along in this blog post, or this video on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO) which covers the differences between [Kickstarter vs Indiegogo vs Juicbeox](https://www.youtube.com/watch?v=XDhaGvKFDNQ).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XDhaGvKFDNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+When it comes to launching a campaign, the choices for crowdfunding are abundant. Kickstarter is one of the most recognized traditional crowdfunding platforms, while Juicebox has recently emerged as a pivotal force when it comes to crypto fundraising. In this article, we’ll look at the advantages and disadvantages of both tools in terms of fees, funding models, rewards, global reach, payout time, and customization. 
 
 ![Kickstarter vs Juicebox chart](kickstarter-vs-juicebox-comparison.png)
+
+You can follow along in this blog post, or this video on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO) which covers the differences between [Kickstarter vs Indiegogo vs Juicbeox](https://www.youtube.com/watch?v=XDhaGvKFDNQ).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XDhaGvKFDNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Platform Fees
 
