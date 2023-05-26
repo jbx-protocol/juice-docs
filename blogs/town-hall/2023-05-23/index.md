@@ -10,7 +10,7 @@ tags: [town-hall]
 
 ## Defifa Demo by Kmac
 
-Defifa is a project that received grants from JuiceboxDAO to organize a game for the World Cup at the end of last year. The tournament game was highly successful. Following that, they also arranged a tournament for NFT playoffs in early 2023.
+Defifa is a project that received grants from JuiceboxDAO to organize a game for the World Cup at the end of last year. The tournament game was highly successful. Following that, they also arranged a tournament for NFL playoffs in early 2023.
 
 During this process, the team realized that the concept of creating tournaments should be accessible to the public, not just limited to their own use. This led them to explore the idea of developing a protocol and platform for creating money games and delivering an arcade-like experience.
 
@@ -52,17 +52,17 @@ Lastly, Jango mentioned that all the components on defifa.net should be compatib
 
 ## Visibility Updates by Matthewbrooks
 
-Matthew and Brileigh are preparing to interview Livid, the owner of Planet and the Juicebox project called Planetable Pinning, for an upcoming episode of Juicecast. You can learn more about Planet at [Planet](https://planetable.xyz/) and explore [Planetable Pinning](https://juicebox.money/@pinnable) on Juicebox.
+Matthew and Brileigh were preparing to interview Livid, the developer of Planet APP and the Juicebox project called Planetable Pinning, for an upcoming episode of Juicecast. You can learn more about Planet at [Planet](https://planetable.xyz/) and explore [Planetable Pinning](https://juicebox.money/@pinnable) on Juicebox.
 
 In addition to that, they will also be having discussions with the team at [CryoDAO](https://juicebox.money/v2/p/501).
 
-To provide helpful resources, they have recently published several videos and blog posts with guides for various purposes. These valuable resources will be showcased in our upcoming Town Hall next week. Stay tuned for more updates and exciting demos!
+To provide more helpful resources, they had recently published several videos and blog posts with guides for various purposes. These valuable resources will be showcased in our upcoming Town Hall next week. Stay tuned for more updates and exciting demos!
 
 ![analysis between Kickstarter, Indiegogo and Juicebox](guide_kickindiejuice.png)
 
 ## L2 and Croptop Updates from Jango
 
-We had seen some great progress in the Bananapus staking component thanks to the efforts of both 0xBA5ED and Viraz. We would be excited to see the next update from them in the coming week.
+We had seen some great progress in the Bananapus staking component thanks to the efforts of both 0xBA5ED and Viraz. We would be excited to have an update in the upcoming week.
 
 Regarding the L2 deployment of the Juicebox protocol, there had been a slight delay. The team had decided it would be more efficient to organize the repositories separately. This means the Juicebox V3 repository will remain as it is, while a new repository will be created specifically for multi-chain purposes. Once the new repository is up and running, we will proceed with integrating it into Defifa.
 
