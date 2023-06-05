@@ -19,6 +19,9 @@ You can follow along in this blog post, or check out this video on the [JBDAO Yo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XDhaGvKFDNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+:::tip
+Looking to compare Juicebox to GoFundMe? You can read [this article](https://docs.juicebox.money/blog/gofundme-vs-juicebox/) on the Juicebox blog to learn the differences.
+:::
 
 ### Platform Fees
 
