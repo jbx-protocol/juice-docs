@@ -2,14 +2,24 @@
 slug: /delegate-hackathon
 ---
 
-# NFT Delegate Hackathon
+# Delegate Hackathon
 
-Build a [Juicebox NFT Delegate](/dev/learn/glossary/delegate/) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl). Open to teams and individuals.
+Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
 
-- Over $`N` in prizes.
-- Starts at 12:00 EDT on June 9th and ends at 12:00 EDT on June 23rd.
+- Over $16k in rewards.
+- Starts at 12:00 EDT on June 24th and ends at 12:00 EDT on July 8th.
+- Send a message in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you have questions or are looking for teammates.
+- Submit your project by sharing its name, a brief description, a repo URL, your Ethereum payout address, and a demo URL in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+- Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Facilitated with love by [Buidl Guidl](https://buidlguidl.com/) and [JuiceboxDAO](/dao/).
-- Join the [Hackathon Telegram chat](https://t.me/delegatehackathon) if you have questions or are looking for teammates.
+
+## Timeline
+
+**12:00 EDT, June 24th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
+
+**12:00 EDT, July 8th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
+
+**12:00 EDT, July 11th:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
 
 ## What's an NFT Delegate?
 
@@ -22,6 +32,16 @@ A [*delegate contract*](/dev/learn/glossary/delegate/) allows you to extend defa
 - Project payments and redemptions happen via the [`pay(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#pay) and [`redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#redeemtokensof) functions, which invoke the [`IJBPayDelegate.didPay(...)`](/dev/api/interfaces/ijbpaydelegate/) and [`IJBRedemptionDelegate.didRedeem(...)`](/dev/api/interfaces/ijbredemptiondelegate/) functions after the default pay/redeem logic has been executed in the terminal contract.
 - The active pay/redemption delegates are defined by a project's [data source](/dev/learn/glossary/data-source/).
 
+## Criteria
+
+Make an interesting and useful project – criteria is subjective and up to voters!
+
+Some ideas:
+
+## Rules
+
+All projects must be open source and use an [open source license](https://opensource.org/licenses).
+
 ## Resources
 
 - The [glossary](/dev/learn/glossary/).
@@ -31,13 +51,3 @@ A [*delegate contract*](/dev/learn/glossary/delegate/) allows you to extend defa
 - The [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) repository.
 
 If the resources above don't answer your questions, ask in the [Hackathon's Telegram chat](https://t.me/delegatehackathon) or the [JuiceboxDAO Discord server](https://discord.gg/juicebox).
-
-## Criteria
-
-Make an interesting and useful project – criteria is subjective and up to the judges.
-
-Some ideas:
-
-## Rules
-
-All projects must be open source and use an [open source license](https://opensource.org/licenses).
