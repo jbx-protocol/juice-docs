@@ -7,7 +7,7 @@ slug: /delegate-hackathon
 Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
 
 - Over $16k in rewards.
-- Starts at 12:00 EDT on June 24th and ends at 12:00 EDT on July 8th.
+- Starts at 12:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
 - Send a message in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you have questions or are looking for teammates.
 - Submit your project by sharing its name, a brief description, a repo URL, your Ethereum payout address, and a demo URL in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
@@ -15,11 +15,11 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 ## Timeline
 
-**12:00 EDT, June 24th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
+**12:00 EDT, June 28th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
 
-**12:00 EDT, July 8th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
+**12:00 EDT, July 11th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
 
-**12:00 EDT, July 11th:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
+**12:00 EDT, July 14th:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
 
 ## What's an NFT Delegate?
 
