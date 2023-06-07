@@ -114,4 +114,4 @@ Click "Add payout", and then click "Save funding configuration" below. Afterward
 
 </details>
 
-If you have any other questions or need help planning your next steps, join the [JuiceboxDAO Discord](https://discord.gg/juicebox) and tag `filipviz#7777` in a message.
+If you have any other questions or need help planning your next steps, join the [JuiceboxDAO Discord](https://discord.gg/juicebox) and tag `filipvv` in a message.
