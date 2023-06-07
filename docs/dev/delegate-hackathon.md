@@ -7,11 +7,11 @@ sidebar_position: 9
 
 Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
 
-- Over $16k in rewards.
 - Starts at 12:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
-- Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you have questions or are looking for teammates.
-- Submit your project by sharing its name, a brief description, a repo URL, your Ethereum payout address, and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+- Over $16k in rewards.
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
+- Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you're looking for teammates or have questions.
+- Submit your project by sharing its name, a brief description, a repo URL, an Ethereum payout address, and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
 - Facilitated with love by [Buidl Guidl](https://buidlguidl.com/) and [JuiceboxDAO](/dao/).
 
 ## Timeline
@@ -22,11 +22,11 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 **12:00 EDT, July 14th:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
 
-## What's an NFT Delegate?
+## What's a Delegate?
 
 By default, payments to (and redemptions from) Juicebox projectsare handled by the project's [payment terminal](/dev/learn/glossary/payment-terminal/) – a contract which manages token inflows, outflows, and accounting for one or more projects.
 
-A [*delegate contract*](/dev/learn/glossary/delegate/) allows you to extend default payment/redemption behavior by defining custom post-pay/redeem hooks.
+A [*delegate contract*](/dev/learn/glossary/delegate/) allows you to extend default payment/redemption behavior by defining custom post-pay/redeem hooks. Delegates (and other information) can be passed to the payment terminal by a [*data source*](/dev/learn/glossary/data-source/).
 
 - Payment terminal functionality is implemented [across several contracts and interfaces](/dev/learn/architecture/terminals/).
 - Juicebox projects can use multiple payment terminals.
@@ -59,4 +59,4 @@ All projects must be open source and use an [open source license](https://openso
 - Our documentation for [`juice-721-delegate`](/dev/extensions/juice-721-delegate/), an NFT delegate which is also the most popular delegate thus far.
 - The [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) repository.
 
-If the resources above don't answer your questions, ask in the [Hackathon's Telegram chat](https://t.me/delegatehackathon) or the [JuiceboxDAO Discord server](https://discord.gg/juicebox).
+If the resources above don't answer your questions, send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
