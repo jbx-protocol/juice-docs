@@ -89,6 +89,12 @@ const config = {
     locales: ["en", "zh"],
   },
   themeConfig: {
+    announcementBar: {
+      id: 'delegate_hackathon',
+      content: 'The Delegate Hackathon starts on 2023-06-28. Read <a href="/delegate-hackathon/">the announcement</a> to learn more.',
+      backgroundColor: '#ffb2dd',
+      textColor: '#141414',
+    },
     image: "img/site/unfurl.png",
     metadata: [
       {

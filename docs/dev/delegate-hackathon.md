@@ -1,5 +1,6 @@
 ---
 slug: /delegate-hackathon
+sidebar_position: 9
 ---
 
 # Delegate Hackathon
@@ -8,8 +9,8 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 - Over $16k in rewards.
 - Starts at 12:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
-- Send a message in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you have questions or are looking for teammates.
-- Submit your project by sharing its name, a brief description, a repo URL, your Ethereum payout address, and a demo URL in the `#🏰｜delegate-hack` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+- Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you have questions or are looking for teammates.
+- Submit your project by sharing its name, a brief description, a repo URL, your Ethereum payout address, and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Facilitated with love by [Buidl Guidl](https://buidlguidl.com/) and [JuiceboxDAO](/dao/).
 
@@ -36,7 +37,15 @@ A [*delegate contract*](/dev/learn/glossary/delegate/) allows you to extend defa
 
 Make an interesting and useful project – criteria is subjective and up to voters!
 
-Some ideas:
+Our wishlist:
+
+- A data source which functions as a whitelist, allowing the project owner to upload new merkle roots over time.
+- A data source aggregator – a contract which allows a project to use more than one data source.
+- A [Variable Rate GDA](https://www.paradigm.xyz/2022/08/vrgda) data source.
+- An NFT collection floor sweeper delegate.
+- A [nouns.wtf](https://nouns.wtf/) bidder delegate.
+
+For more inspiration, take a look at JuiceboxDAO's [contract work backlog](https://github.com/orgs/jbx-protocol/projects/5/views/2) or existing delegates: [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) and [`juice-buyback`](https://github.com/jbx-protocol/juice-buyback).
 
 ## Rules
 
