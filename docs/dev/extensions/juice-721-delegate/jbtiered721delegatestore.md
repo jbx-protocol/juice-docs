@@ -1,21 +1,22 @@
 # JBTiered721DelegateStore
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721DelegateStore.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/JBTiered721DelegateStore.sol)
 
-Mainnet: [`0x77027388eC3ADC00B1c22D115E5e91C486b31154`](https://etherscan.io/address/0x77027388eC3ADC00B1c22D115E5e91C486b31154)
+Mainnet: [`0x615B5b50F1Fc591AAAb54e633417640d6F2773Fd`](https://etherscan.io/address/0x615B5b50F1Fc591AAAb54e633417640d6F2773Fd)
 
-Goerli: [`0x8dA6B4569f88C0164d77Af5E5BF12E88d4bCd016`](https://goerli.etherscan.io/address/0x8dA6B4569f88C0164d77Af5E5BF12E88d4bCd016)
+Goerli: [`0x155B49f303443a3334bB2EF42E10C628438a0656`](https://goerli.etherscan.io/address/0x155B49f303443a3334bB2EF42E10C628438a0656)
 
 Inherits: [`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)
 
-The contract that stores and manages the NFT's data.
-
-Adheres to -
-- [`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+This contract stores and manages data for an IJBTiered721Delegate's NFTs.
 
 ## State Variables
 
 ### _ONE_BILLION
+
+Just a kind reminder to our readers.
+
+*Used in token ID generation.*
 
 ```solidity
 uint256 private constant _ONE_BILLION = 1_000_000_000;
@@ -23,11 +24,9 @@ uint256 private constant _ONE_BILLION = 1_000_000_000;
 
 ### _tierIdAfter
 
-The tier ID that should come after the given tier ID when sorting by contribution floor.
+Returns the tier ID which should come after the provided tier ID when sorting by contribution floor.
 
-*If empty, assume the next tier ID should come after.
-- _nft The NFT contract to get ordered tier ID from.
-- _tierId The tier ID to get a tier after relative to.
+*If empty, assume the next tier ID should come after.*
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) internal _tierIdAfter;
@@ -35,9 +34,7 @@ mapping(address => mapping(uint256 => uint256)) internal _tierIdAfter;
 
 ### _reservedTokenBeneficiaryOf
 
-An optional beneficiary for the reserved token of a given tier.
-- _nft The NFT contract to which the reserved token beneficiary belongs.
-- _tierId the ID of the tier.
+Returns optional reserved token beneficiary addresses for the provided tier and NFT contract.
 
 ```solidity
 mapping(address => mapping(uint256 => address)) internal _reservedTokenBeneficiaryOf;
@@ -45,9 +42,7 @@ mapping(address => mapping(uint256 => address)) internal _reservedTokenBeneficia
 
 ### _storedTierOf
 
-The stored reward tier.
-- _nft The NFT contract to which the tiers belong.
-- _tierId The incremental ID of the tier, starting with 1.
+Returns the tier at the provided contract and tier ID.
 
 ```solidity
 mapping(address => mapping(uint256 => JBStored721Tier)) internal _storedTierOf;
@@ -55,8 +50,7 @@ mapping(address => mapping(uint256 => JBStored721Tier)) internal _storedTierOf;
 
 ### _flagsOf
 
-Flags that influence the behavior of each NFT.
-- _nft The NFT for which the flags apply.
+Returns flags that influence the behavior of each NFT contract.
 
 ```solidity
 mapping(address => JBTiered721Flags) internal _flagsOf;
@@ -64,10 +58,7 @@ mapping(address => JBTiered721Flags) internal _flagsOf;
 
 ### _isTierRemovedBitmapWord
 
-For each tier ID, a bitmap containing flags indicating if the tier has been removed.
-- _nft The NFT contract to which the tier belong.
-- _depth The bitmap row.
-- _word The row content bitmap.
+For each tier ID, return a bitmap containing flags indicating whether the tier has been removed.
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) internal _isTierRemovedBitmapWord;
@@ -75,10 +66,9 @@ mapping(address => mapping(uint256 => uint256)) internal _isTierRemovedBitmapWor
 
 ### _trackedLastSortTierIdOf
 
-For each NFT, the tier ID that comes last when sorting.
+For each NFT, return the tier ID that comes last when sorting.
 
-*If not set, it is assumed the `maxTierIdOf` is the last sorted.
-- _nft The NFT contract to which the tier belongs.
+*If not set, it is assumed the `maxTierIdOf` is the last sorted.*
 
 ```solidity
 mapping(address => uint256) internal _trackedLastSortTierIdOf;
@@ -86,9 +76,7 @@ mapping(address => uint256) internal _trackedLastSortTierIdOf;
 
 ### _startingTierIdOfCategory
 
-The ID of the first tier in each category.
-- _nft The NFT contract to get the tier ID of.
-- _category The category to get the first tier ID of.
+Returns the ID of the first tier in the provided NFT contract and category.
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) internal _startingTierIdOfCategory;
@@ -96,10 +84,9 @@ mapping(address => mapping(uint256 => uint256)) internal _startingTierIdOfCatego
 
 ### maxTierIdOf
 
-The biggest tier ID used.
+Returns the largest tier ID used on the provided NFT contract.
 
-*This may not include the last tier ID if it has been removed.
-- _nft The NFT contract to get the number of tiers.
+*This may not include the last tier ID if it has been removed.*
 
 ```solidity
 mapping(address => uint256) public override maxTierIdOf;
@@ -107,10 +94,7 @@ mapping(address => uint256) public override maxTierIdOf;
 
 ### tierBalanceOf
 
-Each account's balance within a specific tier.
-- _nft The NFT contract to which the tier balances belong.
-- _owner The address to get a balance for.
-- _tierId The ID of the tier to get a balance within.
+Returns the number of NFTs held by the provided address which belong to the provided tier and NFT contract.
 
 ```solidity
 mapping(address => mapping(address => mapping(uint256 => uint256))) public override tierBalanceOf;
@@ -118,9 +102,7 @@ mapping(address => mapping(address => mapping(uint256 => uint256))) public overr
 
 ### numberOfReservesMintedFor
 
-The number of reserved tokens that have been minted for each tier.
-- _nft The NFT contract to which the reserve data belong.
-- _tierId The ID of the tier to get a minted reserved token count for.
+Returns the number of reserved tokens which have been minted within the provided tier and NFT contract.
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) public override numberOfReservesMintedFor;
@@ -128,9 +110,7 @@ mapping(address => mapping(uint256 => uint256)) public override numberOfReserves
 
 ### numberOfBurnedFor
 
-The number of tokens that have been burned for each tier.
-- _nft The NFT contract to which the burned data belong.
-- _tierId The ID of the tier to get a burned token count for.
+Returns the number of tokens belonging to the provided tier and NFT contract which have been burned.
 
 ```solidity
 mapping(address => mapping(uint256 => uint256)) public override numberOfBurnedFor;
@@ -138,8 +118,7 @@ mapping(address => mapping(uint256 => uint256)) public override numberOfBurnedFo
 
 ### defaultReservedTokenBeneficiaryOf
 
-The beneficiary of reserved tokens when the tier doesn't specify a beneficiary.
-- _nft The NFT contract to which the reserved token beneficiary applies.
+Returns the reserved token beneficiary address used when a tier doesn't specify a beneficiary.
 
 ```solidity
 mapping(address => address) public override defaultReservedTokenBeneficiaryOf;
@@ -147,18 +126,17 @@ mapping(address => address) public override defaultReservedTokenBeneficiaryOf;
 
 ### tokenUriResolverOf
 
-Custom token URI resolver, supersedes base URI.
-- _nft The NFT for which the token URI resolver applies.
+Returns a custom token URI resolver which supersedes the base URI.
 
 ```solidity
-mapping(address => IJBTokenUriResolver) public override tokenUriResolverOf;
+mapping(address => IJB721TokenUriResolver) public override tokenUriResolverOf;
 ```
 
 ### encodedIPFSUriOf
 
-When using this contract to manage token uri's, those are stored as 32bytes, based on IPFS hashes stripped down.
-- _nft The NFT contract to which the encoded upfs uri belongs.
-- _tierId the ID of the tier
+Returns the encoded IPFS URI for the provided tier and NFT contract.
+
+*Token URIs managed by this contract are stored as 32 bytes and based on stripped down IPFS hashes.*
 
 ```solidity
 mapping(address => mapping(uint256 => bytes32)) public override encodedIPFSUriOf;
@@ -168,7 +146,7 @@ mapping(address => mapping(uint256 => bytes32)) public override encodedIPFSUriOf
 
 ### tiersOf
 
-Gets an array of all the active tiers.
+Gets an array of active tiers.
 
 ```solidity
 function tiersOf(
@@ -185,20 +163,20 @@ function tiersOf(
 |Name|Type|Description|
 |----|----|-----------|
 |`_nft`|`address`|The NFT contract to get tiers for.|
-|`_categories`|`uint256[]`|The categories of the tiers to get. Send empty for any category.|
-|`_includeResolvedUri`|`bool`|If there's a token URI resolver, the content will be resolved and included.|
-|`_startingId`|`uint256`|The starting tier ID of the array of tiers sorted by contribution floor. Send 0 to start at the beginning.|
+|`_categories`|`uint256[]`|The categories of the tiers to get. Send empty for all categories.|
+|`_includeResolvedUri`|`bool`|If enabled, if there's a token URI resolver, the content will be resolved and included.|
+|`_startingId`|`uint256`|The starting tier ID of the array of tiers sorted by contribution floor. Send 0 to get all active tiers.|
 |`_size`|`uint256`|The number of tiers to include.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tiers`|[`JB721Tier[]`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|All the tiers.|
+|`_tiers`|[`JB721Tier[]`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|An array of active tiers.|
 
 ### tierOf
 
-Return the tier for the specified ID.
+Return the tier for the provided tier ID and NFT contract.
 
 ```solidity
 function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) public view override returns (JB721Tier memory);
@@ -208,9 +186,9 @@ function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) public view
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get a tier within.|
-|`_id`|`uint256`|The ID of the tier to get.|
-|`_includeResolvedUri`|`bool`|If there's a token URI resolver, the content will be resolved and included.|
+|`_nft`|`address`|The NFT contract to get a tier from.|
+|`_id`|`uint256`|The tier ID of the tier to get.|
+|`_includeResolvedUri`|`bool`|If enabled, if there's a token URI resolver, the content will be resolved and included.|
 
 **Returns**
 
@@ -220,7 +198,7 @@ function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) public view
 
 ### tierOfTokenId
 
-Return the tier for the specified token ID.
+Return the tier for the provided token ID and NFT contract.
 
 ```solidity
 function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
@@ -234,9 +212,9 @@ function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get a tier within.|
-|`_tokenId`|`uint256`|The ID of token to return the tier of.|
-|`_includeResolvedUri`|`bool`|If there's a token URI resolver, the content will be resolved and included.|
+|`_nft`|`address`|The NFT contract to get a tier from.|
+|`_tokenId`|`uint256`|The token ID to return the tier of.|
+|`_includeResolvedUri`|`bool`|If enabled, if there's a token URI resolver, the content will be resolved and included.|
 
 **Returns**
 
@@ -244,29 +222,29 @@ function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
 |----|----|-----------|
 |`<none>`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier.|
 
-### totalSupply
+### totalSupplyOf
 
-The total supply of issued NFTs from all tiers.
+The total number of NFTs issued from all tiers of the provided NFT contract.
 
 ```solidity
-function totalSupply(address _nft) external view override returns (uint256 supply);
+function totalSupplyOf(address _nft) external view override returns (uint256 supply);
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get a total supply of.|
+|`_nft`|`address`|The NFT contract to get a total supply of.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`supply`|`uint256`|The total number of NFTs between all tiers.|
+|`supply`|`uint256`|The total number of NFTs issued from all tiers.|
 
 ### numberOfReservedTokensOutstandingFor
 
-The number of reserved tokens that can currently be minted within the tier.
+Returns the number of currently mintable reserved tokens for the provided tier ID and NFT contract.
 
 ```solidity
 function numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId) external view override returns (uint256);
@@ -276,18 +254,18 @@ function numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId) ext
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get a number of reserved tokens outstanding.|
-|`_tierId`|`uint256`|The ID of the tier to get a number of reserved tokens outstanding.|
+|`_nft`|`address`|The NFT contract to check for mintable reserved tokens.|
+|`_tierId`|`uint256`|The tier ID to check for mintable reserved tokens.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The outstanding number of reserved tokens within the tier.|
+|`<none>`|`uint256`|The number of currently outstanding reserved tokens within the tier and contract.|
 
 ### votingUnitsOf
 
-The voting units for an account from its NFTs across all tiers. NFTs have a tier-specific preset number of voting units.
+Returns the total voting units from all of an addresses' NFTs (across all tiers) for the provided NFT contract. NFTs have a tier-specific number of voting units.
 
 ```solidity
 function votingUnitsOf(address _nft, address _account) external view virtual override returns (uint256 units);
@@ -297,18 +275,18 @@ function votingUnitsOf(address _nft, address _account) external view virtual ove
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get voting units within.|
-|`_account`|`address`|The account to get voting units for.|
+|`_nft`|`address`|The NFT contract to get voting units within.|
+|`_account`|`address`|The address to get the voting units of.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`units`|`uint256`|The voting units for the account.|
+|`units`|`uint256`|The total voting units for the address.|
 
 ### tierVotingUnitsOf
 
-The voting units for an account from its NFTs across all tiers. NFTs have a tier-specific preset number of voting units.
+Returns the voting units for an addresses' NFTs in one tier. NFTs have a tier-specific number of voting units.
 
 ```solidity
 function tierVotingUnitsOf(address _nft, address _account, uint256 _tierId)
@@ -323,19 +301,19 @@ function tierVotingUnitsOf(address _nft, address _account, uint256 _tierId)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get voting units within.|
-|`_account`|`address`|The account to get voting units for.|
-|`_tierId`|`uint256`|The ID of the tier to get voting units for.|
+|`_nft`|`address`|The NFT contract to get voting units within.|
+|`_account`|`address`|The address to get the voting units of.|
+|`_tierId`|`uint256`|The tier ID to get voting units within.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The voting units for the account.|
+|`<none>`|`uint256`|The voting units for the address within the tier.|
 
 ### encodedTierIPFSUriOf
 
-Resolves the encoded tier IPFS URI of the tier for the given token.
+Resolves the encoded IPFS URI of the tier for the provided token ID and NFT contract.
 
 ```solidity
 function encodedTierIPFSUriOf(address _nft, uint256 _tokenId) external view override returns (bytes32);
@@ -346,7 +324,7 @@ function encodedTierIPFSUriOf(address _nft, uint256 _tokenId) external view over
 |Name|Type|Description|
 |----|----|-----------|
 |`_nft`|`address`|The NFT contract to which the encoded IPFS URI belongs.|
-|`_tokenId`|`uint256`|the ID of the token.|
+|`_tokenId`|`uint256`|The token ID to get the encoded IPFS URI of.|
 
 **Returns**
 
@@ -366,7 +344,7 @@ function flagsOf(address _nft) external view override returns (JBTiered721Flags 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the flags apply.|
+|`_nft`|`address`|The NFT contract for which the flags apply.|
 
 **Returns**
 
@@ -376,7 +354,7 @@ function flagsOf(address _nft) external view override returns (JBTiered721Flags 
 
 ### isTierRemoved
 
-Check if the tier removed from the current set of tiers.
+Check if the provided tier has been removed from the current set of tiers.
 
 ```solidity
 function isTierRemoved(address _nft, uint256 _tierId) external view override returns (bool);
@@ -386,18 +364,18 @@ function isTierRemoved(address _nft, uint256 _tierId) external view override ret
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the removed tier is being queried.|
-|`_tierId`|`uint256`|The tier ID to check if removed.|
+|`_nft`|`address`|The NFT contract of the tier to check for removal.|
+|`_tierId`|`uint256`|The tier ID to check for removal.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`bool`|True if the tier has been removed|
+|`<none>`|`bool`|True if the tier has been removed.|
 
 ### balanceOf
 
-The total number of tokens owned by the given owner.
+The total number of tokens owned by the provided address.
 
 ```solidity
 function balanceOf(address _nft, address _owner) public view override returns (uint256 balance);
@@ -407,18 +385,18 @@ function balanceOf(address _nft, address _owner) public view override returns (u
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get a balance from.|
+|`_nft`|`address`|The NFT contract to check the balance within.|
 |`_owner`|`address`|The address to check the balance of.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`balance`|`uint256`|The number of tokens owners by the owner across all tiers.|
+|`balance`|`uint256`|The number of tokens owned by the owner across all tiers within the NFT contract.|
 
 ### redemptionWeightOf
 
-The cumulative weight the given token IDs have in redemptions compared to the `totalRedemptionWeight`.
+The cumulative redemption weight of the given token IDs compared to the `totalRedemptionWeight`.
 
 ```solidity
 function redemptionWeightOf(address _nft, uint256[] calldata _tokenIds) public view override returns (uint256 weight);
@@ -428,7 +406,7 @@ function redemptionWeightOf(address _nft, uint256[] calldata _tokenIds) public v
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the redemption weight is being calculated.|
+|`_nft`|`address`|The NFT contract which the redemption weight is being calculated within.|
 |`_tokenIds`|`uint256[]`|The IDs of the tokens to get the cumulative redemption weight of.|
 
 **Returns**
@@ -439,7 +417,7 @@ function redemptionWeightOf(address _nft, uint256[] calldata _tokenIds) public v
 
 ### totalRedemptionWeight
 
-The cumulative weight that all token IDs have in redemptions.
+The cumulative redemption weight for all token IDs.
 
 ```solidity
 function totalRedemptionWeight(address _nft) public view override returns (uint256 weight);
@@ -449,7 +427,7 @@ function totalRedemptionWeight(address _nft) public view override returns (uint2
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the redemption weight is being calculated.|
+|`_nft`|`address`|The NFT contract for which the redemption weight is being calculated.|
 
 **Returns**
 
@@ -459,9 +437,9 @@ function totalRedemptionWeight(address _nft) public view override returns (uint2
 
 ### tierIdOfToken
 
-The tier number of the provided token ID.
+The tier ID of the provided token ID.
 
-*Tier's are 1 indexed from the `tiers` array, meaning the 0th element of the array is tier 1.*
+*Tiers are 1-indexed from the `tiers` array, meaning the 0th element of the array is tier 1.*
 
 ```solidity
 function tierIdOfToken(uint256 _tokenId) public pure override returns (uint256);
@@ -471,17 +449,17 @@ function tierIdOfToken(uint256 _tokenId) public pure override returns (uint256);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tokenId`|`uint256`|The ID of the token to get the tier number of.|
+|`_tokenId`|`uint256`|The token ID to get the tier ID of.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The tier number of the specified token ID.|
+|`<none>`|`uint256`|The tier ID for the provided token ID.|
 
 ### reservedTokenBeneficiaryOf
 
-The reserved token beneficiary for each tier.
+The reserved token beneficiary address for the provided tier ID and NFT contract.
 
 ```solidity
 function reservedTokenBeneficiaryOf(address _nft, uint256 _tierId) public view override returns (address);
@@ -491,14 +469,14 @@ function reservedTokenBeneficiaryOf(address _nft, uint256 _tierId) public view o
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get the reserved token beneficiary within.|
-|`_tierId`|`uint256`|The ID of the tier to get a reserved token beneficiary of.|
+|`_nft`|`address`|The NFT contract to check the reserved token beneficiary within.|
+|`_tierId`|`uint256`|The tier ID to get the reserved token beneficiary of.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`address`|The reserved token beneficiary.|
+|`<none>`|`address`|The reserved token beneficiary address.|
 
 ### recordAddTiers
 
@@ -522,9 +500,7 @@ function recordAddTiers(JB721TierParams[] calldata _tiersToAdd) external overrid
 
 ### recordMintReservesFor
 
-Mint a token within the tier for the provided value.
-
-*Only a project owner can mint tokens.*
+Record reserved token mints within the provided tier.
 
 ```solidity
 function recordMintReservesFor(uint256 _tierId, uint256 _count) external override returns (uint256[] memory tokenIds);
@@ -534,7 +510,7 @@ function recordMintReservesFor(uint256 _tierId, uint256 _count) external overrid
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tierId`|`uint256`|The ID of the tier to mint within.|
+|`_tierId`|`uint256`|The ID of the tier to mint reserved tokens from.|
 |`_count`|`uint256`|The number of reserved tokens to mint.|
 
 **Returns**
@@ -555,13 +531,13 @@ function recordTransferForTier(uint256 _tierId, address _from, address _to) exte
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tierId`|`uint256`|The ID the tier being transferred.|
-|`_from`|`address`|The sender of the token.|
-|`_to`|`address`|The recipient of the token.|
+|`_tierId`|`uint256`|The tier ID of the token being transferred.|
+|`_from`|`address`|The address the token is being transferred from.|
+|`_to`|`address`|The address the token is being transferred to.|
 
 ### recordRemoveTierIds
 
-Remove tiers.
+Record removing the provided tiers.
 
 ```solidity
 function recordRemoveTierIds(uint256[] calldata _tierIds) external override;
@@ -575,7 +551,7 @@ function recordRemoveTierIds(uint256[] calldata _tierIds) external override;
 
 ### recordMint
 
-Mints a token in all provided tiers.
+Record token mints in the provided tiers.
 
 ```solidity
 function recordMint(uint256 _amount, uint16[] calldata _tierIds, bool _isManualMint)
@@ -588,20 +564,20 @@ function recordMint(uint256 _amount, uint16[] calldata _tierIds, bool _isManualM
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_amount`|`uint256`|The amount to base the mints on. All mints' price floors must fit in this amount.|
-|`_tierIds`|`uint16[]`|The IDs of the tier to mint from.|
-|`_isManualMint`|`bool`|A flag indicating if the mint is being made manually by the NFT's owner.|
+|`_amount`|`uint256`|The amount to base the mints on. All mints' price floors must fit within this amount.|
+|`_tierIds`|`uint16[]`|The tier IDs to mint from.|
+|`_isManualMint`|`bool`|A flag indicating if the mint is being made manually by the NFT contract's owner.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`tokenIds`|`uint256[]`|The IDs of the tokens minted.|
-|`leftoverAmount`|`uint256`|The amount leftover after the mint.|
+|`tokenIds`|`uint256[]`|The IDs of the minted tokens.|
+|`leftoverAmount`|`uint256`|The amount left over after the mint.|
 
 ### recordBurn
 
-Records burned tokens.
+Records token burns.
 
 ```solidity
 function recordBurn(uint256[] calldata _tokenIds) external override;
@@ -611,21 +587,21 @@ function recordBurn(uint256[] calldata _tokenIds) external override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tokenIds`|`uint256[]`|The IDs of the tokens burned.|
+|`_tokenIds`|`uint256[]`|The IDs of the tokens being burned.|
 
 ### recordSetTokenUriResolver
 
 Sets the token URI resolver.
 
 ```solidity
-function recordSetTokenUriResolver(IJBTokenUriResolver _resolver) external override;
+function recordSetTokenUriResolver(IJB721TokenUriResolver _resolver) external override;
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_resolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|The resolver to set.|
+|`_resolver`|[`IJB721TokenUriResolver`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md)|The resolver to set.|
 
 ### recordSetEncodedIPFSUriOf
 
@@ -639,8 +615,8 @@ function recordSetEncodedIPFSUriOf(uint256 _tierId, bytes32 _encodedIPFSUri) ext
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tierId`|`uint256`|The ID of the tier to set the encoded IPFS uri of.|
-|`_encodedIPFSUri`|`bytes32`|The encoded IPFS uri to set.|
+|`_tierId`|`uint256`|The tier ID to set the encoded IPFS URI of.|
+|`_encodedIPFSUri`|`bytes32`|The encoded IPFS URI to set.|
 
 ### recordFlags
 
@@ -654,11 +630,11 @@ function recordFlags(JBTiered721Flags calldata _flags) external override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|The flag to sets.|
+|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|The flags to set.|
 
 ### cleanTiers
 
-Removes removed tiers from sequencing.
+Removes an NFT contract's removed tiers from sequencing.
 
 ```solidity
 function cleanTiers(address _nft) external override;
@@ -672,7 +648,7 @@ function cleanTiers(address _nft) external override;
 
 ### _getTierFrom
 
-Returns a tier from a stored tier.
+Returns a tier given a provided stored tier.
 
 ```solidity
 function _getTierFrom(address _nft, uint256 _tierId, JBStored721Tier memory _storedTier, bool _includeResolvedUri)
@@ -685,10 +661,10 @@ function _getTierFrom(address _nft, uint256 _tierId, JBStored721Tier memory _sto
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get the tier from.|
-|`_tierId`|`uint256`|The ID of the tier to get.|
+|`_nft`|`address`|The NFT contract to get the tier from.|
+|`_tierId`|`uint256`|The tier ID of the tier to get.|
 |`_storedTier`|[`JBStored721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jbstored721tier.md)|The stored tier to base the tier on.|
-|`_includeResolvedUri`|`bool`|If there's a token URI resolver, the content will be resolved and included.|
+|`_includeResolvedUri`|`bool`|If true, if there's a token URI resolver, the content will be resolved and included.|
 
 **Returns**
 
@@ -711,19 +687,19 @@ function _isTierRemovedWithRefresh(address _nft, uint256 _tierId, JBBitmapWord m
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the removed tier is being queried.|
-|`_tierId`|`uint256`|The tier ID to check if removed.|
+|`_nft`|`address`|The NFT contract on which to check if the tier is removed.|
+|`_tierId`|`uint256`|The tier ID to check for removal.|
 |`_bitmapWord`|[`JBBitmapWord`](/docs/dev/extensions/juice-721-delegate/structs/jbbitmapword.md)|The bitmap word to reuse.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`bool`|True if the tier has been removed|
+|`<none>`|`bool`|True if the tier has been removed.|
 
 ### _numberOfReservedTokensOutstandingFor
 
-The number of reserved tokens that can currently be minted within the tier.
+The number of mintable reserved tokens within the provided tier.
 
 ```solidity
 function _numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId, JBStored721Tier memory _storedTier)
@@ -736,19 +712,19 @@ function _numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId, JB
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get reserved tokens outstanding.|
-|`_tierId`|`uint256`|The ID of the tier to get a number of reserved tokens outstanding.|
-|`_storedTier`|[`JBStored721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jbstored721tier.md)|The tier to get a number of reserved tokens outstanding.|
+|`_nft`|`address`|The NFT contract to check mintable reserved tokens on.|
+|`_tierId`|`uint256`|The tier ID to check the number of mintable reserved tokens for.|
+|`_storedTier`|[`JBStored721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jbstored721tier.md)|The stored tier to get the number of mintable reserved tokens for.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|numberReservedTokensOutstanding The outstanding number of reserved tokens within the tier.|
+|`<none>`|`uint256`|numberReservedTokensOutstanding The number of outstanding mintable reserved tokens within the tier.|
 
 ### _generateTokenId
 
-Finds the token ID and tier given a contribution amount.
+Finds the token ID given a tier ID and a token number within that tier.
 
 ```solidity
 function _generateTokenId(uint256 _tierId, uint256 _tokenNumber) internal pure returns (uint256);
@@ -779,7 +755,7 @@ function _nextSortedTierIdOf(address _nft, uint256 _id, uint256 _max) internal v
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT for which the sorted tier ID applies.|
+|`_nft`|`address`|The NFT contract for which the sorted tier ID applies.|
 |`_id`|`uint256`|The ID relative to which the next sorted ID will be returned.|
 |`_max`|`uint256`|The maximum possible ID.|
 
@@ -791,7 +767,7 @@ function _nextSortedTierIdOf(address _nft, uint256 _id, uint256 _max) internal v
 
 ### _firstSortedTierIdOf
 
-The first sorted tier ID of an NFT.
+The first sorted tier ID of an NFT contract.
 
 ```solidity
 function _firstSortedTierIdOf(address _nft, uint256 _category) internal view returns (uint256 id);
@@ -801,7 +777,7 @@ function _firstSortedTierIdOf(address _nft, uint256 _category) internal view ret
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get the first sorted tier ID of.|
+|`_nft`|`address`|The NFT contract to get the first sorted tier ID of.|
 |`_category`|`uint256`|The category to get the first sorted tier ID of. Send 0 for the first overall sorted ID, which might not be of the 0 category if there isn't a tier of the 0 category.|
 
 **Returns**
@@ -822,7 +798,7 @@ function _lastSortedTierIdOf(address _nft) internal view returns (uint256 id);
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_nft`|`address`|The NFT to get the last sorted tier ID of.|
+|`_nft`|`address`|The NFT contract to get the last sorted tier ID of.|
 
 **Returns**
 
@@ -847,7 +823,7 @@ function _packBools(bool _allowManualMint, bool _transfersPausable, bool _useVot
 |----|----|-----------|
 |`_allowManualMint`|`bool`|Whether or not manual mints are allowed.|
 |`_transfersPausable`|`bool`|Whether or not transfers are pausable.|
-|`_useVotingUnits`|`bool`|A flag indicating if the voting units override should be used.|
+|`_useVotingUnits`|`bool`|A flag indicating whether the voting units override should be used.|
 
 **Returns**
 
@@ -878,7 +854,7 @@ function _unpackBools(uint8 _packed)
 |----|----|-----------|
 |`_allowManualMint`|`bool`|Whether or not manual mints are allowed.|
 |`_transfersPausable`|`bool`|Whether or not transfers are pausable.|
-|`_useVotingUnits`|`bool`|A flag indicating if the voting units override should be used.|
+|`_useVotingUnits`|`bool`|A flag indicating whether the voting units override should be used.|
 
 ## Errors
 

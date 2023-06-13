@@ -1,18 +1,14 @@
 # JBTiered721GovernanceDelegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721GovernanceDelegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/JBTiered721GovernanceDelegate.sol)
 
-Mainnet: [`0xd72065178Ad5Ca60b33153f883572A52A080531d`](https://etherscan.io/address/0xd72065178Ad5Ca60b33153f883572A52A080531d)
+Mainnet: [`0xD4fA4D1BBcBCF1CE1288aaB1Fbd15a54237DF171`](https://etherscan.io/address/0xD4fA4D1BBcBCF1CE1288aaB1Fbd15a54237DF171)
 
-Goerli: [`0x84C965522bE83dC925726B3Cc4288c089D5Abe9a`](https://goerli.etherscan.io/address/0x84C965522bE83dC925726B3Cc4288c089D5Abe9a)
+Goerli: [`0x9EfA070f701CB107331C64c56539D29470C83Bd5`](https://goerli.etherscan.io/address/0x9EfA070f701CB107331C64c56539D29470C83Bd5)
 
 Inherits: [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md), [`JBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721delegate.md)
 
-A tiered 721 delegate where each NFT can be used for on chain governance, with votes delegatable globally across all tiers.
-
-Inherits from -
-- [`JBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721delegate.md):  The tiered 721 delegate.
-- [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md):  A helper for voting balance snapshots.
+A tiered 721 delegate where each NFT can be used for onchain governance.
 
 ## Functions
 
@@ -26,12 +22,12 @@ constructor(IJBProjects _projects, IJBOperatorStore _operatorStore) JBTiered721D
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_projects`|[`IJBProjects`](/docs/dev/api/interfaces/ijbprojects.md)|the IJBProjects that will be used to check ownership of a project|
-|`_operatorStore`|[`IJBOperatorStore`](/docs/dev/api/interfaces/ijboperatorstore.md)|the operatorStore to be used to check permissions|
+|`_projects`|[`IJBProjects`](/docs/dev/api/interfaces/ijbprojects.md)|The IJBProjects that will be used to check project ownership.|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/dev/api/interfaces/ijboperatorstore.md)|The operatorStore that will be used to check operator permissions.|
 
 ### _getVotingUnits
 
-The voting units for an account from its NFTs across all tiers. NFTs have a tier-specific preset number of voting units.
+The total voting units the provided address has from its NFTs across all tiers. NFTs have a tier-specific number of voting units.
 
 ```solidity
 function _getVotingUnits(address _account) internal view virtual override returns (uint256 units);
@@ -51,7 +47,7 @@ function _getVotingUnits(address _account) internal view virtual override return
 
 ### _afterTokenTransferAccounting
 
-handles the tier voting accounting
+Handles voting unit accounting within a tier.
 
 ```solidity
 function _afterTokenTransferAccounting(address _from, address _to, uint256 _tokenId, JB721Tier memory _tier)
@@ -66,6 +62,6 @@ function _afterTokenTransferAccounting(address _from, address _to, uint256 _toke
 |----|----|-----------|
 |`_from`|`address`|The account to transfer voting units from.|
 |`_to`|`address`|The account to transfer voting units to.|
-|`_tokenId`|`uint256`|The id of the token for which voting units are being transferred.|
-|`_tier`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier the token id is part of|
+|`_tokenId`|`uint256`|The token ID for which voting units are being transferred.|
+|`_tier`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier that the token ID is part of.|
 

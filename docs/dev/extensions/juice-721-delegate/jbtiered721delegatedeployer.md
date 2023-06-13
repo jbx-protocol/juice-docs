@@ -1,23 +1,28 @@
 # JBTiered721DelegateDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721DelegateDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/JBTiered721DelegateDeployer.sol)
 
-Mainnet: [`0xd7C3CE7F47bc884f7e4cD8D49e3427c2E76859dc`](https://etherscan.io/address/0xd7C3CE7F47bc884f7e4cD8D49e3427c2E76859dc)
+Mainnet: [`0xc017a3F357a1C5F5298cA40B5647d5667B73B22A`](https://etherscan.io/address/0xc017a3F357a1C5F5298cA40B5647d5667B73B22A)
 
-Goerli: [`0x16d266B73F24307D5F157d27b4753Fe9549Ca8D7`](https://goerli.etherscan.io/address/0x16d266B73F24307D5F157d27b4753Fe9549Ca8D7)
+Goerli: [`0x55e778fBD008Cf3e29beaed2FB3E7F55f89cB487`](https://goerli.etherscan.io/address/0x55e778fBD008Cf3e29beaed2FB3E7F55f89cB487)
 
 Inherits: [`IJBTiered721DelegateDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md)
 
-Deploys a tier delegate.
-
-Adheres to -
-- [`IJBTiered721DelegateDeployer`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md):  General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+Deploys a JBTiered721Delegate.
 
 ## State Variables
 
+### _nonce
+
+This contract's current nonce, used for the Juicebox delegates registry.
+
+```solidity
+uint256 internal _nonce;
+```
+
 ### onchainGovernance
 
-The contract that supports on-chain governance across all tiers.
+A contract that supports on-chain governance across all tiers.
 
 ```solidity
 JBTiered721GovernanceDelegate public immutable onchainGovernance;
@@ -25,7 +30,7 @@ JBTiered721GovernanceDelegate public immutable onchainGovernance;
 
 ### noGovernance
 
-The contract that has no on-chain governance.
+A contract with no on-chain governance mechanism.
 
 ```solidity
 JBTiered721Delegate public immutable noGovernance;
@@ -33,18 +38,10 @@ JBTiered721Delegate public immutable noGovernance;
 
 ### delegatesRegistry
 
-The delegates registry.
+A contract that stores references to deployer contracts of delegates.
 
 ```solidity
 IJBDelegatesRegistry public immutable delegatesRegistry;
-```
-
-### _nonce
-
-This contract current nonce, used for the registry
-
-```solidity
-uint256 private _nonce;
 ```
 
 ## Functions
@@ -59,9 +56,17 @@ constructor(
 );
 ```
 
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`_onchainGovernance`|[`JBTiered721GovernanceDelegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721governancedelegate.md)|Reference copy of the delegate that works with onchain governance.|
+|`_noGovernance`|[`JBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/jbtiered721delegate.md)|Reference copy of a simpler delegate without on-chain governance.|
+|`_delegatesRegistry`|`IJBDelegatesRegistry`|A contract that stores references to delegate deployer contracts.|
+
 ### deployDelegateFor
 
-Deploys a delegate.
+Deploys a delegate for the provided project.
 
 ```solidity
 function deployDelegateFor(
@@ -75,8 +80,8 @@ function deployDelegateFor(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
-|`_deployTiered721DelegateData`|[`JBDeployTiered721DelegateData`](/docs/dev/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md)|Data necessary to fulfill the transaction to deploy a delegate.|
+|`_projectId`|`uint256`|The ID of the project for which the delegate will be deployed.|
+|`_deployTiered721DelegateData`|[`JBDeployTiered721DelegateData`](/docs/dev/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md)|Structure containing data necessary for delegate deployment.|
 |`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
 
 **Returns**

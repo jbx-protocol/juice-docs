@@ -1,13 +1,13 @@
 # IJBTiered721DelegateStore
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/interfaces/IJBTiered721DelegateStore.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/interfaces/IJBTiered721DelegateStore.sol)
 
 ## Functions
 
-### totalSupply
+### totalSupplyOf
 
 ```solidity
-function totalSupply(address _nft) external view returns (uint256);
+function totalSupplyOf(address _nft) external view returns (uint256);
 ```
 
 ### balanceOf
@@ -26,30 +26,30 @@ function maxTierIdOf(address _nft) external view returns (uint256);
 
 ```solidity
 function tiersOf(
-    address _nft,
-    uint256[] calldata _categories,
-    bool _includeResolvedUri,
-    uint256 _startingSortIndex,
-    uint256 _size
+    address nft,
+    uint256[] calldata categories,
+    bool includeResolvedUri,
+    uint256 startingSortIndex,
+    uint256 size
 ) external view returns (JB721Tier[] memory tiers);
 ```
 
 ### tierOf
 
 ```solidity
-function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) external view returns (JB721Tier memory tier);
+function tierOf(address nft, uint256 id, bool includeResolvedUri) external view returns (JB721Tier memory tier);
 ```
 
 ### tierBalanceOf
 
 ```solidity
-function tierBalanceOf(address _nft, address _owner, uint256 _tier) external view returns (uint256);
+function tierBalanceOf(address nft, address owner, uint256 tier) external view returns (uint256);
 ```
 
 ### tierOfTokenId
 
 ```solidity
-function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
+function tierOfTokenId(address nft, uint256 tokenId, bool includeResolvedUri)
     external
     view
     returns (JB721Tier memory tier);
@@ -58,115 +58,115 @@ function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
 ### tierIdOfToken
 
 ```solidity
-function tierIdOfToken(uint256 _tokenId) external pure returns (uint256);
+function tierIdOfToken(uint256 tokenId) external pure returns (uint256);
 ```
 
 ### encodedIPFSUriOf
 
 ```solidity
-function encodedIPFSUriOf(address _nft, uint256 _tierId) external view returns (bytes32);
+function encodedIPFSUriOf(address nft, uint256 tierId) external view returns (bytes32);
 ```
 
 ### redemptionWeightOf
 
 ```solidity
-function redemptionWeightOf(address _nft, uint256[] memory _tokenIds) external view returns (uint256 weight);
+function redemptionWeightOf(address nft, uint256[] memory tokenIds) external view returns (uint256 weight);
 ```
 
 ### totalRedemptionWeight
 
 ```solidity
-function totalRedemptionWeight(address _nft) external view returns (uint256 weight);
+function totalRedemptionWeight(address nft) external view returns (uint256 weight);
 ```
 
 ### numberOfReservedTokensOutstandingFor
 
 ```solidity
-function numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId) external view returns (uint256);
+function numberOfReservedTokensOutstandingFor(address nft, uint256 tierId) external view returns (uint256);
 ```
 
 ### numberOfReservesMintedFor
 
 ```solidity
-function numberOfReservesMintedFor(address _nft, uint256 _tierId) external view returns (uint256);
+function numberOfReservesMintedFor(address nft, uint256 tierId) external view returns (uint256);
 ```
 
 ### numberOfBurnedFor
 
 ```solidity
-function numberOfBurnedFor(address _nft, uint256 _tierId) external view returns (uint256);
+function numberOfBurnedFor(address nft, uint256 tierId) external view returns (uint256);
 ```
 
 ### isTierRemoved
 
 ```solidity
-function isTierRemoved(address _nft, uint256 _tierId) external view returns (bool);
+function isTierRemoved(address nft, uint256 tierId) external view returns (bool);
 ```
 
 ### flagsOf
 
 ```solidity
-function flagsOf(address _nft) external view returns (JBTiered721Flags memory);
+function flagsOf(address nft) external view returns (JBTiered721Flags memory);
 ```
 
 ### votingUnitsOf
 
 ```solidity
-function votingUnitsOf(address _nft, address _account) external view returns (uint256 units);
+function votingUnitsOf(address nft, address account) external view returns (uint256 units);
 ```
 
 ### tierVotingUnitsOf
 
 ```solidity
-function tierVotingUnitsOf(address _nft, address _account, uint256 _tierId) external view returns (uint256 units);
+function tierVotingUnitsOf(address nft, address account, uint256 tierId) external view returns (uint256 units);
 ```
 
 ### defaultReservedTokenBeneficiaryOf
 
 ```solidity
-function defaultReservedTokenBeneficiaryOf(address _nft) external view returns (address);
+function defaultReservedTokenBeneficiaryOf(address nft) external view returns (address);
 ```
 
 ### reservedTokenBeneficiaryOf
 
 ```solidity
-function reservedTokenBeneficiaryOf(address _nft, uint256 _tierId) external view returns (address);
+function reservedTokenBeneficiaryOf(address nft, uint256 tierId) external view returns (address);
 ```
 
 ### tokenUriResolverOf
 
 ```solidity
-function tokenUriResolverOf(address _nft) external view returns (IJBTokenUriResolver);
+function tokenUriResolverOf(address nft) external view returns (IJB721TokenUriResolver);
 ```
 
 ### encodedTierIPFSUriOf
 
 ```solidity
-function encodedTierIPFSUriOf(address _nft, uint256 _tokenId) external view returns (bytes32);
+function encodedTierIPFSUriOf(address nft, uint256 tokenId) external view returns (bytes32);
 ```
 
 ### recordAddTiers
 
 ```solidity
-function recordAddTiers(JB721TierParams[] memory _tierData) external returns (uint256[] memory tierIds);
+function recordAddTiers(JB721TierParams[] memory tierData) external returns (uint256[] memory tierIds);
 ```
 
 ### recordMintReservesFor
 
 ```solidity
-function recordMintReservesFor(uint256 _tierId, uint256 _count) external returns (uint256[] memory tokenIds);
+function recordMintReservesFor(uint256 tierId, uint256 count) external returns (uint256[] memory tokenIds);
 ```
 
 ### recordBurn
 
 ```solidity
-function recordBurn(uint256[] memory _tokenIds) external;
+function recordBurn(uint256[] memory tokenIds) external;
 ```
 
 ### recordMint
 
 ```solidity
-function recordMint(uint256 _amount, uint16[] calldata _tierIds, bool _isManualMint)
+function recordMint(uint256 amount, uint16[] calldata tierIds, bool isManualMint)
     external
     returns (uint256[] memory tokenIds, uint256 leftoverAmount);
 ```
@@ -174,37 +174,37 @@ function recordMint(uint256 _amount, uint16[] calldata _tierIds, bool _isManualM
 ### recordTransferForTier
 
 ```solidity
-function recordTransferForTier(uint256 _tierId, address _from, address _to) external;
+function recordTransferForTier(uint256 tierId, address from, address to) external;
 ```
 
 ### recordRemoveTierIds
 
 ```solidity
-function recordRemoveTierIds(uint256[] memory _tierIds) external;
+function recordRemoveTierIds(uint256[] memory tierIds) external;
 ```
 
 ### recordSetTokenUriResolver
 
 ```solidity
-function recordSetTokenUriResolver(IJBTokenUriResolver _resolver) external;
+function recordSetTokenUriResolver(IJB721TokenUriResolver resolver) external;
 ```
 
 ### recordSetEncodedIPFSUriOf
 
 ```solidity
-function recordSetEncodedIPFSUriOf(uint256 _tierId, bytes32 _encodedIPFSUri) external;
+function recordSetEncodedIPFSUriOf(uint256 tierId, bytes32 encodedIPFSUri) external;
 ```
 
 ### recordFlags
 
 ```solidity
-function recordFlags(JBTiered721Flags calldata _flag) external;
+function recordFlags(JBTiered721Flags calldata flag) external;
 ```
 
 ### cleanTiers
 
 ```solidity
-function cleanTiers(address _nft) external;
+function cleanTiers(address nft) external;
 ```
 
 ## Events

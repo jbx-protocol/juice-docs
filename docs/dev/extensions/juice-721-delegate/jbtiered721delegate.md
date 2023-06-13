@@ -1,30 +1,20 @@
 # JBTiered721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/JBTiered721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/JBTiered721Delegate.sol)
 
-Mainnet: [`0x2B4991520AC9a18E4d139aD1EAd5cA359E745a32`](https://etherscan.io/address/0x2B4991520AC9a18E4d139aD1EAd5cA359E745a32)
+Mainnet: [`0x23F2e4B74383F714571AeAC96bff748053e3032F`](https://etherscan.io/address/0x23F2e4B74383F714571AeAC96bff748053e3032F)
 
-Goerli: [`0x0d97311d948635147AF8797A0B86Fc4b7F42f72A`](https://goerli.etherscan.io/address/0x0d97311d948635147AF8797A0B86Fc4b7F42f72A)
+Goerli: [`0xB1Bb48c770b816e561b48aEfDE324ADccf26ef11`](https://goerli.etherscan.io/address/0xB1Bb48c770b816e561b48aEfDE324ADccf26ef11)
 
-Inherits: [`JBOwnable`](/), [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md), [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)
+Inherits: [`JBOwnable`](/dev/extensions/juice-ownable/), [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md), [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)
 
-Delegate that offers project contributors NFTs with tiered price floors upon payment and the ability to redeem NFTs for treasury assets based based on price floor.
-
-Adheres to -
-- [`IJBTiered721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
-
-Inherits from -
-- [`JB721Delegate`](/docs/dev/extensions/juice-721-delegate/abstract/jb721delegate.md):  A generic NFT delegate.
-- [`Votes`](/docs/dev/extensions/juice-721-delegate/abstract/votes.md):  A helper for voting balance snapshots.
-- [`JBOwnable`](/):  Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
+This delegate makes multiple NFT tiers with custom price floors available to a project's contributors upon payment, and allows project owners to enable NFT redemption for treasury assets based on the price floors of those NFTs.
 
 ## State Variables
 
 ### _firstOwnerOf
 
 The first owner of each token ID, stored on first transfer out.
-- _nft The NFT contract to which the token belongs.
-- _tokenId The ID of the token to get the stored first owner of.
 
 ```solidity
 mapping(uint256 => address) internal _firstOwnerOf;
@@ -32,7 +22,7 @@ mapping(uint256 => address) internal _firstOwnerOf;
 
 ### _packedPricingContext
 
-Info that contextualized the pricing of tiers, packed into a uint256.
+Info that contextualizes the pricing of tiers, packed into a uint256: currency in bits 0-47 (48 bits), pricing decimals in bits 48-95 (48 bits), and prices contract in bits 96-255 (160 bits).
 
 ```solidity
 uint256 internal _packedPricingContext;
@@ -40,7 +30,7 @@ uint256 internal _packedPricingContext;
 
 ### codeOrigin
 
-The address of the origin 'JBTiered721Delegate', used to check in the init if the contract is the original or not
+The address of the original JBTiered721Delegate - used in `initialize(...)` to check if this is the original JBTiered721Delegate, and to revert initialization if it is.
 
 ```solidity
 address public override codeOrigin;
@@ -48,7 +38,7 @@ address public override codeOrigin;
 
 ### store
 
-The contract that stores and manages the NFT's data.
+The contract that stores and manages data for this contract's NFTs.
 
 ```solidity
 IJBTiered721DelegateStore public override store;
@@ -64,8 +54,7 @@ IJBFundingCycleStore public override fundingCycleStore;
 
 ### creditsOf
 
-The amount that each address has paid that has not yet contribute to the minting of an NFT.
-- _address The address to which the credits belong.
+The amount each address has paid which did not go towards minting an NFT. These credits can be redeemed to mint NFTs.
 
 ```solidity
 mapping(address => uint256) public override creditsOf;
@@ -73,8 +62,7 @@ mapping(address => uint256) public override creditsOf;
 
 ### baseURI
 
-The common base for the tokenUri's
-- _nft The NFT for which the base URI applies.
+The common base for the tokenUris.
 
 ```solidity
 string public override baseURI;
@@ -83,7 +71,6 @@ string public override baseURI;
 ### contractURI
 
 Contract metadata uri.
-- _nft The NFT for which the contract URI resolver applies.
 
 ```solidity
 string public override contractURI;
@@ -113,7 +100,7 @@ function firstOwnerOf(uint256 _tokenId) external view override returns (address)
 
 ### pricingContext
 
-Info that contextualized the pricing of tiers.
+Info that contextualizes the pricing of tiers.
 
 ```solidity
 function pricingContext() external view override returns (uint256 currency, uint256 decimals, IJBPrices prices);
@@ -129,7 +116,7 @@ function pricingContext() external view override returns (uint256 currency, uint
 
 ### balanceOf
 
-The total number of tokens owned by the given owner across all tiers.
+The total number of tokens owned by an address across all tiers.
 
 ```solidity
 function balanceOf(address _owner) public view override returns (uint256 balance);
@@ -145,13 +132,13 @@ function balanceOf(address _owner) public view override returns (uint256 balance
 
 |Name|Type|Description|
 |----|----|-----------|
-|`balance`|`uint256`|The number of tokens owners by the owner across all tiers.|
+|`balance`|`uint256`|The number of tokens owned by the address across all tiers.|
 
 ### tokenURI
 
 The metadata URI of the provided token ID.
 
-*Defer to the tokenUriResolver if set, otherwise, use the tokenUri set with the token's tier.*
+*Defer to the tokenUriResolver if it is set. Otherwise, use the tokenUri corresponding with the token's tier.*
 
 ```solidity
 function tokenURI(uint256 _tokenId) public view virtual override returns (string memory);
@@ -161,17 +148,17 @@ function tokenURI(uint256 _tokenId) public view virtual override returns (string
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tokenId`|`uint256`|The ID of the token to get the tier URI for.|
+|`_tokenId`|`uint256`|The ID of the token to get the metadata URI for.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`string`|The token URI corresponding with the tier or the tokenUriResolver URI.|
+|`<none>`|`string`|The token URI corresponding with the token's tier, or the tokenUriResolver URI if it is set.|
 
 ### redemptionWeightOf
 
-The cumulative weight the given token IDs have in redemptions compared to the `_totalRedemptionWeight`.
+The cumulative redemption weight the given token IDs have compared to the `_totalRedemptionWeight`.
 
 ```solidity
 function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calldata)
@@ -193,11 +180,11 @@ function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calld
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The weight.|
+|`<none>`|`uint256`|The redemption weight of the _tokenIds.|
 
 ### totalRedemptionWeight
 
-The cumulative weight that all token IDs have in redemptions.
+The cumulative redemption weight across all token IDs.
 
 ```solidity
 function totalRedemptionWeight(JBRedeemParamsData calldata) public view virtual override returns (uint256);
@@ -207,7 +194,7 @@ function totalRedemptionWeight(JBRedeemParamsData calldata) public view virtual 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The total weight.|
+|`<none>`|`uint256`|The cumulative redemption weight.|
 
 ### supportsInterface
 
@@ -231,7 +218,16 @@ function supportsInterface(bytes4 _interfaceId) public view override returns (bo
 constructor(IJBProjects _projects, IJBOperatorStore _operatorStore) JBOwnable(_projects, _operatorStore);
 ```
 
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`_projects`|[`IJBProjects`](/docs/dev/api/interfaces/ijbprojects.md)|A contract which mints ERC-721s that represent Juicebox project ownership.|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/dev/api/interfaces/ijboperatorstore.md)|A contract which stores operator assignments.|
+
 ### initialize
+
+Initializes a cloned copy of the original JB721Delegate contract.
 
 ```solidity
 function initialize(
@@ -241,7 +237,7 @@ function initialize(
     string memory _symbol,
     IJBFundingCycleStore _fundingCycleStore,
     string memory _baseUri,
-    IJBTokenUriResolver _tokenUriResolver,
+    IJB721TokenUriResolver _tokenUriResolver,
     string memory _contractUri,
     JB721PricingParams memory _pricing,
     IJBTiered721DelegateStore _store,
@@ -254,20 +250,20 @@ function initialize(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
-|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
-|`_name`|`string`|The name of the token.|
-|`_symbol`|`string`|The symbol that the token should be represented by.|
+|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|A directory of terminals and controllers for projects.|
+|`_name`|`string`|The name of the NFT collection distributed through this contract.|
+|`_symbol`|`string`|The symbol that the NFT collection should be represented by.|
 |`_fundingCycleStore`|[`IJBFundingCycleStore`](/docs/dev/api/interfaces/ijbfundingcyclestore.md)|A contract storing all funding cycle configurations.|
 |`_baseUri`|`string`|A URI to use as a base for full token URIs.|
-|`_tokenUriResolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|A contract responsible for resolving the token URI for each token ID.|
-|`_contractUri`|`string`|A URI where contract metadata can be found.|
-|`_pricing`|[`JB721PricingParams`](/docs/dev/extensions/juice-721-delegate/structs/jb721pricingparams.md)|The tier pricing according to which token distribution will be made. Must be passed in order of contribution floor, with implied increasing value.|
-|`_store`|[`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)|A contract that stores the NFT's data.|
-|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|A set of flags that help define how this contract works.|
+|`_tokenUriResolver`|[`IJB721TokenUriResolver`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md)|A contract responsible for resolving the token URI for each token ID.|
+|`_contractUri`|`string`|A URI where this contract's metadata can be found.|
+|`_pricing`|[`JB721PricingParams`](/docs/dev/extensions/juice-721-delegate/structs/jb721pricingparams.md)|NFT tier pricing parameters according to which token distribution will be made. Must be sorted by contribution floor (from least to greatest).|
+|`_store`|[`IJBTiered721DelegateStore`](/docs/dev/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)|The contract which stores the NFT's data.|
+|`_flags`|[`JBTiered721Flags`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721flags.md)|A set of flags that help to define how this contract works.|
 
 ### mintFor
 
-Manually mint NFTs from tiers.
+Manually mint NFTs from the provided tiers .
 
 ```solidity
 function mintFor(uint16[] calldata _tierIds, address _beneficiary)
@@ -306,9 +302,9 @@ function mintReservesFor(JBTiered721MintReservesForTiersData[] calldata _mintRes
 
 ### adjustTiers
 
-Adjust the tiers mintable through this contract, adhering to any locked tier constraints.
+Adjust the tiers which are mintable through this contract, adhering to any locked tier constraints.
 
-*Only the contract's owner can adjust the tiers.*
+*Only the contract's owner or an operator with ADJUST_TIERS can adjust the tiers.*
 
 ```solidity
 function adjustTiers(JB721TierParams[] calldata _tiersToAdd, uint256[] calldata _tierIdsToRemove)
@@ -334,7 +330,7 @@ Set a contract's URI metadata properties.
 function setMetadata(
     string calldata _baseUri,
     string calldata _contractUri,
-    IJBTokenUriResolver _tokenUriResolver,
+    IJB721TokenUriResolver _tokenUriResolver,
     uint256 _encodedIPFSUriTierId,
     bytes32 _encodedIPFSUri
 ) external override requirePermission(owner(), projectId, JB721Operations.UPDATE_METADATA);
@@ -346,13 +342,15 @@ function setMetadata(
 |----|----|-----------|
 |`_baseUri`|`string`|The new base URI.|
 |`_contractUri`|`string`|The new contract URI.|
-|`_tokenUriResolver`|[`IJBTokenUriResolver`](/docs/dev/api/interfaces/ijbtokenuriresolver.md)|The new URI resolver.|
-|`_encodedIPFSUriTierId`|`uint256`|The ID of the tier to set the encoded IPFS uri of.|
-|`_encodedIPFSUri`|`bytes32`|The encoded IPFS uri to set.|
+|`_tokenUriResolver`|[`IJB721TokenUriResolver`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md)|The new URI resolver.|
+|`_encodedIPFSUriTierId`|`uint256`|The ID of the tier to set the encoded IPFS URI of.|
+|`_encodedIPFSUri`|`bytes32`|The encoded IPFS URI to set.|
 
 ### mintReservesFor
 
-Mint reserved tokens within the tier for the provided value.
+Mint reserved tokens within the provided tier.
+
+*Only currently outstanding reserved tokens can be minted.*
 
 ```solidity
 function mintReservesFor(uint256 _tierId, uint256 _count) public override;
@@ -362,7 +360,7 @@ function mintReservesFor(uint256 _tierId, uint256 _count) public override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tierId`|`uint256`|The ID of the tier to mint within.|
+|`_tierId`|`uint256`|The ID of the tier to mint from.|
 |`_count`|`uint256`|The number of reserved tokens to mint.|
 
 ### _processPayment
@@ -377,11 +375,11 @@ function _processPayment(JBDidPayData calldata _data) internal virtual override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|The Juicebox standard project contribution data.|
+|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|The standard data passed when paying a Juicebox project.|
 
 ### _didBurn
 
-A function that will run when tokens are burned via redemption.
+A function that runs when tokens are burned via redemption.
 
 ```solidity
 function _didBurn(uint256[] memory _tokenIds) internal virtual override;
@@ -407,8 +405,8 @@ function _mintAll(uint256 _amount, uint16[] memory _mintTierIds, address _benefi
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_amount`|`uint256`|The amount to base the mints on. All mints' price floors must fit in this amount.|
-|`_mintTierIds`|`uint16[]`|An array of tier IDs that are intended to be minted.|
+|`_amount`|`uint256`|The amount to base the mints on. The combined price floors of all tokens to be minted must fit within this amount.|
+|`_mintTierIds`|`uint16[]`|An array of tier IDs to be minted.|
 |`_beneficiary`|`address`|The address to mint for.|
 
 **Returns**
@@ -419,7 +417,7 @@ function _mintAll(uint256 _amount, uint16[] memory _mintTierIds, address _benefi
 
 ### _beforeTokenTransfer
 
-User the hook to register the first owner if it's not yet registered.
+Hook to register a token's first owner (if necessary) before transferring it.
 
 ```solidity
 function _beforeTokenTransfer(address _from, address _to, uint256 _tokenId) internal virtual override;
@@ -429,8 +427,8 @@ function _beforeTokenTransfer(address _from, address _to, uint256 _tokenId) inte
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_from`|`address`|The address where the transfer is originating.|
-|`_to`|`address`|The address to which the transfer is being made.|
+|`_from`|`address`|The address to transfer the token from.|
+|`_to`|`address`|The address to transfer the token to.|
 |`_tokenId`|`uint256`|The ID of the token being transferred.|
 
 ### _afterTokenTransfer
@@ -445,8 +443,8 @@ function _afterTokenTransfer(address _from, address _to, uint256 _tokenId) inter
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_from`|`address`|The address where the transfer is originating.|
-|`_to`|`address`|The address to which the transfer is being made.|
+|`_from`|`address`|The address to transfer the token from.|
+|`_to`|`address`|The address to transfer the token to.|
 |`_tokenId`|`uint256`|The ID of the token being transferred.|
 
 ### _afterTokenTransferAccounting
@@ -463,8 +461,8 @@ function _afterTokenTransferAccounting(address _from, address _to, uint256 _toke
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_from`|`address`|The account to transfer voting units from.|
-|`_to`|`address`|The account to transfer voting units to.|
+|`_from`|`address`|The address to transfer voting units from.|
+|`_to`|`address`|The address to transfer voting units to.|
 |`_tokenId`|`uint256`|The ID of the token for which voting units are being transferred.|
 |`_tier`|[`JB721Tier`](/docs/dev/extensions/juice-721-delegate/structs/jb721tier.md)|The tier the token ID is part of.|
 

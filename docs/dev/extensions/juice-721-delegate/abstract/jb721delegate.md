@@ -1,25 +1,16 @@
 # JB721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/abstract/JB721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/abstract/JB721Delegate.sol)
 
 Inherits: [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md), [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md), [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md)
 
-Delegate that offers project contributors NFTs upon payment and the ability to redeem NFTs for treasury assets.
-
-Adheres to -
-- [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
-- [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md):  Allows this contract to be attached to a funding cycle to have its methods called during regular protocol operations.
-- [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md):  Allows this contract to receive callbacks when a project receives a payment.
-- [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md):  Allows this contract to receive callbacks when a token holder redeems.
-
-Inherits from -
-- [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md):  A standard definition for non-fungible tokens (NFTs).
+This delegate makes NFTs available to a project's contributors upon payment, and allows project owners to enable NFT redemption for treasury assets.
 
 ## State Variables
 
 ### projectId
 
-The ID of the project this contract's functionality applies to.
+The Juicebox project ID this contract's functionality applies to.
 
 ```solidity
 uint256 public override projectId;
@@ -37,7 +28,7 @@ IJBDirectory public override directory;
 
 ### payParams
 
-Part of IJBFundingCycleDataSource, this function gets called when the project receives a payment. It will set itself as the delegate to get a callback from the terminal.
+This function gets called when the project receives a payment. It sets this contract as the delegate to get a callback from the terminal. Part of IJBFundingCycleDataSource.
 
 ```solidity
 function payParams(JBPayParamsData calldata _data)
@@ -59,12 +50,12 @@ function payParams(JBPayParamsData calldata _data)
 |Name|Type|Description|
 |----|----|-----------|
 |`weight`|`uint256`|The weight that tokens should get minted in accordance with.|
-|`memo`|`string`|The memo that should be forwarded to the event.|
-|`delegateAllocations`|[`JBPayDelegateAllocation[]`](/docs/dev/api/data-structures/jbpaydelegateallocation.md)|The amount to send to delegates instead of adding to the local balance.|
+|`memo`|`string`|A memo to be forwarded to the event.|
+|`delegateAllocations`|[`JBPayDelegateAllocation[]`](/docs/dev/api/data-structures/jbpaydelegateallocation.md)|Amount to be sent to delegates instead of adding to local balance.|
 
 ### redeemParams
 
-Part of IJBFundingCycleDataSource, this function gets called when a project's token holders redeem.
+This function gets called when the project's (NFT) token holders redeem. Part of IJBFundingCycleDataSource.
 
 ```solidity
 function redeemParams(JBRedeemParamsData calldata _data)
@@ -79,19 +70,19 @@ function redeemParams(JBRedeemParamsData calldata _data)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|The Juicebox standard project redemption data.|
+|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`reclaimAmount`|`uint256`|The amount that should be reclaimed from the treasury.|
-|`memo`|`string`|The memo that should be forwarded to the event.|
-|`delegateAllocations`|[`JBRedemptionDelegateAllocation[]`](/docs/dev/api/data-structures/jbredemptiondelegateallocation.md)|The amount to send to delegates instead of adding to the beneficiary.|
+|`reclaimAmount`|`uint256`|Amount to be reclaimed from the treasury.|
+|`memo`|`string`|A memo to be forwarded to the event.|
+|`delegateAllocations`|[`JBRedemptionDelegateAllocation[]`](/docs/dev/api/data-structures/jbredemptiondelegateallocation.md)|Amount to be sent to delegates instead of being added to the beneficiary.|
 
 ### redemptionWeightOf
 
-The cumulative weight the given token IDs have in redemptions compared to the `totalRedemptionWeight`.
+Returns the cumulative redemption weight of the given token IDs relative to the `totalRedemptionWeight`.
 
 ```solidity
 function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calldata _data)
@@ -105,18 +96,18 @@ function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calld
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_tokenIds`|`uint256[]`|The IDs of the tokens to get the cumulative redemption weight of.|
-|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|The Juicebox standard project redemption data.|
+|`_tokenIds`|`uint256[]`|The token IDs to calculate the cumulative redemption weight for.|
+|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The weight.|
+|`<none>`|`uint256`|The cumulative redemption weight of the specified token IDs.|
 
 ### totalRedemptionWeight
 
-The cumulative weight that all token IDs have in redemptions.
+Calculates the cumulative redemption weight of all token IDs.
 
 ```solidity
 function totalRedemptionWeight(JBRedeemParamsData calldata _data) public view virtual returns (uint256);
@@ -126,13 +117,13 @@ function totalRedemptionWeight(JBRedeemParamsData calldata _data) public view vi
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|The Juicebox standard project redemption data.|
+|`_data`|[`JBRedeemParamsData`](/docs/dev/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|`uint256`|The total weight.|
+|`<none>`|`uint256`|Total cumulative redemption weight of all token IDs.|
 
 ### supportsInterface
 
@@ -152,6 +143,8 @@ function supportsInterface(bytes4 _interfaceId) public view virtual override(ERC
 
 ### _initialize
 
+Initializes the contract with project details and ERC721 token details.
+
 ```solidity
 function _initialize(uint256 _projectId, IJBDirectory _directory, string memory _name, string memory _symbol)
     internal;
@@ -164,13 +157,13 @@ function _initialize(uint256 _projectId, IJBDirectory _directory, string memory 
 |`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
 |`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
 |`_name`|`string`|The name of the token.|
-|`_symbol`|`string`|The symbol that the token should be represented by.|
+|`_symbol`|`string`|The symbol representing the token.|
 
 ### didPay
 
-Part of IJBPayDelegate, this function gets called when the project receives a payment. It will mint an NFT to the contributor (_data.beneficiary) if conditions are met.
+Mints an NFT to the contributor (_data.beneficiary) upon project payment if conditions are met. Part of IJBPayDelegate.
 
-*This function will revert if the contract calling is not one of the project's terminals.*
+*Reverts if the calling contract is not one of the project's terminals.*
 
 ```solidity
 function didPay(JBDidPayData calldata _data) external payable virtual override;
@@ -180,13 +173,13 @@ function didPay(JBDidPayData calldata _data) external payable virtual override;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|The Juicebox standard project payment data.|
+|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|Standard Juicebox project payment data.|
 
 ### didRedeem
 
-Part of IJBRedeemDelegate, this function gets called when the token holder redeems. It will burn the specified NFTs to reclaim from the treasury to the _data.beneficiary.
+Burns specified NFTs upon token holder redemption, reclaiming funds from the project's balance to _data.beneficiary. Part of IJBRedeemDelegate.
 
-*This function will revert if the contract calling is not one of the project's terminals.*
+*Reverts if the calling contract is not one of the project's terminals.*
 
 ```solidity
 function didRedeem(JBDidRedeemData calldata _data) external payable virtual override;
@@ -196,7 +189,7 @@ function didRedeem(JBDidRedeemData calldata _data) external payable virtual over
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidRedeemData`](/docs/dev/api/data-structures/jbdidredeemdata.md)|The Juicebox standard project redemption data.|
+|`_data`|[`JBDidRedeemData`](/docs/dev/api/data-structures/jbdidredeemdata.md)|Standard Juicebox project redemption data.|
 
 ### _processPayment
 
@@ -210,11 +203,11 @@ function _processPayment(JBDidPayData calldata _data) internal virtual;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|The Juicebox standard project payment data.|
+|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|Standard Juicebox project payment data.|
 
 ### _didBurn
 
-A function that will run when tokens are burned via redemption.
+Executes after tokens have been burned via redemption.
 
 ```solidity
 function _didBurn(uint256[] memory _tokenIds) internal virtual;

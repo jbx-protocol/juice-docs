@@ -1,6 +1,6 @@
 # IJBTiered721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/interfaces/IJBTiered721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/interfaces/IJBTiered721Delegate.sol)
 
 Inherits: [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md)
 
@@ -57,36 +57,36 @@ function contractURI() external view returns (string memory);
 ### adjustTiers
 
 ```solidity
-function adjustTiers(JB721TierParams[] memory _tierDataToAdd, uint256[] memory _tierIdsToRemove) external;
+function adjustTiers(JB721TierParams[] memory tierDataToAdd, uint256[] memory tierIdsToRemove) external;
 ```
 
 ### mintReservesFor
 
 ```solidity
-function mintReservesFor(JBTiered721MintReservesForTiersData[] memory _mintReservesForTiersData) external;
+function mintReservesFor(JBTiered721MintReservesForTiersData[] memory mintReservesForTiersData) external;
 ```
 
 ### mintReservesFor
 
 ```solidity
-function mintReservesFor(uint256 _tierId, uint256 _count) external;
+function mintReservesFor(uint256 tierId, uint256 count) external;
 ```
 
 ### mintFor
 
 ```solidity
-function mintFor(uint16[] calldata _tierIds, address _beneficiary) external returns (uint256[] memory tokenIds);
+function mintFor(uint16[] calldata tierIds, address beneficiary) external returns (uint256[] memory tokenIds);
 ```
 
 ### setMetadata
 
 ```solidity
 function setMetadata(
-    string memory _baseUri,
-    string calldata _contractMetadataUri,
-    IJBTokenUriResolver _tokenUriResolver,
-    uint256 _encodedIPFSUriTierId,
-    bytes32 _encodedIPFSUri
+    string memory baseUri,
+    string calldata contractMetadataUri,
+    IJB721TokenUriResolver tokenUriResolver,
+    uint256 encodedIPFSUriTierId,
+    bytes32 encodedIPFSUri
 ) external;
 ```
 
@@ -94,17 +94,17 @@ function setMetadata(
 
 ```solidity
 function initialize(
-    uint256 _projectId,
-    IJBDirectory _directory,
-    string memory _name,
-    string memory _symbol,
-    IJBFundingCycleStore _fundingCycleStore,
-    string memory _baseUri,
-    IJBTokenUriResolver _tokenUriResolver,
-    string memory _contractUri,
-    JB721PricingParams memory _pricing,
-    IJBTiered721DelegateStore _store,
-    JBTiered721Flags memory _flags
+    uint256 projectId,
+    IJBDirectory directory,
+    string memory name,
+    string memory symbol,
+    IJBFundingCycleStore fundingCycleStore,
+    string memory baseUri,
+    IJB721TokenUriResolver tokenUriResolver,
+    string memory contractUri,
+    JB721PricingParams memory pricing,
+    IJBTiered721DelegateStore store,
+    JBTiered721Flags memory flags
 ) external;
 ```
 
@@ -140,12 +140,6 @@ event AddTier(uint256 indexed tierId, JB721TierParams data, address caller);
 event RemoveTier(uint256 indexed tierId, address caller);
 ```
 
-### SetDefaultReservedTokenBeneficiary
-
-```solidity
-event SetDefaultReservedTokenBeneficiary(address indexed beneficiary, address caller);
-```
-
 ### SetEncodedIPFSUri
 
 ```solidity
@@ -167,7 +161,7 @@ event SetContractUri(string indexed contractUri, address caller);
 ### SetTokenUriResolver
 
 ```solidity
-event SetTokenUriResolver(IJBTokenUriResolver indexed newResolver, address caller);
+event SetTokenUriResolver(IJB721TokenUriResolver indexed newResolver, address caller);
 ```
 
 ### AddCredits

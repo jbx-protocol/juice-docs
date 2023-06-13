@@ -1,6 +1,6 @@
 # JBDeployTiered721DelegateData
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/structs/JBDeployTiered721DelegateData.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/structs/JBDeployTiered721DelegateData.sol)
 
 ```solidity
 struct JBDeployTiered721DelegateData {
@@ -8,9 +8,8 @@ struct JBDeployTiered721DelegateData {
     string symbol;
     IJBFundingCycleStore fundingCycleStore;
     string baseUri;
-    IJBTokenUriResolver tokenUriResolver;
+    IJB721TokenUriResolver tokenUriResolver;
     string contractUri;
-    address owner;
     JB721PricingParams pricing;
     address reservedTokenBeneficiary;
     IJBTiered721DelegateStore store;

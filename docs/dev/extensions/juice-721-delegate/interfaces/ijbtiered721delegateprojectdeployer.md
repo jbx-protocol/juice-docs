@@ -1,6 +1,6 @@
 # IJBTiered721DelegateProjectDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/interfaces/IJBTiered721DelegateProjectDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/interfaces/IJBTiered721DelegateProjectDeployer.sol)
 
 ## Functions
 
@@ -20,10 +20,10 @@ function delegateDeployer() external view returns (IJBTiered721DelegateDeployer)
 
 ```solidity
 function launchProjectFor(
-    address _owner,
-    JBDeployTiered721DelegateData memory _deployTieredNFTRewardDelegateData,
-    JBLaunchProjectData memory _launchProjectData,
-    IJBController3_1 _controller
+    address owner,
+    JBDeployTiered721DelegateData memory deployTiered721DelegateData,
+    JBLaunchProjectData memory launchProjectData,
+    IJBController3_1 controller
 ) external returns (uint256 projectId);
 ```
 
@@ -31,10 +31,10 @@ function launchProjectFor(
 
 ```solidity
 function launchFundingCyclesFor(
-    uint256 _projectId,
-    JBDeployTiered721DelegateData memory _deployTieredNFTRewardDelegateData,
-    JBLaunchFundingCyclesData memory _launchFundingCyclesData,
-    IJBController3_1 _controller
+    uint256 projectId,
+    JBDeployTiered721DelegateData memory deployTiered721DelegateData,
+    JBLaunchFundingCyclesData memory launchFundingCyclesData,
+    IJBController3_1 controller
 ) external returns (uint256 configuration);
 ```
 
@@ -42,10 +42,10 @@ function launchFundingCyclesFor(
 
 ```solidity
 function reconfigureFundingCyclesOf(
-    uint256 _projectId,
-    JBDeployTiered721DelegateData memory _deployTieredNFTRewardDelegateData,
-    JBReconfigureFundingCyclesData memory _reconfigureFundingCyclesData,
-    IJBController3_1 _controller
+    uint256 projectId,
+    JBDeployTiered721DelegateData memory deployTiered721DelegateData,
+    JBReconfigureFundingCyclesData memory reconfigureFundingCyclesData,
+    IJBController3_1 controller
 ) external returns (uint256 configuration);
 ```
 

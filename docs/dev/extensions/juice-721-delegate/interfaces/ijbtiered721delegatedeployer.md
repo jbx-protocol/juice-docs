@@ -1,6 +1,6 @@
 # IJBTiered721DelegateDeployer
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/interfaces/IJBTiered721DelegateDeployer.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/interfaces/IJBTiered721DelegateDeployer.sol)
 
 ## Functions
 
@@ -8,9 +8,9 @@
 
 ```solidity
 function deployDelegateFor(
-    uint256 _projectId,
-    JBDeployTiered721DelegateData memory _deployTieredNFTRewardDelegateData,
-    IJBDirectory _directory
+    uint256 projectId,
+    JBDeployTiered721DelegateData memory deployTieredNFTRewardDelegateData,
+    IJBDirectory directory
 ) external returns (IJBTiered721Delegate delegate);
 ```
 

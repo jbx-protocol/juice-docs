@@ -1,6 +1,6 @@
 # JB721TierParams
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/fc0bf08850ad04f445ec8810a23ecc01aaacf536/contracts/structs/JB721TierParams.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/structs/JB721TierParams.sol)
 
 ```solidity
 struct JB721TierParams {
