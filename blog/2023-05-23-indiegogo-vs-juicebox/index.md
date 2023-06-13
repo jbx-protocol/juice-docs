@@ -47,13 +47,13 @@ Next, let’s talk about funding models.
 
 ![Funding models](funding-model.webp)
 
-Indiegogo offers 2 options for campaigns; “all or nothing” and “flexible funding.” In all or nothing, a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers. “Flexible funding” is the second option, which lets the project owner keep all the funds raised even if they don’t meet their goal. 
+Indiegogo offers 2 options for campaigns; “all or nothing” and “flexible funding.” In all or nothing, a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers. “Flexible funding” is the second option, which lets the project owner keep all the funds raised even if they don’t meet their goal.
 
 With Juicebox, project settings are locked for a period of time that you decide: this is called a `Cycle`. This could be 3 days, 14 days, 1 month, whatever you set it to be. If you want your fundraiser to last 8 weeks, you could set your cycle to 8 weeks and decide on Payouts which are like your fundraising goal. Juicebox lets you set Payouts in three ways:
 
 **Option 1: Limited**
 
-The first option is Limited which lets you withdraw only a set amount each cycle. This gives a 100% guarantee to backers that you can’t withdraw more than that fixed limit. So if you set-up a Limited Payout of 2 ETH and you end up raising 3 ETH, you can only withdraw 2 ETH for that cycle. The remaining 1 ETH could be redeemed by backers by burning their tokens for ETH, but if nobody redeems then the surplus ETH will stay in the project and can be used for future cycles. You can think of Limited Payouts as an anti-scam mechanism for backers because the project owner can’t just disappear with all of the funds: you know how much they can withdraw each Cycle. Limited Payouts are a great option for campaigns that want to grow with their backers: you can set new goals as you reach new milestones, while giving your supporters full transparency along the way. 
+The first option is Limited which lets you withdraw only a set amount each cycle. This gives a 100% guarantee to backers that you can’t withdraw more than that fixed limit. So if you set-up a Limited Payout of 2 ETH and you end up raising 3 ETH, you can only withdraw 2 ETH for that cycle. The remaining 1 ETH could be redeemed by backers by burning their tokens for ETH, but if nobody redeems then the surplus ETH will stay in the project and can be used for future cycles. You can think of Limited Payouts as an anti-scam mechanism for backers because the project owner can’t just disappear with all of the funds: you know how much they can withdraw each Cycle. Limited Payouts are a great option for campaigns that want to grow with their backers: you can set new goals as you reach new milestones, while giving your supporters full transparency along the way.
 
 **Option 2: Unlimited**
 
@@ -75,7 +75,7 @@ Unlike Indiegogo, projects on Juicebox can adapt over time so you can change you
 
 Moving on, the next category we’ll look at is Rewards, so if backers meet a certain funding criteria they can receive perks. Crowdfunding campaigns that use rewards often have a higher success rate than those without because they create incentives for a variety of backers to support your project at different price points.
 
-Indiegogo’s rewards allow backers to contribute multiple times (up to $50,000 in a single transaction) to a project to receive multiple rewards. Projects on Indiegogo can only list up to 10 reward tiers. 
+Indiegogo’s rewards allow backers to contribute multiple times (up to $50,000 in a single transaction) to a project to receive multiple rewards. Projects on Indiegogo can only list up to 10 reward tiers.
 
 On Juicebox, you can offer as many reward tiers as you’d like using NFTs. These NFT rewards can be listed at any price and can be represented by an image, GIF, or video. You can choose to set a limited or unlimited supply for each tier, so for example, you can make higher tiers more exclusive with only 10 available vs. more accessible lower tiers with up to 100 available. Supporters can contribute as many times as they’d like, with no contribution limit, and can receive multiple rewards if they choose.
 
@@ -91,7 +91,7 @@ On Juicebox, it doesn’t matter where you’re from, you can launch a project f
 
 As long as you have an internet connection, you can use [juicebox.money](http://juicebox.money).
 
- 
+
 
 ### Payout time
 
@@ -107,7 +107,7 @@ On Juicebox, you can send payouts from your project anytime during the cycle, wi
 
 ![Customization](customization.webp)
 
-The last category that we’ll cover is customization. 
+The last category that we’ll cover is customization.
 
 Indiegogo lets you choose your project title, add a description, images, and videos from YouTube or Vimeo.
 

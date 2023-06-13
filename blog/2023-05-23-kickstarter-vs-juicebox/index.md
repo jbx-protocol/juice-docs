@@ -9,7 +9,7 @@ tags: [guide]
 
 ![Kickstarter vs Juicebox](kickstarter-vs-juicebox.webp)
 
-When it comes to launching a campaign, the choices for crowdfunding are abundant. Kickstarter is one of the most recognized traditional crowdfunding platforms, while Juicebox has recently emerged as a pivotal force when it comes to crypto fundraising. In this article, we’ll look at the advantages and disadvantages of both tools in terms of fees, funding models, rewards, global reach, payout time, and customization. 
+When it comes to launching a campaign, the choices for crowdfunding are abundant. Kickstarter is one of the most recognized traditional crowdfunding platforms, while Juicebox has recently emerged as a pivotal force when it comes to crypto fundraising. In this article, we’ll look at the advantages and disadvantages of both tools in terms of fees, funding models, rewards, global reach, payout time, and customization.
 
 ![Kickstarter vs Juicebox chart](kickstarter-vs-juicebox-comparison.webp)
 
@@ -41,7 +41,7 @@ In contrast, Juicebox does not take a cut of any payments that are made to your 
 
 ![Funding models](funding-models.webp)
 
-Moving onto funding models, Kickstarter is infamous for its “all or nothing” approach where a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers. 
+Moving onto funding models, Kickstarter is infamous for its “all or nothing” approach where a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers.
 
 With Juicebox, you have the power to lock project settings for a timeframe of your choosing, known as a `cycle`. Whether it's 3 days, 14 days, or even a month, you have the freedom to decide how long all of your settings stay in place for while choosing between three different funding models:
 
@@ -86,13 +86,13 @@ The next category we’ll talk about is global reach. While Kickstarter is limit
 
 *As long as you have an internet connection, you can use [juicebox.money](http://juicebox.money).*
 
- 
+
 
 ### Payout time
 
 ![Payout time](payout-time.webp)
 
-Time is of the essence when it comes to accessing your funds, so that your campaign can scale successfully. Kickstarter imposes a 14-day waiting period after reaching your funding goal before releasing the funds to you. Juicebox, on the other hand, offers you complete control over payout timing. You can send payouts from your project at any point during the cycle you set, as long as they fall within the pre-defined limit. For example, if you had a project with a 14-day cycles and Limited Payouts of 10 ETH, you could make a single withdrawal or multiple smaller transactions anytime, up to the total limit of 10 ETH. If you opt for Unlimited Payouts, there are no limits to when you can withdraw funds during the cycle. 
+Time is of the essence when it comes to accessing your funds, so that your campaign can scale successfully. Kickstarter imposes a 14-day waiting period after reaching your funding goal before releasing the funds to you. Juicebox, on the other hand, offers you complete control over payout timing. You can send payouts from your project at any point during the cycle you set, as long as they fall within the pre-defined limit. For example, if you had a project with a 14-day cycles and Limited Payouts of 10 ETH, you could make a single withdrawal or multiple smaller transactions anytime, up to the total limit of 10 ETH. If you opt for Unlimited Payouts, there are no limits to when you can withdraw funds during the cycle.
 
 ### Customization
 
@@ -104,11 +104,11 @@ Kickstarter allows you to select your project title, add descriptions, and inclu
 
 ### Conclusion - What Makes Juicebox Different
 
-To summarize, Juicebox sets itself apart from traditional crowdfunding platforms through its unparalleled flexibility in campaign execution. It enables you to launch your project and receive support from anywhere globally. As your campaign evolves, you can set new goals and adjust your Payouts while maintaining a healthy and transparent relationship with your backers. By utilizing tokens, Juicebox empowers you to build a thriving community, offer perks and incentives, and stand out in a less saturated marketplace. 
+To summarize, Juicebox sets itself apart from traditional crowdfunding platforms through its unparalleled flexibility in campaign execution. It enables you to launch your project and receive support from anywhere globally. As your campaign evolves, you can set new goals and adjust your Payouts while maintaining a healthy and transparent relationship with your backers. By utilizing tokens, Juicebox empowers you to build a thriving community, offer perks and incentives, and stand out in a less saturated marketplace.
 
 Moreover, accepting payments in ETH on Juicebox provides exposure to a new audience and the potential for increased value if the price of ETH rises. However, it's important to note that ETH is a volatile asset, and it's crucial to conduct thorough research and understand the associated risks of cryptocurrencies.
 
-If you’re not sure which way to go for your next campaign, you should consider launching your campaign on both Kickstarter and Juicebox. By launching your project on Kickstarter and supplementing it with crypto crowdfunding on Juicebox, you can leverage the benefits of both worlds. This approach allows you to tap into a wider audience while accepting payments in ETH. With Juicebox, you also enjoy the added advantage of an extended campaign duration, potentially benefiting from any appreciation in the value of ETH, however, please do your own research about risks of cryptocurrencies. 
+If you’re not sure which way to go for your next campaign, you should consider launching your campaign on both Kickstarter and Juicebox. By launching your project on Kickstarter and supplementing it with crypto crowdfunding on Juicebox, you can leverage the benefits of both worlds. This approach allows you to tap into a wider audience while accepting payments in ETH. With Juicebox, you also enjoy the added advantage of an extended campaign duration, potentially benefiting from any appreciation in the value of ETH, however, please do your own research about risks of cryptocurrencies.
 
 
 ### Resources

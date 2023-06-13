@@ -16,7 +16,7 @@ In the Town Hall, Kmac invited the audience to play a simple chicken-shit-bingo 
 
 ![Defifa.net now](defifa0606.webp)
 
-Aeolian recently joined the Defifa team and helped improving some front end stuff and updated the codebase with a few libraries.. Most of the original codebase had still been those started and evolved by Blaz and Devian in the early stage of this project last yea, and their technical components under the hood were quite different from those being used on juicebox.money. 
+Aeolian recently joined the Defifa team and helped improving some front end stuff and updated the codebase with a few libraries.. Most of the original codebase had still been those started and evolved by Blaz and Devian in the early stage of this project last yea, and their technical components under the hood were quite different from those being used on juicebox.money.
 
 And according to Kmac, the NFTs are all dynamically generating SVGs that will reflect some information about the game, such as number of times they have been minted, and the different phases that the game evolves into, which means the state of the game will always be represented in each NFT in real time.
 
@@ -40,7 +40,7 @@ The Juicebox cards was a project which allowed users to mint an NFT to replicate
 
 Nicholas had been working on a Juicebox metadata updater. As the metadata of a Juicebox project is generated onchain, its values change over time. But when these NFTs are shown on OpenSea or other sites that relying on OpenSea, their metadata won't be refreshed real time, but rather with their cache stored in OpenSea. This Juicebox metadata updater helps updating the metadata of these NFTs on OpenSea so that the metadata shown there are always up-to-date.
 
-Also Nicholas launched [a fundrasing round on Blunt](https://blunt.fund/rounds/519), to check if there would be enough interest in generlizing this product for all other 721 projects on OpenSea. 
+Also Nicholas launched [a fundrasing round on Blunt](https://blunt.fund/rounds/519), to check if there would be enough interest in generlizing this product for all other 721 projects on OpenSea.
 
 ![OpenSea Metadata Refresher Blunt round](metadata_refresher_blunt.webp)
 

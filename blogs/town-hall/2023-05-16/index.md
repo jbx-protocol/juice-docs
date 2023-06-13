@@ -14,11 +14,11 @@ tags: [town-hall]
 
 **Fair Lunch** is a project that aims to help people crowdfund to create a meme coin in a fair and decentralized way. When funding is closed with success, the new meme coins and funded ETH will be used to start a liquidity pool on AMMs automatically at a proportion defined in advance, so as to ensure a fair launch of the meme coin, lunch served!
 
-In the Town Hall, Jango demonstrated how to use Blunt to create a Fair Lunch funding round. When this fundraising ends successfully, then the ownership of this project will be transferred to, intead of a pre-defined owner. but the Fair Lunch contract, which will in turn schedule a new funding cycle immediately that allows owner's token minting and distribution of all ETH in the project's treasury to Fair Lunch contract. Then the meme coins will be paired with ETH at a certain ratio and  added to a liquidity pool on AMMs. 
+In the Town Hall, Jango demonstrated how to use Blunt to create a Fair Lunch funding round. When this fundraising ends successfully, then the ownership of this project will be transferred to, intead of a pre-defined owner. but the Fair Lunch contract, which will in turn schedule a new funding cycle immediately that allows owner's token minting and distribution of all ETH in the project's treasury to Fair Lunch contract. Then the meme coins will be paired with ETH at a certain ratio and  added to a liquidity pool on AMMs.
 
 From a pattern's perspective, we have this hook `onERC721Received`, which is the standard hook for ERC721s, and it will be used to detect when the project ownership on Blunt is passed to the Fair Lunch contract and trigger the actions thereafter.
 
- There are two parameters to make a new fair lunch and describe a particular Fair Lunch contract, the Multipler and the Splits. 
+ There are two parameters to make a new fair lunch and describe a particular Fair Lunch contract, the Multipler and the Splits.
 
 - The Multiplier sets the initial price that the tokens will be offered in the LP. A multiplier of 1 basically means mint exactly at the token/ETH ratio specified in the Blunt round to start the LP. A higher multiplier will make the token price better in the initiation of that LP.
 - Juicebox Splits can be set so that as soon as the Blunt ownership is transferred and so are the raised the funds, some of the funds can be split off and routed to a list of beneficiary addresses, while the leftover funds will be used to kickstart the LP.
@@ -45,7 +45,7 @@ To try the Planet app with the Croptop template, here are the steps to be follow
 
    ![get the IPNS of your planet](croptop_get_ipns.webp)
 
-5. Go to [ENS app](https://app.ens.domains/) to edit records for your ENS name, paste the IPNS into the field of Content Hash and add a prefix of "ipns://" in front of it. 
+5. Go to [ENS app](https://app.ens.domains/) to edit records for your ENS name, paste the IPNS into the field of Content Hash and add a prefix of "ipns://" in front of it.
 
    ![referencing IPNS in ENS name's Content Hash](croptop_contenthash.webp)
 
@@ -59,7 +59,7 @@ To try the Planet app with the Croptop template, here are the steps to be follow
 
 If you are interested in how to collect a image from an ENS website and post it onto a Juicebox project, please jump [here](https://docs.juicebox.money/town-hall/23-05-09/#planet-croptop-template-demo-by-jango-and-livid) to check what Jango and Livid introduced in our last Town Hall.
 
-Though Planet allows people to host the contents distributed peer-to-peer, propagation in the peer-to-peer system might not very fast at this stage. Planet has a Juicebox project called [Plantable Pinning](https://juicebox.money/@pinnable) which offers a central pinning service to make the propagation a lot faster, people can choose to mint NFTs on this project to have access to this pinning service. 
+Though Planet allows people to host the contents distributed peer-to-peer, propagation in the peer-to-peer system might not very fast at this stage. Planet has a Juicebox project called [Plantable Pinning](https://juicebox.money/@pinnable) which offers a central pinning service to make the propagation a lot faster, people can choose to mint NFTs on this project to have access to this pinning service.
 
 Anyone who is interested to know more about Croptop is welcome to join the [Croptop Discord](https://discord.gg/tjkZrhhMAU).
 
@@ -79,7 +79,7 @@ Recent work by Peel:
 
 On the Town Hall, Tjl also walked us through [Canny](https://canny.io/), which is essentially a tool that allows people to add a feature request idea or some feedback, and also allows people to vote on it.  Peel team had been using this in front end work for a while. Nicholas suggested that we should expand this tool outwards and allow anybody in the DAO to post in Canny our updates, ideas or feeback. So, now anybody can come [here](https://juicebox.canny.io/feature-requests) to post their ideas or feedback, vote on them or add some comments.
 
-It will probably be a very good way to get a temperature check on things that community members care about or are interested in. 
+It will probably be a very good way to get a temperature check on things that community members care about or are interested in.
 
 ![Canny for idea management](peel_canny.webp)
 

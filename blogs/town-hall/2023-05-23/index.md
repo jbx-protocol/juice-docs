@@ -27,7 +27,7 @@ The tournament followed a structured flow, consisting of the following phases:
 
 
 
-### The Create Flow of Defifa 
+### The Create Flow of Defifa
 
 During the town hall, Kmac provided a demonstration of the new create flow of Defifa, outlining the two steps involved in game creation.
 
@@ -35,7 +35,7 @@ During the town hall, Kmac provided a demonstration of the new create flow of De
 
 ![Defifa create flow step 1](defifa_createflow1.webp)
 
-2. The second step allows users to customize the NFTs for the tournament, including setting their prices and allocating a reserved rate to a pre-defined beneficiary. 
+2. The second step allows users to customize the NFTs for the tournament, including setting their prices and allocating a reserved rate to a pre-defined beneficiary.
 
 ![Defifa create flow step 2](defifa_createflow2.webp)
 
@@ -66,7 +66,7 @@ We had seen some great progress in the Bananapus staking component thanks to the
 
 Regarding the L2 deployment of the Juicebox protocol, there had been a slight delay. The team had decided it would be more efficient to organize the repositories separately. This means the Juicebox V3 repository will remain as it is, while a new repository will be created specifically for multi-chain purposes. Once the new repository is up and running, we will proceed with integrating it into Defifa.
 
-In recent weeks, Jango had been actively working on updates for the Croptop templates. Additionally, he had launched an experimental [Croptop Publish Network](https://goerli.juicebox.money/v2/p/758) project on Goerli test net, which serves as an unowned central hub for decentralized posting and minting of P2P distributed contents. 
+In recent weeks, Jango had been actively working on updates for the Croptop templates. Additionally, he had launched an experimental [Croptop Publish Network](https://goerli.juicebox.money/v2/p/758) project on Goerli test net, which serves as an unowned central hub for decentralized posting and minting of P2P distributed contents.
 
 ![Croptop Publishing Network project on Goerli](cpn_goerli.webp)
 

@@ -16,7 +16,7 @@ To try to play with the current version of Croptop, you may go to [croptop.eth](
 
 ![Croptop.eth.limo instructions](croptop_eth.PNG)
 
-Jango introduced that there were a `Fork` button at the top right corner on any site that is running with Croptop template.  By clicking it, people can try to start using Croptop to post and mint contents onchain in a decentralized way in the following steps: 
+Jango introduced that there were a `Fork` button at the top right corner on any site that is running with Croptop template.  By clicking it, people can try to start using Croptop to post and mint contents onchain in a decentralized way in the following steps:
 
 ![Croptop instructions for people to fork this fundraising solution](croptop_fork_1.webp)
 
@@ -36,7 +36,7 @@ Jango introduced that there were a `Fork` button at the top right corner on any 
 
 Right now, we were still using the Planet App to implement this Croptop fundraising initiative, but Jango said we would soon have a dedicated Croptop Mac App, which should be more straightforward and easy to use.
 
-So if you're on a Mac and you want to make use of your ENS name to run a personal fundraising site, this is going to be a really good way to tell stories about what you're working on. 
+So if you're on a Mac and you want to make use of your ENS name to run a personal fundraising site, this is going to be a really good way to tell stories about what you're working on.
 
 ## Defifa Updates by Jango and Kmac
 
@@ -52,7 +52,7 @@ There were two major work projects underway in Peel team at this momentl: the pr
 
 For project page revamp, Peel was starting on a new trajectory in terms of project page layout and what could be done, as well as introducing  some new features such as a cart to support adding multiple NFTs or collections.
 
-And for project settings, there was already a delegation page live on the project setting home page, which was an easier navigation page. Peel had split up some items in the settings and made them more user friendly and easier to navigate. 
+And for project settings, there was already a delegation page live on the project setting home page, which was an easier navigation page. Peel had split up some items in the settings and made them more user friendly and easier to navigate.
 
 ![Delegation page on project settings home](Peel_delegation_page.webp)
 
@@ -68,7 +68,7 @@ Nicholas developed a TokenURI resolver contract a little while ago, which lets p
 
 ### Juicebox Cards
 
-Nicholas also wrote a Juicebox project cards contract, an ERC-1155 NFT contract that lets users mint an NFT replicating the metadata of any Juicebox project and keep it in their wallets,  making it possible for them to stay updated with any changes of that specific project. 
+Nicholas also wrote a Juicebox project cards contract, an ERC-1155 NFT contract that lets users mint an NFT replicating the metadata of any Juicebox project and keep it in their wallets,  making it possible for them to stay updated with any changes of that specific project.
 
 Nicholas had been absent from this Town Hall, so he asked Matthew to concisely introduce this product in the town hall, and help calling out people to go to the [Beta site of Juicebox Cards](https://juicebox-cards.vercel.app/) and give it a try. Any feedback on that would be highly welcome.
 
@@ -76,7 +76,7 @@ Nicholas had been absent from this Town Hall, so he asked Matthew to concisely i
 
 ## Juicecast Updates by Matthew and Brileigh
 
-Matthew and Brileigh announced the release of a new Juicecast episode, featuring [Livid](https://twitter.com/Livid) from [Planet](https://www.planetable.xyz/), the App that recently Jango had been using to push his Croptop efforts. 
+Matthew and Brileigh announced the release of a new Juicecast episode, featuring [Livid](https://twitter.com/Livid) from [Planet](https://www.planetable.xyz/), the App that recently Jango had been using to push his Croptop efforts.
 
 In this episode, they talked about:
 

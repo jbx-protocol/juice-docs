@@ -42,7 +42,7 @@ Key functionality changes:
 
 Juicebox v2 was audited by [PeckShield](/assets/files/peckshield-audit-report-ab36ee2b5dfb2a387410b4d64276f6ba.pdf/) and [Certik](/assets/files/certik-audit-report-12b48328d22ac38207dad74162cac1db.pdf/) before being deployed, and was audited by a [Code4rena contest](https://code4rena.com/contests/2022-07-juicebox-v2-contest) after it was deployed. This audit identified several bugs and inefficiencies, which were addressed in Juicebox v3 – a re-deploy of several (but not all) protocol contracts. Juicebox v3 was deployed to Ethereum mainnet on September 20th, 2022. Its API documentation is available [here](/dev/deprecated/v3/), and its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v3).
 
-## v3.1 
+## v3.1
 
 A [high severity bug](/dev/resources/post-mortem/2023-01-27/) was identified when deploying the [v3 JBX migration contracts](/dev/extensions/juice-v3-migration/). The bug was mitigated for [JuiceboxDAO's project](https://juicebox.money/@juicebox) by adopting [JBController3_0_1](/dev/deprecated/v3/or-controllers/jbcontroller3_0_1/), which was followed up by a more robust fix to address other risks and inefficiencies: [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/) and [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/).
 
