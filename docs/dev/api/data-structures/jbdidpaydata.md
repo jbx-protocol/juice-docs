@@ -42,4 +42,40 @@ struct JBDidPayData {
 * `beneficiary` is the address to which the tokens were minted.
 * `preferClaimedTokens` is a flag indicating whether the request prefered to mint project tokens into the beneficiaries wallet rather than leaving them unclaimed. This is only possible if the project has an attached token contract.
 * `memo` is the memo that is being emitted alongside the payment.
-* `metadata` is extra data to send to the delegate.
+* `metadata` is extra data to send to the delegate (see further information below).
+
+#### Metadata
+
+The `metadata` field of `JBDidPayData` can be used by delegates to define custom payment data. For example, [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) uses the metadata to communicate whether overspending should be allowed and which tiers should be minted in [`_processPayment(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#_processpayment):
+
+```
+...
+
+// Skip the first 32 bytes which are used by the Juicebox protocol to pass the referring project's ID.
+// Skip another 32 bytes which are reserved for generic extension parameters.
+// Check the 4 byte interfaceId to verify that the metadata is intended for this contract.
+if (_data.metadata.length > 68 && bytes4(_data.metadata[64:68]) == type(IJBTiered721Delegate).interfaceId) {
+    // Keep a reference to the tier IDs to mint.
+    uint16[] memory _tierIdsToMint;
+
+    // Decode the metadata.
+    (,,, _allowOverspending, _tierIdsToMint) =
+        abi.decode(_data.metadata, (bytes32, bytes32, bytes4, bool, uint16[]));
+
+    // Make sure overspending is allowed if requested.
+    if (_allowOverspending && store.flagsOf(address(this)).preventOverspending) {
+        _allowOverspending = false;
+    }
+
+    // Mint tiers if they were specified.
+    if (_tierIdsToMint.length != 0) {
+        _leftoverAmount = _mintAll(_leftoverAmount, _tierIdsToMint, _data.beneficiary);
+    }
+} else if (!store.flagsOf(address(this)).preventOverspending) {
+    _allowOverspending = true;
+}
+
+...
+```
+
+As mentioned in the comments of this function, the first 32 bytes are typically used by the protocol to pass the referring frontend's ID, and the next 32 bytes are reserved for generic extension parameters.
