@@ -2,12 +2,12 @@
 slug: gofundme-vs-juicebox
 title: GoFundMe vs Juicebox - expand your non-profit or charity using crypto
 description: Comparing the differences between GoFundMe and crypto fundraising on Juicebox
-image: https://docs.juicebox.money/assets/images/gofundme-vs-juicebox-838205171f09b208c17fe7ad9ae13950.png
+image: https://docs.juicebox.money/assets/images/gofundme-vs-juicebox-838205171f09b208c17fe7ad9ae13950.webp
 authors: [brileigh, matthew]
 tags: [guide]
 ---
 
-![GoFundMe vs Juicebox](gofundme-vs-juicebox.png)
+![GoFundMe vs Juicebox](gofundme-vs-juicebox.webp)
 
 Fundraising plays a crucial role for non-profit organizations and charities, serving as a lifeline for their operations and initiatives. The money gained from crowdfunds helps these organizations to fulfill their mission, support their beneficiaries, and create a positive impact in the community. In today's digital age, leveraging online platforms and digital tools has become increasingly vital, as it allows non-profits and charities to extend their reach to a broader audience and engage supporters globally in order to amplify their impact towards their cause. 
 
@@ -17,17 +17,17 @@ GoFundMe is one of the most recognized platforms for non-profits, charities, and
 Looking to compare Juicebox to other crowdfunding platforms like Kickstarter or Indiegogo? You can watch [this video](https://www.youtube.com/watch?v=XDhaGvKFDNQ) on the JBDAO YouTube covering both, or read the individual [Kickstarter comparison article](https://docs.juicebox.money/blog/kickstarter-vs-juicebox/) or [Indiegogo comparison article](https://docs.juicebox.money/blog/indiegogo-vs-juicebox/) on the Juicebox blog.
 :::
 
-![GoFundMe vs Juicebox Chart](gofundme-vs-juicebox-chart.png)
+![GoFundMe vs Juicebox Chart](gofundme-vs-juicebox-chart.webp)
 
 ### Platform Fees
 
-![fees.png](fees.png)
+![fees.webp](fees.webp)
 
 Fundraisers on GoFundMe have no initial charge, but ask donors for an optional tip for using the platform. Campagins on Juicebox are free to launch, but charge a withdrawal fee of 2.5% whenever funds are distributed from a project. It’s worth noting that while creating a project on [juicebox.money](http://juicebox.money) is free, there are transaction fees from Ethereum that could cost $100 or more when launching a project. This will change down the road as Juicebox is expands to Layer-2 chains like Arbitrum and Polygon.
 
 On the flipside, because Juicebox is [community-owned](https://juicebox.money/about), any fees paid will earn you $JBX tokens. These tokens grant you the power to actively participate in [JuiceboxDAO governance](https://www.jbdao.org/), shaping the future of Juicebox. In other words, the community that *uses* Juicebox also *owns* Juicebox!
 
-![Juicebox is community owned](jb-community-owned.png)
+![Juicebox is community owned](jb-community-owned.webp)
 
 ### Payment Processing Fees
 
@@ -35,7 +35,7 @@ Although launching a campaign is free on GoFundMe, all payments have a transacti
 
 ### Funding Models
 
-![funding models](fundingmodels.png)
+![funding models](fundingmodels.webp)
 
 All campaigns on GoFundMe allow project creators to set a goal and keep the funds the raise regardless if they meet their goal or not. Both GoFundMe and Juicebox offer indefinite campaign lengths, but Juicebox offers three different models for how you can manage funds, with the flexibility to pause payments, or offer refunds if needed.
 
@@ -53,11 +53,11 @@ With this option, you can withdraw as much ETH as you raise, without any fixed l
 
 In this scenario, none of the project's ETH can be withdrawn by the project owner during that cycle. All ETH remains within the project, allowing backers the freedom to redeem their tokens for ETH and obtain refunds at any time. In future Cycles, you have the flexibility to change the Payouts setting as per your requirements. Setting Payouts to None is particularly useful for campaigns that prioritize giving backers the option to request refunds whenever they desire.
 
-![Juicebox funding models](juicebox-funding-models.png)
+![Juicebox funding models](juicebox-funding-models.webp)
 
 ### Rewards
 
-![Rewards](rewards.png)
+![Rewards](rewards.webp)
 
 Moving on, the next category we’ll look at is Rewards, so if backers meet a certain funding criteria they can receive perks. Crowdfunding campaigns that use rewards often have a higher success rate than those without because they create incentives for a variety of backers to support your project at different price points.
 
@@ -65,7 +65,7 @@ GoFundMe does not allow any use of rewards for donors on its platform.
 
 On Juicebox, you can offer as many reward tiers as you’d like using NFTs. These NFT rewards can be listed at any price and can be represented by an image, GIF, or video. You can choose to set a limited or unlimited supply for each tier, so for example you can make higher tiers more exclusive with only 10 available vs. more accessible lower tiers with up to 100 available. Supporters can contribute as many times as they’d like, with no contribution limit, and can receive multiple rewards if they choose.
 
-![Juicebox banner](Jb_banner_9.png)
+![Juicebox banner](Jb_banner_9.webp)
 
 Juicebox also offers advanced tokenomics features, enabling the allocation of tokens to team members and offering incentives to early supporters, fostering long-term engagement. For an in-depth understanding of Juicebox project tokenomics, be sure to explore the comprehensive tutorial provided in [Part 1](https://www.youtube.com/watch?v=edPZOxTLaYA) and [Part 2](https://www.youtube.com/watch?v=wFl0E9pqZfk).
 
@@ -81,7 +81,7 @@ The next category we’ll talk about is global reach. While GoFundMe is limited 
 
 ### Payout time
 
-![payout time](payouttime.png)
+![payout time](payouttime.webp)
 
 Payout time is a critical part of campaigns for charities, especially those seeking funds for medical expenses. GoFundMe withdrawals take on average 2-5 business days for the funds to safely be deposited into the bank account on file. It’s worth noting that you must first connect the bank account of choice before being able to receive funds which could take 3-7 business days or longer to complete. 
 
@@ -91,7 +91,7 @@ Juicebox, on the other hand, offers you complete control over payout timing. You
 
 Lastly, let's explore customization options for your campaign.
 
-![customization](customization.png)
+![customization](customization.webp)
 
 Campaigns on GoFundMe mandate the location of the bank, a project title up to 35 characters, and offer a custom description and cover image to personalize your project. 
 

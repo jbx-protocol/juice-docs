@@ -14,7 +14,7 @@ Defifa project had made some progress recently, and the team was starting to run
 
 In the Town Hall, Kmac invited the audience to play a simple chicken-shit-bingo style game that he ran with  Defifa.
 
-![Defifa.net now](defifa0606.png)
+![Defifa.net now](defifa0606.webp)
 
 Aeolian recently joined the Defifa team and helped improving some front end stuff and updated the codebase with a few libraries.. Most of the original codebase had still been those started and evolved by Blaz and Devian in the early stage of this project last yea, and their technical components under the hood were quite different from those being used on juicebox.money. 
 
@@ -36,13 +36,13 @@ Dr.Gorilla said that he had started implementing what was in need of improvement
 
 The Juicebox cards was a project which allowed users to mint an NFT to replicate the metadata of a Juicebox project and stay updated with its changes. This project was developed by NIcholas,  and was now working at [Juicebox.cards](https://juicebox.cards/), but it was not yet finalized because there was still some work in progress as he needed to rewrite the contract to implement some more things.
 
-![Juicebox.cards website](juicebox_cards.png)
+![Juicebox.cards website](juicebox_cards.webp)
 
 Nicholas had been working on a Juicebox metadata updater. As the metadata of a Juicebox project is generated onchain, its values change over time. But when these NFTs are shown on OpenSea or other sites that relying on OpenSea, their metadata won't be refreshed real time, but rather with their cache stored in OpenSea. This Juicebox metadata updater helps updating the metadata of these NFTs on OpenSea so that the metadata shown there are always up-to-date.
 
 Also Nicholas launched [a fundrasing round on Blunt](https://blunt.fund/rounds/519), to check if there would be enough interest in generlizing this product for all other 721 projects on OpenSea. 
 
-![OpenSea Metadata Refresher Blunt round](metadata_refresher_blunt.png)
+![OpenSea Metadata Refresher Blunt round](metadata_refresher_blunt.webp)
 
 ## Delegate Hackathon Callout by Filipv
 
@@ -52,5 +52,5 @@ This hackathon is aimed at building new Juicebox delegates and/or data source fo
 
 In the Town Hall, Filipv called out that folks with ideas about funds delegates or data sources can come forth and share them in our Discord.
 
-![Delegate hackathon with BuidlGuidl](delegate_hackathon.png)
+![Delegate hackathon with BuidlGuidl](delegate_hackathon.webp)
 

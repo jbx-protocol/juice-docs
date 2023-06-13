@@ -2,18 +2,18 @@
 slug: indiegogo-vs-juicebox
 title: Indiegogo vs Juicebox - how to boost your crowdfunding campaign using crypto
 description: Comparing the pros and cons of Indiegogo and Juicebox
-image: https://docs.juicebox.money/assets/images/indiegogo-vs-juicebox-3b0fe93e72a120220eb53c1d3bd1ebc7.png
+image: https://docs.juicebox.money/assets/images/indiegogo-vs-juicebox-3b0fe93e72a120220eb53c1d3bd1ebc7.webp
 authors: [brileigh, matthew]
 tags: [guide]
 ---
 
-![Indiegogo vs Juicebox](indiegogo-vs-juicebox.png)
+![Indiegogo vs Juicebox](indiegogo-vs-juicebox.webp)
 
 When it comes to crowdfunding, new tools to fundraise pop up every year. Indiegogo is one of the more recognized tools for creators and entrepreneurs, but did you know that Juicebox is one of the leading crypto crowdfunding tools, raising over 50,000 ETH in volume?
 
 In this article, we’ll cover the main differences between crypto crowdfunding on Juicebox and Indiegogo as a traditional fundrasing platform. We’re going to look at the advantages and disadvantages in terms of fees, funding models, rewards, global reach, payout time, and customization. And even though we’re comparing Juicebox to Indiegogo, it’s not one or the other: the best option for most campaigns is to *also* launch on Juicebox so that you can accept payments in ETH.
 
-![Indiegogo vs Juicebox comparison](indiegogo-vs-juicebox-comparison.png)
+![Indiegogo vs Juicebox comparison](indiegogo-vs-juicebox-comparison.webp)
 
 You can follow along in this blog post, or check out this video on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO) which covers the differences between [Kickstarter vs Indiegogo vs Juicbeox](https://www.youtube.com/watch?v=XDhaGvKFDNQ).
 
@@ -25,7 +25,7 @@ Looking to compare Juicebox to GoFundMe? You can read [this article](https://doc
 
 ### Platform Fees
 
-![Fees](fees.png)
+![Fees](fees.webp)
 
 So, let’s start with platform fees. It’s free to start a campaign but Indiegogo charges a platform fee of 5% of all funds raised. And if you launch a campaign using Indiegogo’s InDemand program after launching your project elsewhere, like Kickstarter, they also charge an 8% fee of all funds raised.
 
@@ -33,7 +33,7 @@ Juicebox works differently and charges a 2.5% fee anytime funds are withdrawn fr
 
 Because Juicebox is community-owned, you’ll receive $JBX tokens in return for any fees paid which will allow you to get involved with JuiceboxDAO governance and help make decisions about Juicebox’s future. In other words, the community that *uses* Juicebox also *owns* Juicebox… which is something that traditional crowdfunding platforms lack.
 
-![Juicebox is community owned](juicebox-community-owned.png)
+![Juicebox is community owned](juicebox-community-owned.webp)
 
 ### Payment Processing Fees
 
@@ -45,7 +45,7 @@ Again, Juicebox works a bit differently and doesn’t charge any processing fees
 
 Next, let’s talk about funding models.
 
-![Funding models](funding-model.png)
+![Funding models](funding-model.webp)
 
 Indiegogo offers 2 options for campaigns; “all or nothing” and “flexible funding.” In all or nothing, a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers. “Flexible funding” is the second option, which lets the project owner keep all the funds raised even if they don’t meet their goal. 
 
@@ -63,7 +63,7 @@ The second option is Unlimited, which lets you withdraw as much ETH as you raise
 
 The last option is “None” which means that none of your project's ETH can be withdrawn in that cycle. All ETH will stay in your project which gives backers the freedom to redeem their tokens for ETH and get their money back at any time. This can be changed in a future cycle if you want to withdraw the funds. Setting Payouts to None is useful for campaigns that want to give backers the option to get a refund whenever they want.
 
-![Juicebox payout settings](juicebox-payout-settings.png)
+![Juicebox payout settings](juicebox-payout-settings.webp)
 
 <p class="subtitle">Overview of Payout Settings on Juicebox</p>
 
@@ -71,7 +71,7 @@ Unlike Indiegogo, projects on Juicebox can adapt over time so you can change you
 
 ### Rewards
 
-![Rewards](rewards.png)
+![Rewards](rewards.webp)
 
 Moving on, the next category we’ll look at is Rewards, so if backers meet a certain funding criteria they can receive perks. Crowdfunding campaigns that use rewards often have a higher success rate than those without because they create incentives for a variety of backers to support your project at different price points.
 
@@ -83,7 +83,7 @@ Juicebox also offers advanced tokenomics features which allow you set aside toke
 
 ### Global Reach
 
-![Global reach](global-reach.png)
+![Global reach](global-reach.webp)
 
 The next category we’ll talk about is global reach. Indiegogo used to support 225 countries when they first launched but have since cut down to 33 countries.
 
@@ -95,7 +95,7 @@ As long as you have an internet connection, you can use [juicebox.money](http://
 
 ### Payout time
 
-![Payout time](payout-time.png)
+![Payout time](payout-time.webp)
 
 The next category we’ll look at is payout time.
 
@@ -105,7 +105,7 @@ On Juicebox, you can send payouts from your project anytime during the cycle, wi
 
 ### **Customization**
 
-![Customization](customization.png)
+![Customization](customization.webp)
 
 The last category that we’ll cover is customization. 
 

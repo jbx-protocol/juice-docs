@@ -33,11 +33,11 @@ During the town hall, Kmac provided a demonstration of the new create flow of De
 
 1. The first step entails setting the name of the game, the duration for minting NFTs, the refund duration, and the start and end times of the game.
 
-![Defifa create flow step 1](defifa_createflow1.png)
+![Defifa create flow step 1](defifa_createflow1.webp)
 
 2. The second step allows users to customize the NFTs for the tournament, including setting their prices and allocating a reserved rate to a pre-defined beneficiary. 
 
-![Defifa create flow step 2](defifa_createflow2.png)
+![Defifa create flow step 2](defifa_createflow2.webp)
 
 While the create flow was still a work in progress, Jango highlighted two noteworthy features in the contract that have not yet been supported in the UI:
 
@@ -58,7 +58,7 @@ In addition to that, they will also be having discussions with the team at [Cryo
 
 To provide more helpful resources, they had recently published several videos and blog posts with guides for various purposes. These valuable resources will be showcased in our upcoming Town Hall next week. Stay tuned for more updates and exciting demos!
 
-![analysis between Kickstarter, Indiegogo and Juicebox](guide_kickindiejuice.png)
+![analysis between Kickstarter, Indiegogo and Juicebox](guide_kickindiejuice.webp)
 
 ## L2 and Croptop Updates from Jango
 
@@ -68,7 +68,7 @@ Regarding the L2 deployment of the Juicebox protocol, there had been a slight de
 
 In recent weeks, Jango had been actively working on updates for the Croptop templates. Additionally, he had launched an experimental [Croptop Publish Network](https://goerli.juicebox.money/v2/p/758) project on Goerli test net, which serves as an unowned central hub for decentralized posting and minting of P2P distributed contents. 
 
-![Croptop Publishing Network project on Goerli](cpn_goerli.png)
+![Croptop Publishing Network project on Goerli](cpn_goerli.webp)
 
 
 

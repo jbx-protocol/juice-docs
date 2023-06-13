@@ -2,14 +2,14 @@
 slug: jb-for-fundraising
 title: Juicebox for Fundraising - crypto crowdfunding campaigns that raised millions & how Juicebox works
 description: Success stories of past campaigns that raised millions on Juicebox
-image: https://docs.juicebox.money/assets/images/2-642e61e64bcae02881cabd398fc62679.png
+image: https://docs.juicebox.money/assets/images/2-642e61e64bcae02881cabd398fc62679.webp
 authors: [brileigh, matthew]
 tags: [highlight]
 ---
 
 # Juicebox for Fundraising: crypto crowdfunding campaigns that raised millions & how Juicebox works
 
-![2.png](2.png)
+![2.webp](2.webp)
 
 Since the launch of the Juicebox Protocool, crypto crowdfunding has emerged as a transformative force, redefining the traditional fundraising paradigm. 
 
@@ -23,19 +23,19 @@ You can follow along in this article, or a video by Matthew on the JBDAO YouTube
 
 In November 2021, ConstitutionDAO raised over $46 million in ETH to purchase an original copy of the U.S. Constitution on auction at Sotheby’s. The whole project started out as a meme on Twitter when the auction was announced with friends joking, “what if we put our money together and bought the Constitution???” A week later, the campaign managed to raise 11,600 ETH with over 19 thousand individual payments.
 
-![4.png](4.png)
+![4.webp](4.webp)
 
 ### Example 2: MoonDAO
 
 In late 2021, MoonDAO rallied a community of space enthusiasts and raised $8.3 million to send a DAO member to space on a Blue Origin rocket. Their ambitious long-term roadmap goals include building a settlement on the Moon by 2030. Raising over 2600 ETH with 2600 individual payments, their unique mission demonstrates that setting ambitious and even outlandish goals can pay off when they resonate with your audience.
 
-![5.png](5.png)
+![5.webp](5.webp)
 
 ### Tips
 
 In both of these examples, it all started with a meme-worthy idea that went viral. There’s definitely something to learn here: a thriving community is a necessity for a successful fundraiser. ConstitutionDAO leveraged Nicholas Cage from National Treasure as a meme and managed to get thousands to join their Discord within 48 hours. But in most cases, you’ll need to have an audience established before starting your campaign.
 
-![6.png](6.png)
+![6.webp](6.webp)
 
 ### How Juicebox works for fundraising
 
@@ -51,7 +51,7 @@ So, how does Juicebox work for fundraising? You can create a project on [juicebo
 
 Crowdfunding on Juicebox means crowdfunding transparently and out in the open, so supporters can see where funds will go and what guardrails are in place to prevent scams. Rules like Payout limits and Cycles are hard-coded into smart contracts, so you don’t need to trust the project creator because it’s onchain. There are still risks though, so please do your own research before contributing to a project.
 
-![protocol.png](protocol.png)
+![protocol.webp](protocol.webp)
 
 ### Resources
 

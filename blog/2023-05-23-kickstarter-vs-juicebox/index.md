@@ -2,16 +2,16 @@
 slug: kickstarter-vs-juicebox
 title: Kickstarter vs Juicebox - how to get the most out of a crowdfund using crypto
 description: Comparing the differences between Kickstarter and crypto fundraising on Juicebox
-image: https://docs.juicebox.money/assets/images/kickstarter-vs-juicebox-538b2b2cdd738cc750333fe2975c5139.png
+image: https://docs.juicebox.money/assets/images/kickstarter-vs-juicebox-538b2b2cdd738cc750333fe2975c5139.webp
 authors: [brileigh, matthew]
 tags: [guide]
 ---
 
-![Kickstarter vs Juicebox](kickstarter-vs-juicebox.png)
+![Kickstarter vs Juicebox](kickstarter-vs-juicebox.webp)
 
 When it comes to launching a campaign, the choices for crowdfunding are abundant. Kickstarter is one of the most recognized traditional crowdfunding platforms, while Juicebox has recently emerged as a pivotal force when it comes to crypto fundraising. In this article, we’ll look at the advantages and disadvantages of both tools in terms of fees, funding models, rewards, global reach, payout time, and customization. 
 
-![Kickstarter vs Juicebox chart](kickstarter-vs-juicebox-comparison.png)
+![Kickstarter vs Juicebox chart](kickstarter-vs-juicebox-comparison.webp)
 
 You can follow along in this blog post, or this video on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO) which covers the differences between [Kickstarter vs Indiegogo vs Juicbeox](https://www.youtube.com/watch?v=XDhaGvKFDNQ).
 
@@ -23,13 +23,13 @@ Looking to compare Juicebox to GoFundMe? You can read [this article](https://doc
 
 ### Platform Fees
 
-![Fees](fees.png)
+![Fees](fees.webp)
 
 When launching a campaign on Kickstarter, there’s no initial fee, but they do charge 5% of all funds raised. Juicebox on the other hand, charges a mere 2.5% fee whenever funds are withdrawn from a project. Keep in mind that while creating a project on [juicebox.money](http://juicebox.money) is free, since Juicebox runs on Ethereum mainnet, there are transaction fees that could cost $100 or more when launching a project. This will change down the road as Juicebox is made available on Layer-2 chains like Arbitrum and Polygon.
 
 It’s worth noting that because Juicebox is [community-owned](https://juicebox.money/about), any fees paid will earn you $JBX tokens. These tokens grant you the power to actively participate in [JuiceboxDAO governance](https://www.jbdao.org/), shaping the future of Juicebox. In other words, the community that *uses* Juicebox also *owns* Juicebox… which is pretty cool.
 
-![the community that uses Juicebox also owns Juicebox.png](juicebox-community-owned.png)
+![the community that uses Juicebox also owns Juicebox.webp](juicebox-community-owned.webp)
 
 ### Payment Processing Fees
 
@@ -39,7 +39,7 @@ In contrast, Juicebox does not take a cut of any payments that are made to your 
 
 ### Funding Models
 
-![Funding models](funding-models.png)
+![Funding models](funding-models.webp)
 
 Moving onto funding models, Kickstarter is infamous for its “all or nothing” approach where a project sets a specific fundraising target and if it reaches that goal it gets to keep all of the money… however, if it doesn’t, then all of the money gets returned to backers. 
 
@@ -57,7 +57,7 @@ With this option, you can withdraw as much ETH as you raise, without any fixed l
 
 In this scenario, none of the project's ETH can be withdrawn by the project owner during that cycle. All ETH remains within the project, allowing backers the freedom to redeem their tokens for ETH and obtain refunds at any time. In future cycles, you have the flexibility to change the Payouts setting as per your requirements. Setting Payouts to None is particularly useful for campaigns that prioritize giving backers the option to request refunds whenever they desire.
 
-![Juicebox Payout Settings](juicebox-payout-settings.png)
+![Juicebox Payout Settings](juicebox-payout-settings.webp)
 
 <p class="subtitle">Overview of Payout Settings on Juicebox</p>
 
@@ -66,7 +66,7 @@ Unlike Kickstarter's rigid campaign duration, Juicebox enables projects to adapt
 
 ### **Rewards**
 
-![Rewards](rewards.png)
+![Rewards](rewards.webp)
 
 Moving on, the next category we’ll look at is Rewards, so if backers meet a certain funding criteria they can receive perks. Crowdfunding campaigns that use rewards often have a higher success rate than those without because they create incentives for a variety of backers to support your project at different price points.
 
@@ -74,13 +74,13 @@ On Kickstarter you can offer as many pledge reward tiers as you want, but backer
 
 On Juicebox, you can offer as many reward tiers as you’d like using NFTs. These NFT rewards can be listed at any price and can be represented by an image, GIF, or video. You can choose to set a limited or unlimited supply for each tier, so for example you can make higher tiers more exclusive with only 10 available vs. more accessible lower tiers with up to 100 available. Supporters can contribute as many times as they’d like, with no contribution limit, and can receive multiple rewards if they choose.
 
-![Juicebox banner](juicebox-banner.png)
+![Juicebox banner](juicebox-banner.webp)
 
 Juicebox also offers advanced tokenomics features, enabling the allocation of tokens to team members and offering incentives to early supporters, fostering long-term engagement. For an in-depth understanding of Juicebox project tokenomics, be sure to explore the comprehensive tutorial provided in [Part 1](https://www.youtube.com/watch?v=edPZOxTLaYA) and [Part 2](https://www.youtube.com/watch?v=wFl0E9pqZfk).
 
 ### Global Reach
 
-![Global reach](global-reach.png)
+![Global reach](global-reach.webp)
 
 The next category we’ll talk about is global reach. While Kickstarter is limited to 25 countries, primarily in North America and Europe, Juicebox is fully permissionless, you can launch a project from anywhere worldwide, attracting backers from across the globe. Whether you're an individual, a non-profit organization, a company, or a decentralized autonomous organization (DAO), Juicebox welcomes everyone with open arms.
 
@@ -90,13 +90,13 @@ The next category we’ll talk about is global reach. While Kickstarter is limit
 
 ### Payout time
 
-![Payout time](payout-time.png)
+![Payout time](payout-time.webp)
 
 Time is of the essence when it comes to accessing your funds, so that your campaign can scale successfully. Kickstarter imposes a 14-day waiting period after reaching your funding goal before releasing the funds to you. Juicebox, on the other hand, offers you complete control over payout timing. You can send payouts from your project at any point during the cycle you set, as long as they fall within the pre-defined limit. For example, if you had a project with a 14-day cycles and Limited Payouts of 10 ETH, you could make a single withdrawal or multiple smaller transactions anytime, up to the total limit of 10 ETH. If you opt for Unlimited Payouts, there are no limits to when you can withdraw funds during the cycle. 
 
 ### Customization
 
-![Customization](customization.png)
+![Customization](customization.webp)
 
 Lastly, let's explore customization options for your campaign.
 

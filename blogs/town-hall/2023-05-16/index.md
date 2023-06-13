@@ -35,25 +35,25 @@ To try the Planet app with the Croptop template, here are the steps to be follow
 
 2. Create your own Planet by clicking "Create Planet";
 
-   ![create your own planet](croptop_create.png)
+   ![create your own planet](croptop_create.webp)
 
 3. Set Croptop as the template of the new Planet;
 
-   ![set croptop template for your planet](croptop_set_template.png)
+   ![set croptop template for your planet](croptop_set_template.webp)
 
 4. Right click the created Planet and copy IPNS;
 
-   ![get the IPNS of your planet](croptop_get_ipns.png)
+   ![get the IPNS of your planet](croptop_get_ipns.webp)
 
 5. Go to [ENS app](https://app.ens.domains/) to edit records for your ENS name, paste the IPNS into the field of Content Hash and add a prefix of "ipns://" in front of it. 
 
-   ![referencing IPNS in ENS name's Content Hash](croptop_contenthash.png)
+   ![referencing IPNS in ENS name's Content Hash](croptop_contenthash.webp)
 
 6. After the planet is propagated through the peer-to-peer network,  you can visit your Planet with your ENS name by going a corresponding address like jango.eth.limo in the browser.
 
 7. Go to the template setting and your can set the Juicebox project ID that images on your Planet will be posted and minted from.
 
-   ![croptop integration of Juicebox project ID](croptop_projectintegration.png)
+   ![croptop integration of Juicebox project ID](croptop_projectintegration.webp)
 
 8. Juicebox.money front end will soon support the Juicebox project owners to set the Croptop contract as an operator in the project's settings, to post NFTs on the project page on their behalf.
 
@@ -75,11 +75,11 @@ Recent work by Peel:
 
 - We now have a new ConnectKit wallet in our Connect section, to provide a much smoother UX, especially for people who don't have wallets. It looks really nice on mobile.
 
-  ![connect wallet interface on mobile](connectwallet_mobile.png)
+  ![connect wallet interface on mobile](connectwallet_mobile.webp)
 
 On the Town Hall, Tjl also walked us through [Canny](https://canny.io/), which is essentially a tool that allows people to add a feature request idea or some feedback, and also allows people to vote on it.  Peel team had been using this in front end work for a while. Nicholas suggested that we should expand this tool outwards and allow anybody in the DAO to post in Canny our updates, ideas or feeback. So, now anybody can come [here](https://juicebox.canny.io/feature-requests) to post their ideas or feedback, vote on them or add some comments.
 
 It will probably be a very good way to get a temperature check on things that community members care about or are interested in. 
 
-![Canny for idea management](peel_canny.png)
+![Canny for idea management](peel_canny.webp)
 
