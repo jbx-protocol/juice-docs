@@ -1,12 +1,11 @@
 ---
 slug: /hackathon
+sidebar_position: 1
 ---
 
 # Scaffold JB Hackathon
 
 :::note Heads Up!
-**[JokeDAO voting is live](https://www.jokedao.io/contest/polygon/0x3Aa9538c6aCD23526fF72f75A9b9160a275379C3)!** Vote before 7:00 PM EDT on July 15th!
-
 The repo link for *JB Project Payer Extension – Tokens Receiver* is incorrect. You can find the repo [here](https://github.com/slice-so/jbpayer-tokens-receiver), and a demo [here](https://slice.so/jbpayer).
 :::
 
