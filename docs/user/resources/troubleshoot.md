@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 If you've run into errors on juicebox.money, you can often resolve them by:

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # About JuiceboxDAO
 
-JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their treasuries and tokens.
+JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their projects.
 
 JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
 
@@ -12,6 +12,7 @@ JuiceboxDAO contributors build in the open — to participate, read the [contrib
 - If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
 - Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
 - To learn more about JBX, read [JBX & Fees](/dao/reference/jbx/).
+- Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
 
 <details>
 
@@ -60,14 +61,6 @@ Juicebox governance runs on a [14 day cycle](process) – proposals receive "tem
 [Juicebox DAO Foundation](foundation)
 
 </details>
-
-### Partners
-
-[Peel](https://juicebox.money/@peel) is a group of immensely talented frontend devs. Peel's contributors are the masterminds behind [juicebox.money](https://www.juicebox.money). Contact them on [Discord](https://discord.gg/XvmfY4Hkcz).
-
-[WAGMI Studios](https://juicebox.money/@wagmi-studios) is a collective of quirky creatives behind Juicebox DAO's visual identity. WAGMI Studios' contributors are masters of storytelling, visual art, and animation. Contact them on [Discord](https://discord.gg/XnYFFGaXsu).
-
-[Nance](https://juicebox.money/v2/p/477) is building tools to facilitate and automate cyclic governance processes. Nance contributors are behind [Juicetool](https://juicetool.xyz/), [jbdao.org](https://jbdao.org), and [Nance](https://nance.app), the tool automating JuiceboxDAO's governance. Contact them on [Discord](https://discord.gg/zshrVC3Jhc).
 
 ### Who is Juicebox DAO?
 

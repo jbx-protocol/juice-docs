@@ -1,6 +1,6 @@
 ---
 title: Legal Resources
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 [juicebox.money](https://juicebox.money) does not provide any legal services for your project – if you're interested in setting up an entity or other legal agreements, you should speak with a legal expert. The resources below may be a good starting place.
