@@ -35,7 +35,7 @@ Which NFTs are "right" is decided by on-chain voting. Once a game finishes, anyo
 
 Juicebox projects are NFTs, held in the wallet of the project owner. Project owners can update the NFT's metadata. By default, these NFTs show the project's balance, payouts, and other details.
 
-[Juicebox Cards](https://juicebox.cards) allows people to mint ERC-1155 copies of these NFTs (NFT editions), and forwards part of revenues to the corresponding projects. Project creators can sell these cards to generate additional revenue and help their communities stay up to date with the project.
+[Juicebox Cards](https://juicebox.cards) allows people to mint ERC-1155 copies of these NFTs (NFT editions), and forwards revenues to the corresponding projects (optionally tipping the [metadata](https://juicebox.money/v2/p/465) project). Project creators can sell these cards to generate additional revenue and help their communities stay up to date with the project.
 
 [Website](https://juicebox.cards/) - [Contract GitHub](https://github.com/nnnnicholas/juicebox-project-cards) - [Frontend GitHub](https://github.com/nnnnicholas/juicebox-project-cards-frontend) - [Juicebox](https://juicebox.money/v2/p/465)
 
