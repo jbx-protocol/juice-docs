@@ -1,6 +1,6 @@
 ---
 slug: 23-06-13
-title: June 06th, 2023
+title: June 13th, 2023
 authors: [zhape]
 image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
@@ -10,7 +10,7 @@ tags: [town-hall]
 
 ## Croptop Updates by Jango
 
-Jango and Livid had done a lot of work to make the Croptop template support posts of audio, video and Makedown formats, so that now users can post whatever snippet of content on their ENS websites and have them all linked back to their Juicebox treasuries.
+Jango and Livid had done a lot of work to make the Croptop template support posts of audio, video and Markdown formats, so that now users can post whatever snippet of content on their ENS websites and have them all linked back to their Juicebox treasuries.
 
 They had worked a lot in CID (Content Identifier) to make sure the content was being correctly displayed and funneled into minting process. 
 
@@ -26,7 +26,7 @@ In the blog post, Jango proposed some treasury designs he thought would apply de
 
 Jango gave an example of a possible treasury design for Croptop in this town hall.  
 
-This [Croptop Publishing Network project](https://goerli.juicebox.money/v2/p/1016) will collect 5% fee when anybody posting on this project using Croptop template. $CPN project token will in turn be issued back out at a ratio of 900,000 / ETH with a decreasing cadence of 4% every other cycle (28 days). 10% of total $CPN issuance will be reserved to a multisig for two years, with a reconfiguration to remove this reserved token allocation scheduled to start two years from now. Also a 70% redemption rate is set so that $CPN holders can choose to claim their share from the treasury anytime if they want. Ideally a buyback delegate will also be attached to the cycles so as to guarantee payments will always get $CPN at its best price available.
+This [Croptop Publishing Network project](https://goerli.juicebox.money/v2/p/1016) will collect 5% fee when anybody posting on this project using Croptop template. $CPN project token will in turn be issued at a ratio of 1,000,000 / ETH with a decreasing cadence of 4% each following cycle (28 days). 10% of total $CPN issuance will be reserved to a multisig for two years, with a reconfiguration to remove this reserved token allocation scheduled to start two years from now. Also a 70% redemption rate is set so that $CPN holders can choose to claim their share from the treasury anytime if they want. Ideally a buyback delegate will also be attached to the cycles so as to guarantee payments will always get $CPN at its best price available.
 
 Then the project ownership will be thrown away, or essentially be given to a wallet that doesn't have access to make further changes to this project. It will be an experiment to check if we can figure out enough incentives to have $CPN distributed to developers who are keen to manage this project. It is a setup that leaves the bulk of the treasury unmanaged, which means folks have certain guarantees when contributing to it, and ETH in the treasury can serve a particular purpose and everyone is playing by similar rules. 
 
