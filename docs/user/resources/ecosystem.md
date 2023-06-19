@@ -3,6 +3,8 @@ title: Juicebox Ecosystem
 sidebar_position: 2
 ---
 
+Some of the projects building with Juicebox.
+
 ## Peel
 
 Peel is the group of developers behind [juicebox.money](https://juicebox.money), the flagship interface for the Juicebox protocol. If you're looking to commission a custom website for your project, inquire in [Peel's Discord](https://discord.gg/7NmqDwGhn2).
