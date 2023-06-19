@@ -2,7 +2,7 @@
 slug: gofundme-vs-juicebox
 title: GoFundMe vs Juicebox - expand your non-profit or charity using crypto
 description: Comparing the differences between GoFundMe and crypto fundraising on Juicebox
-image: https://docs.juicebox.money/assets/images/gofundme-vs-juicebox-838205171f09b208c17fe7ad9ae13950.webp
+image: https://docs.juicebox.money/assets/images/gofundme-vs-juicebox-446df3ea2ee65dee82029ce486ad34d8.webp
 authors: [brileigh, matthew]
 tags: [guide]
 ---

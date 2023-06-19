@@ -2,7 +2,7 @@
 slug: kickstarter-vs-juicebox
 title: Kickstarter vs Juicebox - how to get the most out of a crowdfund using crypto
 description: Comparing the differences between Kickstarter and crypto fundraising on Juicebox
-image: https://docs.juicebox.money/assets/images/kickstarter-vs-juicebox-538b2b2cdd738cc750333fe2975c5139.webp
+image: https://docs.juicebox.money/assets/images/kickstarter-vs-juicebox-626de0b0cc495188bc68ae6168af9b9c.webp
 authors: [brileigh, matthew]
 tags: [guide]
 ---

@@ -2,7 +2,7 @@
 slug: v3-migration
 title: How to migrate a Juicebox project from V1/V2 to V3
 description: Tutorial on how to migrate your Juicebox project from V1 or V2 to V3
-image: https://docs.juicebox.money/assets/images/banny-migrations-v3-juicebox-62bee6c17e1d1775d18b4b6d1ee5f9c6.webp
+image: https://docs.juicebox.money/assets/images/banny-migrations-v3-juicebox-434c36392cbc0cb0884ddcf8088d4cef.webp
 authors: [brileigh, matthew, 0xstvg]
 tags: [guide]
 ---
