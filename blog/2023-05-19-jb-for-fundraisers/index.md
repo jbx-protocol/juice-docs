@@ -11,7 +11,7 @@ tags: [highlight]
 
 ![2.webp](2.webp)
 
-Since the launch of the Juicebox Protocool, crypto crowdfunding has emerged as a transformative force, redefining the traditional fundraising paradigm.
+Since the launch of the Juicebox Protocol, crypto crowdfunding has emerged as a transformative force, redefining the traditional fundraising paradigm.
 
 With its ability to connect projects directly with a global network of anons and bypass the limitations of traditional financial systems, crypto crowdfunding has a huge potential for the next generation of projects seeking new models of funding. Over the last couple years, this has been arguably the most popular way to use Juicebox. This article will dive into success stories of past projects on the protocol that launched successful crowdfunding campaigns on Juicebox.
 
