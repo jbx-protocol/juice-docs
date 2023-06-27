@@ -11,7 +11,7 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 - Over $16k in rewards.
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you're looking for teammates or have questions.
-- Submit your project by sharing its name, a brief description, a repo URL, an Ethereum payout address, and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+- Submit your project by sharing its name, a brief description, a repo URL, your team's Juicebox project/Ethereum payout address, and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
 - Facilitated with love by [Buidl Guidl](https://buidlguidl.com/) and [JuiceboxDAO](/dao/).
 
 ## Timeline
