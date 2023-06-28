@@ -20,7 +20,7 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 ## Timeline
 
-**18:00 EDT, June 28th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
+**18:00 EDT, June 28th:** the hackathon begins with a [Twitter Spaces](https://twitter.com/i/spaces/1BdGYyYqwdEGX) featuring JuiceboxDAO + Buidl Guidl members.
 
 **12:00 EDT, July 11th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
 
