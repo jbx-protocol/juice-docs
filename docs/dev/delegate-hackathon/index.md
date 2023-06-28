@@ -14,7 +14,7 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 - Over $16k in rewards.
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you're looking for teammates or have questions.
-- Use the [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) repository to get going.
+- Use the [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template) repository to get going.
 - Submit your project by sharing its name, a brief description, a repo URL, your team's Juicebox project (to receive payouts), and a demo URL in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox).
 - Facilitated with love by [Buidl Guidl](https://buidlguidl.com/) and [JuiceboxDAO](/dao/).
 
@@ -59,7 +59,7 @@ All projects must be open source and use an [open source license](https://openso
 
 ## Resources
 
-- Use the [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) repository to set up your dev environment.
+- Use the [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template) repository to set up your dev environment.
 - Read through the [glossary](/dev/learn/glossary/) to refresh on or become acquainted with Juicebox terminology.
 - If looking for tips to start out, take a look at our guides on [building a data source](/dev/build/treasury-extensions/data-source/), [building a pay delegate](/dev/build/treasury-extensions/pay-delegate/), and [building a redemption delegate](/dev/build/treasury-extensions/redemption-delegate/).
 - To learn more about payment terminals, read our [payment terminal architecture](/dev/learn/architecture/terminals/) doc.
