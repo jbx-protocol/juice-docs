@@ -10,7 +10,7 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 ![](hackathon-nfts.webp)
 <p class="subtitle">The Summer 2023 Hackathon collection.</p>
 
-- Starts at 12:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
+- Starts at 18:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
 - Over $16k in rewards.
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you're looking for teammates or have questions.
@@ -20,7 +20,7 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 ## Timeline
 
-**12:00 EDT, June 28th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
+**18:00 EDT, June 28th:** the hackathon begins with a Twitter Spaces featuring JuiceboxDAO + Buidl Guidl members.
 
 **12:00 EDT, July 11th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
 
