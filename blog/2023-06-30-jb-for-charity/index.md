@@ -31,7 +31,7 @@ To learn more about how the MCSA got started, listen to episode 11 of [The Juice
 
 Del Piero is a founding member of [SharkDAO](https://juicebox.money/success-stories/sharkdao), a subDAO of NounsDAO that raised over 1000 ETH on Juicebox to acquire Nouns NFTs. In January 2022, Del Piero launched a [campaign](https://juicebox.money/success-stories/sharkdao) for his three year old son's cancer treatment and thank to the Nouns community he was able to raise over 21 ETH, worth over $60,000 at the time of the fundraiser.
 
-![Photograph of Del Piero's son in a Nouns hoodie at the hospital}](dion.png)
+![Photograph of Del Piero's son in a Nouns hoodie at the hospital](dion.png)
 
 <p class="subtitle">Photograph of Dek Piero's son in the hospital wearing a Nouns hoodie</p>
 
@@ -65,7 +65,7 @@ Launching a project on Juicebox for your charity or non-profit allows you to fun
 
 ### Resources
 
-If you have any questions about using Juicebox, come join the discord at [discord.gg/juicebox](http://discord.gg/juicebox) or book an onboarding session at [juicebox.money/contact](http://juicebox.money/contact).
+If you have any questions about using Juicebox, come join the [discord](http://discord.gg/juicebox) or book an onboarding session at [juicebox.money/contact](http://juicebox.money/contact).
 
 🐦 Follow Juicebox on Twitter: [@JuiceboxETH](https://twitter.com/juiceboxETH)
 
