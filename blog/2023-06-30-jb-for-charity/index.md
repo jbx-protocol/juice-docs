@@ -2,6 +2,7 @@
 slug: jb-for-charity
 title: Juicebox for charities and non-profits - the power of onchain funding explained
 description: Success stories of past charities that succesfully used Juicebox
+image: https://docs.juicebox.money/assets/images/jb_for_charity-742792b9ef667e17b0078747d5e6d746.png
 authors: [brileigh, matthew]
 tags: [highlight]
 ---
