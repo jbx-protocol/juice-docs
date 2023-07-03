@@ -10,9 +10,9 @@ tags: [town-hall]
 
 ## ETH Waterloo Updates by Nicholas
 
-Nicholas attended the ETH Waterloo last week and gave a speech on this event. The speech was about the token URI resolver and how users can make their own resolver with on-chain metadata. 
+Nicholas attended the ETH Waterloo last week and gave a speech on this event. The speech was about the token URI resolver and how users can make their own resolver with on-chain metadata.
 
-And he also made a hackathon project with on-chain SVGs which won a prize among the 11 finalists projects selected from this event.  
+And he also made a hackathon project with on-chain SVGs which won a prize among the 11 finalists projects selected from this event.
 
 There were quite a few sponsors on ETH Waterloo, such as Gnosis Chain, World Coin, Polygon, Sismo and Hyperlane etc. which had been pushing for narratives of Zero Knowledge or Cross chain. Nicholas thought sponsoring this type of event can be very ROI positive to help propogating use of protocols or APIs. Maybe we could think of sponsoring on similar events and make the requirements more specifically so that participants would make more use and dive deeper into our Juicebox protocol.
 
@@ -38,7 +38,7 @@ Jango thought it'd be cool to consider supporting some of these projects with li
 
 Jango introduced that Bananapus is a project focused on L2 developments and trying to experiment how to make Juicebox function well in L2s. The major part of that lies in making cross chain operations workable and sensible for a group of people who share an interest in a certain token or an organization.
 
-The pre-requisite of this system is to have a staking component for Juicebox project tokens. Although these token might have other use cases, it would be really useful to get us to L2s with these cross-chain capabilities. 
+The pre-requisite of this system is to have a staking component for Juicebox project tokens. Although these token might have other use cases, it would be really useful to get us to L2s with these cross-chain capabilities.
 
 The staking of Bananapus works in a way that instead of having NFTs denominated in ETH, it is going to use a payment terminal denominated in an arbitrary ERC-20 token of a Juicebox project, for example, a JBX payment terminal. The mental model of staking for Bananapus is that users can pay some ERC-20 tokens to a Juicebox treasury to mint an NFT, and also can redeem this NFT to get their tokens back from this treasury. We can reuse the juicebox.money UI and all the fuctionalities of a treasury to model it.
 
@@ -50,7 +50,7 @@ On the Town Hall, 0xBA5ED demoed some NFT artwork that had been done recently. T
 
 These NFTs were the default of Bananpus, so anyone can easily deploy staking solution for their project tokens and start routing rewards to it.
 
-Contract wise, minting and redeeming from an ERC-20 payment terminal had been basically ready to deployed and used, but it would still need some front end efforts to help supporting this ERC-20 payment terminal in the UI. 
+Contract wise, minting and redeeming from an ERC-20 payment terminal had been basically ready to deployed and used, but it would still need some front end efforts to help supporting this ERC-20 payment terminal in the UI.
 
 This would be our first scoped use case of an ERC-20 terminal, Jango suggested that we probably should consider working together to integrate the JB ERC-20 Terminal to one project (Bananapus) first, and testing if it would be working as expected, before adding it to the create flow and making it available to all project creators. After that, we could also have a project deployer contract where it just easily deploys a full-fledged project that has a staking solution baked in, so as to narrow all the parameters of creating a project down to just what's needed to run the staking stuff.
 
@@ -62,11 +62,11 @@ There were a few deficiencies that the contract crew had been pushing towards, g
 
 As buyback delegate is a core function of how tokens will work, Jango thought it was worth being more careful about those deficiencies and with the experience in developing it so far making sure that this piece of code would be cleaner for folks to understand and build similar things.
 
-Also in exploring the treasury design models of Croptop or Defifa, which will be both unowned projects and won't have outward payouts, but instead making use of redemption mechanism more heavily, as redemption rate can be deemed as a small tax on redeeming token owners and also leads to outflow of funds from the ecosystem, Jango was thinking the legitimacy of charging same 2.5% Juicebox fees for redemption oriented projects similar to Croptop or Defifa when they are setting a redemptioin rate lower than 100%, and piping those fees through this buyback delegate. 
+Also in exploring the treasury design models of Croptop or Defifa, which will be both unowned projects and won't have outward payouts, but instead making use of redemption mechanism more heavily, as redemption rate can be deemed as a small tax on redeeming token owners and also leads to outflow of funds from the ecosystem, Jango was thinking the legitimacy of charging same 2.5% Juicebox fees for redemption oriented projects similar to Croptop or Defifa when they are setting a redemptioin rate lower than 100%, and piping those fees through this buyback delegate.
 
 ## Legal Template Library by LJ
 
-LJ had been working together with Filipv on a legal template website, where basically will have a template library to curate some legal templates after they are reviewed and audited by a law firm. 
+LJ had been working together with Filipv on a legal template website, where basically will have a template library to curate some legal templates after they are reviewed and audited by a law firm.
 
 Also they want to make this a more collaborative effort, so they would create a GitHub repo where people can make a PR if they want to submit a template. After these templates are reviewed and approved by a certain committee, they will be published on the GitHub repo as well as on the template website, so that people who do not know how to navigate around GitHub can go there and download the templates they need to use.
 
@@ -82,7 +82,7 @@ There was a new Mac App released for Croptop available right now. Go to [croptop
 
 ![instructions to make use of croptop](croptop_instructions.png)
 
-There's a [Goerli version of the Croptop Publishing Network](https://goerli.juicebox.money/v2/p/1016), which is the master network project taking fees from folks who minted on sites that they forked. 
+There's a [Goerli version of the Croptop Publishing Network](https://goerli.juicebox.money/v2/p/1016), which is the master network project taking fees from folks who minted on sites that they forked.
 
 And owners of  .eth websites can create their corresponding Juicebox project by clicking the "fork" button on any sites created with a Croptop template, and then give permission to the croptop contract to mint to their Juicebox project on their behalf.  They can also set the parameters under what conditions NFTs can be posted on to their projects.
 

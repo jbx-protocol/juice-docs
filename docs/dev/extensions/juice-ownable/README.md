@@ -11,7 +11,7 @@ A Juicebox variation upon [OpenZeppelin Ownable](https://github.com/OpenZeppelin
 
 All features are backwards compatible with OpenZeppelin Ownable, this should be a drop-in replacement.
 
-## Contracts 
+## Contracts
 
 This repo contains 2 contracts, which one should you use:
 

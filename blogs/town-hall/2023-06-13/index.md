@@ -12,7 +12,7 @@ tags: [town-hall]
 
 Jango and Livid had done a lot of work to make the Croptop template support posts of audio, video and Markdown formats, so that now users can post whatever snippet of content on their ENS websites and have them all linked back to their Juicebox treasuries.
 
-They had worked a lot in CID (Content Identifier) to make sure the content was being correctly displayed and funneled into minting process. 
+They had worked a lot in CID (Content Identifier) to make sure the content was being correctly displayed and funneled into minting process.
 
 During the town hall, Jango showed us [a website created with Croptop template](https://ipfs.io/ipns/k51qzi5uqu5di0scaadzossc8tf6bupz2hbfvpfq56sg9g8afn5bnauuyab8zg/) but not yet pinned to an .eth domain, and demonstrated how to post and mint these contents of different formats onto a Juicebox project.
 
@@ -24,11 +24,11 @@ In the blog post, Jango proposed some treasury designs he thought would apply de
 
 ![fully automated treasury designs](automated_treasury_designs.png)
 
-Jango gave an example of a possible treasury design for Croptop in this town hall.  
+Jango gave an example of a possible treasury design for Croptop in this town hall.
 
 This [Croptop Publishing Network project](https://goerli.juicebox.money/v2/p/1016) will collect 5% fee when anybody posting on this project using Croptop template. $CPN project token will in turn be issued at a ratio of 1,000,000 / ETH with a decreasing cadence of 4% each following cycle (28 days). 10% of total $CPN issuance will be reserved to a multisig for two years, with a reconfiguration to remove this reserved token allocation scheduled to start two years from now. Also a 70% redemption rate is set so that $CPN holders can choose to claim their share from the treasury anytime if they want. Ideally a buyback delegate will also be attached to the cycles so as to guarantee payments will always get $CPN at its best price available.
 
-Then the project ownership will be thrown away, or essentially be given to a wallet that doesn't have access to make further changes to this project. It will be an experiment to check if we can figure out enough incentives to have $CPN distributed to developers who are keen to manage this project. It is a setup that leaves the bulk of the treasury unmanaged, which means folks have certain guarantees when contributing to it, and ETH in the treasury can serve a particular purpose and everyone is playing by similar rules. 
+Then the project ownership will be thrown away, or essentially be given to a wallet that doesn't have access to make further changes to this project. It will be an experiment to check if we can figure out enough incentives to have $CPN distributed to developers who are keen to manage this project. It is a setup that leaves the bulk of the treasury unmanaged, which means folks have certain guarantees when contributing to it, and ETH in the treasury can serve a particular purpose and everyone is playing by similar rules.
 
 At that point, Jango hoped that "devs can dev, community can community and network can network" without too many isolated concerns and interest is equally aligned throughout.
 
@@ -52,11 +52,11 @@ Latest work by Peel team:
 
 ![Safe page of project](project_safe_page.png)
 
-3. Revamp of project page mainly done by Wraeth. 
+3. Revamp of project page mainly done by Wraeth.
 
 ![project page revamp](project_page_revamp.png)
 
-4. Thanks to Aeolian, Juicebox.money now supported the new JBTiered721Delegate V3.3 contract (NFT rewards), new project would be created with this new version. 
+4. Thanks to Aeolian, Juicebox.money now supported the new JBTiered721Delegate V3.3 contract (NFT rewards), new project would be created with this new version.
 
 ## Juicecast New Episode by Matthew and Brileigh
 
@@ -70,9 +70,9 @@ Also they invited Tommy and Frission from Tally over to the new Juicecast episod
 
 ## Buyback Delegate Updates by Jango
 
-According to Jango, Dr.Gorilla had been working on some of the touchups after the Code4rena audit and Jango had also made a review on this work. Things were looking great, as soon as our contract crew went through all the questions found in this audit, the buyback delegate would be ready to use for Juicebox projects, and anyone can propose for the DAO to use it. 
+According to Jango, Dr.Gorilla had been working on some of the touchups after the Code4rena audit and Jango had also made a review on this work. Things were looking great, as soon as our contract crew went through all the questions found in this audit, the buyback delegate would be ready to use for Juicebox projects, and anyone can propose for the DAO to use it.
 
 Jango was looking forward to using it in a few more experimental treasury designs, but he was not in a rush to put up a proposal for JuiceboxDAO to make use of it in a short period of time. Although he was definitely exited to try it in production, Jango also said he would be pretty conservative about this delegate, because it is a very  big component that carries out some important functions.
 
-Jango also believed that it had the potential to bring about significant changes to contributor operations, fee paying operations and investor operations, due to the way it work in the reserved and outward token issuance. 
+Jango also believed that it had the potential to bring about significant changes to contributor operations, fee paying operations and investor operations, due to the way it work in the reserved and outward token issuance.
 

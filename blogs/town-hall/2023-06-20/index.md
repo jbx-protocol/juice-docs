@@ -37,7 +37,7 @@ Here under was the current layout of Juicy Picks, which would be rearranged acco
 
 ## ETH Shanghai Meetup Updates by LJ
 
-According to LJ, his plan to host workshops with other DAOs during ETH Shanghai would have to be cancelled, due to the fact that for some reason ETH Shanghai had essentially moved all the activities of this event online. 
+According to LJ, his plan to host workshops with other DAOs during ETH Shanghai would have to be cancelled, due to the fact that for some reason ETH Shanghai had essentially moved all the activities of this event online.
 
 But expecting some people would still go to Shanghai in that period of time, he was planning to host a more casual meetup such as a IRL Juicebox happy hour by then.
 
@@ -49,9 +49,9 @@ Nicholas would be giving a talk at [ETH Waterloo](https://ethglobal.com/events/w
 
 ## Nance Updates by Nicholas
 
-Nicholas introduced that lately the Nance team had been making lots of improvements to jbdao.org, our custom website for governance. 
+Nicholas introduced that lately the Nance team had been making lots of improvements to jbdao.org, our custom website for governance.
 
-One of new features is the “Fork Proposal", which allows people to literally fork an arbitrary proposal and make a similar one very conveniently. 
+One of new features is the “Fork Proposal", which allows people to literally fork an arbitrary proposal and make a similar one very conveniently.
 
 ![jbdao fork proposal](jbdao_fork_proposal.png)
 

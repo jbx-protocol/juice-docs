@@ -49,7 +49,7 @@ Juicebox projects are NFTs, held in the wallet of the project owner. Project own
 
 ## Bananapus
 
-Bananapus [was created](https://www.jbdao.org/p/368) to work on L2 deployments, on-chain governance, and cross-chain staking for Juicebox projects. 
+Bananapus [was created](https://www.jbdao.org/p/368) to work on L2 deployments, on-chain governance, and cross-chain staking for Juicebox projects.
 
 [Discord](https://discord.com/ErQYmth4dS) - [Juicebox](https://juicebox.money/v2/p/488)
 

@@ -9,7 +9,7 @@ tags: [highlight]
 
 ![Cover image: juicebox for charities and non-profits](jb_for_charity.png)
 
-One of the core values of any charity or non-profit is accountability and transparency: non-profits are public organizations and should always remain accountable to their donors so that funds are used as promised. This lines up perfectly with the open and transparent ethos of Juicebox, so let’s dive into a couple examples of non-profits and fundraisers running on Juicebox. 
+One of the core values of any charity or non-profit is accountability and transparency: non-profits are public organizations and should always remain accountable to their donors so that funds are used as promised. This lines up perfectly with the open and transparent ethos of Juicebox, so let’s dive into a couple examples of non-profits and fundraisers running on Juicebox.
 
 You can follow along in this article, or a video by Matthew on the JBDAO YouTube:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FfXhLQ_rtEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -22,7 +22,7 @@ Marin County Swim Association is a 501(c) non-profit that was established to hel
 
 <p class="subtitle">Photograph of MCSA tournament</p>
 
-In addition to raising funds IRL, MCSA founder Steve launched a Juicebox project to accept donations in ETH. On the MCSA project page on [juicebox.money](https://juicebox.money), you can see past contributions, how much has been raised so far, and where funds will go when withdrawn. Steve also offers tax receipts for US-based contributions upon request. 
+In addition to raising funds IRL, MCSA founder Steve launched a Juicebox project to accept donations in ETH. On the MCSA project page on [juicebox.money](https://juicebox.money), you can see past contributions, how much has been raised so far, and where funds will go when withdrawn. Steve also offers tax receipts for US-based contributions upon request.
 
 :::tip
 To learn more about how the MCSA got started, listen to episode 11 of [The Juicecast: Steve from Marin County Swim Association](https://podcasters.spotify.com/pod/show/thejuicecast/episodes/Ep--11---Steve-from-Marin-County-Swim-Association-e1oet1l/a-a8n8de1).
