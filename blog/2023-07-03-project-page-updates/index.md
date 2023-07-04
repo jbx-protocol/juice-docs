@@ -2,6 +2,7 @@
 slug: project-page-updates
 title: Juicebox Project Page Updates
 description: New layout, updated checkout experience and bookmark feature
+image: https://docs.juicebox.money/assets/images/new-project-page-ea7b1bf1353f9dace727cbcef6c7c94b.png
 authors: [brileigh, matthew]
 tags: [protocol, update]
 ---
@@ -10,7 +11,7 @@ tags: [protocol, update]
 
 Project pages on Juicebox have been revamped including a new layout, new checkout experience, and bookmark feature. These updates were made possible thanks to PeelDAO, the front-end team managing [juicebox.money](https://juicebox.money), user interviews, and feedback from JuiceboxDAO. You can follow along in this article, or this walkthrough video by Brileigh on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO/videos):
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/LUVi49oAcRQ](https://www.youtube.com/embed/LUVi49oAcRQ)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LUVi49oAcRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For this example, we’re going to look at WAGMI Studios: the creative studio behind all of the juicy art on [juicebox.money](https://juicebox.money).
 
