@@ -1,4 +1,3 @@
-
 ---
 slug: project-page-updates
 title: Juicebox Project Page Updates
@@ -9,15 +8,15 @@ tags: [protocol, update]
 
 ![project page updates](new-project-page.png)
 
-Project pages on Juicebox have been revamped including a new layout, new checkout experience, and bookmark feature. These updates were made possible thanks to PeelDAO, the front-end team managing [juicebox.money](http://juicebox.money), user interviews, and feedback from JuiceboxDAO. You can follow along in this article, or this walkthrough video by Brileigh on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO/videos):
+Project pages on Juicebox have been revamped including a new layout, new checkout experience, and bookmark feature. These updates were made possible thanks to PeelDAO, the front-end team managing [juicebox.money](https://juicebox.money), user interviews, and feedback from JuiceboxDAO. You can follow along in this article, or this walkthrough video by Brileigh on the [JBDAO YouTube](https://www.youtube.com/@JuiceboxDAO/videos):
 
 <iframe width="560" height="315" src="[https://www.youtube.com/embed/LUVi49oAcRQ](https://www.youtube.com/embed/LUVi49oAcRQ)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For this example, we’re going to look at WAGMI Studios: the creative studio behind all of the juicy art on [juicebox.money](http://juicebox.money).
+For this example, we’re going to look at WAGMI Studios: the creative studio behind all of the juicy art on [juicebox.money](https://juicebox.money).
 
 ![Banny hero image by Sage Kellyn](banny-pp.png)
 
-<p class="subtitle">Artwork by [Sage Kellyn](https://twitter.com/SageKellyn) from WAGMI Studios
+<p class="subtitle">Artwork by [Sage Kellyn](https://twitter.com/SageKellyn) from WAGMI Studios</p>
 
 We’ve simplified the layout and added a new section with key project stats that give you a sense of a project’s activity. You can see how many payments have been made, total volume in ETH, and a trending percentage for the last 30 days. 
 
@@ -29,7 +28,7 @@ We’ve added tabs to help navigate different aspects of a Juicebox project like
 
 One of the biggest changes that you’ll notice is the new cart experience when paying a project: you can add things to your cart and review a summary before submitting your transaction. As you add or remove NFTs, the summary will keep track of what is in your cart. If you click anywhere on the summary bar you can get a more detailed view with both the NFTs added to your cart and the project tokens you’ll receive.
 
-![Cary summary with NFTs and tokens](1.png)
+![Cart summary with NFTs and tokens](1.png)
 
 You can also pay a project without choosing any NFTs using the pay bar at the top. For example, if you pay 1 ETH to Wagmi Studios and click on Summary at the bottom of the page, you’ll get a message saying “You are eligible for 3 rewards,” which are the NFTs. You can click “add rewards” to include them, or if you change your mind, simply click on the trash icon to remove them. This gives you the option to opt-in or opt-out of receiving NFTs when contributing to a project.
 
@@ -43,9 +42,9 @@ If you’re browsing a project and want to come back to it later, you can bookma
 
 ![Bookmark feature](bookmark.png)
 
-That’s all for the project page for now. Keep an eye out for more new features like Project Taglines, editing descriptions with markdown and the ability to post updates about your project. Drop into the [Discord](https://discord.gg/juicebox) to let us know what you think about the new Project Page. Please report any issues in ⁠the [🐞 | bugs channel](https://discord.com/channels/775859454780244028/866040669712678942) in Discord or request a feature [here](https://juicebox.canny.io/feature-requests).
+That’s all for the project page for now. Keep an eye out for more new features like Project Taglines, editing descriptions with markdown and the ability to post updates about your project. Drop into the [Discord](https://discord.gg/juicebox) to let us know what you think about the new Project Page. Please report any issues in ⁠the [Bugs channel](https://discord.com/channels/775859454780244028/866040669712678942) or request a feature [here](https://juicebox.canny.io/feature-requests).
 
-🐦 Follow Juicebox on Twitter: [@Juicebox_Money](https://twitter.com/juicebox_money)
+🐦 Follow Juicebox on Twitter: [@juicebox_money](https://twitter.com/juicebox_money)
 
 💬 [Join the Juicebox Discord](https://discord.gg/juicebox)
 
