@@ -17,7 +17,7 @@ For this example, we’re going to look at WAGMI Studios: the creative studio be
 
 ![Banny hero image by Sage Kellyn](banny-pp.png)
 
-<p class="subtitle">Artwork by [Sage Kellyn](https://twitter.com/SageKellyn) from WAGMI Studios</p>
+<p class="subtitle">Artwork by <a href="https://twitter.com/SageKellyn">Sage Kellyn</a> from <a href="https://juicebox.money/@wagmi-studios">WAGMI Studios</a></p>
 
 We’ve simplified the layout and added a new section with key project stats that give you a sense of a project’s activity. You can see how many payments have been made, total volume in ETH, and a trending percentage for the last 30 days. 
 
