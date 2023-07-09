@@ -1,28 +1,31 @@
 # Data source
 
-Before implementing, learn about data sources [here](/dev/learn/glossary/data-source.md).
+Before implementing, learn about data sources [here](/dev/learn/glossary/data-source.md). Also see [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template).
+
 #### Specs
 
-A contract can become a treasury data source by adhering to [`IJBFundingCycleDataSource`](/dev/api/interfaces/ijbfundingcycledatasource.md):
+A contract can become a treasury data source by adhering to [`IJBFundingCycleDataSource3_1_1`](/dev/api/interfaces/ijbfundingcycledatasource3_1_1/):
 
 ```
-interface IJBFundingCycleDataSource {
-  function payParams(JBPayParamsData calldata _data)
+interface IJBFundingCycleDataSource3_1_1 is IERC165 {
+  function payParams(
+    JBPayParamsData calldata data
+  )
     external
-    view
     returns (
       uint256 weight,
       string memory memo,
-      IJBPayDelegate delegate
+      JBPayDelegateAllocation3_1_1[] memory delegateAllocations
     );
 
-  function redeemParams(JBRedeemParamsData calldata _data)
+  function redeemParams(
+    JBRedeemParamsData calldata data
+  )
     external
-    view
     returns (
       uint256 reclaimAmount,
       string memory memo,
-      IJBRedemptionDelegate delegate
+      JBRedemptionDelegateAllocation3_1_1[] memory delegateAllocations
     );
 }
 ```
@@ -59,9 +62,12 @@ struct JBTokenAmount {
 
 Using these params, the data source's `payParams(...)` function is responsible for either reverting or returning a few bits of information:
 
-* `weight` is a fixed point number with 18 decimals that the protocol can use to base arbitrary calculations on. For example, payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1), such as [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/)'s and [`JBERC20PaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1/)'s, use the `weight` to determine how many project tokens to mint when a project receives a payment (see [the calculation](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1/#recordpaymentfrom)). By default, the protocol will use the `weight` of the project's current funding cycle, which is provided to the data source function in `JBPayParamsData.weight`. Increasing the weight will mint more tokens and decreasing the weight will mint fewer tokens, both as a function of the amount paid. Return the `JBPayParamsData.weight` value if no altered functionality is desired.
-* `memo` is a string emitted within the [`Pay`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#pay) event and sent along to any `delegate` that this function also returns. By default, the protocol will use the `memo` directly passed in by the payer, which is provided to this data source function in `JBPayParamsData.memo`. Return the `JBPayParamsData.memo` value if no altered functionality is desired.
-* `delegate` is the address of a contract that adheres to [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md) whose `didPay(...)` function will be called once the protocol finishes its standard payment routine. Check out [how to build a pay delegate](/dev/build/treasury-extensions/pay-delegate.md) for more details. If the same contract is being used as the data source and the pay delegate, return `address(this)`. Return the zero address if no additional functionality is desired.
+* `weight` is a fixed point number with 18 decimals that the protocol can use to base arbitrary calculations on. For example, payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1), such as [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/)'s and [`JBERC20PaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1/)'s, use the `weight` to determine how many project tokens to mint when a project receives a payment (see [the calculation](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#recordpaymentfrom)). By default, the protocol will use the `weight` of the project's current funding cycle, which is provided to the data source function in `JBPayParamsData.weight`. Increasing the weight will mint more tokens and decreasing the weight will mint fewer tokens, both as a function of the amount paid. Return the `JBPayParamsData.weight` value if no altered functionality is desired.
+* `memo` is a string emitted within the [`Pay`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#pay) event and sent along to any `delegate` that this function also returns. By default, the protocol will use the `memo` directly passed in by the payer, which is provided to this data source function in `JBPayParamsData.memo`. Return the `JBPayParamsData.memo` value if no altered functionality is desired.
+* `delegateAllocations` is an array containing delegates, amounts to send them, and metadata to pass to them.
+    * `delegateAllocations.delegate` is the address of a contract that adheres to [`IJBPayDelegate3_1_1`](/dev/api/interfaces/ijbpaydelegate3_1_1/) whose `didPay(...)` function will be called once the protocol finishes its standard payment routine. Check out [how to build a pay delegate](/dev/build/treasury-extensions/pay-delegate.md) for more details. If the same contract is being used as the data source and the pay delegate, return `address(this)`. Return the zero address if no additional functionality is desired.
+    * `delegateAllocations.amount` is the amount of tokens to send to the delegate.
+    * `delegateAllocations.metadata` is the metadata to pass to the delegate.
 
 The `payParams(...)` function can also revert if it's presented with any conditions it does not want to accept payments under.
 
@@ -92,8 +98,11 @@ struct JBRedeemParamsData {
 Using these params, the data source's `redeemParams(...)` function is responsible for either reverting or returning a few bits of information:
 
 * `reclaimAmount` is the amount of tokens in the treasury that the terminal should send out to the redemption beneficiary as a result of burning the amount of project tokens tokens specified in `JBRedeemParamsData.tokenCount`, as a fixed point number with the same amount of decimals as `JBRedeemParamsData.decimals`. By default, the protocol will use a reclaim amount determined by the standard protocol bonding curve based on the redemption rate the project has configured into its current funding cycle, which is provided to the data source function in `JBRedeemParamsData.reclaimAmount`. Return the `JBRedeemParamsData.reclaimAmount` value if no altered functionality is desired.
-* `memo` is a string emitted within the [`RedeemTokens`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#redeemtokensof) event and sent along to any `delegate` that this function also returns. By default, the protocol will use the `memo` passed in directly by the redeemer, which is provided to this data source function in `JBRedeemParamsData.memo`. Return the `JBRedeemParamsData.memo` value if no altered functionality is desired.
-* `delegate` is the address of a contract that adheres to [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate.md) whose `didRedeem(...)` function will be called once the protocol finishes its standard redemption routine (but before the reclaimed amount is sent to the beneficiary). Check out [how to build a redemption delegate](/dev/build/treasury-extensions/redemption-delegate.md) for more details. If the same contract is being used as the data source and the redemption delegate, return `address(this)`. Return the zero address if no additional functionality is desired.
+* `memo` is a string emitted within the [`RedeemTokens`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof) event and sent along to any `delegate` that this function also returns. By default, the protocol will use the `memo` passed in directly by the redeemer, which is provided to this data source function in `JBRedeemParamsData.memo`. Return the `JBRedeemParamsData.memo` value if no altered functionality is desired.
+* `delegateAllocations` is an array containing delegates, amounts to send them, and metadata to pass to them.
+    * `delegateAllocations.delegate` is the address of a contract that adheres to [`IJBRedemptionDelegate3_1_1`](/dev/api/interfaces/ijbredemptiondelegate3_1_1/) whose `didRedeem(...)` function will be called once the protocol finishes its standard redemption routine (but before the reclaimed amount is sent to the beneficiary). Check out [how to build a redemption delegate](/dev/build/treasury-extensions/redemption-delegate.md) for more details. If the same contract is being used as the data source and the redemption delegate, return `address(this)`. Return the zero address if no additional functionality is desired.
+    * `delegateAllocations.amount` is the amount of tokens to send to the delegate.
+    * `delegateAllocations.metadata` is the metadata to pass to the delegate.
 
 The `redeemParams(...)` function can also revert if it's presented with any conditions it does not want to accept redemptions under.
 

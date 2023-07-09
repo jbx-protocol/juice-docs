@@ -64,7 +64,7 @@ function setTokenUriResolver(IJBTokenUriResolver _newResolver) external override
 
 #### Attaching application-specific functionality
 
-Project owners can configure their first funding cycle for their `JBProject`, attach payment terminals, and set all other standard juicebox project properties by calling [`JBController3_1.launchFundingCyclesFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchfundingcyclesfor).
+Project owners can configure their first funding cycle for their `JBProject`, attach payment terminals, and set all other standard Juicebox project properties by calling [`JBController3_1.launchFundingCyclesFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchfundingcyclesfor).
 
 Most Juicebox protocol contracts are generic utilities for any `JBProject` owner, meaning stored data tends to me mapped from project IDs, and functionality that affects a project tends to be exposed only to the project's owner or a operator address specified by the project's owner.
 

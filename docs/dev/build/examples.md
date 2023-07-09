@@ -50,7 +50,7 @@ A simple contract which reads a project's balance in their primary ETH terminal.
 
 ```
 import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
-import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBETHPaymentTerminal3_1.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBETHPaymentTerminal.sol';
 import '@jbx-protocol/juice-contracts-v3/contracts/libraries/JBTokens.sol';
 
 contract JBProjectViewUtil {
@@ -65,8 +65,8 @@ contract JBProjectViewUtil {
     // Get the payment terminal the project currently prefers to accept ETH through.
     IJBPaymentTerminal _ethTerminal = directory.primaryTerminalOf(projectId, JBTokens.ETH);
 
-    // Assumes the terminal is a IJBETHPaymentTerminal3_1. If the terminal could be a lesser version, a ERC165 check should be done before casting.
-    return IJBETHPaymentTerminal3_1(_ethTerminal).store().balanceOf(_ethTerminal, projectId);
+    // Assumes the terminal is a IJBETHPaymentTerminal. If the terminal could be a lesser version, a ERC165 check should be done before casting.
+    return IJBETHPaymentTerminal(_ethTerminal).store().balanceOf(_ethTerminal, projectId);
   }
 }
 ```

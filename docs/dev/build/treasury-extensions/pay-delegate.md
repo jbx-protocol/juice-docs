@@ -1,29 +1,32 @@
 # Pay delegate
 
-Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.md).
+Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.md). Also see [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template).
+
 #### Specs
 
-A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md):
+A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate3_1_1`](/dev/api/interfaces/ijbpaydelegate3_1_1/):
 
 ```
-interface IJBPayDelegate is IERC165 {
-  function didPay(JBDidPayData calldata _data) external payable;
+interface IJBPayDelegate3_1_1 is IERC165 {
+  function didPay(JBDidPayData3_1_1 calldata data) external payable;
 }
 ```
 
-When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData`](/dev/api/data-structures/jbdidpaydata.md) to the `didPay(...)` function:
+When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData3_1_1`](/dev/api/data-structures/jbdidpaydata3_1_1/) to the `didPay(...)` function:
 
 ```
-struct JBDidPayData {
-  address payer;
-  uint256 projectId;
-  uint256 currentFundingCycleConfiguration;
-  JBTokenAmount amount;
-  uint256 projectTokenCount;
-  address beneficiary;
-  bool preferClaimedTokens;
-  string memo;
-  bytes metadata;
+struct JBDidPayData3_1_1 {
+    address payer;
+    uint256 projectId;
+    uint256 currentFundingCycleConfiguration;
+    JBTokenAmount amount;
+    JBTokenAmount forwardedAmount;
+    uint256 projectTokenCount;
+    address beneficiary;
+    bool preferClaimedTokens;
+    string memo;
+    bytes dataSourceMetadata;
+    bytes payerMetadata;
 }
 ```
 
@@ -38,7 +41,7 @@ struct JBTokenAmount {
 
 The `msg.sender` to the delegate will be the payment terminal that facilitated the payment.
 
-In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1), such as [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/)'s and [`JBERC20PaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1/)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#_pay).
+In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1), such as [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/)'s and [`JBERC20PaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1/)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#_pay).
 
 Make sure to only allow trusted contracts to access the `didPay(...)` transaction.
 
