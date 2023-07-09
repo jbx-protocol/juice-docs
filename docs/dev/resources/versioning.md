@@ -47,3 +47,19 @@ Juicebox v2 was audited by [PeckShield](/assets/files/peckshield-audit-report-ab
 A [high severity bug](/dev/resources/post-mortem/2023-01-27/) was identified when deploying the [v3 JBX migration contracts](/dev/extensions/juice-v3-migration/). The bug was mitigated for [JuiceboxDAO's project](https://juicebox.money/@juicebox) by adopting [JBController3_0_1](/dev/deprecated/v3/or-controllers/jbcontroller3_0_1/), which was followed up by a more robust fix to address other risks and inefficiencies: [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/) and [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/).
 
 [JBP-341 - Finish versioning migration](https://snapshot.org/#/jbdao.eth/proposal/0xb7b3ccd64f9b27ed001e7d086b11ae1dc78c56bd525840636a1a79d62ba14ccc) was approved by the DAO on February 17, 2023, and Juicebox v3.1 was deployed to Ethereum mainnet on February 21st, 2023.
+
+## v3.1.1
+
+`JBETHPaymentTerminal3_1_1` was deployed on June 30th, 2023 in [this PR](https://github.com/jbx-protocol/juice-contracts-v3/pull/44).
+
+As described on [jango.eth.limo](https://jango.eth.limo/486B02AA-1D39-44B3-8927-942EE3448A38/), the 3.1.1 terminal:
+
+1. Is fully backward compatible with the 3.1 terminal interface.
+2. Uses a new 3.1.1 Payment Terminal Store, whose views are fully backward compatible with the 3.1 Store interface.
+3. Enforces the JBX membership fee when funds leave a treasury through redemptions while the project’s redemption rate or ballot redemption rate is less than 100%. This is currently a 2.5% membership fee, changeable by JBX holders up to 5%.
+4. Adds the ability for data sources to pass arbitrary bytes to the delegates it specifies.
+5. Fixes a low severity bug - there was still one case where a project’s payouts could be reverted if sent when a recipient project didn’t have a terminal installed.
+6. Optimizes gas further - the fee property was being loaded from storage often, and is now cached better.
+7. Improves all contracts’ natspec documentation.
+8. Specifies all imports explicitly in the files from which they’re used.
+9. Removes the leading underscore from function argument names in interfaces.
