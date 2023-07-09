@@ -16,7 +16,7 @@
   * If the contract is set to lock voting unit changes, new tiers cannot have voting units.
   * If the contract is set to lock manual minting changes, new tiers cannot allow manual minting.
   * If the contract is set to have transfers pausable, a funding cycle metadata flag will determine if NFTs are transferable while the cycle is active.
-* By default, an incoming payment will mint the best tier available based on floor price. The payment can also directly specify any number of tiers to mint from in its metadata.
+* Incoming payments can directly specify any number of tiers to mint from within their [`JBDidPayData.metadata`](/dev/api/data-structures/jbdidpaydata/).
 * If a payment received does not meet a minting threshold or is in excess of the minted tiers, the balance is stored as a credit which will be added to future payments and applied to mints at that time. A flag can also be passed alongside a payment to avoid accepting payments that aren't applied to mints in full.
 * The NFT Rewards contract can be used for on-chain governance. At the time of the contract's creation, the deployer must specify if vote delegation should be accounted for across all tiers (compatible with Governor contracts), on a per-tier basis, or if there should not be any extra governance accounting affordances.
 

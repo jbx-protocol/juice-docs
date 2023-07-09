@@ -83,7 +83,7 @@ The protocol charges a <a href="#jbx-membership-fee">JBX membership fee</a> on f
 
 ##### Weight
 <p>
-  A number used to determine how many project tokens should be minted and transferred when payments are received during the funding cycle. In other words, weight is the exchange rate between the project token and a currency (defined by a <a href="/dev/api/contracts/jbpayoutredemptionpaymentterminal3_1">JBPayoutRedemptionPaymentTerminal3_1</a>) during that funding cycle. Project owners can configure this directly, or allow it to be derived automatically from the previous funding cycle's weight and discount rate.
+  A number used to determine how many project tokens should be minted and transferred when payments are received during the funding cycle. In other words, weight is the exchange rate between the project token and a currency (defined by a <a href="/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/">JBPayoutRedemptionPaymentTerminal3_1_1</a>) during that funding cycle. Project owners can configure this directly, or allow it to be derived automatically from the previous funding cycle's weight and discount rate.
 </p>
 
 <!---->
@@ -224,7 +224,7 @@ The protocol charges a <a href="#jbx-membership-fee">JBX membership fee</a> on f
 
 #### JBX membership fee
 <p>
-  All funds distributed by projects from their treasuries to destinations outside of the Juicebox ecosystem (i.e. distributions that do not go to other Juicebox treasuries) will incure a protocol fee. This fee is sent to the JuiceboxDAO treasury which runs on the Juicebox protocol itself (project ID of 1), triggering the same functionality as a payment directly to JuiceboxDAO (by default, minting JBX for the fee payer according to JuiceboxDAO's current funding cycle configuration) from an external source.<br/>
+  All funds distributed by projects from their treasuries to destinations outside of the Juicebox ecosystem (i.e. distributions that do not go to other Juicebox treasuries) will incure a protocol fee. Redemptions from projects using <a href="/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/"><code>JBETHPaymentTerminal3_1_1</code></a> incur fees if the redemption rate (or ballot redemption rate) is less than 100%. This fee is sent to the JuiceboxDAO treasury which runs on the Juicebox protocol itself (project ID of 1), triggering the same functionality as a payment directly to JuiceboxDAO (by default, minting JBX for the fee payer according to JuiceboxDAO's current funding cycle configuration) from an external source.<br/>
 </p>
 <p>
   This fee is adjustable by JuiceboxDAO, with a max value of 5%.<br/>

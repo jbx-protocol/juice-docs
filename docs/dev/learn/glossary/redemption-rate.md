@@ -9,6 +9,7 @@
 * A redemption rate of 0% will completely disable redemptions, meaning tokens cannot be redeemed.
 * A redemption rate of `x`% where 0% < `x` < 100% will leave some assets in the treasury to share between those who wait longer to redeem. The smaller the `x`, the fewer assets can be reclaimed (*see note below*).
 * A project can set a different redemption rate that takes effect only when the project's current funding cycle has an active [ballot](ballot.md).
+* Redemptions incur a JBX membership fee when the redemption rate (or [ballot](ballot.md) redemption rate) is less than 100%. This fee can be set anywhere between 0% and 5%.
 
 <details>
 
@@ -37,5 +38,6 @@ Here is an example bonding curve with an overflow of 100 ETH, a total supply of 
 
 #### What you'll want to know if you're building
 
+* Token holders can redeem their tokens by calling [`JBPayoutRedemptionPaymentTerminal3_1_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof).
 * A redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof) transactions.
 * A ballot redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof) transactions, which will override the standard redemption rate if there is currently a [reconfiguration ballot active](/dev/learn/glossary/ballot.md).

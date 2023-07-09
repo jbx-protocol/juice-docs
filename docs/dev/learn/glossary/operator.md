@@ -28,9 +28,9 @@ An address can set operators for its project with [`JBOperatorStore.setOperator(
 * [`JBTokenStore.issueFor(...)`](/dev/api/contracts/jbtokenstore/write/issuefor.md)
 * [`JBController3_1.setFor(...)`](/dev/api/contracts/jbtokenstore/write/setfor.md)
 * [`JBController3_1.migrate(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#migrate)
-* [`JBPayoutRedemptionPaymentTerminal3_1.useAllowanceOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#useallowanceof)
-* [`JBPayoutRedemptionPaymentTerminal3_1.migrate(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#migrate)
-* [`JBPayoutRedemptionPaymentTerminal3_1.processFees(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#processfees)
+* [`JBPayoutRedemptionPaymentTerminal3_1_1.useAllowanceOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#useallowanceof)
+* [`JBPayoutRedemptionPaymentTerminal3_1_1.migrate(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#migrate)
+* [`JBPayoutRedemptionPaymentTerminal3_1_1.processFees(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#processfees)
 * [`JBProjects.setMetadataOf(...)`](/dev/api/contracts/jbprojects/write/setmetadataof.md)
 * [`JBSplitsStore.set(...)`](/dev/api/contracts/jbsplitsstore/write/set.md)
 * [`JBDirectory.setControllerOf(...)`](/dev/api/contracts/jbdirectory/write/setcontrollerof.md)
@@ -40,6 +40,6 @@ An address can set operators for its project with [`JBOperatorStore.setOperator(
 The following transactions can be used by token holders or operator addresses explicitly allowed by the address that owns the tokens. If the tokens change hands, the operators must be set again by the new holder.
 
 * [`JBController3_1.burnTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#burntokensof)
-* [`JBPayoutRedemptionPaymentTerminal3_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/#redeemtokensof)
+* [`JBPayoutRedemptionPaymentTerminal3_1_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof)
 * [`JBTokenStore.claimFor(...)`](/dev/api/contracts/jbtokenstore/write/claimfor.md)
 * [`JBTokenStore.transferFrom(...)`](/dev/api/contracts/jbtokenstore/write/transferfrom.md)

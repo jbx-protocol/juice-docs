@@ -20,20 +20,20 @@ The basic interfaces are:
 Which are extended by:
 
 - [`IJBSingleTokenPaymentTerminal`](/dev/api/interfaces/ijbsingletokenpaymentterminal/) (is `IJBPaymentTerminal`) - an extension interface that constrains inbound payments to only one token type.
-- [`IJBPayoutRedemptionPaymentTerminal3_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1/) (is `IJBPaymentTerminal`, `IJBPayoutTerminal3_1`, `IJBAllowanceTerminal3_1`, `IJBRedemptionTerminal`) - an extension interface that has the capacity to take inbound payments, distribute payouts, allocate discretionary funds, and redeem tokens.
+- [`IJBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1_1/) (is `IJBPaymentTerminal`, `IJBPayoutTerminal3_1`, `IJBAllowanceTerminal3_1`, `IJBRedemptionTerminal`) - an extension interface that has the capacity to take inbound payments, distribute payouts, allocate discretionary funds, and redeem tokens.
 
 #### Abstract implementation contracts
 
 These interfaces are implemented in the abstract contracts:
 
 - [`JBSingleTokenPaymentTerminal`](/dev/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/) (is `IJBSingleTokenPaymentTerminal`) - an implementation of a payment terminal that only accepts one token type.
-- [`JBPayoutRedemptionPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/) (is `JBSingleTokenPaymentTerminal`, `IJBPayoutRedemptionPaymentTerminal3_1`) - an implementation of a payment terminal that has the capacity to take inbound payments of a particular token, distribute payouts of the same particular token, allocate discretionary funds of the same particular token, and make redemptions for the same particular token.
+- [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/) (is `JBSingleTokenPaymentTerminal`, `IJBPayoutRedemptionPaymentTerminal3_1_1`) - an implementation of a payment terminal that has the capacity to take inbound payments of a particular token, distribute payouts of the same particular token, allocate discretionary funds of the same particular token, and make redemptions for the same particular token.
 
 #### Implementation contracts
 
 Finally, these contracts implement the abstract contracts above:
 
-- [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1/) (is `JBPayoutRedemptionPaymentTerminal3_1`) - an implementation of a fully capable ETH terminal.
-- [`JBERC20PaymentTerminal3_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1/) (is `JBPayoutRedemptionPaymentTerminal3_1`) - an implementation of a fully capable ERC-20 terminal.
+- [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (is `JBPayoutRedemptionPaymentTerminal3_1_1`) - an implementation of a fully capable ETH terminal.
+- [`JBERC20PaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1/) (is `JBPayoutRedemptionPaymentTerminal3_1_1`) - an implementation of a fully capable ERC-20 terminal.
 
 [^1]: To register a terminal with [`JBDirectory`](/dev/api/contracts/jbdirectory/), that terminal only needs to adhere to [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/), a basic interface which requires a consistent way of sending funds to the terminal (via `pay` or `addToBalance`). Protocol extensions can ensure their unique requirements are met by utilizing a different interface or abstract contract – for example, an extension which depends on standard redemption functionality can ensure adherence to [`IJBRedemptionTerminal`](/dev/api/interfaces/ijbredemptionterminal/). This allows for easier extension interoperability.
