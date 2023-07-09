@@ -102,6 +102,10 @@ The lower this rate is, the less of an incentive there is to redeem tokens befor
 
 *How to choose:* To start, you should keep this rate at 100% (redemptions on) or 0% (redemptions off), and then adjust from there.
 
+:::info
+Redemptions incur a 2.5% fee while the redemption rate is less than 100%. This fee is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. To learn more, read [JBX & Fees](/dao/reference/jbx/).
+:::
+
 #### Owner token minting
 
 If this is enabled, you (the project owner) can issue tokens on demand.
