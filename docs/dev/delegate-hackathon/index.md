@@ -5,12 +5,25 @@ sidebar_position: 9
 
 # Delegate Hackathon
 
+:::info Update
+The Hackathon is being extended to 12:00 EDT on **July 18th**, and we're accepting more types of projects:
+
+- [Ballots](/dev/build/treasury-extensions/ballot/) are smart contracts which can approve or deny attempts to reconfigure a Juicebox project's funding cycle.
+- [Split allocators](/dev/build/treasury-extensions/split-allocator/) can automate the routing of funds and reserved tokens to and from Juicebox projects.
+
+We're looking for creative and useful extensions to the core Juicebox protocol: data sources, delegates, integrations with other Ethereum protocols, one of the extension types mentioned above, or something else.
+
+If you're interested but haven't started a project yet, now is a great time – if you need help getting started, ask us in the `#🏰｜delegate-hackathon` channel in the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+
+Cool interfaces are also highly encouraged: [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) is an open-source toolkit which makes it easier for developers to create and deploy smart contracts and build user interfaces that interact with those smart contracts – feel free to make an interface for your extension or somebody else's, or even for an existing part of the protocol which isn't exposed in other frontends (like the [operator](/dev/build/namespace/#operator-permissions) permission system).
+:::
+
 Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
 
 ![](hackathon-nfts.webp)
 <p class="subtitle">The Summer 2023 Hackathon collection.</p>
 
-- Starts at 18:00 EDT on June 28th and ends at 12:00 EDT on July 11th.
+- Starts at 18:00 EDT on June 28th and ends at 12:00 EDT on July 18th.
 - Over $16k in rewards.
 - Anyone can pay the [@buidlguidl Juicebox project](https://juicebox.money/@buidlguidl) to receive hackathon NFTs – half of the funds in the project will be distributed according to hackathon NFT voting once submissions are closed – the remainder will be used for Buidl Guidl streams and future events.
 - Send a message in the `#🏰｜delegate-hackathon` channel of the [JuiceboxDAO Discord](https://discord.gg/juicebox) if you're looking for teammates or have questions.
@@ -22,9 +35,9 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 
 **18:00 EDT, June 28th:** the hackathon begins with a [Twitter Spaces](https://twitter.com/i/spaces/1BdGYyYqwdEGX) featuring JuiceboxDAO + Buidl Guidl members.
 
-**12:00 EDT, July 11th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
+**12:00 EDT, July 18th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
 
-**12:00 EDT, July 14th:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
+**12:00 EDT, July 21st:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
 
 ## What's a Delegate?
 
@@ -59,7 +72,7 @@ All projects must be open source and use an [open source license](https://openso
 
 ## Resources
 
-- Use the [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template) repository to set up your dev environment.
+- Use the [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template) repository to set up your dev environment. If you're not building a delegate, the more generic [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) may be useful.
 - Read through the [glossary](/dev/learn/glossary/) to refresh on or become acquainted with Juicebox terminology.
 - If looking for tips to start out, take a look at our guides on [building a data source](/dev/build/treasury-extensions/data-source/), [building a pay delegate](/dev/build/treasury-extensions/pay-delegate/), and [building a redemption delegate](/dev/build/treasury-extensions/redemption-delegate/).
 - To learn more about payment terminals, read our [payment terminal architecture](/dev/learn/architecture/terminals/) doc.

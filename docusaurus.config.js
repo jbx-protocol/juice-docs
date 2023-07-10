@@ -91,7 +91,7 @@ const config = {
   themeConfig: {
     announcementBar: {
       id: 'delegate_hackathon',
-      content: 'The Delegate Hackathon is live! Read <a href="/delegate-hackathon/">the announcement</a> to learn more.',
+      content: 'The Delegate Hackathon is being extended to July 18th! Read <a href="/delegate-hackathon/">the announcement</a> to get started.',
       backgroundColor: '#ffb2dd',
       textColor: '#141414',
     },
