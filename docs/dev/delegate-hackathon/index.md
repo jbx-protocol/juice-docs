@@ -73,6 +73,7 @@ All projects must be open source and use an [open source license](https://openso
 ## Resources
 
 - Use the [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template) repository to set up your dev environment. If you're not building a delegate, the more generic [`juice-contract-template`](https://github.com/jbx-protocol/juice-contract-template) may be useful.
+- Watch the [delegate contract demo](https://youtu.be/GKI_fbxkg44) on YouTube.
 - Read through the [glossary](/dev/learn/glossary/) to refresh on or become acquainted with Juicebox terminology.
 - If looking for tips to start out, take a look at our guides on [building a data source](/dev/build/treasury-extensions/data-source/), [building a pay delegate](/dev/build/treasury-extensions/pay-delegate/), and [building a redemption delegate](/dev/build/treasury-extensions/redemption-delegate/).
 - To learn more about payment terminals, read our [payment terminal architecture](/dev/learn/architecture/terminals/) doc.
