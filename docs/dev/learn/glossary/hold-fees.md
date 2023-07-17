@@ -2,7 +2,7 @@
 
 #### What everyone needs to know
 
-- By default, JBX membership fees are paid automatically when funds are distributed out of the ecosystem from a project's treasury.[^1] 
+- By default, JBX membership fees are paid automatically when funds are distributed out of the ecosystem from a project's treasury.[^1]
 - During funding cycles configured to hold fees, this fee amount is set aside instead of being immediately processed. Projects can get their held fees returned by adding the same amount of withdrawn funds back to their treasury (using the "Add to Balance" transaction).
 - Otherwise, JuiceboxDAO or the project can process these held fees at any point to get JBX at the current rate.
 - Processing held fees will pay the fees to [`JuiceboxDAO`](https://juicebox.money/v2/p/1) and mint JBX to the project owner's address.
