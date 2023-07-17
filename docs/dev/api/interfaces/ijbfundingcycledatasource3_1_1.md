@@ -15,6 +15,7 @@ The datasource implementation for JBPaymentTerminal.pay(..)
 ```solidity
 function payParams(JBPayParamsData calldata data)
     external
+    view
     returns (
         uint256 weight,
         string memory memo,
@@ -43,6 +44,7 @@ The datasource implementation for JBPaymentTerminal.redeemTokensOf(..)
 ```solidity
 function redeemParams(JBRedeemParamsData calldata data)
     external
+    view
     returns (
         uint256 reclaimAmount,
         string memory memo,
