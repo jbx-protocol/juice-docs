@@ -6,16 +6,7 @@ sidebar_position: 9
 # Delegate Hackathon
 
 :::info Update
-The Hackathon is being extended to 12:00 EDT on **July 18th**, and we're accepting more types of projects:
-
-- [Ballots](/dev/build/treasury-extensions/ballot/) are smart contracts which can approve or deny attempts to reconfigure a Juicebox project's funding cycle.
-- [Split allocators](/dev/build/treasury-extensions/split-allocator/) can automate the routing of funds and reserved tokens to and from Juicebox projects.
-
-We're looking for creative and useful extensions to the core Juicebox protocol: data sources, delegates, integrations with other Ethereum protocols, one of the extension types mentioned above, or something else.
-
-If you're interested but haven't started a project yet, now is a great time – if you need help getting started, ask us in the `#🏰｜delegate-hackathon` channel in the [JuiceboxDAO Discord](https://discord.gg/juicebox).
-
-Cool interfaces are also highly encouraged: [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) is an open-source toolkit which makes it easier for developers to create and deploy smart contracts and build user interfaces that interact with those smart contracts – feel free to make an interface for your extension or somebody else's, or even for an existing part of the protocol which isn't exposed in other frontends (like the [operator](/dev/build/namespace/#operator-permissions) permission system).
+Submissions close at 12:00 EDT on July 18th. Rewards voting will start on shortly afterwards on [Snapshot](https://snapshot.org/#/filipv.eth). Voting power will be allocated to BuidlGuidl project supporters, Buidl Guidl/JuiceboxDAO members, and [last hackathon's](/hackathon/) voters. Follow the [`#🏰｜delegate-hackathon`](https://discord.gg/juicebox) channel for updates.
 :::
 
 Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
@@ -38,6 +29,19 @@ Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source]
 **12:00 EDT, July 18th:** submissions close, and voting opens. All contestants can join the showcase call in the [JuiceboxDAO Discord](https://discord.gg/juicebox) and demo their project to voters.
 
 **12:00 EDT, July 21st:** voting closes. Rewards are distributed according to the proportion of votes received by each submission.
+
+:::info Update
+The Hackathon is being extended to 12:00 EDT on **July 18th**, and we're accepting more types of projects:
+
+- [Ballots](/dev/build/treasury-extensions/ballot/) are smart contracts which can approve or deny attempts to reconfigure a Juicebox project's funding cycle.
+- [Split allocators](/dev/build/treasury-extensions/split-allocator/) can automate the routing of funds and reserved tokens to and from Juicebox projects.
+
+We're looking for creative and useful extensions to the core Juicebox protocol: data sources, delegates, integrations with other Ethereum protocols, one of the extension types mentioned above, or something else.
+
+If you're interested but haven't started a project yet, now is a great time – if you need help getting started, ask us in the `#🏰｜delegate-hackathon` channel in the [JuiceboxDAO Discord](https://discord.gg/juicebox).
+
+Cool interfaces are also highly encouraged: [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) is an open-source toolkit which makes it easier for developers to create and deploy smart contracts and build user interfaces that interact with those smart contracts – feel free to make an interface for your extension or somebody else's, or even for an existing part of the protocol which isn't exposed in other frontends (like the [operator](/dev/build/namespace/#operator-permissions) permission system).
+:::
 
 ## What's a Delegate?
 
