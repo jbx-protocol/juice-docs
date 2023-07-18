@@ -6,7 +6,7 @@ sidebar_position: 9
 # Delegate Hackathon
 
 :::info Update
-Submissions close at 12:00 EDT on July 18th. Rewards voting will start on shortly afterwards on [Snapshot](https://snapshot.org/#/filipv.eth). Voting power will be allocated to BuidlGuidl project supporters, Buidl Guidl/JuiceboxDAO members, and [last hackathon's](/hackathon/) voters. Follow the [`#🏰｜delegate-hackathon`](https://discord.gg/juicebox) channel for updates.
+Hackathon voting is live until 12:00 EDT on July 21st: **vote on [Snapshot](https://snapshot.org/#/filipv.eth/proposal/0x4a979baa4bce5ea5e0a289f6a6f83b6a4b60f32816283e689019e707f74149a3)**. Voting power has been given to BuidlGuidl project supporters, Buidl Guidl/JuiceboxDAO members, and [last hackathon's](/hackathon/) voters. Vote for your favorite submissions to give them ETH. To ask questions or see updates, visit the [`#🏰｜delegate-hackathon`](https://discord.com/invite/juicebox) channel.
 :::
 
 Build a [Juicebox Delegate](/dev/learn/glossary/delegate/) (and/or [data source](/dev/learn/glossary/data-source/)) for the [Buidl Guidl Juicebox project](https://juicebox.money/@buidlguidl) or somebody else to use. Open to teams and individuals.
