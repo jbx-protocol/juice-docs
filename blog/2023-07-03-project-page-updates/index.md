@@ -1,7 +1,7 @@
 ---
 slug: project-page-updates
-title: Juicebox Project Page Updates
-description: New layout, updated checkout experience and bookmark feature
+title: New Look For Project Pages on Juicebox
+description: New layout, updated checkout experience, and bookmark feature
 image: https://docs.juicebox.money/assets/images/new-project-page-ea7b1bf1353f9dace727cbcef6c7c94b.png
 authors: [brileigh, matthew]
 tags: [protocol, update]
