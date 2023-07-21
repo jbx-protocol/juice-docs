@@ -2,6 +2,7 @@
 slug: project-update-feature
 title: Introducing Project Updates
 description: How to keep your community up to date directly from your project page
+image: https://docs.juicebox.money/assets/images/project-updates-cover-633b33eb1599b5039482fc22904245b7.png
 authors: [matthew, brileigh]
 tags: [protocol, update]
 ---
