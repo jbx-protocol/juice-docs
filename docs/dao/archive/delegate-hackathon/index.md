@@ -1,4 +1,5 @@
 ---
+title: 2023-06-28 – Hackathon Announcement
 slug: /delegate-hackathon
 sidebar_position: 9
 ---

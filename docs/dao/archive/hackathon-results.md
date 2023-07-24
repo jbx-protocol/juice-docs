@@ -1,5 +1,5 @@
 ---
-title: Scaffold JB Hackathon Submissions
+title: 2022-06-01 – Hackathon Submissions
 sidebar_position: 2
 ---
 

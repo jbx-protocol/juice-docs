@@ -1,4 +1,5 @@
 ---
+title: 2022-06-01 – Hackathon Announcement
 slug: /hackathon
 sidebar_position: 1
 ---
