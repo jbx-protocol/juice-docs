@@ -24,6 +24,7 @@ The protocol runs entirely on public smart contracts explained in detail through
 
 * [Code4rena NFT Delegate audit](https://code4rena.com/reports/2022-10-juicebox/)
 * [Audit Report - Juice V3 Migration](https://hackmd.io/@berndartmueller/2023-01-juice-v3-migration)
+* [Code4rena Buyback Delegate audit](https://code4rena.com/reports/2023-05-juicebox)
 
 ## Post Mortems
 
