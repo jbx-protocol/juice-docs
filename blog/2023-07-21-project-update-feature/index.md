@@ -19,7 +19,7 @@ For this example, we’ll be using The Juicecast project on Goerli. If you aren�
 
 ### Step 1: Connect Wallet & click on the new Updates Tab
 
-The first thing we’ll do is connect our wallet. On your project page, you’ll notice a new tab that says `Updates`. 
+The first thing we’ll do is connect our wallet. On your project page, you’ll notice a new tab that says `Updates`.
 
 ![New update tab](new-tab.png)
 
@@ -30,10 +30,10 @@ In this section you’ll see a button that says `Add project update`, click it a
 ![Add project update button](add-project-update.png)
 
 :::tip
-You **can’t edit an update** once it has been posted but **you can delete it** and post a new one if you make a mistake. 
+You **can’t edit an update** once it has been posted but **you can delete it** and post a new one if you make a mistake.
 :::
 
-In the pop-up window you can add a title and message for your update. Make sure that your message provides enough context and clearly conveys what you want to communicate to your community. You also have the option to add an image that’s relevant to your update. Keep in mind that this will be cropped to a horizontal rectangle ratio of 288px x 566px. 
+In the pop-up window you can add a title and message for your update. Make sure that your message provides enough context and clearly conveys what you want to communicate to your community. You also have the option to add an image that’s relevant to your update. Keep in mind that this will be cropped to a horizontal rectangle ratio of 288px x 566px.
 
 ![Example of what to put in a project update](form-filled.png)
 
@@ -47,7 +47,7 @@ And that’s it, all done! The page should refresh automatically or you can refr
 
 ### Reasons to use Project Updates and tips
 
-Keeping your community in the loop is one of the best ways to ensure your projects' success. The more your community hears from you about what you’re working on, the stronger the trust will build and increase the likeliness of getting more funding from both new and old supporters. 
+Keeping your community in the loop is one of the best ways to ensure your projects' success. The more your community hears from you about what you’re working on, the stronger the trust will build and increase the likeliness of getting more funding from both new and old supporters.
 
 Here are a couple tips for posting updates for your project:
 

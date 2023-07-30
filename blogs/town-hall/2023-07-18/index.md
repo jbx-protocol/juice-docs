@@ -24,9 +24,9 @@ Submitted by: Aeolian
 
 Description: A Juicebox protocol pay delegate for automating treasury token swaps.
 
-Repo: https://github.com/tomquirk/juice-delegate-hackathon 
+Repo: https://github.com/tomquirk/juice-delegate-hackathon
 
-Demo: https://goerli.juicebox.money/v2/p/1097 
+Demo: https://goerli.juicebox.money/v2/p/1097
 
 Team Juicebox project: https://juicebox.money/@etherfunkio
 
@@ -36,13 +36,13 @@ Team Juicebox project: https://juicebox.money/@etherfunkio
 
 Submitted by: LJ
 
-Description: A version of Juicebox Protocol integrating with EthSign TokenTable, allowing projects to have the functionality to customize token unlocking schedules for project token distribution, while still raise funds through the secure Juicebox Protocol. 
+Description: A version of Juicebox Protocol integrating with EthSign TokenTable, allowing projects to have the functionality to customize token unlocking schedules for project token distribution, while still raise funds through the secure Juicebox Protocol.
 
-Repo (smart contract): https://github.com/boyuanx/JuiceTable 
+Repo (smart contract): https://github.com/boyuanx/JuiceTable
 
-Repo (frontend): https://github.com/jbettenc/juicetable-interface 
+Repo (frontend): https://github.com/jbettenc/juicetable-interface
 
-Demo: https://youtu.be/XFwiadWq0YI 
+Demo: https://youtu.be/XFwiadWq0YI
 
 Team Juicebox Project: https://juicebox.money/v2/p/540
 
@@ -52,7 +52,7 @@ Team Juicebox Project: https://juicebox.money/v2/p/540
 
 Submitted by: nowonder
 
-Description: A data source which functions as a whitelist, allowing the project owner to upload new merkle roots over time. Includes access control via JBOperatable, which allows admins to set a new merkle root and enable/disable the whitelist. 
+Description: A data source which functions as a whitelist, allowing the project owner to upload new merkle roots over time. Includes access control via JBOperatable, which allows admins to set a new merkle root and enable/disable the whitelist.
 
 Repo (smart contract): https://github.com/simplemachine92/JBStraws-Contracts
 
@@ -96,7 +96,7 @@ Team Juicebox Project: https://juicebox.money/v2/p/543
 
 Submitted by: weaver
 
-Description: A project aiming to provide simple data aggregation for Data Sources. It features practical examples showcasing the utilization of average weights derived from multiple sources, as well as the implementation of multisource allow lists. Simple interfaces and implementations to be extended for further use. 
+Description: A project aiming to provide simple data aggregation for Data Sources. It features practical examples showcasing the utilization of average weights derived from multiple sources, as well as the implementation of multisource allow lists. Simple interfaces and implementations to be extended for further use.
 
 Repo: https://github.com/calcifer11/JuiceboxDataSourceAggregator
 
@@ -110,11 +110,11 @@ Filipv agreed with this, and said that more tightly scope and generic front ends
 
 ## Buyback Delegate Proposal Introduction by Jango
 
-At the time of this town hall,  [A proposal to implement the buyback delegate on JuiceboxDAO](https://www.jbdao.org/s/juicebox/408) submitted by Filipv was under governance voting process. 
+At the time of this town hall,  [A proposal to implement the buyback delegate on JuiceboxDAO](https://www.jbdao.org/s/juicebox/408) submitted by Filipv was under governance voting process.
 
 ![Proposal of implementing buyback delegate](buyback_delegate_prop.png)
 
-Jango thought that a lot of things were  waiting on the deployment of this buyback delegate, and it would be exciting on many fronts. This governance proposal to implement it would help prepare ourselves for the outcome of this product.  
+Jango thought that a lot of things were  waiting on the deployment of this buyback delegate, and it would be exciting on many fronts. This governance proposal to implement it would help prepare ourselves for the outcome of this product.
 
 This proposal also requires a migration of current buyback delegate version from 3.1 to 3.1.1 for JuiceboxDAO, which has the implication of incurring fees for JBX redemptions from JuiceboxDAO treasury. As this extra fees for redemption will have 1% negative effect on redemptions, Jango said this migration would be just for dev convenience to update to the version in conformity with our development goal.
 
@@ -132,7 +132,7 @@ In the video recorded by Matthew, JuiceboxDAO contract crew, including Jango, Dr
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFZ03Jj5mKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This is one of the efforts to provide some more developer oriented content. Also they were planning produce another video with Peel, to go throught the Juicebox interface, problems solved and subgraph queries, etc. 
+This is one of the efforts to provide some more developer oriented content. Also they were planning produce another video with Peel, to go throught the Juicebox interface, problems solved and subgraph queries, etc.
 
 ### New Episode of Juicecast featuring Nicholas
 
@@ -142,7 +142,7 @@ They also released the last epidosde of Juicecast with Nicholas. In this episode
 
 ## EthCC Guide by Bruxa
 
-Thristy Thirsty would be hosting an event during the EthCC, and Bruxa used the Croptop template to make a guild to this event on their ETH domain name website [thirstythirsty.eth](https://paris.thirstythirsty.eth.limo/). They would be releasing this guide to community members and allowing them to collect the content as NFTs without having to token gate any of those content. 
+Thristy Thirsty would be hosting an event during the EthCC, and Bruxa used the Croptop template to make a guild to this event on their ETH domain name website [thirstythirsty.eth](https://paris.thirstythirsty.eth.limo/). They would be releasing this guide to community members and allowing them to collect the content as NFTs without having to token gate any of those content.
 
 Bruxa said this method of propagation feels very good to direct sponsors or clients to pay to their project, which in turn pays their people on the ground providing services. They plan to use this way to demostrate their transparent treasury and hopefully attract sponsors, partners and ultimately members to their community. She was excited about this experiment and grateful to launch it with Croptop and Juicebox.
 
@@ -156,9 +156,9 @@ Essentially retailism, in the background of Juicebox protocol, depicts a way pro
 
 In this framework, how do developers, who often need cash flow to do certain things including paying themselves, get paid? how to build confidence in investors so that they are willing to invest and understand what the investment means? How to balance the necessary energy to push the projects forward?
 
-Up till the moment of this town hall, Jango had written 4 blog posts to express his thoughts in this concept. 
+Up till the moment of this town hall, Jango had written 4 blog posts to express his thoughts in this concept.
 
-### [Retailism](https://jango.eth.limo/9E01E72C-6028-48B7-AD04-F25393307132) 
+### [Retailism](https://jango.eth.limo/9E01E72C-6028-48B7-AD04-F25393307132)
 
 The first one is an overview to this concept, explaining the What, Why, Who, When and How this framework of retailism will apply and outcompete within a broader capitalist marketplace and avoid retail extraction of generations of participants.
 
@@ -186,7 +186,7 @@ The last post analyzes why a retailist network will be productive certain groups
 
 
 
-The last thing missing in this concept will be the buyback delegate, which helps easing the price fluctuations over time between the entrance rate (issuance rate) and the exit rate (redemption rate). Once these last contractual components fit together, we will have some experiments in practice through Defifa and Croptop. And we will study them live and find out what works and what does not, evolve them further, before forking the framework for different kinds of software projects. 
+The last thing missing in this concept will be the buyback delegate, which helps easing the price fluctuations over time between the entrance rate (issuance rate) and the exit rate (redemption rate). Once these last contractual components fit together, we will have some experiments in practice through Defifa and Croptop. And we will study them live and find out what works and what does not, evolve them further, before forking the framework for different kinds of software projects.
 
 ## Peel Updates and Demo by Tjl
 
