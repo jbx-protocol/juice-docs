@@ -35,9 +35,9 @@ Proposals with 10 or more "Y" votes and at least 50% "Y" votes move to Snapshot 
 
 `Begins on Day 4 of the Governance Cycle - Tuesday 00:00 UTC`
 
-A 4-day Approve/Deny/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
+A 4-day For/Against/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
 
-Proposals with 60,000,000 or more "Approve" votes and at least 66% "Approve" votes will be implemented. "Abstain" votes are ignored.
+Proposals with 60,000,000 or more "For" votes and at least 66% "For" votes will be implemented. "Abstain" votes are ignored.
 
 #### Step 3 - Execution
 
@@ -45,7 +45,7 @@ Proposals with 60,000,000 or more "Approve" votes and at least 66% "Approve" vot
 
 The JuiceboxDAO multisig ([`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://app.safe.global/home?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)) executes approved proposals according to their specifications.
 
-- If approved proposals conflict with each other, more recently approved proposals take priority for the conflicting part. If they were approved at the same time, the proposal with more "Approve" votes takes priority.
+- If approved proposals conflict with each other, more recently approved proposals take priority for the conflicting part. If they were approved at the same time, the proposal with more "For" votes takes priority.
 - Proposals are effective when they are approved on Snapshot unless they say otherwise.
 - Parts of proposals which are impossible to execute won't be executed.
 - The multisig can make small reasonable modifications to a proposal when interpreting it.
