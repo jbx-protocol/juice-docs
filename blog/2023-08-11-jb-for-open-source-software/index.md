@@ -3,6 +3,7 @@ slug: jb-for-open-source-software
 title: Juicebox for open-source software - raising funds to support development on Juicebox vs. Buy Me a Coffee
 description: Success stories of past developers that succesfully used Juicebox
 authors: [brileigh, matthew]
+image: https://docs.juicebox.money/assets/images/cover-5e62d4cdf755f2762c9495b08329319f.png
 tags: [highlight]
 ---
 
