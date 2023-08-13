@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # JuiceboxDAO Governance Process
 
-*JuiceboxDAO governance follows a 14 day cycle.*
+*JuiceboxDAO's governance follows a 14 day cycle.*
 
 ![](/img/gov-calendar.webp)
 
@@ -29,7 +29,7 @@ Proposals can be made on [jbdao.org](https://www.jbdao.org/) at any time. When r
 
 A 3-day Y/N Discord poll (a "temperature check") is made for each proposal submitted by the start of a Governance Cycle. While this poll is active, authors can update or redact their proposals as they get feedback. Verified Discord members with JBX get one vote for each poll.
 
-Proposals with 10 or more "Y" votes and at least 50% "Y" votes move to Snapshot voting.
+Proposals with 10 or more "Y" votes and at least 30% "Y" votes move to Snapshot voting.
 
 #### Step 2 - Snapshot Voting
 
@@ -37,7 +37,7 @@ Proposals with 10 or more "Y" votes and at least 50% "Y" votes move to Snapshot 
 
 A 4-day For/Against/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
 
-Proposals with 60,000,000 or more "For" votes and at least 66% "For" votes will be implemented. "Abstain" votes are ignored.
+Proposals with 80,000,000 or more "For" votes and at least 66% "For" votes will be implemented. "Abstain" votes are ignored.
 
 #### Step 3 - Execution
 
