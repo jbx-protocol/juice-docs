@@ -1,4 +1,4 @@
-# Juicebox Delegated 721 Distribution Mechanism
+# ERC-721 Delegate
 
 :::info
 This is the README from the [`juice-721-delegate`](https://github.com/jbx-protocol/juice-721-delegate.git) repository.
