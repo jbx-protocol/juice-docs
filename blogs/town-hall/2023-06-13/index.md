@@ -16,13 +16,13 @@ They had worked a lot in CID (Content Identifier) to make sure the content was b
 
 During the town hall, Jango showed us [a website created with Croptop template](https://ipfs.io/ipns/k51qzi5uqu5di0scaadzossc8tf6bupz2hbfvpfq56sg9g8afn5bnauuyab8zg/) but not yet pinned to an .eth domain, and demonstrated how to post and mint these contents of different formats onto a Juicebox project.
 
-![unpinned decentralized website with various formats of content](croptop_diff_formats.png)
+![unpinned decentralized website with various formats of content](croptop_diff_formats.webp)
 
 Jango had been playing with some treasury design stuff recently for both Defifa and Croptop, which had in turn led to his reflections on where JuiceboxDAO's intitial treasury design started, what were some learnings, what were some things to take into consideration moving forward, and what were the experiments Jango was eager to try. Jango wrote down his thoughts in the blog post [Treasury Design Reflections](https://blog.jango.eth.limo/38C20F69-0391-4C54-AA5F-9658265A204C/) on his personal ENS domain website.
 
 In the blog post, Jango proposed some treasury designs he thought would apply decently well to projects like Croptop and Defifa. But he also thought that this design was still up for discussion, so he ecouraged folks with doubts or curiosities to come forward and share their ideas, so that hopefully we could make a better design in this respect.
 
-![fully automated treasury designs](automated_treasury_designs.png)
+![fully automated treasury designs](automated_treasury_designs.webp)
 
 Jango gave an example of a possible treasury design for Croptop in this town hall.
 
@@ -46,15 +46,15 @@ Latest work by Peel team:
 
 1. Bookmarked projects by Peri. On a project page, users can now click the bookmark icon to save the project to their account for future convenience.
 
-![Bookmark project by Peri](project_bookmark.png)
+![Bookmark project by Peri](project_bookmark.webp)
 
 2. Improvements to the Safe page of projects by JohnnyD. If a Juicebox project is owned by a multisig, there will be dedicated Safe page for this project on Juicebox.money, so that people can check any queued transactions or the history of transactions.
 
-![Safe page of project](project_safe_page.png)
+![Safe page of project](project_safe_page.webp)
 
 3. Revamp of project page mainly done by Wraeth.
 
-![project page revamp](project_page_revamp.png)
+![project page revamp](project_page_revamp.webp)
 
 4. Thanks to Aeolian, Juicebox.money now supported the new JBTiered721Delegate V3.3 contract (NFT rewards), new project would be created with this new version.
 

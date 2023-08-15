@@ -46,7 +46,7 @@ Once the users have one of these NFTs minted by staking their ERC-20 tokens, we 
 
 On the Town Hall, 0xBA5ED demoed some NFT artwork that had been done recently. These were randomly generated onchain SVGs which will contain some information from the blockchain, such as the tiers and the cost of the NFTs.
 
-![Bnanapus NFT of onchain generated SVG](bananapus_nft_svg.png)
+![Bnanapus NFT of onchain generated SVG](bananapus_nft_svg.webp)
 
 These NFTs were the default of Bananpus, so anyone can easily deploy staking solution for their project tokens and start routing rewards to it.
 
@@ -80,7 +80,7 @@ LJ also said that it would be even more cool to have a coded contract that can e
 
 There was a new Mac App released for Croptop available right now. Go to [croptop.eth.limo](https://croptop.eth.limo/) and follow the instructions there to try the "Self-serve personal websites accessible from .eth addresses, with content feeds and revenue streams baked in".
 
-![instructions to make use of croptop](croptop_instructions.png)
+![instructions to make use of croptop](croptop_instructions.webp)
 
 There's a [Goerli version of the Croptop Publishing Network](https://goerli.juicebox.money/v2/p/1016), which is the master network project taking fees from folks who minted on sites that they forked.
 
@@ -94,7 +94,7 @@ Jango was excited about the implementing this concept in Defifa and Croptop, whi
 
 In the meantime, Aeolian and Kmac had been working on some very exciting front end enhancements, and Filipv had done a fantastic job improving the how-to guide for Defifa and Blunt, making it easier for users to understand. Please visit [defifa.net](https://www.defifa.net/) to explore the current state of our prototype.
 
-![new homepage of Defifa.net](defifa_new_page.png)
+![new homepage of Defifa.net](defifa_new_page.webp)
 
 Both Croptop and Defifa requires a buyback delegate, which itself relies on the payment terminal as a pre-requisite. Our focus right now was to ensure getting those out the door, once those are in place, we can expect a lot of similar projects going to be created.
 
@@ -110,7 +110,7 @@ Bruxa introduced that she was producing an event called Sate of Crypto Philanthr
 
 Bruxa said hopefully she would create a really intriguing dialogue about things such as actionables,data and forecasting for the rest of the year. She would love to invite people who care about that to join the event, which she thought would be relevant to literally anyone building and also an good opportunity to ask questions.
 
-![Cover Image for State of Crypto Philanthropy Digital Summit](state_crypto_philanthropy.png)
+![Cover Image for State of Crypto Philanthropy Digital Summit](state_crypto_philanthropy.webp)
 
 
 

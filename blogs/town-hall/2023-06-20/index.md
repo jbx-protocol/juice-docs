@@ -14,11 +14,11 @@ TJl gave a quick overview of some changes that Peel had made to the project page
 
 Some of the main changes were to highlight the key statistics of a project, arrange other details into various tabs such as Activity, About, NFTs, Cycles, Tokens etc. A short link straight to NFTs and Rewards had also been introduced for purpose of user's convenience.
 
-![new project page setup](project_page_new.png)
+![new project page setup](project_page_new.webp)
 
 One of the biggest changes they made was a cart structure for the NFTs, similar to our mental model of purchasing something in real life, users now can add multiple NFTs to the cart and make a lumpsum payment for their choices of NFTs.
 
-![NFT cart payment modal](NFT_cart.png)
+![NFT cart payment modal](NFT_cart.webp)
 
 There would be some really great upcoming features in the next two weeks, which include the ability for project owners to post updates about their projects directly on the project page, and also that for community members to engage in comments on these updates.
 
@@ -28,11 +28,11 @@ Also the 'About' section would soon have a makeover with addtion of rich markdow
 
 Aeolian made a poll in the Discussion channel of our Discord server, to let community members elect which projects should be put on the Juicy picks section on our homepage.
 
-![Juicy Picks Poll](juicy_picks_poll.png)
+![Juicy Picks Poll](juicy_picks_poll.webp)
 
 Here under was the current layout of Juicy Picks, which would be rearranged according to the poll results above.
 
-![current Juicy picks](current_juicy_picks.png)
+![current Juicy picks](current_juicy_picks.webp)
 
 
 ## ETH Shanghai Meetup Updates by LJ
@@ -53,9 +53,9 @@ Nicholas introduced that lately the Nance team had been making lots of improveme
 
 One of new features is the “Fork Proposal", which allows people to literally fork an arbitrary proposal and make a similar one very conveniently.
 
-![jbdao fork proposal](jbdao_fork_proposal.png)
+![jbdao fork proposal](jbdao_fork_proposal.webp)
 
 And another feature was to allow authors of proposal to add actions for a certain proposal, with the onchain transactions or reconfiguration parameters, etc. which are supposed to happen on the blockchain once the proposal is approved.  These are structured data parameters that will show up at the top of a proposal, and in the future iteration of Nance, these actions will be propogated into a new interface where people can reconfigure a project directly without needing extra efforts to manually construct a reconfiguration, and in turn lowering the risks of errors might be incurred.
 
-![add an action in a proposal](jbdao_add_action.png)
+![add an action in a proposal](jbdao_add_action.webp)
 

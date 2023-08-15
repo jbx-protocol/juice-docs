@@ -2,23 +2,23 @@
 slug: 23-08-08
 title: August 8th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Peel Updates
 
 ### Rich Text Editor Demo by Tjl
 
-This is a feature that has been requested by many projects, for more customization and control over the project description. With this new feature, project owners can edit project description with Markdown formats, images and links, etc. 
+This is a feature that has been requested by many projects, for more customization and control over the project description. With this new feature, project owners can edit project description with Markdown formats, images and links, etc.
 
 Hopefully this feature would help strengthen project's About section and give owners more freedom in providing detailed infomation about their projects.
 
 Currently there were still some bugs in this feature, Peel team would fix those problems and deploy this new feature once everything was ready.
 
-![Rich Text Editor](markdown-editor.png)
+![Rich Text Editor](markdown-editor.webp)
 
 ### New Payouts Table Demo by JohnnyD
 
@@ -28,7 +28,7 @@ JohnnyD had been working on the new edit cycle form lately, and he had made a ne
 
 This will be easier for project admins to know exactly how much is going out of the treasury, and more importantly, the actual amount of Juicebox fees incurred with these outward payments will also be updated simultaneously with the editing of payouts.
 
-![New Payouts Table Demo](new_payouts_table.png)
+![New Payouts Table Demo](new_payouts_table.webp)
 
 Hopefully this new payouts table will give people a much better idea of what's happening with the distribution limit and the Juicebox fees that will be incurred with the payouts.
 
@@ -40,11 +40,11 @@ Peel team had been putting quite some efforts into overhauling the create flow w
 
 Obviously one of the biggest challenges in this respect is about how to let the native Juicebox concepts, one of the hardest things to comprehend, play into the create flow much more intuitively and easier to understand along the way.
 
-Peel team also introduced a few thigs to help increase project quality. 
+Peel team also introduced a few thigs to help increase project quality.
 
 Firstly, when users click to create a new project, there will be a splash screen that gives them some tips to create a project, etc.
 
-![Create Flow Education content](create_flow_education.png)
+![Create Flow Education content](create_flow_education.webp)
 
 The team is also introducing the drafts, so that project creators can go back and forth without launching a project or having to reconfigure before all the details are finalized.
 
@@ -54,13 +54,13 @@ And more importantly, there will be a little educational panel on the right hand
 
 [CupOJoseph](https://twitter.com/CupOJoseph), the founder of Game Wallet, is going to launch a project on Juicebox to sell his Gameboy wallet cartridges as a hardware wallet. At this moment, the Game Wallet has got about 10,000 people on their waitlist, while the project team is still finalizing some details, one of which being the ability to pay not only in Ethereum, but also in fiat as well, so that the project can be open to a wider audience.
 
-Peri, who is the person mainly responsible for the support of this Game Wallet project, said that there are currently two important components in this upcoming project. 
+Peri, who is the person mainly responsible for the support of this Game Wallet project, said that there are currently two important components in this upcoming project.
 
 The first one, also the main problem for Game Wallet is concerned with the fiat checkout integration, as right now payment to a Juicebox project is still limited to ETH. The integration that Peel team is building right now is to make use of [POKO platform](https://www.pokoapp.xyz/), so that when users are paying a project, they have the option to transfer to an embedded form to check out with fiat. The working theory behind the scene is to buy ETH on payer's behalf and automatically transfer them into the relevant Juicebox project.
 
 But the dilemma here is that, we will still require payers to have a crypto wallet connected to the project, so that we can have a place to send the project tokens minted from the payments. This in turn give rise to the second important components of this project. We're going to integrate with [Keyp](https://www.usekeyp.com/), which is a service that allows users to authenticate with an email adress and create an account to be allocated with a crypto wallet address. With that integration, when users click the connect button on the Juicebox app, they will have the option to use between a standard EOA wallet or the Keyp wallet. The Keyp wallet will work totally the same with a normal EOA wallet, including sending transactions or checking balance, etc.
 
-![Fiat checkout integration](fiat_checkout.png)
+![Fiat checkout integration](fiat_checkout.webp)
 
 Tjl thought that we could further discuss the possibility of making these integrations generic for all other projects to use, also there might be some other unforeseen potentials on the horizon for us to explore in this respect.
 
@@ -104,7 +104,7 @@ Although he thought that Mainnet is always going to be the place where the large
 
 ## Sablier Interop Updates by Nowonder
 
-Nowonder's proposal to integrate Sablier with Juicebox had been approved by the DAO lately, in this town hall, he expressed his gratitude towards our community for allowing him to work on this job. 
+Nowonder's proposal to integrate Sablier with Juicebox had been approved by the DAO lately, in this town hall, he expressed his gratitude towards our community for allowing him to work on this job.
 
 The Sablier interop is basically a split allocator that allows project owners to deploy Sablier Stream to distribute project tokens to people in a granular manner over time.
 
@@ -112,13 +112,13 @@ According to Nowonder, the major use case of this integration lies in where proj
 
 Another feature that Nowonder was thinking of adding to it is either an ETH reserve or a project token reserve, which would allow project owners or their operators to add new streams even if they aren't instantiated when the allocator is deployed in the very beginning.
 
-![Notes of Sablier interop](notes_sablier_interop.png)
+![Notes of Sablier interop](notes_sablier_interop.webp)
 
 Jango thought that this looked sound and great for prototyping to really leverage the opportunity. It would be cool to introduce more about Sablier to our community, and Juicebox to theirs, as well as how in the future the tool Nowonder was going to build would be worthwhile for projects to try for themselves.
 
-Jango also suggested that we consider making a Juicecast episode or some coverage on Juicenews, in order to support and inspire in both directions in a consistent manner. He thought that a large part of the next sequence of the Juicebox project as a whole essentially lies in the integration with all these other communities. 
+Jango also suggested that we consider making a Juicecast episode or some coverage on Juicenews, in order to support and inspire in both directions in a consistent manner. He thought that a large part of the next sequence of the Juicebox project as a whole essentially lies in the integration with all these other communities.
 
-Nowonder and Matthew both agreed with this idea and expressed their willingness of making a joint effort to produce a Juicecast episode. 
+Nowonder and Matthew both agreed with this idea and expressed their willingness of making a joint effort to produce a Juicecast episode.
 
 And Nowonder also announced his plan to build a split allocator template, for the purpose of dev documentation so that somebody could understand how to start writing tests and forge for a split allocator of their own.
 
@@ -126,11 +126,11 @@ And Nowonder also announced his plan to build a split allocator template, for th
 
 Last weekMatthew and Brileigh had released a new episode of Juicecast, featuring the NFT influencer DeeZe.
 
-![Juicecast episode 29](juicecast_ep29.png)
+![Juicecast episode 29](juicecast_ep29.webp)
 
 And they were also planing to do a Twitter Space with [The Dapp List](https://twitter.com/thedapplist) next Wednesday. The Dapp List is almost like an index and a curated selection of Dapps in the Web3 world, where Juicebox is also curated. They are going to talk on this Twitter Space about how Juicebox works and how people can make use of it.
 
-Jango acknowledged and appreciated the efforts of the Juicecast team, i.e. Matthew and Brileigh. He thought that the Juicecast channel now feels warm and consistent, finding a rhythm and groove that listeners really enjoy.  Jango also extended his thanks for their capturing various works, including encouraging developers to record content and then managing the post-production work afterwards. 
+Jango acknowledged and appreciated the efforts of the Juicecast team, i.e. Matthew and Brileigh. He thought that the Juicecast channel now feels warm and consistent, finding a rhythm and groove that listeners really enjoy.  Jango also extended his thanks for their capturing various works, including encouraging developers to record content and then managing the post-production work afterwards.
 
 Jango thought that there had been a lot of insightful and educational content created that goes unnoticed due to everyone being busy working with their own projects. He encouraged cross-disciplinary collaboration from our community to contribute to Juicecast channel.
 

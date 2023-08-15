@@ -9,7 +9,7 @@ tags: [highlight]
 
 ![Cover image](cover.png)
 
-Open source software plays a crucial part in the digital economy, in the same way that highways and communication systems play a role in our cities. With the emergence of blockchain, developers can now turn to funding their software onchain, as it allows builders to raise funds permissionlessly, transparently and make use of tokens. In this article we’re going to focus on how you can use Juicebox to fund your open-source software project. 
+Open source software plays a crucial part in the digital economy, in the same way that highways and communication systems play a role in our cities. With the emergence of blockchain, developers can now turn to funding their software onchain, as it allows builders to raise funds permissionlessly, transparently and make use of tokens. In this article we’re going to focus on how you can use Juicebox to fund your open-source software project.
 
 You can follow along in this article, or a video by Matthew on the JBDAO YouTube:
 
@@ -17,11 +17,11 @@ You can follow along in this article, or a video by Matthew on the JBDAO YouTube
 
 ### What is Juicebox?
 
-Juicebox is an open-source protocol that is permissionless, community-owned, and built on the Ethereum blockchain. Juicebox is built ***by hackers, for hackers***, making it a great launchpad for developers to take their projects to the next level. Let’s dive into some examples of projects using Juicebox to fund open-source software. 
+Juicebox is an open-source protocol that is permissionless, community-owned, and built on the Ethereum blockchain. Juicebox is built ***by hackers, for hackers***, making it a great launchpad for developers to take their projects to the next level. Let’s dive into some examples of projects using Juicebox to fund open-source software.
 
 ### Example 1: Planet
 
-[Planet](https://juicebox.money/@pinnable) is an open-source tool built by [Xin](https://twitter.com/Livid), aka Livid, who previously built [V2EX.com](http://V2EX.com) which is a popular community for developers in China. Planet lets you build decentralized websites using IPFS and ENS, so instead of hosting your website on a centralized server, Planet uses IPFS for peer-to-peer content distribution and lets you use an ENS address that you own or control as the URL. Planet has raised nearly 7 ETH on Juicebox, worth over 12.5 thousand dollars at the time of recording. 
+[Planet](https://juicebox.money/@pinnable) is an open-source tool built by [Xin](https://twitter.com/Livid), aka Livid, who previously built [V2EX.com](http://V2EX.com) which is a popular community for developers in China. Planet lets you build decentralized websites using IPFS and ENS, so instead of hosting your website on a centralized server, Planet uses IPFS for peer-to-peer content distribution and lets you use an ENS address that you own or control as the URL. Planet has raised nearly 7 ETH on Juicebox, worth over 12.5 thousand dollars at the time of recording.
 
 ![Planet logo and preview of blog post on mac OS app](planet.gif)
 
@@ -31,7 +31,7 @@ To learn more about how the Planet got started, listen to episode 25 of [The Ju
 
 ### Example 2: Etherfunk
 
-[Etherfunk](https://juicebox.money/@etherfunkio) is a tool that lets you interact with any contract on the Ethereum blockchain. Simply enter a contract address and Etherfunk makes it easy to interact with its read and write functions. You can also generate links with pre-filled values to easily share contract interactions in a predefined way. 
+[Etherfunk](https://juicebox.money/@etherfunkio) is a tool that lets you interact with any contract on the Ethereum blockchain. Simply enter a contract address and Etherfunk makes it easy to interact with its read and write functions. You can also generate links with pre-filled values to easily share contract interactions in a predefined way.
 
 ![Etherfunk](etherfunk.png)
 
@@ -41,9 +41,9 @@ Etherfunk was developed by [Aeolian](https://twitter.com/aeolianeth), one of the
 
 ### How Juicebox works for open source software
 
-So, how does Juicebox work for open-source software? 
+So, how does Juicebox work for open-source software?
 
-Launching a project on Juicebox lets you build a treasury out in the open, raise funds from your community or via grants, and issue ERC20 tokens or NFTs as benefits to supporters. 
+Launching a project on Juicebox lets you build a treasury out in the open, raise funds from your community or via grants, and issue ERC20 tokens or NFTs as benefits to supporters.
 
 In addition to introducing your project and the story behind what you’re building, consider stating your fundraising goal and costs upfront in your project description. You can also use Juicebox’s onchain rules to set limits for how much can be withdrawn from the project so that supporters feel safer knowing that you can’t rug and take all the ETH.
 
@@ -56,7 +56,7 @@ For example, let’s say your goal is to raise $1000 per month to maintain your 
 
 ### Juicebox tokenomics for developers
 
-In addition to Cycles and Payouts, Juicebox also offers advanced tokenomics features that allow you to issue tokens and NFTs, offer refunds, and more. 
+In addition to Cycles and Payouts, Juicebox also offers advanced tokenomics features that allow you to issue tokens and NFTs, offer refunds, and more.
 
 - When supporters pay your project, they receive tokens. Depending on whether you deploy an ERC-20 token or not, these will either be in their wallet or internally accounted for by the Juicebox contracts which is the default to save on gas fees.
 - ERC-20 tokens are often used for governance. This could be something simple like letting token holders vote on upcoming features, or maybe you want your project to be community-owned and governed as a DAO with token holders voting on how to use treasury funds.
