@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-buyback/blob/9188f091347816c201097ae704fbf2c66b22d495/contracts/JBBuybackDelegate.sol)
 
-Inherits: [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBDelegateMetadataHelper`](/), [`IJBFundingCycleDataSource3_1_1`](/docs/dev/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IJBPayDelegate3_1_1`](/docs/dev/api/interfaces/ijbpaydelegate3_1_1.md), [`IUniswapV3SwapCallback`](https://docs.uniswap.org/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback)
+Inherits: [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBDelegateMetadataHelper`](/dev/extensions/juice-delegate-metadata-lib/jbdelegatemetadatahelper/), [`IJBFundingCycleDataSource3_1_1`](/docs/dev/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IJBPayDelegate3_1_1`](/docs/dev/api/interfaces/ijbpaydelegate3_1_1.md), [`IUniswapV3SwapCallback`](https://docs.uniswap.org/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback)
 
 Datasource and delegate allowing pay beneficiary to get the highest amount of project tokens between minting using the project weigh and swapping in a given Uniswap V3 pool.
 
