@@ -89,12 +89,12 @@ Note that for v2 projects, the Subgraph will only return metadata for domain `0`
 
 The metadata schemas below are used on [juicebox.money](https://juicebox.money). Note that all fields can be user-defined, and are not guaranteed to exist. When reading project metadata, take care to properly sanitize and process the results.
 
-The most recent JSON schema (version 8):
+The most recent JSON schema (version 9):
 
 | Field | Description |
 | --- | --- |
 | `name` | The project's name. Required when creating a project on [juicebox.money](https://juicebox.money). |
-| `description` | The project's description. |
+| `description` | The project's description, in HTML. |
 | `logoUri` | The URI/URL of the project's logo image (usually hosted on the IPFS network). |
 | `coverImageUri` | The URI/URL of the project's cover image (usually hosted on the IPFS network). |
 | `infoUri` | The URI/URL of the project's website. |
@@ -112,6 +112,7 @@ The most recent JSON schema (version 8):
 | `version` | The version number of the project's JSON structure. |
 | `payButton` | The text displayed on the project's payment button on [juicebox.money](https://juicebox.money). |
 | `payDisclosure` | The text displayed to users before paying the project on [juicebox.money](https://juicebox.money). |
+| `projectTagline` | A short tagline displayed prominently on [juicebox.money](https://juicebox.money). |
 
 <details>
 
@@ -273,5 +274,54 @@ Example: Project `2-466`, hash [`QmZ3tYkpGMjC8gCGSERH2Hk5MWJYY5e8nvxwvr2ec9fwuJ`
 ```
 
 - Added `coverImageUri` - The URI/URL of the project's cover image (usually hosted on the IPFS network).
+
+### Version 8
+
+Example: Project `2-477`, hash [`QmZUYR2bNUPNZYzmLcbY4JqJMRrZhfmP7Nom7Hp3kdo2YE`](https://ipfs.io/ipfs/QmZUYR2bNUPNZYzmLcbY4JqJMRrZhfmP7Nom7Hp3kdo2YE)
+
+```json
+{
+  "name": "nance",
+  "infoUri": "nance.app",
+  "logoUri": "ipfs://QmU6eSNXv4qyP1FhW1KcExnk114BQmKWJwkuWo9D3HEeap",
+  "coverImageUri": "",
+  "description": "nance is a sufficiently decentralized, automated governance platform\n\nborn from the most active DAO on Ethereum, JuiceboxDAO\n\nnance can:\n* provide a proposal creation frontend\n* store proposals using Dolt (git for mySQL databases)\n* create a discussion thread for a new proposal\n* alert the DAO to different stages of governance\n* upload proposals to Snapshot in a timely manner\n* keep track of DAO member payouts\n* reconfigure Juicebox funding cycles\n* submit Gnosis Safe transactions",
+  "twitter": "nance_app",
+  "discord": "discord.gg/eHv5kwbgGE",
+  "telegram": "",
+  "tokens": [],
+  "tags": [],
+  "version": 8,
+  "payDisclosure": "this is not an investment\n\nthanks for feeling nance-ish <3",
+  "payButton": "automate"
+}
+```
+
+- Add `tags`, an array of project categories defined on juicebox.money.
+
+### Version 9
+
+Example: Project `2-552`, hash [`QmXHpKPhQM6e1RsjxU7pBrrV2w3jjUyy58gtjvBs1xji45`](https://ipfs.io/ipfs/QmXHpKPhQM6e1RsjxU7pBrrV2w3jjUyy58gtjvBs1xji45)
+
+```json
+{
+  "name": "Juicecast",
+  "infoUri": "podcast.juicebox.money",
+  "logoUri": "ipfs://QmStCU29qjCi8ngAH7AZ1GTGymPvkDCppZT63335Bw8jBz",
+  "coverImageUri": "ipfs://QmP4big6pVACh1erNtPa4sSHSqQr5N5SMZXDrHcvkUrgdf",
+  "description": "<p>The Juicecast is a series of conversations hosted by <a href=\"https://twitter.com/0xbrileigh\" rel=\"noopener noreferrer\" target=\"_blank\">Brileigh</a> &amp; <a href=\"https://twitter.com/0xmatthewb\" rel=\"noopener noreferrer\" target=\"_blank\">Matthew</a> with builders in the Juicebox ecosystem and beyond. Episodes are released every two weeks and can be found on <a href=\"https://podcast.juicebox.money\" rel=\"noopener noreferrer\" target=\"_blank\">all major podcast platforms</a> as well as <a href=\"https://www.youtube.com/@JuiceboxDAO\" rel=\"noopener noreferrer\" target=\"_blank\">JBDAO YouTube</a>.</p><p><br></p><p>This project will serve as the homebase for The Juicecast as well as any payouts to Matthew &amp; Brileigh for contributions to JBDAO.</p>",
+  "twitter": "",
+  "discord": "",
+  "telegram": "",
+  "tokens": [],
+  "tags": ["social", "education"],
+  "version": 9,
+  "payButton": "Add juice",
+  "projectTagline": "Content creation for the Juicebox ecosystem"
+}
+```
+
+- Added `projectTagline`
+- Added HTML `description`s
 
 </details>
