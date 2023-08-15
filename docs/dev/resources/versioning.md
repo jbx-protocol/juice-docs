@@ -63,3 +63,20 @@ As described on [jango.eth.limo](https://jango.eth.limo/486B02AA-1D39-44B3-8927-
 7. Improves all contracts’ natspec documentation.
 8. Specifies all imports explicitly in the files from which they’re used.
 9. Removes the leading underscore from function argument names in interfaces.
+
+## v3.1.2
+
+`JBETHPaymentTerminal3_1_2` was deployed on August 15th, 2023 in [this PR](https://github.com/jbx-protocol/juice-contracts-v3/pull/51), in which Jango contextualizes its changes:
+
+> [@filipviz](https://github.com/filipviz) and I discovered a bug July 24, 2023 while helping project #548 raise funds for an auction.
+> 
+> The project had `heldFees` on. After failing to win the auction and upon returned the funds, the project was not made whole.
+> 
+> The bug is that the protocol expected a deposit equivalent to the amount paid out. In other words, if 10 ETH was paid out (before the fee), the protocol was expected a deposit of 10 ETH to return the full fee amount. The problem is the recipient doesn't have the full 10 ETH, they only have the amount after the fee. The protocol should only expect the a deposit of the amount paid out after fees... the amount the recipient actually has.
+> 
+> This PR introduces `JBPayoutRedemptionTerminal3_1_2` that fixes this issue.
+> 
+> It also
+> 
+> - moved fee calculations into a `JBFees` library
+> - removes the `isTerminalOf` check from `pay` and `addToBalance` to reduce contract size to be deployable. In `pay` these checks are already made when minting tokens. Clients are now responsible for making sure this check is correct, otherwise the project can access the funds from the terminal by setting distribution limits in a subsequent cycle.
