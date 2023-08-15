@@ -6,7 +6,7 @@ Mainnet: [`0x6B700b54BBf7A93f453fFBF58Df0fE1ab2AADA08`](https://etherscan.io/add
 
 Goerli: [`0x31682096474BFD6704992b7C5f993639E372900e`](https://goerli.etherscan.io/address/0x31682096474BFD6704992b7C5f993639E372900e)
 
-Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`IJBGenericBuybackDelegate`](/docs/dev/extensions/juice-buyback/contracts/interfaces/ijbgenericbuybackdelegate.md)
+Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/), [`IJBGenericBuybackDelegate`](/dev/extensions/juice-buyback/interfaces/ijbgenericbuybackdelegate/)
 
 Datasource and delegate allowing pay beneficiary to get the highest amount of project tokens between minting using the project weigh and swapping in a given Uniswap V3 pool.
 
