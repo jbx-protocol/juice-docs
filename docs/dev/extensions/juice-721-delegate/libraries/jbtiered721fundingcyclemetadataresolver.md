@@ -1,6 +1,6 @@
 # JBTiered721FundingCycleMetadataResolver
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/libraries/JBTiered721FundingCycleMetadataResolver.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/libraries/JBTiered721FundingCycleMetadataResolver.sol)
 
 Utility library to parse and store tiered 721 funding cycle metadata.
 
@@ -18,12 +18,12 @@ function transfersPaused(uint256 _data) internal pure returns (bool);
 function mintingReservesPaused(uint256 _data) internal pure returns (bool);
 ```
 
-### packFundingCycleGlobalMetadata
+### packTiered721FundingCycleMetadata
 
 Pack the tiered 721 funding cycle metadata.
 
 ```solidity
-function packFundingCycleGlobalMetadata(JBTiered721FundingCycleMetadata memory _metadata)
+function packTiered721FundingCycleMetadata(JBTiered721FundingCycleMetadata memory _metadata)
     internal
     pure
     returns (uint256 packed);
@@ -31,15 +31,15 @@ function packFundingCycleGlobalMetadata(JBTiered721FundingCycleMetadata memory _
 
 **Parameters**
 
-|Name|Type|Description|
-|----|----|-----------|
-|`_metadata`|[`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md)|The metadata to validate and pack.|
+| Name        | Type                                                                                                                    | Description                        |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `_metadata` | [`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The metadata to validate and pack. |
 
 **Returns**
 
-|Name|Type|Description|
-|----|----|-----------|
-|`packed`|`uint256`|The packed uint256 of all tiered 721 metadata params.|
+| Name     | Type      | Description                                           |
+| -------- | --------- | ----------------------------------------------------- |
+| `packed` | `uint256` | The packed uint256 of all tiered 721 metadata params. |
 
 ### expandMetadata
 
@@ -54,13 +54,12 @@ function expandMetadata(uint8 _packedMetadata)
 
 **Parameters**
 
-|Name|Type|Description|
-|----|----|-----------|
-|`_packedMetadata`|`uint8`|The packed metadata to expand.|
+| Name              | Type    | Description                    |
+| ----------------- | ------- | ------------------------------ |
+| `_packedMetadata` | `uint8` | The packed metadata to expand. |
 
 **Returns**
 
-|Name|Type|Description|
-|----|----|-----------|
-|`metadata`|[`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md)|The tiered 721 metadata object.|
-
+| Name       | Type                                                                                                                    | Description                     |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| `metadata` | [`JBTiered721FundingCycleMetadata`](/docs/dev/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The tiered 721 metadata object. |
