@@ -25,7 +25,12 @@ fi
 cd "$TARGET_PATH"
 ORIGIN=$(git remote)
 ORIGIN_URL=$(git remote get-url "$ORIGIN")
-FORGE_SRC=$(forge config | grep "src =" | awk -F "'" '{print $2}')
+# forge config change to double quotes broke this. Find better solution.
+FORGE_SRC=$(cat foundry.toml | grep "src =" | awk -F " " '{print $2}')
+if [ -z "$FORGE_SRC" ]; then
+  echo "Could not find forge source. Manually set FORGE_SRC in juice-doc.sh"
+  exit 1
+fi
 forge doc
 
 # Make output directory, move forge docs into it, and clean up other docs files

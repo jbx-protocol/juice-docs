@@ -2,11 +2,11 @@
 slug: 23-07-18
 title: July 18th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Feedback on Documentation by Hackathon Participants
 
@@ -30,7 +30,7 @@ Demo: https://goerli.juicebox.money/v2/p/1097
 
 Team Juicebox project: https://juicebox.money/@etherfunkio
 
-![Instant Swap Delegate](instant_swap_delegate.png)
+![Instant Swap Delegate](instant_swap_delegate.webp)
 
 ### 2. JuiceTable
 
@@ -46,7 +46,7 @@ Demo: https://youtu.be/XFwiadWq0YI
 
 Team Juicebox Project: https://juicebox.money/v2/p/540
 
-![JuiceTable delegate](juicetable_delegate.png)
+![JuiceTable delegate](juicetable_delegate.webp)
 
 ### 3. JBStraws (Merkle Root Whitelist)
 
@@ -62,7 +62,7 @@ Demo: https://juiceystraws.vercel.app/example-ui
 
 Team Juicebox Project: https://juicebox.money/v2/p/542
 
-![JBStraws delegate](jbstraws_delegate.png)
+![JBStraws delegate](jbstraws_delegate.webp)
 
 ### 4. JUICYBONUS
 
@@ -90,7 +90,7 @@ Demo: https://dominantjuicebox.netlify.app/#/
 
 Team Juicebox Project: https://juicebox.money/v2/p/543
 
-![DominantJuice delegate](dominantjuice_delegate.png)
+![DominantJuice delegate](dominantjuice_delegate.webp)
 
 ### 6. JuiceboxDataSourceAggregator
 
@@ -112,7 +112,7 @@ Filipv agreed with this, and said that more tightly scope and generic front ends
 
 At the time of this town hall,  [A proposal to implement the buyback delegate on JuiceboxDAO](https://www.jbdao.org/s/juicebox/408) submitted by Filipv was under governance voting process.
 
-![Proposal of implementing buyback delegate](buyback_delegate_prop.png)
+![Proposal of implementing buyback delegate](buyback_delegate_prop.webp)
 
 Jango thought that a lot of things were  waiting on the deployment of this buyback delegate, and it would be exciting on many fronts. This governance proposal to implement it would help prepare ourselves for the outcome of this product.
 
@@ -146,7 +146,7 @@ Thristy Thirsty would be hosting an event during the EthCC, and Bruxa used the C
 
 Bruxa said this method of propagation feels very good to direct sponsors or clients to pay to their project, which in turn pays their people on the ground providing services. They plan to use this way to demostrate their transparent treasury and hopefully attract sponsors, partners and ultimately members to their community. She was excited about this experiment and grateful to launch it with Croptop and Juicebox.
 
-![Thirsty Thirsty event guide](thirstythirsty_guide.png)
+![Thirsty Thirsty event guide](thirstythirsty_guide.webp)
 
 ## Retailism by Jango
 
@@ -162,13 +162,13 @@ Up till the moment of this town hall, Jango had written 4 blog posts to express 
 
 The first one is an overview to this concept, explaining the What, Why, Who, When and How this framework of retailism will apply and outcompete within a broader capitalist marketplace and avoid retail extraction of generations of participants.
 
-![Retailism blog post](retailism_blog.png)
+![Retailism blog post](retailism_blog.webp)
 
 ### [A Retailistic View on CAC and LTV](https://jango.eth.limo/572BD957-0331-4977-8B2D-35F84D693276)
 
 Different from the business model of profitting from the difference between CAC (Customer Acquisition Cost) and LTV (Lifetime Value) in the traditional Software-as-a-services business world, retailistic software distribution encourages growth differently by presuposing a networked environment where participants share the things they like with one another, help one another learn how to use things, and troubleshoot problems together.
 
-![A Retailistic View on CAC and LTV](a_retailistic_view.png)
+![A Retailistic View on CAC and LTV](a_retailistic_view.webp)
 
 ### [Modeling Retailism](https://jango.eth.limo/B762F3CC-AEFE-4DE0-B08C-7C16400AF718/)
 
@@ -176,13 +176,13 @@ This post describe the rules to shape a retailist network, a different combinati
 
 It also provides a [spreadsheet](https://docs.google.com/spreadsheets/d/1R-3PyyF2chmsf_t3IdVi7oEWD0i0IHTcDNwQj4DEKaA/edit#gid=424465074) to play with different variables to feel various trajectories of these retailist networks.
 
-![Modeling Retailism](modeling_retailism.png)
+![Modeling Retailism](modeling_retailism.webp)
 
 ### [Retailism for Devs, Investors, and Customers](https://jango.eth.limo/3EB05292-0376-4B7D-AFCF-042B70673C3D)
 
 The last post analyzes why a retailist network will be productive certain groups of network participants and why not for others.
 
-![Retailism for Devs and Investors and Customers](retailism_for_devs.png)
+![Retailism for Devs and Investors and Customers](retailism_for_devs.webp)
 
 
 
@@ -194,4 +194,4 @@ Peel team had pushed a new feature to the project page on Juicebox.money, which 
 
 The updates will also show the time of posting and the wallet address that posts it. And the project owners can delete a certain update and add another one, but they won't be able to edit the posted updates.
 
-![new feature of project updates](project_updates.png)
+![new feature of project updates](project_updates.webp)

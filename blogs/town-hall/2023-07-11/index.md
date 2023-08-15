@@ -52,7 +52,7 @@ Jango looked back on the blog post [Year of the Dev](https://docs.juicebox.money
 
 As diverse individuals, we bring our own artistic approaches to making things happen, with values that may differ but contribute to our collective growth. Jango emphasized the importance of learning from one another, as well as from the diverse experiences and viewpoints beyond our commonalities, which continuously drive us forward.
 
-![blog post Year of the Dev](year_of_the_dev.png)
+![blog post Year of the Dev](year_of_the_dev.webp)
 
 Jango expressed deep gratitude and excitement for the past year of building, acknowledging that it came with its fair share of challenges. However, the team successfully navigated through those obstacles and embarked on a journey of showcasing new aspects of the project. They highlighted their tasteful discoveries and emphasized financial value sets that held great significance to them.
 

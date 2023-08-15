@@ -2,11 +2,11 @@
 slug: 23-07-25
 title: July 25th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Ripple Case Discussions and Q&A
 
@@ -88,7 +88,7 @@ We had a medium severity error in the hold fees calculation on the `JBPayoutRede
 
 Filipv had published a [postmortem on this issue](https://docs.juicebox.money/dev/resources/post-mortem/2023-07-24/) to explain in detail the reason of this error and the remedy to it.
 
-![Hold fees buy explanation](hold_fees_bug.png)
+![Hold fees buy explanation](hold_fees_bug.webp)
 
 By the time of this town hall, Jango had created a [PR](https://github.com/jbx-protocol/juice-contracts-v3/pull/51) to update the payment terminal to 3.1.2 to fix this bug. Filipv suggested that project owners should avoid using the Hold fees feature before the new version of payment terminal 3.1.2 is deployed.
 

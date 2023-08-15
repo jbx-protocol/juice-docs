@@ -1,6 +1,6 @@
 # JBBitmap
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/libraries/JBBitmap.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/libraries/JBBitmap.sol)
 
 Utilities to manage bool bitmap storing the inactive tiers.
 
@@ -24,7 +24,7 @@ function isTierIdRemoved(JBBitmapWord memory self, uint256 _index) internal pure
 
 ### isTierIdRemoved
 
-Returns the status of a bit in a given bitmap (index is the index in the reshaped bitmap matrix 1*n).
+Returns the status of a bit in a given bitmap (index is the index in the reshaped bitmap matrix 1\*n).
 
 ```solidity
 function isTierIdRemoved(mapping(uint256 => uint256) storage self, uint256 _index) internal view returns (bool);
@@ -46,11 +46,10 @@ Return true if the index is in an another word than the one stored in the Bitmap
 function refreshBitmapNeeded(JBBitmapWord memory self, uint256 _index) internal pure returns (bool);
 ```
 
-### _retrieveDepth
+### \_retrieveDepth
 
 Return the lines of the bitmap matrix where an index lies.
 
 ```solidity
 function _retrieveDepth(uint256 _index) internal pure returns (uint256);
 ```
-

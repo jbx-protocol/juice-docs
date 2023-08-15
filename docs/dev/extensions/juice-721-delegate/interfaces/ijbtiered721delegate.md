@@ -1,6 +1,6 @@
 # IJBTiered721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/interfaces/IJBTiered721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/interfaces/IJBTiered721Delegate.sol)
 
 Inherits: [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md)
 
@@ -95,7 +95,6 @@ function setMetadata(
 ```solidity
 function initialize(
     uint256 projectId,
-    IJBDirectory directory,
     string memory name,
     string memory symbol,
     IJBFundingCycleStore fundingCycleStore,
@@ -179,4 +178,3 @@ event UseCredits(
     uint256 indexed changeAmount, uint256 indexed newTotalCredits, address indexed account, address caller
 );
 ```
-

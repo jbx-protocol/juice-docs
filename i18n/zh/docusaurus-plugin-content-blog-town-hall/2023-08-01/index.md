@@ -2,11 +2,11 @@
 slug: 23-08-01
 title: JuiceboxDAO 周会概要 2023 年 8 月 2 日
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## 社区能见度工作报告 -- Matthew 及 Brileigh
 
@@ -28,7 +28,7 @@ Jango 介绍，制作 Solidity Sesh 的灵感源自那些一直尝试在 Juicebo
 
 他们本周还发布了 Juicecast 播客的新一期节目，本期节目的采访嘉宾为 NFT 网红 [DeeZe](https://twitter.com/deeze)，在节目中他分享了自己作为一个 Web3 OG 的一些有趣的经历。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R5xoInP0JxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R5xoInP0JxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Nance 创建流程演示 --  Jigglyjams
 
@@ -40,11 +40,11 @@ Jango 介绍，制作 Solidity Sesh 的灵感源自那些一直尝试在 Juicebo
    2. 然后，他们可以选择让 nance-bot 在指定的频道发布新提案，并在该频道开展提案的社区温度测试。
    3. 用户还可以将 nance-bot 连接到他们的 Snapshot 空间并添加为成员，这样 nance 就可以自动代为把通过社区温度测试的提案发布到 Snapshot 页面，从而进入投票阶段。
 
-![Authorize Discrod permission to Nance bot](auth_discord.png)
+![Authorize Discrod permission to Nance bot](auth_discord.webp)
 
 在这个创建流程中，用户可以命名自己的 Nance 空间，自定义提案 ID 前缀，并把 Nance 空间与他们现有的 Juicebox 项目进行关联。同时用户还可以指定治理的具体起始日期，并在治理日历中查看不同治理周期各个阶段的日期。
 
-![Create flow of a new Nance instance](Nance_create_flow.png)
+![Create flow of a new Nance instance](Nance_create_flow.webp)
 
 Jango 建议 Nance 团队将来可以考虑做一些产品迭代，支持用户付费从 Nance 项目铸造代币，再将这些代币用于支付 Nance 治理服务使用量。
 

@@ -86,7 +86,7 @@ Jango 回顾了他大约一年半前写的博客文章[《开发者之年》](ht
 
 作为充满多样性的个体，我们以各自的色彩勾勒这一幅理想的画卷，虽然价值观不尽相同，但同样为集体的发展做出了点滴贡献。Jango 强调了互相学习和求同存异的重要性，认为这样才能推动我们持续前行。
 
-![blog post Year of the Dev](year_of_the_dev.png)
+![blog post Year of the Dev](year_of_the_dev.webp)
 
 Jango expressed deep gratitude and excitement for the past year of building, acknowledging that it came with its fair share of challenges. However, the team successfully navigated through those obstacles and embarked on a journey of showcasing new aspects of the project. They highlighted their tasteful discoveries and emphasized financial value sets that held great significance to them.
 

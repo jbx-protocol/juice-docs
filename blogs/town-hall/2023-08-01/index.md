@@ -2,11 +2,11 @@
 slug: 23-08-01
 title: August 1st, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Visibility Updates by Matthew and Brileigh
 
@@ -28,7 +28,7 @@ Hopefully this session will be a start of our efforts to help people understand 
 
 They were currently working on the production of the new Juicecast episode featuring a NFT influencer [DeeZe](https://twitter.com/deeze). This episode of Juicecast had been released at the time of this town hall summary.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R5xoInP0JxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R5xoInP0JxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Nance Sign-up Form Demo by Jigglyjams
 
@@ -36,21 +36,21 @@ During the town hall, Jigglyjams demonstrated the create flow of a new Nance ins
 
 The preliminary process of creating a Nance instance will be:
 
-1. Users need to authorize to add the nance-bot into the Discord server that they have admin permissions. 
-2. Then they can choose a channel for nance-bot to post new proposals to, where community temp checks will be taking place. 
+1. Users need to authorize to add the nance-bot into the Discord server that they have admin permissions.
+2. Then they can choose a channel for nance-bot to post new proposals to, where community temp checks will be taking place.
 3. Also users can link nance-bot to their Snapshot space as a member, so that it can automatically post on their behalf the proposals passing temp check to the Snapshot page for the next voting phase.
 
-![Authorize Discrod permission to Nance bot](auth_discord.png)
+![Authorize Discrod permission to Nance bot](auth_discord.webp)
 
 In this create flow, users can name their own Nance space, put a custom prefix to proposal IDs, and link this space to an existing Juicebox project. And a calendar of governance is also available to check the different phases of governance cycles with a starting date specified by users.
 
-![Create flow of a new Nance instance](Nance_create_flow.png)
+![Create flow of a new Nance instance](Nance_create_flow.webp)
 
-Jango suggested that maybe someday in the future Nance team can think of some iteration where users pay and mint tokens from the project of Nance, and then use those tokens as credits for their usage of Nance's governance services. 
+Jango suggested that maybe someday in the future Nance team can think of some iteration where users pay and mint tokens from the project of Nance, and then use those tokens as credits for their usage of Nance's governance services.
 
 Also he thought that maybe Nance can work more intimately with Juicebox.money website, probably even consider integrations with the project create flow,  so that project creators can easily plug their projects to a governance system. Jigglyjams agreed with that, and said that he had been contemplating with the idea of a community starting off from a Snapshot and Discord server and launching their Juicebox project from a community proposal voting with the help of Nance.
 
-Finally Jango mentioned the possibility of making use of Nance in those forthcoming retalist projects like Defifa and Croptop. These projects will be unowned and without any project owners, while a certain percentage of reserved tokens will be vested to a multisig for an initial duration of time as incentives for founding members. 
+Finally Jango mentioned the possibility of making use of Nance in those forthcoming retalist projects like Defifa and Croptop. These projects will be unowned and without any project owners, while a certain percentage of reserved tokens will be vested to a multisig for an initial duration of time as incentives for founding members.
 
 ## Payment Terminal Migration and Governance
 

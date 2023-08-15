@@ -1,12 +1,36 @@
 # JB721Delegate
 
-[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/42d3a6d91f96ac82ae443fb9b5a22dd1ff8d398e/contracts/abstract/JB721Delegate.sol)
+[Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/abstract/JB721Delegate.sol)
 
-Inherits: [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource`](/docs/dev/api/interfaces/ijbfundingcycledatasource.md), [`IJBPayDelegate`](/docs/dev/api/interfaces/ijbpaydelegate.md), [`IJBRedemptionDelegate`](/docs/dev/api/interfaces/ijbredemptiondelegate.md)
+Inherits: [`ERC721`](/docs/dev/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/dev/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource3_1_1`](/docs/dev/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IJBPayDelegate3_1_1`](/docs/dev/api/interfaces/ijbpaydelegate3_1_1.md), [`IJBRedemptionDelegate3_1_1`](/docs/dev/api/interfaces/ijbredemptiondelegate3_1_1.md)
 
 This delegate makes NFTs available to a project's contributors upon payment, and allows project owners to enable NFT redemption for treasury assets.
 
 ## State Variables
+
+### directory
+
+The directory of terminals and controllers for projects.
+
+```solidity
+IJBDirectory public immutable override directory;
+```
+
+### payMetadataDelegateId
+
+The 4bytes ID of this delegate, used for pay metadata parsing
+
+```solidity
+bytes4 public immutable override payMetadataDelegateId;
+```
+
+### redeemMetadataDelegateId
+
+The 4bytes ID of this delegate, used for redeem metadata parsing
+
+```solidity
+bytes4 public immutable override redeemMetadataDelegateId;
+```
 
 ### projectId
 
@@ -14,14 +38,6 @@ The Juicebox project ID this contract's functionality applies to.
 
 ```solidity
 uint256 public override projectId;
-```
-
-### directory
-
-The directory of terminals and controllers for projects.
-
-```solidity
-IJBDirectory public override directory;
 ```
 
 ## Functions
@@ -36,7 +52,7 @@ function payParams(JBPayParamsData calldata _data)
     view
     virtual
     override
-    returns (uint256 weight, string memory memo, JBPayDelegateAllocation[] memory delegateAllocations);
+    returns (uint256 weight, string memory memo, JBPayDelegateAllocation3_1_1[] memory delegateAllocations);
 ```
 
 **Parameters**
@@ -51,7 +67,7 @@ function payParams(JBPayParamsData calldata _data)
 |----|----|-----------|
 |`weight`|`uint256`|The weight that tokens should get minted in accordance with.|
 |`memo`|`string`|A memo to be forwarded to the event.|
-|`delegateAllocations`|[`JBPayDelegateAllocation[]`](/docs/dev/api/data-structures/jbpaydelegateallocation.md)|Amount to be sent to delegates instead of adding to local balance.|
+|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/docs/dev/api/data-structures/jbpaydelegateallocation3_1_1.md)|Amount to be sent to delegates instead of adding to local balance.|
 
 ### redeemParams
 
@@ -63,7 +79,11 @@ function redeemParams(JBRedeemParamsData calldata _data)
     view
     virtual
     override
-    returns (uint256 reclaimAmount, string memory memo, JBRedemptionDelegateAllocation[] memory delegateAllocations);
+    returns (
+        uint256 reclaimAmount,
+        string memory memo,
+        JBRedemptionDelegateAllocation3_1_1[] memory delegateAllocations
+    );
 ```
 
 **Parameters**
@@ -78,7 +98,7 @@ function redeemParams(JBRedeemParamsData calldata _data)
 |----|----|-----------|
 |`reclaimAmount`|`uint256`|Amount to be reclaimed from the treasury.|
 |`memo`|`string`|A memo to be forwarded to the event.|
-|`delegateAllocations`|[`JBRedemptionDelegateAllocation[]`](/docs/dev/api/data-structures/jbredemptiondelegateallocation.md)|Amount to be sent to delegates instead of being added to the beneficiary.|
+|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/docs/dev/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|Amount to be sent to delegates instead of being added to the beneficiary.|
 
 ### redemptionWeightOf
 
@@ -141,13 +161,26 @@ function supportsInterface(bytes4 _interfaceId) public view virtual override(ERC
 |----|----|-----------|
 |`_interfaceId`|`bytes4`|The ID of the interface to check for adherence to.|
 
+### constructor
+
+```solidity
+constructor(IJBDirectory _directory, bytes4 _payMetadataDelegateId, bytes4 _redeemMetadataDelegateId);
+```
+
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|A directory of terminals and controllers for projects.|
+|`_payMetadataDelegateId`|`bytes4`|The 4bytes ID of this delegate, used for pay metadata parsing|
+|`_redeemMetadataDelegateId`|`bytes4`|The 4bytes ID of this delegate, used for redeem metadata parsing|
+
 ### _initialize
 
 Initializes the contract with project details and ERC721 token details.
 
 ```solidity
-function _initialize(uint256 _projectId, IJBDirectory _directory, string memory _name, string memory _symbol)
-    internal;
+function _initialize(uint256 _projectId, string memory _name, string memory _symbol) internal;
 ```
 
 **Parameters**
@@ -155,7 +188,6 @@ function _initialize(uint256 _projectId, IJBDirectory _directory, string memory 
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project this contract's functionality applies to.|
-|`_directory`|[`IJBDirectory`](/docs/dev/api/interfaces/ijbdirectory.md)|The directory of terminals and controllers for projects.|
 |`_name`|`string`|The name of the token.|
 |`_symbol`|`string`|The symbol representing the token.|
 
@@ -166,14 +198,14 @@ Mints an NFT to the contributor (_data.beneficiary) upon project payment if cond
 *Reverts if the calling contract is not one of the project's terminals.*
 
 ```solidity
-function didPay(JBDidPayData calldata _data) external payable virtual override;
+function didPay(JBDidPayData3_1_1 calldata _data) external payable virtual override;
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|Standard Juicebox project payment data.|
+|`_data`|[`JBDidPayData3_1_1`](/docs/dev/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
 
 ### didRedeem
 
@@ -182,28 +214,28 @@ Burns specified NFTs upon token holder redemption, reclaiming funds from the pro
 *Reverts if the calling contract is not one of the project's terminals.*
 
 ```solidity
-function didRedeem(JBDidRedeemData calldata _data) external payable virtual override;
+function didRedeem(JBDidRedeemData3_1_1 calldata _data) external payable virtual override;
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidRedeemData`](/docs/dev/api/data-structures/jbdidredeemdata.md)|Standard Juicebox project redemption data.|
+|`_data`|[`JBDidRedeemData3_1_1`](/docs/dev/api/data-structures/jbdidredeemdata3_1_1.md)|Standard Juicebox project redemption data.|
 
 ### _processPayment
 
 Process a received payment.
 
 ```solidity
-function _processPayment(JBDidPayData calldata _data) internal virtual;
+function _processPayment(JBDidPayData3_1_1 calldata _data) internal virtual;
 ```
 
 **Parameters**
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData`](/docs/dev/api/data-structures/jbdidpaydata.md)|Standard Juicebox project payment data.|
+|`_data`|[`JBDidPayData3_1_1`](/docs/dev/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
 
 ### _didBurn
 
