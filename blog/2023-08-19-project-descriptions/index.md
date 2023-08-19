@@ -1,12 +1,12 @@
 ---
 slug: project-descriptions
-title: New feature - rich text + images in project descriptions
-description: How to personalize your Juicebox project page with links, images and more.
+title: New feature - rich text and images in project descriptions
+description: How to personalize your Juicebox project description with links, images and more.
 authors: [brileigh, matthew]
 tags: [protocol, update]
 ---
 
-Project creators can now use rich text formatting in their project descriptions. This means that you can add style and organize your description using basic formatting like **bold** and *italics*, headings, [hyperlinks](https://www.notion.so/Juicebox-62b4218e081f43f491758426d9150d60?pvs=21), adding images, and more. 
+Project creators can now use rich text formatting in their project descriptions. This means that you can add style and organize your description using basic formatting like **bold** and *italics*, headings, links, adding images, and more. 
 
 ![Banner image showing new rich text editor on Juicebox](cover-image.png)
 
@@ -45,7 +45,7 @@ Adding visuals to your project description is really important because it helps 
 
 ![Examples of images to include in your project description](example-images.png)
 
-<p class="subtitle">Examples of different images you can add to your project</a></p>
+<p class="subtitle">Examples of different images you can add to your project</p>
 
 ### Step 5: Tell people your “Why”
 
@@ -69,7 +69,7 @@ Once you’re finished editing your project description, scroll down to the bott
 
 If you have any questions or need help along the way, jump into the Support channel in [Juicebox Discord](http://discord.gg/juicebox) If you want some one-on-one help setting up your project, reach out at [juicebox.money/contact](https://juicebox.money/contact). And if you want to stay on top of the latest news, features, and trending projects in the Juicebox ecosystem, make sure to subscribe to our weekly newsletter [Juice News](https://subscribepage.io/juicenews).
 
-### Relevant links[](https://docs.juicebox.money/blog/project-update-feature/#relevant-links)
+### Relevant links
 
 🐦 Follow Juicebox on Twitter: [@juicebox_money](https://twitter.com/juicebox_money)
 
