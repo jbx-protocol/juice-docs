@@ -11,8 +11,8 @@ Juicebox subgraphs are indexed via [Satsuma](https://www.satsuma.xyz/). You can 
 
 | Name | URL | Description | |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------|--|
-| mainnet | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/mainnet/api` | Indexes mainnet Juicebox protocol contracts. | [Playground](https://cloud.hasura.io/public/graphiql?endpoint=https%3A%2F%2Fsubgraph.satsuma-prod.com%2Fbc505571c408%2Fjuicebox%2Fmainnet%2Fapi) |
-| goerli | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/goerli/api` | Indexes goerli Juicebox protocol contracts. (Does not include v1 & v2 contracts, except for v2 JBProjects) | [Playground](https://cloud.hasura.io/public/graphiql?endpoint=https%3A%2F%2Fsubgraph.satsuma-prod.com%2Fbc505571c408%2Fjuicebox%2Fmainnet%2Fapi) |
+| mainnet | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/mainnet/api` | Indexes mainnet Juicebox protocol contracts. | [Playground](https://subgraph.satsuma-prod.com/juicebox/mainnet/playground) |
+| goerli | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/goerli/api` | Indexes goerli Juicebox protocol contracts. (Does not include v1 & v2 contracts, except for v2 JBProjects) | [Playground](https://subgraph.satsuma-prod.com/juicebox/goerli/playground) |
 
 The subgraph is maintained by [Peel](https://discord.gg/b4rpjgGPHX) here: [https://github.com/jbx-protocol/juice-subgraph](https://github.com/jbx-protocol/juice-subgraph).
 
