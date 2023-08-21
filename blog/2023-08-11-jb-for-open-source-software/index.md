@@ -13,7 +13,7 @@ Open source software plays a crucial part in the digital economy, in the same wa
 
 You can follow along in this article, or a video by Matthew on the JBDAO YouTube:
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/U_TWyTHp304](https://www.youtube.com/embed/U_TWyTHp304)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U_TWyTHp304" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### What is Juicebox?
 
