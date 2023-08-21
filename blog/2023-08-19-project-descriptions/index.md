@@ -2,6 +2,7 @@
 slug: project-descriptions
 title: New feature - rich text and images in project descriptions
 description: How to personalize your Juicebox project description with links, images and more.
+image: https://docs.juicebox.money/assets/images/cover-image-6eae9b009b03c13609a33f7f4bcaa905.png
 authors: [brileigh, matthew]
 tags: [protocol, update]
 ---
