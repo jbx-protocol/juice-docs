@@ -7,15 +7,14 @@ title: Subgraph Introduction
 
 [The Graph](https://thegraph.com/) is a protocol which allows anyone to create a [GraphQL](https://graphql.org/) API for querying blockchain data. Each individual API is called a *subgraph*. Juicebox's subgraphs are in use on [juicebox.money](https://juicebox.money) and other websites to load Juicebox protocol data without directly querying the blockchain.
 
-To get started, try out the [example queries](queries) on our [subgraph's playground](https://thegraph.com/explorer/subgraphs/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC?view=Playground). Click the book icon on the right-hand side of the screen to search through our schema as needed. You can use the endpoints below for simple applications, but they may be rate-limited – for production use, see [Avoid Rate-Limiting](#avoid-rate-limiting).
+Juicebox subgraphs are indexed via [Satsuma](https://www.satsuma.xyz/). You can query them using the URLs in the table below (you'll need an API key from the [Peel Discord server](https://discord.gg/XvmfY4Hkcz)), or try out our [example queries](queries) in a playground:
 
-| Name | URL | Description |
-| ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| juicebox | [View on Graph explorer](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview) | The primary mainnet subgraph used by [juicebox.money](https://juicebox.money). |
-| mainnet-dev | [`https://api.studio.thegraph.com/query/30654/mainnet-dev/7.1.0`](https://api.studio.thegraph.com/query/30654/mainnet-dev/7.1.0) | Indexes mainnet Juicebox protocol contracts. |
-| goerli-dev | [`https://api.studio.thegraph.com/query/30654/goerli-dev/7.1.0`](https://api.studio.thegraph.com/query/30654/goerli-dev/7.1.0) | Indexes goerli Juicebox protocol contracts. (Does not include v1 & v2 contracts, except for v2 JBProjects) |
+| Name | URL | Description | |
+| ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------|--|
+| mainnet | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/mainnet/api` | Indexes mainnet Juicebox protocol contracts. | [Playground](https://subgraph.satsuma-prod.com/juicebox/mainnet/playground) |
+| goerli | `https://subgraph.satsuma-prod.com/<api-key>/juicebox/goerli/api` | Indexes goerli Juicebox protocol contracts. (Does not include v1 & v2 contracts, except for v2 JBProjects) | [Playground](https://subgraph.satsuma-prod.com/juicebox/goerli/playground) |
 
-Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a Graph Studio owned by the [Peel Gnosis safe](https://gnosis-safe.io/app/eth:0x0e9D15e28e3De9bB3CF64FFbC2f2F49Da9Ac545B). Only the primary Juicebox subgraph has been published to the Graph Network; others are available to use for free with rate-limited queries.
+The subgraph is maintained by [Peel](https://discord.gg/b4rpjgGPHX) here: [https://github.com/jbx-protocol/juice-subgraph](https://github.com/jbx-protocol/juice-subgraph).
 
 If you run into trouble, check:
 
@@ -23,12 +22,7 @@ If you run into trouble, check:
 - Peel's [Discord server](https://discord.gg/XvmfY4Hkcz)
 - The juicebox.money [implementation](https://github.com/jbx-protocol/juice-interface/blob/main/src/utils/graph.ts)
 
-## Avoid Rate-Limiting
 
-To use the mainnet Juicebox subgraph without being rate-limited:
+## Deprecated Subgraph
 
-1. Create your API key on [Subgraph Studio API Keys](https://thegraph.com/studio/apikeys/).
-2. Fund your billing balance on [Subgraph Studio Billing](https://thegraph.com/studio/billing/).
-3. Query the mainnet Juicebox subgraph using an endpoint like so: `https://gateway.thegraph.com/api/<your-api-key>/subgraphs/id/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC`. Replace `<your-api-key>` with your Subgraph Studio API key from step 1.
-
-You can also follow the [Video Tutorial](https://www.youtube.com/watch?v=UrfIpm-Vlgs). For more information on Graph query billing, visit [*Billing*](https://thegraph.com/docs/billing/) and [*Managing your API keys*](https://thegraph.com/docs/querying/managing-api-keys/).
+Note: The mainnet Juicebox Subgraph was previously published and indexed on the Graph Network [here](https://thegraph.com/explorer/subgraphs/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC?view=Overview?chain=Ethereum). This Subgraph is no longer being maintained as of version 7.1.0.
