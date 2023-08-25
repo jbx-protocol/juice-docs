@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # JuiceboxDAO Governance Process
 
-*JuiceboxDAO governance runs on a 14 day cycle.*
+*JuiceboxDAO's governance follows a 14 day cycle.*
 
 ![](/img/gov-calendar.webp)
 
@@ -19,40 +19,41 @@ Day 15 / Day 1 - Funding Cycle Updated - Saturday (19:19 UTC) <br/>
 
 #### Step 0 - Discussion
 
-Proposals can be submitted on [Juicetool](https://juicetool.xyz/nance/juicebox) at any time. Once a proposal is ready for discussion, authors can change the proposal status from `Draft` to `Discussion`, which will automatically create a discussion thread in the [JuiceboxDAO Discord Server](https://www.discord.gg/juicebox).
+Proposals can be made on [jbdao.org](https://www.jbdao.org/) at any time. When ready, authors can change a proposal's status from `Draft` to `Discussion` to start a discussion thread in [JuiceboxDAO's Discord](https://www.discord.gg/juicebox).
 
-*For help, see [How to Make a Governance Proposal](../proposals)*
+*See [How to Make a Governance Proposal](../proposals) for help.*
 
 #### Step 1 - Temperature Check
 
 `Begins on Day 1 of the Governance Cycle - Saturday 00:00 UTC`
 
-A **Discord temperature check poll** will be created for each proposal submitted before the first day of each Governance Cycle. During the temperature check, authors can update or redact their proposals based on the DAO's feedback. Verified Discord members with JBX get one vote per poll.
+A 3-day Y/N Discord poll (a "temperature check") is made for each proposal submitted by the start of a Governance Cycle. While this poll is active, authors can update or redact their proposals as they get feedback. Verified Discord members with JBX get one vote for each poll. To participate, verify your JBX in [`#🍌｜verify-jbx`](https://discord.gg/juicebox).
 
-**Proposals which receive at least 10 affirmative votes amounting to at least 30% of total votes will proceed to Snapshot.**
+Proposals with 10 or more "Y" votes and at least 30% "Y" votes move to Snapshot voting.
 
-#### Step 2 - Offchain Voting
+#### Step 2 - Snapshot Voting
 
 `Begins on Day 4 of the Governance Cycle - Tuesday 00:00 UTC`
 
-A 4 day [Snapshot](https://juicetool.xyz/snapshot/jbdao.eth) vote will be created for each proposal which passes temperature checks. Each Snapshot proposal must include the full proposal text.
+A 4-day For/Against/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
 
-Each member may cast one vote per JBX held on each proposal. Members may delegate their voting power via Snapshot.
-
-**Proposals which receive at least 80,000,000 affirmative JBX votes amounting to at least 66% of total votes are queued for execution. "Abstain" votes are not included in these counts.**
+Proposals with 80,000,000 or more votes (including "Abstain" and "Against" votes) and at least 66% "For" votes (not counting "Abstain" votes) will be implemented.
 
 #### Step 3 - Execution
 
 `Begins on Day 7 of the Governance Cycle - Saturday 00:00 UTC`
 
-The DAO's Gnosis multisig ([0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)) has four days to queue the funding cycle reconfiguration.
+The JuiceboxDAO multisig ([`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://app.safe.global/home?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)) executes approved proposals according to their specifications.
 
-If two proposals have conflicting specifications, the more recently approved proposal takes precedence, but only for that conflicting part. If the conflicting proposals were approved in the same funding cycle, the proposal which received more affirmative votes takes precedence. Unless otherwise specified, proposals are considered effective at the time of their approval on Snapshot. If part of a proposal is impossible to execute as described, the multisig will not execute those parts of the proposal. The multisig may make minor and reasonable modifications to a proposal when interpreting it.
+- If approved proposals conflict with each other, more recently approved proposals take priority for the conflicting part. If they were approved at the same time, the proposal with more "For" votes takes priority.
+- Proposals are effective when they are approved on Snapshot unless they say otherwise.
+- Parts of proposals which are impossible to execute won't be executed.
+- The multisig can make small reasonable modifications to a proposal when interpreting it.
 
-*The multisig has control over JuiceboxDAO treasury parameters and some [onchain protocol parameters](https://docs.juicebox.money/dev/learn/administration). The execution of JBX token holder votes depends upon the cooperation of these elected signers. The JuiceboxDAO multisig signers have committed to executing the will of the DAO as expressed by the Governance Process.*
+The multisig controls the JuiceboxDAO project and some [Juicebox protocol parameters](https://docs.juicebox.money/dev/learn/administration). JuiceboxDAO governance execution depends upon the cooperation of the multisig's elected signers, who have committed to executing the will of the DAO as expressed by the Governance Process.
 
 #### Step 4 - Reconfiguration Delay
 
 `Begins on Day 12 of the Governance Cycle - Wednesday 19:19 UTC`
 
-The JuiceboxDAO multisig must submit reconfigurations to JuiceboxDAO's projects at least 3 days before the start of the next funding cycle. This practice gives the DAO time to verify queued reconfigurations and proposals, and to burn their JBX tokens if desired.
+Any changes to JuiceboxDAO's project must be submitted at least 3 days before the next cycle starts. This is enforced by the Juicebox protocol. This gives DAO members time to verify queued changes, and to burn their JBX if desired.
