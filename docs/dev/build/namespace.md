@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Namespaces & IDs
 
-Some Juicebox protocol contracts uses shared namespaces and indices.
+Some Juicebox protocol contracts and utilities use shared namespaces and indices.
 
 ## Operator Permissions
 
@@ -39,6 +39,26 @@ These permissions are represented by the following indices:
 | 23    | `MINT`                 | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/)   | Allow an operator to call [`JBTiered721Delegate.mintFor(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#mintfor) on an addresses' behalf.                                                                                                                                                                                                                    |
 | 24 | `SET_POOL_PARAMS` | [`JBBuybackDelegateOperations`](/dev/extensions/juice-buyback/libraries/jbbuybackdelegateoperations/) | Allow an operator to call [`JBGenericBuybackDelegate.changeSecondsAgo(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#changesecondsago) or [`JBGenericBuybackDelegate.setTwapDelta(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#settwapdelta) on an addresses' behalf.|
 | 25 | `CHANGE_POOL` | [`JBBuybackDelegateOperations`](/dev/extensions/juice-buyback/libraries/jbbuybackdelegateoperations/) | Allow an operator to call [`JBGenericBuybackDelegate.setPoolFor(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#setpoolfor) on an addresses' behalf. |
+
+## Delegate IDs
+
+When paying a Juicebox project with a [delegate](/dev/learn/glossary/delegate/), clients must pass the appropriate metadata in the [`JBDidPayData3_1_1`](/dev/api/data-structures/jbdidpaydata3_1_1/) (or the [`JBDidPayData`](/dev/api/data-structures/jbdidpaydata/) for projects using older payment terminals). The same is true for redemptions and the [`JBDidRedeemData3_1_1`](/dev/api/data-structures/jbdidredeemdata3_1_1/) (or [`JBDidRedeemData`](/dev/api/data-structures/jbdidredeemdata/) for projects using older payment terminals).
+
+This metadata must explicitly specify the delegate being interacted with. For older delegates, this is typically the `interfaceId` of the delegate's interface. Newer delegates are identified by a 4 byte ID specified in the constructor arguments, which can be read by calling a delegate's `delegateId()` view function:
+
+```
+function delegateId() external view returns (bytes4);
+```
+
+The deploy script defaults for notable delegates have been compiled below:
+
+| Delegate | delegateId |
+| --- | --- |
+| [`juice-buyback`](/dev/extensions/juice-buyback/) | [`BUYB`](https://github.com/jbx-protocol/juice-buyback/blob/9188f091347816c201097ae704fbf2c66b22d495/contracts/scripts/Deploy.s.sol#L26C43-L26C47) |
+| [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) | [`721P`](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/scripts/Deploy.s.sol#L22C44-L22C48) |
+| [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) | [`721R`](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/scripts/Deploy.s.sol#L23) |
+
+Frontends interacting with newer delegates can use [`JBMetadata-Helper`](https://github.com/simplemachine92/JBMetadata-Helper) to simplify this process.
 
 ## Splits Groups
 
@@ -85,7 +105,7 @@ interface ERC165 {
 }
 ```
 
-This allows people to check whether a given contract adheres to an interface. For your convenience, here are the `interfaceId`s for Juicebox interfaces:
+This allows people to check whether a given contract adheres to an interface. For your convenience, here are the `interfaceId`s for interfaces in [`juice-contracts-v3`](https://github.com/jbx-protocol/juice-contracts-v3):
 
 | Interface                                                                                                | interfaceId  |
 | -------------------------------------------------------------------------------------------------------- | ------------ |
@@ -165,3 +185,5 @@ Now, one can navigate to a [public IPFS gateway](https://ipfs.github.io/public-g
 ```
 
 See it yourself at [`https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`](https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF). To learn more about IPFS, visit the [IPFS docs](https://docs.ipfs.tech/).
+
+Also see [*Project Metadata*](/dev/frontend/metadata/).
