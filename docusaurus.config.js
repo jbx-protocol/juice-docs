@@ -89,6 +89,11 @@ const config = {
     locales: ["en", "zh"],
   },
   themeConfig: {
+    announcementBar: {
+      content: '<a href="https://www.juicecrowd.gg/">Juicecrowd</a> submissions are open, with a 3 ETH prize pool.',
+      backgroundColor: "#ffb2dd",
+      isCloseable: true,
+    },
     image: "img/site/unfurl.png",
     metadata: [
       {
