@@ -950,7 +950,7 @@ function _currentFeeDiscount(uint256 _projectId, JBFeeType _feeType)
 | Name         | Type                                                                                | Description                                       |
 | ------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------- |
 | `_projectId` | `uint256`                                                                           | The ID of the project to get a fee discount for.  |
-| `_feeType`   | [`JBFeeType`](/docs/dev/extensions/juice-contracts-v3/contracts/enums/jbfeetype.md) | The type of fee the discount is being applied to. |
+| `_feeType`   | [`JBFeeType`](/dev/api/enums/jbfeetype/) | The type of fee the discount is being applied to. |
 
 **Returns**
 
