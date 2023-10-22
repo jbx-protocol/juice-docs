@@ -12,9 +12,9 @@ tags: [town-hall]
 
 The buyback delegate had been expected to get deployed during the current funding cycle, but the contract crew led by Jango decided against it out of an abundance of caution.
 
-The development work of this contract had been pretty much finished, and contract crew had been reviewing and testing for edge cases for a while. Jango thought that the contract feels very good and super greenlit for deployment in the next funding cycle. 
+The development work of this contract had been pretty much finished, and contract crew had been reviewing and testing for edge cases for a while. Jango thought that the contract feels very good and super greenlit for deployment in the next funding cycle.
 
-But, as the buyback delegate does have permission to mint arbitrary amount of tokens by design because it needs to be able to manage token supply, theoretically if there is an edge case arises unexpectedly, it could probably lead to a adversely inflated token supply. If we have redemption enabled at that moment, the inflated token supple might be used to redeem for the ETH in our treasury. 
+But, as the buyback delegate does have permission to mint arbitrary amount of tokens by design because it needs to be able to manage token supply, theoretically if there is an edge case arises unexpectedly, it could probably lead to a adversely inflated token supply. If we have redemption enabled at that moment, the inflated token supple might be used to redeem for the ETH in our treasury.
 
 So Jango thought that it would be wise to turn off the redemption before the depolyment of buyback delegate, and he would submit a proposal to do so in the next funding cycle. After the proposal is approved and executed, we should be able to attach the buyback delegate to JuiceboxDAO treasury right away. The time line would be at the beginning of the funding cycle after next, i.e. roughly in three weeks.
 
@@ -32,7 +32,7 @@ During the town hall, Jango shared a Revnet website prototype.
 
 ![Revnet prototype for Defifa](Revnet_prototype.png)
 
-According Jango, some of the data was still being hard-coded, but the basic contract was ready for deploying a Revnet project, and a basic web client was already work in progress. 
+According Jango, some of the data was still being hard-coded, but the basic contract was ready for deploying a Revnet project, and a basic web client was already work in progress.
 
 The plan was to work with a six-week sprint, first deploying the Revnet site onto all testnets between Bananpus and Revnet, then after the testnets are tested and proved reliable, hopefully implement the deployment on Mainnet within this time frame.
 
@@ -46,7 +46,7 @@ You can go the site of [Croptop site](https://croptop.eth.limo/) and get to know
 
 ![Croptop App user's guide](croptop_instructions.png)
 
-Recently, the team successfully built the aggregate Croptops, by which a Croptop aggregate page can aggregate feeds from many other Croptop hosted feeds, so that users don't necessarily need to host their respective feeds anymore. This feature allows for concentrated curation of contents within a community, which can be very helpful. Other than that, it also enables a user to post contents from multiple clients, such as PC, mobile or tablets and have them all aggregated onto one hosted site. 
+Recently, the team successfully built the aggregate Croptops, by which a Croptop aggregate page can aggregate feeds from many other Croptop hosted feeds, so that users don't necessarily need to host their respective feeds anymore. This feature allows for concentrated curation of contents within a community, which can be very helpful. Other than that, it also enables a user to post contents from multiple clients, such as PC, mobile or tablets and have them all aggregated onto one hosted site.
 
 Furthermore, arbitrary RSS fees, whether they are posted on Croptop sites or not, can also be aggregated onto one specified Croptop site, which are greatly expanding the sources of contents for a community.
 

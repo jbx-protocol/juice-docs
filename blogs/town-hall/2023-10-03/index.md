@@ -12,13 +12,13 @@ tags: [town-hall]
 
 ### Revnet Create Flow
 
-We now have a prototype of Revnet create flow, people can play with all those scoped concepts of Revnets, such as Price Ceiling, Price floor tax intensity, Premint, Boost and Boost duration, etc. 
+We now have a prototype of Revnet create flow, people can play with all those scoped concepts of Revnets, such as Price Ceiling, Price floor tax intensity, Premint, Boost and Boost duration, etc.
 
 After this create flow is getting more developed, Jango expected that their work would be more focused on the project dashboard on Revnets in order to make it multi-dimensional.
 
 ![Revnet Create Flow](Revnet_create_flow.png)
 
-Also there would still be some ongoing efforts for data visualizations, which Jango thought would be more ready in next week and by then they would be embeddable everywhere. 
+Also there would still be some ongoing efforts for data visualizations, which Jango thought would be more ready in next week and by then they would be embeddable everywhere.
 
 ### Bnananapus New Repo
 
@@ -32,7 +32,7 @@ The economic model they will be using for Bananapus will not affect JBX directly
 
 ## Buyback Delegate Updates by Jango
 
-The transaction of deploying the buyback delegate had been queued together with reconfiguration of a new funding cycle of JuiceboxDAO, and it would come into effect by the start of next cycle.  Jango thought that it would start paying dividends right away for reserved rate recipients and projects that are paying fees to JuiceboxDAO. 
+The transaction of deploying the buyback delegate had been queued together with reconfiguration of a new funding cycle of JuiceboxDAO, and it would come into effect by the start of next cycle.  Jango thought that it would start paying dividends right away for reserved rate recipients and projects that are paying fees to JuiceboxDAO.
 
 It will really give us more confidence in JBX tokens and in the treasury that backs them, so that we can lean a little bit more onto JBX and take a more hands-off approach with the general issuance properties of JuiceboxDAO. Hopefully in the future, other projects can grow to this scale and make a similar use of this function.
 
@@ -48,7 +48,7 @@ The payout table developed by JohnnyD from Peel had been implemented into the cr
 
 Juicecrowd is a slimmed-down version of Juicebox, especially for people that are trying to crowdfund on Juicebox but understanding that the current project creating process is too complicated from a perspective of functionality for them to do whatever they want.
 
-It's a simple fundraiser like Blunt without project tokens, but instead enabled with NFTs as possible rewards (optional) to contributors. Compared with the current Juicebox create flow, it also strips down the recurring funding cycles to a single cyle under the hood and replaces the complex multi-cycle payouts with just a simple withdrawal of funds.  
+It's a simple fundraiser like Blunt without project tokens, but instead enabled with NFTs as possible rewards (optional) to contributors. Compared with the current Juicebox create flow, it also strips down the recurring funding cycles to a single cyle under the hood and replaces the complex multi-cycle payouts with just a simple withdrawal of funds.
 
 The prototype of Juicecrowd has been put together by the Peel team, which can be found [here](https://www.figma.com/proto/fV02sJ1bihdNgjR1T3JCSR/Juicebox-Apps-Exploration-%E2%80%93-Sep23?page-id=434%3A19818&type=design&node-id=499-36268&viewport=427%2C-525%2C0.13&t=vZFc1ycVdpxCAtb9-1&scaling=scale-down&starting-point-node-id=759%3A86140). The Peel team will still be working to further improve this prototype in the near future.
 
@@ -56,13 +56,13 @@ The prototype of Juicecrowd has been put together by the Peel team, which can be
 
 ## Ideas on Patreon and Revnet integration by Jango
 
-Jango introduced that there are a large body of content creators on [Patreon](https://www.patreon.com/home), and they are receiving monthly membership fees from their fans. He had been exploring about what it would take for those creators to keep using Patreon and route the funds contributed into Revnet projects, since Revenets are more deterministic and have a lot less obligations or implications with where the money could go. 
+Jango introduced that there are a large body of content creators on [Patreon](https://www.patreon.com/home), and they are receiving monthly membership fees from their fans. He had been exploring about what it would take for those creators to keep using Patreon and route the funds contributed into Revnet projects, since Revenets are more deterministic and have a lot less obligations or implications with where the money could go.
 
 He was also wondering if it would be possible to reward someone who pays a patreon through a backward process. By that, we can set up a middle service that takes in the patreon fees, applies them in the blockchain world, and sends the payers their shares of tokens.
 
-Jango thought that a lot of people are comfortable with Patreon, which does a very good job of allowing people to contribute whatever they want. But obviously Patreon also has control of the money, they can block payouts and everything in between. It would be ideal if we can prototype for a few Patreon projects that want to integrate with Juicebox projects, and Jango was interested in figuring out how to run a middle service between bank accounts and blockchain accounts. 
+Jango thought that a lot of people are comfortable with Patreon, which does a very good job of allowing people to contribute whatever they want. But obviously Patreon also has control of the money, they can block payouts and everything in between. It would be ideal if we can prototype for a few Patreon projects that want to integrate with Juicebox projects, and Jango was interested in figuring out how to run a middle service between bank accounts and blockchain accounts.
 
-Jango admitted that there would be a lot of management, operation and points of potential failure in between when moving large sums of money is concerned. And he was trying to know more about the legal and logical implications of such a business model. 
+Jango admitted that there would be a lot of management, operation and points of potential failure in between when moving large sums of money is concerned. And he was trying to know more about the legal and logical implications of such a business model.
 
 Also he was trying to investigate if there would be an option to hook into currently existing business models and services in the Web2 world, and have a broader go-to-market solutions for some of these ideas like Revnets. It would not be easy to get the activation energy to get projects that already have broad visibility to come and try it out.
 

@@ -12,7 +12,7 @@ tags: [town-hall]
 
 Jango thought that we could consider sending a box of merchandises to our contributors in EU or Australia etc. , so that they can be distributed in more fine-tuned way in future events or conferences.
 
-But we would also have to beware of the import taxes and customs declaration procedures if shipped by freight transportation. 
+But we would also have to beware of the import taxes and customs declaration procedures if shipped by freight transportation.
 
 Sage expressed that she would be happy to share the art files and the websites for making these merchandises, as well as a portion of the funds granted from the DAO, so that folks in different regions might be able to arrange locally and thus mitigating the shipping and importing cost across the world.
 
@@ -34,7 +34,7 @@ Matthew and Brileigh had released a new episode of Juicecast of their discussion
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Pq6u4JgSf4?si=aj-FIVuKtHpVquKT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Jango thought that it was very cool for this episode to bring other voices into our Juicecast channel. As for the interop extension by Nowonder, we might not want to develop strategies for its marketing efforts or its APP interface, until we have a product thesis or projects that are keen to leverage it specifically. 
+Jango thought that it was very cool for this episode to bring other voices into our Juicecast channel. As for the interop extension by Nowonder, we might not want to develop strategies for its marketing efforts or its APP interface, until we have a product thesis or projects that are keen to leverage it specifically.
 
 But this will provide a great opportunity to keep on building and researching, to look for potential interest in both communities to pursue more generic use cases. If there is any synergy or interest in the componentries of both Sablier and Juicebox protocol, there can be a very good excuse to build something and raise funds for both communities in the future.
 

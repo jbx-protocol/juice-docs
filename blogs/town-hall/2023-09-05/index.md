@@ -10,7 +10,7 @@ tags: [town-hall]
 
 ## Buyback Delegate Updates by Jango
 
-The contracts of Buyback delegate are looking good, it's in the last phase of getting eyes on it to double check with last minute test, before we are going to attach it the JuiceboxDAO project. 
+The contracts of Buyback delegate are looking good, it's in the last phase of getting eyes on it to double check with last minute test, before we are going to attach it the JuiceboxDAO project.
 
 If there's enough interest for this product, Jango expressed his willingness to do another line-by-line session to go over how it functions specifically.
 
@@ -20,7 +20,7 @@ Jango said that we had been expecting to attach the buyback delegate first in ex
 
 ## Revnet: Productization of Retailism by Jango
 
-Jango had shared his thoughts on Retailism and some relevant blog posts about it during town hall in July, which can be found [here](https://docs.juicebox.money/town-hall/23-07-18/#retailism-by-jango). 
+Jango had shared his thoughts on Retailism and some relevant blog posts about it during town hall in July, which can be found [here](https://docs.juicebox.money/town-hall/23-07-18/#retailism-by-jango).
 
 According to Jango, Revnets are a special configuration of Juicebox project that applys Retailism, which includes these following parameters:
 
@@ -55,7 +55,7 @@ During the town hall, Jango showed a [spreadsheet of Retailism Financial Modelin
 
 In Jango's words, although Bananpus had been a bit confusing and technically elaborate, hopefully it could have a core essence that we can treat it as a neatly packaged box.
 
-The development team had promised to experiment it as an L2 connect point on EVM chains, by running it on layer 2 chains like Optimism, Base or whereever we can to figure out how to reliably run it and test out the mechanism for cross-chain organizations. 
+The development team had promised to experiment it as an L2 connect point on EVM chains, by running it on layer 2 chains like Optimism, Base or whereever we can to figure out how to reliably run it and test out the mechanism for cross-chain organizations.
 
 For example, how can Juicebox, a protocol on L1 chain, also be launched on an L2 and help maintain a sense of financial community across all of the applications and across each implementation. Let's say we deploy another JuiceboxDAO treasury on an EVM like Optimism and issue its own tokens there. What does that mean for JBX? How do we create an affordance while leaning into the JuiceboxDAO fee collecting structure, as we need to support the body of work and grow it so that everyone such as builders, users and investors is involved.
 
@@ -67,7 +67,7 @@ So we might deploy a fork of the Juicebox protocol in the Bananapus project, to 
 
 In terms of the websites that will be used to interact with the Bananapus contracts, Jango didn't think it would be the responsibility of Juicebox.money to chase after the next experiment and bring that to commercial readiness right away, because the experiment is very risky and it's not worth the risks.
 
-Jango said we might be making smaller and scoped sites which would play with these ideas specifically. For example, there would be a Bananapus website for the staking interaction and token bridging, where people can stake their tokens and get an NFT position to claim rewards and mint the Bananapus tentacles onto other chains. 
+Jango said we might be making smaller and scoped sites which would play with these ideas specifically. For example, there would be a Bananapus website for the staking interaction and token bridging, where people can stake their tokens and get an NFT position to claim rewards and mint the Bananapus tentacles onto other chains.
 
 ### Demo of Bananpus.com by Filipv
 
@@ -91,7 +91,7 @@ During the town hall, Jango shared some of his thoughts of different networks, w
 
 The Bananapus project would try to deploy a fork of Juicebox protocol, and the networks that would be created and running on it will experiment their revenue management, token staking and rewards distribution, bridging and etc. across multiple EVM chains.
 
-First, Jango went through the context of building networks on Bananapus with a Revnet model, emphasizing their goal to streamline the organizational and legal operations and expectations, and to make them more accessible to investors and customers. 
+First, Jango went through the context of building networks on Bananapus with a Revnet model, emphasizing their goal to streamline the organizational and legal operations and expectations, and to make them more accessible to investors and customers.
 
 Also he said that the desire to operate a project primarily through Revnets on Bananapus is not certain and not required, these Revnets can stand beside other forms of operations and even be led by their fans without the consent from their builders.  But broad alignment will be important too, as the lack of legitimacy or planned revenue from builders may diminish an investor's confidence when choosing to support a network.
 
@@ -103,7 +103,7 @@ Lastly, Jango also encouraged our community members to acutally play with these 
 
 Bananapus is a way for networks of token holders (Juice projects) to relate across chains and forks. Organizational money rails, modeled as tentacles.
 
-Jango explained that Bananapus would be a Juicebox V3 fork, so it would be the same codes as the current Mainnet Juicebox protocol, with all the latest versions of terminals and controllers etc. And it would be depolyed on Ethererum mainnet, Optimum, Arbitrum, Base and other EVM chains, we would start with one of them and scale up from there. 
+Jango explained that Bananapus would be a Juicebox V3 fork, so it would be the same codes as the current Mainnet Juicebox protocol, with all the latest versions of terminals and controllers etc. And it would be depolyed on Ethererum mainnet, Optimum, Arbitrum, Base and other EVM chains, we would start with one of them and scale up from there.
 
 And we would enable projects to cross pollinate by implementing the native staking-based bridge, and support them to queue multiple funding cycles in advance so that a project can be set in motion with multiple changes pre-configured along the way.
 

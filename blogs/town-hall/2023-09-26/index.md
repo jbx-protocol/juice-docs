@@ -16,7 +16,7 @@ Tjl introduced that the Peel team was currently developing the focus front end f
 
 ## Artizen Introduction by René
 
-René is the co-founder of [Artizen](https://www.artizen.fund/), which is a fund that partners with mission-driven brands to find and fund artists, scientists and all other kinds of creators to help boosting their organization's ecosystem or fueling their missions. 
+René is the co-founder of [Artizen](https://www.artizen.fund/), which is a fund that partners with mission-driven brands to find and fund artists, scientists and all other kinds of creators to help boosting their organization's ecosystem or fueling their missions.
 
 René introduced that Artizen is pivoted around the idea of allowing many different stakeholders to come curating projects together and collectivly providing funds to reward the most promising projects, making it a platform that is funded and curated by the Artizen community itself.
 
@@ -28,15 +28,15 @@ During the current funding cycle of JuiceboxDAO, René had submitted a proposal 
 
 ## Bananapus Updates by Jango
 
-0xBA5ED had wrapped up the implementation for the staking delegate, the rewards component  which allows folks to route tokens to stakers as well, and the tentacles component which allows stakers to bridge their tokens to other chains in order to collect staking rewards with a similar mechanism. 
+0xBA5ED had wrapped up the implementation for the staking delegate, the rewards component  which allows folks to route tokens to stakers as well, and the tentacles component which allows stakers to bridge their tokens to other chains in order to collect staking rewards with a similar mechanism.
 
 Dr.Gorilla had been cleaning up some tests for the 721 delegates, which is a pretty delicate contract. He would be up to the adjusting tests while the buyback delegate is going to be deployed to the JuiceboxDAO's project.
 
 The contract crew had several pull requests open against the V3 contract repository, and these changes were made for the Bananapus fork and would not be a version pushed on the standard Juicebox protocol as it currently exists. We would be running this fork of Juicebox protocol as an experiment on Bananapus project.
 
-The most meaningful changes was the one that will allow for queuing multiple funding cycles in the same block, so project owners can now deploy a project with multiple funding cycles established at its deployment, instead of having someone to execute a public transaction to implement each following cycle. 
+The most meaningful changes was the one that will allow for queuing multiple funding cycles in the same block, so project owners can now deploy a project with multiple funding cycles established at its deployment, instead of having someone to execute a public transaction to implement each following cycle.
 
-### Audits for Bananapus 
+### Audits for Bananapus
 
 Matthew wondered if there would be an audit for Bananapus once the development is finished.
 
@@ -54,7 +54,7 @@ Jango introduced that the productization of Revnet had been coming along fairly 
 
 ![updated prototype of Revnet](revnet_proto.png)
 
-He had also refined some of the Juicebox contracts for deploying Revnets, which can be found in the [Revnet Github Repository](https://github.com/rev-net/revnet-contracts). 
+He had also refined some of the Juicebox contracts for deploying Revnets, which can be found in the [Revnet Github Repository](https://github.com/rev-net/revnet-contracts).
 
 Filipv had been working on a more formal paper that describes the mechanism of Revnets, which can be found [here](https://github.com/rev-net/revnet-writing/blob/master/whitepaper/revnet.pdf). He encouraged folks to take a look at that file and provide their feedback, if there is any, to help improving the language of ths document.
 
@@ -62,7 +62,7 @@ Filipv had been working on a more formal paper that describes the mechanism of R
 
 Jango thought that it would be awesome to try figuring out how to communicate this concept out to folks who are thinking about operating a project, or looking for a way to actually monetize an open source endeavor or various other applications.
 
-Jango also thought that it's very cool to be working on sereral of the APPs that are using the underlying protocol at the same time, and those APPs should stand to benefit from one another. As we push forward and learn from different use cases, it would be very interesting to find out which audiences gravitate to these different kinds of APPs. 
+Jango also thought that it's very cool to be working on sereral of the APPs that are using the underlying protocol at the same time, and those APPs should stand to benefit from one another. As we push forward and learn from different use cases, it would be very interesting to find out which audiences gravitate to these different kinds of APPs.
 
 ## Juicecast Updates by Matthewbrooks
 
@@ -74,7 +74,7 @@ They would also be releasing the next episode with Peacenode from Seed Club, to 
 
 ## Updates from MoonDAO by Pablo
 
-Pablo, the co-founder of MoonDAO, joined our town hall and shared some of the recent updates of MoonDAO development. He introduced that they had been working on the network topology for lunar communications, which is a fancy way about how to route messages from the Earth to the Moon in a way that's true to the principles of Ethereum, in an incredibly neutral way that is more bottom-up instead of relying on a few key infrastructure nodes. 
+Pablo, the co-founder of MoonDAO, joined our town hall and shared some of the recent updates of MoonDAO development. He introduced that they had been working on the network topology for lunar communications, which is a fancy way about how to route messages from the Earth to the Moon in a way that's true to the principles of Ethereum, in an incredibly neutral way that is more bottom-up instead of relying on a few key infrastructure nodes.
 
 Pablo also expressed his gratitude towards Juicebox for helping them build their project and community by fundraising on this protocol, and he thought it was very cool to see all of the amazing things Juicebox help make possible.
 

@@ -10,9 +10,9 @@ tags: [town-hall]
 
 ## Juicecrowd Updates by Tjl
 
-During the time Peel team had been building our website juicebox.money, they noticed that in some crowfunding specific cases, projects tended to need assistance to get some traction after they were launched, while some of the features on juicebox.money weren't very relevant for those purposes. So Peel team created a new DApp named [Juicecrowd](https://www.juicecrowd.gg/) for this scoped purpose of crowd funding. 
+During the time Peel team had been building our website juicebox.money, they noticed that in some crowfunding specific cases, projects tended to need assistance to get some traction after they were launched, while some of the features on juicebox.money weren't very relevant for those purposes. So Peel team created a new DApp named [Juicecrowd](https://www.juicecrowd.gg/) for this scoped purpose of crowd funding.
 
-With the deployment of this Juicecrowd App, they also launched a program called Crowd, which will accept submissions from cohorts of up to 10 projects at a time, help them create and polish their Juicebox projects, and support their propagation and give as much visibility as possible for an interval of 30 days, so as to help them get momentum and funded. 
+With the deployment of this Juicecrowd App, they also launched a program called Crowd, which will accept submissions from cohorts of up to 10 projects at a time, help them create and polish their Juicebox projects, and support their propagation and give as much visibility as possible for an interval of 30 days, so as to help them get momentum and funded.
 
 ![Announcement of Juicecrowd launch](juicecrowd_launch.png)
 
@@ -20,7 +20,7 @@ Shoutout to the Peel team for their great work in the past two weeks, to the eff
 
 ## Artizen Partnership by Nene
 
-The [proposal](https://www.jbdao.org/s/juicebox/443) of setting up a match fund between Juicebox and Artizen has been approved. 
+The [proposal](https://www.jbdao.org/s/juicebox/443) of setting up a match fund between Juicebox and Artizen has been approved.
 
 According to Nene, Artizen had launched the Season 3 competition of Artizen Fund, and they had over 50 projects qualified for the Juicebox Project Accelerator. The next steps would be onboarding those projects and help them create their Juicebox projects in order to receive their fundings from the Artizen Fund.
 
@@ -38,27 +38,27 @@ Filipv gave brief explanations to some of the current names and made polls in th
 
 #### ERC-20 vs. IJBTokens
 
-Filipv thought that there had been a lot of confusion over the distinction between the internally mapped tokens which are tracked in the token store contract, and the actual claimed ERC-20 version of those tokens. He suggested that we call them all by ERC-20 tokens and use ERC-20 in all of the naming and references to these tokens, while accepting that this might be slightly misleading in rare circumstances. 
+Filipv thought that there had been a lot of confusion over the distinction between the internally mapped tokens which are tracked in the token store contract, and the actual claimed ERC-20 version of those tokens. He suggested that we call them all by ERC-20 tokens and use ERC-20 in all of the naming and references to these tokens, while accepting that this might be slightly misleading in rare circumstances.
 
-Jango expressed his objection to this suggestion by the reasoning that the token don't have to be ERC-20s, e.g. an ERC-1155 can be wrapped up as IJBTokenERC20. 
+Jango expressed his objection to this suggestion by the reasoning that the token don't have to be ERC-20s, e.g. an ERC-1155 can be wrapped up as IJBTokenERC20.
 
 The context for this problem goes as follows. In V1 protocol, the internally accounted for tokens were called tickets, and the token store was called the ticket booth, to make a distinction with the claimed tokens. In the V2 protocol, we decided that ticket was confusing as people just considered them as tokens, so then the ticket booth was named to token store, unclaimed and claimed tokens were used to differentiate their different state.
 
 #### Project Payer vs. Pay Relay vs. Payment Router
 
-Project payers are the contracts which forward funds to a project, for example, when ETH is sent to these contracts they will be forwarded in the projects. 
+Project payers are the contracts which forward funds to a project, for example, when ETH is sent to these contracts they will be forwarded in the projects.
 
 Filipv supplied some possible choices as Pay Relay, Fund Forwarder, Payment Router, etc.
 
 #### Issuance Reduction Rate vs. Decay Rate
 
-The Issuance Reduction Rate, which was formerly called discount rate, has not proven really accepted very widely. 
+The Issuance Reduction Rate, which was formerly called discount rate, has not proven really accepted very widely.
 
 Filipv thought that Decay Rate might be a good alternative.
 
 #### Funding Cycle vs. Cycle vs. Ruleset
 
-We are now using [Funding Cycle](https://docs.juicebox.money/dev/learn/glossary/funding-cycle/) or Cycle to define a set of rules of a project, which will last for an infinite or finite length of time. 
+We are now using [Funding Cycle](https://docs.juicebox.money/dev/learn/glossary/funding-cycle/) or Cycle to define a set of rules of a project, which will last for an infinite or finite length of time.
 
 Jango thought that a Ruleset might be more specifically accurate for this concept, although it will be a departure from the way we currently talk about things a bit more than Cycle would be.
 
@@ -68,7 +68,7 @@ Jango thought that a Ruleset might be more specifically accurate for this concep
 
 #### State vs. Approval status
 
-The status of approval or reject by the Ballot contract is now called state, which can be approved, rejected, pending and etc. 
+The status of approval or reject by the Ballot contract is now called state, which can be approved, rejected, pending and etc.
 
 #### Weight vs. Issuance rate
 
@@ -76,7 +76,7 @@ Weight is a term we currently use for issuance rate, which is just the number of
 
 #### JBProjects vs. JBProjectNFTs
 
-[JBProjects](https://docs.juicebox.money/dev/api/contracts/jbprojects/) is the name of the NFT contract which mints the administrative NFTs representing the ownership of Juicebox projects. 
+[JBProjects](https://docs.juicebox.money/dev/api/contracts/jbprojects/) is the name of the NFT contract which mints the administrative NFTs representing the ownership of Juicebox projects.
 
 #### Operator vs. Admin
 

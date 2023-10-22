@@ -18,7 +18,7 @@ The next steps would be to work with Juicebox.money to surface a quote in the pa
 
 ### MEV Sandwich
 
-But if Juicebox projects distribute their payouts out of the ecosystem, which will incur 2.5% Juicebox fee and buyback delegate would route these fees to purchase JBX in the AMM pool, there will be an opportunity for MEV bots to sandwich the transactions and steal some value from them, unless the person who triggers this distribute call use some MEV blocking RPC in their wallets. 
+But if Juicebox projects distribute their payouts out of the ecosystem, which will incur 2.5% Juicebox fee and buyback delegate would route these fees to purchase JBX in the AMM pool, there will be an opportunity for MEV bots to sandwich the transactions and steal some value from them, unless the person who triggers this distribute call use some MEV blocking RPC in their wallets.
 
 This is out of reason that the fees get paid into JuiceboxDAO without any metadata in the case of protocol fee payment, so we don't have an opportunity to specify the expected quote that the fees should resolve at, and instead the contract uses a TWAP (Time Weighted Average Price) oracle to look at the recent prices of the exchange.
 
@@ -52,7 +52,7 @@ Bruxa from Thirsty Thirsty agreed that the partnership opportunity with Seed Clu
 
 ## Nance Updates by Jigglyjams
 
-After the feedback from the temperature check of their proposal, the team has been working on some simplification of the Nance system, so that it can be easier to onboard new users or new communities.  
+After the feedback from the temperature check of their proposal, the team has been working on some simplification of the Nance system, so that it can be easier to onboard new users or new communities.
 
 Also they are going to implement a new proposal editor which will be a pure Markdown editor, to replace the current editor which has been doing a lot of converting between HTML and Markdown formats. The old editor seemed to have a few compatibility issues when proposal are viewed on other sites such as Snapshot.org, so they are working to refine that bug and make it better for proposal viewing.
 
@@ -60,7 +60,7 @@ Comments or feedback for Nance wll be warmly welcome, Nance team members includi
 
 ## Thirsty Thirsty Update by Bruxa
 
-Ongoing efforts have been made to continue creating more foundational structure in the Thirsty Thirsty community, especially around their TT tokens. 
+Ongoing efforts have been made to continue creating more foundational structure in the Thirsty Thirsty community, especially around their TT tokens.
 
 Bruxa had a pretty big proposal approved a couple weeks ago distributing tokens to compensate the time she had contributed to their community. They decided to make Oct. 20th an opportunity for other contributors in Thirsty Thirsty to do the same thing.
 
@@ -68,9 +68,9 @@ Bruxa also said that it had been a really interesting journey, to interact with 
 
 ## Ideas of Juicebox Merch by Matthew
 
-Matthew, Brileigh and Sage have been discussing about launching some NFTs that could be used to redeem for some Juicebox merchandises, as well as trying to finalize some high quality merchandise such as a hoodie, T-shirts, hat with embroidered designs, etc. They are thinking of bringing those to ETH Denver on February next year, 
+Matthew, Brileigh and Sage have been discussing about launching some NFTs that could be used to redeem for some Juicebox merchandises, as well as trying to finalize some high quality merchandise such as a hoodie, T-shirts, hat with embroidered designs, etc. They are thinking of bringing those to ETH Denver on February next year,
 
-Matthew also introduced that they were trying to establish a partnership with a coffee brand to put Banny on some of their coffee bags, as he felt that coffee is lower in entry barrier because it's such a broadly appealing product and can be a very easy pitch. So coffee bags could be a starting point to put Banny onto some products. 
+Matthew also introduced that they were trying to establish a partnership with a coffee brand to put Banny on some of their coffee bags, as he felt that coffee is lower in entry barrier because it's such a broadly appealing product and can be a very easy pitch. So coffee bags could be a starting point to put Banny onto some products.
 
 
 

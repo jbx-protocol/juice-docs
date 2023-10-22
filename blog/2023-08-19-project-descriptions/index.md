@@ -7,7 +7,7 @@ authors: [brileigh, matthew]
 tags: [protocol, update]
 ---
 
-Project creators can now use rich text formatting in their project descriptions. This means that you can add style and organize your description using basic formatting like **bold** and *italics*, headings, links, adding images, and more. 
+Project creators can now use rich text formatting in their project descriptions. This means that you can add style and organize your description using basic formatting like **bold** and *italics*, headings, links, adding images, and more.
 
 ![Banner image showing new rich text editor on Juicebox](cover-image.png)
 
@@ -23,7 +23,7 @@ So, first things first, make sure your wallet is connected and head over to the 
 
 ### Step 2: Basic Details
 
-Next, we’ll go to `Basic Details` under General. Here you’ll see two new fields under your project name. You can add a tagline, where you can add a brief one-sentence summary of your project. And below that, we have the project description where we can add a more detailed summary of what this project is about, why you should contribute, and add some links and images for context. 
+Next, we’ll go to `Basic Details` under General. Here you’ll see two new fields under your project name. You can add a tagline, where you can add a brief one-sentence summary of your project. And below that, we have the project description where we can add a more detailed summary of what this project is about, why you should contribute, and add some links and images for context.
 
 ![Screenshot showing new project description editor](manage.png)
 
@@ -50,19 +50,19 @@ Adding visuals to your project description is really important because it helps 
 
 ### Step 5: Tell people your “Why”
 
-Once you’ve explained what your project is about and how it works, consider adding reasons why people should contribute to your project. Whether you’re on Juicebox or another platform, it’s important to think about why someone would want to contribute to your project, what they might receive in return. You can add more images if this helps contextualize what you’re seeking funds for and why. 
+Once you’ve explained what your project is about and how it works, consider adding reasons why people should contribute to your project. Whether you’re on Juicebox or another platform, it’s important to think about why someone would want to contribute to your project, what they might receive in return. You can add more images if this helps contextualize what you’re seeking funds for and why.
 
 ![Example text explaining why you're seeking funds](your-why.png)
 
 ### Step 6: How can people find you and get involved?
 
-Good contact information helps **build trust** and makes you more **accessible**. Adding links for contract information or how to get involved in a Discord is great way to make your project more inviting to potential supporters. You want to make it easy for people to find you if they want to. 
+Good contact information helps **build trust** and makes you more **accessible**. Adding links for contract information or how to get involved in a Discord is great way to make your project more inviting to potential supporters. You want to make it easy for people to find you if they want to.
 
 ![Example of social links](socials.png)
 
 ### Step 7: Save project details
 
-Once you’re finished editing your project description, scroll down to the bottom and click `Save Project Details`. This will prompt a transaction that you’ll need to confirm in your wallet. This could take a minute to save and update on [juicebox.money](http://juicebox.money). Once it’s done, you can click on the X in the top right and it will bring you back to your project page. Simply refresh your project page, click on the About tab and you’ll see you’re new fully stylized project description! And that’s it! 
+Once you’re finished editing your project description, scroll down to the bottom and click `Save Project Details`. This will prompt a transaction that you’ll need to confirm in your wallet. This could take a minute to save and update on [juicebox.money](http://juicebox.money). Once it’s done, you can click on the X in the top right and it will bring you back to your project page. Simply refresh your project page, click on the About tab and you’ll see you’re new fully stylized project description! And that’s it!
 
 ![Example of poroject using rich text editor](example.png)
 
