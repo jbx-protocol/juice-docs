@@ -85,10 +85,9 @@ We'll address the current situation and minimize the likelihood of similar event
 6. Rene updated the reverse ENS record of artizenfund.eth to point to the new project.
 7. Rene transferred the old project to me (filipv.eth) and I queued a new cycle to pay all funds out to the JuiceboxDAO multisig, updated the metadata, and transferred the project to the JuiceboxDAO multisig.
 8. I paid the new project 3.02 ETH, burned 2 tokens, and sent the remaining 300 to the JuiceboxDAO multisig.
-9. I transferred the project to Rene's wallet (nene❤.eth)
+9. I transferred the project to Rene's wallet (nene❤.eth), and reimbursed him for gas fees he had incurred throughout this process.
 
 ### TODO
 
 1. Jango to pay 3 ETH to new project with JuiceboxDAO multisig as a beneficiary.
-2. Reimburse Rene for gas fees.
-3. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
+2. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
