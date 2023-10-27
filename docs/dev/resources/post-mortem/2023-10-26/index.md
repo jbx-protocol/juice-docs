@@ -72,3 +72,23 @@ We'll address the current situation and minimize the likelihood of similar event
 1. I'll handle the deployment and management of a new project, and work with Rene to update his ENS appropriately. Next cycle, I'll submit a proposal to reimburse Jango for his ETH and myself for the gas fees incurred during this process.
 2. Wraeth suggested using something other than [antd](https://ant.design/), which is the framework currently in use by the form.
 3. Along with addressing this bug, we'll be looking at other options within project settings to ensure they follow expected behavior.
+4. johnnyD is adding an indicator which clearly shows the default value to users when settings toggles are disabled.
+5. johnnyD is moving reserved list updates below other changes in the "Review & confirm" tab to make it easier to catch changes like this.
+
+### Status
+
+1. Wraeth and johnnyD have put together a pull request to [here](https://github.com/jbx-protocol/juice-interface/pull/4107).
+2. I deployed the new project [here](https://juicebox.money/v2/p/587), and a new ERC-20 token at [`0x585ED1b5648173187F2a3308134bD3941e19e9a3`](https://etherscan.io/token/0x585ED1b5648173187F2a3308134bD3941e19e9a3).
+3. I manually minted 1 token to nene❤.eth and kaxline.eth, and informed kaxline of the situation via Discord.
+4. I set the project's handle to `@artizenfund`.
+5. On a call with Rene, I confirmed and queued a new cycle for the new Artizen project with owner minting disabled, the new reserved list, a 101 day locked cycle, a 3 day edit deadline, and a 10% discount rate.
+6. Rene updated the reverse ENS record of artizenfund.eth to point to the new project.
+7. Rene transferred the old project to me (filipv.eth) and I queued a new cycle to pay all funds out to the JuiceboxDAO multisig, updated the metadata, and transferred the project to the JuiceboxDAO multisig.
+8. I paid the new project 3.02 ETH, burned 2 tokens, and sent the remaining 300 to the JuiceboxDAO multisig.
+9. I transferred the project to Rene's wallet (nene❤.eth)
+
+### TODO
+
+1. Jango to pay 3 ETH to new project with JuiceboxDAO multisig as a beneficiary.
+2. Reimburse Rene for gas fees.
+3. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
