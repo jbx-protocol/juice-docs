@@ -77,7 +77,7 @@ We'll address the current situation and minimize the likelihood of similar event
 
 ### Status
 
-1. Wraeth and johnnyD have put together a pull request to [here](https://github.com/jbx-protocol/juice-interface/pull/4107).
+1. Wraeth and johnnyD have put together a pull request to address the issues [here](https://github.com/jbx-protocol/juice-interface/pull/4107), which has been merged.
 2. I deployed the new project [here](https://juicebox.money/v2/p/587), and a new ERC-20 token at [`0x585ED1b5648173187F2a3308134bD3941e19e9a3`](https://etherscan.io/token/0x585ED1b5648173187F2a3308134bD3941e19e9a3).
 3. I manually minted 1 token to nene❤.eth and kaxline.eth, and informed kaxline of the situation via Discord.
 4. I set the project's handle to `@artizenfund`.
@@ -86,8 +86,8 @@ We'll address the current situation and minimize the likelihood of similar event
 7. Rene transferred the old project to me (filipv.eth) and I queued a new cycle to pay all funds out to the JuiceboxDAO multisig, updated the metadata, and transferred the project to the JuiceboxDAO multisig.
 8. I paid the new project 3.02 ETH, burned 2 tokens, and sent the remaining 300 to the JuiceboxDAO multisig.
 9. I transferred the project to Rene's wallet (nene❤.eth), and reimbursed him for gas fees he had incurred throughout this process.
+10. Jango paid the project 3 ETH with the JuiceboxDAO multisig as a beneficiary.
 
 ### TODO
 
-1. Jango to pay 3 ETH to new project with JuiceboxDAO multisig as a beneficiary.
-2. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
+1. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
