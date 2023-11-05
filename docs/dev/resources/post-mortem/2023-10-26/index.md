@@ -6,7 +6,7 @@ title: 2023-10-26 – Clientside Redemption Rate Error
 Author: filipv
 Date: 2023-10-26
 Severity: High
-Status: Unresolved
+Status: Resolved
 ```
 
 On 26th October 2023, a client-side error in the Cycle configuration tab of the [Artizen](https://juicebox.money/@artizenfund) project on juicebox.money led to an incorrectly queued cycle: although the project owner (Rene, or nene❤.eth) intended for his project to have a 0% redemption rate, the cycle was queued with a redemption rate of 100% and a ballot redemption rate of 0%.
@@ -87,7 +87,4 @@ We'll address the current situation and minimize the likelihood of similar event
 8. I paid the new project 3.02 ETH, burned 2 tokens, and sent the remaining 300 to the JuiceboxDAO multisig.
 9. I transferred the project to Rene's wallet (nene❤.eth), and reimbursed him for gas fees he had incurred throughout this process.
 10. Jango paid the project 3 ETH with the JuiceboxDAO multisig as a beneficiary.
-
-### TODO
-
-1. Proposal to reimburse Jango 3 ETH, and myself 3 ETH + gas.
+11. I created a [proposal](https://www.jbdao.org/s/juicebox/449) to reimburse me and Jango.
