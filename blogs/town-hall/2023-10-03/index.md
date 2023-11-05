@@ -2,11 +2,11 @@
 slug: 23-10-03
 title: October 3rd, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Revnet and Bananapus Updates by Jango
 
@@ -16,7 +16,7 @@ We now have a prototype of Revnet create flow, people can play with all those sc
 
 After this create flow is getting more developed, Jango expected that their work would be more focused on the project dashboard on Revnets in order to make it multi-dimensional.
 
-![Revnet Create Flow](Revnet_create_flow.png)
+![Revnet Create Flow](Revnet_create_flow.webp)
 
 Also there would still be some ongoing efforts for data visualizations, which Jango thought would be more ready in next week and by then they would be embeddable everywhere.
 
@@ -24,7 +24,7 @@ Also there would still be some ongoing efforts for data visualizations, which Ja
 
 In the Bananapus GitHub repository, we have a new repo which is a little more experimental with looser permissions. There is still some work in progress in the PR section of this repo, which Jango expected can be finished within one week and then folded into the main V4 repo in the Bananapus GitHub thereafter.
 
-![PRs to be worked on in the new Bananapus repo](nana_repo.png)
+![PRs to be worked on in the new Bananapus repo](nana_repo.webp)
 
 The Bananpus fork of the Juicebox V3 protocol will be deployed on multiple blockchains such as Mainnet, Optimism and others, which will be very scalable. It's an open opportunity to revise some bits of the V3 protocol, which includes the addition of ability to queue multiple funding cycles ahead of time at a project's deployment, rather than currently having to manually trigger those reconfigurations before each new funding cycle. So project owners can propose some kind of games by deploying projects with different rules automated for each cycle from the very beginning.
 
@@ -42,7 +42,7 @@ It will really give us more confidence in JBX tokens and in the treasury that ba
 
 The payout table developed by JohnnyD from Peel had been implemented into the create flow of Juicebox.  Project creators can now add their payout recipients, which can be either an Ethereum address or another Juicebox project, and specify their respective payout amounts under the limited payout model, or have those automatically changed to percentages under the unlimited model.
 
-![Payouts setting with new payout table](payouts_table.png)
+![Payouts setting with new payout table](payouts_table.webp)
 
 ### Juicecrowd Prototype
 
@@ -52,7 +52,7 @@ It's a simple fundraiser like Blunt without project tokens, but instead enabled 
 
 The prototype of Juicecrowd has been put together by the Peel team, which can be found [here](https://www.figma.com/proto/fV02sJ1bihdNgjR1T3JCSR/Juicebox-Apps-Exploration-%E2%80%93-Sep23?page-id=434%3A19818&type=design&node-id=499-36268&viewport=427%2C-525%2C0.13&t=vZFc1ycVdpxCAtb9-1&scaling=scale-down&starting-point-node-id=759%3A86140). The Peel team will still be working to further improve this prototype in the near future.
 
-![Juicecrowd create flow prototype](juicecrowd_proto.png)
+![Juicecrowd create flow prototype](juicecrowd_proto.webp)
 
 ## Ideas on Patreon and Revnet integration by Jango
 

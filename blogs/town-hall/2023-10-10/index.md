@@ -2,11 +2,11 @@
 slug: 23-10-10
 title: October 10th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Buyback Delegate by Jango
 
@@ -32,7 +32,7 @@ There were some ideas floating around concerning whether we could run our own bo
 
 Jango took the example of the distribution of payouts by JuiceboxDAO recently, which incurred a 1.94ETH Juicebox fee (And yes, all projects including JuiceboxDAO making outbound payments will be subject to a Juicebox fee).  The total volume to arbitrage from this MEV trade was around $85,000, and the paid 1% liquidity fee  which was more than $800. This activity would incentivize more liquidity providing actions to the pool, which will in turn decrease the opportunity to arbitrage.
 
-![Sandwich trade by MEV bot](mev_sandwich.png)
+![Sandwich trade by MEV bot](mev_sandwich.webp)
 
 We can also choose to build a bot and take advantage of the information asymmetry that we have, but Jango thought that we have more important things to do than that. As always, he was open to any proposals to fund this kind of effort if there is any interest.
 

@@ -2,17 +2,17 @@
 slug: 23-09-26
 title: September 26th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Peel Updates by Tjl
 
 Tjl introduced that the Peel team was currently developing the focus front end for Juicecrowd, which  is a more specific, Blunt style and Kickstarter-esque fundraiser. They had completely defined the project by the time of this town hall, and they would be testing and prototyping it over the next few days.
 
-![Juicecrowd MVP by Peel](juicecrowd_mvp.png)
+![Juicecrowd MVP by Peel](juicecrowd_mvp.webp)
 
 ## Artizen Introduction by René
 
@@ -24,7 +24,7 @@ He thought that Juicebox would be a really wonderful partnership to work togerth
 
 During the current funding cycle of JuiceboxDAO, René had submitted a proposal of [Juicebox Project Accelerator Fund](https://nance.app/s/juicebox/438) with the help of Filipv, in an attempt to launch a match fund between Juicebox and Artisen to support community-driven projects in Juicebox.
 
-![Artizen Fund homepage](artizen_home.png)
+![Artizen Fund homepage](artizen_home.webp)
 
 ## Bananapus Updates by Jango
 
@@ -52,13 +52,13 @@ It would always be hard to say no to audits, Jango said. It takes some mental gy
 
 Jango introduced that the productization of Revnet had been coming along fairly nicely. On the town hall, he shared the updated prototype of a Revnet website, this prototype is using all real data and a Revnet contract which is an orchestrator of Juicebox contracts under the hood.
 
-![updated prototype of Revnet](revnet_proto.png)
+![updated prototype of Revnet](revnet_proto.webp)
 
 He had also refined some of the Juicebox contracts for deploying Revnets, which can be found in the [Revnet Github Repository](https://github.com/rev-net/revnet-contracts).
 
 Filipv had been working on a more formal paper that describes the mechanism of Revnets, which can be found [here](https://github.com/rev-net/revnet-writing/blob/master/whitepaper/revnet.pdf). He encouraged folks to take a look at that file and provide their feedback, if there is any, to help improving the language of ths document.
 
-![Paper of Revnets by Filipv](revnet_paper.png)
+![Paper of Revnets by Filipv](revnet_paper.webp)
 
 Jango thought that it would be awesome to try figuring out how to communicate this concept out to folks who are thinking about operating a project, or looking for a way to actually monetize an open source endeavor or various other applications.
 
@@ -78,4 +78,4 @@ Pablo, the co-founder of MoonDAO, joined our town hall and shared some of the re
 
 Pablo also expressed his gratitude towards Juicebox for helping them build their project and community by fundraising on this protocol, and he thought it was very cool to see all of the amazing things Juicebox help make possible.
 
-![MoonDAO report on lunar comms network topology](moondao_lunar_comms.png)
+![MoonDAO report on lunar comms network topology](moondao_lunar_comms.webp)

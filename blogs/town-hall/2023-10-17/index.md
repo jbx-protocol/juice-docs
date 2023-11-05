@@ -2,11 +2,11 @@
 slug: 23-10-17
 title: October 17th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Juicecrowd Updates by Tjl
 
@@ -14,7 +14,7 @@ During the time Peel team had been building our website juicebox.money, they not
 
 With the deployment of this Juicecrowd App, they also launched a program called Crowd, which will accept submissions from cohorts of up to 10 projects at a time, help them create and polish their Juicebox projects, and support their propagation and give as much visibility as possible for an interval of 30 days, so as to help them get momentum and funded.
 
-![Announcement of Juicecrowd launch](juicecrowd_launch.png)
+![Announcement of Juicecrowd launch](juicecrowd_launch.webp)
 
 Shoutout to the Peel team for their great work in the past two weeks, to the efforts of Matthew and Brileigh for creating this Juicecrowd 01 program, and also to the support from Filipv.
 
@@ -124,9 +124,9 @@ Revnet is a concept that Jango and others have been working on lately, the idea 
 
 It can be a little difficult to reason about how all the parameters work together over time, so Filipv developed a simulator which let people put in some of the parameters to check how the revnets will evolve with the simulation. The Revnet simulator is now available at [sim.revnet.app](https://sim.revnet.app/).
 
-![Simulator parameters input](simulator_input.png)
+![Simulator parameters input](simulator_input.webp)
 
-![Simulation charts](simulator_charts.png)
+![Simulation charts](simulator_charts.webp)
 
 With the suggestion from another community member Kmac, the randomness of purchase and sales can be made deterministic by inputting the same randomness seed on the Simulation field. So with the same other parameters, the charts will look exactly the same even on other computers, which make the replication of certain scenarios much easier.
 

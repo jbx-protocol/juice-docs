@@ -2,11 +2,11 @@
 slug: 23-10-24
 title: October 24th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Bananapus Updates by Jango
 
@@ -16,7 +16,7 @@ According to Jango, the V4 fork of Juicebox by Bananapus will be deployed on Eth
 
 The specific roadmap of Bananpus development can be found in [Jango's proposal for grants to Bananpus project](https://www.jbdao.org/s/juicebox/444), which has been approved by the DAO in our last funding cycle.
 
-![The specific roadmap of Bananapus](bananapus_roadmap.png)
+![The specific roadmap of Bananapus](bananapus_roadmap.webp)
 
 The complicated part will be the rewards component of Bananpus. Jango thought that we could get it really tight and sensible, so that people can get paid as the networks that they are staking with grow. 
 
@@ -26,7 +26,7 @@ Filipv said that the front end that is currently in the Bananpus GitHub, the ban
 
 We now have a project applying for the [Juicecrowd 01 fundraising program](https://www.juicecrowd.gg/crowds). This project is called Brume Wallet, which is aimed at developing a private Ethereum wallet with a built-in implementation of Tor protocol. 
 
-![The 1st program of Juicecrowd](juicecrowd_jc01.png)
+![The 1st program of Juicecrowd](juicecrowd_jc01.webp)
 
 Matthew expected that we would see some more projects to submit their applications when it is getting closer to the deadline of this program, which was set as Nov. 1st, 2023.
 

@@ -2,11 +2,11 @@
 slug: 23-08-22
 title: August 22nd, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Buyback Delegate Updates by Jango
 
@@ -22,21 +22,21 @@ During this town hall, JohnnyD shared his scree and compared the difference betw
 
 For the old one, we had four main sections (Funding, Token, Rules and NFTs), which would expand to their sub-sections on the side of this page.
 
-![Old cycle configuration page](cycle_config_old.png)
+![Old cycle configuration page](cycle_config_old.webp)
 
 And in the new design, everything had been arranged into one single form, with different sections categorized into various fields.
 
-![New cycle config page](cycle_config_new.png)
+![New cycle config page](cycle_config_new.webp)
 
 And Peel team had reduced the original four sections to three sections of Details, Payouts and Tokens, while they were planning to take the NFT section out of this cycle configuration payge and make it a separate page. Also they had included a few links of educational content, to help project creators better understand the native concepts of Juicebox protocol during this process.
 
 Also on this new cycle configuration page, once details are edited and changes are saved, there will be pop-up Review and Confirm window to specify all the changes, before users want to finally deploy the changes onto the blockchain.
 
-![New cycle config review and confirm pop-up](cycle_config_popup.png)
+![New cycle config review and confirm pop-up](cycle_config_popup.webp)
 
 At the moment of this town hall, this was still a feature under development, and JohnnyD called on our fellow members to try using it and provide feedback to Peel team. To try this new feature, you can go to the [feature flags](https://juicebox.money/experimental/flags) of Juicebox, enable the `newCycleConfigPage` and refresh on [the settings page of JuiceboxDAO](https://juicebox.money/@juicebox/settings/cycle) or other projects.
 
-![Juicebox feature flags](jb_feature_flags.png)
+![Juicebox feature flags](jb_feature_flags.webp)
 
 ## Tax Q&A with Zactt
 

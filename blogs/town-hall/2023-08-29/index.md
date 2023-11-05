@@ -2,11 +2,11 @@
 slug: 23-08-29
 title: August 29th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Juicebox Merch Discussion
 
@@ -52,4 +52,4 @@ Tjl said that they had been thinking about the partnership of hackathon events w
 
 So Peel team were proposing a big change to our front end development, and Tjl called on community members to read [the proposal by Peel team](https://grand-popcorn-c81.notion.site/Peel-Renewal-Proposal-September-23-2eb418b4bf17417db9cdeef5e0111369) and share their thoughts and feedback for this matter.
 
-![Proposed new directions by Peel team](Peel_new_direction.png)
+![Proposed new directions by Peel team](Peel_new_direction.webp)

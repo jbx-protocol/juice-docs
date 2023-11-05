@@ -2,11 +2,11 @@
 slug: 23-09-05
 title: September 5th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Buyback Delegate Updates by Jango
 
@@ -47,7 +47,7 @@ We were still trying to find out how to position this as somehthing useful for o
 
 During the town hall, Jango showed a [spreadsheet of Retailism Financial Modeling](https://docs.google.com/spreadsheets/d/1R-3PyyF2chmsf_t3IdVi7oEWD0i0IHTcDNwQj4DEKaA/edit#gid=424465074), where people can input their initial issuance rate, generation duration, entry curve and exit curve etc. to play with the mechnics and see how this model of retailism would play itself out.
 
-![Retailism Financial Modeling](retailism_model.png)
+![Retailism Financial Modeling](retailism_model.webp)
 
 
 
@@ -97,7 +97,7 @@ Also he said that the desire to operate a project primarily through Revnets on B
 
 Lastly, Jango also encouraged our community members to acutally play with these new various networks and take a bit more active and meaning role as builders together.
 
-![context of Revnet networks](context_revnets.png)
+![context of Revnet networks](context_revnets.webp)
 
 ### Purpose of Bananapus
 
@@ -109,7 +109,7 @@ And we would enable projects to cross pollinate by implementing the native staki
 
 And there were also other considerations with this deployment of Bananapus, such as removal of functionalities that had been proved useful, integration of 721Delegate and BuybackDelegate, options to accept and store funds in ETH, DAI,  USDC or other coins, and etc.
 
-![The purpose of Bananapus](nana_purpose.png)
+![The purpose of Bananapus](nana_purpose.webp)
 
 ### Purpose of Revnet
 
@@ -117,7 +117,7 @@ Jango introduced that Revnets are a special configuration of Juicebox projects a
 
 The purposes of Revnets consist of productivity improvement and community participation, transparency and unobscured access to the funds, initiatives for existing projects like Peel and Nance to better guarantee the incentives and legal clarity for their communities, and the research and prototype means for traditional banked businesses.
 
-![The purpose of Revnet](revnet_purpose.png)
+![The purpose of Revnet](revnet_purpose.webp)
 
 ### Conclusion
 

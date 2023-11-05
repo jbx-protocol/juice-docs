@@ -2,11 +2,11 @@
 slug: 23-08-15
 title: August 15th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Buyback Delegate Deployment by Jango
 
@@ -30,7 +30,7 @@ The buyback delegate should give a lot more price efficiency to everyone involve
 
 Alongside with the deployment of buyback delegate, there was also the payment terminal 3.1.2 deployed which fixed [the Hold fees calculation error](https://docs.juicebox.money/dev/resources/post-mortem/2023-07-24/), and a 721 delegate update which uses the new metadata pattern to support multiple delegates attachment to a project, as well as the payment terminal 3.1.1 spec for passing data from a data source to a delegate.
 
-![payment terminal 3.1.2 and 721 delegate that supports multiple attchment](bbd_721_delegate.png)
+![payment terminal 3.1.2 and 721 delegate that supports multiple attchment](bbd_721_delegate.webp)
 
 
 
@@ -40,13 +40,13 @@ Alongside with the deployment of buyback delegate, there was also the payment te
 
 The Bananapus community had voted on their first governance proposal this week, distributing payouts to conributors who made their contributions to this project and updating the reserved rates for all the current contributors.
 
-![Bananapus's first governance proposal](bananapus_1st_prop.png)
+![Bananapus's first governance proposal](bananapus_1st_prop.webp)
 
 ### Working Mechanism of Bananapus
 
 Bananapus project consists of three main components, [Bananapus 721 staking delegate](https://github.com/Bananapus/bananapus-721-staking-delegate/tree/feat/concept), [Bananapus distributor](https://github.com/Bananapus/bananapus-distributor/tree/juice-distributor-alt) and [Bananapus tentacles](https://github.com/Bananapus/bananapus-tentacles). They are going to work on Ethereum Mainnet and other Layer 2 chains respectively.
 
-![0xBA5ED's explanation of components](bananapus_components.png)
+![0xBA5ED's explanation of components](bananapus_components.webp)
 
 **Mainnet - Step 1**::
 
@@ -72,7 +72,7 @@ This mechanism can scale to any number of interactions across any number of chai
 
 Sage's proposal to produce and distribute [Juicebox Merch](https://www.jbdao.org/s/juicebox/422) is currently under Snapshot voting. The goal of this proposal is to distribute Juicebox merchandises, such as stickers, hats. T-shirts etc., on ETH NYC in September to help propagate Juicebox ecosystem.
 
-![JB merch stickers by Sage](JB_merch_stickers.png)
+![JB merch stickers by Sage](JB_merch_stickers.webp)
 
 ![JB merch caps by Sage](JB_merch_caps.jpeg)
 

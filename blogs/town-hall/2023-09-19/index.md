@@ -2,11 +2,11 @@
 slug: 23-09-19
 title: September 19th, 2023
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/jbtownhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.webp)
 
 ## Buyback Delegate Deployment Plan by Filipv and Jango
 
@@ -30,7 +30,7 @@ This plan of partnership between JuiceboxDAO and Artizen was still open-ended, a
 
 During the town hall, Jango shared a Revnet website prototype.
 
-![Revnet prototype for Defifa](Revnet_prototype.png)
+![Revnet prototype for Defifa](Revnet_prototype.webp)
 
 According Jango, some of the data was still being hard-coded, but the basic contract was ready for deploying a Revnet project, and a basic web client was already work in progress.
 
@@ -44,7 +44,7 @@ Jango thought that many people are interested in our development on L2s, and it 
 
 You can go the site of [Croptop site](https://croptop.eth.limo/) and get to know more about this project. Or you can just download the dedicated Mac App for Croptop [here](https://pinnable.xyz/dl/croptop), and follow the instructions below:
 
-![Croptop App user's guide](croptop_instructions.png)
+![Croptop App user's guide](croptop_instructions.webp)
 
 Recently, the team successfully built the aggregate Croptops, by which a Croptop aggregate page can aggregate feeds from many other Croptop hosted feeds, so that users don't necessarily need to host their respective feeds anymore. This feature allows for concentrated curation of contents within a community, which can be very helpful. Other than that, it also enables a user to post contents from multiple clients, such as PC, mobile or tablets and have them all aggregated onto one hosted site.
 
