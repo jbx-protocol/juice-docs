@@ -9,12 +9,12 @@ Juicebox is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring departme
 
 ## How JBX Works
 
-$JBX is JuiceboxDAO's *project token*. This means it is created when people pay [JuiceboxDAO's project on Juicebox](https://juicebox.money/@juicebox), and destroyed when people redeem JBX to reclaim ETH from JuiceboxDAO's project. Many people pay JuiceboxDAO directly. JuiceboxDAO also receives [protocol fees](#about-fees), which creates $JBX in the same way.
+$JBX is JuiceboxDAO's *project token*. This means it is created when people pay [JuiceboxDAO's project on Juicebox](https://juicebox.money/@juicebox), and destroyed when people redeem $JBX to reclaim ETH from JuiceboxDAO's project. Many people pay JuiceboxDAO directly. JuiceboxDAO also receives [protocol fees](#about-fees), which creates $JBX in the same way.
 
-JuiceboxDAO's project has project ID #1 on each version of the Juicebox protocol. You can find our current project [here](https://juicebox.money/@juicebox), and our old v1 project [here](https://juicebox.money/p/juicebox). $JBX from our old projects can be [migrated to v3 JBX](/updates/jbx-v3-migration-guide/).
+JuiceboxDAO has the first project on each version of the Juicebox protocol. You can find our current project [here](https://juicebox.money/@juicebox), and our old project [here](https://juicebox.money/p/juicebox). Old $JBX (from our old project) can be [migrated to the new JBX](/updates/jbx-v3-migration-guide/).
 
-1. v3 JBX: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/token/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)[^1].
-2. v1 JBX (old): [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66).
+1. JBX: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/token/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)[^1].
+2. Old JBX (deprecated): [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66).
 
 $JBX voting on [Snapshot](https://snapshot.org/#/jbdao.eth/) decides the amount of $JBX which gets created when JuiceboxDAO is paid, as well as the amount of ETH $JBX holders can get back by redeeming their tokens. Approved proposals are implemented by the DAO's 6/9 [Gnosis Safe Multisig](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/), which has signers who are elected by $JBX voters. You can see the our full Governance Process [here](https://docs.juicebox.money/dao/process/) — this process is also decided upon and ratified by JBX voters.
 
@@ -40,7 +40,7 @@ $JBX is JuiceboxDAO's project token. This means its issuance, redemption, and di
 | **Decay Rate:** 0.5% | The token issuance rate will decrease by 0.5% each ruleset (every 14 days). |
 | **Redemption Rate:** 70% | JBX can be redeemed along a 70% bonding curve.[^2] |
 
-The v1 and v2 projects have been disabled. This information may be out of date — to see the current configuration, visit the [JuiceboxDAO project page](https://juicebox.money/@juicebox).
+JuiceboxDAO's old projects have been disabled. This information may be out of date — to see the current configuration, visit the [JuiceboxDAO project page](https://juicebox.money/@juicebox).
 
 You can see the current JBX distribution in the chart below (or on [Dune](https://dune.com/queries/2331798)).
 
@@ -85,7 +85,7 @@ Projects can also temporarily set fees on payouts aside with [Hold fees](https:/
 
 ## Premine
 
-A total of 144,246,772 v1 $JBX was premined to pay for the initial development of the Juicebox and the libraries/tools which made it possible. You can learn about this in [this blog post](/updates/premine/). This premine constitutes ~7.02% of the $JBX supply as of December 7th, 2023.
+A total of 144,246,772 (old) $JBX was premined to pay for the initial development of the Juicebox and the libraries/tools which made it possible. You can learn about this in [this blog post](/updates/premine/). This premine constitutes ~7.02% of the $JBX supply as of December 7th, 2023.
 
 [^1]: The `totalSupply` of v3 JBX includes the supplies of v1/v2 JBX.
 [^2]: For a clearer understanding, look at this [bonding curve calculator on Desmos](https://www.desmos.com/calculator/9pewqesyj5). Use `r = 0.7`.
