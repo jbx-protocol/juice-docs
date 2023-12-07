@@ -83,5 +83,9 @@ The fee can be set anywhere between 0% and 5% by $JBX voting. The Juicebox proto
 
 Projects can also temporarily set fees on payouts aside with [Hold fees](https://docs.juicebox.money/dev/learn/glossary/hold-fees/). This can be useful if a project needs to temporarily pull funds out of their project, but plans to return those funds to the project later on and does not want to pay fees in the interim.
 
+## Premine
+
+A total of 144,246,772 v1 $JBX was premined to pay for the initial development of the Juicebox and the libraries/tools which made it possible. You can learn about this in [this blog post](/updates/premine/). This premine constitutes ~7.02% of the $JBX supply as of December 7th, 2023.
+
 [^1]: The `totalSupply` of v3 JBX includes the supplies of v1/v2 JBX.
 [^2]: For a clearer understanding, look at this [bonding curve calculator on Desmos](https://www.desmos.com/calculator/9pewqesyj5). Use `r = 0.7`.
