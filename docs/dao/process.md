@@ -1,6 +1,6 @@
 ---
 title: Governance Process
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # JuiceboxDAO Governance Process
