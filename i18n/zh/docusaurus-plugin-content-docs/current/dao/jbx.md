@@ -16,7 +16,7 @@ $JBX 是 JuiceboxDAO 的*项目代币*。每次有人向 [Juicebox 上的 Juiceb
 1. JBX 代币合约地址: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/token/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)[^1]。
 2. 旧 JBX 代币合约地址 (已停用): [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66).
 
-每次 JuiceboxDAO 收到付款将发行的 JBX 代币数量由 JBX 在 [Snapshot](https://snapshot.org/#/jbdao.eth/) 上的投票结果来决定，$JBX 持有人赎回代币可以获得的 ETH 数量也是如此。获得投票通过的提案由 DAO 的 [Gnosis Safe 多签](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/)负责执行，多签成员同样由 JBX 代币投票选举。我们的完整治理流程可以通过[这里](https://twitter.com/zhape1112/status/1632409175136555008?s=20)或[这个视频](https://docs.juicebox.money/dao/process/)进行了解 —— 这个流程同样经过 JBX 代币持有人的审议和批准。
+每次 JuiceboxDAO 收到付款将发行的 JBX 代币数量由 JBX 在 [Snapshot](https://snapshot.org/#/jbdao.eth/) 上的投票结果来决定，$JBX 持有人赎回代币可以获得的 ETH 数量也是如此。获得投票通过的提案由 DAO 的 [Gnosis Safe 多签](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/)负责执行，多签成员同样由 JBX 代币投票选举。我们的完整治理流程可以在[这里](https://docs.juicebox.money/dao/process/)或[这个视频](https://twitter.com/zhape1112/status/1632409175136555008?s=20)来了解 —— 这个流程同样经过 JBX 代币持有人的审议和批准。
 
 ## 回购合约
 
