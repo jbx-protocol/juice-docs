@@ -197,6 +197,10 @@ const config = {
               label: "GitHub",
               to: "https://github.com/jbx-protocol",
             },
+	    {
+	      label: "Telegram",
+	      to: "https://t.me/jbx_eth",
+	    },
             {
               label: "Governance",
               to: "https://jbdao.org",
