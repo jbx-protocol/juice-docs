@@ -11,7 +11,7 @@ JuiceboxDAO contributors build in the open — to participate, read the [contrib
 - Learn about the DAO's core values in the [Foundation](foundation).
 - If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
 - Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
-- To learn more about JBX, read [JBX & Fees](/dao/reference/jbx/).
+- To learn more about JBX, read [JBX & Fees](/dao/jbx/).
 - Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
 
 <details>
@@ -64,7 +64,7 @@ Juicebox governance runs on a [14 day cycle](process) – proposals receive "tem
 
 ### Who is Juicebox DAO?
 
-From [JBX & Fees](/dao/reference/jbx/):
+From [JBX & Fees](/dao/jbx/):
 
 > The Juicebox protocol is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed via the JBX token. "DAO" stands for _Decentralized Autonomous Organization_ — by utilizing token governance and the Juicebox protocol itself, JuiceboxDAO is able to manage strategic decisions, payouts to contributors, and to consistently deliver upgrades to a best-in-class Ethereum protocol, along with a powerful suite of tools to support it.
 >
