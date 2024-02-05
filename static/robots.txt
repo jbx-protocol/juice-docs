@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /search/
+Disallow: /zh/search/
+Disallow: /dev/deprecated/v2/
+Disallow: /zh/dev/deprecated/v2/
+
+Sitemap: https://docs.juicebox.money/sitemap.xml
