@@ -2,11 +2,11 @@
 slug: 23-10-03
 title: JuiceboxDAO 周会概要 2023 年 10 月 04 日
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## Revnet 及 Bananapus 工作报告 -- Jango
 

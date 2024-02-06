@@ -2,11 +2,11 @@
 slug: 23-10-31
 title: JuiceboxDAO 周会概要 2023 年 11 月 1 日
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## $JBX 现状 -- Jango
 

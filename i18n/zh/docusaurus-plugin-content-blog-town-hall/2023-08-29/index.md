@@ -2,11 +2,11 @@
 slug: 23-08-29
 title: JuiceboxDAO 周会概要 2023 年 8 月 30 日
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## Juicebox 主题商品讨论
 

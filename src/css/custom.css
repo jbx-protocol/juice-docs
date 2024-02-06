@@ -27,7 +27,7 @@
   --ifm-color-primary-lighter: #9aaef5;
   --ifm-color-primary-lightest: #bbc8f6;
   --ifm-heading-color: #f5a312;
-  --ifm-font-family-base: "Beatrice", "Helvetica Neue", "Arial", sans-serif;
+  /* --ifm-font-family-base: "Beatrice", "Helvetica Neue", "Arial", sans-serif; */
 
   scroll-behavior: smooth;
 }

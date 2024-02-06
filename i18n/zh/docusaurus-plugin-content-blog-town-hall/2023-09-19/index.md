@@ -2,11 +2,11 @@
 slug: 23-09-19
 title: JuiceboxDAO 周会概要 2023 年 9 月 20 日
 authors: [zhape]
-image: https://docs.juicebox.money/img/jbtownhall.png
+image: https://docs.juicebox.money/img/townhall.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/jbtownhall.png)
+![Town Hall banner by Sage Kellyn](https://docs.juicebox.money/img/townhall.webp)
 
 ## 回购委托部署计划 -- Filipv 及 Jango
 

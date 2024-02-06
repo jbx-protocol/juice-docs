@@ -3,10 +3,6 @@ title: Start Here
 sidebar_position: 1
 ---
 
-:::info
-Can't find what you need? [Join our Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact).
-:::
-
 #### Welcome to the Juicebox User Docs!
 
 Juicebox is an **Ethereum funding protocol** which can help you fund, operate, and scale your project on-chain. You can see how people are using it on [juicebox.money](https://juicebox.money) — it's an extremely powerful tool for building trust with your supporters, funding your project, and then running your project effectively.
@@ -37,5 +33,7 @@ We also have a [Goerli Testnet version of Juicebox](https://goerli.juicebox.mone
 
 #### Video Walkthrough
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2s2OyxG_rvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p class="subtitle">A quick project creation walkthrough.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZG4RJYvH8TQ?si=685tPmokNxqb0LC3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p class="subtitle">A Juicebox crash course.</p>
+
+A Juicebox project has two parts: a **token**, and a **treasury** which backs it.
