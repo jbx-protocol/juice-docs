@@ -54,10 +54,31 @@ Another option is to not use a specific duration for your rulesets, and to only 
 
 ### Token Redemptions
 
-*Even if people can see changes before they happen, what can they do about it?*
+A final question: *even if people can see changes before they happen, what can they do if they don't like them?*
 
-{/* TODO: Describe redemptions. */}
+Some projects will have tokens which are popular enough for holders to sell on markets like Uniswap, but what can other projects do?
 
-## Final Notes
+Like with other options in Juicebox, you can choose how much safety to guarantee to your token's holders with *redemptions*, which let people redeem their tokens to reclaim some ETH from your project (destroying the tokens in the process).
 
-- You can turn on "project owner token minting"
+- Some project owners keep redemptions disabled (a 0% redemption rate).
+- Some project owners fully enable redemptions (a 100% redemption rate). This means that someone with 10% of your project's tokens can redeem their tokens to get 10% of the ETH currently in your project.
+- You can set your redemption rate somewhere between 0% and 100% to enable redemptions along a bonding curve, meaning people who redeem first will get less ETH per token, and people who redeem later will get more ETH per token. This encourages people to hold onto your token longer, and to wait for others to redeem first.
+
+ETH that you're using for payouts won't be available for redemptions. If you're using unlimited payouts (paying out all the ETH from your project), redemptions will be impossible. Keep in mind that token holders will only get a full refund if all the ETH is still in the project. If you've used some of it, they'll only get a partial refund. Although this isn't perfect, it's much better than nothing at all.
+
+## Token Stability
+
+In practice, having ongoing token issuance and redemptions from your project can work out like this:
+
+![A chart showing a Uniswap token price fluctuating between an issuance price and a redemption price.](token-rice.png)
+
+When your project first launches, people will have to pay your project to get tokens, funding your project's treasury with ETH. Typically, once there are enough tokens out there, someone will launch a market for your tokens (usually on Uniswap). From then on out, whenever the Uniswap price becomes more expensive than the price to issue new tokens from your project, people will pay your project instead of buying tokens on Uniswap. And whenever the Uniswap price falls below the redemption "price" (how much ETH they can get back by redeeming), people will redeem from your project instead of selling their tokens on Uniswap.
+
+The result is that the token's price will have a "ceiling" and "floor", making the token much less volatile than other tokens with a similar supply and demand. This can lead to more stable governance and make people more confident when deciding to support your project.
+
+## Final Tips
+
+- You can turn on "project owner token minting" to manually mint arbitrary amounts of tokens. Although we usually recommend keeping this off (since it makes people afraid of being rug-pulled), some projects use this when negotiating private deals or for minting tokens to use before publicly opening payments to their project.
+- You can manually set the issuance rate (the number of tokens issued per ETH paid in) each ruleset.
+
+There are surprising and creative ways to combine these tools to make your project successful – each option lets you control a different incentive, and therefore encourage different actions from your community.
