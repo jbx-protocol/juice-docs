@@ -70,7 +70,7 @@ ETH that you're using for payouts won't be available for redemptions. If you're 
 
 In practice, having ongoing token issuance and redemptions from your project can work out like this:
 
-![A chart showing a Uniswap token price fluctuating between an issuance price and a redemption price.](token-rice.png)
+![A chart showing a Uniswap token price fluctuating between an issuance price and a redemption price.](token-price.png)
 
 When your project first launches, people will have to pay your project to get tokens, funding your project's treasury with ETH. Typically, once there are enough tokens out there, someone will launch a market for your tokens (usually on Uniswap). From then on out, whenever the Uniswap price becomes more expensive than the price to issue new tokens from your project, people will pay your project instead of buying tokens on Uniswap. And whenever the Uniswap price falls below the redemption "price" (how much ETH they can get back by redeeming), people will redeem from your project instead of selling their tokens on Uniswap.
 
