@@ -77,7 +77,7 @@ To be clear:
 - There are no fees on redemptions if the redemption rate is 100%.
 - There are no fees on payouts to other Juicebox projects.
 
-These fees are paid to JuiceboxDAO's project, and are used to buy $JBX on Uniswap unless it would be cheaper to create new $JBX. The project owner paying the fee gets 50% of the $JBX, and the rest goes to the recipients elected by $JBX voting.
+These fees are used to buy $JBX on Uniswap. The project owner paying the fee gets 50% of the $JBX, and the rest goes to JuiceboxDAO. If the project owner immediately sells that $JBX, it's as if they paid a ~1.25% fee. In practice, project owners usually hold onto their $JBX and influence [JuiceboxDAO governance](/dao/process/).
 
 The fee can be set anywhere between 0% and 5% by $JBX voting. The Juicebox protocol has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/dev/learn/administration/).
 
