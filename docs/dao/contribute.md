@@ -1,6 +1,9 @@
 ---
+title: Contributing to JuiceboxDAO
 sidebar_position: 7
 ---
+
+Here is my new change!
 
 # Contributing to JuiceboxDAO
 
