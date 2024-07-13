@@ -1,6 +1,9 @@
 ---
-title: Juicebox Tokenomics
+title: Tokenomics
+sidebar_postion: 5
 ---
+
+# Juicebox Tokenomics
 
 Juicebox projects have a unique token model based on *continuous token issuance*. As long as your project's rules allow it, new tokens can be issued at any time by paying your project. And if your project has redemptions enabled, tokens can be burned at any time to reclaim some of your project's ETH. This means that your token has a *variable supply* – just like your project's ETH balance, the total number of tokens can go up or down over time as the demand for your token changes.
 
