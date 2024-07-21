@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/abstract/Votes.sol)
 
-This is a base abstract contract that tracks voting units, which are a measure of voting power that can be transferred, and provides a system of vote delegation, where an account can delegate its voting units to a sort of "representative" that will pool delegated voting units from different accounts and can then use it to vote in decisions. In fact, voting units _must_ be delegated in order to count as actual votes, and an account has to delegate those votes to itself if it wishes to participate in decisions and does not have a trusted representative. This contract is often combined with a token contract such that voting units correspond to token units. For an example, see {ERC721Votes}.
+This is a base abstract contract that tracks voting units, which are a measure of voting power that can be transferred, and provides a system of vote delegation, where an account can delegate its voting units to a sort of "representative" that will pool delegated voting units from different accounts and can then use it to vote in decisions. In fact, voting units _must_ be delegated in order to count as actual votes, and an account has to delegate those votes to itself if it wishes to participate in decisions and does not have a trusted representative. This contract is often combined with a token contract such that voting units correspond to token units. For an example, see ERC721Votes.
 
 The full history of delegate votes is tracked on-chain so that governance protocols can consider votes as distributed at a particular block number to protect against flash loans and double voting. The opt-in delegate system makes the cost of this history tracking optional.
 
@@ -92,7 +92,7 @@ function delegate(address delegatee) public virtual;
 ### \_delegate
 
 Delegate all of `account`'s voting units to `delegatee`.
-Emits events {DelegateChanged} and {DelegateVotesChanged}.
+Emits events DelegateChanged and DelegateVotesChanged.
 
 ```solidity
 function _delegate(address account, address delegatee) internal virtual;

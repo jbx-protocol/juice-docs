@@ -12,7 +12,7 @@ Interface: [`IERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IER
 
 **Indicates if this contract adheres to the specified interface.**
 
-_See {IERC165-supportsInterface}._
+_See IERC165-supportsInterface._
 
 ### Definition
 
@@ -56,7 +56,7 @@ function supportsInterface(bytes4 _interfaceId)
   Indicates if this contract adheres to the specified interface.
 
   @dev
-  See {IERC165-supportsInterface}.
+  See IERC165-supportsInterface.
 
   @param _interfaceId The ID of the interface to check for adherance to.
 */

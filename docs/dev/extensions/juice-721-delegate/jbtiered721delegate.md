@@ -196,7 +196,7 @@ function totalRedemptionWeight(JBRedeemParamsData calldata) public view virtual 
 
 Indicates if this contract adheres to the specified interface.
 
-_See {IERC165-supportsInterface}._
+_See IERC165-supportsInterface._
 
 ```solidity
 function supportsInterface(bytes4 _interfaceId) public view override returns (bool);

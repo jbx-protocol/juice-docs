@@ -173,7 +173,7 @@ function heldFeesOf(uint256 _projectId) external view override returns (JBFee[] 
 
 Indicates if this contract adheres to the specified interface.
 
-_See {IERC165-supportsInterface}._
+_See IERC165-supportsInterface._
 
 ```solidity
 function supportsInterface(bytes4 _interfaceId)

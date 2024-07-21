@@ -29,19 +29,19 @@ cd juice-docs
 
 And install with:
 ```bash
-pnpm
+npm ci
 ```
 
 Start a local development server with:
 ```bash
-pnpm start
+npm run start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 Build with:
 ```bash
-pnpm build
+npm run build
 ```
 
 This command generates static content in the `build` directory. This content can be served using any static content hosting service.
