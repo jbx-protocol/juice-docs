@@ -12,7 +12,7 @@ The protocol has very minimal global governance. The following are the only glob
   Allows the owner of the [`JBPrices`](/dev/api/contracts/jbprices/README.md) contract to add new price feeds used to convert amounts denoted in one currency to another. Once added, a price feed cannot be removed.
   <br/>
 * **[`JBDirectory.setIsAllowedToSetFirstController(...)`](/dev/api/contracts/jbdirectory/write/setisallowedtosetfirstcontroller.md)**<br/>
-  Allows the owner of the [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract to add/remove addresses that can set a project's first controller on its behalf.
+  Allows the owner of the [`JBDirectory`](/dev/api/contracts/jbdirectory/) contract to add/remove addresses that can set a project's first controller on its behalf.
   <br/>
 * **[`JBETHPaymentTerminal3_1_1.setFee(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#setfee)**<br/>
   Allows the owner of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (or any other terminal inheriting from [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) to change the protocol fee incurred when projects distribute their treasury funds outside of the protocol ecosystem or when funds are redeemed from a project with a redemption rate less than 100%. The max fee is 5%.

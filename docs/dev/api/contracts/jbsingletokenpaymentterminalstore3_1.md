@@ -22,7 +22,7 @@ Inherits from:
 
 - [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard): Contract module that helps prevent reentrant calls to a function.
 
-This Store expects a project's controller to be an [`IJBController3_1`](/dev/api/interfaces/ijbcontroller3_1/). This is the only difference between this version and [the original](/dev/api/contracts/jbsingletokenpaymentterminalstore/).
+This Store expects a project's controller to be an [`IJBController3_1`](/dev/api/interfaces/ijbcontroller3_1/). This is the only difference between this version and [the original](/dev/deprecated/v3/jbsingletokenpaymentterminalstore/).
 
 ## State Variables
 

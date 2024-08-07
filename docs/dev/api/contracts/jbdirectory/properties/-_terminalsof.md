@@ -1,6 +1,6 @@
 # _terminalsOf
 
-Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/)‌
 
 **For each project ID, the terminals that are currently managing its funds.**
 

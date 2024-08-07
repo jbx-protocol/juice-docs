@@ -20,7 +20,7 @@ Inherits from:
 - [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
 - [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165): Introspection on interface adherance.
 
-This Controller has the same functionality as [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_0_1/), except it is not backwards compatible with the original IJBController view methods.
+This Controller has the same functionality as [`JBController3_1`](/dev/deprecated/v3/or-controllers/jbcontroller3_0_1/), except it is not backwards compatible with the original IJBController view methods.
 
 ## State Variables
 

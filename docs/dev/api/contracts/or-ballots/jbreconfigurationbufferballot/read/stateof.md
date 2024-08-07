@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBReconfigurationBufferBallot`](/dev/api/contracts/or-ballots/jbreconfigurationbufferballot)
 
-Interface: [`IJBFundingCycleBallot`](/dev/api/contracts/interfaces/ijbreconfigurationbufferballot)
+Interface: [`IJBFundingCycleBallot`](/dev/api/interfaces/ijbfundingcycleballot/)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">

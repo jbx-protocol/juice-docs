@@ -12,10 +12,10 @@ In practice, terminal functionality is implemented across several interfaces, ab
 
 The basic interfaces are:
 
-- [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/) - exposes the capacity to take inbound payments.
-- [`IJBPayoutTerminal3_1`](/dev/api/interfaces/ijbpayoutterminal3_1/) - exposes the capacity to distribute payouts.
-- [`IJBAllowanceTerminal3_1`](/dev/api/interfaces/ijballowanceterminal3_1/) - exposes the capacity for discretionary allocation of funds.
-- [`IJBRedemptionTerminal`](/dev/api/interfaces/ijbredemptionterminal/) - exposes the capacity to redeem tokens.
+- [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal) - exposes the capacity to take inbound payments.
+- [`IJBPayoutTerminal3_1`](/dev/api/interfaces/ijbpayoutterminal3_1) - exposes the capacity to distribute payouts.
+- [`IJBAllowanceTerminal3_1`](/dev/api/interfaces/ijballowanceterminal3_1) - exposes the capacity for discretionary allocation of funds.
+- [`IJBRedemptionTerminal`](/dev/api/interfaces/ijbredemptionterminal) - exposes the capacity to redeem tokens.
 
 Which are extended by:
 

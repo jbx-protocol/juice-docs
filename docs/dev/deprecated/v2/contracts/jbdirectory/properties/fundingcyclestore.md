@@ -1,6 +1,6 @@
 # fundingCycleStore
 
-Contract: [`JBController`](/dev/deprecated/v2/contracts/jbdirectory/README.md)​‌
+Contract: [`JBController`](/dev/deprecated/v2/contracts/jbdirectory)​‌
 
 Interface: [`IJBController`](/dev/deprecated/v2/interfaces/ijbcontroller.md)
 

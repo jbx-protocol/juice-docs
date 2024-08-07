@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)​‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/)
 
 Interface: [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md)
 
@@ -70,7 +70,7 @@ function setPrimaryTerminalOf(
 
     _Internal references:_
 
-    * [`_primaryTerminalOf`](/dev/api/contracts/jbdirectory/properties/-_primaryterminalof.md)
+    * [`_primaryTerminalOf`](/dev/api/contracts/jbdirectory/properties/primaryterminalof)
 4.  Emit a `SetPrimaryTerminal` event with the relevant parameters.
 
     ```
@@ -79,7 +79,7 @@ function setPrimaryTerminalOf(
 
     _Event references:_
 
-    * [`SetPrimaryTerminal`](/dev/api/contracts/jbdirectory/events/setprimaryterminal.md/)
+    * [`SetPrimaryTerminal`](/dev/api/contracts/jbdirectory/events/setprimaryterminal)
 
 </TabItem>
 

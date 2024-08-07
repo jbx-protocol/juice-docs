@@ -183,7 +183,7 @@ function overflowAllowanceOf(
 
 <summary>View terminals and controller</summary>
 
-The [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract stores addresses of payment terminals that a project is currently accepting funds through. A project's currently set terminals can be found using [`JBDirectory.terminalsOf(...)`](/dev/api/contracts/jbdirectory/read/terminalsof.md).
+The [`JBDirectory`](/dev/api/contracts/jbdirectory/) contract stores addresses of payment terminals that a project is currently accepting funds through. A project's currently set terminals can be found using [`JBDirectory.terminalsOf(...)`](/dev/api/contracts/jbdirectory/read/terminalsof.md).
 
 ```
 function terminalsOf(uint256 _projectId) external view override returns (IJBPaymentTerminal[] memory) { ... }
@@ -199,7 +199,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
   returns (IJBPaymentTerminal) { ... }
 ```
 
-The [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract also stores the address of the controller that is managing a project's funding cycles and tokens. A projects current terminal can be found using [`JBDirectory.controllerOf(...)`](/dev/api/contracts/jbdirectory/properties/controllerof.md).
+The [`JBDirectory`](/dev/api/contracts/jbdirectory/) contract also stores the address of the controller that is managing a project's funding cycles and tokens. A projects current terminal can be found using [`JBDirectory.controllerOf(...)`](/dev/api/contracts/jbdirectory/properties/controllerof.md).
 
 ```
 function controllerOf(uint256 _projectId) external view override returns (IJBController3_1) { ... }
@@ -289,7 +289,7 @@ function reservedTokenBalanceOf(uint256 _projectId, uint256 _reservedRate)
   returns (uint256) { ... }
 ```
 
-For projects using [`JBController3_1`](/dev/api/contracts/or-controller/jbcontroller3_1), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController3_1.totalOutstandingTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#totaloutstandingtokensof).
+For projects using [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController3_1.totalOutstandingTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#totaloutstandingtokensof).
 
 ```
 function totalOutstandingTokensOf(uint256 _projectId, uint256 _reservedRate)

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)​‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/)​‌
 
 Interface: [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md)
 

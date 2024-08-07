@@ -1,6 +1,6 @@
 # isAllowedToSetFirstController
 
-Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/)‌
 
 Interface: [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md)
 

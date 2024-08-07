@@ -110,10 +110,10 @@ This allows people to check whether a given contract adheres to an interface. Fo
 | Interface                                                                                                | interfaceId  |
 | -------------------------------------------------------------------------------------------------------- | ------------ |
 | [`IJBAllowanceTerminal3_1`](/dev/api/interfaces/ijballowanceterminal3_1)                                 | `0xa02f801c` |
-| [`IJBAllowanceTerminal`](/dev/api/interfaces/ijballowanceterminal)                                       | `0xbc8926e9` |
-| [`IJBController3_0_1`](/dev/api/interfaces/ijbcontroller3_0_1)                                           | `0x7c5a29e6` |
+| [`IJBAllowanceTerminal`](/dev/deprecated/v3/interfaces/ijballowanceterminal/)                            | `0xbc8926e9` |
+| [`IJBController3_0_1`](/dev/deprecated/v3/interfaces/ijbcontroller3_0_1)                                 | `0x7c5a29e6` |
 | [`IJBController3_1`](/dev/api/interfaces/ijbcontroller3_1)                                               | `0x8cbbedc0` |
-| [`IJBController`](/dev/api/interfaces/ijbcontroller)                                                     | `0x85e36899` |
+| [`IJBController`](/dev/deprecated/v3/interfaces/ijbcontroller)                                           | `0x85e36899` |
 | [`IJBControllerUtility`](/dev/api/interfaces/ijbcontrollerutility)                                       | `0xc41c2f24` |
 | [`IJBDirectory`](/dev/api/interfaces/ijbdirectory)                                                       | `0x4ecdb66b` |
 | [`IJBETHERC20ProjectPayerDeployer`](/dev/api/interfaces/ijbetherc20projectpayerdeployer)                 | `0x5be94a6f` |
@@ -134,9 +134,9 @@ This allows people to check whether a given contract adheres to an interface. Fo
 | [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal)                                           | `0xc07370e4` |
 | [`IJBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1_1) | `0x00000000` |
 | [`IJBPayoutRedemptionPaymentTerminal3_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1)     | `0xedb527eb` |
-| [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal)           | `0xedb527eb` |
+| [`IJBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal/)| `0xedb527eb` |
 | [`IJBPayoutTerminal3_1`](/dev/api/interfaces/ijbpayoutterminal3_1)                                       | `0x4a4305c0` |
-| [`IJBPayoutTerminal`](/dev/api/interfaces/ijbpayoutterminal)                                             | `0x2b267b4e` |
+| [`IJBPayoutTerminal`](/dev/deprecated/v3/interfaces/ijbpayoutterminal/)                                  | `0x2b267b4e` |
 | [`IJBPriceFeed`](/dev/api/interfaces/ijbpricefeed)                                                       | `0x7a3c4c17` |
 | [`IJBPrices`](/dev/api/interfaces/ijbprices)                                                             | `0x2730be0e` |
 | [`IJBProjectPayer`](/dev/api/interfaces/ijbprojectpayer)                                                 | `0x7ddb72fc` |
@@ -150,7 +150,6 @@ This allows people to check whether a given contract adheres to an interface. Fo
 | [`IJBSplitAllocator`](/dev/api/interfaces/ijbsplitallocator)                                             | `0x9d740bfa` |
 | [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer)                                                   | `0x35d42f96` |
 | [`IJBSplitsStore`](/dev/api/interfaces/ijbsplitsstore)                                                   | `0xd45e236b` |
-| [`IJBPaymentTerminalUtility`](/dev/api/interfaces/ijbpaymentterminalutility)                             | `0xc41c2f24` |
 | [`IJBToken`](/dev/api/interfaces/ijbtoken)                                                               | `0xc6805740` |
 | [`IJBTokenStore`](/dev/api/interfaces/ijbtokenstore)                                                     | `0xb79436b1` |
 | [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver)                                         | `0xda0544aa` |

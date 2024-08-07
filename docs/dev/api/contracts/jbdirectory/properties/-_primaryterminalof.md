@@ -1,6 +1,6 @@
 # _primaryTerminalOf
 
-Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/)‌
 
 **The project's primary terminal for a token.**
 
