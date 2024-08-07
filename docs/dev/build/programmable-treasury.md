@@ -82,7 +82,7 @@ Here are some examples, starting with the simplest version:
 * For `_mustStartAtOrAfter` send current timestamp.
 * For `_groupedSplits` send an empty array.
 * For `_fundAccessConstraints` send an empty array.
-* For `_terminals` send an array only including the contract address of the [`JBETHPaymentTerminal3_1_2`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1_2).
+* For `_terminals` send an array only including the contract address of the [`JBETHPaymentTerminal3_1_2`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/).
 
 This is the most vanilla project you can launch, which also makes it cheapest to launch gas-wise. Relatively little needs to get saved into storage.
 
@@ -134,7 +134,7 @@ Here's what happens when using an overflow allowance instead:
 ]
 ```
 
-* Until a new reconfiguration transaction is sent, the project owner can send up to 690 USD worth of ETH tokens from the [`JBETHPaymentTerminal3_1_2`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1_2) to any address it chooses since the configured `overflowAllowanceCurrency` is 2 ([which represents USD](/dev/api/libraries/jbcurrencies.md)) and the `overflowAllowance` is `690000000000000000000` (the raw value sent has 18 decimal places).
+* Until a new reconfiguration transaction is sent, the project owner can send up to 690 USD worth of ETH tokens from the [`JBETHPaymentTerminal3_1_2`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/) to any address it chooses since the configured `overflowAllowanceCurrency` is 2 ([which represents USD](/dev/api/libraries/jbcurrencies.md)) and the `overflowAllowance` is `690000000000000000000` (the raw value sent has 18 decimal places).
 * Meanwhile, all of the project's funds in the [`JBPayoutRedemptionPaymentTerminal3_1_2`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2/) are considered overflow since there is no distribution limit.
 * Rolled-over funding cycles (i.e. cycles with the same configuration) do not refresh the allowance.
 * An overflow allowance is a free allowance the project can use without additional pre-programmed stipulations.

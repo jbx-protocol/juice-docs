@@ -70,7 +70,7 @@ function setPrimaryTerminalOf(
 
     _Internal references:_
 
-    * [`_primaryTerminalOf`](/dev/api/contracts/jbdirectory/properties/primaryterminalof)
+    * [`_primaryTerminalOf`](/dev/api/contracts/jbdirectory/properties/-_primaryterminalof/)
 4.  Emit a `SetPrimaryTerminal` event with the relevant parameters.
 
     ```

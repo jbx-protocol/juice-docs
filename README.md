@@ -18,7 +18,7 @@
 
 ### Installation
 
-To run Juice Docs, you need to have [pnpm](https://pnpm.io/) installed.
+To run Juice Docs, you need to have [node.js](https://nodejs.org/en) installed.
 
 Clone with:
 ```bash

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/jbdirectory/write/)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/)
 
 Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 

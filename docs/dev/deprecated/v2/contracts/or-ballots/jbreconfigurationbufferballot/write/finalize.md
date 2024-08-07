@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBReconfigurationBufferBallot`](/dev/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
 
-Interface: [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/contracts/interfaces/ijbreconfigurationbufferballot)
+Interface: [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/interfaces/ijbfundingcycleballot)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -24,7 +24,7 @@ function finalize(uint256 _projectId, uint256 _configured)
 * Arguments:
   * `_projectId` is the ID of the project to which the funding cycle being checked belongs.
   * `_configured` is the configuration of the funding cycle to check the state of.
-* The function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/contracts/interfaces/ijbreconfigurationbufferballot) interface.
+* The function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/interfaces/ijbfundingcycleballot) interface.
 * The function returns the state of the finalized ballot. If `Active`, the ballot can still later be finalized when it's state resolves.
 
 #### Body

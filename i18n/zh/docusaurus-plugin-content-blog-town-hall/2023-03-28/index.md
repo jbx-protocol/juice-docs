@@ -80,7 +80,7 @@ Peel 团队目前正在完成网站几个页面的更新工作，包括主页、
 
 这个代币解析器具有几个功能，包括通过一个链上生成的 SVG 来查看项目的实时情况、自定义项目 NFT 的颜色，甚至可以用一个定制的元数据解析合约来代替默认的解析器设置等。
 
-要了解更多这个代币解析器工作原理的信息，可以在[这里]((https://docs.juicebox.money/dev/api/extensions/juice-token-resolver/))查看相关的介绍文档。
+要了解更多这个代币解析器工作原理的信息，可以在[这里](https://docs.juicebox.money/dev/api/extensions/juice-token-resolver/)查看相关的介绍文档。
 
 ![token resolver by nicholas](token_resolver_juicebox.webp)
 

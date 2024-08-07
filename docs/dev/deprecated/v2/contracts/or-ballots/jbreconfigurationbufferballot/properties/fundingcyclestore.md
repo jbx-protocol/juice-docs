@@ -2,7 +2,7 @@
 
 Contract: [`JBReconfigurationBufferBallot`](/dev/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
 
-Interface: [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/contracts/interfaces/ijbreconfigurationbufferballot)
+Interface: [`IJBReconfigurationBufferBallot`](/dev/deprecated/v2/interfaces/ijbfundingcycleballot)
 
 **The contract storing all funding cycle configurations.**
 

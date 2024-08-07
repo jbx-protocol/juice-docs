@@ -79,7 +79,7 @@ function setPrimaryTerminalOf(
 
     _Event references:_
 
-    * [`SetPrimaryTerminal`](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminal.md/)
+    * [`SetPrimaryTerminal`](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminal/)
 
 </TabItem>
 
@@ -137,7 +137,7 @@ function setPrimaryTerminalOf(
 
 | Name                                                        | Data                                                                                                                                                                                                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`SetPrimaryTerminal`**](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminal.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>address indexed token</code></li><li><code>[IJBPaymentTerminal](/dev/deprecated/v2/interfaces/ijbpaymentterminal.md) indexed terminal</code></li><li><code>address caller</code></li></ul> |
+| [**`SetPrimaryTerminal`**](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminal/) | <ul><li><code>uint256 indexed projectId</code></li><li><code>address indexed token</code></li><li><code>[IJBPaymentTerminal](/dev/deprecated/v2/interfaces/ijbpaymentterminal.md) indexed terminal</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 
