@@ -5,9 +5,9 @@ authors: [jango]
 tags: [observations]
 ---
 
-*JuiceboxDAO runs its community treasury on the Juicebox protocol. The tools at its disposal are also publicly available. Check out the protocol's tokenomics toolkit [here](.//juicebox-protocol-tokenomics/). *
+*JuiceboxDAO runs its community treasury on the Juicebox protocol. The tools at its disposal are also publicly available. Check out the protocol's tokenomics toolkit [here](/blog/juicebox-protocol-tokenomics/). *
 
-*JBX is the membership token of JuiceboxDAO. Its utility is to vote on proposals of how the DAO should evolve over time. Check out the potential use cases each project's tokens can be programmed to have within the Juicebox protocol [here](../overflow/).*
+*JBX is the membership token of JuiceboxDAO. Its utility is to vote on proposals of how the DAO should evolve over time. Check out the potential use cases each project's tokens can be programmed to have within the Juicebox protocol [here](/blog/overflow/).*
 
 *Thanks to Nicholas, Zom-Bae, Zeugh, and Aeolian for edits and feedback.*
 

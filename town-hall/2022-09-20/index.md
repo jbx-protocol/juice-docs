@@ -126,7 +126,7 @@ The correct answer is ... Viraz.
 
 ## Forming event Vol III with darbytrash
 
-Lexicon Devils are going to host a new [Forming](http://forming.lexicondevils.xyz/) Vol. III event, FLOPPY x FORMING, on Sept. 24th 3pm PST, which will have 3 musical performaces and a [FLOPPY](https://twitter.com/FloppyDigital) walkthrough, at the [Juicebox HQ](juicebox.lexicondevils.xyz) in VOXELS.
+Lexicon Devils are going to host a new [Forming](http://forming.lexicondevils.xyz/) Vol. III event, FLOPPY x FORMING, on Sept. 24th 3pm PST, which will have 3 musical performaces and a [FLOPPY](https://twitter.com/FloppyDigital) walkthrough, at the [Juicebox HQ](https://juicebox.lexicondevils.xyz) in VOXELS.
 
 The stage is set, welcome to join us then!
 ![](KK9n4F5.jpeg)

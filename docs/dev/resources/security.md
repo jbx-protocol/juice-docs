@@ -28,4 +28,4 @@ The protocol runs entirely on public smart contracts explained in detail through
 
 ## Post Mortems
 
-See [Post Mortems](../post-mortem).
+See [Post Mortems](/dev/resources/post-mortem/2021-08-18/).

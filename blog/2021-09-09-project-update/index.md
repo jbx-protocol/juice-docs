@@ -162,7 +162,7 @@ C*urrent team: jango (lead), peri, exekias, nicholas*
 
 **Updates:**
 
-- V2 has been announced [here](../juicebox-v2/).
+- V2 has been announced [here](/blog/juicebox-v2/).
 - Reviewed V2 with Peri, Exekias, and Nicholas, got very valuable feedback that is being iterated on.
 - Docs for V2 are in progress [here](https://docs.juicebox.money/overview).
 

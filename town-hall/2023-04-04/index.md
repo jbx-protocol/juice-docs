@@ -110,7 +110,7 @@ Jango has moved his JBX holdings over to V3.
 
 The instructions for JBX migration:
 
--  [JBX V3 Migration Guide by Aeolian;](https://docs.juicebox.money/updates/jbx-v3-migration-guide/)
+-  [JBX V3 Migration Guide by Aeolian;](https://docs.juicebox.money/blog/jbx-v3-migration-guide/)
 -  JBX migration video tutorial by Matthew and Brileigh
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mk2GdYri1mU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

@@ -78,11 +78,11 @@ Jango 对 Mieos 激情深表认同，他把 Juicebox 比作一种金融的编程
 
 ### "开发者之年"
 
-Jango looked back on the blog post [Year of the Dev](https://docs.juicebox.money/updates/year-of-the-dev/) that he wrote about a year and a half ago, realizing that its essence still resonates strongly with the community today, despite some changes. He cherished the fact that we are a developer-oriented community, where individuals build with their unique perspectives and support each other throughout the process.
+Jango looked back on the blog post [Year of the Dev](https://docs.juicebox.money/blog/year-of-the-dev/) that he wrote about a year and a half ago, realizing that its essence still resonates strongly with the community today, despite some changes. He cherished the fact that we are a developer-oriented community, where individuals build with their unique perspectives and support each other throughout the process.
 
 As diverse individuals, we bring our own artistic approaches to making things happen, with values that may differ but contribute to our collective growth. Jango emphasized the importance of learning from one another, as well as from the diverse experiences and viewpoints beyond our commonalities, which continuously drive us forward.
 
-Jango 回顾了他大约一年半前写的博客文章[《开发者之年》](https://docs.juicebox.money/zh/updates/year-of-the-dev/)，尽管情况发生了一些变化，但文章精髓依然能够在今天的社区引起强烈共鸣。他珍视我们作为开发者导向社区的这个事实，在这里，每个个体以自己独特的视角参与建设，并在此过程中共同互助互勉。
+Jango 回顾了他大约一年半前写的博客文章[《开发者之年》](https://docs.juicebox.money/zh/blog/year-of-the-dev/)，尽管情况发生了一些变化，但文章精髓依然能够在今天的社区引起强烈共鸣。他珍视我们作为开发者导向社区的这个事实，在这里，每个个体以自己独特的视角参与建设，并在此过程中共同互助互勉。
 
 作为充满多样性的个体，我们以各自的色彩勾勒这一幅理想的画卷，虽然价值观不尽相同，但同样为集体的发展做出了点滴贡献。Jango 强调了互相学习和求同存异的重要性，认为这样才能推动我们持续前行。
 

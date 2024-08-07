@@ -35,7 +35,7 @@ The Discord server of Gplay is [here](https://discord.gg/yBcrh3HnaQ), anyone who
 
 His next step is to query payout addresses and payout amounts from proposals that have been approved and get them merged into those databases for reconfiguration of funding cycles.
 
-Also he is going to work with @twodam to set up a frontend to configure Nance the Gov Bot in a [Juicetool](juicetool.xyz) page. But he's also a bit concerned about where to store all the configs of Nance at this stage.
+Also he is going to work with @twodam to set up a frontend to configure Nance the Gov Bot in a [Juicetool](https://juicetool.xyz) page. But he's also a bit concerned about where to store all the configs of Nance at this stage.
 
 ## Banny drawing contest on JokeDAO with @nicholas
 

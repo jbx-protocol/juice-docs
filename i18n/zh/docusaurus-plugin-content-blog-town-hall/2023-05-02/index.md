@@ -29,7 +29,7 @@ tags: [town-hall]
 
 ![New landing page for Juicenews](juicenews_landing.webp)
 
-Peel 团队联合 WAGMI 工作室推出了全新的网站页面，包括升级的主页、一个”关于“页面、案例分析，还包含了增强搜索和项目标签等新功能。Matthew 和 Brieigh 发表了一篇[网站升级的介绍文章](https://docs.juicebox.money/updates/website-updates/)，配合这篇文章还同时发布了一条介绍视频，这些都是新产品启动策略的一部分工作。
+Peel 团队联合 WAGMI 工作室推出了全新的网站页面，包括升级的主页、一个”关于“页面、案例分析，还包含了增强搜索和项目标签等新功能。Matthew 和 Brieigh 发表了一篇[网站升级的介绍文章](https://docs.juicebox.money/blog/website-updates/)，配合这篇文章还同时发布了一条介绍视频，这些都是新产品启动策略的一部分工作。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1IlGgVO07tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

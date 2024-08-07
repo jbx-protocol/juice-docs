@@ -30,7 +30,7 @@ They have recently given Juicenews a [new landing page](https://subscribepage.io
 
 ![New landing page for Juicenews](juicenews_landing.webp)
 
-Peel team has launched a new website in collaboration with WAGMI Studios, featuring an updated homepage, an About page, Case Studies, as well as new functions like improved search and project tags. Matthew and Brileigh published a [blog post of website updates](https://docs.juicebox.money/updates/website-updates/) to introduce some of the new pages and features, while also releasing a walkthrough video to accompany it, as part of the launch strategy of new products.
+Peel team has launched a new website in collaboration with WAGMI Studios, featuring an updated homepage, an About page, Case Studies, as well as new functions like improved search and project tags. Matthew and Brileigh published a [blog post of website updates](https://docs.juicebox.money/blog/website-updates/) to introduce some of the new pages and features, while also releasing a walkthrough video to accompany it, as part of the launch strategy of new products.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1IlGgVO07tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

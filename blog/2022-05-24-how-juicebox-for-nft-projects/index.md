@@ -22,7 +22,7 @@ In this article you’ll learn:
 
 ![](image1.webp)
 
-*[https://juicebox.money/#/create](https://juicebox.money/#/create) or [https://rinkeby.juicebox.money/#/create](https://rinkeby.juicebox.money/#/create) (testnet)*
+*[https://juicebox.money/create](https://juicebox.money/create) or [https://sepolia.juicebox.money/create](https://sepolia.juicebox.money/create) (testnet)*
 
 I’ll go from the Funding cycle section of our create flow and recommend some possible starting points for your NFT project.
 
@@ -68,6 +68,6 @@ And that’s it! Congratulations. You’ve set up a system where buyers of your 
 
 ## Conclusion
 
-We hope you’ve enjoyed digging into the details of Juicebox and how you can leverage the protocol for your NFT project. If you’re interested in having a crack at the setup described here, [have a play on Rinkeby](rinkeby.juicebox.money/#/create). If you’ve still got some questions, come shoot us a message in our [Discord](https://discord.gg/juicebox) or arrange an onboarding call. As always, happy Juicing!
+We hope you’ve enjoyed digging into the details of Juicebox and how you can leverage the protocol for your NFT project. If you’re interested in having a crack at the setup described here, [have a play on Sepolia](https://sepolia.juicebox.money/create). If you’ve still got some questions, come shoot us a message in our [Discord](https://discord.gg/juicebox) or arrange an onboarding call. As always, happy Juicing!
 
 *Disclaimer: This is not financial or legal advice. As always, speak with an expert and do your own research.*

@@ -27,7 +27,7 @@ Contributors who have completed one or more trial payouts are advised to propose
 ### What should I do next?
 
 1. Join [the Discord](https://www.discord.gg/juicebox).
-2. Join the weekly [Discord Town Halls](../town-hall) (Tuesday 22:00 UTC).
+2. Join the weekly [Discord Town Halls](/town-hall) (Tuesday 22:00 UTC).
 3. Read recent [governance proposals](https://juicetool.xyz/nance/juicebox).
 4. Read recent message history in relevant Discord channels to familiarize yourself with the high level ongoing projects in the DAO, and details of the areas you wish to contribute to.
 5. Reach out to active contributors in channels related to areas you would like to contribute to. Ask what you can help with or propose new objectives for the DAO.

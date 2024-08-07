@@ -25,7 +25,7 @@ Before looking at the examples below, read the success stories on [juicebox.mone
 1. Before launching the project, ConstitutionDAO had a Discord community with over 2,000 members and had gained the support of several well-established figures on Twitter – as always, sharing your narrative and building a community is an important first step.
 2. For their first cycle, ConstitutionDAO had unlimited payouts with an unlocked cycle (no duration) and no edit deadline. This gave ConstitutionDAO members the flexibility to move funds or update the project however they needed to as the auction evolved, and the community trusted ConstitutionDAO because of the involvement of several public figures.
 3. During the auction, ConstitutionDAO pulled the project's funds into the Gnosis Safe wallet which owned the project – this allowed them to bid on the Constitution.
-4. ConstitutionDAO didn't win the auction. After some [brainstorming](/updates/constitutiondao-refund-brainstorm/), the community decided to perform a refund through Juicebox. Funds were transferred back to the project, payouts were set to 0, and the redemption rate was set to 100% – everyone who wanted to reclaim their funds could burn their $PEOPLE tokens to do so. The NFT which represented the project's ownership was then sent to a burn address (a wallet nobody has access to), guaranteeing that no further changes could be made to the project.
+4. ConstitutionDAO didn't win the auction. After some [brainstorming](/blog/constitutiondao-refund-brainstorm/), the community decided to perform a refund through Juicebox. Funds were transferred back to the project, payouts were set to 0, and the redemption rate was set to 100% – everyone who wanted to reclaim their funds could burn their $PEOPLE tokens to do so. The NFT which represented the project's ownership was then sent to a burn address (a wallet nobody has access to), guaranteeing that no further changes could be made to the project.
 
 To learn more about ConstitutionDAO, read [this blog post](/blog/constitutiondao-config/) and visit [constitutiondao.com](https://www.constitutiondao.com/).
 
@@ -66,7 +66,7 @@ See:
 
 ### JuiceboxDAO
 
-[JuiceboxDAO](https://juicebox.money/@juicebox), the group which builds and maintains the Juicebox protocol and the ecosystem around it, is funded and managed on Juicebox – the DAO operates the first project on each version of the protocol, and is funded through direct contributions and [protocol fees](/dao/reference/jbx/#about-fees).
+[JuiceboxDAO](https://juicebox.money/@juicebox), the group which builds and maintains the Juicebox protocol and the ecosystem around it, is funded and managed on Juicebox – the DAO operates the first project on each version of the protocol, and is funded through direct contributions and [protocol fees](/dao/jbx/#about-fees).
 
 [JuiceboxDAO v1](https://juicebox.money/p/juicebox) started off with a 30 day cycle, and a 7-day edit deadline – this conservative approach gave supporters confidence that they would be able to respond to changes to the project well in advance. The project also had a 10% reserved rate, a 60% redemption rate, and a **20% issuance reduction rate**. This issuance reduction rate (a per-cycle increase to token price) was extremely large – this gave a strong incentive to support the project within its first cycle instead of supporting it later on. The relatively low redemption rate was another incentive in favor of supporting the projects – contributors received most of the tokens issued by their payments.
 

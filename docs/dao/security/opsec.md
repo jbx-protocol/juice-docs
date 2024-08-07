@@ -51,7 +51,7 @@ If you suspect that any of your accounts may be compromised, take the following 
 
 If you are a multisig signer, take the following steps over the next 2 weeks:
 
-- [ ] Familiarize yourself with the [Emergency Process](emergency).
+- [ ] Familiarize yourself with the [Emergency Process](/dao/security/emergency/).
 - [ ] Buy and use a hardware wallet — a [Ledger](https://www.ledger.com/) or a [Trezor](https://trezor.io/).
 - [ ] Create a wallet address which is only used for signing and executing JuiceboxDAO Safe transactions.
 - [ ] Register an ENS for your signer wallet. This makes your wallet easier to identify.

@@ -140,7 +140,7 @@ But what we're working at is templatizing a lot of the things for common use cas
 
 ## Tiles.wtf by @filipv and @peri
 
-**filipv**: I also want to do an update on [Tiles.wtf](tiles.wtf)
+**filipv**: I also want to do an update on [Tiles.wtf](https://tiles.wtf)
 ![](HZidHaa.webp)
 
 For those of you who didn't see it, it's a rewrite of [tiles.art](https://tiles.art/#/) but completely on-chain, so the algorithm to render the Tiles is completely in Solidity. The website is written in Svelte which is super cool because it lets people compile the components and use it with different frameworks if they'd like to. It's also a little bit more portable, so you could imagine someone setting up an npm package using different components or something else.
@@ -198,7 +198,7 @@ And back to the protocol overview payge, there is this `All users`
 If you click the `See more` after an ENS/Address, it will take you to the dedicated page of that person/address. Let's take @jango's as an example:
 ![](gfvRt82.jpeg)
 
-**jango**: Man, I feel this is full-fledged superpowered graph interface for projects. I wonder if we need to build a documentation on how to navigate this into the [info site](docs.juicebox.money) or Juicebox High or something? maybe in a more tucked away Data section or something?
+**jango**: Man, I feel this is full-fledged superpowered graph interface for projects. I wonder if we need to build a documentation on how to navigate this into the [info site](https://docs.juicebox.money) or Juicebox High or something? maybe in a more tucked away Data section or something?
 
 **twodam**: Yes! I would love to.
 

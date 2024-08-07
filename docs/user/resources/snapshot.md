@@ -130,7 +130,7 @@ This strategy allows voters to delegate their project token votes to somebody el
 
 ### NFT Voting Weight
 
-This strategy gives each address votes based on their NFT's [Voting Weight](/user/configuration/#tiers).
+This strategy gives each address votes based on their NFT's [Voting Weight](/user/project/#tiers).
 
 1. Add a `contract-call` strategy.
 2. Use the following parameters:

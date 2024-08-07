@@ -85,7 +85,7 @@ Although new Nouns may seem random and impossible to predict, their traits are a
 
 Before the Shark Noun was generated, founding member [Goldy](https://twitter.com/Goldypix) was eyeing the [Noun Crystal Ball](https://nouns-crystal-ball.netlify.app/) every day for weeks. This magical tool shows you what the next Noun will look like if the auction is settled on the current block by calling the `settleCurentAndCreateNewAuction()` function in the `NounsAuctionHouse` [contract](https://etherscan.io/address/0xF15a943787014461d94da08aD4040f79Cd7c124e).
 
-Usually the winning bidder will settle the auction, but anyone can call `settleCurentAndCreateNewAuction()` at a particular block and help decide what the next Noun will look like. In a glimpse of a moment, Goldy saw the Shark Noun in the Crystal Ball and [submitted the transaction](0xba8560127d046bb5b2c92cae027a8741f3301975ef37752e23e3b3b1e565cd07) before the next block to secure it.
+Usually the winning bidder will settle the auction, but anyone can call `settleCurentAndCreateNewAuction()` at a particular block and help decide what the next Noun will look like. In a glimpse of a moment, Goldy saw the Shark Noun in the Crystal Ball and [submitted the transaction](https://etherscan.io/tx/0xba8560127d046bb5b2c92cae027a8741f3301975ef37752e23e3b3b1e565cd07) before the next block to secure it.
 
 ![The Noun Crystal Ball 🔮](crystal-ball.webp)
 <p class="subtitle">The Noun Crystal Ball 🔮</p>

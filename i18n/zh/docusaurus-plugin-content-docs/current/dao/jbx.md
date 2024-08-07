@@ -11,7 +11,7 @@ Juicebox 协议由 JuiceboxDAO 进行开发。JuiceboxDAO 没有首席执行官�
 
 $JBX 是 JuiceboxDAO 的*项目代币*。每次有人向 [Juicebox 上的 JuiceboxDAO 项目](https://juicebox.money/@juicebox)付款的时候，都会发行出来新的 JBX 代币，而他们向项目赎回 JBX 代币来获取项目的 ETH 资产时，相应的 JBX 代币则会被销毁。JuiceboxDAO 还会收取[协议费用](https://docs.juicebox.money/dao/jbx/#about-fees)，收到费用时会按同样的机制发行 JBX 代币。
 
-每个 Juicebox 协议版本里，JuiceboxDAO 都是第一个项目。我们当前的项目地址在[这里](https://juicebox.money/@juicebox)，旧的项目地址在[这里](https://juicebox.money/p/juicebox)。旧的 JBX 代币（旧项目的代币）可以[迁移为新的 JBX 代币](https://docs.juicebox.money/zh/updates/jbx-v3-migration-guide/)。
+每个 Juicebox 协议版本里，JuiceboxDAO 都是第一个项目。我们当前的项目地址在[这里](https://juicebox.money/@juicebox)，旧的项目地址在[这里](https://juicebox.money/p/juicebox)。旧的 JBX 代币（旧项目的代币）可以[迁移为新的 JBX 代币](https://docs.juicebox.money/zh/blog/jbx-v3-migration-guide/)。
 
 1. JBX 代币合约地址: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/token/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)[^1]。
 2. 旧 JBX 代币合约地址 (已停用): [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66).
@@ -86,7 +86,7 @@ Juicebox 上的所有项目在以下情形需缴纳 2.5% 的费用：
 
 ## 预挖代币
 
-JuiceboxDAO 项目的早期阶段，曾预挖了 144246772 个 JBX 代币（旧版本代币），用于支付 Juicebox 协议的前期开发和编译函数库或其他工具的报酬。可以阅读[这篇博客](https://docs.juicebox.money/zh/updates/premine/)来了解此次预挖代币的具体情况。截止 2023 年 12 月 7 日，此次预挖的代币数量占 JBX 代币总发行量约 7.02%。
+JuiceboxDAO 项目的早期阶段，曾预挖了 144246772 个 JBX 代币（旧版本代币），用于支付 Juicebox 协议的前期开发和编译函数库或其他工具的报酬。可以阅读[这篇博客](https://docs.juicebox.money/zh/blog/premine/)来了解此次预挖代币的具体情况。截止 2023 年 12 月 7 日，此次预挖的代币数量占 JBX 代币总发行量约 7.02%。
 
 ------
 

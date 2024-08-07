@@ -79,7 +79,7 @@ function setPrimaryTerminalOf(
 
     _Event references:_
 
-    * [`SetPrimaryTerminal`](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminalmd/)
+    * [`SetPrimaryTerminal`](/dev/deprecated/v2/contracts/jbdirectory/events/setprimaryterminal.md/)
 
 </TabItem>
 

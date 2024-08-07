@@ -57,7 +57,7 @@ This is where your payouts are sent. By default, payouts go to your wallet (the 
 You can define payouts by percentage (50% of funds go to `vitalik.eth`) or by amount (3 ETH goes to the `@peel` project, or $2,500 worth of ETH goes to `jango.eth`). You can use these payouts to manage your organization's entire payroll — JuiceboxDAO does.
 
 :::info
-Payouts to wallets (like `vitalik.eth`) will incur a 2.5% fee, which is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. Payouts to Juicebox projects don't incur any fees. To learn more, read [JBX & Fees](/dao/reference/jbx/).
+Payouts to wallets (like `vitalik.eth`) will incur a 2.5% fee, which is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. Payouts to Juicebox projects don't incur any fees. To learn more, read [JBX & Fees](/dao/jbx/).
 :::
 
 #### Edit deadline
@@ -103,7 +103,7 @@ The lower this rate is, the less of an incentive there is to redeem tokens befor
 *How to choose:* To start, you should keep this rate at 100% (redemptions on) or 0% (redemptions off), and then adjust from there.
 
 :::info
-Redemptions incur a 2.5% fee while the redemption rate is less than 100%. This fee is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. To learn more, read [JBX & Fees](/dao/reference/jbx/).
+Redemptions incur a 2.5% fee while the redemption rate is less than 100%. This fee is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. To learn more, read [JBX & Fees](/dao/jbx/).
 :::
 
 #### Owner token minting

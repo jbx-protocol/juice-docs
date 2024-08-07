@@ -118,7 +118,7 @@ Jango 已将他的 JBX 持仓全部迁移为 V3 JBX 代币。
 
 JBX迁移指南：
 
-- [JBX V3 迁移指南（Aeolian）;](https://docs.juicebox.money/updates/jbx-v3-migration-guide/)
+- [JBX V3 迁移指南（Aeolian）;](https://docs.juicebox.money/blog/jbx-v3-migration-guide/)
 - Matthew 和 Brileigh 制作的 JBX 迁移视频教程：
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mk2GdYri1mU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

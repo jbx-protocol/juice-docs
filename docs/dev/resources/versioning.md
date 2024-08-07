@@ -5,7 +5,7 @@ sidebar_position: 5
 
 ## v1
 
-Juicebox was first deployed to Ethereum mainnet on July 15, 2021. We now refer to this version of the protocol as "Juicebox v1" – you can find an archive of its original documentation [here](/dev/deprecated/v1/), and recent v1 API documentation [here](/dev/deprecated/juice-contracts-v1/). Its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v1). The v1 contracts were published alongside the article: [Juicebox has been deployed](/updates/juicebox-deployed/).
+Juicebox was first deployed to Ethereum mainnet on July 15, 2021. We now refer to this version of the protocol as "Juicebox v1" – you can find an archive of its original documentation [here](/dev/deprecated/v1/), and recent v1 API documentation [here](/dev/deprecated/juice-contracts-v1/). Its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v1). The v1 contracts were published alongside the article: [Juicebox has been deployed](/blog/juicebox-deployed/).
 
 ## v1.1
 
@@ -20,7 +20,7 @@ Juicebox was first deployed to Ethereum mainnet on July 15, 2021. We now refer t
 - A bug which caused issues with overflow calculation when a new cycle had begun and newly availble funds still had not been paid out was fixed.
 - In v1, the [`Governance`](/dev/deprecated/juice-contracts-v1/governance/) contract provisioned terminal migrations, price feed updates, and fee changes. In v1.1, this functionality was handled directly within the [`TerminalV1_1`](/dev/deprecated/juice-contracts-v1/terminalv1_1/) contract.
 
-[JBP-71 - Juicebox V1.1 deploy](https://www.jbdao.org/p/71) was approved on January 7th, 2022, and Juicebox v1.1 was deployed to Ethereum mainnet on January 10th, 2022. Its API documentation is available [here](/dev/deprecated/juice-contracts-v1/terminalv1_1/), and its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v1/tree/version/1.1-deploy). For more information, see the [Juicebox V1.1 Change log](/updates/juicebox-v1-1-change-log/).
+[JBP-71 - Juicebox V1.1 deploy](https://www.jbdao.org/p/71) was approved on January 7th, 2022, and Juicebox v1.1 was deployed to Ethereum mainnet on January 10th, 2022. Its API documentation is available [here](/dev/deprecated/juice-contracts-v1/terminalv1_1/), and its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v1/tree/version/1.1-deploy). For more information, see the [Juicebox V1.1 Change log](/blog/juicebox-v1-1-change-log/).
 
 ## TerminalV1Rescue
 
@@ -40,7 +40,7 @@ Key functionality changes:
 
 ## v3
 
-Juicebox v2 was audited by [PeckShield](/assets/files/peckshield-audit-report-ab36ee2b5dfb2a387410b4d64276f6ba.pdf/) and [Certik](/assets/files/certik-audit-report-12b48328d22ac38207dad74162cac1db.pdf/) before being deployed, and was audited by a [Code4rena contest](https://code4rena.com/contests/2022-07-juicebox-v2-contest) after it was deployed. This audit identified several bugs and inefficiencies, which were addressed in Juicebox v3 – a re-deploy of several (but not all) protocol contracts. Juicebox v3 was deployed to Ethereum mainnet on September 20th, 2022. Its API documentation is available [here](/dev/deprecated/v3/), and its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v3).
+Juicebox v2 was audited by [PeckShield](/pdf/peckshield-audit-report.pdf) and [Certik](/pdf/certik-audit-report.pdf) before being deployed, and was audited by a [Code4rena contest](https://code4rena.com/contests/2022-07-juicebox-v2-contest) after it was deployed. This audit identified several bugs and inefficiencies, which were addressed in Juicebox v3 – a re-deploy of several (but not all) protocol contracts. Juicebox v3 was deployed to Ethereum mainnet on September 20th, 2022. Its API documentation is available [here](/dev/deprecated/v3/), and its source code is available on [GitHub](https://github.com/jbx-protocol/juice-contracts-v3).
 
 ## v3.1
 

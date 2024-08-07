@@ -48,7 +48,7 @@ Jango shared Mieos's enthusiasm and saw Juicebox as a programming language for m
 
 ### "Year of the Dev"
 
-Jango looked back on the blog post [Year of the Dev](https://docs.juicebox.money/updates/year-of-the-dev/) that he wrote about a year and a half ago, realizing that its essence still resonates strongly with the community today, despite some changes. He cherished the fact that we are a developer-oriented community, where individuals build with their unique perspectives and support each other throughout the process.
+Jango looked back on the blog post [Year of the Dev](https://docs.juicebox.money/blog/year-of-the-dev/) that he wrote about a year and a half ago, realizing that its essence still resonates strongly with the community today, despite some changes. He cherished the fact that we are a developer-oriented community, where individuals build with their unique perspectives and support each other throughout the process.
 
 As diverse individuals, we bring our own artistic approaches to making things happen, with values that may differ but contribute to our collective growth. Jango emphasized the importance of learning from one another, as well as from the diverse experiences and viewpoints beyond our commonalities, which continuously drive us forward.
 

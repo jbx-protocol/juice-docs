@@ -106,7 +106,7 @@ Multisig signers verified and signed [transaction 234](https://app.safe.global/t
 
 The "Send payouts" button was restored in commit [610e65e](https://github.com/jbx-protocol/juice-interface/commit/610e65ea4899f4269a6bfdc03ca839e47d0de4ae).
 
-The contents of the private channel are available [here](/fix-v1-project.html).
+The contents of the private channel are available [here](https://docs.juicebox.money/fix-v1-project.html).
 
 To prevent a similar situation from taking place in the future:
 
