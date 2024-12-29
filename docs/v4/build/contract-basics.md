@@ -59,7 +59,7 @@ The project's upcoming ruleset can be found using [`JBController.upcomingRuleset
 
 By default, the upcoming ruleset is a copy of the current one that starts immediately afterwards, using a discounted weight if applicable.
 
-If the project has proposed a reconfiguration, the upcoming ruleset will reflect the changes once they are approved by the current ruleset's ballot. Reconfigurations during a ruleset with no ballot are automatically queued.
+If the project has queued a new ruleset, the upcoming ruleset will reflect the changes once they are approved by the current ruleset's ballot. Rulesets queued during a ruleset with no ballot are automatically queued.
 
 The project has no upcoming ruleset if the current ruleset has no duration.
 
@@ -459,7 +459,7 @@ function currentReclaimableSurplusOf(
 
 </details>
 
-A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the reconfiguration before taking effect.
+A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
 
 ```
 function queueRulesetsOf(
