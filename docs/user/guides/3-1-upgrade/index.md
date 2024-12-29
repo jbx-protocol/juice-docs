@@ -75,6 +75,6 @@ Once your cycle rules are active, take the following steps to continue the upgra
 
 ### Verify your upgrade
 
-To verify your upgrade, navigate to your project's **Contracts** page `juicebox.money/YOUR_PROJECT/contracts`. Check that your **JBController** and **Primary Terminal** addresses match the **JBController3_1** and **JBETHPaymentTerminal3_1** addresses from the [Contract Addresses list](/docs/v4/deprecated/v3/resources/addresses/#ethereum-mainnet).
+To verify your upgrade, navigate to your project's **Contracts** page `juicebox.money/YOUR_PROJECT/contracts`. Check that your **JBController** and **Primary Terminal** addresses match the **JBController3_1** and **JBETHPaymentTerminal3_1** addresses from the [Contract Addresses list](/docs/v4/deprecated/v3/resources/addresses.md#ethereum-mainnet).
 
 ![Contracts](contracts.png)

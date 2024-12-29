@@ -85,7 +85,7 @@ function allRulesetsOf(uint256 projectId) external view returns (JBRuleset[] mem
 
 <summary>View splits</summary>
 
-A project's splits data can be found in the [`JBSplits`](/docs/v4/api/core/contracts/JBSplits.md) contract. A set of splits used for any particular functionality during any particular rulesets configuration can be found using [`JBSplit.splitsOf(...)`](/docs/v4/api/core/contracts/jbsplitsstore/#splitsof). 
+A project's splits data can be found in the [`JBSplits`](/docs/v4/api/core/contracts/JBSplits.md) contract. A set of splits used for any particular functionality during any particular rulesets configuration can be found using [`JBSplit.splitsOf(...)`](/docs/v4/api/core/contracts/jbsplitsstore.md#splitsof). 
 
 ```
 function splitsOf(uint256 projectId, uint256 rulesetId, uint256 groupId) external view returns (JBSplit[] memory)
@@ -268,7 +268,7 @@ function creditBalanceOf(address holder, uint256 projectId) external view return
 
 <summary>View price conversions</summary>
 
-The protocol uses price feeds to convert values from one currency to another when sending payouts, using surplus allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.md). If the currency strongly correlates to an ERC-20, it is cusom to use the first 32 bytes of its address as the currency. Since ETH is treated using [`JBConstants.NATIVE_TOKEN`](/div/api/core/libraries/jbconstants), its currency is `61166`. New currencies and price feeds can be added in the future.
+The protocol uses price feeds to convert values from one currency to another when sending payouts, using surplus allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.md). If the currency strongly correlates to an ERC-20, it is cusom to use the first 32 bytes of its address as the currency. Since ETH is treated using [`JBConstants.NATIVE_TOKEN`](/div/api/core/libraries/jbconstants.md), its currency is `61166`. New currencies and price feeds can be added in the future.
 
 The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/docs/v4/api/core/contracts/JBPrices.md) contract using [`JBPrices.pricePerUnitOf(...)`](/docs/v4/api/core/contracts/JBPrices.md#priceperunitof.md). 
 
@@ -309,7 +309,7 @@ A project can instead bring their own token, so long as the token adheres to the
 function setTokenFor(uint256 projectId, IJBToken token) external  { ... };
 ```
 
-For projects who don't issue ERC-20's right away, holders can claim their credit balance into a project's ERC-20 once one has been made using the [`JBTokens.claimTokensFor(...)`](/docs/v4/api/core/contracts/JBTokens.mdclaimtokensfor)
+For projects who don't issue ERC-20's right away, holders can claim their credit balance into a project's ERC-20 once one has been made using the [`JBTokens.claimTokensFor(...)`](/docs/v4/api/core/contracts/JBTokens.md#claimtokensfor)
 
 ```
 function claimTokensFor(address holder, uint256 projectId, uint256 count, address beneficiary) external { ... }
