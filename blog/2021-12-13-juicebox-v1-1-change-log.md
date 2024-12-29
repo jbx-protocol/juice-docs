@@ -29,7 +29,7 @@ Currently there is no fee cap.
 
 ### Bug fixes
 
-- Fixed bug that prevents a project from updating its reserved token tracker when the reserved rate is set to 0%. This bug prevented the project from reconfiguring from a 0% reserved rate to any other value without inadvertently creating an extra reserved token supply inso-doing. See this [postmortem](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/).
+- Fixed bug that prevents a project from updating its reserved token tracker when the reserved rate is set to 0%. This bug prevented the project from reconfiguring from a 0% reserved rate to any other value without inadvertently creating an extra reserved token supply inso-doing. See this [postmortem](https://docs.juicebox.money/v4/deprecated/resources/post-mortem/2021-08-18/).
 - Fixed bug that prevented overflow from being viewed correctly when a funding cycle rolls over before it has had its newly available funds distributed.
 
 ### Other adjustments

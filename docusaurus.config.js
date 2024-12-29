@@ -48,6 +48,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: "blog",
           editUrl: "https://github.com/jbx-protocol/juice-docs/blob/main",
           blogSidebarTitle: "Articles",
           blogSidebarCount: "ALL",
