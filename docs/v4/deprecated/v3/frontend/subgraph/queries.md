@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Below are some sample queries you can use to gather information from the Juicebox contracts.
 
-You can experiment on the [subgraph playground](https://thegraph.com/explorer/subgraphs/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC?view=Playground) or on a GraphiQL Explorer – open one of the endpoints listed in [*Subgraph*](/v4/deprecated/v3/frontend/subgraph/) in your browser.
+You can experiment on the [subgraph playground](https://thegraph.com/explorer/subgraphs/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC?view=Playground) or on a GraphiQL Explorer – open one of the endpoints listed in [*Subgraph*](/docs/v4/deprecated/v3/frontend/subgraph/README.md) in your browser.
 
 ### Get Project Metrics By Owner
 

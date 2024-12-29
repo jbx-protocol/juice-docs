@@ -21,7 +21,7 @@ Wanting to ensure that redemptions were impossible, he disabled the "Enable rede
 
 ![](2.png)
 
-He then made several other changes and deployed the changes through the frontend. His cycle was queued with the following [`JBFundingCycleMetadata`](/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata/):
+He then made several other changes and deployed the changes through the frontend. His cycle was queued with the following [`JBFundingCycleMetadata`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata.md):
 
 ```json
 {
@@ -70,7 +70,7 @@ Jango also offered to use his own funds to cover the 6.02 ETH currently in the p
 We'll address the current situation and minimize the likelihood of similar events in the future with the following steps:
 
 1. I'll handle the deployment and management of a new project, and work with Rene to update his ENS appropriately. Next cycle, I'll submit a proposal to reimburse Jango for his ETH and myself for the gas fees incurred during this process.
-2. Wraeth suggested using something other than [antd](https://ant.design/), which is the framework currently in use by the form.
+2. Wraeth suggested using something other than [antd](https://ant.design/README.md), which is the framework currently in use by the form.
 3. Along with addressing this bug, we'll be looking at other options within project settings to ensure they follow expected behavior.
 4. johnnyD is adding an indicator which clearly shows the default value to users when settings toggles are disabled.
 5. johnnyD is moving reserved list updates below other changes in the "Review & confirm" tab to make it easier to catch changes like this.

@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`migrate`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/migrate.md)
+* [`migrate`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/migrate.md)
 
 #### Definition
 

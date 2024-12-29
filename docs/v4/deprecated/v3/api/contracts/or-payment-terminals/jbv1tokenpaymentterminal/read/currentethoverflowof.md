@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -24,7 +24,7 @@ function currentEthOverflowOf(uint256 _projectId) external view override returns
   * `_projectId` is the ID of the project to which the ETH overflow belongs.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
 * The function returns the current amount of ETH overflow that project has in this terminal, as a fixed point number with 18 decimals.
 
 #### Body

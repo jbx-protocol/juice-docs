@@ -12,15 +12,15 @@ Mainnet: [`0xA4425A1E5b7B28Cb689719B1428e3088C1F89E30`](https://etherscan.io/add
 
 Goerli: [`0xbF8b5ea02e50073348767fd9418beDEd30C835D4`](https://goerli.etherscan.io/address/0xbF8b5ea02e50073348767fd9418beDEd30C835D4)
 
-Inherits: [`JBControllerUtility`](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBFundAccessConstraintsStore`](/v4/deprecated/v3/api/interfaces/ijbfundaccessconstraintsstore/)
+Inherits: [`JBControllerUtility`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/README.md), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBFundAccessConstraintsStore`](/docs/v4/deprecated/v3/api/interfaces/ijbfundaccessconstraintsstore.md)
 
 Adheres to:
 
-- [`IJBFundAccessConstraintsStore`](/v4/deprecated/v3/api/interfaces/ijbfundaccessconstraintsstore/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+- [`IJBFundAccessConstraintsStore`](/docs/v4/deprecated/v3/api/interfaces/ijbfundaccessconstraintsstore.md): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
 
 Inherits from:
 
-- [`JBControllerUtility`](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
+- [`JBControllerUtility`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/README.md): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
 - [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165): Introspection on interface adherance.
 
 ## State Variables

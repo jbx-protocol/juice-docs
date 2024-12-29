@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -14,7 +14,7 @@ Interface: [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md)
 
 _Only a project's current controller can change its token._
 
-_This contract must have access to all of the token's [`IJBToken`](/v4/deprecated/v2/interfaces/ijbtoken.md) interface functions._
+_This contract must have access to all of the token's [`IJBToken`](/docs/v4/deprecated/v2/interfaces/ijbtoken.md) interface functions._
 
 _Can't change to a token that's currently being used by another project._
 
@@ -32,8 +32,8 @@ function changeFor(
   * `_projectId` is the ID of the project to which the changed token belongs.
   * `_token` is the new token. Send an empty address to remove the project's current token without adding a new one, if claiming tokens isn't currency required by the project
   * `_newOwner` is an address to transfer the current token's ownership to. This is optional, but it cannot be done later.
-* Through the [`onlyController`](/v4/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/docs/v4/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -48,7 +48,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`requireClaimFor`](/v4/deprecated/v2/contracts/jbtokenstore/properties/requireclaimfor.md)
+    * [`requireClaimFor`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/requireclaimfor.md)
 
 2.  Make sure the token being changed to isn't being used by another project.
 
@@ -59,7 +59,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`projectOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
+    * [`projectOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
 
 3.  Make sure the token has 18 decimals.
 
@@ -71,7 +71,7 @@ function changeFor(
 
     _External references:_
 
-    * [`decimals`](/v4/deprecated/v2/interfaces/ijbtoken.md)
+    * [`decimals`](/docs/v4/deprecated/v2/interfaces/ijbtoken.md)
 
 4.  Get a reference to the project's current token.
 
@@ -82,7 +82,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
 5.  Store the provided token as the token of the project.
 
     ```
@@ -92,7 +92,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
 6.  Store the project the new token is being used for.
 
     ```
@@ -103,7 +103,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`projectOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
+    * [`projectOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
 7.  Reset the project for the project's old token.
 
     ```
@@ -113,7 +113,7 @@ function changeFor(
 
     _Internal references:_
 
-    * [`projectOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
+    * [`projectOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
 8.  If there's a current token and a new owner address was provided, transfer the ownership of the current token from this contract to the new owner.
 
     ```
@@ -124,7 +124,7 @@ function changeFor(
 
     _External references:_
 
-    * [`transferOwnership`](/v4/deprecated/v2/contracts/jbtoken/write/transferownership.md)
+    * [`transferOwnership`](/docs/v4/deprecated/v2/contracts/jbtoken/write/transferownership.md)
 9.  Emit a `Change` event with the relevant parameters.
 
     ```
@@ -133,7 +133,7 @@ function changeFor(
 
     _Event references:_
 
-    * [`Change`](/v4/deprecated/v2/contracts/jbtokenstore/events/change.md)
+    * [`Change`](/docs/v4/deprecated/v2/contracts/jbtokenstore/events/change.md)
 
 </TabItem>
 
@@ -212,7 +212,7 @@ function changeFor(
 
 | Name                                | Data                                                                                                                                                                                |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Change`**](/v4/deprecated/v2/contracts/jbtokenstore/events/change.md)               | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/v4/deprecated/v2/interfaces/ijbtoken.md)indexed newToken</code></li><li><code>[IJBToken](/v4/deprecated/v2/interfaces/ijbtoken.md)indexed oldToken</code></li><li><code>address indexed owner</code></li><li><code>address caller</code></li></ul>                                                                                           |
+| [**`Change`**](/docs/v4/deprecated/v2/contracts/jbtokenstore/events/change.md)               | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/docs/v4/deprecated/v2/interfaces/ijbtoken.md)indexed newToken</code></li><li><code>[IJBToken](/docs/v4/deprecated/v2/interfaces/ijbtoken.md)indexed oldToken</code></li><li><code>address indexed owner</code></li><li><code>address caller</code></li></ul>                                                                                           |
 
 </TabItem>
 

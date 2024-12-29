@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_refundHeldFees`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_refundheldfees.md)
+* [`_refundHeldFees`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_refundheldfees.md)
 
 #### Definition
 

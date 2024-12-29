@@ -22,14 +22,14 @@ To deploy a new Juicebox project, you will:
 2. Choose an initial sequence of rulesets that dictate how funds are distributed and tokens are issued.
 3. Deploy the project, generating an NFT representing its ownership.
 
-[Learn more about projects](/v4/learn/glossary/project)
+[Learn more about projects](/docs/v4/learn/glossary/project.md)
 
 ---
 
 ### Schedule Rulesets for a Project
 Rulesets define the operational constraints for a project, including how funds are managed, tokens are issued, and payouts are distributed. Each project operates under one active ruleset at a time, with the ability to queue any number of future rulesets at any time.
 
-[Learn more about rulesets](/v4/learn/glossary/ruleset)
+[Learn more about rulesets](/docs/v4/learn/glossary/ruleset.md)
 
 #### Configurable Ruleset Properties:
 
@@ -79,7 +79,7 @@ If the project later issues an ERC-20 token:
 1. The contributor can claim 800 ERC-20 tokens in exchange for their credits.
 2. These ERC-20 tokens can be freely traded or used in other DeFi protocols.
 
-[Learn more about token issuance](/v4/learn/glossary/token-issuance)
+[Learn more about tokens](/docs/v4/learn/glossary/tokens.md)
 
 ---
 
@@ -125,7 +125,7 @@ The 2000 reserved tokens can also be distributed:
 
 The remaining 1 ETH is held as surplus, and can be distributed to the project owner if a surplus allowance is set, cashed out by token holders if the ruleset allows, or held as runway for future rulesets. Any other incoming ETH adds to the surplus.
 
-[Learn more about splits](/v4/learn/glossary/splits)
+[Learn more about splits](/docs/v4/learn/glossary/splits.md)
 
 ---
 
@@ -142,17 +142,17 @@ An project collects funds on Ethereum and Base:
 
 - **Pro Tip**: Projects must synchronize rulesets across chains to ensure consistent operations or intentionally design unique rulesets for each chain.
 
-[Learn more about omnichain](/v4/learn/glossary/omnichain)
+[Learn more about omnichain](/docs/v4/learn/glossary/omnichain.md)
 
 ---
 
 ### Custom Treasury Strategies
 Projects can use custom hooks to extend or override default treasury behavior:
-- **[`IJBRulesetDataHook`](/v4/api/core/interfaces/ijbrulesetdatahook)**: Define custom logic for fund receipts or token cash-outs.
-- **[`IJBPayHook`](/v4/api/core/interfaces/ijbpayhook)**: Define custom logic for what happens when a payment is received.
-- **[`IJBCashOutHook`](/v4/api/core/interfaces/ijbcashouthook)**: Define custom logic for what happens when a token holder cashes out their tokens.
-- **[`IJBSplitHook`](/v4/api/core/interfaces/ijbsplithook)**: Define custom logic for what happens when a payout split or reserved token split is triggered.
-- **[`IJBRulesetApprovalHook`](/v4/api/core/interfaces/ijbrulesetapprovalhook)**: Enforce criteria like governance approvals before ruleset changes.
+- **[`IJBRulesetDataHook`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.md)**: Define custom logic for fund receipts or token cash-outs.
+- **[`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.md)**: Define custom logic for what happens when a payment is received.
+- **[`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.md)**: Define custom logic for what happens when a token holder cashes out their tokens.
+- **[`IJBSplitHook`](/docs/v4/api/core/interfaces/IJBSplitHook.md)**: Define custom logic for what happens when a payout split or reserved token split is triggered.
+- **[`IJBRulesetApprovalHook`](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.md)**: Enforce criteria like governance approvals before ruleset changes.
 
 **Example: Custom Hook Implementation**  
 A project uses a data hook and pay hook to:
@@ -161,4 +161,4 @@ A project uses a data hook and pay hook to:
 
 This ensures contributors are rewarded with NFTs and recieve the most project tokens possible from their contributions.
 
-[Learn more about hooks](/v4/learn/glossary/hooks)
+[Learn more about hooks](/docs/v4/learn/glossary/hooks.md)

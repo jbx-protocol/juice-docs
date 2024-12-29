@@ -3,16 +3,16 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
 
 **Records the migration of funds from this store.**
 
-_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)._
+_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)._
 
 #### Definition
 
@@ -26,7 +26,7 @@ function recordMigration(uint256 _projectId)
 
 * Arguments:
   * `_projectId` is the ID of the project being migrated.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
 * The function returns the project's migrated balance, as a fixed point number with the same amount of decimals as its relative terminal.
 
 #### Body
@@ -40,7 +40,7 @@ function recordMigration(uint256 _projectId)
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
 2.  Make sure that migrating terminals is allowed by the current funding cycle.
 
     ```
@@ -50,7 +50,7 @@ function recordMigration(uint256 _projectId)
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.terminalMigrationAllowed(...)`
 3.  Get a reference to the project's current balance. Set this to the value that the function will return.
 
@@ -61,7 +61,7 @@ function recordMigration(uint256 _projectId)
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 4.  Set the project's balance to 0 since funds are moving away from this terminal.
 
     ```
@@ -71,7 +71,7 @@ function recordMigration(uint256 _projectId)
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 
 </TabItem>
 

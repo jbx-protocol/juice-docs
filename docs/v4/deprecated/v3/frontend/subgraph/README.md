@@ -5,7 +5,7 @@ title: Subgraph Introduction
 
 # Subgraph
 
-[The Graph](https://thegraph.com/) is a protocol which allows anyone to create a [GraphQL](https://graphql.org/) API for querying blockchain data. Each individual API is called a *subgraph*. Juicebox's subgraphs are in use on [juicebox.money](https://juicebox.money) and other websites to load Juicebox protocol data without directly querying the blockchain.
+[The Graph](https://thegraph.com/) is a protocol which allows anyone to create a [GraphQL](https://graphql.org/README.md) API for querying blockchain data. Each individual API is called a *subgraph*. Juicebox's subgraphs are in use on [juicebox.money](https://juicebox.money) and other websites to load Juicebox protocol data without directly querying the blockchain.
 
 Juicebox subgraphs are indexed via [Satsuma](https://www.satsuma.xyz/). You can query them using the URLs in the table below (you'll need an API key from the [Peel Discord server](https://discord.gg/XvmfY4Hkcz)), or try out our [example queries](queries) in a playground:
 

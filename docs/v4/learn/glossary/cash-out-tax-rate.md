@@ -3,7 +3,7 @@
 #### What everyone needs to know
 
 * The cash out tax rate determines what proportion of treasury assets can be reclaimed by a token holder by cashing out their tokens, with a portion withheld as tax.
-* By default, all treasury assets that are considered surplus can be reclaimed by token holders by cashing out. This can be modified using [data hook](/v4/learn/glossary/data-hook.md) extensions.
+* By default, all treasury assets that are considered surplus can be reclaimed by token holders by cashing out. This can be modified using [data hook](/docs/v4/learn/glossary/data-hook.md) extensions.
 * A project's cash out tax rate and hooks can be reconfigured each ruleset.
 * A cash out tax rate of 0% means no tax is withheld, and holders can cash out all of their tokens for their proportional share of available treasury surplus.
 * A cash out tax rate of 100% will completely disable cash outs, meaning surplus cannot be accessed by token holders.
@@ -37,6 +37,6 @@ Here is an example bonding curve with a surplus of 100 ETH, a total supply of 20
 
 #### What you'll want to know if you're building
 
-* Token holders can cash out their tokens by calling [`JBMultiTerminal.cashOutTokensOf(...)`](/v4/api/core/contracts/jbmultiterminal/#cashouttokensof).
-* A cash out tax rate can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/v4/api/core/contracts/jbcontroller/#launchprojectfor) or [`JBController.queueRulesetsOf(...)`](/v4/api/core/contracts/jbcontroller/#queuerulesetsof) transactions.
+* Token holders can cash out their tokens by calling [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#cashouttokensof).
+* A cash out tax rate can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor) or [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queuerulesetsof) transactions.
 

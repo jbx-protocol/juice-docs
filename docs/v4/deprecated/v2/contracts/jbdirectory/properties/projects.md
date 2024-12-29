@@ -1,8 +1,8 @@
 # projects
 
-Contract: [`JBDirectory`](/v4/deprecated/v2/contracts/jbdirectory)​‌
+Contract: [`JBDirectory`](/docs/v4/deprecated/v2/contracts/jbdirectory/README.md)​‌
 
-Interface: [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md)
+Interface: [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md)
 
 **Mints ERC-721's that represent project ownership and transfers.**
 
@@ -18,4 +18,4 @@ IJBProjects public immutable override projects;
 
 * Once set the value cannot be changed.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.
+* The resulting function overrides a function definition from the [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.

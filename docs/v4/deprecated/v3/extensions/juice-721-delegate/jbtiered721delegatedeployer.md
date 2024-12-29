@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/JBTiered721DelegateDeployer.sol)
 
-Inherits: [`IJBTiered721DelegateDeployer`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md)
+Inherits: [`IJBTiered721DelegateDeployer`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md)
 
 Deploys a JBTiered721Delegate.
 
@@ -56,8 +56,8 @@ constructor(
 
 | Name                 | Type                                                                                                        | Description                                                        |
 | -------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| `_onchainGovernance` | [`JBTiered721GovernanceDelegate`](/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721governancedelegate.md) | Reference copy of the delegate that works with onchain governance. |
-| `_noGovernance`      | [`JBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721delegate.md)                     | Reference copy of a simpler delegate without on-chain governance.  |
+| `_onchainGovernance` | [`JBTiered721GovernanceDelegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721governancedelegate.md) | Reference copy of the delegate that works with onchain governance. |
+| `_noGovernance`      | [`JBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721delegate.md)                     | Reference copy of a simpler delegate without on-chain governance.  |
 | `_delegatesRegistry` | `IJBDelegatesRegistry`                                                                                      | A contract that stores references to delegate deployer contracts.  |
 
 ### deployDelegateFor
@@ -76,13 +76,13 @@ function deployDelegateFor(uint256 _projectId, JBDeployTiered721DelegateData mem
 | Name                           | Type                                                                                                                | Description                                                    |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | `_projectId`                   | `uint256`                                                                                                           | The ID of the project for which the delegate will be deployed. |
-| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Structure containing data necessary for delegate deployment.   |
+| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Structure containing data necessary for delegate deployment.   |
 
 **Returns**
 
 | Name          | Type                                                                                                 | Description                                 |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| `newDelegate` | [`IJBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md) | The address of the newly deployed delegate. |
+| `newDelegate` | [`IJBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md) | The address of the newly deployed delegate. |
 
 ## Errors
 

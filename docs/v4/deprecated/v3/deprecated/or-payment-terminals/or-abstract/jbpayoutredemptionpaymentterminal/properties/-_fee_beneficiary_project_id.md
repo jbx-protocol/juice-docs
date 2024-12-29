@@ -1,6 +1,6 @@
 # _FEE_BENEFICIARY_PROJECT_ID
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 **The fee beneficiary project ID is 1, as it should be the first project launched during the deployment process.**
 

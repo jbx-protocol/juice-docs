@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBERC20.sol)
 
 **Inherits:**
-ERC20Votes, ERC20Permit, Ownable, [IJBToken](/v4/api/core/interfaces/IJBToken.md)
+ERC20Votes, ERC20Permit, Ownable, [IJBToken](/docs/v4/api/core/interfaces/IJBToken.md)
 
 An ERC-20 token that can be used by a project in `JBTokens` and `JBController`.
 

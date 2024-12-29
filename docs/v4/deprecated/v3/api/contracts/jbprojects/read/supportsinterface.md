@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjects`](/v4/deprecated/v3/api/contracts/jbprojects/)
+Contract: [`JBProjects`](/docs/v4/deprecated/v3/api/contracts/jbprojects/README.md)
 
 Interface: [`IERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165)
 

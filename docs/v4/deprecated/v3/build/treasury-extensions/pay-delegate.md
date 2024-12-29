@@ -1,10 +1,10 @@
 # Pay delegate
 
-Before implementing, learn about delegates [here](/v4/deprecated/v3/learn/glossary/delegate.md). Also see [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template).
+Before implementing, learn about delegates [here](/docs/v4/deprecated/v3/learn/glossary/delegate.md). Also see [`juice-delegate-template`](https://github.com/mejango/juice-delegate-template).
 
 #### Specs
 
-A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate3_1_1`](/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1/):
+A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1.md):
 
 ```
 interface IJBPayDelegate3_1_1 is IERC165 {
@@ -12,7 +12,7 @@ interface IJBPayDelegate3_1_1 is IERC165 {
 }
 ```
 
-When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1/) to the `didPay(...)` function:
+When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) to the `didPay(...)` function:
 
 ```
 struct JBDidPayData3_1_1 {
@@ -41,13 +41,13 @@ struct JBTokenAmount {
 
 The `msg.sender` to the delegate will be the payment terminal that facilitated the payment.
 
-In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1), such as [`JBETHPaymentTerminal3_1_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/)'s and [`JBERC20PaymentTerminal3_1_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1/)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#_pay).
+In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1.md), such as [`JBETHPaymentTerminal3_1_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1.md)'s and [`JBERC20PaymentTerminal3_1_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1.md)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1.md#_pay).
 
 Make sure to only allow trusted contracts to access the `didPay(...)` transaction.
 
 #### Attaching
 
-New delegate contracts should be deployed independently. Once deployed, its address can be returned from a data source hook. See [how to build a data source](/v4/deprecated/v3/build/treasury-extensions/data-source.md) for more.
+New delegate contracts should be deployed independently. Once deployed, its address can be returned from a data source hook. See [how to build a data source](/docs/v4/deprecated/v3/build/treasury-extensions/data-source.md) for more.
 
 #### Examples
 

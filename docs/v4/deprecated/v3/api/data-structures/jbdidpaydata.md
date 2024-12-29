@@ -46,7 +46,7 @@ struct JBDidPayData {
 
 #### Metadata
 
-The `metadata` field of `JBDidPayData` can be used by delegates to define custom payment data. For example, [`juice-721-delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/) uses the metadata to communicate whether overspending should be allowed and which tiers should be minted in [`_processPayment(...)`](/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721delegate/#_processpayment):
+The `metadata` field of `JBDidPayData` can be used by delegates to define custom payment data. For example, [`juice-721-delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/README.md) uses the metadata to communicate whether overspending should be allowed and which tiers should be minted in [`_processPayment(...)`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/README.md#_processpayment):
 
 ```
 ...

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBPermissions.sol)
 
 **Inherits:**
-[IJBPermissions](/v4/api/core/interfaces/IJBPermissions.md)
+[IJBPermissions](/docs/v4/api/core/interfaces/IJBPermissions.md)
 
 Stores permissions for all addresses and operators. Addresses can give permissions to any other address
 (i.e. an *operator*) to execute specific operations on their behalf.

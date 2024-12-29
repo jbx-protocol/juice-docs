@@ -27,7 +27,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
   * `_token` is the token the terminal accepts.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md) interface.
+* The function overrides a function definition from the [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md) interface.
 * The function returns the primary terminal for the project for the specified token.
 
 #### Body
@@ -41,7 +41,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
 
     _Internal references:_
 
-    * [`_primaryTerminalOf`](/v4/deprecated/v3/api/contracts/jbdirectory/properties/-_primaryterminalof.md)
+    * [`_primaryTerminalOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/properties/-_primaryterminalof.md)
 
 2.  Check to see if the project has explicitly set a primary terminal for this token. If so, return it.
 
@@ -55,7 +55,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
 
     _Internal references:_
 
-    * [`isTerminalOf`](/v4/deprecated/v3/api/contracts/jbdirectory/read/isterminalof.md)
+    * [`isTerminalOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/read/isterminalof.md)
 
 3.  Keep a reference to the number of terminals the project has.
 
@@ -66,7 +66,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
 
     _Internal references:_
 
-    * [`_terminalsOf`](/v4/deprecated/v3/api/contracts/jbdirectory/properties/-_terminalsof.md)
+    * [`_terminalsOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/properties/-_terminalsof.md)
 
 
 4.  Loop through each of the project's terminals looking for one that uses the same token as the one specified. If one is found, return it.
@@ -88,7 +88,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
 
     _External references:_
 
-    * [`acceptsToken`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/read/acceptstoken.md)
+    * [`acceptsToken`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/read/acceptstoken.md)
 5.  Return an empty terminal if not found.
 
     ```

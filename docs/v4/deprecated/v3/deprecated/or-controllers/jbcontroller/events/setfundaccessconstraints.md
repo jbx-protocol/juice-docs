@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_configure`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/-_configure.md)
+* [`_configure`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/-_configure.md)
 
 #### Definition
 
@@ -19,5 +19,5 @@ event SetFundAccessConstraints(
 * `fundingCycleConfiguration` is the funding cycle configuration during which the constraints are valid.
 * `fundingCycleNumber` is the number of the funding cycle during which the constraints were set.
 * `projectId` is the ID of the project who has set an fund access constraints.
-* `constraints` is the [`JBFundAccessConstraints`](/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) data structure.
+* `constraints` is the [`JBFundAccessConstraints`](/docs/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) data structure.
 * `caller` is the address that issued the transaction within which the event was emitted.

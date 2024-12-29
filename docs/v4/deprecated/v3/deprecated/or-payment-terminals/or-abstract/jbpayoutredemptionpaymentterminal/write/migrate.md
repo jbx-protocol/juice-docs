@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
-Interface: [`IJBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal)
+Interface: [`IJBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,9 +28,9 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 * Arguments:
   * `_projectId` is the ID of the project being migrated.
   * `_to` is the terminal contract that will gain the project's funds.
-* Through the [`requirePermission`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.MIGRATE_TERMINAL`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* Through the [`requirePermission`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.MIGRATE_TERMINAL`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal) interface.
+* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
 * The function returns the amount of funds that were migrated, as a fixed point number with the same amount of decimals as this terminal.
 
 #### Body
@@ -44,11 +44,11 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 
     _Internal references:_
 
-    * [`token`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
+    * [`token`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
 
     _External references:_
 
-    * [`acceptsToken`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/read/acceptstoken.md)
+    * [`acceptsToken`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/read/acceptstoken.md)
 2.  Record the migration and get a reference to the project's balance.
 
     ```
@@ -58,11 +58,11 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 
     _Internal references:_
 
-    * [`store`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/store.md)
+    * [`store`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/store.md)
 
     _External references:_
 
-    * [`recordMigration`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/write/recordmigration.md)
+    * [`recordMigration`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/write/recordmigration.md)
 3.  If there's a balance to migrate, move the funds over to the new terminal. Send ETH along with the transaction if this terminal is an ETH terminal. Make sure any inherited pre-transfer logic is called before transferring.
 
     ```
@@ -81,16 +81,16 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 
     _Library references:_
 
-    * [`JBTokens`](/v4/deprecated/v3/api/libraries/jbcurrencies.md)
+    * [`JBTokens`](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md)
       * `.ETH`
 
     _Virtual references:_
 
-    * [`_beforeTransferTo`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
+    * [`_beforeTransferTo`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
     _Internal references:_
 
-    * [`addToBalanceOf`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/addtobalanceof.md)
+    * [`addToBalanceOf`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/addtobalanceof.md)
 4.  Emit a `Migrate` event with the relevant parameters.
 
     ```
@@ -99,7 +99,7 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 
     _Event references:_
 
-    * [`Migrate`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/migrate.md)
+    * [`Migrate`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/migrate.md)
 
 </TabItem>
 
@@ -161,7 +161,7 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 
 | Name                                       | Data                                                                                                                                                                                                                                               |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Migrate`**](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/migrate.md)                                 | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBPaymentTerminal](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) indexed to</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                                                                                                                                                                                                 |
+| [**`Migrate`**](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/migrate.md)                                 | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBPaymentTerminal](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) indexed to</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                                                                                                                                                                                                 |
 
 </TabItem>
 

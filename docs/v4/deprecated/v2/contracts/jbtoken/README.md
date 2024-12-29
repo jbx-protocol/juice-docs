@@ -1,6 +1,6 @@
 # JBToken
 
-_An ERC-20 token that can be used by a project in the [`JBTokenStore`](/v4/deprecated/v2/contracts/jbtokenstore)._
+_An ERC-20 token that can be used by a project in the [`JBTokenStore`](/docs/v4/deprecated/v2/contracts/jbtokenstore/README.md)._
 
 #### Code
 
@@ -10,7 +10,7 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBToken.s
 
 | Name                                                     | Description                                                                                                                              |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBToken`**](/v4/deprecated/v2/interfaces/ijbtoken.md) | Allows this contract to be used by projects in the JBTokenStore. |
+| [**`IJBToken`**](/docs/v4/deprecated/v2/interfaces/ijbtoken.md) | Allows this contract to be used by projects in the JBTokenStore. |
 
 
 #### Inheritance
@@ -39,17 +39,17 @@ constructor(string memory _name, string memory _symbol)
 
 | Function                                                            | Definition                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`decimals`**](/v4/deprecated/v2/contracts/jbtoken/read/decimals.md)                                 | <p><strong>Returns</strong></p><ul><li><code>uint256 totalSupply</code></li></ul> |
-| [**`totalSupply`**](/v4/deprecated/v2/contracts/jbtoken/read/totalsupply.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256 totalSupply</code></li></ul> |
-| [**`balanceOf`**](/v4/deprecated/v2/contracts/jbtoken/read/balanceof.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256 balanceOf</code></li></ul> |
+| [**`decimals`**](/docs/v4/deprecated/v2/contracts/jbtoken/read/decimals.md)                                 | <p><strong>Returns</strong></p><ul><li><code>uint256 totalSupply</code></li></ul> |
+| [**`totalSupply`**](/docs/v4/deprecated/v2/contracts/jbtoken/read/totalsupply.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256 totalSupply</code></li></ul> |
+| [**`balanceOf`**](/docs/v4/deprecated/v2/contracts/jbtoken/read/balanceof.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256 balanceOf</code></li></ul> |
 
 #### Write
 
 | Function                                                            | Definition                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`mint`**](/v4/deprecated/v2/contracts/jbtoken/write/mint.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`burn`**](/v4/deprecated/v2/contracts/jbtoken/write/burn.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`approve`**](/v4/deprecated/v2/contracts/jbtoken/write/approve.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _spender</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`transfer`**](/v4/deprecated/v2/contracts/jbtoken/write/transfer.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`transferFrom`**](/v4/deprecated/v2/contracts/jbtoken/write/transferfrom.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _from</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`transferOwnership`**](/v4/deprecated/v2/contracts/jbtoken/write/transferownership.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>address _newOwner</code></li></ul> |
+| [**`mint`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/mint.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li><li><code>uint256 _amount</code></li></ul> |
+| [**`burn`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/burn.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _account</code></li><li><code>uint256 _amount</code></li></ul> |
+| [**`approve`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/approve.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _spender</code></li><li><code>uint256 _amount</code></li></ul> |
+| [**`transfer`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/transfer.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
+| [**`transferFrom`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/transferfrom.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _from</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
+| [**`transferOwnership`**](/docs/v4/deprecated/v2/contracts/jbtoken/write/transferownership.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>address _newOwner</code></li></ul> |

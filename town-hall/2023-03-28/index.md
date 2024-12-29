@@ -80,7 +80,7 @@ Previously, the project NFTs representing ownership of projects on Juicebox had 
 
 This token resolver comes with several features, including the ability to view live project stats in an on-chain-generated SVG, customize colors for a project's metadata, and use a custom metadata resolver contract to replace the default entirely.
 
-For more information on how this token resolver works, you can check out the documentation [here](https://docs.juicebox.money/dev/api/extensions/juice-token-resolver/).
+For more information on how this token resolver works, you can check out the documentation [here](https://docs.juicebox.money/v4/deprecated/v3/api/extensions/juice-token-resolver/).
 
 ![token resolver by nicholas](token_resolver_juicebox.webp)
 

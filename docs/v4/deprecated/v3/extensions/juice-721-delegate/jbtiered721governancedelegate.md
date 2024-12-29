@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/JBTiered721GovernanceDelegate.sol)
 
-Inherits: [`Votes`](/v4/deprecated/v3/extensions/juice-721-delegate/abstract/votes.md), [`JBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721delegate.md)
+Inherits: [`Votes`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/abstract/votes.md), [`JBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/jbtiered721delegate.md)
 
 A tiered 721 delegate where each NFT can be used for onchain governance.
 
@@ -23,8 +23,8 @@ constructor(
 
 | Name                        | Type                                                               | Description                                                        |
 | --------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| `_directory`                | [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)         | A directory of terminals and controllers for projects.             |
-| `_operatorStore`            | [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) | The operatorStore that will be used to check operator permissions. |
+| `_directory`                | [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)         | A directory of terminals and controllers for projects.             |
+| `_operatorStore`            | [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) | The operatorStore that will be used to check operator permissions. |
 | `_payMetadataDelegateId`    | `bytes4`                                                           | The 4bytes ID of this delegate, used for pay metadata parsing      |
 | `_redeemMetadataDelegateId` | `bytes4`                                                           | The 4bytes ID of this delegate, used for redeem metadata parsing   |
 
@@ -66,4 +66,4 @@ function _afterTokenTransferAccounting(address _from, address _to, uint256 _toke
 | `_from`    | `address`                                                                   | The account to transfer voting units from.                 |
 | `_to`      | `address`                                                                   | The account to transfer voting units to.                   |
 | `_tokenId` | `uint256`                                                                   | The token ID for which voting units are being transferred. |
-| `_tier`    | [`JB721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier that the token ID is part of.                     |
+| `_tier`    | [`JB721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier that the token ID is part of.                     |

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -31,7 +31,7 @@ function addToBalanceOf(
   * `_memo` is a memo to pass along to the emitted event. This is ignored since this terminal doesn't allow this function.
   * `_metadata` is metadata to pass along to the emitted event. This is ignored since this terminal doesn't allow this function.
 * The function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
 * The function doesn't return anything.
 
 #### Body

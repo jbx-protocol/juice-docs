@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminal`](/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -22,7 +22,7 @@ function currencyForToken(address _token) external view override returns (uint25
   * `_token` is the token to check for the currency of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) interface.
 * The function returns the currency index.
 
 #### Body

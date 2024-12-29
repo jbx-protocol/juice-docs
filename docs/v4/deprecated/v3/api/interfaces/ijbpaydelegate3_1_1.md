@@ -22,5 +22,5 @@ function didPay(JBDidPayData3_1_1 calldata data) external payable;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`data`|[`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|the data passed by the terminal, as a JBDidPayData3_1_1 struct:|
+|`data`|[`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|the data passed by the terminal, as a JBDidPayData3_1_1 struct:|
 

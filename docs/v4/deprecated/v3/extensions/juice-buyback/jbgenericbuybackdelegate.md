@@ -6,7 +6,7 @@ Mainnet: [`0x6B700b54BBf7A93f453fFBF58Df0fE1ab2AADA08`](https://etherscan.io/add
 
 Goerli: [`0x31682096474BFD6704992b7C5f993639E372900e`](https://goerli.etherscan.io/address/0x31682096474BFD6704992b7C5f993639E372900e)
 
-Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`IJBGenericBuybackDelegate`](/v4/deprecated/v3/extensions/juice-buyback/interfaces/ijbgenericbuybackdelegate/)
+Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`IJBGenericBuybackDelegate`](/docs/v4/deprecated/v3/extensions/juice-buyback/interfaces/ijbgenericbuybackdelegate.md)
 
 Datasource and delegate allowing pay beneficiary to get the highest amount of project tokens between minting using the project weigh and swapping in a given Uniswap V3 pool.
 
@@ -180,7 +180,7 @@ function payParams(JBPayParamsData calldata _data)
 
 | Name    | Type                                                                  | Description                                                                                                                                                                            |
 | ------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `_data` | [`JBPayParamsData`](/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md) | the data passed to the data source in terminal.pay(..). \_data.metadata need to have the Uniswap quote this quote should be set as 0 if the user wants to use the vanilla minting path |
+| `_data` | [`JBPayParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md) | the data passed to the data source in terminal.pay(..). \_data.metadata need to have the Uniswap quote this quote should be set as 0 if the user wants to use the vanilla minting path |
 
 **Returns**
 
@@ -188,7 +188,7 @@ function payParams(JBPayParamsData calldata _data)
 | --------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `weight`              | `uint256`                                                                                         | the weight to use (the one passed if not max reserved rate, 0 if swapping or the one corresponding to the reserved token to mint if minting) |
 | `memo`                | `string`                                                                                          | the original memo passed                                                                                                                     |
-| `delegateAllocations` | [`JBPayDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md) | The amount to send to delegates instead of adding to the local balance.                                                                      |
+| `delegateAllocations` | [`JBPayDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md) | The amount to send to delegates instead of adding to the local balance.                                                                      |
 
 ### secondsAgoOf
 
@@ -244,7 +244,7 @@ function didPay(JBDidPayData3_1_1 calldata _data) external payable override;
 
 | Name    | Type                                                                      | Description                              |
 | ------- | ------------------------------------------------------------------------- | ---------------------------------------- |
-| `_data` | [`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the delegate data passed by the terminal |
+| `_data` | [`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the delegate data passed by the terminal |
 
 ### uniswapV3SwapCallback
 
@@ -278,7 +278,7 @@ function redeemParams(JBRedeemParamsData calldata _data)
 
 | Name    | Type                                                                        | Description                            |
 | ------- | --------------------------------------------------------------------------- | -------------------------------------- |
-| `_data` | [`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) | the redeem data passed by the terminal |
+| `_data` | [`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) | the redeem data passed by the terminal |
 
 ### setPoolFor
 
@@ -365,7 +365,7 @@ function _getQuote(uint256 _projectId, IJBPaymentTerminal _terminal, address _pr
 | Name            | Type                                                                   | Description        |
 | --------------- | ---------------------------------------------------------------------- | ------------------ |
 | `_projectId`    | `uint256`                                                              |                    |
-| `_terminal`     | [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) |                    |
+| `_terminal`     | [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) |                    |
 | `_projectToken` | `address`                                                              |                    |
 | `_amountIn`     | `uint256`                                                              | the amount to swap |
 
@@ -396,7 +396,7 @@ function _swap(JBDidPayData3_1_1 calldata _data, uint256 _minimumReceivedFromSwa
 
 | Name                       | Type                                                                      | Description                                      |
 | -------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------ |
-| `_data`                    | [`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the didPayData passed by the terminal            |
+| `_data`                    | [`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the didPayData passed by the terminal            |
 | `_minimumReceivedFromSwap` | `uint256`                                                                 | the minimum amount received, to prevent slippage |
 | `_projectToken`            | `IERC20`                                                                  |                                                  |
 
@@ -412,7 +412,7 @@ function _mint(JBDidPayData3_1_1 calldata _data, uint256 _amount) internal;
 
 | Name      | Type                                                                      | Description                           |
 | --------- | ------------------------------------------------------------------------- | ------------------------------------- |
-| `_data`   | [`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the didPayData passed by the terminal |
+| `_data`   | [`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | the didPayData passed by the terminal |
 | `_amount` | `uint256`                                                                 | the amount of token out to mint       |
 
 ### supportsInterface

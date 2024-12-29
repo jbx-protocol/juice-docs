@@ -4,7 +4,7 @@ Generic terminal managing all inflows and outflows of funds into the protocol ec
 
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d45af6f3e4786ae53b9c9248af7f5f8ee832bece/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1_1.sol)
 
-Inherits: [`JBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/), [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1.md), [`IJBPayoutRedemptionPaymentTerminal3_1_1`](/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1_1.md)
+Inherits: [`JBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/README.md), [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1.md), [`IJBPayoutRedemptionPaymentTerminal3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1_1.md)
 
 ## State Variables
 
@@ -167,7 +167,7 @@ function heldFeesOf(uint256 _projectId) external view override returns (JBFee[] 
 
 |Name|Type|Description|
 |----|----|-----------|
-|`<none>`|[`JBFee[]`](/v4/deprecated/v3/api/data-structures/jbfee.md)|An array of fees that are being held.|
+|`<none>`|[`JBFee[]`](/docs/v4/deprecated/v3/api/data-structures/jbfee.md)|An array of fees that are being held.|
 
 ### supportsInterface
 
@@ -238,11 +238,11 @@ constructor(
 |`_currency`|`uint256`|The currency that this terminal's token adheres to for price feeds.|
 |`_baseWeightCurrency`|`uint256`|The currency to base token issuance on.|
 |`_payoutSplitsGroup`|`uint256`|The group that denotes payout splits from this terminal in the splits store.|
-|`_operatorStore`|[`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
-|`_projects`|[`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
-|`_directory`|[`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
-|`_splitsStore`|[`IJBSplitsStore`](/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
-|`_prices`|[`IJBPrices`](/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
+|`_projects`|[`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
+|`_directory`|[`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_splitsStore`|[`IJBSplitsStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
+|`_prices`|[`IJBPrices`](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
 |`_store`|`address`|A contract that stores the terminal's data.|
 |`_owner`|`address`|The address that will own this contract.|
 
@@ -428,7 +428,7 @@ function migrate(uint256 _projectId, IJBPaymentTerminal _to)
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project being migrated.|
-|`_to`|[`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)|The terminal contract that will gain the project's funds.|
+|`_to`|[`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)|The terminal contract that will gain the project's funds.|
 
 **Returns**
 
@@ -782,7 +782,7 @@ function _distributeToPayoutSplit(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_split`|[`JBSplit`](/v4/deprecated/v3/api/data-structures/jbsplit.md)|The split to distribute payouts to.|
+|`_split`|[`JBSplit`](/docs/v4/deprecated/v3/api/data-structures/jbsplit.md)|The split to distribute payouts to.|
 |`_projectId`|`uint256`||
 |`_group`|`uint256`||
 |`_amount`|`uint256`|The total amount being distributed to the split, as a fixed point number with the same number of decimals as this terminal.|
@@ -989,7 +989,7 @@ function _currentFeeDiscount(uint256 _projectId, JBFeeType _feeType)
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project to get a fee discount for.|
-|`_feeType`|[`JBFeeType`](/v4/deprecated/v3/api/enums/jbfeetype.md)|The type of fee the discount is being applied to.|
+|`_feeType`|[`JBFeeType`](/docs/v4/deprecated/v3/api/enums/jbfeetype.md)|The type of fee the discount is being applied to.|
 
 **Returns**
 

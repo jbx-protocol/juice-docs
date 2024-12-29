@@ -4,11 +4,11 @@ An ERC-20 token that can be used by a project in the `JBTokenStore` & also this 
 
 [Git Source](https://github.com/jbx-protocol/juice-v3-migration/blob/06aea3eaf2c25f0981e3cb1c81b903a806872271/contracts/JBV3Token.sol)
 
-Inherits: [`ERC20Permit`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBTokenV3`](/v4/deprecated/v3/api/interfaces/ijbtoken/)
+Inherits: [`ERC20Permit`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBTokenV3`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md)
 
 Adheres to:
 
-- [`IJBTokenV3`](/v4/deprecated/v3/api/interfaces/ijbtoken/): Allows this contract to be used by projects in the JBTokenStore.
+- [`IJBTokenV3`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md): Allows this contract to be used by projects in the JBTokenStore.
 
 Inherits from:
 

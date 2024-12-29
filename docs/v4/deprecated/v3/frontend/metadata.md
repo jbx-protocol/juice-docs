@@ -10,14 +10,14 @@ To learn more about IPFS, visit the [IPFS docs](https://docs.ipfs.tech/).
 
 ## Juicebox v2/v3
 
-A project's metadata IPFS hash can be found by accessing the [`JBProjects.metadataContentOf(...)`](/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof/) property, which takes two arguments:
+A project's metadata IPFS hash can be found by accessing the [`JBProjects.metadataContentOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof.md) property, which takes two arguments:
 
 - `_projectId` is the ID of the project to which the metadata belongs.
 - `_domain` is the **domain within which the metadata applies.**
 
 As of 2023-04-13, all projects store their metadata within domain `0`, but future frontends or contracts with unique metadata needs might consider utilizing new domains.
 
-If one calls [`JBProjects.metadataContentOf(...)`](/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof/) with `_projectId` as `1` and `_domain` as `0`, the contract will return the IPFS hash `QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`.
+If one calls [`JBProjects.metadataContentOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof.md) with `_projectId` as `1` and `_domain` as `0`, the contract will return the IPFS hash `QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`.
 
 Now, one can navigate to an IPFS endpoint to read the project's metadata:
 

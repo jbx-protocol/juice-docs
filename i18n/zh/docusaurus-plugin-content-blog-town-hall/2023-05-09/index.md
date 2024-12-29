@@ -160,7 +160,7 @@ Filipv 最近提出了一个提案，将 JuiceboxDAO V1 的所有 ETH 转移到 
 
 Filipv 很快隐藏了 V1 项目前端的“发送支付”按钮，而 Jango 则发起交易来重新设置正确的 V1 分配器，该交易很快得到多签成员签署并执行。
 
-Filipv 发布了一篇文章来记录并分析这个 bug，详细阐述了避免出现类似问题的一些想法。可以在[这里](https://docs.juicebox.money/dev/resources/post-mortem/2023-06-05/)阅读这篇文章。
+Filipv 发布了一篇文章来记录并分析这个 bug，详细阐述了避免出现类似问题的一些想法。可以在[这里](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-06-05/)阅读这篇文章。
 
 
 

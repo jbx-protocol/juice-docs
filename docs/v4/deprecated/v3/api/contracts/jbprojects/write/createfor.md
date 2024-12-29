@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjects`](/v4/deprecated/v3/api/contracts/jbprojects/README.md)
+Contract: [`JBProjects`](/docs/v4/deprecated/v3/api/contracts/jbprojects/README.md)
 
-Interface: [`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md)
+Interface: [`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -27,7 +27,7 @@ function createFor(address _owner, JBProjectMetadata calldata _metadata)
   * `_owner` is the address that will be the owner of the project.
   * `_metadata` is a struct containing metadata content about the project, and domain within which the metadata applies.
 * The function can be accessed externally by anyone.
-* The function overrides a function definition from the [`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md) interface.
+* The function overrides a function definition from the [`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md) interface.
 * The function returns the token ID of the newly created project.
 
 #### Body
@@ -41,7 +41,7 @@ function createFor(address _owner, JBProjectMetadata calldata _metadata)
 
     _Internal references:_
 
-    * [`count`](/v4/deprecated/v3/api/contracts/jbprojects/properties/count.md)
+    * [`count`](/docs/v4/deprecated/v3/api/contracts/jbprojects/properties/count.md)
 2.  Mint a new NFT token belonging to the owner using the projectId as the tokenId.
 
     ```
@@ -62,7 +62,7 @@ function createFor(address _owner, JBProjectMetadata calldata _metadata)
 
     _Internal references:_
 
-    * [`metadataContentOf`](/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof.md)
+    * [`metadataContentOf`](/docs/v4/deprecated/v3/api/contracts/jbprojects/properties/metadatacontentof.md)
 4.  Emit a `Create` event with all relevant parameters.
 
     ```
@@ -71,7 +71,7 @@ function createFor(address _owner, JBProjectMetadata calldata _metadata)
 
     _Event references:_
 
-    * [`Create`](/v4/deprecated/v3/api/contracts/jbprojects/events/create.md)
+    * [`Create`](/docs/v4/deprecated/v3/api/contracts/jbprojects/events/create.md)
 
 </TabItem>
 
@@ -115,7 +115,7 @@ function createFor(address _owner, JBProjectMetadata calldata _metadata)
 
 | Name                                | Data                                                                                                                                                                                                                                                  |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Create`**](/v4/deprecated/v3/api/contracts/jbprojects/events/create.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address indexed owner</code></li><li><code>[JBProjectMetadata](/v4/deprecated/v3/api/data-structures/jbprojectmetadata.md) metadata</code></li><li><code>address caller</code></li></ul>                  |
+| [**`Create`**](/docs/v4/deprecated/v3/api/contracts/jbprojects/events/create.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address indexed owner</code></li><li><code>[JBProjectMetadata](/docs/v4/deprecated/v3/api/data-structures/jbprojectmetadata.md) metadata</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

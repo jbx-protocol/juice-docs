@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,14 +28,14 @@ function distributionLimitOf(
 * Arguments:
 * `_projectId` is the ID of the project to get the distribution limit of.
 * `_configuration` is the configuration during which the distribution limit applies.
-* `_terminal` is the [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) from which distributions are being limited.
+* `_terminal` is the [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) from which distributions are being limited.
 * `_token` is the token for which the distribution limit applies.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns:
   * `distributionLimit` is the distribution limit, as a fixed point number with the same number of decimals as the provided terminal.
-  * `distributionLimitCurrency` is the currency from [`JBCurrencies`](/v4/deprecated/v3/api/libraries/jbcurrencies.md) that the returned distribution limit is in terms of.
+  * `distributionLimitCurrency` is the currency from [`JBCurrencies`](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md) that the returned distribution limit is in terms of.
 
 #### Body
 
@@ -48,7 +48,7 @@ function distributionLimitOf(
 
     _Internal references:_
 
-    * [`_packedDistributionLimitDataOf`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/-_packeddistributionlimitdataof.md)
+    * [`_packedDistributionLimitDataOf`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/-_packeddistributionlimitdataof.md)
 2.  Return the distribution limit, which is in the first 248 bits, and the currency the distribution limit is in terms of, which is in the last 8 bits.
 
     ```

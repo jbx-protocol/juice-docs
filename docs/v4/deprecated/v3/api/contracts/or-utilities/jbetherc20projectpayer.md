@@ -4,13 +4,13 @@ Sends ETH or ERC20's to a project treasury as it receives direct payments or has
 
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/JBETHERC20ProjectPayer.sol)
 
-Inherits: [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165), [`IJBProjectPayer`](/v4/deprecated/v3/api/interfaces/ijbprojectpayer/)
+Inherits: [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165), [`IJBProjectPayer`](/docs/v4/deprecated/v3/api/interfaces/ijbprojectpayer.md)
 
 Inherit from this contract or borrow from its logic to forward ETH or ERC20's to project treasuries from within other contracts.
 
 Adheres to:
 
-- [`IJBProjectPayer`](/v4/deprecated/v3/api/interfaces/ijbprojectpayer/):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.*
+- [`IJBProjectPayer`](/docs/v4/deprecated/v3/api/interfaces/ijbprojectpayer.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.*
 
 Inherits from:
 

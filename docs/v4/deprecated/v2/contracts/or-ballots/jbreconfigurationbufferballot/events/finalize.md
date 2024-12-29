@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`finalize`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/write/finalize.md)
+* [`finalize`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/write/finalize.md)
 
 #### Definition
 

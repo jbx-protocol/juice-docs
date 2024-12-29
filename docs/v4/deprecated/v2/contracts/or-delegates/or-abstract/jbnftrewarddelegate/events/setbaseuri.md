@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setBaseUri`](/v4/deprecated/v2/contracts/or-delegates/or-abstract/jbnftrewarddelegate/write/setbaseuri.md)
+* [`setBaseUri`](/docs/v4/deprecated/v2/contracts/or-delegates/or-abstract/jbnftrewarddelegate/write/setbaseuri.md)
 
 #### Definition
 

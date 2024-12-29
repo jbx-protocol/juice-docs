@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -38,16 +38,16 @@ function launchFundingCyclesFor(
 
 * Arguments:
   * `_projectId` is the ID of the project to launch funding cycles for.
-  * `_data` is a [`JBFundingCycleData`](/v4/deprecated/v3/api/data-structures/jbfundingcycledata.md) data structure that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.
-  * `_metadata` is a [`JBFundingCycleMetadata`](/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata.md) data structure specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.
+  * `_data` is a [`JBFundingCycleData`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycledata.md) data structure that defines the project's first funding cycle. These properties will remain fixed for the duration of the funding cycle.
+  * `_metadata` is a [`JBFundingCycleMetadata`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata.md) data structure specifying the controller specific params that a funding cycle can have. These properties will remain fixed for the duration of the funding cycle.
   * `_mustStartAtOrAfter` is the time before which the configured funding cycle cannot start.
-  * `_groupedSplits` is an array of [`JBGroupedSplits`](/v4/deprecated/v3/api/data-structures/jbgroupedsplits.md) data structures containing splits to set for any number of groups. The core protocol makes use of groups defined in [`JBSplitsGroups`](/v4/deprecated/v3/api/libraries/jbsplitsgroups.md).
-  * `_fundAccessConstraints` is an array of [`JBFundAccessConstraints`](/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) data structures containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`. The `_distributionLimit` applies for each funding cycle, and the `_overflowAllowance` applies for the entirety of the configuration.
-  * `_terminals` is an array of [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) payment terminals to add for the project.
+  * `_groupedSplits` is an array of [`JBGroupedSplits`](/docs/v4/deprecated/v3/api/data-structures/jbgroupedsplits.md) data structures containing splits to set for any number of groups. The core protocol makes use of groups defined in [`JBSplitsGroups`](/docs/v4/deprecated/v3/api/libraries/jbsplitsgroups.md).
+  * `_fundAccessConstraints` is an array of [`JBFundAccessConstraints`](/docs/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) data structures containing amounts that a project can use from its treasury for each payment terminal. Amounts are fixed point numbers using the same number of decimals as the accompanying terminal. The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`. The `_distributionLimit` applies for each funding cycle, and the `_overflowAllowance` applies for the entirety of the configuration.
+  * `_terminals` is an array of [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) payment terminals to add for the project.
   * `_memo` is a memo to pass along to the emitted event.
-* Through the [`requirePermission`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.RECONFIGURE`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* Through the [`requirePermission`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.RECONFIGURE`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns the configuration of the funding cycle that was successfully updated.
 
 #### Body
@@ -62,11 +62,11 @@ function launchFundingCyclesFor(
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`latestConfigurationOf`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
+    * [`latestConfigurationOf`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
 2.  Set this controller as the controller of the project.
 
     ```
@@ -76,11 +76,11 @@ function launchFundingCyclesFor(
 
     _Internal references:_
 
-    * [`directory`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
+    * [`directory`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
-    * [`setControllerOf`](/v4/deprecated/v3/api/contracts/jbdirectory/write/setcontrollerof.md)
+    * [`setControllerOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/write/setcontrollerof.md)
 3.  Configure the project's funding cycle, fund access constraints, and splits. Get a reference to the resulting funding cycle's configuration.
 
     ```
@@ -97,7 +97,7 @@ function launchFundingCyclesFor(
 
     _Internal references:_
 
-    * [`_configure`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/-_configure.md)
+    * [`_configure`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/-_configure.md)
 4.  If terminals were provided, add them to the list of terminals the project can accept funds through.
 
     ```
@@ -107,11 +107,11 @@ function launchFundingCyclesFor(
 
     _Internal references:_
 
-    * [`directory`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
+    * [`directory`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
-    * [`setTerminalsOf`](/v4/deprecated/v3/api/contracts/jbdirectory/write/setterminalsof.md)
+    * [`setTerminalsOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/write/setterminalsof.md)
 5.  Emit a `LaunchFundingCycles` event with the relevant parameters.
 
     ```
@@ -120,7 +120,7 @@ function launchFundingCyclesFor(
 
     _Event references:_
 
-    * [`LaunchFundingCycles`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/launchfundingcycles.md)
+    * [`LaunchFundingCycles`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/launchfundingcycles.md)
 
 </TabItem>
 
@@ -194,7 +194,7 @@ function launchFundingCyclesFor(
 
 | Name                                                                    | Data                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`LaunchFundingCycles`**](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/launchfundingcycles.md)                                         | <ul><li><code>uint256 configuration</code></li><li><code>uint256 projectId</code></li><li><code>string memo</code></li><li><code>address caller</code></li></ul>                 |
+| [**`LaunchFundingCycles`**](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/launchfundingcycles.md)                                         | <ul><li><code>uint256 configuration</code></li><li><code>uint256 projectId</code></li><li><code>string memo</code></li><li><code>address caller</code></li></ul>                 |
 
 </TabItem>
 

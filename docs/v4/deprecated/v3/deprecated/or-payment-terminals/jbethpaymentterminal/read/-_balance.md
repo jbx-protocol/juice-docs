@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/jberc20paymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/jberc20paymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -19,7 +19,7 @@ function _balance() internal view override returns (uint256) { ...}
 * Arguments:
 * The resulting function is internal to this contract and its inheriters.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal) interface.
+* The resulting function overrides a function definition from the [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md) interface.
 * The function returns the contract's balance, as a fixed point number with the same amount of decimals as this terminal.
 
 #### Body

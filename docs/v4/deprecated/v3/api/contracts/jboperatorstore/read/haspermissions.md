@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBOperatorStore`](/v4/deprecated/v3/api/contracts/jboperatorstore/README.md)​‌
+Contract: [`JBOperatorStore`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/README.md)​‌
 
-Interface: [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)
+Interface: [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -29,7 +29,7 @@ function hasPermissions(
 * `_permissionIndexes` is an array of permission indexes to check for.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) interface.
+* The function overrides a function definition from the [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) interface.
 * The function returns a flag indicating whether the operator has all specified permissions.
 
 #### Body
@@ -59,7 +59,7 @@ function hasPermissions(
 
         _Internal references:_
 
-        * [`permissionsOf`](/v4/deprecated/v3/api/contracts/jboperatorstore/properties/permissionsof.md)
+        * [`permissionsOf`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/properties/permissionsof.md)
 
     4.  Increment the loop counter.
 

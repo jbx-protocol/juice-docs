@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -43,7 +43,7 @@ function _overflowDuring(
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 2.  If the project has no balance, there can't be any overflow.
 
     ```
@@ -61,8 +61,8 @@ function _overflowDuring(
 
     _External references:_
 
-    * [`controllerOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
-    * [`distributionLimitOf`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/read/distributionlimitof.md)
+    * [`controllerOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
+    * [`distributionLimitOf`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/read/distributionlimitof.md)
 4.  Get a reference to the amount of the funding cycle's target that can still be distributed. This is the difference between its distribution limit and what has already been distributed during this funding cycle.
 
     ```
@@ -73,7 +73,7 @@ function _overflowDuring(
 
     _Internal references:_
 
-    * [`usedDistributionLimitOf`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/useddistributionlimitof.md)
+    * [`usedDistributionLimitOf`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/useddistributionlimitof.md)
 
 5.  Convert the distribution remaining into the balance's currency using the appropriate price feed. The distribution remaining and balance fixed point numbers should already be using the same number of decimals.
 
@@ -94,12 +94,12 @@ function _overflowDuring(
 
     _Internal references:_
 
-    * [`_MAX_FIXED_POINT_FIDELITY`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/-_max_fixed_point_fidelity.md)
-    * [`prices`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/prices.md)
+    * [`_MAX_FIXED_POINT_FIDELITY`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/-_max_fixed_point_fidelity.md)
+    * [`prices`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/prices.md)
 
     _External references:_
 
-    * [`priceFor`](/v4/deprecated/v2/contracts/jbprices/read/pricefor.md)
+    * [`priceFor`](/docs/v4/deprecated/v2/contracts/jbprices/read/pricefor.md)
 6.  If the current balance of the project is at most the target remaining, there is no overflow. Otherwise the difference between the project's current balance and the remaining distribution limit is the overflow.
 
     ```

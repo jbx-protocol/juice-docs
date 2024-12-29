@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -26,7 +26,7 @@ function balanceOf(address _holder, uint256 _projectId)
   * `_projectId` is the project to get the `_holder`s balance of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
 * The function returns the project token balance of the `_holder`.
 
 #### Body
@@ -40,7 +40,7 @@ function balanceOf(address _holder, uint256 _projectId)
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 2.  Get a reference to the project's current token.
 
     ```
@@ -50,7 +50,7 @@ function balanceOf(address _holder, uint256 _projectId)
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
 3.  If the project has a current token, add the holder's balance to the total.
 
     ```
@@ -60,7 +60,7 @@ function balanceOf(address _holder, uint256 _projectId)
 
     _External references:_
 
-    * [`balanceOf`](/v4/deprecated/v2/contracts/jbtoken/read/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v2/contracts/jbtoken/read/balanceof.md)
 
 </TabItem>
 

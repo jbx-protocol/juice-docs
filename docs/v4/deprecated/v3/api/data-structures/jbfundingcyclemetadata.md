@@ -49,10 +49,10 @@ struct JBFundingCycleMetadata {
 }
 ```
 
-* `global` is [`JBGlobalFundingCycleMetadata`](/v4/deprecated/v3/api/data-structures/jbglobalfundingcyclemetadata.md) used globally in non-migratable ecosystem contracts.
-* `reservedRate` is the reserved rate of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_RESERVED_RATE`](/v4/deprecated/v3/api/libraries/jbconstants.md).
-* `redemptionRate` is the redemption rate of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_REDEMPTION_RATE`](/v4/deprecated/v3/api/libraries/jbconstants.md).
-* `ballotRedemptionRate` is the redemption rate to use during an active ballot of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_REDEMPTION_RATE`](/v4/deprecated/v3/api/libraries/jbconstants.md).
+* `global` is [`JBGlobalFundingCycleMetadata`](/docs/v4/deprecated/v3/api/data-structures/jbglobalfundingcyclemetadata.md) used globally in non-migratable ecosystem contracts.
+* `reservedRate` is the reserved rate of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_RESERVED_RATE`](/docs/v4/deprecated/v3/api/libraries/jbconstants.md).
+* `redemptionRate` is the redemption rate of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_REDEMPTION_RATE`](/docs/v4/deprecated/v3/api/libraries/jbconstants.md).
+* `ballotRedemptionRate` is the redemption rate to use during an active ballot of the funding cycle. This number is a percentage calculated out of [`JBConstants.MAX_REDEMPTION_RATE`](/docs/v4/deprecated/v3/api/libraries/jbconstants.md).
 * `pausePay` is a flag indicating if the pay functionality should be paused during the funding cycle.
 * `pauseDistributions` is a flag indicating if the distribute functionality should be paused during the funding cycle.
 * `pauseRedeem` is a flag indicating if the redeem functionality should be paused during the funding cycle.
@@ -66,4 +66,4 @@ struct JBFundingCycleMetadata {
 * `useDataSourceForPay` is a flag indicating if the data source should be used for pay transactions during this funding cycle.
 * `useDataSourceForRedeem` is a flag indicating if the data source should be used for redeem transactions during this funding cycle.
 * `dataSource` is the data source to use during this funding cycle.
-* `metadata` is the metadata of the metadata, up to `uint8` in size. This metadata can be used by [delegates](/v4/deprecated/v3/learn/glossary/delegate/).
+* `metadata` is the metadata of the metadata, up to `uint8` in size. This metadata can be used by [delegates](/docs/v4/deprecated/v3/learn/glossary/delegate.md).

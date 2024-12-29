@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -34,9 +34,9 @@ function mintTokensOf(
   * `_memo` is a memo to pass along to the emitted event.
   * `_preferClaimedTokens` is a flag indicating whether a project's attached token contract should be minted if they have been issued.
   * `_useReservedRate` is whether to use the current funding cycle's reserved rate in the mint calculation.
-* Through the [_requirePermissionAllowingOverride`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) internal function call, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.MINT`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, from one of the project's terminals, or from the project's current funding cycle data source.
+* Through the [_requirePermissionAllowingOverride`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) internal function call, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.MINT`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, from one of the project's terminals, or from the project's current funding cycle data source.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md) interface.
 * The function returns the amount of tokens minted for the beneficiary.
 
 #### Body
@@ -86,20 +86,20 @@ function mintTokensOf(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
       * `.mintPaused(...)`
       * `.reservedRate(...)`
       * `.preferClaimedTokenOverride(...)`
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/fundingcyclestore.md)
-    * [`directory`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`directory`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/read/currentof.md)
-    * [`isTerminalOf`](/v4/deprecated/v3/api/contracts/jbdirectory/read/isterminalof.md)
+    * [`currentOf`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`isTerminalOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/read/isterminalof.md)
 3.  If the operation should reserve 100% of the minted tokens, the token tracker should be updated to add a difference of the specified token count instead of minting the tokens directly. This will allow a future distribution of reserved tokens to mint the token count to reserved addresses. Otherwise, update the token tracker if there is no intent to reserve tokens alongside the mint and mint the unreserved tokens for the beneficiary.
 
     ```
@@ -131,19 +131,19 @@ function mintTokensOf(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBConstants`](/v4/deprecated/v3/api/libraries/jbconstants.md)
+    * [`JBConstants`](/docs/v4/deprecated/v3/api/libraries/jbconstants.md)
       * `.MAX_RESERVED_RATE`
     * [`SafeCast`](https://docs.openzeppelin.com/contracts/4.x/api/utils#SafeCast)
       * `.toInt256(...)`
 
     _Internal references:_
 
-    * [`tokenStore`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/tokenstore.md)
-    * [`_processedTokenTrackerOf`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
+    * [`tokenStore`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/tokenstore.md)
+    * [`_processedTokenTrackerOf`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
 
     _External references:_
 
-    * [`mintFor`](/v4/deprecated/v3/api/contracts/jbtokenstore/write/mintfor.md)
+    * [`mintFor`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/write/mintfor.md)
 4.  Emit a `MintTokens` event with the relevant parameters.
 
     ```
@@ -152,7 +152,7 @@ function mintTokensOf(
 
     _Event references:_
 
-    * [`MintTokens`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/minttokens.md)
+    * [`MintTokens`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/minttokens.md)
 
 </TabItem>
 
@@ -261,7 +261,7 @@ function mintTokensOf(
 
 | Name                                     | Data                                                                                                                                                                                                                                                        |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`MintTokens`**](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/minttokens.md)                                         | <ul><li><code>address indexed beneficiary</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 tokenCount</code></li><li><code>uint256 beneficairyTokenCount</code></li><li><code>string memo</code></li><li><code>uint256 reservedRate</code></li><li><code>address caller</code></li></ul>                 |
+| [**`MintTokens`**](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/events/minttokens.md)                                         | <ul><li><code>address indexed beneficiary</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 tokenCount</code></li><li><code>uint256 beneficairyTokenCount</code></li><li><code>string memo</code></li><li><code>uint256 reservedRate</code></li><li><code>address caller</code></li></ul>                 |
 
 </TabItem>
 

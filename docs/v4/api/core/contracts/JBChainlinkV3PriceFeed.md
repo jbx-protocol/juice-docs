@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBChainlinkV3PriceFeed.sol)
 
 **Inherits:**
-[IJBPriceFeed](/v4/api/core/interfaces/IJBPriceFeed.md)
+[IJBPriceFeed](/docs/v4/api/core/interfaces/IJBPriceFeed.md)
 
 An `IJBPriceFeed` implementation that reports prices from a Chainlink `AggregatorV3Interface`.
 

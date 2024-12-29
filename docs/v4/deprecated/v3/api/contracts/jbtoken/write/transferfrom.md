@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBToken`](/v4/deprecated/v3/api/contracts/jbtoken/README.md)​‌
+Contract: [`JBToken`](/docs/v4/deprecated/v3/api/contracts/jbtoken/README.md)​‌
 
-Interface: [`IJBToken`](/v4/deprecated/v3/api/interfaces/ijbtoken.md)
+Interface: [`IJBToken`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,7 +30,7 @@ function transferFrom(
   * `_from` is the originating address.
   * `_to` is the destination address.
   * `_amount` is the amount of the transfer, as a fixed point number with 18 decimals.
-* The function overrides a function definition from the [`IJBToken`](/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface.
+* The function overrides a function definition from the [`IJBToken`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -44,7 +44,7 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`projectId`](/v4/deprecated/v3/api/contracts/jbtoken/properties/projectid.md)
+    * [`projectId`](/docs/v4/deprecated/v3/api/contracts/jbtoken/properties/projectid.md)
 
 2.  Forward the call to the ERC20 implementation.
 

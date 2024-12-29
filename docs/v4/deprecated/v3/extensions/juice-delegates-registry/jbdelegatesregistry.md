@@ -12,7 +12,7 @@ Mainnet: [`0x7A53cAA1dC4d752CAD283d039501c0Ee45719FaC`](https://etherscan.io/add
 
 Goerli: [`0xCe3Ebe8A7339D1f7703bAF363d26cD2b15D23C23`](https://goerli.etherscan.io/address/0xCe3Ebe8A7339D1f7703bAF363d26cD2b15D23C23)
 
-Inherits: [`IJBDelegatesRegistry`](/v4/deprecated/v3/extensions/juice-delegates-registry/ijbdelegatesregistry/)
+Inherits: [`IJBDelegatesRegistry`](/docs/v4/deprecated/v3/extensions/juice-delegates-registry/ijbdelegatesregistry.md)
 
 *Mostly for front-end integration purposes. The delegate address is computed from the deployer address and the nonce used to deploy the delegate.*
 

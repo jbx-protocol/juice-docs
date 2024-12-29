@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,7 +30,7 @@ function latestConfiguredFundingCycleOf(uint256 _projectId)
 * `_projectId` is the ID of the project to which the funding cycle belongs.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
 * The function returns:
   * `fundingCycle` is the latest configured funding cycle.
   * `metadata` is the latest configured funding cycle's metadata.
@@ -46,11 +46,11 @@ function latestConfiguredFundingCycleOf(uint256 _projectId)
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`latestConfiguredOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/latestconfiguredof.md)
+    * [`latestConfiguredOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/latestconfiguredof.md)
 2.  Expand the metadata of the funding cycle.
 
     ```
@@ -59,7 +59,7 @@ function latestConfiguredFundingCycleOf(uint256 _projectId)
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)<br/>
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)<br/>
       * `.expandMetadata(...)`
 
 </TabItem>

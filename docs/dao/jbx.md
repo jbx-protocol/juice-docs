@@ -79,9 +79,9 @@ To be clear:
 
 These fees are used to buy $JBX on Uniswap. The project owner paying the fee gets 50% of the $JBX, and the rest goes to JuiceboxDAO. If the project owner immediately sells that $JBX, it's as if they paid a ~1.25% fee. In practice, project owners usually hold onto their $JBX and influence [JuiceboxDAO governance](/dao/process/).
 
-The fee can be set anywhere between 0% and 5% by $JBX voting. The Juicebox protocol has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/dev/learn/administration/).
+The fee can be set anywhere between 0% and 5% by $JBX voting. The Juicebox protocol has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/v4/deprecated/v3/learn/administration/).
 
-Projects can also temporarily set fees on payouts aside with [Hold fees](https://docs.juicebox.money/dev/learn/glossary/hold-fees/). This can be useful if a project needs to temporarily pull funds out of their project, but plans to return those funds to the project later on and does not want to pay fees in the interim.
+Projects can also temporarily set fees on payouts aside with [Hold fees](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/hold-fees/). This can be useful if a project needs to temporarily pull funds out of their project, but plans to return those funds to the project later on and does not want to pay fees in the interim.
 
 ## Premine
 

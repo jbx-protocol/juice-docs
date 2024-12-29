@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`launchProjectFor`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/launchfundingcyclesfor.md)
+* [`launchProjectFor`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/launchfundingcyclesfor.md)
 
 #### Definition
 

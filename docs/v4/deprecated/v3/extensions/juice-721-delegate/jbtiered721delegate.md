@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/JBTiered721Delegate.sol)
 
-Inherits: [`JBOwnable`](/v4/deprecated/v3/extensions/juice-ownable/), [`JB721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/abstract/jb721delegate.md), [`IJBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)
+Inherits: [`JBOwnable`](/docs/v4/deprecated/v3/extensions/juice-ownable/README.md), [`JB721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/abstract/jb721delegate.md), [`IJBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)
 
 This delegate makes multiple NFT tiers with custom price floors available to a project's contributors upon payment, and allows project owners to enable NFT redemption for treasury assets based on the price floors of those NFTs.
 
@@ -108,7 +108,7 @@ function pricingContext() external view override returns (uint256 currency, uint
 | ---------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
 | `currency` | `uint256`                                            | The currency being used.                                          |
 | `decimals` | `uint256`                                            | The amount of decimals being used.                                |
-| `prices`   | [`IJBPrices`](/v4/deprecated/v3/api/interfaces/ijbprices.md) | The prices contract being used to resolve currency discrepancies. |
+| `prices`   | [`IJBPrices`](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md) | The prices contract being used to resolve currency discrepancies. |
 
 ### balanceOf
 
@@ -170,7 +170,7 @@ function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calld
 | Name        | Type                                                                        | Description                                                       |
 | ----------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `_tokenIds` | `uint256[]`                                                                 | The IDs of the tokens to get the cumulative redemption weight of. |
-| `<none>`    | [`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) |                                                                   |
+| `<none>`    | [`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) |                                                                   |
 
 **Returns**
 
@@ -225,8 +225,8 @@ constructor(
 
 | Name                        | Type                                                               | Description                                                      |
 | --------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| `_directory`                | [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)         | A directory of terminals and controllers for projects.           |
-| `_operatorStore`            | [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) | A contract which stores operator assignments.                    |
+| `_directory`                | [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)         | A directory of terminals and controllers for projects.           |
+| `_operatorStore`            | [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) | A contract which stores operator assignments.                    |
 | `_payMetadataDelegateId`    | `bytes4`                                                           | The 4bytes ID of this delegate, used for pay metadata parsing    |
 | `_redeemMetadataDelegateId` | `bytes4`                                                           | The 4bytes ID of this delegate, used for redeem metadata parsing |
 
@@ -256,13 +256,13 @@ function initialize(
 | `_projectId`         | `uint256`                                                                                                      | The ID of the project this contract's functionality applies to.                                                                                |
 | `_name`              | `string`                                                                                                       | The name of the NFT collection distributed through this contract.                                                                              |
 | `_symbol`            | `string`                                                                                                       | The symbol that the NFT collection should be represented by.                                                                                   |
-| `_fundingCycleStore` | [`IJBFundingCycleStore`](/v4/deprecated/v3/api/interfaces/ijbfundingcyclestore.md)                                     | A contract storing all funding cycle configurations.                                                                                           |
+| `_fundingCycleStore` | [`IJBFundingCycleStore`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcyclestore.md)                                     | A contract storing all funding cycle configurations.                                                                                           |
 | `_baseUri`           | `string`                                                                                                       | A URI to use as a base for full token URIs.                                                                                                    |
-| `_tokenUriResolver`  | [`IJB721TokenUriResolver`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md)       | A contract responsible for resolving the token URI for each token ID.                                                                          |
+| `_tokenUriResolver`  | [`IJB721TokenUriResolver`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md)       | A contract responsible for resolving the token URI for each token ID.                                                                          |
 | `_contractUri`       | `string`                                                                                                       | A URI where this contract's metadata can be found.                                                                                             |
-| `_pricing`           | [`JB721PricingParams`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721pricingparams.md)                  | NFT tier pricing parameters according to which token distribution will be made. Must be sorted by contribution floor (from least to greatest). |
-| `_store`             | [`IJBTiered721DelegateStore`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md) | The contract which stores the NFT's data.                                                                                                      |
-| `_flags`             | [`JBTiered721Flags`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md)                      | A set of flags that help to define how this contract works.                                                                                    |
+| `_pricing`           | [`JB721PricingParams`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721pricingparams.md)                  | NFT tier pricing parameters according to which token distribution will be made. Must be sorted by contribution floor (from least to greatest). |
+| `_store`             | [`IJBTiered721DelegateStore`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md) | The contract which stores the NFT's data.                                                                                                      |
+| `_flags`             | [`JBTiered721Flags`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md)                      | A set of flags that help to define how this contract works.                                                                                    |
 
 ### mintFor
 
@@ -301,7 +301,7 @@ function mintReservesFor(JBTiered721MintReservesForTiersData[] calldata _mintRes
 
 | Name                        | Type                                                                                                                              | Description                                                                |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `_mintReservesForTiersData` | [`JBTiered721MintReservesForTiersData[]`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721mintreservesfortiersdata.md) | Contains information about how many reserved tokens to mint for each tier. |
+| `_mintReservesForTiersData` | [`JBTiered721MintReservesForTiersData[]`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721mintreservesfortiersdata.md) | Contains information about how many reserved tokens to mint for each tier. |
 
 ### adjustTiers
 
@@ -320,7 +320,7 @@ function adjustTiers(JB721TierParams[] calldata _tiersToAdd, uint256[] calldata 
 
 | Name               | Type                                                                                      | Description                     |
 | ------------------ | ----------------------------------------------------------------------------------------- | ------------------------------- |
-| `_tiersToAdd`      | [`JB721TierParams[]`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tierparams.md) | An array of tier data to add.   |
+| `_tiersToAdd`      | [`JB721TierParams[]`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tierparams.md) | An array of tier data to add.   |
 | `_tierIdsToRemove` | `uint256[]`                                                                               | An array of tier IDs to remove. |
 
 ### setMetadata
@@ -345,7 +345,7 @@ function setMetadata(
 | ----------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | `_baseUri`              | `string`                                                                                                 | The new base URI.                                  |
 | `_contractUri`          | `string`                                                                                                 | The new contract URI.                              |
-| `_tokenUriResolver`     | [`IJB721TokenUriResolver`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md) | The new URI resolver.                              |
+| `_tokenUriResolver`     | [`IJB721TokenUriResolver`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md) | The new URI resolver.                              |
 | `_encodedIPFSUriTierId` | `uint256`                                                                                                | The ID of the tier to set the encoded IPFS URI of. |
 | `_encodedIPFSUri`       | `bytes32`                                                                                                | The encoded IPFS URI to set.                       |
 
@@ -378,7 +378,7 @@ function _processPayment(JBDidPayData3_1_1 calldata _data) internal virtual over
 
 | Name    | Type                                                                      | Description                                              |
 | ------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| `_data` | [`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | The standard data passed when paying a Juicebox project. |
+| `_data` | [`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md) | The standard data passed when paying a Juicebox project. |
 
 ### \_didBurn
 
@@ -467,7 +467,7 @@ function _afterTokenTransferAccounting(address _from, address _to, uint256 _toke
 | `_from`    | `address`                                                                   | The address to transfer voting units from.                        |
 | `_to`      | `address`                                                                   | The address to transfer voting units to.                          |
 | `_tokenId` | `uint256`                                                                   | The ID of the token for which voting units are being transferred. |
-| `_tier`    | [`JB721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier the token ID is part of.                                 |
+| `_tier`    | [`JB721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier the token ID is part of.                                 |
 
 ## Errors
 

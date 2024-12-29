@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSplitsStore`](/v4/deprecated/v2/contracts/jbsplitsstore/README.md)​‌
+Contract: [`JBSplitsStore`](/docs/v4/deprecated/v2/contracts/jbsplitsstore/README.md)​‌
 
-Interface: [`IJBSplitsStore`](/v4/deprecated/v2/interfaces/ijbsplitsstore.md)
+Interface: [`IJBSplitsStore`](/docs/v4/deprecated/v2/interfaces/ijbsplitsstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,8 +28,8 @@ function splitsOf(
   * `_group` is the identifying group of the splits.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBSplitsStore`](/v4/deprecated/v2/interfaces/ijbsplitsstore.md) interface.
-* The function returns an array of all [`JBSplit`](/v4/deprecated/v2/data-structures/jbsplit.md)s for the project.
+* The function overrides a function definition from the [`IJBSplitsStore`](/docs/v4/deprecated/v2/interfaces/ijbsplitsstore.md) interface.
+* The function returns an array of all [`JBSplit`](/docs/v4/deprecated/v2/data-structures/jbsplit.md)s for the project.
 
 #### Body
 
@@ -41,7 +41,7 @@ function splitsOf(
 
     _Internal references:_
 
-    * [`_getStructsFor`](/v4/deprecated/v2/contracts/jbsplitsstore/read/-_getstructsfor.md)
+    * [`_getStructsFor`](/docs/v4/deprecated/v2/contracts/jbsplitsstore/read/-_getstructsfor.md)
 
 </TabItem>
 

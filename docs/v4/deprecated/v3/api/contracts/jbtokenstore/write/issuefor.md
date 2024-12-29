@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -35,8 +35,8 @@ function issueFor(
   * `_projectId` is the ID of the project being issued tokens.
   * `_name` is the ERC-20's name.
   * `_symbol` is the ERC-20's symbol.
-* Through the [`requirePermission`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.ISSUE`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
+* Through the [`requirePermission`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.ISSUE`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
 * The function returns the token that was issued.
 
 #### Body
@@ -62,8 +62,8 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
-4.  Deploy a new instance of a [`JBToken`](/v4/deprecated/v3/api/contracts/jbtoken/) contract. Assign it to the return value.
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+4.  Deploy a new instance of a [`JBToken`](/docs/v4/deprecated/v3/api/contracts/jbtoken/README.md) contract. Assign it to the return value.
 
     ```
     // Deploy the token contract.
@@ -78,7 +78,7 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
 6.  Emit an `Issue` event with the relevant parameters.
 
     ```
@@ -87,7 +87,7 @@ function issueFor(
 
     _Event references:_
 
-    * [`Issue`](/v4/deprecated/v3/api/contracts/jbtokenstore/events/issue.md)
+    * [`Issue`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/issue.md)
 
 </TabItem>
 
@@ -155,7 +155,7 @@ function issueFor(
 
 | Name                              | Data                                                                                                                                                                                                         |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`Issue`**](/v4/deprecated/v3/api/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/v4/deprecated/v3/api/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
+| [**`Issue`**](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
 
 </TabItem>
 

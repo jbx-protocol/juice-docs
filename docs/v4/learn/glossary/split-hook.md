@@ -8,8 +8,8 @@
 
 #### What you'll want to know if you're building
 
-* A split hook contract must adhere to the [`IJBSplitHook`](/v4/api/core/interfaces/ijbsplithook) interface.
-* A split hook can be specified in a split through the [`JBController.launchProjectFor(...)`](/v4/api/core/contracts/jbcontroller/#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/v4/api/core/contracts/jbcontroller/#launchrulesetsfor), [`JBController.queueRulesetsOf(...)`](/v4/api/core/contracts/jbcontroller/#queuerulesetsof), or [`JBController.setSplitGroupsOf(...)`](/v4/api/core/contracts/jbcontroller/#setsplitGroupsof) transactions.
+* A split hook contract must adhere to the [`IJBSplitHook`](/docs/v4/api/core/interfaces/IJBSplitHook.md) interface.
+* A split hook can be specified in a split through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchrulesetsfor), [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queuerulesetsof), or [`JBController.setSplitGroupsOf(...)`](/docs/v4/api/core/contracts/JBController.md#setsplitGroupsof) transactions.
 
-<!-- [Get started building split hooks](/v4/build/treasury-extensions/split-hook). -->
+<!-- [Get started building split hooks](/docs/v4/build/treasury-extensions/split-hook). -->
 

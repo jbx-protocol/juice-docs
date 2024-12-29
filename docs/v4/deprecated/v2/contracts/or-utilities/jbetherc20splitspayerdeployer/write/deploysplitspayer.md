@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayerDeployer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/README.md)
+Contract: [`JBETHERC20SplitsPayerDeployer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/README.md)
 
-Interface: [`IJBETHERC20SplitsPayerDeployer`](/v4/deprecated/v2/interfaces/ijbetherc20splitspayerdeployer.md)
+Interface: [`IJBETHERC20SplitsPayerDeployer`](/docs/v4/deprecated/v2/interfaces/ijbetherc20splitspayerdeployer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -43,7 +43,7 @@ function deploySplitsPayer(
   * `_defaultPreferAddToBalance` is a flag indicating if received payments should call the `pay` function or the `addToBalance` function of a project.
   * `_owner` is the address that will own the project payer.
 * The function can be accessed externally by anyone.
-* The function overrides a function definition from the[`IJBETHERC20SplitsPayerDeployer`](/v4/deprecated/v2/interfaces/ijbetherc20splitspayerdeployer.md) interface.
+* The function overrides a function definition from the[`IJBETHERC20SplitsPayerDeployer`](/docs/v4/deprecated/v2/interfaces/ijbetherc20splitspayerdeployer.md) interface.
 * The function returns the splits payer contract.
 
 #### Body
@@ -69,7 +69,7 @@ function deploySplitsPayer(
 
     _External references:_
 
-    * [`JBETHERC20SplitsPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer)
+    * [`JBETHERC20SplitsPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
 2.  Emit a `DeploySplitsPayer` event with all relevant parameters.
 
     ```
@@ -92,7 +92,7 @@ function deploySplitsPayer(
 
     _Event references:_
 
-    * [`DeploySplitsPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/events/deploysplitspayer.md)
+    * [`DeploySplitsPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/events/deploysplitspayer.md)
 
 </TabItem>
 
@@ -169,7 +169,7 @@ function deploySplitsPayer(
 
 | Name                                | Data                                                                                                                                                                                                                                                  |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`DeploySplitsPayer`**](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/events/deploysplitspayer.md)                                                                          | <ul><li><code>[IJBSplitsPayer](/v4/deprecated/v2/interfaces/ijbsplitspayer.md) indexed splitsPayer</code></li><li><code>uint256 indexed defaultSplitsProjectId</code></li><li><code>uint256 defaultSplitsDomain</code></li><li><code>uint256 defaultSplitsGroup</code></li><li><code>[IJBSplitStore](/v4/deprecated/v2/interfaces/ijbsplitsstore.md) splitStore</code></li><li><code>uint256 defaultProjectId</code></li><li><code>address defaultBeneficiary</code></li><li><code>bool defaultPreferClaimedTokens</code></li><li><code>string defaultMemo</code></li><li><code>bytes defaultMetadata</code></li><li><code>bool preferAddToBalance</code></li><li><code>address caller</code></li></ul>                  |
+| [**`DeploySplitsPayer`**](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayerdeployer/events/deploysplitspayer.md)                                                                          | <ul><li><code>[IJBSplitsPayer](/docs/v4/deprecated/v2/interfaces/ijbsplitspayer.md) indexed splitsPayer</code></li><li><code>uint256 indexed defaultSplitsProjectId</code></li><li><code>uint256 defaultSplitsDomain</code></li><li><code>uint256 defaultSplitsGroup</code></li><li><code>[IJBSplitStore](/docs/v4/deprecated/v2/interfaces/ijbsplitsstore.md) splitStore</code></li><li><code>uint256 defaultProjectId</code></li><li><code>address defaultBeneficiary</code></li><li><code>bool defaultPreferClaimedTokens</code></li><li><code>string defaultMemo</code></li><li><code>bytes defaultMetadata</code></li><li><code>bool preferAddToBalance</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

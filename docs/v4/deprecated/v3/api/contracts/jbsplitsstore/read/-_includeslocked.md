@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSplitsStore`](/v4/deprecated/v3/api/contracts/jbsplitsstore/README.md)​‌
+Contract: [`JBSplitsStore`](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">

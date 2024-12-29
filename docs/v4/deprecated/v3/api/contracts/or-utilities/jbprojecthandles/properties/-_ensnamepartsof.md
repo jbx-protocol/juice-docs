@@ -1,6 +1,6 @@
 # _ensNamePartsOf
 
-Contract: [`JBProjectHandles`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/README.md)​‌
+Contract: [`JBProjectHandles`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/README.md)​‌
 
 **Mapping of project ID to an array of strings that make up an ENS name and its subdomains.**
 

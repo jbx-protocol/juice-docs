@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -42,7 +42,7 @@ function _feeAmount(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBConstants`](/v4/deprecated/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/docs/v4/deprecated/v2/libraries/jbconstants.md)
       * `.MAX_FEE_DISCOUNT`
 2.  Return the amount of tokens from the specified amount that should be paid as a fee.
 
@@ -56,7 +56,7 @@ function _feeAmount(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBConstants`](/v4/deprecated/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/docs/v4/deprecated/v2/libraries/jbconstants.md)
       * `.MAX_FEE`
 
 </TabItem>

@@ -8,19 +8,19 @@ Mainnet: [`0x97a5b9D9F0F7cD676B69f584F29048D0Ef4BB59b`](https://etherscan.io/add
 
 Goerli: [`0x1d260DE91233e650F136Bf35f8A4ea1F2b68aDB6`](https://goerli.etherscan.io/address/0x1d260DE91233e650F136Bf35f8A4ea1F2b68aDB6)
 
-Inherits: [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1/), [`IJBMigratable`](/v4/deprecated/v3/api/interfaces/ijbmigratable/)
+Inherits: [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md), [`IJBMigratable`](/docs/v4/deprecated/v3/api/interfaces/ijbmigratable.md)
 
 Adheres to:
 
-- [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
-- [`IJBMigratable`](/v4/deprecated/v3/api/interfaces/ijbmigratable/): Allows migrating to this contract, with a hook called to prepare for the migration.
+- [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+- [`IJBMigratable`](/docs/v4/deprecated/v3/api/interfaces/ijbmigratable.md): Allows migrating to this contract, with a hook called to prepare for the migration.
 
 Inherits from:
 
-- [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
+- [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
 - [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165): Introspection on interface adherance.
 
-This Controller has the same functionality as [`JBController3_1`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_0_1/), except it is not backwards compatible with the original IJBController view methods.
+This Controller has the same functionality as [`JBController3_1`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller3_0_1.md), except it is not backwards compatible with the original IJBController view methods.
 
 ## State Variables
 

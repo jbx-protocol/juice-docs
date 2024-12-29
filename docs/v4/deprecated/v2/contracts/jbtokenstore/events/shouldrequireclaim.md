@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`shouldRequireClaimingFor`](/v4/deprecated/v2/contracts/jbtokenstore/write/shouldrequireclaimingfor.md)
+* [`shouldRequireClaimingFor`](/docs/v4/deprecated/v2/contracts/jbtokenstore/write/shouldrequireclaimingfor.md)
 
 #### Definition
 

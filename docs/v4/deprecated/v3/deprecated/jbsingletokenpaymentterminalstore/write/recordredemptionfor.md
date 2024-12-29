@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -14,7 +14,7 @@ Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/api/interfac
 
 _Redeems the project's tokens according to values provided by a configured data source. If no data source is configured, redeems tokens along a redemption bonding curve that is a function of the number of tokens being burned._
 
-_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)._
+_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)._
 
 #### Definition
 
@@ -43,7 +43,7 @@ function recordRedemptionFor(
   * `_tokenCount` is the number of project tokens to redeem, as a fixed point number with 18 decimals.
   * `_memo` is a memo to pass along to the emitted event.
   * `_metadata` are bytes to send along to the data source, if one is provided.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
 * The function returns:
   * `fundingCycle` is the funding cycle during which the redemption was made.
   * `reclaimAmount` is the amount of terminal tokens reclaimed, as a fixed point number with 18 decimals.
@@ -61,7 +61,7 @@ function recordRedemptionFor(
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/read/currentof.md)
 2.  Make sure the project's funding cycle isn't configured to pause redemptions.
 
     ```
@@ -71,7 +71,7 @@ function recordRedemptionFor(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
       * `.redeemPaused(...)`
 3.  The following scoped block is a bit of a hack to prevent a "Stack too deep" error.
 
@@ -111,9 +111,9 @@ function recordRedemptionFor(
 
             _External references:_
 
-            * [`token`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
-            * [`decimals`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
-            * [`currency`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
+            * [`token`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
+            * [`decimals`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
+            * [`currency`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
 
         2.  Get a reference to the amount of overflow the project has. Either the project's total overflow or the overflow local to the msg.sender's balance will be used depending on how the project's funding cycle is configured.
 
@@ -132,13 +132,13 @@ function recordRedemptionFor(
 
             _Library references:_
 
-            * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+            * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
               * `.useTotalOverflowForRedemptions(...)`
 
             _Internal references:_
 
-            * [`_currentTotalOverflowOf`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_currenttotaloverflowof.md)
-            * [`_overflowDuring`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_overflowduring.md)
+            * [`_currentTotalOverflowOf`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_currenttotaloverflowof.md)
+            * [`_overflowDuring`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_overflowduring.md)
 
         3.  Get a reference to the total outstanding supply of project tokens.
 
@@ -150,17 +150,17 @@ function recordRedemptionFor(
 
             _Library references:_
 
-            * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+            * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
               * `.reservedRate(...)`
 
             _Internal references:_
 
-            * [`directory`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/directory.md)
+            * [`directory`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/directory.md)
 
             _External references:_
 
-            * [`controllerOf`](/v4/deprecated/v3/api/contracts/jbdirectory/properties/controllerof.md)
-            * [`totalOutstandingTokensOf`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/read/totaloutstandingtokensof.md)
+            * [`controllerOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/properties/controllerof.md)
+            * [`totalOutstandingTokensOf`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/read/totaloutstandingtokensof.md)
 
         4.  Make sure the provided token count is within the bounds of the total supply.
 
@@ -185,7 +185,7 @@ function recordRedemptionFor(
 
             _Internal references:_
 
-            * [`_reclaimableOverflowDuring`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_reclaimableoverflowduring.md)
+            * [`_reclaimableOverflowDuring`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/read/-_reclaimableoverflowduring.md)
 
         6.  Construct the reclaim amount struct.
 
@@ -193,7 +193,7 @@ function recordRedemptionFor(
             _reclaimedTokenAmount = JBTokenAmount(_token, reclaimAmount, _decimals, _currency);
             ```
 
-    3.  If the project's current funding cycle is configured to use a data source when making redemptions, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) structure. Otherwise default parameters are used.
+    3.  If the project's current funding cycle is configured to use a data source when making redemptions, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md) structure. Otherwise default parameters are used.
 
         ```
         if (fundingCycle.useDataSourceForRedeem() && fundingCycle.dataSource() != address(0)) {
@@ -230,7 +230,7 @@ function recordRedemptionFor(
 
         _Library references:_
 
-        * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+        * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
           * `.useDataSourceForRedeem(...)`
           * `.dataSource(...)`
           * `.redemptionRate(...)`
@@ -275,7 +275,7 @@ function recordRedemptionFor(
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 
 7.  Decrement any claimed funds from the project's balance if needed.
 
@@ -292,7 +292,7 @@ function recordRedemptionFor(
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 
 </TabItem>
 

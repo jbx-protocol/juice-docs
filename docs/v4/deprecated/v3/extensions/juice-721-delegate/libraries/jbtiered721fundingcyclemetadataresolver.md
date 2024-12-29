@@ -33,7 +33,7 @@ function packTiered721FundingCycleMetadata(JBTiered721FundingCycleMetadata memor
 
 | Name        | Type                                                                                                                    | Description                        |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `_metadata` | [`JBTiered721FundingCycleMetadata`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The metadata to validate and pack. |
+| `_metadata` | [`JBTiered721FundingCycleMetadata`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The metadata to validate and pack. |
 
 **Returns**
 
@@ -62,4 +62,4 @@ function expandMetadata(uint8 _packedMetadata)
 
 | Name       | Type                                                                                                                    | Description                     |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| `metadata` | [`JBTiered721FundingCycleMetadata`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The tiered 721 metadata object. |
+| `metadata` | [`JBTiered721FundingCycleMetadata`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721fundingcyclemetadata.md) | The tiered 721 metadata object. |

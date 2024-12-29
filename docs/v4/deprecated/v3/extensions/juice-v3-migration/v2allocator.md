@@ -8,12 +8,12 @@ Mainnet: [`0x6aaF7afeF64c6852EE507876f9D25F92bd9A1aE7`](https://etherscan.io/add
 
 Goerli: [`0xBA8a866Dd1f7195dB6205d3b8826273ba1EF49cc`](https://goerli.etherscan.io/address/0xBA8a866Dd1f7195dB6205d3b8826273ba1EF49cc)
 
-Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBSplitAllocator`](/v4/deprecated/v3/api/interfaces/ijbsplitallocator/)
+Inherits: [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBSplitAllocator`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitallocator.md)
 
 
 Adheres to:
 
-- [`IJBSplitAllocator`](/v4/deprecated/v3/api/interfaces/ijbsplitallocator/): Adhere to Allocator pattern to receive payout distributions for allocation.
+- [`IJBSplitAllocator`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitallocator.md): Adhere to Allocator pattern to receive payout distributions for allocation.
 
 Inherits from:
 

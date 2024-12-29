@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`pay`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
+* [`pay`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
 
 #### Definition
 

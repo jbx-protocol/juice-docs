@@ -1,8 +1,8 @@
 # usedDistributionLimitOf
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 **The amount of funds that a project has distributed from its limit during the current funding cycle for each terminal, in terms of the distribution limit's currency.**
 
@@ -37,4 +37,4 @@ mapping(IJBSingleTokenPaymentTerminal => mapping(uint256 => mapping(uint256 => u
   * `_projectId` is the ID of the project to get the used distribution limit of.
   * `_fundingCycleNumber` is the number of the funding cycle during which the distribution limit was used.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.

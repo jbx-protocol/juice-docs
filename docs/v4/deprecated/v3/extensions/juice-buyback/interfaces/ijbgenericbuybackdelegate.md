@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-buyback/blob/9188f091347816c201097ae704fbf2c66b22d495/contracts/interfaces/IJBGenericBuybackDelegate.sol)
 
-Inherits: [`IJBPayDelegate3_1_1`](/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1.md), [`IJBFundingCycleDataSource3_1_1`](/v4/deprecated/v3/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IUniswapV3SwapCallback`](https://docs.uniswap.org/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback)
+Inherits: [`IJBPayDelegate3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1.md), [`IJBFundingCycleDataSource3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IUniswapV3SwapCallback`](https://docs.uniswap.org/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback)
 
 ## Functions
 

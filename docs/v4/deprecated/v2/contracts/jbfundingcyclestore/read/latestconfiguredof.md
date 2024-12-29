@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBFundingCycleStore`](/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​‌
+Contract: [`JBFundingCycleStore`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​‌
 
-Interface: [`IJBFundingCycleStore`](/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md)
+Interface: [`IJBFundingCycleStore`](/docs/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -26,10 +26,10 @@ function latestConfiguredOf(uint256 _projectId)
   * `_projectId` is the ID of the project to get the latest configured funding cycle of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBFundingCycleStore`](/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md) interface.
+* The function overrides a function definition from the [`IJBFundingCycleStore`](/docs/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md) interface.
 * The function returns:
   * `fundingCycle` is the latest configured funding cycle.
-  * `ballotState` is the [`JBBallotState`](/v4/deprecated/v2/enums/jbballotstate.md) of the ballot for the reconfiguration.
+  * `ballotState` is the [`JBBallotState`](/docs/v4/deprecated/v2/enums/jbballotstate.md) of the ballot for the reconfiguration.
 
 #### Body
 
@@ -42,7 +42,7 @@ function latestConfiguredOf(uint256 _projectId)
 
     _Internal references:_
 
-    * [`latestConfigurationOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
+    * [`latestConfigurationOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
 2.  Get a reference to the funding cycle for the latest configuration.
 
     ```
@@ -52,7 +52,7 @@ function latestConfiguredOf(uint256 _projectId)
 
     _Internal references:_
 
-    * [`_getStructFor`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
+    * [`_getStructFor`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
 3.  Return the ballot state of the latest funding cycle configuration as is determined by the current configuration and the funding cycle it's based on.
 
     ```
@@ -67,7 +67,7 @@ function latestConfiguredOf(uint256 _projectId)
 
     _Internal references:_
 
-    * [`_ballotStateOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_ballotstateof.md)
+    * [`_ballotStateOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_ballotstateof.md)
 
 </TabItem>
 

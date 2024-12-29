@@ -1,6 +1,6 @@
 # feed
 
-Contract: [`JBChainlinkV3PriceFeed`](/v4/deprecated/v2/contracts/or-price-feeds/jbchainlinkv3pricefeed/README.md)
+Contract: [`JBChainlinkV3PriceFeed`](/docs/v4/deprecated/v2/contracts/or-price-feeds/jbchainlinkv3pricefeed/README.md)
 
 **The available [`AggregatorV3Interface`](https://docs.chain.link/price-feeds-api-reference/) price feeds.**
 

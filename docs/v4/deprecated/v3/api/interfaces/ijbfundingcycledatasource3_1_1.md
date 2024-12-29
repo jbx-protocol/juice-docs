@@ -27,7 +27,7 @@ function payParams(JBPayParamsData calldata data)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`data`|[`JBPayParamsData`](/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md)|the data passed to the data source in terminal.pay(..), as a JBPayParamsData struct:|
+|`data`|[`JBPayParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md)|the data passed to the data source in terminal.pay(..), as a JBPayParamsData struct:|
 
 **Returns**
 
@@ -35,7 +35,7 @@ function payParams(JBPayParamsData calldata data)
 |----|----|-----------|
 |`weight`|`uint256`|the weight to use to override the funding cycle weight|
 |`memo`|`string`|the memo to override the pay(..) memo|
-|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the local balance.|
+|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the local balance.|
 
 ### redeemParams
 
@@ -56,7 +56,7 @@ function redeemParams(JBRedeemParamsData calldata data)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`data`|[`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|the data passed to the data source in terminal.redeemTokensOf(..), as a JBRedeemParamsData struct:|
+|`data`|[`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|the data passed to the data source in terminal.redeemTokensOf(..), as a JBRedeemParamsData struct:|
 
 **Returns**
 
@@ -64,5 +64,5 @@ function redeemParams(JBRedeemParamsData calldata data)
 |----|----|-----------|
 |`reclaimAmount`|`uint256`|The amount to claim, overriding the terminal logic.|
 |`memo`|`string`|The memo to override the redeemTokensOf(..) memo.|
-|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the beneficiary.|
+|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the beneficiary.|
 

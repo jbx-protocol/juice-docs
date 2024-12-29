@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -35,17 +35,17 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256) 
 
     _Library references:_
 
-    * [`JBConstants`](/v4/deprecated/v3/api/libraries/jbconstants.md)
+    * [`JBConstants`](/docs/v4/deprecated/v3/api/libraries/jbconstants.md)
       * `.MAX_FEE_DISCOUNT`
 
     _Internal references:_
 
-    * [`directory`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
-    * [`_FEE_BENEFICIARY_PROJECT_ID`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
+    * [`directory`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`_FEE_BENEFICIARY_PROJECT_ID`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
     _External references:_
 
-    * [`primaryTerminalOf`](/v4/deprecated/v3/api/contracts/jbdirectory/read/primaryterminalof.md)
+    * [`primaryTerminalOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/read/primaryterminalof.md)
 
 2.  If there's a gauge, ask it for the discount. Otherwise, there is no discount. If the gauge reverts, set the discount to 0.
 
@@ -63,11 +63,11 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256) 
 
     _Internal references:_
 
-    * [`feeGauge`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
+    * [`feeGauge`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
 
     _External references:_
 
-    * [`currentDiscountFor`](/v4/deprecated/v3/api/interfaces/ijbfeegauge.md)
+    * [`currentDiscountFor`](/docs/v4/deprecated/v3/api/interfaces/ijbfeegauge.md)
 
 </TabItem>
 

@@ -54,7 +54,7 @@ Within the next couple of days the fundraiser will go live and JuiceboxDAO shoul
 
 <span id="1"></span> Note:
 
-[Hold fees](https://docs.juicebox.money/dev/learn/overview/#hold-fees):
+[Hold fees](https://docs.juicebox.money/v4/deprecated/v3/learn/overview/#hold-fees):
 
 By default, JBX membership fees are paid automatically when funds are distributed out of the ecosystem from a project's treasury. During funding cycles configured to hold fees, this fee amount is set aside instead of being immediately processed. Projects can get their held fees returned by adding the same amount of withdrawn funds back to their treasury. Otherwise, JuiceboxDAO or the project can process these held fees at any point to get JBX at the current rate.
 

@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Intro
 
-:::info
+<!-- :::info
 See [old docs from previous protocol versions](/v3/).
-:::
+::: -->
 
 #### Overview
 
@@ -29,13 +29,9 @@ These docs are here to help you navigate the protocol, whether you're...
 
 #### Directory
 
-1. **[Learn](dev/learn/overview)** - Step-by-step guidance on how the protocol works.
-2. **[Build](build/getting-started)** - Guides to launch, configure, and extend a treasury.
-3. **[API](api/contracts)** - Detailed specs for every contract and function, including deep dives into the code.
-4. **[Extensions](extensions/overview)** - Documentation for hooks and other tools that extend the protocol.
-5. **[Resources](resources/addresses)** - Useful references: contract addresses, audits, and more.
-6. **[Frontend](frontend)** - Tools and guidance for building web and mobile clients for Juicebox.
-7. **[Deprecated](deprecated/v1)** - Documentation for older versions of the protocol.
+1. **[Learn](/docs/v4/learn/overview)** - Step-by-step guidance on how the protocol works.
+2. **[Build](/docs/v4/build/getting-started)** - Guides to launch, configure, and extend a treasury.
+3. **[API](/docs/v4/api/contracts)** - Detailed specs for every contract and function, including deep dives into the code.
 
 ---
 

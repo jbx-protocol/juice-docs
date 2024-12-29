@@ -1,8 +1,8 @@
 # count
 
-Contract: [`JBProjects`](/v4/deprecated/v2/contracts/jbprojects/README.md)
+Contract: [`JBProjects`](/docs/v4/deprecated/v2/contracts/jbprojects/README.md)
 
-Interface: [`IJBProjects`](/v4/deprecated/v2/interfaces/ijbprojects.md)
+Interface: [`IJBProjects`](/docs/v4/deprecated/v2/interfaces/ijbprojects.md)
 
 **The number of projects that have been created using this contract.**
 
@@ -23,4 +23,4 @@ uint256 public override count = 0;
 ```
 
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBProjects`](/v4/deprecated/v2/interfaces/ijbprojects.md) interface.
+* The resulting function overrides a function definition from the [`IJBProjects`](/docs/v4/deprecated/v2/interfaces/ijbprojects.md) interface.

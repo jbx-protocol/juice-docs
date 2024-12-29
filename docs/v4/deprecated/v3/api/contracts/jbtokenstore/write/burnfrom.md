@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function burnFrom(
   * `_projectId` is the ID of the project to which the burned tokens belong.
   * `_amount` is the amount of tokens to burn.
   * `_preferClaimedTokens` is a flag indicating whether there's a preference for tokens to burned from the `_holder`s wallet if the project currently has a token contract attached.
-* Through the [`onlyController`](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -45,7 +45,7 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
 2.  Get a reference to the amount of unclaimed project tokens the holder has.
 
     ```
@@ -55,7 +55,7 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 3.  Get a reference to the amount of the project's tokens the holder has in their wallet. If the project does not yet have tokens issued, the holder must not have a claimed balance.
 
     ```
@@ -67,7 +67,7 @@ function burnFrom(
 
     _External references:_
 
-    * [`balanceOf`](/v4/deprecated/v3/api/contracts/jbtoken/read/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtoken/read/balanceof.md)
 4.  Make sure the holder has enough tokens to burn.
 
     ```
@@ -120,8 +120,8 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-    * [`unclaimedTotalSupplyOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedTotalSupplyOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
 8.  If there are claimed tokens to burn, burn them from the holder's wallet.
 
     ```
@@ -131,7 +131,7 @@ function burnFrom(
 
     _External references:_
 
-    * [`burn`](/v4/deprecated/v3/api/contracts/jbtoken/write/burn.md)
+    * [`burn`](/docs/v4/deprecated/v3/api/contracts/jbtoken/write/burn.md)
 9.  Emit a `Burn` event with the relevant parameters.
 
     ```
@@ -148,7 +148,7 @@ function burnFrom(
 
     _Event references:_
 
-    * [`Burn`](/v4/deprecated/v3/api/contracts/jbtokenstore/events/burn.md)
+    * [`Burn`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/burn.md)
 
 </TabItem>
 
@@ -248,7 +248,7 @@ function burnFrom(
 
 | Name                            | Data                                                                                                                                                                                                                                                                          |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Burn`**](/v4/deprecated/v3/api/contracts/jbtokenstore/events/burn.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>uint256 initialUnclaimedBalance</code></li><li><code>uint256 initialClaimedBalance</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul> |
+| [**`Burn`**](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/burn.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>uint256 initialUnclaimedBalance</code></li><li><code>uint256 initialClaimedBalance</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

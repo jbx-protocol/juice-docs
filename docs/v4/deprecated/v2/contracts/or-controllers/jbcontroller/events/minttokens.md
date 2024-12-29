@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`mintTokensOf`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/minttokensof.md)
+* [`mintTokensOf`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/minttokensof.md)
 
 #### Definition
 

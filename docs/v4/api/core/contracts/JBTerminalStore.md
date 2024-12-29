@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBTerminalStore.sol)
 
 **Inherits:**
-[IJBTerminalStore](/v4/api/core/interfaces/IJBTerminalStore.md)
+[IJBTerminalStore](/docs/v4/api/core/interfaces/IJBTerminalStore.md)
 
 Manages all bookkeeping for inflows and outflows of funds from any terminal address.
 

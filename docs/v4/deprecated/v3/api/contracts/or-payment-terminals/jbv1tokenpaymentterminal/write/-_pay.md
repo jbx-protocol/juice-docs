@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -48,7 +48,7 @@ function _pay(
 
     _Internal references:_
 
-    * [`v1ProjectIdOf`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
+    * [`v1ProjectIdOf`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
 
 2.  Make sure there is a v1 project ID set.
 
@@ -66,7 +66,7 @@ function _pay(
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -93,7 +93,7 @@ function _pay(
 
         _Internal references:_
 
-        * [`ticketBooth`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+        * [`ticketBooth`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
         _External references:_
 
@@ -164,7 +164,7 @@ function _pay(
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -186,12 +186,12 @@ function _pay(
 
     _Internal references:_
 
-    * [`directory`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/directory.md)
+    * [`directory`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/directory.md)
 
     _External references:_
 
-    * [`controllerOf`](/v4/deprecated/v3/api/contracts/jbdirectory/properties/controllerof.md)
-    * [`mintTokensOf`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#minttokensof)
+    * [`controllerOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/properties/controllerof.md)
+    * [`mintTokensOf`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#minttokensof)
 
 8.  Make sure the beneficiary is getting the same amount of v2 tokens as v1 tokens were exchanged, and that the amount is at least as much as expected.
 
@@ -217,7 +217,7 @@ function _pay(
 
     _Event references:_
 
-    * [`Pay`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/pay.md)
+    * [`Pay`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/pay.md)
 
 </TabItem>
 
@@ -336,7 +336,7 @@ function _pay(
 
 | Name                          | Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Pay`**](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/pay.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>address payer</code></li><li><code>address beneficiary</code></li><li><code>uint256 amount</code></li><li><code>uint256 beneficiaryTokenCount</code></li><li><code>string memo</code></li><li><code>address caller</code></li></ul>        |
+| [**`Pay`**](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/pay.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>address payer</code></li><li><code>address beneficiary</code></li><li><code>uint256 amount</code></li><li><code>uint256 beneficiaryTokenCount</code></li><li><code>string memo</code></li><li><code>address caller</code></li></ul>        |
 
 </TabItem>
 

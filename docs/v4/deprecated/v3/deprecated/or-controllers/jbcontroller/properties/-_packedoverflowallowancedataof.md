@@ -1,6 +1,6 @@
 # _packedOverflowAllowanceDataOf
 
-Contract: [`JBController`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/README.md)​‌
 
 **Data regarding the overflow allowance of a project during a configuration.**
 
@@ -33,6 +33,6 @@ mapping(uint256 => mapping(uint256 => mapping(IJBPaymentTerminal =>  mapping(add
 * Arguments:
   * `_projectId` is the ID of the project to get the packed overflow allowance data of.
   * `_configuration` is the configuration during which the packed overflow allowance data applies.
-  * `_terminal` is the [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) managing the overflow.
+  * `_terminal` is the [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) managing the overflow.
   * `_token` is the token for which overflow is being allowed.
 * The resulting function is internal to this contract and its inheriters.

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/interfaces/IJBMultiTerminal.sol)
 
 **Inherits:**
-[IJBTerminal](/v4/api/core/interfaces/IJBTerminal.md), [IJBFeeTerminal](/v4/api/core/interfaces/IJBFeeTerminal.md), [IJBCashOutTerminal](/v4/api/core/interfaces/IJBCashOutTerminal.md), [IJBPayoutTerminal](/v4/api/core/interfaces/IJBPayoutTerminal.md), [IJBPermitTerminal](/v4/api/core/interfaces/IJBPermitTerminal.md)
+[IJBTerminal](/docs/v4/api/core/interfaces/IJBTerminal.md), [IJBFeeTerminal](/docs/v4/api/core/interfaces/IJBFeeTerminal.md), [IJBCashOutTerminal](/docs/v4/api/core/interfaces/IJBCashOutTerminal.md), [IJBPayoutTerminal](/docs/v4/api/core/interfaces/IJBPayoutTerminal.md), [IJBPermitTerminal](/docs/v4/api/core/interfaces/IJBPermitTerminal.md)
 
 
 ## Functions

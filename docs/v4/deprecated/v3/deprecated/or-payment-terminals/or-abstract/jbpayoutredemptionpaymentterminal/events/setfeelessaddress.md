@@ -3,7 +3,7 @@
 
 Emitted from:
 
-* [`setFeelessAddress`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/setfeelessaddress.md)
+* [`setFeelessAddress`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/setfeelessaddress.md)
 
 #### Definition
 

@@ -1,8 +1,8 @@
 # IJBFeeTerminal
-[Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/dev/api/core/interfaces/IJBFeeTerminal.sol)
+[Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/v4/api/core/interfaces/IJBFeeTerminal.sol)
 
 **Inherits:**
-[IJBTerminal](/v4/api/core/interfaces/IJBTerminal.md)
+[IJBTerminal](/docs/v4/api/core/interfaces/IJBTerminal.md)
 
 A terminal that can process and hold fees.
 

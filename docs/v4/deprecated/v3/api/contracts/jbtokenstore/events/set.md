@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setfor`](/v4/deprecated/v3/api/contracts/jbtokenstore/write/setfor.md)
+* [`setfor`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/write/setfor.md)
 
 #### Definition
 

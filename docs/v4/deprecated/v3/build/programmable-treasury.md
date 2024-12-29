@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Programmable treasury
 
-In order to understand what Juicebox can do for your project, all you have to do is understand how one transaction works: [`JBController3_1.launchProjectFor(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor), which creates a project, configures its first funding cycle, and specifies where it can begin receiving and managing funds from.
+In order to understand what Juicebox can do for your project, all you have to do is understand how one transaction works: [`JBController3_1.launchProjectFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor), which creates a project, configures its first funding cycle, and specifies where it can begin receiving and managing funds from.
 
 ```
 function launchProjectFor(
@@ -22,18 +22,18 @@ function launchProjectFor(
 
 This transaction launches a project. It does so by:
 
-* Minting a project in the [`JBProjects`](/v4/deprecated/v3/api/contracts/jbprojects/README.md) ERC-721 contract by calling [`JBProjects.createFor(...)`](/v4/deprecated/v3/api/contracts/jbprojects/write/createfor.md).
-* Then giving the [`JBController3_1`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/) contract that is currently handling the [`launchProjectFor`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction authority to write to the [`JBFundingCycleStore`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/README.md) and the [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md) on the project's behalf by calling [`JBDirectory.setControllerOf(...)`](/v4/deprecated/v3/api/contracts/jbdirectory/write/setcontrollerof.md).
-* Then creating the project's first funding cycle using the provided `_data`, `_metadata`, and `_mustStartAtOrAfter` parameters by calling [`JBFundingCycleStore.configureFor(...)`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/write/configurefor.md).
-* Then storing splits for any provided split groups by calling [`JBSplitStore.set(...)`](/v4/deprecated/v3/api/contracts/jbsplitsstore/write/set.md).
-* Then storing any provided constraints on how the project will be able to access funds within any specified payment terminals by storing values via [`JBController3_1.fundAccessConstraintsStore.setFor()`](/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore/#setfor) (you can access those stored values via [`JBFundAccessConstraintsStore.distributionLimitOf(...)`](/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore/#distributionlimitof), [`JBFundAccessConstraintsStore.overflowAllowanceOf(...)`](/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore/#overflowallowanceof)).
-* Then giving the provided `_terminals` access to the [`JBController3_1`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/) contract that is handling the [`launchProjectFor(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction that is currently being executed, and also allowing anyone or any other contract in Web3 to know that the project is currently accepting funds through them by calling [`JBDirectory.setTerminalsOf(...)`](/v4/deprecated/v3/api/contracts/jbdirectory/write/setterminalsof.md).
+* Minting a project in the [`JBProjects`](/docs/v4/deprecated/v3/api/contracts/jbprojects/README.md) ERC-721 contract by calling [`JBProjects.createFor(...)`](/docs/v4/deprecated/v3/api/contracts/jbprojects/write/createfor.md).
+* Then giving the [`JBController3_1`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md) contract that is currently handling the [`launchProjectFor`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) transaction authority to write to the [`JBFundingCycleStore`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/README.md) and the [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md) on the project's behalf by calling [`JBDirectory.setControllerOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/write/setcontrollerof.md).
+* Then creating the project's first funding cycle using the provided `_data`, `_metadata`, and `_mustStartAtOrAfter` parameters by calling [`JBFundingCycleStore.configureFor(...)`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/write/configurefor.md).
+* Then storing splits for any provided split groups by calling [`JBSplitStore.set(...)`](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/write/set.md).
+* Then storing any provided constraints on how the project will be able to access funds within any specified payment terminals by storing values via [`JBController3_1.fundAccessConstraintsStore.setFor()`](/docs/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore.md#setfor) (you can access those stored values via [`JBFundAccessConstraintsStore.distributionLimitOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore.md#distributionlimitof), [`JBFundAccessConstraintsStore.overflowAllowanceOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbfundaccessconstraintsstore.md#overflowallowanceof)).
+* Then giving the provided `_terminals` access to the [`JBController3_1`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md) contract that is handling the [`launchProjectFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) transaction that is currently being executed, and also allowing anyone or any other contract in Web3 to know that the project is currently accepting funds through them by calling [`JBDirectory.setTerminalsOf(...)`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/write/setterminalsof.md).
 
 #### Basics
 
 Here are some examples, starting with the simplest version:
 
-*   For `_projectMetadata` send the following [`JBProjectMetadata`](/v4/deprecated/v3/api/data-structures/jbprojectmetadata) values:
+*   For `_projectMetadata` send the following [`JBProjectMetadata`](/docs/v4/deprecated/v3/api/data-structures/jbprojectmetadata.md) values:
 
     ```javascript
     {
@@ -41,7 +41,7 @@ Here are some examples, starting with the simplest version:
       domain: 0
     }
     ```
-*   For `_data` send the following [`JBFundingCycleData`](/v4/deprecated/v3/api/data-structures/jbfundingcycledata.md) values:
+*   For `_data` send the following [`JBFundingCycleData`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycledata.md) values:
 
     ```javascript
     {
@@ -51,7 +51,7 @@ Here are some examples, starting with the simplest version:
       ballot: 0x0000000000000000000000000000000000000000
     }
     ```
-*   For `_metadata` send the following [`JBFundingCycleMetadata`](/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata.md) values:
+*   For `_metadata` send the following [`JBFundingCycleMetadata`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcyclemetadata.md) values:
 
     ```javascript
     {
@@ -82,24 +82,24 @@ Here are some examples, starting with the simplest version:
 * For `_mustStartAtOrAfter` send current timestamp.
 * For `_groupedSplits` send an empty array.
 * For `_fundAccessConstraints` send an empty array.
-* For `_terminals` send an array only including the contract address of the [`JBETHPaymentTerminal3_1_2`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/).
+* For `_terminals` send an array only including the contract address of the [`JBETHPaymentTerminal3_1_2`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2.md).
 
 This is the most vanilla project you can launch, which also makes it cheapest to launch gas-wise. Relatively little needs to get saved into storage.
 
 Under these conditions:
 
-* Your project can begin receiving funds through the [`JBETHPaymentTerminal3_1_2`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/).
+* Your project can begin receiving funds through the [`JBETHPaymentTerminal3_1_2`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2.md).
 * 1,000,000 of your project's tokens will be minted per ETH received since the configured `_data.weight` is `1000000000000000000000000`. (The raw value sent has 18 decimal places).
 * All tokens minted as a result of received ETH will go to the beneficiary address specified by the payer of the ETH since the configured `_metadata.reservedRate` is 0.
 * Nothing fancy will happen outside of the default token minting behavior since the configured `_metadata.useDataSourceForPay` is `false`.
 * Nothing fancy will happen outside of the default token redemption behavior since the configured `_metadata.useDataSourceForRedeem` is `false`.
-* None of the funds in the treasury can be distributed to the project owner since no `_fundAccessConstraints` were specified. This means all funds in the treasury are considered overflow. Since the configured `_metadata.redemptionRate` sent is `10000` (which represents [100%](/v4/deprecated/v3/api/libraries/jbconstants/)), all outstanding tokens can be redeemed/burned to claim a proportional part of the overflow. This lets everyone who contributed funds reclaim their ETH if desired.
+* None of the funds in the treasury can be distributed to the project owner since no `_fundAccessConstraints` were specified. This means all funds in the treasury are considered overflow. Since the configured `_metadata.redemptionRate` sent is `10000` (which represents [100%](/docs/v4/deprecated/v3/api/libraries/jbconstants.md)), all outstanding tokens can be redeemed/burned to claim a proportional part of the overflow. This lets everyone who contributed funds reclaim their ETH if desired.
 * A new funding cycle with an updated configuration can be triggered at any time by the project owner since the configured `_data.duration` of 0 and `_data.ballot` of `0x0000000000000000000000000000000000000000`. This lets the project owner capture an arbitrary amount of what is in the treasury at any given point by sending a reconfiguration transaction with `_fundAccessConstraints` specified.
 * Your project will have basic project info with the IPFS file on `ipfs://QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw` (Juicebox Frontend use domain `0` to locate project metadata through IPFS, such as project name, logo, description, twitter handle and discord link)
 
 #### Fund access constraints
 
-Here's what happens when basic `_fundAccessConstraints` are specified by sending the following [`JBFundAccessContraints`](/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) values:
+Here's what happens when basic `_fundAccessConstraints` are specified by sending the following [`JBFundAccessContraints`](/docs/v4/deprecated/v3/api/data-structures/jbfundaccessconstraints.md) values:
 
 ```javascript
 [
@@ -114,8 +114,8 @@ Here's what happens when basic `_fundAccessConstraints` are specified by sending
 ]
 ```
 
-* During each funding cycle with this configuration, the project can receive up to 4.2 ETH worth of tokens from the [`JBETHPaymentTerminal3_1_2`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/), since the configured `distributionLimitCurrency` is 1 ([which represents ETH](/v4/deprecated/v3/api/libraries/jbcurrencies.md)) and the `distributionLimit` is `4200000000000000000`. (The raw value sent has 18 decimal places).
-* Anyone can call the [`JBPayoutRedemptionPaymentTerminal3_1_2.distributePayoutsOf(...)`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2/#distributepayoutsof) transaction to send up to 4.2 ETH per funding cycle to the preconfigured splits. Since no splits were specified, all distributed funds go to the project owner.
+* During each funding cycle with this configuration, the project can receive up to 4.2 ETH worth of tokens from the [`JBETHPaymentTerminal3_1_2`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2.md), since the configured `distributionLimitCurrency` is 1 ([which represents ETH](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md)) and the `distributionLimit` is `4200000000000000000`. (The raw value sent has 18 decimal places).
+* Anyone can call the [`JBPayoutRedemptionPaymentTerminal3_1_2.distributePayoutsOf(...)`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2.md#distributepayoutsof) transaction to send up to 4.2 ETH per funding cycle to the preconfigured splits. Since no splits were specified, all distributed funds go to the project owner.
 * With each new funding cycle, another 4.2 ETH can be distributed.
 * The project cannot distribute any funds in excess of the distribution limit since there is no `overflowAllowance`.
 
@@ -134,8 +134,8 @@ Here's what happens when using an overflow allowance instead:
 ]
 ```
 
-* Until a new reconfiguration transaction is sent, the project owner can send up to 690 USD worth of ETH tokens from the [`JBETHPaymentTerminal3_1_2`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2/) to any address it chooses since the configured `overflowAllowanceCurrency` is 2 ([which represents USD](/v4/deprecated/v3/api/libraries/jbcurrencies.md)) and the `overflowAllowance` is `690000000000000000000` (the raw value sent has 18 decimal places).
-* Meanwhile, all of the project's funds in the [`JBPayoutRedemptionPaymentTerminal3_1_2`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2/) are considered overflow since there is no distribution limit.
+* Until a new reconfiguration transaction is sent, the project owner can send up to 690 USD worth of ETH tokens from the [`JBETHPaymentTerminal3_1_2`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_2.md) to any address it chooses since the configured `overflowAllowanceCurrency` is 2 ([which represents USD](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md)) and the `overflowAllowance` is `690000000000000000000` (the raw value sent has 18 decimal places).
+* Meanwhile, all of the project's funds in the [`JBPayoutRedemptionPaymentTerminal3_1_2`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2.md) are considered overflow since there is no distribution limit.
 * Rolled-over funding cycles (i.e. cycles with the same configuration) do not refresh the allowance.
 * An overflow allowance is a free allowance the project can use without additional pre-programmed stipulations.
 
@@ -143,7 +143,7 @@ The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint
 
 #### Grouped splits
 
-If you wish to automatically split treasury payouts or reserved token distributions between various destinations (addresses, other Juicebox projects, or split allocator contracts), add some grouped splits to the [`launchProjectFor`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction.
+If you wish to automatically split treasury payouts or reserved token distributions between various destinations (addresses, other Juicebox projects, or split allocator contracts), add some grouped splits to the [`launchProjectFor`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) transaction.
 
 ```
 {
@@ -203,9 +203,9 @@ If you wish to automatically split treasury payouts or reserved token distributi
   * The first will send 5% of the total directly to address `0x0123456789012345678901234567890123456789`.
   * The second will send 6% to the treasury of the Juicebox project with ID 420. Since `preferAddToBalance` is false, the payment will be made through the `pay(...)` function of the project's current primary terminal for the token being distributed. Project 420's tokens will be sent to address `0x0123456789012345678901234567890123456789.`.
   * The third will send 6% to the Juicebox treasury of project with ID 421. This project's tokens will be sent to address `0x0123456789012345678901234567890123456789.`, and they will be automatically claimed as ERC-20s in the beneficiary's wallet if the project has issued them due to the `preferClaimed` flag being `true`.
-  * The fourth will send 7% to the `allocate` function in contract with address `0x6969696969696969696969696969696969696969` which must adhere to [`IJBSplitAllocator`](/v4/deprecated/v3/api/interfaces/ijbsplitallocator.md). This function will also receive all contextual information regarding the split for it to do custom things with. This split will not be editable or removable from the group during this funding cycle configuration while the `lockedUntil` date has yet to passed.
+  * The fourth will send 7% to the `allocate` function in contract with address `0x6969696969696969696969696969696969696969` which must adhere to [`IJBSplitAllocator`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitallocator.md). This function will also receive all contextual information regarding the split for it to do custom things with. This split will not be editable or removable from the group during this funding cycle configuration while the `lockedUntil` date has yet to passed.
   * The last will send 1% of the total directly to `msg.sender` address since no destination was specified within the split.
   * All of the remaining funds (100% - 5% - 6% - 6% - 7% - 1% = 75%) will be sent to the project owner's address.
-* Since the configured split group is 1 ([which represents ETH payouts](/v4/deprecated/v3/api/libraries/jbsplitsgroups.md)), the protocol will use this group of splits when distributing funds from the ETH terminal.
+* Since the configured split group is 1 ([which represents ETH payouts](/docs/v4/deprecated/v3/api/libraries/jbsplitsgroups.md)), the protocol will use this group of splits when distributing funds from the ETH terminal.
 * This splits will only apply to the funding cycle configuration during which they were set. Splits will have to be set again for future configurations.
-* The same group split behavior applies to reserved tokens ([represented by group namespace 2](/v4/deprecated/v3/api/libraries/jbsplitsgroups.md)), although those routed to a `projectId` will be sent to the project's owner, and those routed to an allocator will be sent to the contract before having the contract's `allocate` function called.
+* The same group split behavior applies to reserved tokens ([represented by group namespace 2](/docs/v4/deprecated/v3/api/libraries/jbsplitsgroups.md)), although those routed to a `projectId` will be sent to the project's owner, and those routed to an allocator will be sent to the contract before having the contract's `allocate` function called.

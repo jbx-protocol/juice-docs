@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBDirectory.sol)
 
 **Inherits:**
-[JBPermissioned](/v4/api/core/contracts/abstract/JBPermissioned.md), Ownable, [IJBDirectory](/v4/api/core/interfaces/IJBDirectory.md)
+[JBPermissioned](/docs/v4/api/core/contracts/abstract/JBPermissioned.md), Ownable, [IJBDirectory](/docs/v4/api/core/interfaces/IJBDirectory.md)
 
 `JBDirectory` tracks the terminals and the controller used by each project.
 

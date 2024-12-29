@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
-Interface: [`IJBSplitsPayer`](/v4/deprecated/v2/interfaces/ijbsplitspayer.md)
+Interface: [`IJBSplitsPayer`](/docs/v4/deprecated/v2/interfaces/ijbsplitspayer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -44,11 +44,11 @@ receive() external payable virtual override { ... }
 
     _Internal references:_
 
-    * [`defaultSplitsProjectId`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
-    * [`defaultSplitsDomain`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
-    * [`defaultSplitsGroup`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
-    * [`defaultBeneficiary`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_payToSplits`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
+    * [`defaultSplitsProjectId`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
+    * [`defaultSplitsDomain`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
+    * [`defaultSplitsGroup`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
+    * [`defaultBeneficiary`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_payToSplits`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
 
 2.  If there's no leftover amount, there's nothing left to do.
 
@@ -97,19 +97,19 @@ receive() external payable virtual override { ... }
 
     * [`Address`](https://docs.openzeppelin.com/contracts/4.x/api/utils#Address)
       * `.sendValue(...)`
-    * [`JBTokens`](/v4/deprecated/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/docs/v4/deprecated/v2/libraries/jbtokens.md)
       * `.ETH`
 
     _Internal references:_
 
 
-    * [`defaultProjectId`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
-    * [`defaultPreferClaimedTokens`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
-    * [`defaultMemo`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmemo.md)
-    * [`defaultMetadata`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmetadata.md)
-    * [`defaultBeneficiary`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_addToBalanceOf`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
-    * [`_pay`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
+    * [`defaultProjectId`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
+    * [`defaultPreferClaimedTokens`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
+    * [`defaultMemo`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmemo.md)
+    * [`defaultMetadata`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmetadata.md)
+    * [`defaultBeneficiary`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_addToBalanceOf`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
+    * [`_pay`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
 
 </TabItem>
 

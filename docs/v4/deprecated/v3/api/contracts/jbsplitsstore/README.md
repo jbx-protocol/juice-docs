@@ -17,13 +17,13 @@ Goerli testnet: [`0xce2Ce2F37fE5B2C2Dd047908B2F61c9c3f707272`](https://goerli.et
 
 | Name                                                 | Description                                                                                                                              |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBSplitsStore`**](/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md) |General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBSplitsStore`**](/docs/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md) |General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 
 | Contract                                                                     | Description                                                                                                           |
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [**`JBOperatable`**](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/)                           | Includes convenience functionality for checking a message sender's permissions before executing certain transactions. |
+| [**`JBOperatable`**](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md)                           | Includes convenience functionality for checking a message sender's permissions before executing certain transactions. |
 
 #### Constructor
 
@@ -43,31 +43,31 @@ constructor(
 }
 ```
 
-* `_operatorStore` is an [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_operatorStore` is an [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
 
 #### Events
 
 | Name                                 | Data                                                                                                                                                                                                                 |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetSplit`**](/v4/deprecated/v3/api/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/v4/deprecated/v3/api/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
+| [**`SetSplit`**](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/docs/v4/deprecated/v3/api/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
 
 #### Properties
 
 | Function                                   | Definition                                                                         |
 | ------------------------------------------ | ---------------------------------------------------------------------------------- |
-| [**`projects`**](/v4/deprecated/v3/api/contracts/jbsplitsstore/properties/projects.md)   | <p><strong>Returns</strong></p><ul><li><code>IJBProjects</code></li></ul> |
-| [**`directory`**](/v4/deprecated/v3/api/contracts/jbsplitsstore/properties/directory.md) | <p><strong>Returns</strong></p><ul><li><code>IJBPaymentTerminal</code></li></ul> |
+| [**`projects`**](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/properties/projects.md)   | <p><strong>Returns</strong></p><ul><li><code>IJBProjects</code></li></ul> |
+| [**`directory`**](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/properties/directory.md) | <p><strong>Returns</strong></p><ul><li><code>IJBPaymentTerminal</code></li></ul> |
 
 #### Read
 
 | Function                           | Definition                                                                                                                                                                                                                                                                                         |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`splitsOf`**](/v4/deprecated/v3/api/contracts/jbsplitsstore/read/splitsof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>[JBGroupedSplits](/v4/deprecated/v3/api/data-structures/jbgroupedsplits.md)[] calldata _groupedSplits</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBSplit](/v4/deprecated/v3/api/data-structures/jbsplit.md)[] splits</code></li></ul> |
+| [**`splitsOf`**](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/read/splitsof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>[JBGroupedSplits](/docs/v4/deprecated/v3/api/data-structures/jbgroupedsplits.md)[] calldata _groupedSplits</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBSplit](/docs/v4/deprecated/v3/api/data-structures/jbsplit.md)[] splits</code></li></ul> |
 
 #### Write
 
 | Function                  | Definition                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`set`**](/v4/deprecated/v3/api/contracts/jbsplitsstore/write/set.md) | <p><strong>Traits</strong></p><ul><li><code>[requirePermissionAllowingOverride](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>uint256 _group</code></li><li><code>[JBSplit](/v4/deprecated/v3/api/data-structures/jbsplit.md)[] _splits</code></li></ul> |
+| [**`set`**](/docs/v4/deprecated/v3/api/contracts/jbsplitsstore/write/set.md) | <p><strong>Traits</strong></p><ul><li><code>[requirePermissionAllowingOverride](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>uint256 _group</code></li><li><code>[JBSplit](/docs/v4/deprecated/v3/api/data-structures/jbsplit.md)[] _splits</code></li></ul> |

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -38,9 +38,9 @@ function pay(
   * `_metadata` are bytes to send along to the data source, delegate, and emitted event, if provided. This terminal ignores this property because there's no data source.
 * The function can be accessed externally by anyone.
 * The function can be overriden by inheriting contracts.
-* Through the [`isTerminalOf`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/modifiers/isterminalof.md) modifier, this transaction reverts if this terminal is not one of the project's terminals.
+* Through the [`isTerminalOf`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/modifiers/isterminalof.md) modifier, this transaction reverts if this terminal is not one of the project's terminals.
 * The function accepts ETH, but reverts if it receives ETH.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md) interface.
 * The function returns the number of v2 project tokens minted for the beneficiary, as a fixed point number with 18 decimals.
 
 #### Body
@@ -54,7 +54,7 @@ function pay(
 
     _Internal references:_
 
-    * [`finalized`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
+    * [`finalized`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
 
 2.  Make sure some v1 project tokens are being paid.
 
@@ -78,7 +78,7 @@ function pay(
 
     _Internal references:_
 
-    * [`_pay`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/-_pay.md)
+    * [`_pay`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/-_pay.md)
 
 </TabItem>
 

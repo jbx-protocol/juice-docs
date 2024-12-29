@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -14,7 +14,7 @@ Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 _Only a project's owner or operator can set its token._
 
-_This contract must have access to all of the token's [`IJBToken`](/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface functions._
+_This contract must have access to all of the token's [`IJBToken`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface functions._
 
 _Can't change to a token that's currently being used by another project._
 
@@ -30,8 +30,8 @@ function setFor(uint256 _projectId, IJBToken _token)
 * Arguments:
   * `_projectId` is the ID of the project to which the set token belongs.
   * `_token` is the new token.
-* Through the [`requirePermission`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.SET_TOKEN`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
+* Through the [`requirePermission`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.SET_TOKEN`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -52,7 +52,7 @@ function setFor(uint256 _projectId, IJBToken _token)
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
 
 3.  Make sure the token has 18 decimals.
 
@@ -63,7 +63,7 @@ function setFor(uint256 _projectId, IJBToken _token)
 
     _External references:_
 
-    * [`decimals`](/v4/deprecated/v3/api/interfaces/ijbtoken.md)
+    * [`decimals`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md)
 
 5.  Store the provided token as the token of the project.
 
@@ -74,7 +74,7 @@ function setFor(uint256 _projectId, IJBToken _token)
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
 
 9.  Emit a `Set` event with the relevant parameters.
 
@@ -84,7 +84,7 @@ function setFor(uint256 _projectId, IJBToken _token)
 
     _Event references:_
 
-    * [`Set`](/v4/deprecated/v3/api/contracts/jbtokenstore/events/set.md)
+    * [`Set`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/set.md)
 
 </TabItem>
 
@@ -138,7 +138,7 @@ function setFor(uint256 _projectId, IJBToken _token)
 
 | Name                                | Data                                                                                                                                                                                |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Set`**](/v4/deprecated/v3/api/contracts/jbtokenstore/events/set.md)               | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/v4/deprecated/v3/api/interfaces/ijbtoken.md) indexed newToken</code></li><li><code>address caller</code></li></ul>                                                                                           |
+| [**`Set`**](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/set.md)               | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md) indexed newToken</code></li><li><code>address caller</code></li></ul>                                                                                           |
 
 </TabItem>
 

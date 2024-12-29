@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjectHandles`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/README.md)​‌
+Contract: [`JBProjectHandles`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/README.md)​‌
 
-Interface: [`IJBProjectHandles`](/v4/deprecated/v3/api/interfaces/ijbprojecthandles.md)
+Interface: [`IJBProjectHandles`](/docs/v4/deprecated/v3/api/interfaces/ijbprojecthandles.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -24,7 +24,7 @@ function handleOf(uint256 _projectId) external view override returns (string mem
   * `_projectId` is the ID of the project to get the handle of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBProjectHandles`](/v4/deprecated/v3/api/interfaces/ijbprojecthandles.md) interface.
+* The function overrides a function definition from the [`IJBProjectHandles`](/docs/v4/deprecated/v3/api/interfaces/ijbprojecthandles.md) interface.
 * The function returns the project's handle.
 
 #### Body
@@ -38,7 +38,7 @@ function handleOf(uint256 _projectId) external view override returns (string mem
 
     _Internal references:_
 
-    * [`_ensNamePartsOf`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/-_ensnamepartsof.md)
+    * [`_ensNamePartsOf`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/-_ensnamepartsof.md)
 
 2.  If there are no name parts, there's no handle.
 
@@ -56,9 +56,9 @@ function handleOf(uint256 _projectId) external view override returns (string mem
 
     _Internal references:_
 
-    * [`textResolver`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/textresolver.md)
-    * [`TEXT_KEY`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/textkey.md)
-    * [`_namehash`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/read/-_namehash.md)
+    * [`textResolver`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/textresolver.md)
+    * [`TEXT_KEY`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/properties/textkey.md)
+    * [`_namehash`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/read/-_namehash.md)
 
     _External references:_
 
@@ -86,7 +86,7 @@ function handleOf(uint256 _projectId) external view override returns (string mem
 
     _Internal references:_
 
-    * [`_formatHandle`](/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/read/-_formathandle.md)
+    * [`_formatHandle`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbprojecthandles/read/-_formathandle.md)
 
 </TabItem>
 

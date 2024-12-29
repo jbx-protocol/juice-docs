@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`reconfigureFundingCyclesOf`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md)
+* [`reconfigureFundingCyclesOf`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md)
 
 #### Definition
 

@@ -107,7 +107,7 @@ Hopefully we'll eventually start to talk about audits in the near future. There 
 
 The 721 tiered delegate is the standard NFT rewards, the one that we've been using and evolving. We're at a good point now where the delegates can be evolved on their own very independently from the core terminal controller infrastructure.
 
-There're a few improvements to the current [`JBTiered721Delegate`](https://docs.juicebox.money/dev/extensions/juice-721-delegate/contracts/jbtiered721delegate) that have been queued for a new version.
+There're a few improvements to the current [`JBTiered721Delegate`](https://docs.juicebox.money/v4/deprecated/v3/extensions/juice-721-delegate/README.md/contracts/jbtiered721delegate) that have been queued for a new version.
 
 1. Renaming of the variable `contributionFloor` to `prices`, because we're actually treating them more as a price these days;
 2. Introducing the operatable pattern, so project owners can delegate certain functions to operators, which are basically other contracts or addresses that can manage these functions on their behalf. It will be cool for allowing other contracts to post NFT tiers on a project's behalf and open up functionality there.

@@ -8,6 +8,6 @@
 
 #### What you'll want to know if you're building
 
-* The weight cut percent can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/v4/api/core/contracts/jbcontroller/#launchprojectfor), [`JBController.launchFundingCyclesFor(...)`](/v4/api/core/contracts/jbcontroller/#launchfundingcyclesfor), or [`JBController.queueRulesetsOf(...)`](/v4/api/core/contracts/jbcontroller/#queuerulesetsof) transactions. 
+* The weight cut percent can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor), [`JBController.launchFundingCyclesFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchfundingcyclesfor), or [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queuerulesetsof) transactions. 
 * A weight of `0` will inherit from the previous ruleset's weight. Send `1` to explicitly set issuance to zero.
 

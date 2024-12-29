@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/interfaces/IJBController.sol)
 
 **Inherits:**
-IERC165, [IJBProjectUriRegistry](/v4/api/core/interfaces/IJBProjectUriRegistry.md), [IJBDirectoryAccessControl](/v4/api/core/interfaces/IJBDirectoryAccessControl.md)
+IERC165, [IJBProjectUriRegistry](/docs/v4/api/core/interfaces/IJBProjectUriRegistry.md), [IJBDirectoryAccessControl](/docs/v4/api/core/interfaces/IJBDirectoryAccessControl.md)
 
 
 ## Functions

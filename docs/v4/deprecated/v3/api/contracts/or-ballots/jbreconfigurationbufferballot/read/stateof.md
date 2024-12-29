@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBReconfigurationBufferBallot`](/v4/deprecated/v3/api/contracts/or-ballots/jbreconfigurationbufferballot)
+Contract: [`JBReconfigurationBufferBallot`](/docs/v4/deprecated/v3/api/contracts/or-ballots/jbreconfigurationbufferballot/README.md)
 
-Interface: [`IJBFundingCycleBallot`](/v4/deprecated/v3/api/interfaces/ijbfundingcycleballot/)
+Interface: [`IJBFundingCycleBallot`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcycleballot.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,7 +28,7 @@ function stateOf(
   * `_start` is the start timestamp of the funding cycle to check the state of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBFundingCycleBallot`](/v4/deprecated/v3/api/interfaces/ijbfundingcycleballot.md) interface.
+* The function overrides a function definition from the [`IJBFundingCycleBallot`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcycleballot.md) interface.
 * The function returns the state of the provided ballot.
 
 #### Body
@@ -42,7 +42,7 @@ function stateOf(
 
     _Enums used:_
 
-    * [`JBBallotState`](/v4/deprecated/v3/api/enums/jbballotstate.md)
+    * [`JBBallotState`](/docs/v4/deprecated/v3/api/enums/jbballotstate.md)
       * `.Failed`
 
 2.  If the configuration took place before the funding cycle's start with sufficient time to cover this ballot's duration, it is approved. Otherwise, it is failed.
@@ -56,7 +56,7 @@ function stateOf(
 
     _Enums used:_
 
-    * [`JBBallotState`](/v4/deprecated/v3/api/enums/jbballotstate.md)
+    * [`JBBallotState`](/docs/v4/deprecated/v3/api/enums/jbballotstate.md)
       * `.Failed`
       * `.Approved`
 

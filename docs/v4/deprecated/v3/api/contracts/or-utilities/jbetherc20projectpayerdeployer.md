@@ -10,7 +10,7 @@ Goerli: [`0x483bFC77f28DB242d40aa456D801354fEEBb502E`](https://goerli.etherscan.
 
 Adheres to:
 
-- [`IJBETHERC20ProjectPayerDeployer`](/v4/deprecated/v3/api/interfaces/ijbetherc20projectpayerdeployer/): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IJBETHERC20ProjectPayerDeployer`](/docs/v4/deprecated/v3/api/interfaces/ijbetherc20projectpayerdeployer.md): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 ## State Variables
 

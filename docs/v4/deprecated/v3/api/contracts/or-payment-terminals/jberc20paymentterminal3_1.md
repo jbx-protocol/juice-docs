@@ -8,11 +8,11 @@ Mainnet: Not deployed.
 
 Goerli: Not deployed.
 
-Inherits: [`JBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/)
+Inherits: [`JBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1.md)
 
 Inherits from:
 
-- [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
+- [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1.md): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
 
 ## Functions
 

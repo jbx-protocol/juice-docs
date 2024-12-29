@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_distributePayoutsOf`](/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_distributepayoutsof.md)
+* [`_distributePayoutsOf`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_distributepayoutsof.md)
 
 #### Definition
 

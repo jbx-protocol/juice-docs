@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBV1TokenPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md)
+Interface: [`IJBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -22,7 +22,7 @@ function setV1ProjectId(uint256 _projectId, uint256 _v1ProjectId) external overr
   * `_projectId` is the ID of the v2 project to set a v1 project ID for.
   * `_v1ProjectId` is the ID of the v1 project to set.
 * The function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBV1TokenPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -39,8 +39,8 @@ function setV1ProjectId(uint256 _projectId, uint256 _v1ProjectId) external overr
 
     _Internal references:_
 
-    * [`projects`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/projects.md)
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`projects`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/projects.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -56,7 +56,7 @@ function setV1ProjectId(uint256 _projectId, uint256 _v1ProjectId) external overr
 
     _Internal references:_
 
-    * [`v1ProjectIdOf`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
+    * [`v1ProjectIdOf`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
 
 3.  Emit a `SetV1ProjectId` event with the relevant parameters.
 
@@ -66,7 +66,7 @@ function setV1ProjectId(uint256 _projectId, uint256 _v1ProjectId) external overr
 
     _Event references:_
 
-    * [`SetV1ProjectId`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/setv1projectid.md)
+    * [`SetV1ProjectId`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/setv1projectid.md)
 
 
 </TabItem>
@@ -112,7 +112,7 @@ function setV1ProjectId(uint256 _projectId, uint256 _v1ProjectId) external overr
 
 | Name                          | Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetV1ProjectId`**](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/setv1projectid.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed v1ProjectId</code></li><li><code>address caller</code></li></ul>        |
+| [**`SetV1ProjectId`**](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/setv1projectid.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed v1ProjectId</code></li><li><code>address caller</code></li></ul>        |
 
 </TabItem>
 

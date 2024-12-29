@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBFundingCycleStore`](/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​‌
+Contract: [`JBFundingCycleStore`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​‌
 
 Interface: `IJBFundingCycleStore`
 
@@ -27,8 +27,8 @@ function get(uint256 _projectId, uint256 _configuration)
   * `_configuration` is the configuration of the funding cycle to get.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBFundingCycleStore`](/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md) interface.
-* The function returns the [`JBFundingCycle`](/v4/deprecated/v2/data-structures/jbfundingcycle.md).
+* The function overrides a function definition from the [`IJBFundingCycleStore`](/docs/v4/deprecated/v2/interfaces/ijbfundingcyclestore.md) interface.
+* The function returns the [`JBFundingCycle`](/docs/v4/deprecated/v2/data-structures/jbfundingcycle.md).
 
 #### Body
 
@@ -40,7 +40,7 @@ function get(uint256 _projectId, uint256 _configuration)
 
     _Internal references:_
 
-    * [`_getStructFor`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
+    * [`_getStructFor`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
 
 </TabItem>
 

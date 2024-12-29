@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`burnTokensOf`](/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/burntokensof.md)
+* [`burnTokensOf`](/docs/v4/deprecated/v3/deprecated/or-controllers/jbcontroller/write/burntokensof.md)
 
 #### Definition
 

@@ -4,17 +4,17 @@ Sends ETH or ERC20's to a group of splits as it receives direct payments or has 
 
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/d13d0bf1dbe72f6b478530994d647e219c58245e/contracts/JBETHERC20SplitsPayer.sol)
 
-Inherits: [`JBETHERC20ProjectPayer`](/v4/deprecated/v3/api/contracts/or-utilities/jbetherc20projectpayer/), [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSplitsPayer`](/v4/deprecated/v3/api/interfaces/ijbsplitspayer/)
+Inherits: [`JBETHERC20ProjectPayer`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbetherc20projectpayer.md), [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSplitsPayer`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitspayer.md)
 
 *Inherit from this contract or borrow from its logic to forward ETH or ERC20's to a group of splits from within other contracts.*
 
 Adheres to:
 
-- [`IJBSplitsPayer`](/v4/deprecated/v3/api/interfaces/ijbsplitspayer/):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IJBSplitsPayer`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitspayer.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 Inherits from:
 
-- [`JBETHERC20ProjectPayer`](/v4/deprecated/v3/api/contracts/or-utilities/jbetherc20projectpayer/): Sends ETH or ERC20's to a project treasury as it receives direct payments or has it's functions called.
+- [`JBETHERC20ProjectPayer`](/docs/v4/deprecated/v3/api/contracts/or-utilities/jbetherc20projectpayer.md): Sends ETH or ERC20's to a project treasury as it receives direct payments or has it's functions called.
 - [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard): Contract module that helps prevent reentrant calls to a function.
 
 ## State Variables

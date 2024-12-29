@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBSplits.sol)
 
 **Inherits:**
-[JBControlled](/v4/api/core/contracts/abstract/JBControlled.md), [IJBSplits](/v4/api/core/interfaces/IJBSplits.md)
+[JBControlled](/docs/v4/api/core/contracts/abstract/JBControlled.md), [IJBSplits](/docs/v4/api/core/interfaces/IJBSplits.md)
 
 Stores and manages splits for each project.
 

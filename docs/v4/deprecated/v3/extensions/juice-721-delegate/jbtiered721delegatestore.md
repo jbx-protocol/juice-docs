@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/JBTiered721DelegateStore.sol)
 
-Inherits: [`IJBTiered721DelegateStore`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)
+Inherits: [`IJBTiered721DelegateStore`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatestore.md)
 
 This contract stores and manages data for an IJBTiered721Delegate's NFTs.
 
@@ -168,7 +168,7 @@ function tiersOf(
 
 | Name     | Type                                                                          | Description               |
 | -------- | ----------------------------------------------------------------------------- | ------------------------- |
-| `_tiers` | [`JB721Tier[]`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | An array of active tiers. |
+| `_tiers` | [`JB721Tier[]`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | An array of active tiers. |
 
 ### tierOf
 
@@ -190,7 +190,7 @@ function tierOf(address _nft, uint256 _id, bool _includeResolvedUri) public view
 
 | Name     | Type                                                                        | Description |
 | -------- | --------------------------------------------------------------------------- | ----------- |
-| `<none>` | [`JB721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier.   |
+| `<none>` | [`JB721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier.   |
 
 ### tierOfTokenId
 
@@ -216,7 +216,7 @@ function tierOfTokenId(address _nft, uint256 _tokenId, bool _includeResolvedUri)
 
 | Name     | Type                                                                        | Description |
 | -------- | --------------------------------------------------------------------------- | ----------- |
-| `<none>` | [`JB721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier.   |
+| `<none>` | [`JB721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | The tier.   |
 
 ### totalSupplyOf
 
@@ -346,7 +346,7 @@ function flagsOf(address _nft) external view override returns (JBTiered721Flags 
 
 | Name     | Type                                                                                      | Description |
 | -------- | ----------------------------------------------------------------------------------------- | ----------- |
-| `<none>` | [`JBTiered721Flags`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md) | The flags.  |
+| `<none>` | [`JBTiered721Flags`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md) | The flags.  |
 
 ### isTierRemoved
 
@@ -486,7 +486,7 @@ function recordAddTiers(JB721TierParams[] calldata _tiersToAdd) external overrid
 
 | Name          | Type                                                                                      | Description       |
 | ------------- | ----------------------------------------------------------------------------------------- | ----------------- |
-| `_tiersToAdd` | [`JB721TierParams[]`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tierparams.md) | The tiers to add. |
+| `_tiersToAdd` | [`JB721TierParams[]`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tierparams.md) | The tiers to add. |
 
 **Returns**
 
@@ -597,7 +597,7 @@ function recordSetTokenUriResolver(IJB721TokenUriResolver _resolver) external ov
 
 | Name        | Type                                                                                                     | Description          |
 | ----------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
-| `_resolver` | [`IJB721TokenUriResolver`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md) | The resolver to set. |
+| `_resolver` | [`IJB721TokenUriResolver`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721tokenuriresolver.md) | The resolver to set. |
 
 ### recordSetEncodedIPFSUriOf
 
@@ -626,7 +626,7 @@ function recordFlags(JBTiered721Flags calldata _flags) external override;
 
 | Name     | Type                                                                                      | Description       |
 | -------- | ----------------------------------------------------------------------------------------- | ----------------- |
-| `_flags` | [`JBTiered721Flags`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md) | The flags to set. |
+| `_flags` | [`JBTiered721Flags`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbtiered721flags.md) | The flags to set. |
 
 ### cleanTiers
 
@@ -659,14 +659,14 @@ function _getTierFrom(address _nft, uint256 _tierId, JBStored721Tier memory _sto
 | --------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `_nft`                | `address`                                                                               | The NFT contract to get the tier from.                                               |
 | `_tierId`             | `uint256`                                                                               | The tier ID of the tier to get.                                                      |
-| `_storedTier`         | [`JBStored721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbstored721tier.md) | The stored tier to base the tier on.                                                 |
+| `_storedTier`         | [`JBStored721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbstored721tier.md) | The stored tier to base the tier on.                                                 |
 | `_includeResolvedUri` | `bool`                                                                                  | If true, if there's a token URI resolver, the content will be resolved and included. |
 
 **Returns**
 
 | Name     | Type                                                                        | Description           |
 | -------- | --------------------------------------------------------------------------- | --------------------- |
-| `<none>` | [`JB721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | tier The tier object. |
+| `<none>` | [`JB721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jb721tier.md) | tier The tier object. |
 
 ### \_isTierRemovedWithRefresh
 
@@ -685,7 +685,7 @@ function _isTierRemovedWithRefresh(address _nft, uint256 _tierId, JBBitmapWord m
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | `_nft`        | `address`                                                                         | The NFT contract on which to check if the tier is removed. |
 | `_tierId`     | `uint256`                                                                         | The tier ID to check for removal.                          |
-| `_bitmapWord` | [`JBBitmapWord`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbbitmapword.md) | The bitmap word to reuse.                                  |
+| `_bitmapWord` | [`JBBitmapWord`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbbitmapword.md) | The bitmap word to reuse.                                  |
 
 **Returns**
 
@@ -710,7 +710,7 @@ function _numberOfReservedTokensOutstandingFor(address _nft, uint256 _tierId, JB
 | ------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | `_nft`        | `address`                                                                               | The NFT contract to check mintable reserved tokens on.             |
 | `_tierId`     | `uint256`                                                                               | The tier ID to check the number of mintable reserved tokens for.   |
-| `_storedTier` | [`JBStored721Tier`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbstored721tier.md) | The stored tier to get the number of mintable reserved tokens for. |
+| `_storedTier` | [`JBStored721Tier`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbstored721tier.md) | The stored tier to get the number of mintable reserved tokens for. |
 
 **Returns**
 

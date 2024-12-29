@@ -1,8 +1,8 @@
 # fundingCycleStore
 
-Contract: [`JBReconfigurationBufferBallot`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
+Contract: [`JBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
 
-Interface: [`IJBReconfigurationBufferBallot`](/v4/deprecated/v2/interfaces/ijbfundingcycleballot)
+Interface: [`IJBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/interfaces/ijbfundingcycleballot)
 
 **The contract storing all funding cycle configurations.**
 
@@ -18,4 +18,4 @@ IJBFundingCycleStore public immutable override fundingCycleStore;
 
 * Once set the value cannot be changed.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/v4/deprecated/v2/interfaces/ijbreconfigurationbufferballot.md) interface.
+* The resulting function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/interfaces/ijbreconfigurationbufferballot.md) interface.

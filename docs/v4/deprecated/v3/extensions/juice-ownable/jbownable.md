@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-ownable/blob/b2f98133c7bea013db967e8a204ce0d9cc06d21f/src/JBOwnable.sol)
 
-Inherits: [`JBOwnableOverrides`](/v4/deprecated/v3/extensions/juice-ownable/jbownableoverrides.md)
+Inherits: [`JBOwnableOverrides`](/docs/v4/deprecated/v3/extensions/juice-ownable/jbownableoverrides.md)
 
 ## Functions
 
@@ -16,8 +16,8 @@ constructor(IJBProjects _projects, IJBOperatorStore _operatorStore) JBOwnableOve
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_projects`|[`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md)|the JBProjects to use to get the owner of the project|
-|`_operatorStore`|[`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|the operatorStore to use for the permissions|
+|`_projects`|[`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md)|the JBProjects to use to get the owner of the project|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|the operatorStore to use for the permissions|
 
 ### onlyOwner
 

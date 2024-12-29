@@ -8,20 +8,20 @@ Mainnet: [`0xA139D37275d1fF7275e6F33821898934Bc8Cb7B6`](https://etherscan.io/add
 
 Goerli: [`0x696f8175E114C5C89248Fb254185Df3Df4cD03f3`](https://goerli.etherscan.io/address/0x696f8175E114C5C89248Fb254185Df3Df4cD03f3)
 
-Inherits: [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller/), [`IJBController3_0_1`](/v4/deprecated/v3/interfaces/ijbcontroller3_0_1/), [`IJBMigratable`](/v4/deprecated/v3/api/interfaces/ijbmigratable/)
+Inherits: [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165), [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md), [`IJBController3_0_1`](/docs/v4/deprecated/v3/interfaces/ijbcontroller3_0_1.md), [`IJBMigratable`](/docs/v4/deprecated/v3/api/interfaces/ijbmigratable.md)
 
 This Controller manages a project's reserved tokens explicitly instead of through a passive tracker property.
 
-It is backwards compatible with the original [`IJBController`](/v4/deprecated/v3/interfaces/ijbcontroller/), and exposes convenience view methods as part of [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1/) for clearer queries.
+It is backwards compatible with the original [`IJBController`](/docs/v4/deprecated/v3/interfaces/ijbcontroller.md), and exposes convenience view methods as part of [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md) for clearer queries.
 
 Adheres to:
 
-- [`IJBController3_0_1`](/v4/deprecated/v3/interfaces/ijbcontroller3_0_1/): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
-- [`IJBMigratable`](/v4/deprecated/v3/api/interfaces/ijbmigratable/): Allows migrating to this contract, with a hook called to prepare for the migration.
+- [`IJBController3_0_1`](/docs/v4/deprecated/v3/interfaces/ijbcontroller3_0_1.md): General interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the protocol's rules.
+- [`IJBMigratable`](/docs/v4/deprecated/v3/api/interfaces/ijbmigratable.md): Allows migrating to this contract, with a hook called to prepare for the migration.
 
 Inherits from:
 
-- [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
+- [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md): Several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
 - [`ERC165`](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165): Introspection on interface adherance.
 
 ## State Variables

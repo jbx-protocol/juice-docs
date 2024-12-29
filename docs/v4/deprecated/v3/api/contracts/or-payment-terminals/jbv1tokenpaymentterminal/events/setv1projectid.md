@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setV1ProjectIdOf`](/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/setv1projectidof.md)
+* [`setV1ProjectIdOf`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/setv1projectidof.md)
 
 #### Definition
 

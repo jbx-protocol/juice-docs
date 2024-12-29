@@ -8,7 +8,7 @@ Mainnet: [`0x457cD63bee88ac01f3cD4a67D5DCc921D8C0D573`](https://etherscan.io/add
 
 Goerli: [`0x82129d4109625F94582bDdF6101a8Cd1a27919f5`](https://goerli.etherscan.io/address/0x82129d4109625F94582bDdF6101a8Cd1a27919f5)
 
-Inherits: [`JBPayoutRedemptionPaymentTerminal3_1_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)
+Inherits: [`JBPayoutRedemptionPaymentTerminal3_1_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1.md)
 
 ## Functions
 
@@ -60,11 +60,11 @@ constructor(
 |Name|Type|Description|
 |----|----|-----------|
 |`_baseWeightCurrency`|`uint256`|The currency to base token issuance on.|
-|`_operatorStore`|[`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
-|`_projects`|[`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
-|`_directory`|[`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
-|`_splitsStore`|[`IJBSplitsStore`](/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
-|`_prices`|[`IJBPrices`](/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
+|`_operatorStore`|[`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)|A contract storing operator assignments.|
+|`_projects`|[`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md)|A contract which mints ERC-721's that represent project ownership and transfers.|
+|`_directory`|[`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_splitsStore`|[`IJBSplitsStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md)|A contract that stores splits for each project.|
+|`_prices`|[`IJBPrices`](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
 |`_store`|`address`|A contract that stores the terminal's data.|
 |`_owner`|`address`|The address that will own this contract.|
 

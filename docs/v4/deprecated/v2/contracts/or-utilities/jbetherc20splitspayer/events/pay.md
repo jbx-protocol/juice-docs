@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`pay`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/pay.md)
+* [`pay`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/pay.md)
 
 #### Definition
 

@@ -8,11 +8,11 @@ Mainnet: [`0xFA391De95Fcbcd3157268B91d8c7af083E607A5C`](https://etherscan.io/add
 
 Goerli: [`0x0baCb87Cf7DbDdde2299D92673A938E067a9eb29`](https://goerli.etherscan.io/address/0x0baCb87Cf7DbDdde2299D92673A938E067a9eb29)
 
-Inherits: [`JBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/)
+Inherits: [`JBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1.md)
 
 Inherits from:
 
-- [`JBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1/): Generic terminal managing all inflows and outflows of funds into the protocol ecosystem.
+- [`JBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1.md): Generic terminal managing all inflows and outflows of funds into the protocol ecosystem.
 
 ## Functions
 

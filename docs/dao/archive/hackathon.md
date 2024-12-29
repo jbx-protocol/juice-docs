@@ -27,7 +27,7 @@ Make an interesting project! Criteria is subjective and up to token recipients.
 
 Our wish list:
 - A scaffold-eth starter kit for buidling a Juicebox project frontend.
-- A Juicebox protocol [extension](/dev/build/treasury-extensions/) starter kit. See [this repo](https://github.com/jbx-protocol/juice-extensions-collection).
+- A Juicebox protocol [extension](/docs/v4/deprecated/v3/build/treasury-extensions/README.md) starter kit. See [this repo](https://github.com/jbx-protocol/juice-extensions-collection).
 - A scaffold-eth NFT branch that sends funds to a Juicebox treasury. *See [tiles.art](https://tiles.art)*
 - A [Nouns](https://nouns.wtf) clone: A sequential tokenID nft auction every x hours that pipes funds into a Juicebox treasury.
 - An all-in-one [multisig.lol](https://multisig.lol) + Juicebox interface, with full read/write.
@@ -58,7 +58,7 @@ All projects must use [scaffold-eth](https://github.com/scaffold-eth/scaffold-et
 
 - Looking for teammates? Join the [Telegram](https://t.me/+3tlE2ae0475hMDcx) and visit the [Team Finder spreadsheet](https://juicebox.notion.site/1ebe2025810b4058a647c736f0a6a567?v=783ee5e2b4454478a27043bfe1afec1e). Also check the `🏰-hackathon` channel in the [Juicebox Discord server](https://discord.gg/juicebox).
 - [Scaffold ETH Docs](https://docs.scaffoldeth.io/scaffold-eth/)
-- [Juicebox Docs](https://docs.juicebox.money/dev). The [Learn](https://docs.juicebox.money/dev/learn/overview) and [Build](https://docs.juicebox.money/dev/build/getting-started) sections are great starting places.
+- [Juicebox Docs](https://docs.juicebox.money/dev). The [Learn](https://docs.juicebox.money/v4/deprecated/v3/learn/overview) and [Build](https://docs.juicebox.money/v4/deprecated/v3/build/getting-started.md) sections are great starting places.
 - [Juice SDK](https://github.com/jbx-protocol/juice-sdk), a JavaScript SDK for the Juicebox Protocol.
 - [buidlguidl.com](https://buidlguidl.com/) and [juicebox.money](https://juicebox.money/).
 - [Buidl Guidl Juicebox Project](https://juicebox.money/#/v2/p/44)!

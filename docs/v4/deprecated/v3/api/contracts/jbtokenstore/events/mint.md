@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`mintFor`](/v4/deprecated/v3/api/contracts/jbtokenstore/write/mintfor.md)
+* [`mintFor`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/write/mintfor.md)
 
 #### Definition
 

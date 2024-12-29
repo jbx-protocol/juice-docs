@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/JBTiered721DelegateProjectDeployer.sol)
 
-Inherits: [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`IJBTiered721DelegateProjectDeployer`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md)
+Inherits: [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`IJBTiered721DelegateProjectDeployer`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegateprojectdeployer.md)
 
 Deploys a project with an associated tiered 721 delegate.
 
@@ -37,9 +37,9 @@ constructor(IJBDirectory _directory, IJBTiered721DelegateDeployer _delegateDeplo
 
 | Name                | Type                                                                                                                 | Description                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| `_directory`        | [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)                                                           | The directory of terminals and controllers for projects. |
-| `_delegateDeployer` | [`IJBTiered721DelegateDeployer`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md) | The delegate deployer.                                   |
-| `_operatorStore`    | [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)                                                   | A contract storing operator assignments.                 |
+| `_directory`        | [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)                                                           | The directory of terminals and controllers for projects. |
+| `_delegateDeployer` | [`IJBTiered721DelegateDeployer`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegatedeployer.md) | The delegate deployer.                                   |
+| `_operatorStore`    | [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)                                                   | A contract storing operator assignments.                 |
 
 ### launchProjectFor
 
@@ -59,9 +59,9 @@ function launchProjectFor(
 | Name                           | Type                                                                                                                | Description                                                                                          |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `_owner`                       | `address`                                                                                                           | The address to set as the owner of the project. The project's ERC-721 will be owned by this address. |
-| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Data necessary to deploy the delegate.                                                               |
-| `_launchProjectData`           | [`JBLaunchProjectData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchprojectdata.md)                     | Data necessary to launch the project.                                                                |
-| `_controller`                  | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                  | The controller with which the funding cycles should be configured.                                   |
+| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Data necessary to deploy the delegate.                                                               |
+| `_launchProjectData`           | [`JBLaunchProjectData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchprojectdata.md)                     | Data necessary to launch the project.                                                                |
+| `_controller`                  | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                  | The controller with which the funding cycles should be configured.                                   |
 
 **Returns**
 
@@ -93,9 +93,9 @@ function launchFundingCyclesFor(
 | Name                           | Type                                                                                                                | Description                                                          |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | `_projectId`                   | `uint256`                                                                                                           | The ID of the project for which the funding cycles will be launched. |
-| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Data necessary to deploy a delegate.                                 |
-| `_launchFundingCyclesData`     | [`JBLaunchFundingCyclesData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchfundingcyclesdata.md)         | Data necessary to launch the funding cycles for the project.         |
-| `_controller`                  | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                  | The controller with which the funding cycles should be configured.   |
+| `_deployTiered721DelegateData` | [`JBDeployTiered721DelegateData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md) | Data necessary to deploy a delegate.                                 |
+| `_launchFundingCyclesData`     | [`JBLaunchFundingCyclesData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchfundingcyclesdata.md)         | Data necessary to launch the funding cycles for the project.         |
+| `_controller`                  | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                  | The controller with which the funding cycles should be configured.   |
 
 **Returns**
 
@@ -127,9 +127,9 @@ function reconfigureFundingCyclesOf(
 | Name                            | Type                                                                                                                  | Description                                                            |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `_projectId`                    | `uint256`                                                                                                             | The ID of the project for which funding cycles are being reconfigured. |
-| `_deployTiered721DelegateData`  | [`JBDeployTiered721DelegateData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md)   | Data necessary to deploy a delegate.                                   |
-| `_reconfigureFundingCyclesData` | [`JBReconfigureFundingCyclesData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbreconfigurefundingcyclesdata.md) | Data necessary to reconfigure the funding cycle.                       |
-| `_controller`                   | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                    | The controller with which the funding cycles should be configured.     |
+| `_deployTiered721DelegateData`  | [`JBDeployTiered721DelegateData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbdeploytiered721delegatedata.md)   | Data necessary to deploy a delegate.                                   |
+| `_reconfigureFundingCyclesData` | [`JBReconfigureFundingCyclesData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbreconfigurefundingcyclesdata.md) | Data necessary to reconfigure the funding cycle.                       |
+| `_controller`                   | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                    | The controller with which the funding cycles should be configured.     |
 
 **Returns**
 
@@ -155,9 +155,9 @@ function _launchProjectFor(
 | Name                 | Type                                                                                                 | Description                                                             |
 | -------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | `_owner`             | `address`                                                                                            | The address to set as the project's owner.                              |
-| `_launchProjectData` | [`JBLaunchProjectData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchprojectdata.md)      | Data needed to launch the project.                                      |
-| `_dataSource`        | [`IJBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md) | The data source to set for the project.                                 |
-| `_controller`        | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                   | The controller to be used for configuring the project's funding cycles. |
+| `_launchProjectData` | [`JBLaunchProjectData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchprojectdata.md)      | Data needed to launch the project.                                      |
+| `_dataSource`        | [`IJBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md) | The data source to set for the project.                                 |
+| `_controller`        | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                   | The controller to be used for configuring the project's funding cycles. |
 
 ### \_launchFundingCyclesFor
 
@@ -177,9 +177,9 @@ function _launchFundingCyclesFor(
 | Name                       | Type                                                                                                        | Description                                                    |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | `_projectId`               | `uint256`                                                                                                   | The project ID to launch a funding cycle for.                  |
-| `_launchFundingCyclesData` | [`JBLaunchFundingCyclesData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchfundingcyclesdata.md) | Data necessary to launch a funding cycle for the project.      |
-| `_dataSource`              | [`IJBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)        | The data source to be set for the project.                     |
-| `_controller`              | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                          | The controller to configure the project's funding cycles with. |
+| `_launchFundingCyclesData` | [`JBLaunchFundingCyclesData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jblaunchfundingcyclesdata.md) | Data necessary to launch a funding cycle for the project.      |
+| `_dataSource`              | [`IJBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)        | The data source to be set for the project.                     |
+| `_controller`              | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                          | The controller to configure the project's funding cycles with. |
 
 **Returns**
 
@@ -205,9 +205,9 @@ function _reconfigureFundingCyclesOf(
 | Name                            | Type                                                                                                                  | Description                                                                |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `_projectId`                    | `uint256`                                                                                                             | The ID of the project for which the funding cycles are being reconfigured. |
-| `_reconfigureFundingCyclesData` | [`JBReconfigureFundingCyclesData`](/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbreconfigurefundingcyclesdata.md) | Data necessary to reconfigure the project's funding cycles.                |
-| `_dataSource`                   | [`IJBTiered721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)                  | The data source to be set for the project.                                 |
-| `_controller`                   | [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                    | The controller to be used for configuring the project's funding cycles.    |
+| `_reconfigureFundingCyclesData` | [`JBReconfigureFundingCyclesData`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/structs/jbreconfigurefundingcyclesdata.md) | Data necessary to reconfigure the project's funding cycles.                |
+| `_dataSource`                   | [`IJBTiered721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijbtiered721delegate.md)                  | The data source to be set for the project.                                 |
+| `_controller`                   | [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md)                                                    | The controller to be used for configuring the project's funding cycles.    |
 
 **Returns**
 

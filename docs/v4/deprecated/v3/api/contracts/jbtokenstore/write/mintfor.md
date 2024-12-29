@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function mintFor(
   * `_projectId` is the ID of the project to which the tokens belong.
   * `_amount` is the amount of tokens to mint.
   * `_preferClaimedTokens` is a flag indicating whether there's a preference for minted tokens to be claimed automatically into the `_holder`s wallet if the project currently has a token contract attached.
-* Through the [`onlyController`](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -45,8 +45,8 @@ function mintFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
-2.  Check if tokens should be minted using the internal accounting mechanism, or if they should be claimed into the holder's wallet. Tokens should be claimed if the project has issued tokens, and if the `_preferClaimedTokens` flag is true. The internal accounting mechanism uses less gas, and tokens issued using it can later be claimed into the holders wallet by anyone who submits a [`claimFor`](/v4/deprecated/v3/api/contracts/jbtokenstore/write/claimfor.md) transaction.
+    * [`tokenOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/tokenof.md)
+2.  Check if tokens should be minted using the internal accounting mechanism, or if they should be claimed into the holder's wallet. Tokens should be claimed if the project has issued tokens, and if the `_preferClaimedTokens` flag is true. The internal accounting mechanism uses less gas, and tokens issued using it can later be claimed into the holders wallet by anyone who submits a [`claimFor`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/write/claimfor.md) transaction.
 
     ```
     // Save a reference to whether there exists a token and the caller prefers these claimed tokens.
@@ -68,12 +68,12 @@ function mintFor(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-    * [`unclaimedTotalSupplyOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedTotalSupplyOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
 
     _External references:_
 
-    * [`mint`](/v4/deprecated/v3/api/contracts/jbtoken/write/mint.md)
+    * [`mint`](/docs/v4/deprecated/v3/api/contracts/jbtoken/write/mint.md)
 
 4.  Make sure the mint doesn't cause an accounting overflow.
 
@@ -84,7 +84,7 @@ function mintFor(
 
     _Internal references:_
 
-    * [`totalSupplyOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/read/totalsupplyof.md)
+    * [`totalSupplyOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/read/totalsupplyof.md)
 
 5.  Emit a `Mint` event with the relevant parameters.
 
@@ -94,7 +94,7 @@ function mintFor(
 
     _Event references:_
 
-    * [`Mint`](/v4/deprecated/v3/api/contracts/jbtokenstore/events/mint.md)
+    * [`Mint`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/mint.md)
 
 </TabItem>
 
@@ -155,7 +155,7 @@ function mintFor(
 
 | Name                            | Data                                                                                                                                                                                                                                                                   |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Mint`**](/v4/deprecated/v3/api/contracts/jbtokenstore/events/mint.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>bool tokensWereClaimed</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul>        |
+| [**`Mint`**](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/mint.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>bool tokensWereClaimed</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul>        |
 
 </TabItem>
 

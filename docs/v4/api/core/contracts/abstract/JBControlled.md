@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/abstract/JBControlled.sol)
 
 **Inherits:**
-[IJBControlled](/v4/api/core/interfaces/IJBControlled.md)
+[IJBControlled](/docs/v4/api/core/interfaces/IJBControlled.md)
 
 Provides a modifier for contracts with functionality that can only be accessed by a project's controller.
 

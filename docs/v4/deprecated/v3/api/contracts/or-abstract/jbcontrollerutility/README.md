@@ -14,7 +14,7 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abstract/
 
 | Name                                                                      | Description                                                                                                                              |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBControllerUtility`**](/v4/deprecated/v3/api/interfaces/ijbcontrollerutility.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBControllerUtility`**](/docs/v4/deprecated/v3/api/interfaces/ijbcontrollerutility.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Constructor
 
@@ -27,16 +27,16 @@ constructor(IJBDirectory _directory) {
 }
 ```
 
-* `_directory` is an [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_directory` is an [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
 
 #### Modifiers
 
 | Name                                                                                      | Data                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`onlyController`**](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md)                                 | <ul><li><code>uint256 _projectId</code></li></ul>                                               |
+| [**`onlyController`**](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md)                                 | <ul><li><code>uint256 _projectId</code></li></ul>                                               |
 
 #### Read
 
 | Function                                   | Definition                                                                                                                                                                                                  |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`directory`**](/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/properties/directory.md) | <p><strong>Traits</strong></p><ul><li><code>immutable</code></li></ul><p><strong>Returns</strong></p><ul><li><code>IJBDirectory directory</code></li></ul> |
+| [**`directory`**](/docs/v4/deprecated/v3/api/contracts/or-abstract/jbcontrollerutility/properties/directory.md) | <p><strong>Traits</strong></p><ul><li><code>immutable</code></li></ul><p><strong>Returns</strong></p><ul><li><code>IJBDirectory directory</code></li></ul> |

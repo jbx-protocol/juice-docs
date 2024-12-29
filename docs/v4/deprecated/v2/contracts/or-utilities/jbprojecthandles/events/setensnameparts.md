@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setEnsNamePartsFor`](/v4/deprecated/v2/contracts/or-utilities/jbprojecthandles/write/setensnamepartsfor.md)
+* [`setEnsNamePartsFor`](/docs/v4/deprecated/v2/contracts/or-utilities/jbprojecthandles/write/setensnamepartsfor.md)
 
 #### Definition
 

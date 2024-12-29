@@ -4,18 +4,18 @@ Generic terminal managing all inflows and outflows of funds into the protocol ec
 
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/48fe7091a30761fa42ce394c68aad2fcf639ea53/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol)
 
-Inherits: [`JBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/), [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1/)
+Inherits: [`JBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/README.md), [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable), [`IJBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1.md)
 
 A project can transfer its funds, along with the power to reconfigure and mint/burn their tokens, from this contract to another allowed terminal of the same token type contract at any time.
 
 Adheres to:
 
-- [`IJBPayoutRedemptionPaymentTerminal3_1`](/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1/): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IJBPayoutRedemptionPaymentTerminal3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpayoutredemptionpaymentterminal3_1.md): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 Inherits from:
 
-- [`JBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/): Generic terminal managing all inflows of funds into the protocol ecosystem for one token.
-- [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
+- [`JBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/README.md): Generic terminal managing all inflows of funds into the protocol ecosystem for one token.
+- [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.
 - [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable): Includes convenience functionality for checking a message sender's permissions before executing certain transactions.*
 
 ## State Variables

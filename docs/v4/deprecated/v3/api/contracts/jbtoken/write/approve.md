@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBToken`](/v4/deprecated/v3/api/contracts/jbtoken/README.md)​‌
+Contract: [`JBToken`](/docs/v4/deprecated/v3/api/contracts/jbtoken/README.md)​‌
 
-Interface: [`IJBToken`](/v4/deprecated/v3/api/interfaces/ijbtoken.md)
+Interface: [`IJBToken`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -26,7 +26,7 @@ function approve(
   * `_projectId` is the ID of the project to which the token belongs. This is ignored.
   * `_spender` is the address that will be spending tokens on the `msg.sender`s behalf.
   * `_amount` is the amount the `_spender` is allowed to spend.
-* The function overrides a function definition from the [`IJBToken`](/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface.
+* The function overrides a function definition from the [`IJBToken`](/docs/v4/deprecated/v3/api/interfaces/ijbtoken.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -40,7 +40,7 @@ function approve(
 
     _Internal references:_
 
-    * [`projectId`](/v4/deprecated/v3/api/contracts/jbtoken/properties/projectid.md)
+    * [`projectId`](/docs/v4/deprecated/v3/api/contracts/jbtoken/properties/projectid.md)
 
 2.  Forward the call to the ERC20 implementation.
 

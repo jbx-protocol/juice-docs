@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function transferFrom(
   * `_projectId` is the ID of the project whose tokens are being transferred.
   * `_recipient` is thhe recipient of the tokens.
   * `_amount` is the amount of tokens to transfer.
-* Through the [`requirePermission`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations.TRANSFER`](/v4/deprecated/v3/api/libraries/jboperations.md) permission by the token holder.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
+* Through the [`requirePermission`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations.TRANSFER`](/docs/v4/deprecated/v3/api/libraries/jboperations.md) permission by the token holder.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -45,7 +45,7 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/fundingcyclestore.md)
 
 2.  Make sure the project's current funding cycle is not set to pause transfers.
 
@@ -56,7 +56,7 @@ function transferFrom(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v3/api/libraries/jbfundingcyclemetadataresolver.md)
       * `.global(...)`
 
 3.  Make sure a non-zero recipient was specified.
@@ -75,7 +75,7 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 
 5.  Make sure the holder has enough unclaimed tokens to transfer.
 
@@ -94,7 +94,7 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 7.  Add the amount of unclaimed project tokens to the recipient's balance.
 
     ```
@@ -106,7 +106,7 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 8.  Emit a `Transfer` event with the relevant parameters.
 
     ```
@@ -115,7 +115,7 @@ function transferFrom(
 
     _Event references:_
 
-    * [`Transfer`](/v4/deprecated/v3/api/contracts/jbtokenstore/events/transfer.md)
+    * [`Transfer`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/transfer.md)
 
 </TabItem>
 
@@ -185,7 +185,7 @@ function transferFrom(
 
 | Name                                    | Data                                                                                                                                                                                                                        |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Transfer`**](/v4/deprecated/v3/api/contracts/jbtokenstore/events/transfer.md)                     | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>address indexed recipient</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                   |
+| [**`Transfer`**](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/events/transfer.md)                     | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>address indexed recipient</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                   |
 
 </TabItem>
 

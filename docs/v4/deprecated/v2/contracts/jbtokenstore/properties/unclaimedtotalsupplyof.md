@@ -1,8 +1,8 @@
 # unclaimedTotalSupplyOf
 
-Contract: [`JBTokenStore`](/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md)
 
 **The total supply of unclaimed tokens for each project.**
 
@@ -21,4 +21,4 @@ mapping(uint256 => uint256) public override unclaimedTotalSupplyOf;
 * Arguments:
   * `_projectId` is the ID of the project to which the token belongs.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
+* The resulting function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/v4/deprecated/v2/contracts/jbdirectory)​‌
+Contract: [`JBDirectory`](/docs/v4/deprecated/v2/contracts/jbdirectory/README.md)​‌
 
-Interface: [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md)
+Interface: [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -33,7 +33,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`isTerminalOf`](/v4/deprecated/v2/contracts/jbdirectory/read/isterminalof.md)
+    * [`isTerminalOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/read/isterminalof.md)
 
 2.  Get a reference to the project's current funding cycle.
 
@@ -44,11 +44,11 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v2/contracts/jbdirectory/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
 
 3.  Make sure the project's current funding cycle is set to allow setting its terminals, or the request to set the controller is coming from the project's current controller.
 
@@ -62,12 +62,12 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.setTerminalsAllowed(...)`
 
     _Internal references:_
 
-    * [`controllerOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
 
 4.  Add the terminal.
     ```
@@ -77,7 +77,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`_terminalsOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/-_terminalsof.md)
+    * [`_terminalsOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/-_terminalsof.md)
 5.  Emit a `AddTerminal` event with the relevant parameters.
 
     ```
@@ -86,7 +86,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Event references:_
 
-    * [`AddTerminal`](/v4/deprecated/v2/contracts/jbdirectory/events/addterminal.md)
+    * [`AddTerminal`](/docs/v4/deprecated/v2/contracts/jbdirectory/events/addterminal.md)
 
 </TabItem>
 
@@ -133,7 +133,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
 | Name                                          | Data                                                                                                                                                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`AddTerminal`**](/v4/deprecated/v2/contracts/jbdirectory/events/addterminal.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code><a href="/v4/deprecated/v2/interfaces/ijbpaymentterminal">IJBPaymentTerminal</a> indexed terminal</code></li><li><code>address caller</code></li></ul> |
+| [**`AddTerminal`**](/docs/v4/deprecated/v2/contracts/jbdirectory/events/addterminal.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code><a href="/v4/deprecated/v2/interfaces/ijbpaymentterminal">IJBPaymentTerminal</a> indexed terminal</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

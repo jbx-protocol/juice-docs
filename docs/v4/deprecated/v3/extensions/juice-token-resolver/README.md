@@ -4,7 +4,7 @@
 This is the README from the `juice-token-resolver` [GitHub Repository](https://github.com/jbx-protocol/juice-token-resolver).
 :::
 
-Creates onchain SVG Metadata for all Juicebox projects on [JBDirectory V3](https://docs.juicebox.money/dev/api/contracts/jbdirectory/).
+Creates onchain SVG Metadata for all Juicebox projects on [JBDirectory V3](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbdirectory/README.md).
 
 ![Example output](onchain.svg)
 
@@ -62,11 +62,11 @@ Deploy only the DefaultTokenUriResolver to Mainnet: `forge script script/Mainnet
 ## Design
 
 ### TokenUriResolver.sol
-[JBProjects](https://docs.juicebox.money/dev/api/contracts/jbprojects/)'s `tokenURI(uint256 _projectId)` function will call this contract's `getUri(uint256 _projectId)` function. TokenUriResolver will check if the given project has a custom resolver set. If so, it will call `getUri(uint256 _projectId)` on that contract. If not, or if that call to the custom resolver fails, it will call the `getUri` function on the DefaultUriResovler.
+[JBProjects](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbprojects/README.md)'s `tokenURI(uint256 _projectId)` function will call this contract's `getUri(uint256 _projectId)` function. TokenUriResolver will check if the given project has a custom resolver set. If so, it will call `getUri(uint256 _projectId)` on that contract. If not, or if that call to the custom resolver fails, it will call the `getUri` function on the DefaultUriResovler.
 
 ### DefaultUriResolver.sol
 
-This resolver generates metadata including an onchain SVG for each JBProject using the [JBDirectory](https://docs.juicebox.money/dev/api/contracts/jbdirectory/) v3 based on values returned form its primary ETH terminal. This Default resolver allows project owners to customize the color of their project's NFT metadata with three theme colors.
+This resolver generates metadata including an onchain SVG for each JBProject using the [JBDirectory](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbdirectory/README.md) v3 based on values returned form its primary ETH terminal. This Default resolver allows project owners to customize the color of their project's NFT metadata with three theme colors.
 
 For projects that are not configured to use this directory, the resolver will return a basic metadata description informing the project owner that they can get rich realtime metadata by upgrading to JBDirectory V3.
 

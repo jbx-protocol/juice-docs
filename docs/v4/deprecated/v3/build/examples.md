@@ -73,7 +73,7 @@ contract JBProjectViewUtil {
 
 ## Read Overflow
 
-A simple project which reads a project's overflow in their primary ETH terminal. A project's [*Overflow*](/v4/deprecated/v3/learn/glossary/overflow/) is the funds it holds which aren't needed for the current funding cycle's payouts.
+A simple project which reads a project's overflow in their primary ETH terminal. A project's [*Overflow*](/docs/v4/deprecated/v3/learn/glossary/overflow.md) is the funds it holds which aren't needed for the current funding cycle's payouts.
 
 ```
 import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
@@ -97,6 +97,6 @@ contract JBProjectViewUtil {
 }
 ```
 
-[`IJBPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal/)s are required to report how much ETH's worth of tokens it holds for a project in excess of funds needed for the current funding cycle's payouts via [`IJBPaymentTerminal.currentEthOverflowOf(uint256 _projectId)`](/v4/deprecated/v3/api/interfaces/ijbpaymentterminal/). The terminal can be written to assume a conversion rate to ETH of 0, meaning it could have a balance of 10,000 shitcoins but still have an ETH overflow of 0.
+[`IJBPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md)s are required to report how much ETH's worth of tokens it holds for a project in excess of funds needed for the current funding cycle's payouts via [`IJBPaymentTerminal.currentEthOverflowOf(uint256 _projectId)`](/docs/v4/deprecated/v3/api/interfaces/ijbpaymentterminal.md). The terminal can be written to assume a conversion rate to ETH of 0, meaning it could have a balance of 10,000 shitcoins but still have an ETH overflow of 0.
 
-This requirement allows for straightforwards calculation of a project's total redeemable balance for use in redemption calculations and custom [data sources](/v4/deprecated/v3/learn/glossary/data-source/).
+This requirement allows for straightforwards calculation of a project's total redeemable balance for use in redemption calculations and custom [data sources](/docs/v4/deprecated/v3/learn/glossary/data-source.md).

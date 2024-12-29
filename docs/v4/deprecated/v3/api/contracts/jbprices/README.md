@@ -16,7 +16,7 @@ Goerli testnet: [`0x9f0eC91d28fFc54874e9fF11A316Ba2537aCD72C`](https://goerli.et
 
 | Name                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPrices`**](/v4/deprecated/v3/api/interfaces/ijbprices.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBPrices`**](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 
@@ -42,13 +42,13 @@ constructor(address _owner) {
 
 | Name                               | Data                                                                                                                                                                                    |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`AddFeed`**](/v4/deprecated/v3/api/contracts/jbprices/events/addfeed.md) | <ul><li><code>uint256 indexed currency</code></li><li><code>uint256 indexed base</code></li><li><code>[IJBPriceFeed](/v4/deprecated/v3/api/interfaces/ijbpricefeed.md) feed</code></li></ul> |
+| [**`AddFeed`**](/docs/v4/deprecated/v3/api/contracts/jbprices/events/addfeed.md) | <ul><li><code>uint256 indexed currency</code></li><li><code>uint256 indexed base</code></li><li><code>[IJBPriceFeed](/docs/v4/deprecated/v3/api/interfaces/ijbpricefeed.md) feed</code></li></ul> |
 
 #### Properties
 
 | Function                                                          | Definition                                                                                                                                                                                                |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`feedFor`**](/v4/deprecated/v3/api/contracts/jbprices/properties/feedfor.md)                            | <p><strong>Params</strong></p><ul><li><code>uint256 _currency</code></li><li><code>uint256 _base</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[IJBPriceFeed](/v4/deprecated/v3/api/interfaces/ijbpricefeed.md)</code></li></ul> |
+| [**`feedFor`**](/docs/v4/deprecated/v3/api/contracts/jbprices/properties/feedfor.md)                            | <p><strong>Params</strong></p><ul><li><code>uint256 _currency</code></li><li><code>uint256 _base</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[IJBPriceFeed](/docs/v4/deprecated/v3/api/interfaces/ijbpricefeed.md)</code></li></ul> |
 
 #### Read
 
@@ -60,4 +60,4 @@ constructor(address _owner) {
 
 | Function                             | Definition                                                                                                                                                                                                                               |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`addFeedFor`**](/v4/deprecated/v3/api/contracts/jbprices/write/addfeed.md) | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _currency</code></li><li><code>uint256 _base</code></li><li><code>[IJBPriceFeed](/v4/deprecated/v3/api/interfaces/ijbpricefeed.md) _feed</code></li></ul> |
+| [**`addFeedFor`**](/docs/v4/deprecated/v3/api/contracts/jbprices/write/addfeed.md) | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _currency</code></li><li><code>uint256 _base</code></li><li><code>[IJBPriceFeed](/docs/v4/deprecated/v3/api/interfaces/ijbpricefeed.md) _feed</code></li></ul> |

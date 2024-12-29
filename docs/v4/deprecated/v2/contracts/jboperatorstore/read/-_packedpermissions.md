@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBOperatorStore`](/v4/deprecated/v2/contracts/jboperatorstore/README.md)​‌
+Contract: [`JBOperatorStore`](/docs/v4/deprecated/v2/contracts/jboperatorstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBOperatorStore`](/v4/deprecated/v3/api/contracts/jboperatorstore/README.md)​‌
+Contract: [`JBOperatorStore`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/README.md)​‌
 
-Interface: [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)
+Interface: [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -20,9 +20,9 @@ _Only an address can set its own operators._
  function setOperator(JBOperatorData calldata _operatorData) external override { ... }
 ```
 
-* `_operatorData` is the [`JBOperatorData`](/v4/deprecated/v3/api/data-structures/jboperatordata.md) that specifies the params for the operator being set.
+* `_operatorData` is the [`JBOperatorData`](/docs/v4/deprecated/v3/api/data-structures/jboperatordata.md) that specifies the params for the operator being set.
 * The function can be accessed externally by anyone.
-* The function overrides a function definition from the [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) interface.
+* The function overrides a function definition from the [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -36,7 +36,7 @@ _Only an address can set its own operators._
 
     _Internal references:_
 
-    * [`_packedPermissions`](/v4/deprecated/v3/api/contracts/jboperatorstore/read/-_packedpermissions.md)
+    * [`_packedPermissions`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/read/-_packedpermissions.md)
 2.  Store the packed permissions as the permissions of the provided operator, on behalf of the `msg.sender`, specifically for the provided domain.
 
      ```
@@ -46,7 +46,7 @@ _Only an address can set its own operators._
 
      _Internal references:_
 
-     * [`permissionsOf`](/v4/deprecated/v3/api/contracts/jboperatorstore/properties/permissionsof.md)
+     * [`permissionsOf`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/properties/permissionsof.md)
 3.  Emit a `SetOperator` event with the relevant parameters.
 
      ```
@@ -61,7 +61,7 @@ _Only an address can set its own operators._
 
      _Event references:_
 
-     * [`SetOperator`](/v4/deprecated/v3/api/contracts/jboperatorstore/events/setoperator.md)
+     * [`SetOperator`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/events/setoperator.md)
 
 </TabItem>
 
@@ -100,7 +100,7 @@ function setOperator(JBOperatorData calldata _operatorData) external override {
 
 |                                               |                                                                                                                                                                                                                                       |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetOperator`**](/v4/deprecated/v3/api/contracts/jboperatorstore/events/setoperator.md) | <ul><li><code>address indexed operator</code></li><li><code>address indexed account</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256[] permissionIndexes</code></li><li><code>uint256 packed</code></li></ul> |
+| [**`SetOperator`**](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/events/setoperator.md) | <ul><li><code>address indexed operator</code></li><li><code>address indexed account</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256[] permissionIndexes</code></li><li><code>uint256 packed</code></li></ul> |
 
 </TabItem>
 

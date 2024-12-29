@@ -54,7 +54,7 @@ Looking at the history of `Distributed Funds` in the `Activity` panel, we can se
 
 ### Reserved token allocation 🪙
 
-We can also take a look at how Lexicon Devils’ [`Reserved Tokens`](https://docs.juicebox.money/dev/learn/glossary/reserved-tokens) are split:
+We can also take a look at how Lexicon Devils’ [`Reserved Tokens`](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/reserved-tokens) are split:
 
 - ~ 11% to eight current contributors building Lexicon Devils
 - ~ 11% to the Lexicon Devils [multisig](https://etherscan.io/address/0x82F018c331231f2A27b68DDbDDe61429338D86E8)

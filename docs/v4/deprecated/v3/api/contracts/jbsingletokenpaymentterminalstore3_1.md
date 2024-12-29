@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # JBSingleTokenPaymentTerminalStore3_1
 
-Manages all bookkeeping for inflows and outflows of funds from any [`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal/).
+Manages all bookkeeping for inflows and outflows of funds from any [`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md).
 
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/48fe7091a30761fa42ce394c68aad2fcf639ea53/contracts/JBSingleTokenPaymentTerminalStore3_1.sol)
 
@@ -12,17 +12,17 @@ Mainnet: [`0x77b0A81AeB61d08C0b23c739969d22c5C9950336`](https://etherscan.io/add
 
 Goerli: [`0x101cA528F6c2E35664529eB8aa0419Ae1f724b49`](https://goerli.etherscan.io/address/0x101cA528F6c2E35664529eB8aa0419Ae1f724b49)
 
-Inherits: [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore/)
+Inherits: [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 Adheres to:
 
-- [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore/): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore.md): General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 Inherits from:
 
 - [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard): Contract module that helps prevent reentrant calls to a function.
 
-This Store expects a project's controller to be an [`IJBController3_1`](/v4/deprecated/v3/api/interfaces/ijbcontroller3_1/). This is the only difference between this version and [the original](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/).
+This Store expects a project's controller to be an [`IJBController3_1`](/docs/v4/deprecated/v3/api/interfaces/ijbcontroller3_1.md). This is the only difference between this version and [the original](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/README.md).
 
 ## State Variables
 

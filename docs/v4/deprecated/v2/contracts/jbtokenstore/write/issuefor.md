@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/docs/v4/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function issueFor(
   * `_projectId` is the ID of the project being issued tokens.
   * `_name` is the ERC-20's name.
   * `_symbol` is the ERC-20's symbol.
-* Through the [`onlyController`](/v4/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/docs/v4/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/docs/v4/deprecated/v2/interfaces/ijbtokenstore.md) interface.
 * The function returns the token that was issued.
 
 #### Body
@@ -57,8 +57,8 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
-4.  Deploy a new instance of a [`JBToken`](/v4/deprecated/v2/contracts/jbtoken/) contract. Assign it to the return value.
+    * [`tokenOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+4.  Deploy a new instance of a [`JBToken`](/docs/v4/deprecated/v2/contracts/jbtoken/README.md) contract. Assign it to the return value.
 
     ```
     // Deploy the token contract.
@@ -73,7 +73,7 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
 6.  Store the project the token is being used for.
 
     ```
@@ -83,7 +83,7 @@ function issueFor(
 
     _Internal references:_
 
-    * [`projectOf`](/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
+    * [`projectOf`](/docs/v4/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
 7.  Emit an `Issue` event with the relevant parameters.
 
     ```
@@ -92,7 +92,7 @@ function issueFor(
 
     _Event references:_
 
-    * [`Issue`](/v4/deprecated/v2/contracts/jbtokenstore/events/issue.md)
+    * [`Issue`](/docs/v4/deprecated/v2/contracts/jbtokenstore/events/issue.md)
 
 </TabItem>
 
@@ -158,7 +158,7 @@ function issueFor(
 
 | Name                              | Data                                                                                                                                                                                                         |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`Issue`**](/v4/deprecated/v2/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/v4/deprecated/v2/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
+| [**`Issue`**](/docs/v4/deprecated/v2/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/docs/v4/deprecated/v2/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
 
 </TabItem>
 

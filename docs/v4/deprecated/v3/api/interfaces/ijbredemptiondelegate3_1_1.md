@@ -22,5 +22,5 @@ function didRedeem(JBDidRedeemData3_1_1 calldata data) external payable;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`data`|[`JBDidRedeemData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidredeemdata3_1_1.md)|the data passed by the terminal, as a JBDidRedeemData struct:|
+|`data`|[`JBDidRedeemData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidredeemdata3_1_1.md)|the data passed by the terminal, as a JBDidRedeemData struct:|
 

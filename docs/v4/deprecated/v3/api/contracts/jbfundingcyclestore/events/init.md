@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_initFor`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/write/-_initfor.md)
+* [`_initFor`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/write/-_initfor.md)
 
 #### Definition
 

@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`addToBalanceOf`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/addtobalanceof.md)
+* [`addToBalanceOf`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/addtobalanceof.md)
 
 #### Definition
 

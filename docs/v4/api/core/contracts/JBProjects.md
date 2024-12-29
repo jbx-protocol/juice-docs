@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBProjects.sol)
 
 **Inherits:**
-ERC721, Ownable, [IJBProjects](/v4/api/core/interfaces/IJBProjects.md)
+ERC721, Ownable, [IJBProjects](/docs/v4/api/core/interfaces/IJBProjects.md)
 
 Stores project ownership and metadata.
 
@@ -51,7 +51,7 @@ constructor(address owner, address feeProjectOwner) ERC721("Juicebox Projects", 
 
 Indicates whether this contract adheres to the specified interface.
 
-*See [IERC165-supportsInterface](/v4/api/core/contracts/JBFeelessAddresses.md#supportsinterface).*
+*See [IERC165-supportsInterface](/docs/v4/api/core/contracts/JBFeelessAddresses.md#supportsinterface).*
 
 
 ```solidity

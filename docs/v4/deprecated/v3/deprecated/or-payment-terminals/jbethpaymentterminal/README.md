@@ -16,7 +16,7 @@ Goerli testnet: [`0x55d4dfb578daA4d60380995ffF7a706471d7c719`](https://goerli.et
 
 | Contract                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPayoutRedemptionPaymentTerminal`**](/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
+| [**`IJBPayoutRedemptionPaymentTerminal`**](/docs/v4/deprecated/v3/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
 
 #### Constructor
 
@@ -58,11 +58,11 @@ constructor(
 {}
 ```
 
-* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/v4/deprecated/v3/api/libraries/jbcurrencies.md).
-* `_operatorStore` is an [`IJBOperatorStore`](/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/v4/deprecated/v3/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
-* `_splitsStore` is an [`IJBSplitsStore`](/v4/deprecated/v3/api/interfaces/ijbsplitsstore/) contract that stores splits for each project.
-* `_prices` is an [`IJBPrices`](/v4/deprecated/v3/api/interfaces/ijbprices.md) contract that exposes price feeds.
+* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md).
+* `_operatorStore` is an [`IJBOperatorStore`](/docs/v4/deprecated/v3/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/docs/v4/deprecated/v3/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_splitsStore` is an [`IJBSplitsStore`](/docs/v4/deprecated/v3/api/interfaces/ijbsplitsstore.md) contract that stores splits for each project.
+* `_prices` is an [`IJBPrices`](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md) contract that exposes price feeds.
 * `_store` is a contract that stores the terminal's data.
 * `_owner` is the address that will own this contract.

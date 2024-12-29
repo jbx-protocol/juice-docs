@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBReconfigurationBufferBallot`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
+Contract: [`JBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
 
-Interface: [`IJBReconfigurationBufferBallot`](/v4/deprecated/v2/interfaces/ijbfundingcycleballot)
+Interface: [`IJBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/interfaces/ijbfundingcycleballot)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -24,7 +24,7 @@ function finalize(uint256 _projectId, uint256 _configured)
 * Arguments:
   * `_projectId` is the ID of the project to which the funding cycle being checked belongs.
   * `_configured` is the configuration of the funding cycle to check the state of.
-* The function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/v4/deprecated/v2/interfaces/ijbfundingcycleballot) interface.
+* The function overrides a function definition from the [`IJBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/interfaces/ijbfundingcycleballot) interface.
 * The function returns the state of the finalized ballot. If `Active`, the ballot can still later be finalized when it's state resolves.
 
 #### Body
@@ -38,11 +38,11 @@ function finalize(uint256 _projectId, uint256 _configured)
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`get`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/get.md)
+    * [`get`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/get.md)
 
 2.  Get a reference to the current finalized ballot state.
 
@@ -53,7 +53,7 @@ function finalize(uint256 _projectId, uint256 _configured)
 
     _Internal references:_
 
-    * [`finalState`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/finalstate.md)
+    * [`finalState`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/finalstate.md)
 
 3.  If the currency final state is still unresolved, store the updated value it if it has now resolved and emit a `Finalize` event with the relevant parameters.
 
@@ -73,17 +73,17 @@ function finalize(uint256 _projectId, uint256 _configured)
 
     _Enums used:_
 
-    * [`JBBallotState`](/v4/deprecated/v2/enums/jbballotstate.md)
+    * [`JBBallotState`](/docs/v4/deprecated/v2/enums/jbballotstate.md)
       * `.Active`
 
     _Internal references:_
 
-    * [`stateOf`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/read/stateof.md)
-    * [`finalState`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/finalstate.md)
+    * [`stateOf`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/read/stateof.md)
+    * [`finalState`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/finalstate.md)
 
     _Event references:_
 
-    * [`Finalize`](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/events/finalize.md)
+    * [`Finalize`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/events/finalize.md)
 
 </TabItem>
 
@@ -130,7 +130,7 @@ function finalize(uint256 _projectId, uint256 _configured)
 
 | Name                                  | Data                                                                                                                                                                                                                                                                                           |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Finalize`**](/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/events/finalize.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed configuration</code></li><li><code>[JBBallotState](/v4/deprecated/v2/enums/jbballotstate.md) indexed ballotState</code></li><li><code>address caller</code></li></ul> |
+| [**`Finalize`**](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/events/finalize.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed configuration</code></li><li><code>[JBBallotState](/docs/v4/deprecated/v2/enums/jbballotstate.md) indexed ballotState</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

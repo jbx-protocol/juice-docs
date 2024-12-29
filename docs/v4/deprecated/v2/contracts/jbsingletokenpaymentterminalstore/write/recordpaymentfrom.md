@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -14,7 +14,7 @@ Interface: [`IJBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/i
 
 _Mint's the project's tokens according to values provided by a configured data source. If no data source is configured, mints tokens proportional to the amount of the contribution._
 
-_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md). The amount specified in the params is in terms of the msg.sender's tokens._
+_The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md). The amount specified in the params is in terms of the msg.sender's tokens._
 
 #### Definition
 
@@ -41,13 +41,13 @@ function recordPaymentFrom(
 
 * Arguments:
   * `_payer` is the original address that sent the payment to the terminal.
-  * `_amount` is a [`JBTokenAmount`](/v4/deprecated/v2/data-structures/jbtokenamount.md) data structure specifying the amount of tokens being paid. Includes the token being paid, the value, the number of decimals included, and the currency of the amount.
+  * `_amount` is a [`JBTokenAmount`](/docs/v4/deprecated/v2/data-structures/jbtokenamount.md) data structure specifying the amount of tokens being paid. Includes the token being paid, the value, the number of decimals included, and the currency of the amount.
   * `_projectId` is the ID of the project being paid.
   * `_baseWeightCurrency` is the currency to base token issuance on.
   * `_beneficiary` is the specified address that should be the beneficiary of anything that results from the payment.
   * `_memo` is a memo to pass along to the emitted event, and passed along to the funding cycle's data source.
   * `_metadata` are bytes to send along to the data source, if one is provided.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
 * The function returns:
   * `fundingCycle` is the project's funding cycle during which payment was made.
   * `tokenCount` is the number of project tokens that were minted, as a fixed point number with 18 decimals.
@@ -65,7 +65,7 @@ function recordPaymentFrom(
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
 2.  Make sure the project has a funding cycle configured. This is done by checking if the project's current funding cycle number is non-zero.
 
     ```
@@ -81,7 +81,7 @@ function recordPaymentFrom(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.payPaused(...)`
 4.  Create a variable where the weight to use in subsquent calculations will be saved.
 
@@ -89,7 +89,7 @@ function recordPaymentFrom(
     // The weight according to which new token supply is to be minted, as a fixed point number with 18 decimals.
     uint256 _weight;
     ```
-5.  If the project's current funding cycle is configured to use a data source when receiving payments, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBPayParamsData`](/v4/deprecated/v2/data-structures/jbpayparamsdata.md) structure. Otherwise default parameters are used.
+5.  If the project's current funding cycle is configured to use a data source when receiving payments, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBPayParamsData`](/docs/v4/deprecated/v2/data-structures/jbpayparamsdata.md) structure. Otherwise default parameters are used.
 
     ```
     // If the funding cycle has configured a data source, use it to derive a weight and memo.
@@ -120,14 +120,14 @@ function recordPaymentFrom(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.useDataSourceForPay(...)`\
       * `.dataSource(...)`\
       * `.reservedRate(...)`
 
     _External references:_
 
-    * [`payParams`](/v4/deprecated/v2/interfaces/ijbfundingcycledatasource.md)
+    * [`payParams`](/docs/v4/deprecated/v2/interfaces/ijbfundingcycledatasource.md)
 6.  If there is no amount being recorded, there's nothing left to do so the current values can be returned.
 
     ```
@@ -145,7 +145,7 @@ function recordPaymentFrom(
 
     _Internal references:_
 
-    * [`balanceOf`](/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+    * [`balanceOf`](/docs/v4/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
 8.  If there is no weight, the resulting token count will be 0. There's nothing left to do so the current values can be returned.
 
     ```
@@ -167,7 +167,7 @@ function recordPaymentFrom(
 
     _External references:_
 
-    * [`priceFor`](/v4/deprecated/v2/contracts/jbprices/read/pricefor.md)
+    * [`priceFor`](/docs/v4/deprecated/v2/contracts/jbprices/read/pricefor.md)
 
 10. Determine the number of tokens to mint.
 

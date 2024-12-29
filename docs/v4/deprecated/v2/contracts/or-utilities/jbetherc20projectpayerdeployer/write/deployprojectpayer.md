@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20ProjectPayerDeployer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/README.md)
+Contract: [`JBETHERC20ProjectPayerDeployer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/README.md)
 
-Interface: [`IJBETHERC20ProjectPayerDeployer`](/v4/deprecated/v2/interfaces/ijbetherc20projectpayerdeployer.md)
+Interface: [`IJBETHERC20ProjectPayerDeployer`](/docs/v4/deprecated/v2/interfaces/ijbetherc20projectpayerdeployer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -37,7 +37,7 @@ function deployProjectPayer(
   * `_directory` is a contract storing directories of terminals and controllers for each project.
   * `_owner` is the address that will own the project payer.
 * The function can be accessed externally by anyone.
-* The function overrides a function definition from the[`IJBETHERC20ProjectPayerDeployer`](/v4/deprecated/v2/interfaces/ijbetherc20projectpayerdeployer.md) interface.
+* The function overrides a function definition from the[`IJBETHERC20ProjectPayerDeployer`](/docs/v4/deprecated/v2/interfaces/ijbetherc20projectpayerdeployer.md) interface.
 * The function returns the project payer contract.
 
 #### Body
@@ -60,7 +60,7 @@ function deployProjectPayer(
 
     _External references:_
 
-    * [`JBETHERC20ProjectPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer)
+    * [`JBETHERC20ProjectPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/README.md)
 2.  Emit a `DeployProjectPayer` event with all relevant parameters.
 
     ```
@@ -80,7 +80,7 @@ function deployProjectPayer(
 
     _Event references:_
 
-    * [`DeployProjectPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/events/deployprojectpayer.md)
+    * [`DeployProjectPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/events/deployprojectpayer.md)
 
 </TabItem>
 
@@ -145,7 +145,7 @@ function deployProjectPayer(
 
 | Name                                | Data                                                                                                                                                                                                                                                  |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`DeployProjectPayer`**](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/events/deployprojectpayer.md)                                                                          | <ul><li><code>[IJBProjectPayer](/v4/deprecated/v2/interfaces/ijbprojectpayer.md) indexed projectPayer</code></li><li><code>uint256 defaultProjectId</code></li><li><code>address defaultBeneficiary</code></li><li><code>bool defaultPreferClaimedTokens</code></li><li><code>string defaultMemo</code></li><li><code>bytes defaultMetadata</code></li><li><code>bool preferAddToBalance</code></li><li><code>[IJBDirectory](/v4/deprecated/v2/interfaces/ijbdirectory.md) directory</code></li><li><code>address caller</code></li></ul>                  |
+| [**`DeployProjectPayer`**](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayerdeployer/events/deployprojectpayer.md)                                                                          | <ul><li><code>[IJBProjectPayer](/docs/v4/deprecated/v2/interfaces/ijbprojectpayer.md) indexed projectPayer</code></li><li><code>uint256 defaultProjectId</code></li><li><code>address defaultBeneficiary</code></li><li><code>bool defaultPreferClaimedTokens</code></li><li><code>string defaultMemo</code></li><li><code>bytes defaultMetadata</code></li><li><code>bool preferAddToBalance</code></li><li><code>[IJBDirectory](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md) directory</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

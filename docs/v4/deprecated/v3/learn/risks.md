@@ -18,7 +18,7 @@ export const Highlight = ({children, color}) => (
 
 The following are risks that everyone should be aware of before interacting with the protocol. The protocol's design exposes these risks in consequence to its normal operating procedures.
 
-*Also see [Security & Audits](/v4/deprecated/v3/resources/security).*
+*Also see [Security & Audits](/docs/v4/deprecated/v3/resources/security.md).*
 
 #### Smart contract risk
 <p>
@@ -26,7 +26,7 @@ The protocol runs entirely on public smart contracts explained in detail through
 </p>
 
 #### Project owner risk
-Ownership of each project on the Juicebox protocol belongs to the address possessing a [`JBProjects`](/v4/deprecated/v3/api/contracts/jbprojects) NFT with a unique token ID, which also serves as the project's ID. The address that owns this token can reconfigure a project's funding cycles, which empower it to manipulate a project's finances both productively and maliciously.
+Ownership of each project on the Juicebox protocol belongs to the address possessing a [`JBProjects`](/docs/v4/deprecated/v3/api/contracts/jbprojects/README.md) NFT with a unique token ID, which also serves as the project's ID. The address that owns this token can reconfigure a project's funding cycles, which empower it to manipulate a project's finances both productively and maliciously.
 
    * The following values can be reconfigured by a project's owner on a per-funding cycle basis:
 
@@ -133,7 +133,7 @@ Ownership of each project on the Juicebox protocol belongs to the address posses
 #### Undistributed reserved rate risk
 
 :::info
-This risk only applies to projects which have not yet upgraded to [`JBController3_1`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/). Newly deployed projects don't have this risk.
+This risk only applies to projects which have not yet upgraded to [`JBController3_1`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md). Newly deployed projects don't have this risk.
 :::
 
 If a project enters a funding cycle with a different reserved rate than the preceding cycle while still having outstanding reserved tokens to distribute, the quantity of distributable tokens will change to reflect the new reserved rate.

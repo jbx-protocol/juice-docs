@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/1fb5688d98a7c6e49f86f6a7e868a61ef4c2409a/src/JBTokens.sol)
 
 **Inherits:**
-[JBControlled](/v4/api/core/contracts/abstract/JBControlled.md), [IJBTokens](/v4/api/core/interfaces/IJBTokens.md)
+[JBControlled](/docs/v4/api/core/contracts/abstract/JBControlled.md), [IJBTokens](/docs/v4/api/core/interfaces/IJBTokens.md)
 
 Manages minting, burning, and balances of projects' tokens and token credits.
 

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -33,12 +33,12 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
     _Internal references:_
 
-    * [`directory`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
-    * [`_FEE_BENEFICIARY_PROJECT_ID`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
+    * [`directory`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`_FEE_BENEFICIARY_PROJECT_ID`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
     _External references:_
 
-    * [`primaryTerminalOf`](/v4/deprecated/v3/api/contracts/jbdirectory/read/primaryterminalof.md)
+    * [`primaryTerminalOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/read/primaryterminalof.md)
 
 2.  If the protocol's terminal is the same as this terminal, save gas by paying the contract internally.
 
@@ -63,8 +63,8 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Internal references:_
 
-        * [`_pay`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
-        * [`_FEE_BENEFICIARY_PROJECT_ID`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
+        * [`_pay`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
+        * [`_FEE_BENEFICIARY_PROJECT_ID`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
 
 3.  Otherwise if the terminal is different, transfer the fee over.
@@ -82,7 +82,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Virtual references:_
 
-        * [`_beforeTransferTo`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
+        * [`_beforeTransferTo`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
     4.  Get a reference to the ETH amount that should be attached to the transaction. Only attach anything if the token being paid is ETH.
 
@@ -93,7 +93,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Library references:_
 
-        * [`JBTokens`](/v4/deprecated/v3/api/libraries/jbtokens.md)
+        * [`JBTokens`](/docs/v4/deprecated/v3/api/libraries/jbtokens.md)
           * `.ETH`
     5.  Send the payment.
 
@@ -113,11 +113,11 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Internal references:_
 
-        * [`_FEE_BENEFICIARY_PROJECT_ID`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
+        * [`_FEE_BENEFICIARY_PROJECT_ID`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
         _External references:_
 
-        * [`pay`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
+        * [`pay`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
 
 
 </TabItem>

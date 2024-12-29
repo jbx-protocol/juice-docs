@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBFundingCycleStore`](/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​
+Contract: [`JBFundingCycleStore`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/README.md)​
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -77,10 +77,10 @@ function _initFor(
 
     _Internal references:_
 
-    * [`_packAndStoreIntrinsicPropertiesOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/write/-_packandstoreintrinsicpropertiesof.md)
-    * [`_deriveStartFrom`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_derivestartfrom.md)
-    * [`_deriveWeightFrom`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_deriveweightfrom.md)
-    * [`_deriveNumberFrom`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_derivenumberfrom.md)
+    * [`_packAndStoreIntrinsicPropertiesOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/write/-_packandstoreintrinsicpropertiesof.md)
+    * [`_deriveStartFrom`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_derivestartfrom.md)
+    * [`_deriveWeightFrom`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_deriveweightfrom.md)
+    * [`_deriveNumberFrom`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/-_derivenumberfrom.md)
 2.  Store the initialized configuration as the latest of the project.
 
     ```
@@ -90,7 +90,7 @@ function _initFor(
 
     _Internal references:_
 
-    * [`latestConfigurationOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
+    * [`latestConfigurationOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/properties/latestconfigurationof.md)
 3.  Emit an `Init` event with the relevant parameters.
 
     ```
@@ -99,7 +99,7 @@ function _initFor(
 
     _Event references:_
 
-    * [`Init`](/v4/deprecated/v2/contracts/jbfundingcyclestore/events/init.md)
+    * [`Init`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/events/init.md)
 
 </TabItem>
 
@@ -174,7 +174,7 @@ function _initFor(
 
 | Name       | Data                                                                                                                                                      |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Init`**](/v4/deprecated/v2/contracts/jbfundingcyclestore/events/init.md)           | <ul><li><code>uint256 indexed configuration</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed basedOn</code></li></ul>                                                                                                                                                                                                 |
+| [**`Init`**](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/events/init.md)           | <ul><li><code>uint256 indexed configuration</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed basedOn</code></li></ul>                                                                                                                                                                                                 |
 
 </TabItem>
 

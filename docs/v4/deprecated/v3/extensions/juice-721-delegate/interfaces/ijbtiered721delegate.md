@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/interfaces/IJBTiered721Delegate.sol)
 
-Inherits: [`IJB721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721delegate.md)
+Inherits: [`IJB721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721delegate.md)
 
 ## Functions
 

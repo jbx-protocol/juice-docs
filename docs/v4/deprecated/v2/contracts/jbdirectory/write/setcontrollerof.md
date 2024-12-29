@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/v4/deprecated/v2/contracts/jbdirectory/)​‌
+Contract: [`JBDirectory`](/docs/v4/deprecated/v2/contracts/jbdirectory/README.md)​‌
 
-Interface: [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md)
+Interface: [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -37,8 +37,8 @@ function setControllerOf(uint256 _projectId, address _controller)
 * Arguments:
   * `_projectId` is the ID of the project to set a new controller for.
   * `_controller` is the new controller to set.
-* Through the [`requirePermissionAllowingOverride`](/v4/deprecated/v2/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) modifier, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.SET_CONTROLLER`](/v4/deprecated/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, from the project's current controller, or from an allow-listed controller if the project doesn't already have a controller set.
-* The function overrides a function definition from the [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.
+* Through the [`requirePermissionAllowingOverride`](/docs/v4/deprecated/v2/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md) modifier, the function is only accessible by the project's owner, from an operator that has been given the [`JBOperations.SET_CONTROLLER`](/docs/v4/deprecated/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`, from the project's current controller, or from an allow-listed controller if the project doesn't already have a controller set.
+* The function overrides a function definition from the [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.
 * The function doesn't return anything
 
 #### Body
@@ -52,11 +52,11 @@ function setControllerOf(uint256 _projectId, address _controller)
 
     _Internal references:_
 
-    * [`projects`](/v4/deprecated/v2/contracts/jbdirectory/properties/projects.md)
+    * [`projects`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/projects.md)
 
     _External references:_
 
-    * [`count`](/v4/deprecated/v2/contracts/jbprojects/properties/count.md)
+    * [`count`](/docs/v4/deprecated/v2/contracts/jbprojects/properties/count.md)
 
 2.  Get a reference to the project's current funding cycle.
 
@@ -67,11 +67,11 @@ function setControllerOf(uint256 _projectId, address _controller)
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v2/contracts/jbdirectory/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
 
 3.  Make sure the project's current funding cycle is set to allow setting its controller, or the request to set the controller is coming from the project's current controller or is setting the first controller.
 
@@ -86,12 +86,12 @@ function setControllerOf(uint256 _projectId, address _controller)
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.setControllerAllowed(...)`
 
     _Internal references:_
 
-    * [`controllerOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
 
 4.  Store the provided controller as the controller of the project.
     ```
@@ -101,7 +101,7 @@ function setControllerOf(uint256 _projectId, address _controller)
 
     _Internal references:_
 
-    * [`controllerOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/controllerof.md)
 5.  Emit a `SetController` event with the relevant parameters.
 
     ```
@@ -110,7 +110,7 @@ function setControllerOf(uint256 _projectId, address _controller)
 
     _Event references:_
 
-    * [`SetController`](/v4/deprecated/v2/contracts/jbdirectory/events/setcontroller.md)
+    * [`SetController`](/docs/v4/deprecated/v2/contracts/jbdirectory/events/setcontroller.md)
 
 </TabItem>
 
@@ -175,7 +175,7 @@ function setControllerOf(uint256 _projectId, address _controller)
 
 | Name                                              | Data                                                                                                                                                                                                             |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetController`**](/v4/deprecated/v2/contracts/jbdirectory/events/setcontroller.md)           | <ul><li><code>int256 indexed projectId</code></li><li><code>[IJBController](/v4/deprecated/v2/interfaces/ijbcontroller.md)indexed controller</code></li><li><code>address caller</code></li></ul>                                       |
+| [**`SetController`**](/docs/v4/deprecated/v2/contracts/jbdirectory/events/setcontroller.md)           | <ul><li><code>int256 indexed projectId</code></li><li><code>[IJBController](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md)indexed controller</code></li><li><code>address caller</code></li></ul>                                       |
 
 </TabItem>
 

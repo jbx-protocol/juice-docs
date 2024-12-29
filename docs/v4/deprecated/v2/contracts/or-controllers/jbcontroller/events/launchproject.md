@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`launchProjectFor`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/launchprojectfor.md)
+* [`launchProjectFor`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/write/launchprojectfor.md)
 
 #### Definition
 

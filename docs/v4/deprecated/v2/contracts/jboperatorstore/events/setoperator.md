@@ -2,8 +2,8 @@
 
 Emitted from:
 
-* [`setOperator`](/v4/deprecated/v2/contracts/jboperatorstore/write/setoperator.md)
-* [`setOperators`](/v4/deprecated/v2/contracts/jboperatorstore/write/setoperators.md)
+* [`setOperator`](/docs/v4/deprecated/v2/contracts/jboperatorstore/write/setoperator.md)
+* [`setOperators`](/docs/v4/deprecated/v2/contracts/jboperatorstore/write/setoperators.md)
 
 #### Definition
 

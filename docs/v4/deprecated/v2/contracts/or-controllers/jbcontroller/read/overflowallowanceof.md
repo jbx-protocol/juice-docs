@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,14 +28,14 @@ function overflowAllowanceOf(
 * Arguments:
 * `_projectId` is the ID of the project to get the overflow allowance of.
 * `_configuration` is the configuration of the during which the allowance applies.
-* `_terminal` is the [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) managing the overflow.
+* `_terminal` is the [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) managing the overflow.
 * `_token` is the token for which the overflow allowance applies.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
 * The function returns:
   * `overflowAllowance` is the overflow allowance, as a fixed point number with the same number of decimals as the provided terminal.
-  * `overflowAllowanceCurrency` is the currency from [`JBCurrencies`](/v4/deprecated/v2/libraries/jbcurrencies.md) that the returned overflow allowance is in terms of.
+  * `overflowAllowanceCurrency` is the currency from [`JBCurrencies`](/docs/v4/deprecated/v2/libraries/jbcurrencies.md) that the returned overflow allowance is in terms of.
 
 #### Body
 
@@ -48,7 +48,7 @@ function overflowAllowanceOf(
 
     _Internal references:_
 
-    * [`_packedOverflowAllowanceDataOf`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/-_packedoverflowallowancedataof.md)
+    * [`_packedOverflowAllowanceDataOf`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/-_packedoverflowallowancedataof.md)
 2.  Return the overflow allowance, which is in the first 248 bits, and the currency the overflow allowance is in terms of, which is in the last 8 bits.
 
     ```

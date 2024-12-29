@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,11 +30,11 @@ function changeTokenOf(
 
 * Arguments:
   * `_projectId` is the ID of the project to which the changed token belongs.
-  * `_token` is the new token, which must adhere to the [`IJBToken`](/v4/deprecated/v2/interfaces/ijbtoken.md) specification.
+  * `_token` is the new token, which must adhere to the [`IJBToken`](/docs/v4/deprecated/v2/interfaces/ijbtoken.md) specification.
   * `_newOwner` is an address to transfer the current token's ownership to. This is optional, but it cannot be done later.
-* Through the [`requirePermission`](/v4/deprecated/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.CHANGE_TOKEN`](/v4/deprecated/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* Through the [`requirePermission`](/docs/v4/deprecated/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.CHANGE_TOKEN`](/docs/v4/deprecated/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/docs/v4/deprecated/v2/interfaces/ijbcontroller.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -48,11 +48,11 @@ function changeTokenOf(
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentOf`](/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/docs/v4/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
 2.  Make sure the current funding cycle for the project allows changing tokens.
 
     ```
@@ -62,7 +62,7 @@ function changeTokenOf(
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/docs/v4/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.changeTokenAllowed(...)`
 3.  Forward the call to the token store.
 
@@ -73,11 +73,11 @@ function changeTokenOf(
 
     _Internal references:_
 
-    * [`tokenStore`](/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+    * [`tokenStore`](/docs/v4/deprecated/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
 
     _External references:_
 
-    * [`changeFor`](/v4/deprecated/v2/contracts/jbtokenstore/write/changefor.md)
+    * [`changeFor`](/docs/v4/deprecated/v2/contracts/jbtokenstore/write/changefor.md)
 
 </TabItem>
 

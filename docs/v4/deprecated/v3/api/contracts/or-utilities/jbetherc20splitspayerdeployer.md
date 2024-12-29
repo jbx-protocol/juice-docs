@@ -8,11 +8,11 @@ Mainnet: [`0x3ff1f0583a41CE8B9463F74a1227C75FC13f7C27`](https://etherscan.io/add
 
 Goerli: [`0x4C466008867c471316Be2606E5D76D1940fC4765`](https://goerli.etherscan.io/address/0x4C466008867c471316Be2606E5D76D1940fC4765)
 
-Inherits: [`IJBETHERC20SplitsPayerDeployer`](/v4/deprecated/v3/api/interfaces/ijbetherc20splitspayerdeployer/)
+Inherits: [`IJBETHERC20SplitsPayerDeployer`](/docs/v4/deprecated/v3/api/interfaces/ijbetherc20splitspayerdeployer.md)
 
 Adheres to:
 
-- [`IJBETHERC20SplitsPayerDeployer`](/v4/deprecated/v3/api/interfaces/ijbetherc20splitspayerdeployer/):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
+- [`IJBETHERC20SplitsPayerDeployer`](/docs/v4/deprecated/v3/api/interfaces/ijbetherc20splitspayerdeployer.md):  General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.
 
 ## State Variables
 

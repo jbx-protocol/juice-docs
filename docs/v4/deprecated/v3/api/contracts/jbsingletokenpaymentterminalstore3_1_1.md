@@ -14,7 +14,7 @@ Mainnet: [`0x82129d4109625F94582bDdF6101a8Cd1a27919f5`](https://etherscan.io/add
 
 Goerli: [`0x5d8eC74256DB2326843714B852df3acE45144492`](https://goerli.etherscan.io/address/0x5d8eC74256DB2326843714B852df3acE45144492)
 
-Inherits: [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSingleTokenPaymentTerminalStore3_1_1`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore3_1_1.md)
+Inherits: [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard), [`IJBSingleTokenPaymentTerminalStore3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminalstore3_1_1.md)
 
 ## State Variables
 
@@ -108,7 +108,7 @@ function currentOverflowOf(IJBSingleTokenPaymentTerminal _terminal, uint256 _pro
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal for which the overflow is being calculated.|
+|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal for which the overflow is being calculated.|
 |`_projectId`|`uint256`|The ID of the project to get overflow for.|
 
 **Returns**
@@ -166,7 +166,7 @@ function currentReclaimableOverflowOf(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal from which the reclaimable amount would come.|
+|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal from which the reclaimable amount would come.|
 |`_projectId`|`uint256`|The ID of the project to get the reclaimable overflow amount for.|
 |`_tokenCount`|`uint256`|The number of tokens to make the calculation with, as a fixed point number with 18 decimals.|
 |`_useTotalOverflow`|`bool`|A flag indicating whether the overflow used in the calculation should be summed from all of the project's terminals. If false, overflow should be limited to the amount in the specified `_terminal`.|
@@ -217,9 +217,9 @@ constructor(IJBDirectory _directory, IJBFundingCycleStore _fundingCycleStore, IJ
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|[`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
-|`_fundingCycleStore`|[`IJBFundingCycleStore`](/v4/deprecated/v3/api/interfaces/ijbfundingcyclestore.md)|A contract storing all funding cycle configurations.|
-|`_prices`|[`IJBPrices`](/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
+|`_directory`|[`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A contract storing directories of terminals and controllers for each project.|
+|`_fundingCycleStore`|[`IJBFundingCycleStore`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcyclestore.md)|A contract storing all funding cycle configurations.|
+|`_prices`|[`IJBPrices`](/docs/v4/deprecated/v3/api/interfaces/ijbprices.md)|A contract that exposes price feeds.|
 
 ### recordPaymentFrom
 
@@ -255,7 +255,7 @@ function recordPaymentFrom(
 |Name|Type|Description|
 |----|----|-----------|
 |`_payer`|`address`|The original address that sent the payment to the terminal.|
-|`_amount`|[`JBTokenAmount`](/v4/deprecated/v3/api/data-structures/jbtokenamount.md)|The amount of tokens being paid. Includes the token being paid, the value, the number of decimals included, and the currency of the amount.|
+|`_amount`|[`JBTokenAmount`](/docs/v4/deprecated/v3/api/data-structures/jbtokenamount.md)|The amount of tokens being paid. Includes the token being paid, the value, the number of decimals included, and the currency of the amount.|
 |`_projectId`|`uint256`|The ID of the project being paid.|
 |`_baseWeightCurrency`|`uint256`|The currency to base token issuance on.|
 |`_beneficiary`|`address`|The specified address that should be the beneficiary of anything that results from the payment.|
@@ -266,9 +266,9 @@ function recordPaymentFrom(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The project's funding cycle during which payment was made.|
+|`fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The project's funding cycle during which payment was made.|
 |`tokenCount`|`uint256`|The number of project tokens that were minted, as a fixed point number with 18 decimals.|
-|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the local balance.|
+|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|The amount to send to delegates instead of adding to the local balance.|
 |`memo`|`string`|A memo that should be passed along to the emitted event.|
 
 ### recordRedemptionFor
@@ -312,9 +312,9 @@ function recordRedemptionFor(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the redemption was made.|
+|`fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the redemption was made.|
 |`reclaimAmount`|`uint256`|The amount of terminal tokens reclaimed, as a fixed point number with 18 decimals.|
-|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|The amount to send to delegates instead of sending to the beneficiary.|
+|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|The amount to send to delegates instead of sending to the beneficiary.|
 |`memo`|`string`|A memo that should be passed along to the emitted event.|
 
 ### recordDistributionFor
@@ -343,7 +343,7 @@ function recordDistributionFor(uint256 _projectId, uint256 _amount, uint256 _cur
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the distribution was made.|
+|`fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the distribution was made.|
 |`distributedAmount`|`uint256`|The amount of terminal tokens distributed, as a fixed point number with the same amount of decimals as its relative terminal.|
 
 ### recordUsedAllowanceOf
@@ -372,7 +372,7 @@ function recordUsedAllowanceOf(uint256 _projectId, uint256 _amount, uint256 _cur
 
 |Name|Type|Description|
 |----|----|-----------|
-|`fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the overflow allowance is being used.|
+|`fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which the overflow allowance is being used.|
 |`usedAmount`|`uint256`|The amount of terminal tokens used, as a fixed point number with the same amount of decimals as its relative terminal.|
 
 ### recordAddedBalanceFor
@@ -439,7 +439,7 @@ function _reclaimableOverflowDuring(
 |Name|Type|Description|
 |----|----|-----------|
 |`_projectId`|`uint256`|The ID of the project to get the reclaimable overflow amount for.|
-|`_fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which reclaimable overflow is being calculated.|
+|`_fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The funding cycle during which reclaimable overflow is being calculated.|
 |`_tokenCount`|`uint256`|The number of tokens to make the calculation with, as a fixed point number with 18 decimals.|
 |`_totalSupply`|`uint256`|The total supply of tokens to make the calculation with, as a fixed point number with 18 decimals.|
 |`_overflow`|`uint256`|The amount of overflow to make the calculation with.|
@@ -469,9 +469,9 @@ function _overflowDuring(
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal for which the overflow is being calculated.|
+|`_terminal`|[`IJBSingleTokenPaymentTerminal`](/docs/v4/deprecated/v3/api/interfaces/ijbsingletokenpaymentterminal.md)|The terminal for which the overflow is being calculated.|
 |`_projectId`|`uint256`|The ID of the project to get overflow for.|
-|`_fundingCycle`|[`JBFundingCycle`](/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The ID of the funding cycle to base the overflow on.|
+|`_fundingCycle`|[`JBFundingCycle`](/docs/v4/deprecated/v3/api/data-structures/jbfundingcycle.md)|The ID of the funding cycle to base the overflow on.|
 |`_balanceCurrency`|`uint256`|The currency that the stored balance is expected to be in terms of.|
 
 **Returns**

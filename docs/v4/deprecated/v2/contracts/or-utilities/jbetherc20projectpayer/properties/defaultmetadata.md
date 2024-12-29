@@ -1,8 +1,8 @@
 # defaultMetadata
 
-Contract: [`JBETHERC20ProjectPayer`](/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/README.md)
+Contract: [`JBETHERC20ProjectPayer`](/docs/v4/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/README.md)
 
-Interface: [`IJBProjectPayer`](/v4/deprecated/v2/interfaces/ijbprojectpayer.md)
+Interface: [`IJBProjectPayer`](/docs/v4/deprecated/v2/interfaces/ijbprojectpayer.md)
 
 **The metadata that should be used in the payment made when this contract receives payments.**
 
@@ -17,4 +17,4 @@ bytes public override defaultMetadata;
 ```
 
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBProjectPayer`](/v4/deprecated/v2/interfaces/ijbprojectpayer.md) interface.
+* The resulting function overrides a function definition from the [`IJBProjectPayer`](/docs/v4/deprecated/v2/interfaces/ijbprojectpayer.md) interface.

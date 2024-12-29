@@ -40,7 +40,7 @@ The JSON results will look something like this:
 ```
 
 1. `pv` is the project version. All v1 projects (using the [`Projects`](https://etherscan.io/address/0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418) contract) have a `pv` of `1`.
-2. `projectId` is the project ID within a given version of the protocol. These are sequentially assigned to new projects, starting from 0, and are also the token ID of the [Project NFT](/v4/deprecated/v3/build/project-nft/).
+2. `projectId` is the project ID within a given version of the protocol. These are sequentially assigned to new projects, starting from 0, and are also the token ID of the [Project NFT](/docs/v4/deprecated/v3/build/project-nft.md).
 3. `id` is an ID used within the Subgraph. It is the pv and projectId combined, with a dash in between the two.
 
 To illustrate this, these two queries will return the same result:

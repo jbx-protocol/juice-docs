@@ -22,7 +22,7 @@ function terminalsOf(uint256 _projectId)
   * `_projectId` is the ID of the project to get terminals of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBDirectory`](/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.
+* The function overrides a function definition from the [`IJBDirectory`](/docs/v4/deprecated/v2/interfaces/ijbdirectory.md) interface.
 * The function returns an array of terminal addresses.
 
 #### Body
@@ -35,7 +35,7 @@ function terminalsOf(uint256 _projectId)
 
     _Internal references:_
 
-    * [`_terminalsOf`](/v4/deprecated/v2/contracts/jbdirectory/properties/-_terminalsof.md)
+    * [`_terminalsOf`](/docs/v4/deprecated/v2/contracts/jbdirectory/properties/-_terminalsof.md)
 
 </TabItem>
 

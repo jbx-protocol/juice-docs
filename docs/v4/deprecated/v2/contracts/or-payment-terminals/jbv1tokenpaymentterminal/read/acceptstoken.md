@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -23,7 +23,7 @@ function acceptsToken(address _token, uint256 _projectId) external view override
   * `_projectId` is the project ID to check for token acceptance.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md) interface.
 * The function returns the flag.
 
 #### Body
@@ -37,7 +37,7 @@ function acceptsToken(address _token, uint256 _projectId) external view override
 
     _Internal references:_
 
-    * [`v1ProjectIdOf`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
+    * [`v1ProjectIdOf`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/v1projectidof.md)
 
 1.  This terminal should not accept a token if it's been explicitly set by the project, and the exchanging has not yet been finalized.
 
@@ -48,8 +48,8 @@ function acceptsToken(address _token, uint256 _projectId) external view override
 
     _Internal references:_
 
-    * [`finalized`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`finalized`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/jbx-protocol/juice-contracts-v3/blob/48fe7091a30761fa42ce394c68aad2fcf639ea53/contracts/interfaces/IJBController3_1.sol)
 
 **Inherits:**
-[**`IJBController3_0_1`**](/v4/deprecated/v3/interfaces/ijbcontroller3_0_1/), [**`ERC165`**](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165)
+[**`IJBController3_0_1`**](/docs/v4/deprecated/v3/interfaces/ijbcontroller3_0_1.md), [**`ERC165`**](https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165)
 
 
 ## Functions

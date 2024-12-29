@@ -3,7 +3,7 @@
 #### What everyone needs to know
 
 * The redemption rate determines what proportion of treasury assets can be reclaimed by a token holder by redeeming their tokens.
-* By default, all treasury assets that are considered overflow can be reclaimed by token holders. This can be modified using [data source](/v4/deprecated/v3/learn/glossary/data-source.md) extensions.
+* By default, all treasury assets that are considered overflow can be reclaimed by token holders. This can be modified using [data source](/docs/v4/deprecated/v3/learn/glossary/data-source.md) extensions.
 * A project's redemption rate and extensions can be reconfigured each funding cycle.
 * A redemption rate of 100% is linear, meaning a holder with 10% of the token supply can redeem all of their tokens for 10% of available treasury assets.
 * A redemption rate of 0% will completely disable redemptions, meaning tokens cannot be redeemed.
@@ -38,6 +38,6 @@ Here is an example bonding curve with an overflow of 100 ETH, a total supply of 
 
 #### What you'll want to know if you're building
 
-* Token holders can redeem their tokens by calling [`JBPayoutRedemptionPaymentTerminal3_1_1.redeemTokensOf(...)`](/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof).
-* A redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof) transactions.
-* A ballot redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof) transactions, which will override the standard redemption rate if there is currently a [reconfiguration ballot active](/v4/deprecated/v3/learn/glossary/ballot.md).
+* Token holders can redeem their tokens by calling [`JBPayoutRedemptionPaymentTerminal3_1_1.redeemTokensOf(...)`](/docs/v4/deprecated/v3/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1.md#redeemtokensof).
+* A redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#reconfigurefundingcyclesof) transactions.
+* A ballot redemption rate can be specified in a funding cycle through the [`JBController3_1.launchProjectFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#reconfigurefundingcyclesof) transactions, which will override the standard redemption rate if there is currently a [reconfiguration ballot active](/docs/v4/deprecated/v3/learn/glossary/ballot.md).

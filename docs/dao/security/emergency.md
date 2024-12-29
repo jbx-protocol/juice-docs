@@ -71,7 +71,7 @@ Main responsibilities:
 
 Coordinates quick changes to contracts during the emergency, including but not limited to:
 
-- Advising on and facilitating the queuing and execution of [administrative multisig actions](/dev/learn/administration/) as necessary.
+- Advising on and facilitating the queuing and execution of [administrative multisig actions](/docs/v4/deprecated/v3/learn/administration/) as necessary.
 - Facilitating upgrades, migrations, and the deployment of new smart contracts as necessary.
 
 ### Frontend Lead
@@ -110,7 +110,7 @@ The primary objective is to minimize the loss of funds, in particular for Juiceb
    - If there is no immediate risk of loss of funds, does the team still need to take preventive action or some other mitigation?
    - Is there consensus that the situation is under control and that the War Room can be closed?
 4. Once the issue has been confirmed as valid, the next step is to take immediate corrective action to prevent further loss of funds. If the root cause requires further research, the team should tend towards caution and take emergency preventive actions while the assessment continues. A few questions to guide the decisions of the team:
-   - What [administrative transactions](/dev/learn/administration/) are required? Contract Lead should confirm this step.
+   - What [administrative transactions](/docs/v4/deprecated/v3/learn/administration/) are required? Contract Lead should confirm this step.
    - Should payments, redemptions, or other features be removed or disabled from frontends? Frontend Lead should confirm this step.
    - Are multiple Team members able to confirm that corrective actions will stop the immediate risk through Ganache/Tenderly/other fork testing? Contract Lead should confirm this step.
    - Will immediate public communications/announcements help to minimize the loss of funds? Ops Lead should confirm this step.

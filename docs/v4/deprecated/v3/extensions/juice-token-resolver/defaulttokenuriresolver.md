@@ -6,7 +6,7 @@ sidebar_position: 2
 
 [Git Source](https://github.com/jbx-protocol/juice-token-resolver/blob/c700bd075c789c4790d30ba15ea2b31b7fc0791e/src/DefaultTokenUriResolver.sol)
 
-Inherits: [`IJBTokenUriResolver`](/v4/deprecated/v3/api/interfaces/ijbtokenuriresolver/), [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
+Inherits: [`IJBTokenUriResolver`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenuriresolver.md), [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
 
 ## State Variables
 

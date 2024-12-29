@@ -50,7 +50,7 @@ The JuiceboxDAO multisig ([`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https:/
 - Parts of proposals which are impossible to execute won't be executed.
 - The multisig can make small reasonable modifications to a proposal when interpreting it.
 
-The multisig controls the JuiceboxDAO project and some [Juicebox protocol parameters](https://docs.juicebox.money/dev/learn/administration). JuiceboxDAO governance execution depends upon the cooperation of the multisig's elected signers, who have committed to executing the will of the DAO as expressed by the Governance Process.
+The multisig controls the JuiceboxDAO project and some [Juicebox protocol parameters](https://docs.juicebox.money/v4/deprecated/v3/learn/administration.md). JuiceboxDAO governance execution depends upon the cooperation of the multisig's elected signers, who have committed to executing the will of the DAO as expressed by the Governance Process.
 
 #### Step 4 - Reconfiguration Delay
 

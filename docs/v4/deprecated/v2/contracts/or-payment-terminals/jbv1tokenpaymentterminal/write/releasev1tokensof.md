@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -22,7 +22,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
   * `_v1ProjectId` is the ID of the v1 project whose tokens are being released.
   * `_beneficiary` is the address that the tokens are being sent to.
 * The function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBV1TokenPaymentTerminal`](/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBV1TokenPaymentTerminal`](/docs/v4/deprecated/v2/interfaces/ijbv1tokenpaymentterminal.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -36,7 +36,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -52,7 +52,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`finalized`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
+    * [`finalized`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
 
 3.  Get a reference to the v1 ERC20 token being used by the project.
 
@@ -63,7 +63,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -78,7 +78,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -106,7 +106,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`finalized`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
+    * [`finalized`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/finalized.md)
 
 7.  Transfer ERC20 token balance held by this contract to the specified beneficiary.
 
@@ -129,7 +129,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Internal references:_
 
-    * [`ticketBooth`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
+    * [`ticketBooth`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/properties/ticketbooth.md)
 
     _External references:_
 
@@ -144,7 +144,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
     _Event references:_
 
-    * [`ReleaseV1Tokens`](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/releasev1tokens.md)
+    * [`ReleaseV1Tokens`](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/releasev1tokens.md)
 
 
 </TabItem>
@@ -206,7 +206,7 @@ function releaseV1TokensOf(uint256 _v1ProjectId, address _beneficiary) external 
 
 | Name                          | Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`ReleaseV1Tokens`**](/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/releasev1tokens.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed beneficiary</code></li><li><code>uint256 unclaimedBalance</code></li><li><code>uint256 claimedBalance</code></li><li><code>address caller</code></li></ul>        |
+| [**`ReleaseV1Tokens`**](/docs/v4/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/events/releasev1tokens.md)                                         | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed beneficiary</code></li><li><code>uint256 unclaimedBalance</code></li><li><code>uint256 claimedBalance</code></li><li><code>address caller</code></li></ul>        |
 
 </TabItem>
 

@@ -52,7 +52,7 @@ Juicebox 是一个 web3 项目募资筹款的首选去中心化平台，有鉴�
 
 <span id="注1"></span> 【注1】“**合众为一**”[[1\]](https://zh.m.wikipedia.org/zh/合众为一#cite_note-1)（[拉丁語](https://zh.m.wikipedia.org/wiki/拉丁語)：*E pluribus unum*，英語：Out of Many, One）是[美国国徽](https://zh.m.wikipedia.org/wiki/美国国徽)上的[格言](https://zh.m.wikipedia.org/wiki/格言)之一，出现在国徽的正面。该格言由[皮埃尔-尤金·迪西默蒂埃](https://zh.m.wikipedia.org/wiki/皮埃尔-尤金·迪西默蒂埃)（Pierre Eugene du Simitiere）提议，于1776年被加入[美国国徽](https://zh.m.wikipedia.org/wiki/美国国徽)，并于1782年经[国会法案](https://zh.m.wikipedia.org/wiki/美國國會法案)决议采用。“合众为一”最先出现在一首名为《Moretum》的诗歌当中，相传该诗为[维吉尔](https://zh.m.wikipedia.org/wiki/维吉尔)（Publius Vergilius Maro）所作，但他可能并非真正的作者。在诗歌中，“color est e pluribus unus”描述了将各种颜色混为一色。（此解释出处为[维基百科](https://zh.m.wikipedia.org/zh/%E5%90%88%E4%BC%97%E4%B8%BA%E4%B8%80)
 
-<span id="注2"></span> 【注2】[Hold fees](https://docs.juicebox.money/dev/learn/overview/#hold-fees)：默认情况下，资金转出 Juicebox 生态系统，会自动收取 JBX 的会员费用。如果某个筹款周期设置`hold fees`, 则收取的费用会暂扣拨备，不会马上处理掉。项目稍后如果将提取资金全额退回其 Juicebox 金库，则暂扣的费用也会退回其金库。否则，JuiceboxDAO 或者项目本身可以随时把暂扣的费用换当前发行比率转成 JBX。这个功能允许项目临时提取资金，稍后再把资金退回其 Juicebox 金库，这一过程不会产生 Juicebox 费用。
+<span id="注2"></span> 【注2】[Hold fees](https://docs.juicebox.money/v4/deprecated/v3/learn/overview/#hold-fees)：默认情况下，资金转出 Juicebox 生态系统，会自动收取 JBX 的会员费用。如果某个筹款周期设置`hold fees`, 则收取的费用会暂扣拨备，不会马上处理掉。项目稍后如果将提取资金全额退回其 Juicebox 金库，则暂扣的费用也会退回其金库。否则，JuiceboxDAO 或者项目本身可以随时把暂扣的费用换当前发行比率转成 JBX。这个功能允许项目临时提取资金，稍后再把资金退回其 Juicebox 金库，这一过程不会产生 Juicebox 费用。
 
 
 

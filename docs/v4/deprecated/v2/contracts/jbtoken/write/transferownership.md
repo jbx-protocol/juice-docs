@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBToken`](/v4/deprecated/v2/contracts/jbtoken/README.md)​‌
+Contract: [`JBToken`](/docs/v4/deprecated/v2/contracts/jbtoken/README.md)​‌
 
-Interface: [`IJBToken`](/v4/deprecated/v2/interfaces/ijbtoken.md)
+Interface: [`IJBToken`](/docs/v4/deprecated/v2/interfaces/ijbtoken.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,7 +28,7 @@ function transferOwnership(uint256 _projectId, address _newOwner)
   * `_projectId` is the ID of the project to which the token belongs. This is ignored.
   * `_newOwner` is the new owner.
 * Through the [`onlyOwner`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--) modifier, this function can only be accessed by the address that owns this contract.
-* The function overrides a function definition from the [`IJBToken`](/v4/deprecated/v2/interfaces/ijbtoken.md) interface.
+* The function overrides a function definition from the [`IJBToken`](/docs/v4/deprecated/v2/interfaces/ijbtoken.md) interface.
 * The function returns nothing.
 
 #### Body

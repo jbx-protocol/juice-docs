@@ -23,7 +23,7 @@ Juicebox project owners and operators can override the default metadata for thei
 
 
 #### Inheritance
-Inherits: [`IJBTokenUriResolver`](/v4/deprecated/v3/api/interfaces/ijbtokenuriresolver/), [`JBOperatable`](/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
+Inherits: [`IJBTokenUriResolver`](/docs/v4/deprecated/v3/api/interfaces/ijbtokenuriresolver.md), [`JBOperatable`](/docs/v4/deprecated/v3/api/contracts/or-abstract/jboperatable/README.md), [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable)
 
 ## State Variables
 

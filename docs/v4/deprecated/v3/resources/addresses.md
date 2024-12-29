@@ -5,7 +5,7 @@ sidebar_position: 1
 # Contract Addresses
 
 :::info
-Visit the deprecated section for [v2 contract addresses]((/v4/deprecated/v2/addresses) and [v1 contract addresses]((/v4/deprecated/v1/resources/contract-addresses).
+Visit the deprecated section for [v2 contract addresses]((/docs/v4/deprecated/v2/addresses) and [v1 contract addresses]((/docs/v4/deprecated/v1/resources/contract-addresses).
 :::
 
 ## Juicebox Protocol v3
@@ -126,12 +126,12 @@ JBProjectHandles: [`0xAD6F7c8052F806F83AD5F51b33cE4E547CC00f3d`](https://goerli.
 
 ### JBX ERC-20
 
-[`Tickets`]((/v4/deprecated/v1/ticketbooth/tickets/) v1 JBX: [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66)
+[`Tickets`]((/docs/v4/deprecated/v1/ticketbooth/tickets/README.md) v1 JBX: [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66)
 
-[`JBV3Token`](/v4/deprecated/v3/extensions/juice-v3-migration/jbv3token/) v3 JBX: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/address/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)
+[`JBV3Token`](/docs/v4/deprecated/v3/extensions/juice-v3-migration/jbv3token.md) v3 JBX: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/address/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)
 
 :::info
-JBX holders but are not required to claim their JBX as the ERC-20 tokens above. For accurate balances, see the relevant [`JBTokenStore`](/v4/deprecated/v3/api/contracts/jbtokenstore/) or [`TicketBooth`]((/v4/deprecated/v1/ticketbooth/) contract.
+JBX holders but are not required to claim their JBX as the ERC-20 tokens above. For accurate balances, see the relevant [`JBTokenStore`](/docs/v4/deprecated/v3/api/contracts/jbtokenstore/README.md) or [`TicketBooth`]((/docs/v4/deprecated/v1/ticketbooth/README.md) contract.
 :::
 
 ### Gnosis Safe
@@ -143,7 +143,7 @@ Safe: App: https://app.safe.global/`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`
 ## Juicebox Token Resolver
 
 :::info
-See [`juice-token-resolver`](/v4/deprecated/v3/extensions/juice-token-resolver/) and its [git source](https://github.com/jbx-protocol/juice-token-resolver.git).
+See [`juice-token-resolver`](/docs/v4/deprecated/v3/extensions/juice-token-resolver/README.md) and its [git source](https://github.com/jbx-protocol/juice-token-resolver.git).
 :::
 
 ### Mainnet

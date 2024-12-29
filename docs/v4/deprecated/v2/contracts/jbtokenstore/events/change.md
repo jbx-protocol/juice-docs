@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`changefor`](/v4/deprecated/v2/contracts/jbtokenstore/write/changefor.md)
+* [`changefor`](/docs/v4/deprecated/v2/contracts/jbtokenstore/write/changefor.md)
 
 #### Definition
 

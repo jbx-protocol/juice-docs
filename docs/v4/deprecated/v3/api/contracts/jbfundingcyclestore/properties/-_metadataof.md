@@ -1,6 +1,6 @@
 # _metadataOf
 
-Contract: [`JBFundingCycleStore`](/v4/deprecated/v3/api/contracts/jbfundingcyclestore/README.md)​‌
+Contract: [`JBFundingCycleStore`](/docs/v4/deprecated/v3/api/contracts/jbfundingcyclestore/README.md)​‌
 
 **Stores the metadata for each funding cycle configuration, packed into one storage slot.**
 

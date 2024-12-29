@@ -2,7 +2,7 @@
 
 [Git Source](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/abstract/JB721Delegate.sol)
 
-Inherits: [`ERC721`](/v4/deprecated/v3/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource3_1_1`](/v4/deprecated/v3/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IJBPayDelegate3_1_1`](/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1.md), [`IJBRedemptionDelegate3_1_1`](/v4/deprecated/v3/api/interfaces/ijbredemptiondelegate3_1_1.md)
+Inherits: [`ERC721`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/abstract/erc721.md), [`IJB721Delegate`](/docs/v4/deprecated/v3/extensions/juice-721-delegate/interfaces/ijb721delegate.md), [`IJBFundingCycleDataSource3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcycledatasource3_1_1.md), [`IJBPayDelegate3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbpaydelegate3_1_1.md), [`IJBRedemptionDelegate3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbredemptiondelegate3_1_1.md)
 
 This delegate makes NFTs available to a project's contributors upon payment, and allows project owners to enable NFT redemption for treasury assets.
 
@@ -59,7 +59,7 @@ function payParams(JBPayParamsData calldata _data)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBPayParamsData`](/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md)|The Juicebox standard project payment data.|
+|`_data`|[`JBPayParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbpayparamsdata.md)|The Juicebox standard project payment data.|
 
 **Returns**
 
@@ -67,7 +67,7 @@ function payParams(JBPayParamsData calldata _data)
 |----|----|-----------|
 |`weight`|`uint256`|The weight that tokens should get minted in accordance with.|
 |`memo`|`string`|A memo to be forwarded to the event.|
-|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|Amount to be sent to delegates instead of adding to local balance.|
+|`delegateAllocations`|[`JBPayDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbpaydelegateallocation3_1_1.md)|Amount to be sent to delegates instead of adding to local balance.|
 
 ### redeemParams
 
@@ -90,7 +90,7 @@ function redeemParams(JBRedeemParamsData calldata _data)
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
+|`_data`|[`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
@@ -98,7 +98,7 @@ function redeemParams(JBRedeemParamsData calldata _data)
 |----|----|-----------|
 |`reclaimAmount`|`uint256`|Amount to be reclaimed from the treasury.|
 |`memo`|`string`|A memo to be forwarded to the event.|
-|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|Amount to be sent to delegates instead of being added to the beneficiary.|
+|`delegateAllocations`|[`JBRedemptionDelegateAllocation3_1_1[]`](/docs/v4/deprecated/v3/api/data-structures/jbredemptiondelegateallocation3_1_1.md)|Amount to be sent to delegates instead of being added to the beneficiary.|
 
 ### redemptionWeightOf
 
@@ -117,7 +117,7 @@ function redemptionWeightOf(uint256[] memory _tokenIds, JBRedeemParamsData calld
 |Name|Type|Description|
 |----|----|-----------|
 |`_tokenIds`|`uint256[]`|The token IDs to calculate the cumulative redemption weight for.|
-|`_data`|[`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
+|`_data`|[`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
@@ -137,7 +137,7 @@ function totalRedemptionWeight(JBRedeemParamsData calldata _data) public view vi
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBRedeemParamsData`](/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
+|`_data`|[`JBRedeemParamsData`](/docs/v4/deprecated/v3/api/data-structures/jbredeemparamsdata.md)|Standard Juicebox project redemption data.|
 
 **Returns**
 
@@ -171,7 +171,7 @@ constructor(IJBDirectory _directory, bytes4 _payMetadataDelegateId, bytes4 _rede
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_directory`|[`IJBDirectory`](/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A directory of terminals and controllers for projects.|
+|`_directory`|[`IJBDirectory`](/docs/v4/deprecated/v3/api/interfaces/ijbdirectory.md)|A directory of terminals and controllers for projects.|
 |`_payMetadataDelegateId`|`bytes4`|The 4bytes ID of this delegate, used for pay metadata parsing|
 |`_redeemMetadataDelegateId`|`bytes4`|The 4bytes ID of this delegate, used for redeem metadata parsing|
 
@@ -205,7 +205,7 @@ function didPay(JBDidPayData3_1_1 calldata _data) external payable virtual overr
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
+|`_data`|[`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
 
 ### didRedeem
 
@@ -221,7 +221,7 @@ function didRedeem(JBDidRedeemData3_1_1 calldata _data) external payable virtual
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidRedeemData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidredeemdata3_1_1.md)|Standard Juicebox project redemption data.|
+|`_data`|[`JBDidRedeemData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidredeemdata3_1_1.md)|Standard Juicebox project redemption data.|
 
 ### _processPayment
 
@@ -235,7 +235,7 @@ function _processPayment(JBDidPayData3_1_1 calldata _data) internal virtual;
 
 |Name|Type|Description|
 |----|----|-----------|
-|`_data`|[`JBDidPayData3_1_1`](/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
+|`_data`|[`JBDidPayData3_1_1`](/docs/v4/deprecated/v3/api/data-structures/jbdidpaydata3_1_1.md)|Standard Juicebox project payment data.|
 
 ### _didBurn
 

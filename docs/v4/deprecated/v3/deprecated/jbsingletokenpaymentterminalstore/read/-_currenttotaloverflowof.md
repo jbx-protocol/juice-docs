@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/docs/v4/deprecated/v3/deprecated/jbsingletokenpaymentterminalstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -41,7 +41,7 @@ function _currentTotalOverflowOf(
 
     _Internal references:_
 
-    * [`terminalsOf`](/v4/deprecated/v3/api/contracts/jbdirectory/read/terminalsof.md)
+    * [`terminalsOf`](/docs/v4/deprecated/v3/api/contracts/jbdirectory/read/terminalsof.md)
 2.  Create a reference where the total balance across all terminals is be stored in terms of ETH.
 
     ```
@@ -62,7 +62,7 @@ function _currentTotalOverflowOf(
 
     _External references:_
 
-    * [`currentEthOverflowOf`](/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/currentethoverflowof.md)
+    * [`currentEthOverflowOf`](/docs/v4/deprecated/v3/deprecated/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/currentethoverflowof.md)
 4.  If the total overflow is to be returned in a currency other than ETH, make the conversion while maintaining 18 decimals of fidelity.
 
     ```
@@ -76,12 +76,12 @@ function _currentTotalOverflowOf(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBCurrencies`](/v4/deprecated/v3/api/libraries/jbcurrencies.md)
+    * [`JBCurrencies`](/docs/v4/deprecated/v3/api/libraries/jbcurrencies.md)
       * `.ETH`
 
     _External references:_
 
-    * [`priceFor`](/v4/deprecated/v3/api/contracts/jbprices/read/pricefor.md)
+    * [`priceFor`](/docs/v4/deprecated/v3/api/contracts/jbprices/read/pricefor.md)
 5.  If the fixed point overflow is to be returned with a number of decimals other than 18, adjust the number accordingly.
 
     ```
@@ -96,7 +96,7 @@ function _currentTotalOverflowOf(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBFixedPointNumber`](/v4/deprecated/v3/api/libraries/jbfixedpointnumber.md)
+    * [`JBFixedPointNumber`](/docs/v4/deprecated/v3/api/libraries/jbfixedpointnumber.md)
       * `.adjustDecimals(...)`
 
 </TabItem>
