@@ -16,7 +16,7 @@ Juicebox was first deployed to Ethereum mainnet on July 15, 2021. We now refer t
 - The ability to redeem a project's token when no funds were available to reclaim, thus burning them, was added.
 - The [`treasuryExtension`](/docs/v4/deprecated/v1/api/interfaces/fundingcyclemetadata2.md) option was added to funding cycle metadata. This allowed project owners to designate an [`ITreasuryExtension`](/docs/v4/deprecated/v1/api/interfaces/itreasuryextension.md) contract to tell the protocol how much ETH the project is storing outside of the protocol, and to take this ETH into account when calculating token redemptions.
 - Protocol fees were capped at 5%.
-- [A bug](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/README.md) which caused extra reserved issuance when changing the reserved rate from 0% to another number was fixed.
+- [A bug](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/) which caused extra reserved issuance when changing the reserved rate from 0% to another number was fixed.
 - A bug which caused issues with overflow calculation when a new cycle had begun and newly availble funds still had not been paid out was fixed.
 - In v1, the [`Governance`](/docs/v4/deprecated/v1/api/governance.md) contract provisioned terminal migrations, price feed updates, and fee changes. In v1.1, this functionality was handled directly within the [`TerminalV1_1`](/docs/v4/deprecated/v1/api/terminalv1_1.md) contract.
 

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot)
+Contract: [`JBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/contracts/or-ballots/jbreconfigurationbufferballot/README.md)
 
 Interface: [`IJBReconfigurationBufferBallot`](/docs/v4/deprecated/v2/interfaces/ijbfundingcycleballot.md)
 

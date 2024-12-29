@@ -19,7 +19,7 @@ As a DAO, we should continue focusing on the following areas:
 
 Updates:
 
-- One low severity bug was discovered, an explanation of what happened can be found [here](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/README.md), and a postmortem is available [here](https://github.com/jbx-protocol/juice-security/blob/main/incidents/08-18-2021.md).
+- One low severity bug was discovered, an explanation of what happened can be found [here](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/), and a postmortem is available [here](https://github.com/jbx-protocol/juice-security/blob/main/incidents/08-18-2021.md).
 - We're underway with a baseline audit being performed by DeFiYield.
 - We still need to outline a bug bounty program with associated rewards for discovered vulnerabilities of varying severities.
 

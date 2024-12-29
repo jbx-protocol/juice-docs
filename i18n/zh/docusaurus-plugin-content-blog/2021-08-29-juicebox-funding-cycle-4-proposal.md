@@ -19,7 +19,7 @@ tags: [governance, dao]
 
 工作汇报：
 
-- 发现一个低严重度 bug, 点击[这里](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/README.md)了解事情的前因后果，事后剖析在[这里](https://github.com/jbx-protocol/juice-security/blob/main/incidents/08-18-2021.md)
+- 发现一个低严重度 bug, 点击[这里](/docs/v4/deprecated/v3/resources/post-mortem/2021-08-18/)了解事情的前因后果，事后剖析在[这里](https://github.com/jbx-protocol/juice-security/blob/main/incidents/08-18-2021.md)
 - 由 DeFiYield 执行的基线审计正在进行中。
 - 我们仍需规划一个 bug 赏金计划，对发现的不同严重程度的漏洞给予对应的奖励。
 
