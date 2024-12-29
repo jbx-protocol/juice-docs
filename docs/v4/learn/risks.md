@@ -81,7 +81,7 @@ The following values can be reconfigured by a project's owner on a per-funding c
 
 	If a project has attached one of the above hooks, the protocol will access information from them and call functionality within them at specific moments during the execution of various transactions within the regular operation of the protocol.
 
-	🟢 Used productively this can be used to customize what happens when a treasury receives funds, what happens when the treasury pays out funds, under what conditions funds can leave a treasury, and under what conditions ruleset reconfigurations can take effect.
+	🟢 Used productively this can be used to customize what happens when a treasury receives funds, what happens when the treasury pays out funds, under what conditions funds can leave a treasury, and under what conditions queued rulesets can take effect.
 
 	🔴 Used maliciously this can be used to mint excess tokens, rug the treasury into an arbitrary wallet, trick users into compromising their individual wallets, create arbitrary unwanted and extractive behavior, brick transactions that should otherwise work, or introduce smart contract bugs into otherwise productive extension designs. Do not interact with a project that is using an untrusted hook.
 
