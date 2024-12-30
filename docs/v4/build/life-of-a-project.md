@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Contract basics
+# Life of a project
 
 To launch a project, call [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor).
 
@@ -410,24 +410,6 @@ function cashOutTokensOf(
   returns (uint256 reclaimAmount);
 ```
 
-If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#mintTokensOf). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#burnTokensOf).
-
-```
-function mintTokensOf(
-  uint256 projectId,
-  uint256 tokenCount,
-  address beneficiary,
-  string calldata memo,
-  bool useReservedPercent
-)
-  external
-  returns (uint256 beneficiaryTokenCount) { ... }
-```
-
-```
-function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;
-```
-
 <details>
 
 <summary>View cash out values</summary>
@@ -459,6 +441,24 @@ function currentReclaimableSurplusOf(
 ```
 
 </details>
+
+If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#mintTokensOf). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#burnTokensOf).
+
+```
+function mintTokensOf(
+  uint256 projectId,
+  uint256 tokenCount,
+  address beneficiary,
+  string calldata memo,
+  bool useReservedPercent
+)
+  external
+  returns (uint256 beneficiaryTokenCount) { ... }
+```
+
+```
+function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;
+```
 
 A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
 
