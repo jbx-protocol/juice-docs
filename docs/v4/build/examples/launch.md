@@ -11,7 +11,7 @@ function launchProjectFor(
   address owner,
   string calldata projectUri,
   JBRulesetConfig[] calldata rulesetConfigurations,
-  JBTerminalConfig[] memory terminalConfigurations,
+  JBTerminalConfig[] calldata terminalConfigurations,
   string calldata memo
 )
   external returns (uint256 projectId) { ... }
