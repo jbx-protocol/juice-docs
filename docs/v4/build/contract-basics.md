@@ -16,7 +16,7 @@ function launchProjectFor(
 ) external override returns (uint256 projectId) { ... }
 ```
 
-Check out the [Examples](/docs/v4/build/examples.md) page for more info on how to build projects treasuries to various specifications.
+Check out the [Launching a project](/docs/v4/build/examples/launch.md) example page for more info on how to build projects treasuries to various specifications.
 
 <details>
 
@@ -191,6 +191,7 @@ function pay(
 ) external payable returns (uint256 beneficiaryTokenCount);
 ```
 
+Check out the [Paying a project](/docs/v4/build/examples/pay.md) example page for more info on how to pay a project.
 
 <details>
 
