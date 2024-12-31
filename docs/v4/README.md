@@ -30,7 +30,7 @@ These docs are here to help you navigate the protocol, whether you're...
 #### Directory
 
 1. **[Learn](/docs/v4/learn/overview.md)** - Step-by-step guidance on how the protocol works.
-2. **[Build](/docs/v4/build/contract-basics.md)** - Guides to launch, configure, and extend a treasury.
+2. **[Build](/docs/v4/build/life-of-a-project.md)** - Guides to launch, configure, and extend a treasury.
 3. **[API](/docs/v4/api/core/contracts/JBController.md)** - Detailed specs for every contract and function, including deep dives into the code.
 
 ---
