@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Launching a Project
+# Launching a project
 
 In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from.
 

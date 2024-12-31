@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Paying a Project
+# Paying a project
 
 If you know the ID of the project you want to pay, the address of the ecosystem's [`JBDirectory`](/docs/v4/api/core/contracts/JBDirectory.md) contract, and the token you want to pay with, you can get the address of the terminal where the project is currently accepting funds. You can find this address by calling [`JBDirectory.getPrimaryTerminal(...)`](/docs/v4/api/core/contracts/JBDirectory.md#getprimaryterminalof).
 
