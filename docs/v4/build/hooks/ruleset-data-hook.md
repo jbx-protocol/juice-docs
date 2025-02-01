@@ -31,3 +31,5 @@ Once you've deployed your contract, you can use its address in the `dataHook` fi
 
 The data hook's [`IJBRulesetDataHook.hasMintPermissionFor(...)`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.md#hasmintpermissionfor) function can be used to give other contracts the permission to mint a project's tokens on its owner's behalf without any other permission coordination. 
 
+
+[Learn more about ruleset data hooks](/docs/v4/learn/glossary/ruleset-data-hook).

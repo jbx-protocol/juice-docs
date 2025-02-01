@@ -18,7 +18,7 @@ Through scheduled rulesets, projects can adapt and evolve over time, adding stru
 
 These docs are here to help you navigate the protocol, whether you're...
 - Auditing a Juicebox project
-- Designing your own treasury
+- Designing your own Juicebox project
 - Developing extensions
 - Learning Solidity and contract design
 - or, exploring the ecosystem for inspiration
@@ -30,7 +30,7 @@ These docs are here to help you navigate the protocol, whether you're...
 #### Directory
 
 1. **[Learn](/docs/v4/learn/overview.md)** - Step-by-step guidance on how the protocol works.
-2. **[Build](/docs/v4/build/life-of-a-project.md)** - Guides to launch, configure, and extend a treasury.
+2. **[Build](/docs/v4/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
 3. **[API](/docs/v4/api/core/contracts/JBController.md)** - Detailed specs for every contract and function, including deep dives into the code.
 
 ---

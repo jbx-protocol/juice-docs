@@ -63,13 +63,13 @@ This configuration ensures:
 ---
 
 ### Issue tokens
-Projects issue its tokens when treasury payments are received. By default:
+Projects issue its tokens when payments are received. By default:
 - Tokens are accounted for within the Juicebox protocol as credits (not ERC-20).
 - The project owner can optionally deploy its ERC-20 token at any time after the project is deployed, which credit holders can then claim.
 - Once a project has deployed its ERC-20 token, it no longer issues credits.
 
 **Example: Issuing Tokens**  
-1. A contributor sends 2 ETH to the project’s treasury.  
+1. A contributor sends 2 ETH to the project.  
 2. The current ruleset has a **weight** of 500 tokens/ETH, and a **reserved percent** of 20%.  
 3. The contributor receives 800 project tokens as credits.  
 
@@ -78,7 +78,7 @@ If the project later issues an ERC-20 token:
 2. These ERC-20 tokens can be freely traded or used in other DeFi protocols.
 
 Later on:
-1. A contributor sends 1 ETH to the project’s treasury.  
+1. A contributor sends 1 ETH to the project. 
 2. The contributor receives 400 project tokens as ERC-20s.  
 
 [Learn more about tokens](/docs/v4/learn/glossary/tokens.md)
@@ -134,13 +134,13 @@ The remaining 1 ETH is held as surplus, and can be distributed to the project ow
 ### Omnichain operations
 Juicebox supports projects operating across multiple EVM-compatible chains. Projects can:
 - Issue their unified project token and receive funds on any supported chain.
-- Move tokens and treasury funds proportionally between chains.
+- Move tokens and project funds proportionally between chains.
 
 **Example: Omnichain Use Case**  
 An project collects funds on Ethereum and Base:
 1. A contributor pays the project's first funds on Ethereum and receives 1,000 tokens.  
 2. The contributor bridges 500 tokens to Base.  
-3. 50% of the project’s Ethereum treasury funds are moved to Base automatically.
+3. 50% of the project’s Ethereum funds are moved to Base automatically.
 
 - **Pro Tip**: Projects must synchronize rulesets across chains to ensure consistent operations or intentionally design unique rulesets for each chain.
 
@@ -149,7 +149,7 @@ An project collects funds on Ethereum and Base:
 ---
 
 ### Customizations with hooks 
-Projects can use custom hooks to extend or override default treasury behavior:
+Projects can use custom hooks to extend or override default behavior:
 - **[`IJBRulesetDataHook`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.md)**: Define custom logic for fund receipts or token cash-outs.
 - **[`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.md)**: Define custom logic for what happens when a payment is received.
 - **[`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.md)**: Define custom logic for what happens when a token holder cashes out their tokens.
@@ -163,7 +163,7 @@ A project uses a data hook and pay hook to:
 
 This ensures contributors are rewarded with NFTs and recieve the most project tokens possible from their contributions.
 
-[Learn more about ruleset data hooks](/docs/v4/learn/glossary/data-hook.md)
+[Learn more about ruleset data hooks](/docs/v4/learn/glossary/ruleset-data-hook.md)
 [Learn more about pay hooks](/docs/v4/learn/glossary/pay-hook.md)
 [Learn more about cash out hooks](/docs/v4/learn/glossary/cash-out-hook.md)
 [Learn more about split hooks](/docs/v4/learn/glossary/split-hook.md)

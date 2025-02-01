@@ -46,15 +46,15 @@ Likewise, a project can bring its own contract to serve as its controller. A pro
 
 #### Omnichain contracts
 
-The core and surface contracts are deployed on any number of EVM chains, starting with Ethereum mainnet, Optimism, Arbitrum, and Base. Projects can connect instances of their treasuries across these chains through components called Suckers, which suck funds from one treasury and deposit them into another as a project's tokens are bridged.
+The core and surface contracts are deployed on any number of EVM chains, starting with Ethereum mainnet, Optimism, Arbitrum, and Base. Projects can connect instances of their treasuries across these chains through components called Suckers, which suck funds from one chain and deposit them into another as a project's tokens are bridged.
 
-* [`JBSucker`](.) is a contract that sucks funds from one treasury and deposits them into another as a project's tokens are bridged.
+* [`JBSucker`](.) is a contract that sucks funds from one chain and deposits them into another as a project's tokens are bridged.
 * [`JBSuckerDeployer`](.) is a contract that allows projects to deploy new suckers for new chain pairs.
 
 #### Bonus utility contracts
 
 <!-- * [`JBBuybackHook`](/docs/v4/deprecated/v2/contracts/or-utilities/jbbuybackhook/README.md) is a utility contract that allows projects to route incoming funds to buy back their own tokens from the market if it offers a better price than the current issuance rate. -->
 <!-- * [`JBTiered721Hook`](/docs/v4/deprecated/v2/contracts/or-utilities/jbtiered721hook/README.md) is a utility contract that allows projects to distribute NFTs to holders in a tiered manner as funds are received.
-* [`JBSwapTerminal`](/docs/v4/deprecated/v2/contracts/or-utilities/jbswapterminal/README.md) is a utility contract that allows projects to swap incoming funds for other tokens that it wishes to hold in its treasury, allowing payers greater optionality in how they can pay a project while not adding more risk to the project. -->
+* [`JBSwapTerminal`](/docs/v4/deprecated/v2/contracts/or-utilities/jbswapterminal/README.md) is a utility contract that allows projects to swap incoming funds for other tokens that it wishes to hold in its project's balance, allowing payers greater optionality in how they can pay a project while not adding more risk to the project. -->
 * [`JBProjectHandles`](/docs/v4/deprecated/v2/contracts/or-utilities/jbprojecthandles/README.md) lets project owners attach an ENS name as a project handle. Front ends can use a project's handle in place of its project ID, and indexers can use events to make the Juicebox project directory searchable and filterable. This will only be deployed on Ethereum mainnet.
 

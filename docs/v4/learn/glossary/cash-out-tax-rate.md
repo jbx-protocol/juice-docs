@@ -2,21 +2,21 @@
 
 #### What everyone needs to know
 
-* The cash out tax rate determines what proportion of treasury assets can be reclaimed by a token holder by cashing out their tokens, with a portion withheld as tax.
-* By default, all treasury assets that are considered surplus can be reclaimed by token holders by cashing out. This can be modified using [data hook](/docs/v4/learn/glossary/data-hook.md) extensions.
+* The cash out tax rate determines what proportion of a project's assets can be reclaimed by a token holder by cashing out their tokens, with a portion withheld as tax.
+* By default, all of a project's assets that are considered surplus can be reclaimed by token holders by cashing out. This can be modified using [data hook](/docs/v4/learn/glossary/ruleset-data-hook.md) extensions.
 * A project's cash out tax rate and hooks can be reconfigured each ruleset.
-* A cash out tax rate of 0% means no tax is withheld, and holders can cash out all of their tokens for their proportional share of available treasury surplus.
+* A cash out tax rate of 0% means no tax is withheld, and holders can cash out all of their tokens for their proportional share of a project's available surplus.
 * A cash out tax rate of 100% will completely disable cash outs, meaning surplus cannot be accessed by token holders.
-* A cash out tax rate of `x`% where 0% < `x` < 100% will leave some assets in the treasury to share between those who wait longer to cash out. The larger the `x`, the fewer assets can be reclaimed (*see note below*).
+* A cash out tax rate of `x`% where 0% < `x` < 100% will leave some assets in the project's balance to share between those who wait longer to cash out. The larger the `x`, the fewer assets can be reclaimed (*see note below*).
 * Cash outs incur the JBX membership fee of 2.5% when the cash out tax rate is greater than 0%.
 
 <details>
 
 <summary>Cash out when 0% &lt; x &lt; 100%</summary>
 
-With a cash out tax rate of 50%, a holder with 10% of the token supply can cash out their tokens for *slightly more* than 5% of available treasury assets.
+With a cash out tax rate of 50%, a holder with 10% of the token supply can cash out their tokens for *slightly more* than 5% of the project's available assets.
 
-The other ~5% will remain in the treasury, thereby increasing the cash out value of everyone else's tokens by increasing the ratio of assets to tokens. This encourages holders to cash out later than others – the first holders to cash out will receive the fewest assets in return.
+The other ~5% will remain in the project's balance, thereby increasing the cash out value of everyone else's tokens by increasing the ratio of assets to tokens. This encourages holders to cash out later than others – the first holders to cash out will receive the fewest assets in return.
 
 The reason that slightly more than 5% of assets would be returned: a cash out tax rate of 0% < `x`% < 100% allows for cash outs along a *bonding curve*. Specifically, the formula is:
 
@@ -25,7 +25,7 @@ The reason that slightly more than 5% of assets would be returned: a cash out ta
 Where:
 
 - **r** is the cash out tax rate (from 0 to 1),
-- **o** is the *surplus*, or the funds not being paid out from the treasury that ruleset,
+- **o** is the *surplus*, or the funds not being paid out from the project's balance during that ruleset,
 - **s** is the current token supply, and
 - **x** is the amount of tokens being cashed out.
 

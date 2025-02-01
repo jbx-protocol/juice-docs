@@ -11,5 +11,5 @@
 * An approval hook is a custom contract that adheres to the [`IJBRulesetApprovalHook`](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.md) interface, which can be attached to a project's rulesets to create restrictive conditions according to which proposed queued rulesets must follow in order to take effect.
 * An approval hook can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchrulesetsfor), or [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queuerulesetsof) transactions.
 
-<!-- [Get started building ruleset approval hooks](/docs/v4/build/treasury-extensions/ruleset-approval-hook). -->
+[Get started building ruleset approval hooks](/docs/v4/build/hooks/ruleset-approval-hook).
 

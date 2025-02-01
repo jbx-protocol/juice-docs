@@ -1,8 +1,8 @@
-# Data Hook
+# Ruleset Data Hook
 
 #### What everyone needs to know
 
-* A data hook contract provides extensions to a treasury that either override or augment the default [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md) functionality.
+* A data hook contract provides extensions to a project that either override or augment the default [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md) functionality.
 * A data hook can provide custom data to the [`JBMultiTerminal.pay(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#pay) transaction and/or the [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#cashouttokensof) transaction.
 * The data hook is passed contextual information from the transactions, which it uses to derive custom data for the protocol to affect subsequent behaviors in the pay and cash out transactions. Contextual information from the pay transaction is passed in the form of [`JBBeforePayRecordedContext`](/docs/v4/api/core/structs/JBBeforePayRecordedContext.md), and contextual information from the cash out transaction is passed in the form of [`JBBeforeCashOutRecordedContext`](/docs/v4/api/core/structs/JBBeforeCashOutRecordedContext.md).
 * Data hooks can revert under custom circumstances, enabling functionality such as gated treasuries, max token supplies, or minimum contribution amounts.
@@ -17,5 +17,5 @@
 * A data hook has implicit permissions to [`JBController.mintTokensFor(...)`](/docs/v4/api/core/contracts/JBController.md#minttokensfor) on a project's behalf.
 * If a data hook is not specified in a ruleset, or if flags aren't explicitly set, default protocol data will be used.
 
-<!-- [Get started building data hooks](/docs/v4/build/treasury-extensions/data-hook.md). -->
+[Get started building data hooks](/docs/v4/build/hooks/ruleset-data-hook.md).
 

@@ -195,9 +195,9 @@ Check out the [Paying a project](/docs/v4/build/examples/pay.md) example page fo
 
 <details>
 
-<summary>View treasury balance</summary>
+<summary>View project balance</summary>
 
-A project's treasury balance can be found in the [`JBTerminalStore`](/docs/v4/api/core/contracts/JBTerminalStore.md) contract.
+A project's balance can be found in the [`JBTerminalStore`](/docs/v4/api/core/contracts/JBTerminalStore.md) contract.
 
 ```
 function balanceOf(address terminal, uint256 projectId, address token) external view returns (uint256);
@@ -358,7 +358,7 @@ function usedPayoutLimitOf(
 
 </details>
 
-A project's owner can distribute additional funds from its treasury's surplus for each of its terminals up until its preconfigured allowance by calling its [`JBMultiTerminal.useAllowanceOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#useallowanceof) transaction.
+A project's owner can distribute additional funds from its surplus for each of its terminals up until its preconfigured allowance by calling its [`JBMultiTerminal.useAllowanceOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#useallowanceof) transaction.
 
 ```
 function useAllowanceOf(

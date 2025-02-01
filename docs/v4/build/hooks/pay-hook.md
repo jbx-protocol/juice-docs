@@ -13,3 +13,5 @@ interface IJBPayHook is IERC165 {
 ```
 
 Once you've deployed your contract, you can return its address from [`ruleset data hook`](/docs/v4/build/hooks/ruleset-data-hook.md). The pay hook's [`IJBPayHook.afterPayRecordedWith(...)`](/docs/v4/api/core/interfaces/IJBPayHook.md#afterpayrecordedwith) function will be called with the payment's [`JBAfterPayRecordedContext`](/docs/v4/api/core/structs/JBAfterPayRecordedContext.md) automatically after the project receives a payment. 
+
+[Learn more about pay hooks](/docs/v4/learn/glossary/pay-hook).
