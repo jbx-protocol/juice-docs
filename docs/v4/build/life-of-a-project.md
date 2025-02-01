@@ -232,23 +232,6 @@ function currentTotalSurplusOf(
 
 <details>
 
-<summary>View reserved token balance</summary>
-
-A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/contracts/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/contracts/JBController.md#pendingreservedtokenbalancesof).
-
-```
-function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
-```
-
-For projects using [`JBController`](/docs/v4/api/core/contracts/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#totaltokensupplywithreservedtokens).
-
-```
-function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
-```
-</details>
-
-<details>
-
 <summary>View project token balance</summary>
 
 Each holder's balance of a project's token can be found in the [`JBTokens`](/docs/v4/api/core/contracts/JBTokens.md) contract. The balance can be found using [`JBTokens.totalBalanceOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#totalBalanceof).
@@ -284,12 +267,6 @@ function pricePerUnitOf(
 
 </details>
 
-
-At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/contracts/JBController.md#sendreservedtokenstosplitsof).
-
-```
-function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint256) { ... }
-```
 
 At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol by calling [`JBController.deployERC20For(...)`](/docs/v4/api/core/contracts/JBController.md#deployerc20for).
 
@@ -391,6 +368,30 @@ function usedSurplusAllowanceOf(
 ```
 
 </details>
+
+At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/contracts/JBController.md#sendreservedtokenstosplitsof).
+
+```
+function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint256) { ... }
+```
+
+<details>
+
+<summary>View reserved token balance</summary>
+
+A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/contracts/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/contracts/JBController.md#pendingreservedtokenbalancesof).
+
+```
+function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
+```
+
+For projects using [`JBController`](/docs/v4/api/core/contracts/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#totaltokensupplywithreservedtokens).
+
+```
+function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
+```
+</details>
+
 
 Anyone who holds a project's tokens can cash them out at one of the project's terminals for a proportional share of the project's surplus. For example, if the project has funds in the [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md), ETH can be reclaimed by redeeming project tokens in its [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#cashouttokensof) transaction. The surplus amount is the terminal's balance minus the current ruleset's payout limit, and can be set to include the project's balance across all terminals.
 
