@@ -8,11 +8,9 @@ The Juicebox protocol is a payment processor and capital formation engine for to
 
 ---
 
-## Features
-
 ### Deploy a project
 
-Juicebox projects are represented by NFTs. Owning this NFT grants the holder full administrative privileges to adapt the project's rulesets over time.
+Each Juicebox project is represented by a [project NFT](/docs/v4/learn/glossary/project.md). Owning this NFT grants the holder full administrative privileges to adapt the project's rulesets over time.
 
 **Example: Deploying a New Project**  
 To deploy a new Juicebox project, you will:
@@ -26,7 +24,7 @@ To deploy a new Juicebox project, you will:
 ---
 
 ### Schedule rulesets for a project
-Rulesets define the operational constraints for a project, including how funds are managed, tokens are issued, and payouts are distributed. Each project operates under one active ruleset at a time, with the ability to queue any number of future rulesets at any time.
+Rulesets define the operational constraints for a project, including how funds are managed, tokens are issued, and payouts are distributed. Each project operates under one active ruleset at a time, with the ability to queue any number of future rulesets at any time that will automatically take effect once their start time approaches.
 
 [Learn more about rulesets](/docs/v4/learn/glossary/ruleset.md)
 
