@@ -9,7 +9,7 @@ sidebar_position: 2
 
 *What the DAO works toward*
 
-JuiceboxDAO helps people confidently fund, operate, and scale programmable treasuries on Ethereum.
+JuiceboxDAO helps people fund, operate, and scale their thing.
 
 #### Values
 
@@ -62,15 +62,15 @@ Give projects rich insights into their community, and provide overview informati
 
 **Frontend**
 
-Develop web clients for the protocol that make the user experience of exploring projects and contributing to them more empowering, reliable, and delightful over time.
+Develop web clients and SDKs for the protocol that make the user experience of exploring projects and contributing to them more empowering, reliable, and delightful over time.
 
 **Juicebox ecosystem**
 
-Stand up infrastructure to help projects running on the Juicebox protocol grow their decentralized communities and experiment with various treasury strategies.
+Stand up infrastructure to help projects running on the Juicebox protocol grow their decentralized communities and experiment with various tokenized strategies.
 
 **Visibility & materials**
 
-Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate Juicebox vibes and tell our story.
+Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate Juicebox aesthetics and tell our story.
 
 **Dev ops**
 
@@ -90,7 +90,7 @@ Regularly define, assess, prioritize, and publicly communicate the goals and pro
 
 DAO members are responsible for proposing and voting on:
 
-- how the DAO's treasury funds are allocated.
+- how the DAO's funds are allocated.
 - changes to the protocol the DAO has agreed to steward.
 - changes to formal processes the DAO has agreed to follow.
 - criteria for membership admission and boundaries for quitting.
@@ -99,4 +99,4 @@ DAO membership is required by the people and projects who raise funds on the Jui
 
 Membership is represented via the JBX token issued using the Juicebox protocol itself. All JBX holders are JuiceboxDAO members.
 
-Members can quit by burning any portion of their tokens at any time and take with them a portion of the treasury's funds.
+Members can quit by burning any portion of their tokens at any time and take with them a portion of the DAO's funds.
