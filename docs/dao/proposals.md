@@ -10,7 +10,7 @@ Juicebox DAO runs on a [14 day governance cycle](../process). Follow along in th
 
 #### To create a new proposal:
 
-1. Visit the [current proposals page](https://juicetool.xyz/nance/juicebox)
+1. Visit the [current proposals page](https://nance.app/s/juicebox)
 2. Click `New Proposal` in the upper right-hand corner.
 3. Click `Connect` in the upper right-hand corner. If you don't have a wallet, you can get one from [MetaMask.io](https://metamask.io).
 4. Select your proposal's type, fill out all of the metadata fields, and write your proposal in the editor below.

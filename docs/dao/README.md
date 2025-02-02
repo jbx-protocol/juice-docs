@@ -4,9 +4,11 @@ sidebar_position: 1
 
 # About JuiceboxDAO
 
-JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their projects.
+JuiceboxDAO invests in the development of the Juicebox protocol and the ecosystem around it, enabling capital formation for people and projects.
 
-JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
+JuiceboxDAO's finances and developments are accounted for entirely in the open, and it invests exclusively in open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). The DAO has Discord Town Halls every Tuesday at 23:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello.
+
+We believe open operations gives investors, builders, and consumers the best possible outcomes for the least possible costs or risks of power aggregating to intermediaries.
 
 - Learn about the DAO's core values in the [Foundation](foundation).
 - If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
@@ -21,7 +23,7 @@ JuiceboxDAO contributors build in the open — to participate, read the [contrib
 #### Website
 
 [juicebox.money](https://juicebox.money/)<br/>
-[Goerli juicebox.money](https://goerli.juicebox.money/)<br/>
+[Sepolia juicebox.money](https://sepolia.juicebox.money/)<br/>
 [JuiceboxDAO v1 Project](https://juicebox.money/p/juicebox)<br/>
 [JuiceboxDAO v2/v3 Project](https://juicebox.money/@juicebox)
 

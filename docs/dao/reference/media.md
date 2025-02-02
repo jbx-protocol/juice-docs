@@ -5,19 +5,6 @@ sidebar_position: 2
 
 # JuiceboxDAO Media Guidelines
 
-#### Index of Current Accounts
-
-| Name/Link                                           | Responsible Contributor     |
-| --------------------------------------------------- | --------------------------- |
-| [Discord](https://discord.gg/juicebox)              | jango, filipv & nnnnicholas |
-| [Twitter](https://twitter.com/juiceboxETH)          | jango                       |
-| [Blog](https://docs.juicebox.money/blog)            | filipv                      |
-| [Podcast](https://anchor.fm/thejuicecast)           | Brileigh & Matthew          |
-| [YouTube](https://youtube.com/c/juiceboxdao)        | filipv                      |
-| [Newletter](https://subscribepage.io/juicenews)     | Brileigh & Matthew          |
-| [Instagram](https://www.instagram.com/juiceboxeth/) | 0xSTVG                      |
-| [TikTok](https://www.tiktok.com/@juiceboxeth)       | Brileigh & Matthew          |
-
 #### General Guidelines
 
 - Anybody can create a social media account for JuiceboxDAO, even if we already have an account on that platform.
@@ -40,5 +27,5 @@ sidebar_position: 2
 
 #### YouTube
 
-- If you would like upload access, ask filipv and he might give it to you. Otherwise, share your video on Discord and somebody might upload it.
+- If you would like upload access, ask jango and he might give it to you. Otherwise, share your video on Discord and somebody might upload it.
 - If you do share a video, please also share a title, description, and [properly formatted chapter timestamps](https://support.google.com/youtube/answer/9884579).

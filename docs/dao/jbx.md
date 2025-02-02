@@ -5,7 +5,7 @@ sidebar_position: 3
 
 ## About JuiceboxDAO
 
-Juicebox is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed by the $JBX token. "DAO" stands for *Decentralized Autonomous Organization* — by using token governance and the Juicebox platform, JuiceboxDAO is able to manage strategic decisions, pay contributors, and build the Juicebox protocol and ecosystem.
+Juicebox is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed by the $JBX token. "DAO" stands for *Decentralized Autonomous Organization* — by using token governance and the Juicebox platform, JuiceboxDAO is able to manage strategic decisions and build the Juicebox protocol and ecosystem.
 
 ## How JBX Works
 
