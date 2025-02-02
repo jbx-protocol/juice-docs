@@ -14,4 +14,4 @@ interface IJBSplitHook is IERC165 {
 
 Once you've deployed your contract, you can use its address in the `hook` field of a [`JBSplit`](/docs/v4/api/core/structs/JBSplit.md) when specifying either payout splits or reserved token splits – the `projectId` and `beneficiary` fields of the `JBSplit` wont have any effect and can be used as metadata if you wish. The split hook's [`IJBSplitHook.processSplitWith(...)`](/docs/v4/api/core/interfaces/IJBSplitHook.md#processsplitwith) function will be called with the split's [`JBSplitHookContext`](/docs/v4/api/core/structs/JBSplitHookContext.md) automatically when the split is triggered from payouts or from reserved token distributions.
 
-[Learn more about split hooks](/docs/v4/learn/glossary/split-hook).
+[Learn more about split hooks](/docs/v4/learn/glossary/split-hook.md).

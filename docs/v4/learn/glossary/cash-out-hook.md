@@ -9,7 +9,7 @@
 #### What you'll want to know if you're building
 
 * Cash out hooks must adhere to the [`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.md) interface. Any contract implementing this interface can be used as a cash out hook in a project's rulesets.
-* The rulesets's [`dataHook`](data-hook.md) specifies the active cash out hook contract.
+* The rulesets's [`dataHook`](ruleset-data-hook.md) specifies the active cash out hook contract.
 * The [`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.md)'s `afterCashOutRecordedWith(...)` hook is triggered in [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#cashouttokensof).
 * The cash out hook is called before funds are dispersed.
 

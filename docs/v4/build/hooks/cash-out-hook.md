@@ -15,4 +15,4 @@ interface IJBCashOutHook is IERC165 {
 Once you've deployed your contract, you can return its address from [`ruleset data hook`](/docs/v4/build/hooks/ruleset-data-hook.md). The cash out hook's [`IJBCashOutHook.afterCashOutRecordedWith(...)`](/docs/v4/api/core/interfaces/IJBCashOutHook.md#aftercashoutrecordedwith) function will be called with the cash out's [`JBAfterCashOutRecordedContext`](/docs/v4/api/core/structs/JBAfterCashOutRecordedContext.md) automatically after the project's token holder cashes out. 
 
 
-[Learn more about cash out hooks](/docs/v4/learn/glossary/cash-out-hook).
+[Learn more about cash out hooks](/docs/v4/learn/glossary/cash-out-hook.md).

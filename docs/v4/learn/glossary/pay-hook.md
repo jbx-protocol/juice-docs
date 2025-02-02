@@ -9,7 +9,7 @@
 #### What you'll want to know if you're building
 
 * Pay hooks must adhere to the [`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.md) interface.
-* The ruleset's [`dataHook`](data-hook.md) specifies the active pay hook contract.
+* The ruleset's [`dataHook`](ruleset-data-hook.md) specifies the active pay hook contract.
 * The [`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.md)'s `afterPayRecordedWith(...)` hook is triggered in [`JBMultiTerminal._pay(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#_pay).
 
 [Get started building pay hooks](/docs/v4/build/hooks/pay-hook.md).
