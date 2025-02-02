@@ -74,8 +74,7 @@ hide_table_of_contents: true
         </div>
         <div class="card__body">
           <p>
-            Learn about $JBX and the DAO building
-            Juicebox.
+            Learn about $JBX and the DAO investing in the build out of the Juicebox ecosystem.
           </p>
         </div>
         <div class="card__footer">
