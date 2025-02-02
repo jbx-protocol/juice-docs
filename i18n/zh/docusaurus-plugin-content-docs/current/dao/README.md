@@ -76,7 +76,7 @@ JuiceboxDAO 的治理以 [14 天为一个周期](process) —— 提案先在 Di
   min-height: 400px;
   display: inline-block;
   background-color: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .wrapper {

@@ -49,7 +49,7 @@ JuiceboxDAO 的历史项目均已停用。有些信息可能已经过时—— �
   min-height: 400px;
   display: inline-block;
   background-color: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .wrapper {
