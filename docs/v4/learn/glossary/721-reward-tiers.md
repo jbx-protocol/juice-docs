@@ -20,7 +20,7 @@
   * If the contract is set to lock voting unit changes, new tiers cannot have voting units.
   * If the contract is set to lock manual minting changes, new tiers cannot allow manual minting.
   * If the contract is set to have transfers pausable, a ruleset metadata flag will determine if NFTs are transferable while the cycle is active.
-* Incoming payments can directly specify any number of tiers to mint from within their [`JBAfterPayRecordedContext.payerMetadata`](/docs/v4/api/core/structs/JBAfterPayRecordedContext.md).
+* Incoming payments can directly specify any number of tiers to mint from within their [`JBAfterPayRecordedContext.payerMetadata`](/docs/v4/api/core/structs/JBAfterPayRecordedContext.sol/struct.JBAfterPayRecordedContext.md).
 * If a payment received does not meet a minting threshold or is in excess of the minted tiers, the balance is stored as a pay credit which will be added to future payments and applied to mints at that time. A flag can also be passed alongside a payment to avoid accepting payments that aren't applied to mints in full.
 
 #### What you'll want to know if you're building
@@ -28,5 +28,5 @@
 <!-- * A project can be deployed with a new 721 Reward Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchProjectFor(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#launchprojectfor) transaction.
 * A project's rulesets can be launched with a new 721 Reward Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchRulesetsFor(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#launchrulesetsfor) transaction.
 * A project can be reconfigured with a new 721 Reward Tiers contract using the [`JB721TiersHookProjectDeployer.queuerulesetsof(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#queuerulesetsof) transaction. -->
-* An already-existing 721 reward tiers contract can be passed into the standard [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchrulesetsfor), and [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queuerulesetsof) transactions in the ruleset's metadata.
+* An already-existing 721 reward tiers contract can be passed into the standard [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#launchrulesetsfor), and [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#queuerulesetsof) transactions in the ruleset's metadata.
 

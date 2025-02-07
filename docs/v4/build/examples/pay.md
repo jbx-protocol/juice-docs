@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Paying a project
 
-If you know the ID of the project you want to pay, the address of the ecosystem's [`JBDirectory`](/docs/v4/api/core/contracts/JBDirectory.md) contract, and the token you want to pay with, you can get the address of the terminal where the project is currently accepting funds. You can find this address by calling [`JBDirectory.getPrimaryTerminal(...)`](/docs/v4/api/core/contracts/JBDirectory.md#getprimaryterminalof).
+If you know the ID of the project you want to pay, the address of the ecosystem's [`JBDirectory`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md) contract, and the token you want to pay with, you can get the address of the terminal where the project is currently accepting funds. You can find this address by calling [`JBDirectory.getPrimaryTerminal(...)`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md#getprimaryterminalof).
 
 ```javascript
 function primaryTerminalOf(uint256 projectId, address token) external view override returns (IJBTerminal) { ... }
 ```
 
-Once you have the address of the terminal, you can use [`IJBTerminal.pay(...)`](/docs/v4/api/core/interfaces/IJBTerminal.md#pay) to pay it.
+Once you have the address of the terminal, you can use [`IJBTerminal.pay(...)`](/docs/v4/api/core/interfaces/IJBTerminal.sol/interface.IJBTerminal.md#pay) to pay it.
 
 ```javascript
 function pay(
@@ -27,7 +27,7 @@ function pay(
 
 Here's a complete example of how to pay a project:
 
-*   For `rulesetConfigurations` send the following [`JBRulesetConfig`](/docs/v4/api/core/structs/JBRulesetConfig.md).
+*   For `rulesetConfigurations` send the following [`JBRulesetConfig`](/docs/v4/api/core/structs/JBRulesetConfig.sol/struct.JBRulesetConfig.md).
 
     ```javascript
     Example:

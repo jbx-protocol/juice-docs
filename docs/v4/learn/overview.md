@@ -150,11 +150,11 @@ An project collects funds on Ethereum and Base:
 
 ### Customizations with hooks 
 Projects can use custom hooks to extend or override default behavior:
-- **[`IJBRulesetDataHook`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.md)**: Define custom logic for fund receipts or token cash-outs.
-- **[`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.md)**: Define custom logic for what happens when a payment is received.
-- **[`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.md)**: Define custom logic for what happens when a token holder cashes out their tokens.
-- **[`IJBSplitHook`](/docs/v4/api/core/interfaces/IJBSplitHook.md)**: Define custom logic for what happens when a payout split or reserved token split is triggered.
-- **[`IJBRulesetApprovalHook`](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.md)**: Enforce criteria like governance approvals before ruleset changes.
+- **[`IJBRulesetDataHook`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.sol/interface.IJBRulesetDataHook.md)**: Define custom logic for fund receipts or token cash-outs.
+- **[`IJBPayHook`](/docs/v4/api/core/interfaces/IJBPayHook.sol/interface.IJBPayHook.md)**: Define custom logic for what happens when a payment is received.
+- **[`IJBCashOutHook`](/docs/v4/api/core/interfaces/IJBCashOutHook.sol/interface.IJBCashOutHook.md)**: Define custom logic for what happens when a token holder cashes out their tokens.
+- **[`IJBSplitHook`](/docs/v4/api/core/interfaces/IJBSplitHook.sol/interface.IJBSplitHook.md)**: Define custom logic for what happens when a payout split or reserved token split is triggered.
+- **[`IJBRulesetApprovalHook`](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.sol/interface.IJBRulesetApprovalHook.md)**: Enforce criteria like governance approvals before ruleset changes.
 
 **Example: Custom Hook Implementation**  
 A project uses a data hook and pay hook to:

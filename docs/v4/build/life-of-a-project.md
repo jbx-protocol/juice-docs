@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Life of a project
 
-To launch a project, call [`JBController.launchProjectFor(...)`](/docs/v4/api/core/contracts/JBController.md#launchprojectfor).
+To launch a project, call [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#launchprojectfor).
 
 ```
 function launchProjectFor(
@@ -22,13 +22,13 @@ Check out the [Launching a project](/docs/v4/build/examples/launch.md) example p
 
 <summary>View project info</summary>
 
-Launching a project will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/core/contracts/JBProjects.md) contract. The owner can be found using [`JBProjects.ownerOf(...)`](https://docs.openzeppelin.com/contracts/4.x/api/core/token/erc721#IERC721-ownerOf-uint256-).
+Launching a project will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/core/JBProjects.sol/contract.JBProjects.md) contract. The owner can be found using [`JBProjects.ownerOf(...)`](https://docs.openzeppelin.com/4.x/api/core/token/erc721#IERC721-ownerOf-uint256-).
 
 ```
 function ownerOf(uint256 projectId) external returns (address owner) { ... }
 ```
 
-A link to the project's metadata can be found using [`JBController.uriOf(...)`](/docs/v4/api/core/contracts/JBController.md#uriof).
+A link to the project's metadata can be found using [`JBController.uriOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#uriof).
 
 ```
 function uriOf(uint256 projectId) external view returns (string memory)
@@ -40,7 +40,7 @@ function uriOf(uint256 projectId) external view returns (string memory)
 
 <summary>View rulesets</summary>
 
-Ruleset data can be found in the [`JBController`](/docs/v4/api/core/contracts/JBController.md) contract. 
+Ruleset data can be found in the [`JBController`](/docs/v4/api/core/JBController.sol/contract.JBController.md) contract. 
 
 ```
 function getRulesetOf(
@@ -49,13 +49,13 @@ function getRulesetOf(
 ) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's current ruleset can be found using [`JBController.currentRulesetOf(...)`](/docs/v4/api/core/contracts/JBController.md#currentrulesetof).
+The project's current ruleset can be found using [`JBController.currentRulesetOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#currentrulesetof).
 
 ```
 function currentRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's upcoming ruleset can be found using [`JBController.upcomingRulesetOf(...)`](/docs/v4/api/core/contracts/JBController.md#upcomingrulesetof).
+The project's upcoming ruleset can be found using [`JBController.upcomingRulesetOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#upcomingrulesetof).
 
 By default, the upcoming ruleset is a copy of the current one that starts immediately afterwards, using a discounted weight if applicable.
 
@@ -67,13 +67,13 @@ The project has no upcoming ruleset if the current ruleset has no duration.
 function upcomingRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's latest configured ruleset can be found using [`JBController.latestConfiguredRulesetOf(...)`](/docs/v4/api/core/contracts/JBController.md#latestconfiguredrulesetof).
+The project's latest configured ruleset can be found using [`JBController.latestConfiguredRulesetOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#latestconfiguredrulesetof).
 
 ```
 function latestQueuedRulesetOf(uint256 projectId) external view returns (JBRuleset memory, JBRulesetMetadata memory metadata, JBApprovalStatus);
 ```
 
-All of a project's rulesets can be found using [`JBController.allRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#allrulesetsof).
+All of a project's rulesets can be found using [`JBController.allRulesetsOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#allrulesetsof).
 
 ```
 function allRulesetsOf(uint256 projectId) external view returns (JBRuleset[] memory rulesets, JBRulesetMetadata[] memory metadata);
@@ -85,7 +85,7 @@ function allRulesetsOf(uint256 projectId) external view returns (JBRuleset[] mem
 
 <summary>View splits</summary>
 
-A project's splits data can be found in the [`JBSplits`](/docs/v4/api/core/contracts/JBSplits.md) contract. A set of splits used for any particular functionality during any particular rulesets configuration can be found using [`JBSplits.splitsOf(...)`](/docs/v4/api/core/contracts/JBSplits.md#splitsof). 
+A project's splits data can be found in the [`JBSplits`](/docs/v4/api/core/JBSplits.sol/contract.JBSplits.md) contract. A set of splits used for any particular functionality during any particular rulesets configuration can be found using [`JBSplits.splitsOf(...)`](/docs/v4/api/core/JBSplits.sol/contract.JBSplits.md#splitsof). 
 
 ```
 function splitsOf(uint256 projectId, uint256 rulesetId, uint256 groupId) external view returns (JBSplit[] memory)
@@ -97,13 +97,13 @@ function splitsOf(uint256 projectId, uint256 rulesetId, uint256 groupId) externa
 
 <summary>View accounting contexts</summary>
 
-A project's accounting contexts data can be found in its [`IJBTerminal`](/docs/v4/api/core/interfaces/IJBTerminal.md) contracts. For example, if a project is using the [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md) contract, its accounting contexts can be found through its [`JBMultiTerminal.accountingContextsOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#accountingcontextsof) transaction.
+A project's accounting contexts data can be found in its [`IJBTerminal`](/docs/v4/api/core/interfaces/IJBTerminal.sol/interface.IJBTerminal.md) contracts. For example, if a project is using the [`JBMultiTerminal`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md) contract, its accounting contexts can be found through its [`JBMultiTerminal.accountingContextsOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#accountingcontextsof) transaction.
 
 ```javascript
 function accountingContextsOf(uint256 projectId) external view returns (JBAccountingContext[] memory) { ... }
 ```
 
-Or, through the [`JBMultiTerminal.accountingContextForTokenOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#accountingcontextfortokenof) transaction.
+Or, through the [`JBMultiTerminal.accountingContextForTokenOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#accountingcontextfortokenof) transaction.
 
 ```javascript
 function accountingContextForTokenOf(
@@ -118,7 +118,7 @@ function accountingContextForTokenOf(
 
 <summary>View fund access limits</summary>
 
-Constraints on accessing a project's funds can found in the [`JBFundAccessLimits`](/docs/v4/api/core/contracts/JBFundAccessLimits.md) contract. The payout limit of any terminal during any ruleset using any token with any currency can be found using [`JBFundAccessLimits.payoutLimitOf(...)`](/docs/v4/api/core/contracts/JBFundAccessLimits.md#payoutlimitof). 
+Constraints on accessing a project's funds can found in the [`JBFundAccessLimits`](/docs/v4/api/core/JBFundAccessLimits.sol/contract.JBFundAccessLimits.md) contract. The payout limit of any terminal during any ruleset using any token with any currency can be found using [`JBFundAccessLimits.payoutLimitOf(...)`](/docs/v4/api/core/JBFundAccessLimits.sol/contract.JBFundAccessLimits.md#payoutlimitof). 
 
 ```
 function payoutLimitOf(
@@ -141,7 +141,7 @@ function payoutLimitsOf(
 ) external view returns (JBCurrencyAmount[] memory payoutLimits);
 ```
 
-The surplus allowance from any terminal during any ruleset using any token with any currency can be found using [`JBFundAccessLimits.surplusAllowanceOf`](/docs/v4/api/core/contracts/JBFundAccessLimits.md#surplusallowanceof).
+The surplus allowance from any terminal during any ruleset using any token with any currency can be found using [`JBFundAccessLimits.surplusAllowanceOf`](/docs/v4/api/core/JBFundAccessLimits.sol/contract.JBFundAccessLimits.md#surplusallowanceof).
 
 ```
 function surplusAllowanceOf(
@@ -159,7 +159,7 @@ function surplusAllowanceOf(
 
 <summary>View terminals and controller</summary>
 
-The [`JBDirectory`](/docs/v4/api/core/contracts/JBDirectory.md) contract stores addresses of terminals that a project is currently accepting funds through. A project's currently set terminals can be found using [`JBDirectory.terminalsOf(...)`](/docs/v4/api/core/contracts/JBDirectory.md#terminalsof), and the address of the terminal to which payments to projects should be sent for any token can be found using [`JBDirectory.primaryTerminalOf(...)`](/docs/v4/api/core/contracts/JBDirectory.md#primaryterminalof).
+The [`JBDirectory`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md) contract stores addresses of terminals that a project is currently accepting funds through. A project's currently set terminals can be found using [`JBDirectory.terminalsOf(...)`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md#terminalsof), and the address of the terminal to which payments to projects should be sent for any token can be found using [`JBDirectory.primaryTerminalOf(...)`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md#primaryterminalof).
 
 ```
 function terminalsOf(uint256 projectId) external view returns (IJBTerminal[] memory) { ... }
@@ -169,7 +169,7 @@ function terminalsOf(uint256 projectId) external view returns (IJBTerminal[] mem
 function primaryTerminalOf(uint256 projectId, address token) external view returns (IJBTerminal)
 ```
 
-The [`JBDirectory`](/docs/v4/api/core/contracts/JBDirectory.md) contract also stores the address of the controller that is managing a project's rulesets and tokens. A projects current controller can be found using [`JBDirectory.controllerOf(...)`](/docs/v4/api/core/contracts/JBDirectory.md#controllerof).
+The [`JBDirectory`](/docs/v4/api/core/f the controller that is managing a project's rulesets and tokens. A projects current controller can be found using [`JBDirectory.controllerOf(...)`](/docs/v4/api/core/JBDirectory.sol/contract.JBDirectory.md#controllerof).
 
 ```
 function controllerOf(uint256 projectId) external view returns (IERC165) { ... }
@@ -177,7 +177,7 @@ function controllerOf(uint256 projectId) external view returns (IERC165) { ... }
 
 </details>
 
-Once a project has been created, it can begin accepting funds from anyone through any terminal it has added, using any token that it has specified accounting contexts for. For example, if the project has added the [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md) with only an ETH accounting context, only ETH can be sent to the project by calling its [`JBMultiTerminal.pay(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#pay) transaction.
+Once a project has been created, it can begin accepting funds from anyone through any terminal it has added, using any token that it has specified accounting contexts for. For example, if the project has added the [`JBMultiTerminal`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md) with only an ETH accounting context, only ETH can be sent to the project by calling its [`JBMultiTerminal.pay(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#pay) transaction.
 
 ```
 function pay(
@@ -197,13 +197,13 @@ Check out the [Paying a project](/docs/v4/build/examples/pay.md) example page fo
 
 <summary>View project balance</summary>
 
-A project's balance can be found in the [`JBTerminalStore`](/docs/v4/api/core/contracts/JBTerminalStore.md) contract.
+A project's balance can be found in the [`JBTerminalStore`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md) contract.
 
 ```
 function balanceOf(address terminal, uint256 projectId, address token) external view returns (uint256);
 ```
 
-The project's current surplus for a terminal can also be found in the [`JBTerminalStore`](/docs/v4/api/core/contracts/JBTerminalStore.md) contract.
+The project's current surplus for a terminal can also be found in the [`JBTerminalStore`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md) contract.
 
 ```
 function currentSurplusOf(
@@ -215,7 +215,7 @@ function currentSurplusOf(
 ) external view returns (uint256);
 ```
 
-The [`JBTerminalStore`](/docs/v4/api/core/contracts/JBTerminalStore.md) can also resolve the total amount of overflow in all of a project's terminals using [`JBTerminalStore.currentTotalSurplusOf(...)`](/docs/v4/api/core/contracts/JBTerminalStore.md#currenttotalsurplusof). 
+The [`JBTerminalStore`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md) can also resolve the total amount of overflow in all of a project's terminals using [`JBTerminalStore.currentTotalSurplusOf(...)`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md#currenttotalsurplusof). 
 
 ```
 function currentTotalSurplusOf(
@@ -234,13 +234,13 @@ function currentTotalSurplusOf(
 
 <summary>View project token balance</summary>
 
-Each holder's balance of a project's token can be found in the [`JBTokens`](/docs/v4/api/core/contracts/JBTokens.md) contract. The balance can be found using [`JBTokens.totalBalanceOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#totalBalanceof).
+Each holder's balance of a project's token can be found in the [`JBTokens`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md) contract. The balance can be found using [`JBTokens.totalBalanceOf(...)`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md#totalBalanceof).
 
 ```
 function totalBalanceOf(address holder, uint256 projectId) external view returns (uint256 result) { ... }
 ```
 
-To only retrieve a holder's internally tracked token credit balance, use [`JBTokens.creditBalanceOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#creditbalanceof)
+To only retrieve a holder's internally tracked token credit balance, use [`JBTokens.creditBalanceOf(...)`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md#creditbalanceof)
 
 ```
 function creditBalanceOf(address holder, uint256 projectId) external view returns (uint256) { ... }
@@ -252,9 +252,9 @@ function creditBalanceOf(address holder, uint256 projectId) external view return
 
 <summary>View price conversions</summary>
 
-The protocol uses price feeds to convert values from one currency to another when sending payouts, using surplus allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.md). If the currency strongly correlates to an ERC-20, it is cusom to use the first 32 bytes of its address as the currency. Since ETH is treated using [`JBConstants.NATIVE_TOKEN`](/docs/v4/api/core/libraries/JBConstants.md), its currency is `61166`. New currencies and price feeds can be added in the future.
+The protocol uses price feeds to convert values from one currency to another when sending payouts, using surplus allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.sol/library.JBCurrencyIds.md). If the currency strongly correlates to an ERC-20, it is cusom to use the first 32 bytes of its address as the currency. Since ETH is treated using [`JBConstants.NATIVE_TOKEN`](/docs/v4/api/core/libraries/JBConstants.sol/library.JBConstants.md), its currency is `61166`. New currencies and price feeds can be added in the future.
 
-The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/docs/v4/api/core/contracts/JBPrices.md) contract using [`JBPrices.pricePerUnitOf(...)`](/docs/v4/api/core/contracts/JBPrices.md#priceperunitof.md). 
+The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/docs/v4/api/core/JBPrices.sol/contract.JBPrices.md) contract using [`JBPrices.pricePerUnitOf(...)`](/docs/v4/api/core/JBPrices.sol/contract.JBPrices.md#priceperunitof.md). 
 
 ```
 function pricePerUnitOf(
@@ -268,7 +268,7 @@ function pricePerUnitOf(
 </details>
 
 
-At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol by calling [`JBController.deployERC20For(...)`](/docs/v4/api/core/contracts/JBController.md#deployerc20for).
+At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol by calling [`JBController.deployERC20For(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#deployerc20for).
 
 ```
 function deployERC20For(
@@ -281,13 +281,13 @@ function deployERC20For(
   returns (IJBToken token) { ... }
 ```
 
-A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/docs/v4/api/core/interfaces/IJBToken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController.setTokenFor(...)`](/docs/v4/api/core/contracts/JBController.md#settokenfor). This makes it easy to use ERC-1155s or custom contracts.
+A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/docs/v4/api/core/interfaces/IJBToken.sol/interface.IJBToken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController.setTokenFor(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#settokenfor). This makes it easy to use ERC-1155s or custom contracts.
 
 ```
 function setTokenFor(uint256 projectId, IJBToken token) external  { ... };
 ```
 
-For projects who don't issue ERC-20's right away, holders can claim their credit balance into a project's ERC-20 once one has been made using the [`JBTokens.claimTokensFor(...)`](/docs/v4/api/core/contracts/JBTokens.md#claimtokensfor)
+For projects who don't issue ERC-20's right away, holders can claim their credit balance into a project's ERC-20 once one has been made using the [`JBTokens.claimTokensFor(...)`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md#claimtokensfor)
 
 ```
 function claimTokensFor(address holder, uint256 projectId, uint256 count, address beneficiary) external { ... }
@@ -297,7 +297,7 @@ function claimTokensFor(address holder, uint256 projectId, uint256 count, addres
 
 <summary>View the project's token</summary>
 
-The token currently being used by a project can be found in the [`JBTokens`](/docs/v4/api/core/contracts/JBTokens.md) contract by using [`JBTokens.tokenOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#tokenof). This will return a zero address if the project hasn't yet issued tokens or changed into a custom token.
+The token currently being used by a project can be found in the [`JBTokens`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md) contract by using [`JBTokens.tokenOf(...)`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md#tokenof). This will return a zero address if the project hasn't yet issued tokens or changed into a custom token.
 
 ```
 function tokenOf(uint256 _projectId) external view override returns (IJBToken) { ... }
@@ -305,7 +305,7 @@ function tokenOf(uint256 _projectId) external view override returns (IJBToken) {
 
 </details>
 
-Anyone can distribute a project's payouts from a terminal up to its current ruleset's payout limit to its preprogrammed payout splits at any time. For example, if the project has added the [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md), funds can be distributed by calling [`JBMultiTerminal.sendPayoutsOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#sendpayoutsof).
+Anyone can distribute a project's payouts from a terminal up to its current ruleset's payout limit to its preprogrammed payout splits at any time. For example, if the project has added the [`JBMultiTerminal`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md), funds can be distributed by calling [`JBMultiTerminal.sendPayoutsOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#sendpayoutsof).
 
 ```
 function sendPayoutsOf(
@@ -321,7 +321,7 @@ function sendPayoutsOf(
 
 <summary>View used payout limit</summary>
 
-Any payout limit used by a project can be found in the terminal store contract for each terminal by calling [`JBTerminalStore.usedPayoutLimitOf(...)`](/docs/v4/api/core/contracts/JBTerminalStore.md#usedpayoutlimitof).
+Any payout limit used by a project can be found in the terminal store contract for each terminal by calling [`JBTerminalStore.usedPayoutLimitOf(...)`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md#usedpayoutlimitof).
 
 ```
 function usedPayoutLimitOf(
@@ -335,7 +335,7 @@ function usedPayoutLimitOf(
 
 </details>
 
-A project's owner can distribute additional funds from its surplus for each of its terminals up until its preconfigured allowance by calling its [`JBMultiTerminal.useAllowanceOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#useallowanceof) transaction.
+A project's owner can distribute additional funds from its surplus for each of its terminals up until its preconfigured allowance by calling its [`JBMultiTerminal.useAllowanceOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#useallowanceof) transaction.
 
 ```
 function useAllowanceOf(
@@ -354,7 +354,7 @@ function useAllowanceOf(
 
 <summary>View used surplus allowance</summary>
 
-Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/contracts/JBTerminalStore.md#usedSurplusAllowanceof).
+Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md#usedSurplusAllowanceof).
 
 ```
 function usedSurplusAllowanceOf(
@@ -369,7 +369,7 @@ function usedSurplusAllowanceOf(
 
 </details>
 
-At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/contracts/JBController.md#sendreservedtokenstosplitsof).
+At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#sendreservedtokenstosplitsof).
 
 ```
 function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint256) { ... }
@@ -379,13 +379,13 @@ function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint2
 
 <summary>View reserved token balance</summary>
 
-A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/contracts/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/contracts/JBController.md#pendingreservedtokenbalancesof).
+A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/JBController.sol/contract.JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#pendingreservedtokenbalancesof).
 
 ```
 function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
 ```
 
-For projects using [`JBController`](/docs/v4/api/core/contracts/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#totaltokensupplywithreservedtokens).
+For projects using [`JBController`](/docs/v4/api/core/JBController.sol/contract.JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#totaltokensupplywithreservedtokens).
 
 ```
 function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
@@ -393,7 +393,7 @@ function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view r
 </details>
 
 
-Anyone who holds a project's tokens can cash them out at one of the project's terminals for a proportional share of the project's surplus. For example, if the project has funds in the [`JBMultiTerminal`](/docs/v4/api/core/contracts/JBMultiTerminal.md), ETH can be reclaimed by redeeming project tokens in its [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#cashouttokensof) transaction. The surplus amount is the terminal's balance minus the current ruleset's payout limit, and can be set to include the project's balance across all terminals.
+Anyone who holds a project's tokens can cash them out at one of the project's terminals for a proportional share of the project's surplus. For example, if the project has funds in the [`JBMultiTerminal`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md), ETH can be reclaimed by redeeming project tokens in its [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#cashouttokensof) transaction. The surplus amount is the terminal's balance minus the current ruleset's payout limit, and can be set to include the project's balance across all terminals.
 
 Cashing out tokens allows a project's token holders to exit the community at any time with their share of the funds. If the project's [cash out tax rate](/docs/v4/learn/glossary/cash-out-tax-rate.md) is more than 0%, cash outs incur a 2.5% JBX membership fee.
 
@@ -415,7 +415,7 @@ function cashOutTokensOf(
 
 <summary>View cash out values</summary>
 
-Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/contracts/JBTerminalStore.md#usedSurplusAllowanceof).
+Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md#usedSurplusAllowanceof).
 
 ```
 function currentReclaimableSurplusOf(
@@ -427,7 +427,7 @@ function currentReclaimableSurplusOf(
   external view returns (uint256) { ... }
 ```
 
-or, to determine the surplus of a project from its terminals, use [`JBTerminalStore.currentReclaimableSurplusOf(...)`](/docs/v4/api/core/contracts/JBTerminalStore.md#currentreclaimablesurplusof).
+or, to determine the surplus of a project from its terminals, use [`JBTerminalStore.currentReclaimableSurplusOf(...)`](/docs/v4/api/core/JBTerminalStore.sol/contract.JBTerminalStore.md#currentreclaimablesurplusof).
 
 ```
 function currentReclaimableSurplusOf(
@@ -443,7 +443,7 @@ function currentReclaimableSurplusOf(
 
 </details>
 
-If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/contracts/JBController.md#mintTokensOf). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/contracts/JBTokens.md#burnTokensOf).
+If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#mintTokensOf). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBTokens.sol/contract.JBTokens.md#burnTokensOf).
 
 ```
 function mintTokensOf(
@@ -461,7 +461,7 @@ function mintTokensOf(
 function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;
 ```
 
-A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/contracts/JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
+A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
 
 ```
 function queueRulesetsOf(
@@ -474,7 +474,7 @@ function queueRulesetsOf(
 ```
 
 
-At any point, anyone can inject funds into one of a project's terminals by calling the terminal's [`JBMultiTerminal.addToBalanceOf(...)`](/docs/v4/api/core/contracts/JBMultiTerminal.md#addtobalanceof) transaction.
+At any point, anyone can inject funds into one of a project's terminals by calling the terminal's [`JBMultiTerminal.addToBalanceOf(...)`](/docs/v4/api/core/JBMultiTerminal.sol/contract.JBMultiTerminal.md#addtobalanceof) transaction.
 
 ```
 function addToBalanceOf(
