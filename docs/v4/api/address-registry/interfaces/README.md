@@ -1,4 +1,4 @@
 
 
 # Contents
-- [IJBAddressRegistry](IJBAddressRegistry.sol/interface.IJBAddressRegistry.md)
+- [IJBAddressRegistry](IJBAddressRegistry.md)

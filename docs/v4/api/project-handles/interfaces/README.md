@@ -1,4 +1,2 @@
-
-
 # Contents
-- [IJBProjectHandles](IJBProjectHandles.sol/interface.IJBProjectHandles.md)
+- [IJBProjectHandles](IJBProjectHandles.md)

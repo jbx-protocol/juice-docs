@@ -1,12 +1,10 @@
-
-
 # Contents
-- [JBCashOuts](JBCashOuts.sol/library.JBCashOuts.md)
-- [JBConstants](JBConstants.sol/library.JBConstants.md)
-- [JBCurrencyIds](JBCurrencyIds.sol/library.JBCurrencyIds.md)
-- [JBFees](JBFees.sol/library.JBFees.md)
-- [JBFixedPointNumber](JBFixedPointNumber.sol/library.JBFixedPointNumber.md)
-- [JBMetadataResolver](JBMetadataResolver.sol/library.JBMetadataResolver.md)
-- [JBRulesetMetadataResolver](JBRulesetMetadataResolver.sol/library.JBRulesetMetadataResolver.md)
-- [JBSplitGroupIds](JBSplitGroupIds.sol/library.JBSplitGroupIds.md)
-- [JBSurplus](JBSurplus.sol/library.JBSurplus.md)
+- [JBCashOuts](JBCashOuts.md)
+- [JBConstants](JBConstants.md)
+- [JBCurrencyIds](JBCurrencyIds.md)
+- [JBFees](JBFees.md)
+- [JBFixedPointNumber](JBFixedPointNumber.md)
+- [JBMetadataResolver](JBMetadataResolver.md)
+- [JBRulesetMetadataResolver](JBRulesetMetadataResolver.md)
+- [JBSplitGroupIds](JBSplitGroupIds.md)
+- [JBSurplus](JBSurplus.md)

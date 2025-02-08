@@ -1,12 +1,10 @@
-
-
 # Contents
-- [JBClaim](JBClaim.sol/struct.JBClaim.md)
-- [JBInboxTreeRoot](JBInboxTreeRoot.sol/struct.JBInboxTreeRoot.md)
-- [JBLeaf](JBLeaf.sol/struct.JBLeaf.md)
-- [JBMessageRoot](JBMessageRoot.sol/struct.JBMessageRoot.md)
-- [JBOutboxTree](JBOutboxTree.sol/struct.JBOutboxTree.md)
-- [JBRemoteToken](JBRemoteToken.sol/struct.JBRemoteToken.md)
-- [JBSuckerDeployerConfig](JBSuckerDeployerConfig.sol/struct.JBSuckerDeployerConfig.md)
-- [JBSuckersPair](JBSuckersPair.sol/struct.JBSuckersPair.md)
-- [JBTokenMapping](JBTokenMapping.sol/struct.JBTokenMapping.md)
+- [JBClaim](JBClaim.md)
+- [JBInboxTreeRoot](JBInboxTreeRoot.md)
+- [JBLeaf](JBLeaf.md)
+- [JBMessageRoot](JBMessageRoot.md)
+- [JBOutboxTree](JBOutboxTree.md)
+- [JBRemoteToken](JBRemoteToken.md)
+- [JBSuckerDeployerConfig](JBSuckerDeployerConfig.md)
+- [JBSuckersPair](JBSuckersPair.md)
+- [JBTokenMapping](JBTokenMapping.md)

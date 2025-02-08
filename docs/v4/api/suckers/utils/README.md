@@ -1,4 +1,2 @@
-
-
 # Contents
-- [MerkleLib](MerkleLib.sol/library.MerkleLib.md)
+- [MerkleLib](MerkleLib.md)

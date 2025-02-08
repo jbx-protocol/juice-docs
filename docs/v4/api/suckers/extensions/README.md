@@ -1,4 +1,2 @@
-
-
 # Contents
-- [JBAllowanceSucker](JBAllowanceSucker.sol/abstract.JBAllowanceSucker.md)
+- [JBAllowanceSucker](JBAllowanceSucker.md)

@@ -1,4 +1,2 @@
-
-
 # Contents
-- [JBOwner](JBOwner.sol/struct.JBOwner.md)
+- [JBOwner](JBOwner.md)

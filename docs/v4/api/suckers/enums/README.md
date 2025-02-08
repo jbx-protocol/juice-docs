@@ -1,6 +1,6 @@
 
 
 # Contents
-- [JBAddToBalanceMode](JBAddToBalanceMode.sol/enum.JBAddToBalanceMode.md)
-- [JBLayer](JBLayer.sol/enum.JBLayer.md)
-- [JBSuckerState](JBSuckerState.sol/enum.JBSuckerState.md)
+- [JBAddToBalanceMode](JBAddToBalanceMode.md)
+- [JBLayer](JBLayer.md)
+- [JBSuckerState](JBSuckerState.md)

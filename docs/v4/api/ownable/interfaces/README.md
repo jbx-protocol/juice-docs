@@ -1,4 +1,2 @@
-
-
 # Contents
-- [IJBOwnable](IJBOwnable.sol/interface.IJBOwnable.md)
+- [IJBOwnable](IJBOwnable.md)

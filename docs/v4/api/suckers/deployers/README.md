@@ -1,8 +1,8 @@
 
 
 # Contents
-- [JBArbitrumSuckerDeployer](JBArbitrumSuckerDeployer.sol/contract.JBArbitrumSuckerDeployer.md)
-- [JBBaseSuckerDeployer](JBBaseSuckerDeployer.sol/contract.JBBaseSuckerDeployer.md)
-- [JBCCIPSuckerDeployer](JBCCIPSuckerDeployer.sol/contract.JBCCIPSuckerDeployer.md)
-- [JBOptimismSuckerDeployer](JBOptimismSuckerDeployer.sol/contract.JBOptimismSuckerDeployer.md)
-- [JBSuckerDeployer](JBSuckerDeployer.sol/abstract.JBSuckerDeployer.md)
+- [JBArbitrumSuckerDeployer](JBArbitrumSuckerDeployer.md)
+- [JBBaseSuckerDeployer](JBBaseSuckerDeployer.md)
+- [JBCCIPSuckerDeployer](JBCCIPSuckerDeployer.md)
+- [JBOptimismSuckerDeployer](JBOptimismSuckerDeployer.md)
+- [JBSuckerDeployer](JBSuckerDeployer.md)

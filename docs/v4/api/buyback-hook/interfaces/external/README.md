@@ -1,4 +1,3 @@
 
-
 # Contents
-- [IWETH9](IWETH9.sol/interface.IWETH9.md)
+- [IWETH9](IWETH9.md)
