@@ -14,7 +14,7 @@
 * A data hook must adhere to the [`IJBRulesetDataHook`](/docs/v4/api/core/interfaces/IJBRulesetDataHook.md) interface.
 * A data hook can be specified in a ruleset, along with flags that indicate if the ruleset should `useDataHookForPay` and/or `useDataHookForCashOut`. These are set either in [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor) or [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof).
 * A ruleset's data hook is called upon in [`JBTerminalStore.recordPaymentFrom(...)`](/docs/v4/api/core/JBTerminalStore.md#recordpaymentfrom) and in [`JBTerminal.recordCashOutFor(...)`](/docs/v4/api/core/JBTerminalStore.md#recordcashoutfor).
-* A data hook has implicit permissions to [`JBController.mintTokensFor(...)`](/docs/v4/api/core/JBController.md#minttokensfor) on a project's behalf.
+* A data hook has implicit permissions to [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#minttokensof) on a project's behalf.
 * If a data hook is not specified in a ruleset, or if flags aren't explicitly set, default protocol data will be used.
 
 [Get started building data hooks](/docs/v4/build/hooks/ruleset-data-hook.md).

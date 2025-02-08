@@ -1,12 +1,12 @@
 
 
 # Core 
-- [abstract](/docs/v4/api/core/abstract)
-- [enums](/docs/v4/api/core/enums)
-- [interfaces](/docs/v4/api/core/interfaces)
-- [libraries](/docs/v4/api/core/libraries)
-- [periphery](/docs/v4/api/core/periphery)
-- [structs](/docs/v4/api/core/structs)
+- [abstract](/docs/v4/api/core/abstract/README.md)
+- [enums](/docs/v4/api/core/enums/README.md)
+- [interfaces](/docs/v4/api/core/interfaces/README.md)
+- [libraries](/docs/v4/api/core/libraries/README.md)
+- [periphery](/docs/v4/api/core/periphery/README.md)
+- [structs](/docs/v4/api/core/structs/README.md)
 - [JBChainlinkV3PriceFeed](JBChainlinkV3PriceFeed.md)
 - [JBChainlinkV3SequencerPriceFeed](JBChainlinkV3SequencerPriceFeed.md)
 - [JBController](JBController.md)

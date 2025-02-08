@@ -67,7 +67,7 @@ The project has no upcoming ruleset if the current ruleset has no duration.
 function upcomingRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's latest configured ruleset can be found using [`JBController.latestConfiguredRulesetOf(...)`](/docs/v4/api/core/JBController.md#latestconfiguredrulesetof).
+The project's latest queued ruleset can be found using [`JBController.latestQueuedRulesetOf(...)`](/docs/v4/api/core/JBController.md#latestqueuedrulesetof).
 
 ```
 function latestQueuedRulesetOf(uint256 projectId) external view returns (JBRuleset memory, JBRulesetMetadata memory metadata, JBApprovalStatus);
@@ -234,7 +234,7 @@ function currentTotalSurplusOf(
 
 <summary>View project token balance</summary>
 
-Each holder's balance of a project's token can be found in the [`JBTokens`](/docs/v4/api/core/JBTokens.md) contract. The balance can be found using [`JBTokens.totalBalanceOf(...)`](/docs/v4/api/core/JBTokens.md#totalBalanceof).
+Each holder's balance of a project's token can be found in the [`JBTokens`](/docs/v4/api/core/JBTokens.md) contract. The balance can be found using [`JBTokens.totalBalanceOf(...)`](/docs/v4/api/core/JBTokens.md#totalbalanceof).
 
 ```
 function totalBalanceOf(address holder, uint256 projectId) external view returns (uint256 result) { ... }
@@ -254,7 +254,7 @@ function creditBalanceOf(address holder, uint256 projectId) external view return
 
 The protocol uses price feeds to convert values from one currency to another when sending payouts, using surplus allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.md). If the currency strongly correlates to an ERC-20, it is cusom to use the first 32 bytes of its address as the currency. Since ETH is treated using [`JBConstants.NATIVE_TOKEN`](/docs/v4/api/core/libraries/JBConstants.md), its currency is `61166`. New currencies and price feeds can be added in the future.
 
-The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/docs/v4/api/core/JBPrices.md) contract using [`JBPrices.pricePerUnitOf(...)`](/docs/v4/api/core/JBPrices.md#priceperunitof.md). 
+The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/docs/v4/api/core/JBPrices.md) contract using [`JBPrices.pricePerUnitOf(...)`](/docs/v4/api/core/JBPrices.md#priceperunitof). 
 
 ```
 function pricePerUnitOf(
@@ -354,7 +354,7 @@ function useAllowanceOf(
 
 <summary>View used surplus allowance</summary>
 
-Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.md#usedSurplusAllowanceof).
+Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.md#usedsurplusallowanceof).
 
 ```
 function usedSurplusAllowanceOf(
@@ -379,13 +379,13 @@ function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint2
 
 <summary>View reserved token balance</summary>
 
-A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController.md#pendingreservedtokenbalancesof).
+A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController.md#pendingreservedtokenbalanceof).
 
 ```
 function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
 ```
 
-For projects using [`JBController`](/docs/v4/api/core/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController.md#totaltokensupplywithreservedtokens).
+For projects using [`JBController`](/docs/v4/api/core/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController.md#totaltokensupplywithreservedtokensof).
 
 ```
 function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
@@ -415,7 +415,7 @@ function cashOutTokensOf(
 
 <summary>View cash out values</summary>
 
-Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.md#usedSurplusAllowanceof).
+Any surplus allowance used can also be found in the terminal store contracts for each terminal using [`JBTerminalStore.usedSurplusAllowanceOf(...)`](/docs/v4/api/core/JBTerminalStore.md#usedsurplusallowanceof).
 
 ```
 function currentReclaimableSurplusOf(
@@ -443,7 +443,7 @@ function currentReclaimableSurplusOf(
 
 </details>
 
-If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#mintTokensOf). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBTokens.md#burnTokensOf).
+If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#minttokensof). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof).
 
 ```
 function mintTokensOf(
@@ -461,7 +461,7 @@ function mintTokensOf(
 function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;
 ```
 
-A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queueRulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
+A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
 
 ```
 function queueRulesetsOf(

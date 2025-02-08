@@ -9,7 +9,7 @@
 #### What you'll want to know if you're building
 
 * A split hook contract must adhere to the [`IJBSplitHook`](/docs/v4/api/core/interfaces/IJBSplitHook.md) interface.
-* A split hook can be specified in a split through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor), [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof), or [`JBController.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitGroupsof) transactions.
+* A split hook can be specified in a split through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor), [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof), or [`JBController.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitgroupsof) transactions.
 
 [Get started building split hooks](/docs/v4/build/hooks/split-hook.md).
 

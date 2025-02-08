@@ -10,7 +10,7 @@
 
 #### What you'll want to know if you're building
 
-* Permission indexes can be found in [`JBOperations`](/docs/v4/deprecated/v3/api/libraries/jboperations.md), [`JBOperations2`](/docs/v4/deprecated/v3/api/libraries/jboperations2.md), and [`JBUriOperations`](/docs/v4/deprecated/v3/extensions/juice-token-resolver/libraries/jburioperations.md). See [Namespaces](/docs/v4/deprecated/v3/build/namespace.md#operator-indices) for a list.
+* Permission indexes can be found in [`JBOperations`](/docs/v4/deprecated/v3/api/libraries/jboperations.md), [`JBOperations2`](/docs/v4/deprecated/v3/api/libraries/jboperations2.md), and [`JBUriOperations`](/docs/v4/deprecated/v3/extensions/juice-token-resolver/libraries/jburioperations.md). See [Namespaces](/docs/v4/deprecated/v3/build/namespace.md#operator-permissions) for a list.
 * Any address can give an operator permissions to take one or more actions on its behalf by sending a transaction to [`JBOperatorStore.setOperator(...)`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/write/setoperator.md). To set multiple operators in the same transaction, use [`JBOperatorStore.setOperators(...)`](/docs/v4/deprecated/v3/api/contracts/jboperatorstore/write/setoperators.md).
 * Access can be revoked from an operator through the same operations as above by sending  an array of permissions that does not include those you wish to revoke.
 * Permission for each operation is stored in a bit within an `uint256`. If the bit is 1, the permission is enabled for the particular operator within the particular domain. Otherwise it is disabled.

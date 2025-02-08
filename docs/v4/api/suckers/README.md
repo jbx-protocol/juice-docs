@@ -1,13 +1,13 @@
 
 
 # Suckers 
-- [deployers](/docs/v4/api/suckers/deployers)
-- [enums](/docs/v4/api/suckers/enums)
-- [extensions](/docs/v4/api/suckers/extensions)
-- [interfaces](/docs/v4/api/suckers/interfaces)
-- [libraries](/docs/v4/api/suckers/libraries)
-- [structs](/docs/v4/api/suckers/structs)
-- [utils](/docs/v4/api/suckers/utils)
+- [deployers](/docs/v4/api/suckers/deployers/README.md)
+- [enums](/docs/v4/api/suckers/enums/README.md)
+- [extensions](/docs/v4/api/suckers/extensions/README.md)
+- [interfaces](/docs/v4/api/suckers/interfaces/README.md)
+- [libraries](/docs/v4/api/suckers/libraries/README.md)
+- [structs](/docs/v4/api/suckers/structs/README.md)
+- [utils](/docs/v4/api/suckers/utils/README.md)
 - [JBArbitrumSucker](JBArbitrumSucker.md)
 - [JBBaseSucker](JBBaseSucker.md)
 - [JBCCIPSucker](JBCCIPSucker.md)

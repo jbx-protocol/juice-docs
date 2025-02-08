@@ -8,7 +8,7 @@ The protocol has very minimal global governance - ensuring that each project own
 * **[`JBProjects.setTokenUriResolver(...)`](/docs/v4/api/core/JBProjects.md#settokenuriresolver)**<br/>
   Allows the owner of the [`JBProjects`](/docs/v4/api/core/JBProjects.md) contract to provide and change the [`IJBTokenUriResolver`](/docs/v4/api/core/interfaces/IJBTokenUriResolver.md) used to resolve metadata for project NFTs in its [`tokenURI(...)`](/docs/v4/api/core/JBProjects.md#tokenuri) function.
   <br/>
-* **[`JBPrices.addPriceFeedFor(...)`](/docs/v4/api/core/JBPrices.md#addfeed.md)**<br/>
+* **[`JBPrices.addPriceFeedFor(...)`](/docs/v4/api/core/JBPrices.md#addpricefeedfor)**<br/>
   Allows the owner of the [`JBPrices`](/docs/v4/api/core/JBPrices.md) contract to add new price feeds used to convert amounts denoted in one currency to another. Once added, a default price feed cannot be removed. A project owner can set and use custom price feeds, but cannot override default price feeds.
   <br/>
 * **[`JBDirectory.setIsAllowedToSetFirstController(...)`](/docs/v4/api/core/JBDirectory.md#setisallowedtosetfirstcontroller)**<br/>

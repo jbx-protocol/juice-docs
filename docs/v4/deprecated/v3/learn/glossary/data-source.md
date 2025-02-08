@@ -14,7 +14,7 @@
 * A data source must adhere to the [`IJBFundingCycleDataSource3_1_1`](/docs/v4/deprecated/v3/api/interfaces/ijbfundingcycledatasource3_1_1.md) interface.
 * A data source contract can be specified in a funding cycle, along with flags that indicate if the funding cycle should `useDataSourceForPay` and/or `useDataSourceForRedeem`. These are set either in [`JBController3_1.launchProjectFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#launchprojectfor) or [`JBController3_1.reconfigureFundingCyclesOf(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#reconfigurefundingcyclesof).
 * A funding cycle's data source is called upon in [`JBSingleTokenPaymentTerminalStore3_1_1.recordPaymentFrom(...)`](/docs/v4/deprecated/v3/api/contracts/jbsingletokenpaymentterminalstore3_1_1.md#recordpaymentfrom) and in [`JBSingleTokenPaymentTerminalStore3_1_1.recordRedemptionFor(...)`](/docs/v4/deprecated/v3/api/contracts/jbsingletokenpaymentterminalstore3_1_1.md#recordredemptionfor).
-* A data source has implicit permissions to [`JBController3_1.mintTokensFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#minttokensfor) on a project's behalf.
+* A data source has implicit permissions to [`JBController3_1.mintTokensFor(...)`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md#minttokensof) on a project's behalf.
 * If a data source is not specified in a funding cycle, or if flags aren't explicitly set, default protocol data will be used.
 
 [Get started building data sources](/docs/v4/deprecated/v3/build/treasury-extensions/data-source.md).
