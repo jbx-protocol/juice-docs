@@ -1,6 +1,6 @@
 
 
-# Contents
+# Core 
 - [abstract](/docs/v4/api/core/abstract)
 - [enums](/docs/v4/api/core/enums)
 - [interfaces](/docs/v4/api/core/interfaces)

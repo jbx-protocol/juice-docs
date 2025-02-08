@@ -1,4 +1,4 @@
-# Contents
+# Structs 
 - [JBClaim](JBClaim.md)
 - [JBInboxTreeRoot](JBInboxTreeRoot.md)
 - [JBLeaf](JBLeaf.md)

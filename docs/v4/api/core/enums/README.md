@@ -1,3 +1,3 @@
 
-# Contents
+# Enums 
 - [JBApprovalStatus](JBApprovalStatus.md)

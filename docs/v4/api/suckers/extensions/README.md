@@ -1,2 +1,2 @@
-# Contents
+# Extensions 
 - [JBAllowanceSucker](JBAllowanceSucker.md)

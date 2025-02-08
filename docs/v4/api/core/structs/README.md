@@ -1,4 +1,4 @@
-# Contents
+# Structs 
 - [JBAccountingContext](JBAccountingContext.md)
 - [JBAfterCashOutRecordedContext](JBAfterCashOutRecordedContext.md)
 - [JBAfterPayRecordedContext](JBAfterPayRecordedContext.md)

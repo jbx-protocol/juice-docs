@@ -1,5 +1,5 @@
 
-# Contents
+# Interfaces 
 - [IJBCashOutHook](IJBCashOutHook.md)
 - [IJBCashOutTerminal](IJBCashOutTerminal.md)
 - [IJBControlled](IJBControlled.md)

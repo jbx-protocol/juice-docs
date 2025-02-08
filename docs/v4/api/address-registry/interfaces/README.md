@@ -1,4 +1,4 @@
 
 
-# Contents
+# Interfaces
 - [IJBAddressRegistry](IJBAddressRegistry.md)

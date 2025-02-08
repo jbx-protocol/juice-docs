@@ -1,4 +1,4 @@
-# Contents
+# Structs 
 - [REVAutoIssuance](REVAutoIssuance.md)
 - [REVBuybackHookConfig](REVBuybackHookConfig.md)
 - [REVBuybackPoolConfig](REVBuybackPoolConfig.md)

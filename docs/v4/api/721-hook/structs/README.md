@@ -1,6 +1,6 @@
 
 
-# Contents
+# Structs
 - [JB721InitTiersConfig](JB721InitTiersConfig.md)
 - [JB721Tier](JB721Tier.md)
 - [JB721TierConfig](JB721TierConfig.md)

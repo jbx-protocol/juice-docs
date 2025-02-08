@@ -1,6 +1,6 @@
 
 
-# Contents
+# Interfaces 
 - [IArbGatewayRouter](IArbGatewayRouter.md)
 - [IArbL1GatewayRouter](IArbL1GatewayRouter.md)
 - [IArbL2GatewayRouter](IArbL2GatewayRouter.md)

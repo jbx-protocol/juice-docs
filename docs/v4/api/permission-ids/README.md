@@ -1,2 +1,2 @@
-# Contents
+# Permission IDs
 - [JBPermissionIds](JBPermissionIds.md)

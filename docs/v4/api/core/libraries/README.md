@@ -1,4 +1,4 @@
-# Contents
+# Libraries 
 - [JBCashOuts](JBCashOuts.md)
 - [JBConstants](JBConstants.md)
 - [JBCurrencyIds](JBCurrencyIds.md)

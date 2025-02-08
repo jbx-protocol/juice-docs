@@ -1,2 +1,2 @@
-# Contents
+# Structs 
 - [JBOwner](JBOwner.md)

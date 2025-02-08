@@ -1,2 +1,2 @@
-# Contents
+# Interfaces 
 - [IJBOwnable](IJBOwnable.md)
