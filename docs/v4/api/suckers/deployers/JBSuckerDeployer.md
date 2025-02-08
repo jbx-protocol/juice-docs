@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/deployers/JBSuckerDeployer.sol)
 
 **Inherits:**
-ERC2771Context, JBPermissioned, [IJBSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBSuckerDeployer.sol/interface.IJBSuckerDeployer.md)
+ERC2771Context, JBPermissioned, [IJBSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBSuckerDeployer.md)
 
 A base implementation for deploying suckers.
 

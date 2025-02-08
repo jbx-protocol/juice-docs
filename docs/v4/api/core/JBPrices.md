@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBPrices.sol)
 
 **Inherits:**
-[JBControlled](/docs/v4/api/core/abstract/JBControlled.sol/abstract.JBControlled.md), [JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.sol/abstract.JBPermissioned.md), Ownable, [IJBPrices](/docs/v4/api/core/interfaces/IJBPrices.sol/interface.IJBPrices.md)
+[JBControlled](/docs/v4/api/core/abstract/JBControlled.md), [JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.md), Ownable, [IJBPrices](/docs/v4/api/core/interfaces/IJBPrices.md)
 
 Manages and normalizes price feeds. Price feeds are contracts which return the "pricing currency" cost of 1
 "unit currency".

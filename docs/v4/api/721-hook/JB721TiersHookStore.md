@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-721-hook/blob/e813fb5b7d17cd3d18023137d70a7b2f3911ad99/src/JB721TiersHookStore.sol)
 
 **Inherits:**
-[IJB721TiersHookStore](/docs/v4/api/721-hook/interfaces/IJB721TiersHookStore.sol/interface.IJB721TiersHookStore.md)
+[IJB721TiersHookStore](/docs/v4/api/721-hook/interfaces/IJB721TiersHookStore.md)
 
 This contract stores and manages data for many `IJB721TiersHook`s and their NFTs.
 

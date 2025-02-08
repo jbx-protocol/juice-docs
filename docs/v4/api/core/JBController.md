@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBController.sol)
 
 **Inherits:**
-[JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.sol/abstract.JBPermissioned.md), ERC2771Context, [IJBController](/docs/v4/api/core/interfaces/IJBController.sol/interface.IJBController.md), [IJBMigratable](/docs/v4/api/core/interfaces/IJBMigratable.sol/interface.IJBMigratable.md)
+[JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.md), ERC2771Context, [IJBController](/docs/v4/api/core/interfaces/IJBController.md), [IJBMigratable](/docs/v4/api/core/interfaces/IJBMigratable.md)
 
 `JBController` coordinates rulesets and project tokens, and is the entry point for most operations related
 to rulesets and project tokens.
@@ -338,7 +338,7 @@ function upcomingRulesetOf(uint256 projectId)
 
 Indicates whether this contract adheres to the specified interface.
 
-*See [IERC165-supportsInterface](/docs/v4/api/core/JBProjects.sol/contract.JBProjects.md#supportsinterface).*
+*See [IERC165-supportsInterface](/docs/v4/api/core/JBProjects.md#supportsinterface).*
 
 
 ```solidity

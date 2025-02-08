@@ -2,7 +2,7 @@
 [Git Source](https://github.com/rev-net/revnet-core/blob/4ce5b6e07a0e5ba0e8d652f2e9efcc8c2d12b8d1/src/REVDeployer.sol)
 
 **Inherits:**
-ERC2771Context, [IREVDeployer](/docs/v4/api/revnet/interfaces/IREVDeployer.sol/interface.IREVDeployer.md), IJBRulesetDataHook, IJBCashOutHook, IERC721Receiver
+ERC2771Context, [IREVDeployer](/docs/v4/api/revnet/interfaces/IREVDeployer.md), IJBRulesetDataHook, IJBCashOutHook, IERC721Receiver
 
 `REVDeployer` deploys, manages, and operates Revnets.
 

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/mejango/croptop-core/blob/5d3db1b227bc3b1304f2032a17d2b64e4f748d4f/src/CTDeployer.sol)
 
 **Inherits:**
-ERC2771Context, IERC721Receiver, [ICTDeployer](/docs/v4/api/croptop/interfaces/ICTDeployer.sol/interface.ICTDeployer.md)
+ERC2771Context, IERC721Receiver, [ICTDeployer](/docs/v4/api/croptop/interfaces/ICTDeployer.md)
 
 A contract that facilitates deploying a simple Juicebox project to receive posts from Croptop templates.
 

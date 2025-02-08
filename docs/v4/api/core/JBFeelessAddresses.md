@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBFeelessAddresses.sol)
 
 **Inherits:**
-Ownable, [IJBFeelessAddresses](/docs/v4/api/core/interfaces/IJBFeelessAddresses.sol/interface.IJBFeelessAddresses.md), IERC165
+Ownable, [IJBFeelessAddresses](/docs/v4/api/core/interfaces/IJBFeelessAddresses.md), IERC165
 
 Stores a list of addresses that shouldn't incur fees when sending or receiving payments.
 
@@ -41,7 +41,7 @@ constructor(address owner) Ownable(owner);
 
 Indicates whether this contract adheres to the specified interface.
 
-*See [IERC165-supportsInterface](/docs/v4/api/core/JBDeadline.sol/contract.JBDeadline.md#supportsinterface).*
+*See [IERC165-supportsInterface](/docs/v4/api/core/JBDeadline.md#supportsinterface).*
 
 
 ```solidity

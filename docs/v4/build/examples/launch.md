@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Launching a project
 
-In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.sol/contract.JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from.
+In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from.
 
 ```
 function launchProjectFor(
@@ -27,7 +27,7 @@ Here's a complete example of how a project launch can look:
     "QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw"
     ```
 
-*   For `rulesetConfigurations` send the following [`JBRulesetConfig`](/docs/v4/api/core/structs/JBRulesetConfig.sol/struct.JBRulesetConfig.md).
+*   For `rulesetConfigurations` send the following [`JBRulesetConfig`](/docs/v4/api/core/structs/JBRulesetConfig.md).
 
     ```javascript
     Example:
@@ -159,7 +159,7 @@ Here's a complete example of how a project launch can look:
     }]
     ```
 
-*   For `terminalConfigurations` send the following  [`JBTerminalConfig`](/docs/v4/api/core/structs/JBTerminalConfig.sol/struct.JBTerminalConfig.md):
+*   For `terminalConfigurations` send the following  [`JBTerminalConfig`](/docs/v4/api/core/structs/JBTerminalConfig.md):
 
     ```javascript
     Example:

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-project-handles/blob/53556219071dc0b4c7411da3160eeb155cfebf78/src/JBProjectHandles.sol)
 
 **Inherits:**
-[IJBProjectHandles](/docs/v4/api/project-handles/interfaces/IJBProjectHandles.sol/interface.IJBProjectHandles.md), ERC2771Context
+[IJBProjectHandles](/docs/v4/api/project-handles/interfaces/IJBProjectHandles.md), ERC2771Context
 
 `JBProjectHandles` allows Juicebox project owners to associate their project with an ENS node. If that ENS
 node has a matching text record which points back to the project, clients will treat that ENS node as the project's

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-address-registry/blob/922b48185d8a792b44854cf6d3257339a9d73eaa/src/JBAddressRegistry.sol)
 
 **Inherits:**
-[IJBAddressRegistry](/docs/v4/api/address-registry/interfaces/IJBAddressRegistry.sol/interface.IJBAddressRegistry.md)
+[IJBAddressRegistry](/docs/v4/api/address-registry/interfaces/IJBAddressRegistry.md)
 
 Frontend clients need a way to verify that a Juicebox contract has a deployer they trust. `JBAddressRegistry`
 allows any contract deployed with `create` or `create2` to publicly register its deployer's address. Whoever deploys

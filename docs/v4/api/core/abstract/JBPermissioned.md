@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/abstract/JBPermissioned.sol)
 
 **Inherits:**
-Context, [IJBPermissioned](/docs/v4/api/core/interfaces/IJBPermissioned.sol/interface.IJBPermissioned.md)
+Context, [IJBPermissioned](/docs/v4/api/core/interfaces/IJBPermissioned.md)
 
 Modifiers to allow access to transactions based on which permissions the message's sender has.
 

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBFundAccessLimits.sol)
 
 **Inherits:**
-[JBControlled](/docs/v4/api/core/abstract/JBControlled.sol/abstract.JBControlled.md), [IJBFundAccessLimits](/docs/v4/api/core/interfaces/IJBFundAccessLimits.sol/interface.IJBFundAccessLimits.md)
+[JBControlled](/docs/v4/api/core/abstract/JBControlled.md), [IJBFundAccessLimits](/docs/v4/api/core/interfaces/IJBFundAccessLimits.md)
 
 Stores and manages terminal fund access limits for each project.
 

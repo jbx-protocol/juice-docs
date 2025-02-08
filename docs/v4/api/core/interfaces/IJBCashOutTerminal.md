@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/interfaces/IJBCashOutTerminal.sol)
 
 **Inherits:**
-[IJBTerminal](/docs/v4/api/core/interfaces/IJBTerminal.sol/interface.IJBTerminal.md)
+[IJBTerminal](/docs/v4/api/core/interfaces/IJBTerminal.md)
 
 A terminal that can be cashed out from.
 

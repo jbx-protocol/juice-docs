@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-721-hook/blob/e813fb5b7d17cd3d18023137d70a7b2f3911ad99/src/JB721TiersHook.sol)
 
 **Inherits:**
-JBOwnable, ERC2771Context, [JB721Hook](/docs/v4/api/721-hook/abstract/JB721Hook.sol/abstract.JB721Hook.md), [IJB721TiersHook](/docs/v4/api/721-hook/interfaces/IJB721TiersHook.sol/interface.IJB721TiersHook.md)
+JBOwnable, ERC2771Context, [JB721Hook](/docs/v4/api/721-hook/abstract/JB721Hook.md), [IJB721TiersHook](/docs/v4/api/721-hook/interfaces/IJB721TiersHook.md)
 
 A Juicebox project can use this hook to sell tiered ERC-721 NFTs with different prices and metadata. When
 the project is paid, the hook may mint NFTs to the payer, depending on the hook's setup, the amount paid, and

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-721-hook/blob/e813fb5b7d17cd3d18023137d70a7b2f3911ad99/src/JB721TiersHookDeployer.sol)
 
 **Inherits:**
-ERC2771Context, [IJB721TiersHookDeployer](/docs/v4/api/721-hook/interfaces/IJB721TiersHookDeployer.sol/interface.IJB721TiersHookDeployer.md)
+ERC2771Context, [IJB721TiersHookDeployer](/docs/v4/api/721-hook/interfaces/IJB721TiersHookDeployer.md)
 
 Deploys a `JB721TiersHook` for an existing project.
 

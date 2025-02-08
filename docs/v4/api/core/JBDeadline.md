@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBDeadline.sol)
 
 **Inherits:**
-[IJBRulesetApprovalHook](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.sol/interface.IJBRulesetApprovalHook.md)
+[IJBRulesetApprovalHook](/docs/v4/api/core/interfaces/IJBRulesetApprovalHook.md)
 
 `JBDeadline` is a ruleset approval hook which rejects rulesets if they are not queued at least `duration`
 seconds before the current ruleset ends. In other words, rulesets must be queued before the deadline to take effect.

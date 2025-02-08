@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBMultiTerminal.sol)
 
 **Inherits:**
-[JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.sol/abstract.JBPermissioned.md), ERC2771Context, [IJBMultiTerminal](/docs/v4/api/core/interfaces/IJBMultiTerminal.sol/interface.IJBMultiTerminal.md)
+[JBPermissioned](/docs/v4/api/core/abstract/JBPermissioned.md), ERC2771Context, [IJBMultiTerminal](/docs/v4/api/core/interfaces/IJBMultiTerminal.md)
 
 `JBMultiTerminal` manages native/ERC-20 payments, cash outs, and surplus allowance usage for any number of
 projects. Terminals are the entry point for operations involving inflows and outflows of funds.
@@ -304,7 +304,7 @@ function heldFeesOf(
 
 Indicates whether this contract adheres to the specified interface.
 
-*See [IERC165-supportsInterface](/docs/v4/api/core/JBController.sol/contract.JBController.md#supportsinterface).*
+*See [IERC165-supportsInterface](/docs/v4/api/core/JBController.md#supportsinterface).*
 
 
 ```solidity

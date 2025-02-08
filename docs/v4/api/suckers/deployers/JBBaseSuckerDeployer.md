@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/deployers/JBBaseSuckerDeployer.sol)
 
 **Inherits:**
-[JBOptimismSuckerDeployer](/docs/v4/api/suckers/deployers/JBOptimismSuckerDeployer.sol/contract.JBOptimismSuckerDeployer.md)
+[JBOptimismSuckerDeployer](/docs/v4/api/suckers/deployers/JBOptimismSuckerDeployer.md)
 
 
 ## Functions

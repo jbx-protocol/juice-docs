@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/JBArbitrumSucker.sol)
 
 **Inherits:**
-[JBSucker](/docs/v4/api/suckers/JBSucker.sol/abstract.JBSucker.md), [IJBArbitrumSucker](/docs/v4/api/suckers/interfaces/IJBArbitrumSucker.sol/interface.IJBArbitrumSucker.md)
+[JBSucker](/docs/v4/api/suckers/JBSucker.md), [IJBArbitrumSucker](/docs/v4/api/suckers/interfaces/IJBArbitrumSucker.md)
 
 A `JBSucker` implementation to suck tokens between two chains connected by an Arbitrum bridge.
 

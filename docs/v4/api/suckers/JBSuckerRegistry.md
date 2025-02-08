@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/JBSuckerRegistry.sol)
 
 **Inherits:**
-ERC2771Context, Ownable, JBPermissioned, [IJBSuckerRegistry](/docs/v4/api/suckers/interfaces/IJBSuckerRegistry.sol/interface.IJBSuckerRegistry.md)
+ERC2771Context, Ownable, JBPermissioned, [IJBSuckerRegistry](/docs/v4/api/suckers/interfaces/IJBSuckerRegistry.md)
 
 
 ## State Variables

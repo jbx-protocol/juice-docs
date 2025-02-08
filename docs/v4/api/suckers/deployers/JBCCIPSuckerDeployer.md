@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/deployers/JBCCIPSuckerDeployer.sol)
 
 **Inherits:**
-[JBSuckerDeployer](/docs/v4/api/suckers/deployers/JBSuckerDeployer.sol/abstract.JBSuckerDeployer.md), [IJBCCIPSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBCCIPSuckerDeployer.sol/interface.IJBCCIPSuckerDeployer.md)
+[JBSuckerDeployer](/docs/v4/api/suckers/deployers/JBSuckerDeployer.md), [IJBCCIPSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBCCIPSuckerDeployer.md)
 
 An `IJBSuckerDeployer` implementation to deploy contracts.
 

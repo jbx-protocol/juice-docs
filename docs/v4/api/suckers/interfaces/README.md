@@ -8,7 +8,7 @@
 - [IJBArbitrumSucker](IJBArbitrumSucker.md)
 - [IJBArbitrumSuckerDeployer](IJBArbitrumSuckerDeployer.md)
 - [IJBCCIPSuckerDeployer](IJBCCIPSuckerDeployer.md)
-- [IJBOptimismSuckerDeployer](IJBOptimismSuckerDeployer.md)
+- [IJBOpSuckerDeployer](IJBOpSuckerDeployer.md)
 - [IJBOptimismSucker](IJBOptimismSucker.md)
 - [IJBSucker](IJBSucker.md)
 - [IJBSuckerDeployer](IJBSuckerDeployer.md)

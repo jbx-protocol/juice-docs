@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/extensions/JBAllowanceSucker.sol)
 
 **Inherits:**
-[JBSucker](/docs/v4/api/suckers/JBSucker.sol/abstract.JBSucker.md)
+[JBSucker](/docs/v4/api/suckers/JBSucker.md)
 
 
 ## Functions

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/deployers/JBOptimismSuckerDeployer.sol)
 
 **Inherits:**
-[JBSuckerDeployer](/docs/v4/api/suckers/deployers/JBSuckerDeployer.sol/abstract.JBSuckerDeployer.md), [IJBOpSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBOpSuckerDeployer.sol/interface.IJBOpSuckerDeployer.md)
+[JBSuckerDeployer](/docs/v4/api/suckers/deployers/JBSuckerDeployer.md), [IJBOpSuckerDeployer](/docs/v4/api/suckers/interfaces/IJBOpSuckerDeployer.md)
 
 An `IJBSuckerDeployerFeeless` implementation to deploy `JBOptimismSucker` contracts.
 

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-ownable/blob/a74b3181e75adaf0ee0c93cb00bcc5709ca8f314/src/JBOwnableOverrides.sol)
 
 **Inherits:**
-Context, JBPermissioned, [IJBOwnable](/docs/v4/api/ownable/interfaces/IJBOwnable.sol/interface.IJBOwnable.md)
+Context, JBPermissioned, [IJBOwnable](/docs/v4/api/ownable/interfaces/IJBOwnable.md)
 
 An abstract base for `JBOwnable`, which restricts functions so they can only be called by a Juicebox
 project's owner or a specific owner address. The owner can give access permission to other addresses with

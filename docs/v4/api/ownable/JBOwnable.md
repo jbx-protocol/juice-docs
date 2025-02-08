@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-ownable/blob/a74b3181e75adaf0ee0c93cb00bcc5709ca8f314/src/JBOwnable.sol)
 
 **Inherits:**
-[JBOwnableOverrides](/docs/v4/api/ownable/JBOwnableOverrides.sol/abstract.JBOwnableOverrides.md)
+[JBOwnableOverrides](/docs/v4/api/ownable/JBOwnableOverrides.md)
 
 A function restricted by `JBOwnable` can only be called by a Juicebox project's owner, a specified owner
 address (if set), or addresses with permission from the owner.

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/JBSucker.sol)
 
 **Inherits:**
-ERC2771Context, JBPermissioned, Initializable, ERC165, [IJBSuckerExtended](/docs/v4/api/suckers/interfaces/IJBSuckerExtended.sol/interface.IJBSuckerExtended.md)
+ERC2771Context, JBPermissioned, Initializable, ERC165, [IJBSuckerExtended](/docs/v4/api/suckers/interfaces/IJBSuckerExtended.md)
 
 An abstract contract for bridging a Juicebox project's tokens and the corresponding funds to and from a
 remote chain.

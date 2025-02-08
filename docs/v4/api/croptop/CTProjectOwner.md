@@ -2,7 +2,7 @@
 [Git Source](https://github.com/mejango/croptop-core/blob/5d3db1b227bc3b1304f2032a17d2b64e4f748d4f/src/CTProjectOwner.sol)
 
 **Inherits:**
-IERC721Receiver, [ICTProjectOwner](/docs/v4/api/croptop/interfaces/ICTProjectOwner.sol/interface.ICTProjectOwner.md)
+IERC721Receiver, [ICTProjectOwner](/docs/v4/api/croptop/interfaces/ICTProjectOwner.md)
 
 A contract that can be sent a project to be burned, while still allowing croptop posts.
 

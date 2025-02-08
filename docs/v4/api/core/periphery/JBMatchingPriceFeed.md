@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/periphery/JBMatchingPriceFeed.sol)
 
 **Inherits:**
-[IJBPriceFeed](/docs/v4/api/core/interfaces/IJBPriceFeed.sol/interface.IJBPriceFeed.md)
+[IJBPriceFeed](/docs/v4/api/core/interfaces/IJBPriceFeed.md)
 
 
 ## Functions

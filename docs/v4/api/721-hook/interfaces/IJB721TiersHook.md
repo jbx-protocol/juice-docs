@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-721-hook/blob/e813fb5b7d17cd3d18023137d70a7b2f3911ad99/src/interfaces/IJB721TiersHook.sol)
 
 **Inherits:**
-[IJB721Hook](/docs/v4/api/721-hook/interfaces/IJB721Hook.sol/interface.IJB721Hook.md)
+[IJB721Hook](/docs/v4/api/721-hook/interfaces/IJB721Hook.md)
 
 
 ## Functions

@@ -2,7 +2,7 @@
 [Git Source](https://github.com/mejango/croptop-core/blob/5d3db1b227bc3b1304f2032a17d2b64e4f748d4f/src/CTPublisher.sol)
 
 **Inherits:**
-JBPermissioned, ERC2771Context, [ICTPublisher](/docs/v4/api/croptop/interfaces/ICTPublisher.sol/interface.ICTPublisher.md)
+JBPermissioned, ERC2771Context, [ICTPublisher](/docs/v4/api/croptop/interfaces/ICTPublisher.md)
 
 A contract that facilitates the permissioned publishing of NFT posts to a Juicebox project.
 

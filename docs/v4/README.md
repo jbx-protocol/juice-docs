@@ -31,7 +31,7 @@ These docs are here to help you navigate the protocol, whether you're...
 
 1. **[Learn](/docs/v4/learn/overview.md)** - Step-by-step guidance on how the protocol works.
 2. **[Build](/docs/v4/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
-3. **[API](/docs/v4/api/core/JBController.sol/contract.JBController.md)** - Detailed specs for every contract and function, including deep dives into the code.
+3. **[API](/docs/v4/api/core/JBController.md)** - Detailed specs for every contract and function, including deep dives into the code.
 
 ---
 

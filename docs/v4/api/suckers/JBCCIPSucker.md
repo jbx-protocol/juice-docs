@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-suckers/blob/faba69dd26a284c037886fb39a0fe6a34055e8dd/src/JBCCIPSucker.sol)
 
 **Inherits:**
-[JBSucker](/docs/v4/api/suckers/JBSucker.sol/abstract.JBSucker.md), IAny2EVMMessageReceiver
+[JBSucker](/docs/v4/api/suckers/JBSucker.md), IAny2EVMMessageReceiver
 
 A `JBSucker` implementation to suck tokens between chains with Chainlink CCIP
 

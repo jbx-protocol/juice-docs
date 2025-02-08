@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-721-hook/blob/e813fb5b7d17cd3d18023137d70a7b2f3911ad99/src/abstract/JB721Hook.sol)
 
 **Inherits:**
-[ERC721](/docs/v4/api/721-hook/abstract/ERC721.sol/abstract.ERC721.md), [IJB721Hook](/docs/v4/api/721-hook/interfaces/IJB721Hook.sol/interface.IJB721Hook.md)
+[ERC721](/docs/v4/api/721-hook/abstract/ERC721.md), [IJB721Hook](/docs/v4/api/721-hook/interfaces/IJB721Hook.md)
 
 When a project which uses this hook is paid, this hook may mint NFTs to the payer, depending on this hook's
 setup, the amount paid, and information specified by the payer. The project's owner can enable NFT cash outs.
@@ -165,7 +165,7 @@ function cashOutWeightOf(
 
 Indicates if this contract adheres to the specified interface.
 
-*See [IERC165-supportsInterface](/docs/v4/api/721-hook/JB721TiersHook.sol/contract.JB721TiersHook.md#supportsinterface).*
+*See [IERC165-supportsInterface](/docs/v4/api/721-hook/JB721TiersHook.md#supportsinterface).*
 
 
 ```solidity

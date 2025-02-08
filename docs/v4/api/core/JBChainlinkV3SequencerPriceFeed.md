@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/2998dca2fbd2658e2c8791d6dc8348147d69e28e/src/JBChainlinkV3SequencerPriceFeed.sol)
 
 **Inherits:**
-[JBChainlinkV3PriceFeed](/docs/v4/api/core/JBChainlinkV3PriceFeed.sol/contract.JBChainlinkV3PriceFeed.md)
+[JBChainlinkV3PriceFeed](/docs/v4/api/core/JBChainlinkV3PriceFeed.md)
 
 An `IJBPriceFeed` implementation that reports prices from a Chainlink `AggregatorV3Interface` from
 optimistic sequencers.

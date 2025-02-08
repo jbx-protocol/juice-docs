@@ -2,7 +2,7 @@
 [Git Source](https://github.com/mejango/banny-contract/blob/b8fd68f37fbb8d85a53ed051250e6280a383daf8/src/Banny721TokenUriResolver.sol)
 
 **Inherits:**
-Ownable, ERC2771Context, ReentrancyGuard, IJB721TokenUriResolver, [IBanny721TokenUriResolver](/docs/v4/api/banny/interfaces/IBanny721TokenUriResolver.sol/interface.IBanny721TokenUriResolver.md), IERC721Receiver
+Ownable, ERC2771Context, ReentrancyGuard, IJB721TokenUriResolver, [IBanny721TokenUriResolver](/docs/v4/api/banny/interfaces/IBanny721TokenUriResolver.md), IERC721Receiver
 
 Banny asset manager. Stores and shows Naked Bannys in worlds with outfits on.
 

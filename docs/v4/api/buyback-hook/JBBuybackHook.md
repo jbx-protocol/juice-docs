@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-buyback-hook/blob/9137c87bcd7400fb4252d57a5052a3c2a4978154/src/JBBuybackHook.sol)
 
 **Inherits:**
-JBPermissioned, [IJBBuybackHook](/docs/v4/api/buyback-hook/interfaces/IJBBuybackHook.sol/interface.IJBBuybackHook.md)
+JBPermissioned, [IJBBuybackHook](/docs/v4/api/buyback-hook/interfaces/IJBBuybackHook.md)
 
 The buyback hook allows beneficiaries of a payment to a project to either:
 - Get tokens by paying the project through its terminal OR
