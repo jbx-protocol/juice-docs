@@ -48,13 +48,14 @@ Likewise, a project can bring its own contract to serve as its controller. A pro
 
 The core and surface contracts are deployed on any number of EVM chains, starting with Ethereum mainnet, Optimism, Arbitrum, and Base. Projects can connect instances of their treasuries across these chains through components called Suckers, which suck funds from one chain and deposit them into another as a project's tokens are bridged.
 
-* [`JBSucker`](.) is a contract that sucks funds from one chain and deposits them into another as a project's tokens are bridged.
-* [`JBSuckerDeployer`](.) is a contract that allows projects to deploy new suckers for new chain pairs.
+* [`JBSucker`](/docs/v4/api/suckers/JBSucker.md) sucks funds from one chain and deposits them into another as a project's tokens are burned on one chain and minted on the other.
+* [`JBSuckerDeployer`](/docs/v4/api/suckers/deployers/JBSuckerDeployer.md) specifies how to deploy new suckers for new chain pairs.
+* [`JBSuckerRegistry`](/docs/v4/api/suckers/JBSuckerRegistry.md) stores info about how local projects are connected to projects on other chains, through calls like [`JBSuckerRegistry.getSuckerPairsOf(...)`](/docs/v4/api/suckers/JBSuckerRegistry/#getsuckerpairsof). This is also the contract where new suckers should be deployed from.
 
 #### Bonus utility contracts
 
-<!-- * [`JBBuybackHook`](/docs/v4/deprecated/v2/or-utilities/jbbuybackhook/README.md) is a utility contract that allows projects to route incoming funds to buy back their own tokens from the market if it offers a better price than the current issuance rate. -->
-<!-- * [`JBTiered721Hook`](/docs/v4/deprecated/v2/or-utilities/jbtiered721hook/README.md) is a utility contract that allows projects to distribute NFTs to holders in a tiered manner as funds are received.
-* [`JBSwapTerminal`](/docs/v4/deprecated/v2/or-utilities/jbswapterminal/README.md) is a utility contract that allows projects to swap incoming funds for other tokens that it wishes to hold in its project's balance, allowing payers greater optionality in how they can pay a project while not adding more risk to the project. -->
-<!-- * [`JBProjectHandles`](/docs/v4/deprecated/v2/or-utilities/jbprojecthandles/README.md) lets project owners attach an ENS name as a project handle. Front ends can use a project's handle in place of its project ID, and indexers can use events to make the Juicebox project directory searchable and filterable. This will only be deployed on Ethereum mainnet.
- -->
+* [`JBBuybackHook`](/docs/v4/api/buyback-hook/JBBuybackHook.md) allows projects to route incoming funds to buy back their own tokens from the market if it offers a better price than the current issuance rate.
+ * [`JB721TiersHook`](/docs/v4/api/721-hook/JB721TiersHook.md) allows projects to distribute NFTs to holders along tiers and categories as funds are received.
+* [`JBSwapTerminal`](/docs/v4/api/swap-terminal/JBSwapTerminal.md) allows projects to swap incoming funds for other tokens that it wishes to hold in its project's balance, allowing payers greater optionality in how they can pay a project while not adding more risk to the project.
+* [`JBProjectHandles`](/docs/v4/api/project-handles/JBProjectHandles.md) lets project attach an ENS name as a project handle. Front ends can use a project's handle in place of its project ID, and indexers can use events to make the Juicebox project directory searchable and filterable. This will only be deployed on Ethereum mainnet.
+
