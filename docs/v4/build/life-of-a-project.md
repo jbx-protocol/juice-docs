@@ -16,6 +16,21 @@ function launchProjectFor(
 ) external override returns (uint256 projectId) { ... }
 ```
 
+If you're launching an omnichain project, you can use the [`JBDeployer.launchProjectFor(...)`](/docs/v4/api/deployers/JBDeployer.md#launchprojectfor) transaction, which will also take in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+
+```
+function launchProjectFor(
+    address owner,
+    string calldata projectUri,
+    JBRulesetConfig[] calldata rulesetConfigurations,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    string calldata memo,
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration
+)
+    external
+    returns (uint256 projectId, address[] memory suckers) { ... }
+```
+
 Check out the [Launching a project](/docs/v4/build/examples/launch.md) example page for more info on how to build projects treasuries to various specifications.
 
 <details>

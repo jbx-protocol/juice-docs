@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Launching a project
 
-In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from.
+In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from. 
 
 ```
 function launchProjectFor(
@@ -16,6 +16,22 @@ function launchProjectFor(
 )
   external returns (uint256 projectId) { ... }
 ```
+
+For projects deploying omnichain, the [`JBDeployer.launchProjectFor(...)`](/docs/v4/api/deployers/JBDeployer.md#launchprojectfor) transaction is a wrapper that also takes in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+
+```
+function launchProjectFor(
+    address owner,
+    string calldata projectUri,
+    JBRulesetConfig[] calldata rulesetConfigurations,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    string calldata memo,
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration
+)
+    external
+    returns (uint256 projectId, address[] memory suckers) { ... }
+```
+
 
 Here's a complete example of how a project launch can look:
 
@@ -181,4 +197,23 @@ Here's a complete example of how a project launch can look:
     Example:
 
     "I love you"
+    ```
+
+*   For `suckerDeploymentConfiguration` send a [`REVSuckerDeploymentConfig`](/docs/v4/api/revnet/structs/REVSuckerDeploymentConfig.md) that specifies a salt and a set of sucker deployers.
+
+    ```javascript
+    Example:
+
+    {
+      salt: 1234567890, // A salt to use for deploying suckers.
+      deployerConfigurations: [{
+        deployer: <address of sucker deployer>,
+        mappings: [{
+          localToken: <address of local token>,
+          minGas: <minimum gas amount used to bridge>,
+          remoteToken: <address of remote token>,
+          minBridgeAmount: <minimum bridge amount>
+        }]
+      }]
+    }
     ```
