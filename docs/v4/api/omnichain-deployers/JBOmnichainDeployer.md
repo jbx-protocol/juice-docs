@@ -1,10 +1,10 @@
-# JBDeployer
-[Git Source](https://github.com/Bananapus/nana-deployers/blob/51cdc7805c1eb529cb5607259609b5ae967e94be/src/JBDeployer.sol)
+# JBOmnichainDeployer
+[Git Source](https://github.com/Bananapus/nana-deployers/blob/51cdc7805c1eb529cb5607259609b5ae967e94be/src/JBOmnichainDeployer.sol)
 
 **Inherits:**
 ERC2771Context, JBPermissioned
 
-`JBDeployer` deploys, manages, and operates Juicebox projects with suckers.
+`JBOmnichainDeployer` deploys, manages, and operates Juicebox projects with suckers.
 
 
 ## State Variables

@@ -16,7 +16,7 @@ function launchProjectFor(
 ) external override returns (uint256 projectId) { ... }
 ```
 
-If you're launching an omnichain project, you can use the [`JBDeployer.launchProjectFor(...)`](/docs/v4/api/deployers/JBDeployer.md#launchprojectfor) transaction, which will also take in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+If you're launching an omnichain project, you can use the [`JBOmnichainDeployer.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md#launchprojectfor) transaction, which will also take in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
 
 ```
 function launchProjectFor(

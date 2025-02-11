@@ -1,4 +1,0 @@
-
-
-# Deployers
-- [JBDeployer](JBDeployer.md)

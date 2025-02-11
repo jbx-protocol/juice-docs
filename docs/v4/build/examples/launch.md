@@ -17,7 +17,7 @@ function launchProjectFor(
   external returns (uint256 projectId) { ... }
 ```
 
-For projects deploying omnichain, the [`JBDeployer.launchProjectFor(...)`](/docs/v4/api/deployers/JBDeployer.md#launchprojectfor) transaction is a wrapper that also takes in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+For projects deploying omnichain, the [`JBOmnichainDeployer.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md#launchprojectfor) transaction is a wrapper that also takes in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
 
 ```
 function launchProjectFor(
