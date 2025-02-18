@@ -17,11 +17,11 @@ function DIRECTORY() external view returns (IJBDirectory);
 function PROJECTS() external view returns (IJBProjects);
 ```
 
-### getSuckerPairsOf
+### suckerPairsOf
 
 
 ```solidity
-function getSuckerPairsOf(uint256 projectId) external view returns (JBSuckersPair[] memory pairs);
+function suckerPairsOf(uint256 projectId) external view returns (JBSuckersPair[] memory pairs);
 ```
 
 ### isSuckerOf

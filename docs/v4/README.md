@@ -27,6 +27,19 @@ These docs are here to help you navigate the protocol, whether you're...
 
 ---
 
+#### Changes in Juicebox v4
+
+- Projects on Juicebox V4 are omnichain, meaning they can choose to deploy on any EVM blockchain, starting with the choice between Ethereum mainnet, Optimism, Arbitrum, Base, or any combination of these. Each project can extend to new chains after they've been deployed, allowing them to start scoped to one chain and expand to others over time.
+
+- Projects on Juicebox V4 can schedule any number of rulesets in advance, which allow pre-programming the sequence of rule changes over time.
+
+- V4 adjusts terminology. "Funding cycles" are now called "Rulesets". "Redemptions" are now called "Cash outs". "Distribution limit" is now called "Payout limit". "Overflow" is now called "Surplus".  
+
+- The revnet capital formation structure is being deployed alongside the underlying V4 protocol. Revnets are expressed using the Juicebox V4 framework.
+ 
+- Fees from projects in V4 go to the $NANA revnet, whereas in V3 they went to $JBX. $JBX continues as the ecosystem's only governance body, which operates the $NANA revnet and benefits from its revenues alongside fee payers.  
+
+---
 #### Directory
 
 1. **[Learn](/docs/v4/learn/overview.md)** - Step-by-step guidance on how the protocol works.

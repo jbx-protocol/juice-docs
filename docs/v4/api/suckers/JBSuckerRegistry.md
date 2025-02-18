@@ -102,13 +102,13 @@ function isSuckerOf(uint256 projectId, address addr) external view override retu
 |`<none>`|`bool`|flag A flag indicating if the sucker belongs to the project, and was deployed through this registry.|
 
 
-### getSuckerPairsOf
+### suckerPairsOf
 
 Helper function for retrieving the projects suckers and their metadata.
 
 
 ```solidity
-function getSuckerPairsOf(uint256 projectId) external view override returns (JBSuckersPair[] memory pairs);
+function suckerPairsOf(uint256 projectId) external view override returns (JBSuckersPair[] memory pairs);
 ```
 **Parameters**
 

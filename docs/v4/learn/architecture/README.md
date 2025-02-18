@@ -50,7 +50,7 @@ The core and surface contracts are deployed on any number of EVM chains, startin
 
 * [`JBSucker`](/docs/v4/api/suckers/JBSucker.md) sucks funds from one chain and deposits them into another as a project's tokens are burned on one chain and minted on the other.
 * [`JBSuckerDeployer`](/docs/v4/api/suckers/deployers/JBSuckerDeployer.md) specifies how to deploy new suckers for new chain pairs.
-* [`JBSuckerRegistry`](/docs/v4/api/suckers/JBSuckerRegistry.md) stores info about how local projects are connected to projects on other chains, through calls like [`JBSuckerRegistry.getSuckerPairsOf(...)`](/docs/v4/api/suckers/JBSuckerRegistry/#getsuckerpairsof). This is also the contract where new suckers should be deployed from.
+* [`JBSuckerRegistry`](/docs/v4/api/suckers/JBSuckerRegistry.md) stores info about how local projects are connected to projects on other chains, through calls like [`JBSuckerRegistry.suckerPairsOf(...)`](/docs/v4/api/suckers/JBSuckerRegistry/#suckerpairsof). This is also the contract where new suckers should be deployed from.
 
 #### Bonus utility contracts
 
