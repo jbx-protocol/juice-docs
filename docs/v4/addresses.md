@@ -1,16 +1,16 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Contract Addresses
 
 :::info
-Visit the deprecated section for [v3 contract addresses](/docs/v4/deprecated/v3/resources/addresses), [v2 contract addresses](/docs/v4/deprecated/v2/addresses), and [v1 contract addresses](/docs/v4/deprecated/v1/resources/contract-addresses).
+Visit the deprecated section for [v3 contract addresses](/docs/v4/deprecated/v3/resources/addresses.md), [v2 contract addresses](/docs/v4/deprecated/v2/addresses.md), and [v1 contract addresses](/docs/v4/deprecated/v1/resources/contract-addresses.md).
 :::
 
 ## Juicebox Core
 
-_[Code](/docs/v4/api/core)_
+_[Code](/docs/v4/api/core/README.md)_
 
 _The following addresses are for the Juicebox Protocol V4 contracts on Ethereum Mainnet, Optimism, Arbitrum, Base, Ethereum Sepolia, Optimism Sepolia, Arbitrum Sepolia, and Base Sepolia._
 
