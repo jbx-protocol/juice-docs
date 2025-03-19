@@ -40,7 +40,7 @@ Here's a complete example of how a project launch can look:
     ```javascript
     Example:
 
-    "QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw"
+    "ipfs://QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw"
     ```
 
 *   For `rulesetConfigurations` send the following [`JBRulesetConfig`](/docs/v4/api/core/structs/JBRulesetConfig.md).
@@ -205,7 +205,7 @@ Here's a complete example of how a project launch can look:
     Example:
 
     {
-      salt: 1234567890, // A salt to use for deploying suckers.
+      salt: 1234567890, // A salt to use for deploying suckers to a deterministic address.
       deployerConfigurations: [{
         deployer: <address of sucker deployer>,
         mappings: [{

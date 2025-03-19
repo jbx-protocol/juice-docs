@@ -31,7 +31,7 @@ function launchProjectFor(
     returns (uint256 projectId, address[] memory suckers) { ... }
 ```
 
-Check out the [Launching a project](/docs/v4/build/examples/launch.md) example page for more info on how to build projects treasuries to various specifications.
+Check out the [Launching a project](/docs/v4/build/examples/launch-project.md) example page for more info on how to build projects treasuries to various specifications.
 
 <details>
 
