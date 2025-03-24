@@ -25,8 +25,8 @@
 
 #### What you'll want to know if you're building
 
-<!-- * A project can be deployed with a new 721 Reward Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchProjectFor(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#launchprojectfor) transaction.
-* A project's rulesets can be launched with a new 721 Reward Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchRulesetsFor(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#launchrulesetsfor) transaction.
-* A project can be reconfigured with a new 721 Reward Tiers contract using the [`JB721TiersHookProjectDeployer.queuerulesetsof(...)`](/docs/v4/extensions/juice-721-hook/jb721tiershookprojectdeployer.md#queuerulesetsof) transaction. -->
+* A project can be deployed with a new 721 Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchProjectFor(...)`](/docs/v4/api/721-hook/JB721TiersHookProjectDeployer.md#launchprojectfor) transaction.
+* A project's rulesets can be launched with a new 721 Tiers contract attached using the [`JB721TiersHookProjectDeployer.launchRulesetsFor(...)`](/docs/v4/api/721-hook/JB721TiersHookProjectDeployer.md#launchrulesetsfor) transaction.
+* A project can be reconfigured with a new 721 Tiers contract using the [`JB721TiersHookProjectDeployer.queuerulesetsof(...)`](/docs/v4/api/721-hook/JB721TiersHookProjectDeployer.md#queuerulesetsof) transaction.
 * An already-existing 721 reward tiers contract can be passed into the standard [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor), and [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof) transactions in the ruleset's metadata.
 

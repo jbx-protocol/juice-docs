@@ -4,7 +4,7 @@
 
 * A revnet is just a Juicebox project owned by a contract that enforces specific rulesets.
 * A revnet does not use payouts. Instead, all funds received can only be accessed by cashing out tokens. Because of this, revnet tokens are fully backed by the treasury.
-* A revnet offers its token holders loans from its funds in exchange for its tokens and a fee.
+* A revnet offers its token holders loans from its funds in exchange for its tokens as collateral and a fee.
 
 
 #### What you'll want to know if you're building

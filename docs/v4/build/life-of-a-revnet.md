@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Life of a revnet
 
-A revnet is a Juicebox project owned by a special contract that enforces a certain set of rules. The result is a capital formation engine for revenue-backed tokens, with risk of mismanaged payouts. 
+A revnet is a Juicebox project owned by a special contract that enforces a certain set of rules. The result is a capital formation engine for revenue-backed tokens, without risks of mismanaged payouts. 
 
 To launch a revnet, call [`REVDeployer.deployFor(...)`](/docs/v4/api/revnet/REVDeployer.md#deployFor).
 
