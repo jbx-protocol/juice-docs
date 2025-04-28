@@ -15,7 +15,7 @@ sidebar_position: 3
 
 ## Prevention Checklist
 
-If you haven't already, take the following steps over the next 2 weeks. If you have any questions, ask filipv.
+If you haven't already, take the following steps over the next 2 weeks.
 
 - [ ] Familiarize yourself with the [Emergency Process](../emergency).
 - [ ] Set up automatic updates for all relevant software (browsers, apps, clients, etc).
