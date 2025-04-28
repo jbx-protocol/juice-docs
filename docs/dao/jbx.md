@@ -11,16 +11,18 @@ Juicebox is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring departme
 
 $JBX is JuiceboxDAO's governance token. Up until the approval of [JBP 484](https://nance.app/s/juicebox/484), it was created when people paid [JuiceboxDAO's project on Juicebox](https://juicebox.money/@juicebox), and destroyed when people cash out $JBX to reclaim ETH from JuiceboxDAO's project. JuiceboxDAO also receives [protocol fees](#about-fees), which created $JBX in the same way. After JBP 484, $JBX supply is fixed and any inbound funds and fees to JuiceboxDAO's project are used to buy $JBX on Uniswap.
 
-JuiceboxDAO has the first project on each version of the Juicebox protocol, with project ID of 1. You can find our current project [here](https://juicebox.money/@juicebox), and our old project [here](https://juicebox.money/p/juicebox). Old $JBX (from our old project) can be [migrated to the new JBX](/blog/jbx-v3-migration-guide/).
+JuiceboxDAO has the first project on each early version (versions 1-3) of the Juicebox protocol, with project ID of 1. You can find our current project [here](https://juicebox.money/@juicebox), and our old project [here](https://juicebox.money/p/juicebox). Old $JBX (from our old project) can be [migrated to the new JBX](/blog/jbx-v3-migration-guide/).
 
 1. JBX: [`0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2`](https://etherscan.io/token/0x4554CC10898f92D45378b98D6D6c2dD54c687Fb2)[^1].
 2. Old JBX (deprecated): [`0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66`](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66).
 
 $JBX voting on [Nance](https://nance.app/s/) decides all $JBX rules, including the amount of $JBX which gets created when JuiceboxDAO is paid, as well as the amount of ETH $JBX holders can get back by cashing out their tokens. Approved proposals are implemented by the DAO's 6/9 [Gnosis Safe Multisig](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/), which has signers who are elected by $JBX voters. You can see the our full Governance Process [here](https://docs.juicebox.money/dao/process/) — this process is also decided upon and ratified by JBX voters.
 
+$JBX is no longer a built-in component of the Juicebox V4's fee process. Instead, project ID #1 on V4 is the $NANA [revnet](https://docs.juicebox.money/v4/learn/revnet/) that is used to collect fees. $JBX governance owns 62% of $NANA issuance, and therefor 62% of all fees collected on Juicebox V4 – the rest is owned by fee payers.
+
 ## Buyback Hook 
 
-After it was approved by $JBX voting in [JBP 408](https://nance.app/s/juicebox/408), the buyback hook was added to JuiceboxDAO's project. Now when JuiceboxDAO's project is paid, this contract checks if the Uniswap $JBX price is cheaper than the price to create new $JBX from the project. If it is the payment is sent to Uniswap instead. Since [JBP 484](https://nance.app/s/juicebox/484), the buyback hook services all inbound payments since the issuance rate is fixed at 0.
+After it was approved by $JBX voting in [JBP 408](https://nance.app/s/juicebox/408), the buyback hook was added to JuiceboxDAO's project. Now when JuiceboxDAO's project is paid on V3, this contract checks if the Uniswap $JBX price is cheaper than the price to create new $JBX from the project. If it is the payment is sent to Uniswap instead. Since [JBP 484](https://nance.app/s/juicebox/484), the buyback hook services all inbound payments since the issuance rate is fixed at 0.
 
 This means that the JBX supply is capped until JuiceboxDAO decides otherwise. 
 
