@@ -7,9 +7,9 @@ sidebar_position: 6
 
 Proposal to deploy `JBOmniController` which serves as both a project's controllers as well as an omnichain deployer.
 
-Currently, in order to update an omnichain project, a user must give the [`JBOmnichainDeployer`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md) permission on each chain, without the ability to aggregate as a relayr transaction. This is not a fun UX.
+Currently, in order to update an omnichain project, a user must give the [`JBOmnichainDeployer`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md) permission on each chain, without the ability to aggregate as a [Relayr](/docs/v4/learn/glossary/relayr.md) transaction. This is not a fun UX.
 
-We can fork and make a few updates to the [`JBController`](/docs/v4/api/core/JBController.md) in order to allow omnichain projects to queue rulesets from it directly. This will make updating omnichain projects one call to [Relayr](/docs/v4/learn/glossary/relayr.md). We will add a `launchOmnichainProjectFor` function to it.
+We can fork and make a few updates to the [`JBController`](/docs/v4/api/core/JBController.md) in order to allow omnichain projects to queue rulesets from it directly. This will make updating omnichain projects one call to [Relayr](/docs/v4/learn/glossary/relayr.md). We will add a `launchOmnichainProjectFor` function to it. This `JBOmniController` will be aware of [Suckers](/docs/v4/learn/glossary/suckers.md), whereas the current `JBController` is not.
 
 Once deployed, web clients should use the new `JBOmniController` to deploy projects going forward, and consider giving users on the current controller an option to migrate to it.
 
