@@ -15,6 +15,8 @@ Once deployed, web clients should use the new `JBOmniController` to deploy proje
 
 A new Buyback Hook and Croptop contracts will also be deployed for future projects to use, since the currently deployed one has a strong dependency on the project using the controller immutably written to it.
 
+This will also require a transaction by JuiceboxDAO to [`JBDirectory.setIsAllowedToSetFirstController(...)`](/docs/v4/api/core/JBDirectory.md#setisallowedtosetfirstcontroller), see [Administration](/docs/v4/learn/administration.md).
+
 ### April 16, 2025 - USD/ETH price feed on JBCurrencyIds = 3.
 
 Proposal to deploy a new USD/ETH price feed on [`JBCurrencyIds`](/docs/v4/api/core/libraries/JBCurrencyIds.md) 3. The one that was deployed on 2 was deployed inverted, interpreting the USD/ETH price as ETH/USD, and is therefor innaccruate and unusable.
