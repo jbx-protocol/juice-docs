@@ -8,7 +8,7 @@ sidebar_position: 5
 Visit the deprecated section for [v3 contract addresses](/docs/v4/deprecated/v3/resources/addresses.md), [v2 contract addresses](/docs/v4/deprecated/v2/addresses.md), and [v1 contract addresses](/docs/v4/deprecated/v1/resources/contract-addresses.md).
 :::
 
-## Juicebox Core
+### Juicebox Core
 
 _[Code](/docs/v4/api/core/README.md)_
 
@@ -37,7 +37,7 @@ _The following addresses are for the Juicebox Protocol V4 Core contracts on Ethe
 **JBTerminalStore** | `0x6f6740dda12033ca9fbaa56693194e38cfd36827` | [🔗](https://etherscan.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://optimistic.etherscan.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://arbiscan.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://basescan.org/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://sepolia.etherscan.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://sepolia.optimism.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://sepolia.arbiscan.io/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) | [🔗](https://sepolia.basescan.org/address/0x6f6740dda12033ca9fbaa56693194e38cfd36827) |
 **JBTokens** | `0xa59e9f424901fb9dbd8913a9a32a081f9425bf36` | [🔗](https://etherscan.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://optimistic.etherscan.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://arbiscan.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://basescan.org/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://sepolia.etherscan.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://sepolia.optimism.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://sepolia.arbiscan.io/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) | [🔗](https://sepolia.basescan.org/address/0xa59e9f424901fb9dbd8913a9a32a081f9425bf36) |
  
-## Buyback Hook
+### Buyback Hook
 
 _[Code](/docs/v4/api/buyback-hook/README.md)_
 
@@ -47,7 +47,7 @@ _The following addresses are for the Juicebox Protocol V4 Buyback Hook contracts
 |--------------|---------|---------|----------|---------|------|---------|------------------|------------------|--------------|
 | **JBBuybackHook** | - | [`0x7dcf35dad9b30ffcb7f35f51279252b884921927`](https://etherscan.io/address/0x7dcf35dad9b30ffcb7f35f51279252b884921927) | [`0x09d97e2b8b2f143335c2344947a79d1a3a4c2946`](https://optimistic.etherscan.io/address/0x09d97e2b8b2f143335c2344947a79d1a3a4c2946) | [`0xb9dce56d7f64b8c456157ded0c76241d0c23f578`](https://arbiscan.io/address/0xb9dce56d7f64b8c456157ded0c76241d0c23f578) | [`0x47d1b88af8ee0ed0a772a7c98430894141b9ac8b`](https://basescan.org/address/0x47d1b88af8ee0ed0a772a7c98430894141b9ac8b) | [`0x085b2fd0560ef5b6acd0f98b2f0e079cfa936f58`](https://sepolia.etherscan.io/address/0x085b2fd0560ef5b6acd0f98b2f0e079cfa936f58) | [`0x5401183c25750cbec8c3a9dd7e425829b0b1411d`](https://sepolia.optimism.io/address/0x5401183c25750cbec8c3a9dd7e425829b0b1411d) | [`0xc32b873d25230bcbeb4f9d9d9bf10eaf4d77dddf`](https://sepolia.arbiscan.io/address/0xc32b873d25230bcbeb4f9d9d9bf10eaf4d77dddf) | [`0x5401183c25750cbec8c3a9dd7e425829b0b1411d`](https://sepolia.basescan.org/address/0x5401183c25750cbec8c3a9dd7e425829b0b1411d) |
 
-## Swap Terminal
+### Swap Terminal
 
 _[Code](/docs/v4/api/swap-terminal/README.md)_
 
@@ -57,7 +57,7 @@ _The following addresses are for the Juicebox Protocol V4 Swap Terminal contract
 |--------------|---------|---------|----------|---------|------|---------|------------------|------------------|--------------|
 | **JBSwapTerminal** | - | [`0xdd98b25631aa9372a8cf09912b803d2ad80db161`](https://etherscan.io/address/0xdd98b25631aa9372a8cf09912b803d2ad80db161) | [`0xf7002a2df9bebf629b6093c8a60e28beed4f7b48`](https://optimistic.etherscan.io/address/0xf7002a2df9bebf629b6093c8a60e28beed4f7b48) | [`0xcf50c6f3f366817815fe7ba69b4518356ba6033b`](https://arbiscan.io/address/0xcf50c6f3f366817815fe7ba69b4518356ba6033b) | [`0x9b82f7f43a956f5e83faaf1d46382cba19ce71ab`](https://basescan.org/address/0x9b82f7f43a956f5e83faaf1d46382cba19ce71ab) | [`0x94c5431808ab538d398c6354d1972a0cb8c0b18b`](https://sepolia.etherscan.io/address/0x94c5431808ab538d398c6354d1972a0cb8c0b18b) | [`0xb940f0bb31376cad3a0fae7c78995ae899160a52`](https://sepolia.optimism.io/address/0xb940f0bb31376cad3a0fae7c78995ae899160a52) | [`0xcf5f58ebb455678005b7dc6e506a7ec9a3438d0e`](https://sepolia.arbiscan.io/address/0xcf5f58ebb455678005b7dc6e506a7ec9a3438d0e) | [`0xb940f0bb31376cad3a0fae7c78995ae899160a52`](https://sepolia.basescan.org/address/0xb940f0bb31376cad3a0fae7c78995ae899160a52) |
 
-## 721 Hook
+### 721 Hook
 
 _[Code](/docs/v4/api/721-hook/README.md)_
 
@@ -69,7 +69,7 @@ _The following addresses are for the Juicebox Protocol V4 721 Hook contracts on 
 | **JB721TiersHookProjectDeployer** | `0xedb83eb473b008a2246488df1f85174d26d86af2` | [🔗](https://etherscan.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://optimistic.etherscan.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://arbiscan.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://basescan.org/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://sepolia.etherscan.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://sepolia.optimism.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://sepolia.arbiscan.io/address/0xedb83eb473b008a2246488df1f85174d26d86af2) | [🔗](https://sepolia.basescan.org/address/0xedb83eb473b008a2246488df1f85174d26d86af2) |
 | **JB721TiersHookStore** | `0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1` | [🔗](https://etherscan.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://optimistic.etherscan.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://arbiscan.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://basescan.org/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://sepolia.etherscan.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://sepolia.optimism.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://sepolia.arbiscan.io/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) | [🔗](https://sepolia.basescan.org/address/0xdc162a8a6decc7f27fd4cff58d69b9cc0c7c2ea1) |
 
-## Suckers
+### Suckers
 
 _[Code](/docs/v4/api/suckers/README.md)_
 
@@ -89,7 +89,7 @@ _The following addresses are for the Juicebox Protocol V4 Suckers contracts on E
 | **JBCCIPSuckerDeployer (Arbitrum \<\-\> Base)** | `0x3d7fb0aa325ad5d2349274f9ef33d4424135d963` | - | - | [🔗](https://arbiscan.io/address/0x3d7fb0aa325ad5d2349274f9ef33d4424135d963) | [🔗](https://basescan.org/address/0x3d7fb0aa325ad5d2349274f9ef33d4424135d963) | - | - | [🔗](https://sepolia.arbiscan.io/address/0x3d7fb0aa325ad5d2349274f9ef33d4424135d963) | [🔗](https://sepolia.basescan.org/address/0x3d7fb0aa325ad5d2349274f9ef33d4424135d963) |
 
 
-## Omnichain Deployers
+### Omnichain Deployers
 
 _[Code](/docs/v4/api/omnichain-deployers/README.md)_
 
@@ -100,8 +100,7 @@ _The following addresses are for the Juicebox Protocol V4 Suckers contracts on E
 | **JBOmnichainDeployer** | `0xec365a946f256b79a0c6f5d20678f612ff086231` | [🔗](https://etherscan.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://optimistic.etherscan.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://arbiscan.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://basescan.org/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://sepolia.etherscan.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://sepolia.optimism.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://sepolia.arbiscan.io/address/0xec365a946f256b79a0c6f5d20678f612ff086231) | [🔗](https://sepolia.basescan.org/address/0xec365a946f256b79a0c6f5d20678f612ff086231) |
 
 
-
-## Revnet 
+### Revnet 
 
 _[Code](/docs/v4/api/revnet/README.md)_
 
@@ -112,7 +111,7 @@ _The following addresses are for the Juicebox Protocol V4 Revnet contracts on Et
 | **REVDeployer** | `0x027f1684c6d31066c3f2468117f2508e8134fdfc` | [🔗](https://etherscan.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://optimistic.etherscan.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://arbiscan.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://basescan.org/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://sepolia.etherscan.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://sepolia.optimism.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://sepolia.arbiscan.io/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) | [🔗](https://sepolia.basescan.org/address/0x027f1684c6d31066c3f2468117f2508e8134fdfc) |
 | **REVLoans** | `0x03de624feb08c0edeff779ca5702aef4b85d7f06` | [🔗](https://etherscan.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://optimistic.etherscan.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://arbiscan.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://basescan.org/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://sepolia.etherscan.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://sepolia.optimism.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://sepolia.arbiscan.io/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) | [🔗](https://sepolia.basescan.org/address/0x03de624feb08c0edeff779ca5702aef4b85d7f06) |
 
-## Croptop 
+### Croptop 
 
 _[Code](/docs/v4/api/croptop/README.md)_
 
