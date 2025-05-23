@@ -22,7 +22,7 @@ DAO members are responsible for proposing and voting on:
 - changes to formal processes the DAO has agreed to follow.
 - criteria for membership admission and boundaries for cashing out.
 
-DAO membership is required by the people and projects who raise funds on the Juicebox protocol byway of the [$JBX fee](./jbx.md), is given to people who are currently stewarding its focus areas, and is open to people who choose to help fund its treasury.
+DAO membership is required by the people and projects who raise funds on the Juicebox protocol byway of the $JBX fee, is given to people who are currently stewarding its focus areas, and is open to people who choose to help fund its treasury.
 
 Membership is represented via the JBX token issued using the Juicebox protocol itself. All JBX holders are JuiceboxDAO members.
 
