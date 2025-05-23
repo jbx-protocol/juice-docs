@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-# Updates 
+# Change Log
 
 ### May 23, 2025 - JBOmniController 
 
