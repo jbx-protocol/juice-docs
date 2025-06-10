@@ -33,7 +33,7 @@ Launching a revnet will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/co
 function ownerOf(uint256 projectId) external returns (address owner) { ... }
 ```
 
-A link to the revnet's metadata can be found using [`JBController.uriOf(...)`](/docs/v4/api/core/JBController.md#uriof).
+A link to the revnet's metadata can be found using [`JBController4_1.uriOf(...)`](/docs/v4/api/core/JBController4_1.md#uriof).
 
 ```
 function uriOf(uint256 projectId) external view returns (string memory)
@@ -45,7 +45,7 @@ function uriOf(uint256 projectId) external view returns (string memory)
 
 <summary>View stages</summary>
 
-Stages data can be found in the [`JBController`](/docs/v4/api/core/JBController.md) contract. Stages are modeled as rulesets.
+Stages data can be found in the [`JBController4_1`](/docs/v4/api/core/JBController4_1.md) contract. Stages are modeled as rulesets.
 
 ```
 function getRulesetOf(
@@ -54,13 +54,13 @@ function getRulesetOf(
 ) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The revnet's current stage can be found using [`JBController.currentRulesetOf(...)`](/docs/v4/api/core/JBController.md#currentrulesetof).
+The revnet's current stage can be found using [`JBController4_1.currentRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#currentrulesetof).
 
 ```
 function currentRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The revnet's upcoming stage can be found using [`JBController.upcomingRulesetOf(...)`](/docs/v4/api/core/JBController.md#upcomingrulesetof).
+The revnet's upcoming stage can be found using [`JBController4_1.upcomingRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#upcomingrulesetof).
 
 By default, the upcoming stage is a copy of the current one that starts immediately afterwards, using a discounted weight if applicable.
 
@@ -72,13 +72,13 @@ The revnet has no upcoming stage if the current stage has no duration, meaning t
 function upcomingRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The revnet's latest queued stage can be found using [`JBController.latestQueuedRulesetOf(...)`](/docs/v4/api/core/JBController.md#latestqueuedrulesetof).
+The revnet's latest queued stage can be found using [`JBController4_1.latestQueuedRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#latestqueuedrulesetof).
 
 ```
 function latestQueuedRulesetOf(uint256 projectId) external view returns (JBRuleset memory, JBRulesetMetadata memory metadata, JBApprovalStatus);
 ```
 
-All of a revnet's stages can be found using [`JBController.allRulesetsOf(...)`](/docs/v4/api/core/JBController.md#allrulesetsof).
+All of a revnet's stages can be found using [`JBController4_1.allRulesetsOf(...)`](/docs/v4/api/core/JBController4_1.md#allrulesetsof).
 
 ```
 function allRulesetsOf(uint256 projectId) external view returns (JBRuleset[] memory rulesets, JBRulesetMetadata[] memory metadata);
@@ -234,7 +234,7 @@ function tokenOf(uint256 projectId) external view override returns (IJBToken) { 
 
 </details>
 
-At any point, anyone can distribute a revnet's split tokens to the revnet's preprogrammed splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/JBController.md#sendreservedtokenstosplitsof).
+At any point, anyone can distribute a revnet's split tokens to the revnet's preprogrammed splits by calling [`JBController4_1.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/JBController4_1.md#sendreservedtokenstosplitsof).
 
 ```
 function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint256) { ... }
@@ -244,13 +244,13 @@ function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint2
 
 <summary>View split token balance</summary>
 
-A project's undistributed split token balance can be found in the revnet's current controller. For example in the [`JBController`](/docs/v4/api/core/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController.md#pendingreservedtokenbalanceof).
+A project's undistributed split token balance can be found in the revnet's current controller. For example in the [`JBController4_1`](/docs/v4/api/core/JBController4_1.md), this balance can be found using [`JBController4_1.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController4_1.md#pendingreservedtokenbalanceof).
 
 ```
 function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
 ```
 
-For revnets using [`JBController`](/docs/v4/api/core/JBController.md), the revnet token's total supply including any allocated split tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController.md#totaltokensupplywithreservedtokensof).
+For revnets using [`JBController4_1`](/docs/v4/api/core/JBController4_1.md), the revnet token's total supply including any allocated split tokens that have yet to be distributed can be found in using [`JBController4_1.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController4_1.md#totaltokensupplywithreservedtokensof).
 
 ```
 function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
@@ -307,7 +307,7 @@ function currentReclaimableSurplusOf(
 
 </details>
 
- Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof).
+ Anyone can burn their tokens by calling [`JBController4_1.burnTokensOf(...)`](/docs/v4/api/core/JBController4_1.md#burntokensof).
 
 ```
 function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;

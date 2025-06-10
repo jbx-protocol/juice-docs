@@ -38,5 +38,5 @@ Here is an example bonding curve with a surplus of 100 ETH, a total supply of 20
 #### What you'll want to know if you're building
 
 * Token holders can cash out their tokens by calling [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#cashouttokensof).
-* A cash out tax rate can be specified in a ruleset through the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor) or [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof) transactions.
+* A cash out tax rate can be specified in a ruleset through the [`JBController4_1.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor) or [`JBController4_1.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof) transactions.
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Life of a project
 
-To launch a project, call [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor).
+To launch a project, call [`JBController4_1.launchProjectFor(...)`](/docs/v4/api/core/JBController4_1.md#launchprojectfor).
 
 ```
 function launchProjectFor(
@@ -16,7 +16,7 @@ function launchProjectFor(
 ) external override returns (uint256 projectId) { ... }
 ```
 
-If you're launching an omnichain project, you can use the [`JBOmnichainDeployer.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md#launchprojectfor) transaction, which will also take in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+If you're launching an omnichain project, you can use the [`JBOmnichainDeployer4_1.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer4_1.md#launchprojectfor) transaction, which will also take in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
 
 ```
 function launchProjectFor(
@@ -43,7 +43,7 @@ Launching a project will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/c
 function ownerOf(uint256 projectId) external returns (address owner) { ... }
 ```
 
-A link to the project's metadata can be found using [`JBController.uriOf(...)`](/docs/v4/api/core/JBController.md#uriof).
+A link to the project's metadata can be found using [`JBController4_1.uriOf(...)`](/docs/v4/api/core/JBController4_1.md#uriof).
 
 ```
 function uriOf(uint256 projectId) external view returns (string memory)
@@ -55,7 +55,7 @@ function uriOf(uint256 projectId) external view returns (string memory)
 
 <summary>View rulesets</summary>
 
-Ruleset data can be found in the [`JBController`](/docs/v4/api/core/JBController.md) contract. 
+Ruleset data can be found in the [`JBController4_1`](/docs/v4/api/core/JBController4_1.md) contract. 
 
 ```
 function getRulesetOf(
@@ -64,13 +64,13 @@ function getRulesetOf(
 ) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's current ruleset can be found using [`JBController.currentRulesetOf(...)`](/docs/v4/api/core/JBController.md#currentrulesetof).
+The project's current ruleset can be found using [`JBController4_1.currentRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#currentrulesetof).
 
 ```
 function currentRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's upcoming ruleset can be found using [`JBController.upcomingRulesetOf(...)`](/docs/v4/api/core/JBController.md#upcomingrulesetof).
+The project's upcoming ruleset can be found using [`JBController4_1.upcomingRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#upcomingrulesetof).
 
 By default, the upcoming ruleset is a copy of the current one that starts immediately afterwards, using a discounted weight if applicable.
 
@@ -82,13 +82,13 @@ The project has no upcoming ruleset if the current ruleset has no duration.
 function upcomingRulesetOf(uint256 projectId) external view returns (JBRuleset memory ruleset, JBRulesetMetadata memory metadata)
 ```
 
-The project's latest queued ruleset can be found using [`JBController.latestQueuedRulesetOf(...)`](/docs/v4/api/core/JBController.md#latestqueuedrulesetof).
+The project's latest queued ruleset can be found using [`JBController4_1.latestQueuedRulesetOf(...)`](/docs/v4/api/core/JBController4_1.md#latestqueuedrulesetof).
 
 ```
 function latestQueuedRulesetOf(uint256 projectId) external view returns (JBRuleset memory, JBRulesetMetadata memory metadata, JBApprovalStatus);
 ```
 
-All of a project's rulesets can be found using [`JBController.allRulesetsOf(...)`](/docs/v4/api/core/JBController.md#allrulesetsof).
+All of a project's rulesets can be found using [`JBController4_1.allRulesetsOf(...)`](/docs/v4/api/core/JBController4_1.md#allrulesetsof).
 
 ```
 function allRulesetsOf(uint256 projectId) external view returns (JBRuleset[] memory rulesets, JBRulesetMetadata[] memory metadata);
@@ -283,7 +283,7 @@ function pricePerUnitOf(
 </details>
 
 
-At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol by calling [`JBController.deployERC20For(...)`](/docs/v4/api/core/JBController.md#deployerc20for).
+At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol by calling [`JBController4_1.deployERC20For(...)`](/docs/v4/api/core/JBController4_1.md#deployerc20for).
 
 ```
 function deployERC20For(
@@ -296,7 +296,7 @@ function deployERC20For(
   returns (IJBToken token) { ... }
 ```
 
-A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/docs/v4/api/core/interfaces/IJBToken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController.setTokenFor(...)`](/docs/v4/api/core/JBController.md#settokenfor). This makes it easy to use ERC-1155s or custom contracts.
+A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/docs/v4/api/core/interfaces/IJBToken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController4_1.setTokenFor(...)`](/docs/v4/api/core/JBController4_1.md#settokenfor). This makes it easy to use ERC-1155s or custom contracts.
 
 ```
 function setTokenFor(uint256 projectId, IJBToken token) external  { ... };
@@ -384,7 +384,7 @@ function usedSurplusAllowanceOf(
 
 </details>
 
-At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/JBController.md#sendreservedtokenstosplitsof).
+At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController4_1.sendReservedTokensToSplitsOf(...)`](/docs/v4/api/core/JBController4_1.md#sendreservedtokenstosplitsof).
 
 ```
 function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint256) { ... }
@@ -394,13 +394,13 @@ function sendReservedTokensToSplitsOf(uint256 projectId) external returns (uint2
 
 <summary>View reserved token balance</summary>
 
-A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController`](/docs/v4/api/core/JBController.md), this balance can be found using [`JBController.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController.md#pendingreservedtokenbalanceof).
+A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController4_1`](/docs/v4/api/core/JBController4_1.md), this balance can be found using [`JBController4_1.pendingReservedTokenBalanceOf(...)`](/docs/v4/api/core/JBController4_1.md#pendingreservedtokenbalanceof).
 
 ```
 function pendingReservedTokenBalanceOf(uint256 projectId) external view returns (uint256) { ... }
 ```
 
-For projects using [`JBController`](/docs/v4/api/core/JBController.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController.md#totaltokensupplywithreservedtokensof).
+For projects using [`JBController4_1`](/docs/v4/api/core/JBController4_1.md), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController4_1.totalTokenSupplyWithReservedTokensOf(...)`](/docs/v4/api/core/JBController4_1.md#totaltokensupplywithreservedtokensof).
 
 ```
 function totalTokenSupplyWithReservedTokensOf(uint256 projectId) external view returns (uint256) { ... }
@@ -458,7 +458,7 @@ function currentReclaimableSurplusOf(
 
 </details>
 
-If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#minttokensof). Anyone can burn their tokens by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof).
+If a project's current ruleset allow, project's owner can issue more of the project's token on demand lby calling [`JBController4_1.mintTokensOf(...)`](/docs/v4/api/core/JBController4_1.md#minttokensof). Anyone can burn their tokens by calling [`JBController4_1.burnTokensOf(...)`](/docs/v4/api/core/JBController4_1.md#burntokensof).
 
 ```
 function mintTokensOf(
@@ -476,7 +476,7 @@ function mintTokensOf(
 function burnTokensOf(address holder, uint256 projectId, uint256 tokenCount, string calldata memo) external;
 ```
 
-A project's owner can queue new rulesets at any time by calling [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
+A project's owner can queue new rulesets at any time by calling [`JBController4_1.queueRulesetsOf(...)`](/docs/v4/api/core/JBController4_1.md#queuerulesetsof). If the project is in the middle of a ruleset with a duration, the update will be queued to take effect next ruleset, otherwise it will start right away. If the current ruleset has an attached approval hook contract, it must approve the queue rulesets before taking effect.
 
 ```
 function queueRulesetsOf(

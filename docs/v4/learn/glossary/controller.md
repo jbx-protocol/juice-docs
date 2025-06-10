@@ -3,7 +3,7 @@
 #### What everyone needs to know
 
 * Every project has a controller contract that mediates its rules of how funding relates to splits and tokens.
-* A project can be configured to use any contract as its controller, commonly ones that adheres to [`IJBController`](/docs/v4/api/core/interfaces/IJBController.md).
+* A project can be configured to use any contract as its controller, commonly ones that adheres to [`IJBController4_1`](/docs/v4/api/core/interfaces/IJBController4_1.md).
 
 #### What you'll want to know if you're building
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Launching a revnet
 
-In order to understand what Revnets can do, all you have to do is fully understand how one transaction works: [`JBController.deployFor(...)`](/docs/v4/api/revnet/REVDeployer.md#deployfor), which creates a revnet, queues all its stages, and specifies where it can begin receiving funds. 
+In order to understand what Revnets can do, all you have to do is fully understand how one transaction works: [`JBController4_1.deployFor(...)`](/docs/v4/api/revnet/REVDeployer.md#deployfor), which creates a revnet, queues all its stages, and specifies where it can begin receiving funds. 
 
 ```
 function deployFor(

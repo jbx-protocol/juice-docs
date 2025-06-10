@@ -12,5 +12,5 @@
 
 #### What you'll want to know if you're building
 
-* Tokens can be issued on-demand by project owners or their operators by calling [`JBController.deployERC20For(...)`](/docs/v4/api/core/JBController.md#deployerc20for). The ability to do so must be explicitly turned on via a ruleset configuration metadata parameter.
-* Tokens can be burned on-demand by holders by calling [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof).
+* Tokens can be issued on-demand by project owners or their operators by calling [`JBController4_1.deployERC20For(...)`](/docs/v4/api/core/JBController.md#deployerc20for). The ability to do so must be explicitly turned on via a ruleset configuration metadata parameter.
+* Tokens can be burned on-demand by holders by calling [`JBController4_1.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof).

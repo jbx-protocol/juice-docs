@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Launching a project
 
-In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from. 
+In order to understand what Juicebox can do, all you have to do is fully understand how one transaction works: [`JBController4_1.launchProjectFor(...)`](/docs/v4/api/core/JBController4_1.md#launchprojectfor), which creates a project, queues its first rulesets, and specifies where it can begin receiving and managing funds from. 
 
 ```
 function launchProjectFor(
@@ -17,7 +17,7 @@ function launchProjectFor(
   external returns (uint256 projectId) { ... }
 ```
 
-For projects deploying omnichain, the [`JBOmnichainDeployer.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer.md#launchprojectfor) transaction is a wrapper that also takes in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
+For projects deploying omnichain, the [`JBOmnichainDeployer4_1.launchProjectFor(...)`](/docs/v4/api/omnichain-deployers/JBOmnichainDeployer4_1.md#launchprojectfor) transaction is a wrapper that also takes in information about deploying [suckers](/docs/v4/learn/glossary/omnichain.md) for each chain pair.
 
 ```
 function launchProjectFor(
@@ -26,7 +26,8 @@ function launchProjectFor(
     JBRulesetConfig[] calldata rulesetConfigurations,
     JBTerminalConfig[] calldata terminalConfigurations,
     string calldata memo,
-    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration,
+    IJBController controller
 )
     external
     returns (uint256 projectId, address[] memory suckers) { ... }

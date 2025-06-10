@@ -36,7 +36,7 @@ The other four core contracts are self explanatory. They store the core opiniona
 
 There are currently 3 surface contracts that manage how projects manage funds and define how all core contracts should be used together. Anyone can write new surface contracts for projects to use.
 
-* [`JBController`](/docs/v4/api/core/JBController.md) deploys projects and stitches together their rulesets and tokens, allowing for restricted control, accounting, and management.
+* [`JBController4_1`](/docs/v4/api/core/JBController4_1.md) deploys projects and stitches together their rulesets and tokens, allowing for restricted control, accounting, and management.
 * [`JBMultiTerminal`](/docs/v4/api/core/JBMultiTerminal.md) manages all inflows ([`pay`](/docs/v4/api/core/JBMultiTerminal.md#pay), [`addToBalanceOf`](/docs/v4/api/core/JBMultiTerminal.md#addtobalanceof)) and outflows ([`sendPayoutsOf`](/docs/v4/api/core/JBMultiTerminal.md#sendpayoutsof), [`useAllowanceOf`](/docs/v4/api/core/JBMultiTerminal.md#useallowanceof), [`cashOutTokensOf`](/docs/v4/api/core/JBMultiTerminal.md#cashouttokensof)) of funds. 
 * [`JBTerminalStore`](/docs/v4/api/core/JBTerminalStore.md) manages accounting data on behalf of payment terminals.
 

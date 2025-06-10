@@ -21,15 +21,15 @@ For each project, the following functions can only be accessed by either the add
 
 An address can set operators for its project with [`JBPermissions.setPermissionsFor(...)`](/docs/v4/api/core/JBPermissions.md#setpermissionsfor), using the indexes from the [`JBPermissionIds`](.) library. An Operator's permissions depend on the specific parameters the admin allows them. Each of the following functions can be called by the admin, and also by any operator that has been granted permission to call the function by the admin.
 
-* [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor)
-* [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof)
-* [`JBController.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#minttokensof)
-* [`JBController.deployERC20For(...)`](/docs/v4/api/core/JBController.md#deployerc20for)
-* [`JBController.setTokenFor(...)`](/docs/v4/api/core/JBController.md#settokenfor)
-* [`JBController.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitgroupsof)
-* [`JBController.addPriceFeed(...)`](/docs/v4/api/core/JBController.md#addpricefeed)
-* [`JBController.migrate(...)`](/docs/v4/api/core/JBController.md#migrate)
-* [`JBController.setUriOf(...)`](/docs/v4/api/core/JBController.md#seturiof)
+* [`JBController4_1.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor)
+* [`JBController4_1.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof)
+* [`JBController4_1.mintTokensOf(...)`](/docs/v4/api/core/JBController.md#minttokensof)
+* [`JBController4_1.deployERC20For(...)`](/docs/v4/api/core/JBController.md#deployerc20for)
+* [`JBController4_1.setTokenFor(...)`](/docs/v4/api/core/JBController.md#settokenfor)
+* [`JBController4_1.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitgroupsof)
+* [`JBController4_1.addPriceFeed(...)`](/docs/v4/api/core/JBController.md#addpricefeed)
+* [`JBController4_1.migrate(...)`](/docs/v4/api/core/JBController.md#migrate)
+* [`JBController4_1.setUriOf(...)`](/docs/v4/api/core/JBController.md#seturiof)
 * [`JBMultiTerminal.addAccountingContextFor(...)`](/docs/v4/api/core/JBMultiTerminal.md#addaccountingcontextsfor)
 * [`JBMultiTerminal.useAllowanceOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#useallowanceof)
 * [`JBMultiTerminal.migrateBalanceOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#migratebalanceof)
@@ -40,8 +40,8 @@ An address can set operators for its project with [`JBPermissions.setPermissions
 
 The following transactions can be used by token holders or operator addresses explicitly allowed by the address that owns the tokens. If the tokens change hands, the operators must be set again by the new holder.
 
-* [`JBController.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof)
+* [`JBController4_1.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof)
 * [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#cashouttokensof)
-* [`JBController.claimTokensOf(...)`](/docs/v4/api/core/JBController.md#claimtokensof)
+* [`JBController4_1.claimTokensOf(...)`](/docs/v4/api/core/JBController.md#claimtokensof)
 * [`JBTokens.transferCredits(...)`](/docs/v4/api/core/JBTokens.md#transfercreditsfrom)
 

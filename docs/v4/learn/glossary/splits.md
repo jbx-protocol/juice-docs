@@ -8,6 +8,6 @@
 
 #### What you'll want to know if you're building
 
-* Splits can be set for a ruleset configuration during the [`JBController.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), [`JBController.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof), or [`JBController.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor) transactions, or separately using [`JBController.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitgroupsof).
+* Splits can be set for a ruleset configuration during the [`JBController4_1.launchProjectFor(...)`](/docs/v4/api/core/JBController.md#launchprojectfor), [`JBController4_1.queueRulesetsOf(...)`](/docs/v4/api/core/JBController.md#queuerulesetsof), or [`JBController4_1.launchRulesetsFor(...)`](/docs/v4/api/core/JBController.md#launchrulesetsfor) transactions, or separately using [`JBController4_1.setSplitGroupsOf(...)`](/docs/v4/api/core/JBController.md#setsplitgroupsof).
 
 
