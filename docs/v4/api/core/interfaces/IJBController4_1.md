@@ -2,7 +2,7 @@
 [Git Source](https://github.com/Bananapus/nana-core/blob/9ffd83f524d99d59ba18aef48653d33df1e16f81/src/interfaces/IJBController4_1.sol)
 
 **Inherits:**
-[IJBController](/docs/v4/api/core/interfaces/IJBController.sol)
+[IJBController](/docs/v4/api/core/interfaces/IJBController.md)
 
 
 ## Functions

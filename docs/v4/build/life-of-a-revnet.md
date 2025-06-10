@@ -6,7 +6,7 @@ sidebar_position: 1
 
 A revnet is a Juicebox project owned by a special contract that enforces a certain set of rules. The result is a capital formation engine for revenue-backed tokens, without risks of mismanaged payouts. 
 
-To launch a revnet, call [`REVDeployer.deployFor(...)`](/docs/v4/api/revnet/REVDeployer.md#deployFor).
+To launch a revnet, call [`REVDeployer.deployFor(...)`](/docs/v4/api/revnet/REVDeployer.md#deployfor).
 
 ```
 function deployFor(
@@ -27,7 +27,7 @@ Check out the [Launching a revnet](/docs/v4/build/examples/launch-revnet.md) exa
 
 <summary>View revnet info</summary>
 
-Launching a revnet will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/core/JBProjects.md) contract. The owner will remain the `REVDeployer` contract and can be found using [`JBProjects.uriOf(...)`](/docs/v4/api/core/JBProjects.md#uriof).
+Launching a revnet will mint a new ERC-721 in the [`JBProjects`](/docs/v4/api/core/JBProjects.md) contract. The owner will remain the [`REVDeployer`](/docs/v4/api/revnet/REVDeployer.md) contract.
 
 ```
 function ownerOf(uint256 projectId) external returns (address owner) { ... }

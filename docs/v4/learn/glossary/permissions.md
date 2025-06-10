@@ -35,13 +35,13 @@ An address can set operators for its project with [`JBPermissions.setPermissions
 * [`JBMultiTerminal.migrateBalanceOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#migratebalanceof)
 * [`JBMultiTerminal.processHeldFeesOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#processheldfeesof)
 * [`JBDirectory.setControllerOf(...)`](/docs/v4/api/core/JBDirectory.md#setcontrollerof)
-* [`JBDirectory.setTerminalsOf(...)`](/docs/v4/api/core/JBDirectory.md#setterminalsof.md)
-* [`JBDirectory.setPrimaryTerminalOf(...)`](/docs/v4/api/core/JBDirectory.md#setprimaryterminalof.md)
+* [`JBDirectory.setTerminalsOf(...)`](/docs/v4/api/core/JBDirectory.md#setterminalsof)
+* [`JBDirectory.setPrimaryTerminalOf(...)`](/docs/v4/api/core/JBDirectory.md#setprimaryterminalof)
 
 The following transactions can be used by token holders or operator addresses explicitly allowed by the address that owns the tokens. If the tokens change hands, the operators must be set again by the new holder.
 
 * [`JBController4_1.burnTokensOf(...)`](/docs/v4/api/core/JBController.md#burntokensof)
 * [`JBMultiTerminal.cashOutTokensOf(...)`](/docs/v4/api/core/JBMultiTerminal.md#cashouttokensof)
-* [`JBController4_1.claimTokensOf(...)`](/docs/v4/api/core/JBController.md#claimtokensof)
+* [`JBController4_1.claimTokensFor(...)`](/docs/v4/api/core/JBController4_1.md#claimtokensfor)
 * [`JBTokens.transferCredits(...)`](/docs/v4/api/core/JBTokens.md#transfercreditsfrom)
 
