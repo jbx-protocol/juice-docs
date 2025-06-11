@@ -58,7 +58,7 @@ Here's a complete example of how a project launch can look:
       metadata: {
         reservedPercent: 5_000, // 50% of tokens are reserved, to be split according to the `splitGroups` property below.
         cashOutTaxRate: 0, // 0% tax on cashouts.
-        baseCurrency: 61166, // ETH currency. Together with the `weight` property, this determines how many tokens are issued per ETH received. If the project receives a different token, say USDC, a price feed will determine the ETH value of the USDC at the time of the transaction in order to determine how many tokens are issued per USDC received.
+        baseCurrency: 1, // ETH currency. Together with the `weight` property, this determines how many tokens are issued per ETH received. If the project receives a different token, say USDC, a price feed will determine the ETH value of the USDC at the time of the transaction in order to determine how many tokens are issued per USDC received.
         pausePay: false, // Payouts are not paused.
         pauseCreditTransfers: false, // Credit transfers are not paused.
         allowOwnerMinting: false, // The project owner cannot mint new tokens.
