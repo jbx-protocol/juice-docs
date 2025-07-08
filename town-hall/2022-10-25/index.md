@@ -15,7 +15,7 @@ icholas created the Audit Fund project to raise funds from our community members
 
 ![image-20221026195655998](image-20221026195655998.webp)
 
-On Oct. 22nd, after the grants from the DAO was added to the balance of the treasury of Audit Fund (`Add to balance` is a method to pay a Juicebox treasury without invoking minting of tokens, which in this case is to make sure the donors can have their full refund), people started to redeem their project tokens to get the ETH they donated a few days ago back in full amount.
+On Oct. 22nd, after the grants from the DAO was added to the balance of the treasury of Audit Fund (`Add to balance` is a method to pay a Juicebox treasury without invoking minting of tokens, which in this case is to make sure the donors can have their full refund), people started to cash out their project tokens to get the ETH they donated a few days ago back in full amount.
 
 Also a total of 9,000,000 JBX rewards (3m JBX by the DAO, and 3m JBX matched by Jango and Peri respectively) for donors to this Audit Fund project have been airdropped by Nicholas today.
 

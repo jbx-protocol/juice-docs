@@ -61,10 +61,10 @@ A final question: *even if people can see changes before they happen, what can t
 
 Some projects will have tokens which are popular enough for holders to sell on markets like Uniswap, but what can other projects do?
 
-Like with other options in Juicebox, you can choose how much safety to guarantee to your token's holders with *redemptions*, which let people redeem their tokens to reclaim some ETH from your project (destroying the tokens in the process).
+Like with other options in Juicebox, you can choose how much safety to guarantee to your token's holders with *redemptions*, which let people cash out their tokens to reclaim some ETH from your project (destroying the tokens in the process).
 
 - Some project owners keep redemptions disabled (a 0% redemption rate).
-- Some project owners fully enable redemptions (a 100% redemption rate). This means that someone with 10% of your project's tokens can redeem their tokens to get 10% of the ETH currently in your project.
+- Some project owners fully enable redemptions (a 100% redemption rate). This means that someone with 10% of your project's tokens can cash out their tokens to get 10% of the ETH currently in your project.
 - You can set your redemption rate somewhere between 0% and 100% to enable redemptions along a bonding curve, meaning people who redeem first will get less ETH per token, and people who redeem later will get more ETH per token. This encourages people to hold onto your token longer, and to wait for others to redeem first.
 
 ETH that you're using for payouts won't be available for redemptions. If you're using unlimited payouts (paying out all the ETH from your project), redemptions will be impossible. Keep in mind that token holders will only get a full refund if all the ETH is still in the project. If you've used some of it, they'll only get a partial refund. Although this isn't perfect, it's much better than nothing at all.

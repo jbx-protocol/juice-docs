@@ -16,7 +16,7 @@ It takes about 10 minutes to create a Juicebox project, which can:
 
 - Receive ETH payments.
 - Issue tokens and/or NFTs to those payers, and reserve a percentage of those tokens for you, your team, or a community stockpile. You can use tokens for voting, community access, or other perks. Juicebox has a unique [tokenomics model](tokenomics) which works at any scale – people use Juicebox for projects of all sizes.
-- Allow your supporters to redeem their tokens or NFTs to get back some of the ETH you don't need for your payouts. This can be a full refund, a partial refund, or it can be turned off completely.
+- Allow your supporters to cash out their tokens or NFTs to get back some of the ETH you don't need for your payouts. This can be a full refund, a partial refund, or it can be turned off completely.
 - Pay your team (or anyone else) with automated payroll or one-time payouts – your payouts can be fixed ETH amounts, ETH amounts based on USD values, or percentages of all the ETH in your project.
 
 All of these rules (like how much you can pay out, how your redemptions work, and how many tokens go to payers) can be updated over time to keep your project's setup up-to-date with your community. But if you could change these rules at any time, you could [rug pull](https://www.pcmag.com/encyclopedia/term/rug-pull) your supporters without any warning, and people would trust your project less. Juicebox lets you find a middle ground with *rulesets* and an *edit deadline*:

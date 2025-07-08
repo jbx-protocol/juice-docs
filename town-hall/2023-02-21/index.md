@@ -98,7 +98,7 @@ On one hand, they will have some high end NFTs which will cost 50ETH or 10ETH ea
 
 [Drip Box](https://juicebox.money/@dripbox) is a project that Mieos launched to try to sell some NFTs and comes with them some mystery boxes of merchandise.
 
-People can mint the NFTs and go to another website and have their holdings verified so that they can leave their physical addresses to have the mystery boxes sent to them later. After the selling phase, with all the cost and proceeds deducted, the project treasury will be open to NFT holders to redeem their share, in a sense giving buyers some discount or refund. The logic is, more people buy the NFTs, the more the purchasing cost of merchandise and operational overhead will be spread out and lowered, and in turnthe leftover funds to be redeemed gets bigger.
+People can mint the NFTs and go to another website and have their holdings verified so that they can leave their physical addresses to have the mystery boxes sent to them later. After the selling phase, with all the cost and proceeds deducted, the project treasury will be open to NFT holders to cash out their share, in a sense giving buyers some discount or refund. The logic is, more people buy the NFTs, the more the purchasing cost of merchandise and operational overhead will be spread out and lowered, and in turnthe leftover funds to be redeemed gets bigger.
 
 Mieos thought he would need to figure out how to work on marketing and build some traction for this project, in order to scale it properly so that it would be possible to get bulk discounts on the merchandise.
 

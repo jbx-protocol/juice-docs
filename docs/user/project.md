@@ -46,7 +46,7 @@ The amount of ETH which can be paid out from your project during the cycle. Payo
 The ETH not needed for a cycle's payouts will:
 
 1. Serve as a runway. Your payouts reset every cycle, so leaving ETH in the project gives you a head-start for next cycle.
-2. Allow your supporters to redeem their tokens to receive some ETH back from the project. You can choose the amount of ETH they receive by setting up a [redemption rate](#redemption-rate).
+2. Allow your supporters to cash out their tokens to receive some ETH back from the project. You can choose the amount of ETH they receive by setting up a [redemption rate](#redemption-rate).
 
 *How to choose:* The lower you set your payouts, the more ETH will be available for redemptions, making supporters more likely to trust your project — and if you start with **no** payouts, you can offer your supporters a full refund. Keep in mind that payouts are the only way for you to access funds. If you need more flexibility, set this to a higher amount.
 

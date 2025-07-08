@@ -47,7 +47,7 @@ It's a little bit slow going trying to figure out how to do that integration wit
 This is a little experiment of us and hopefully it'll get C4A to start thinking in terms of how they can receive funds from Juicebox projects.
 
 **jango:**
-That's pretty cool if you take into account open source codes that no one is technically responsible for. Although I guess in the sense of Juicebox the JuiceboxDAO has somewhat claimed stewardship over the repo, there are many projects could be more open-ended. So creating a treasury where anyone from the public or anyone who's depending on that piece of infrastructure can contribute to, will help fund the wardens to look over a code, which would be pretty cool. Obviously if an organization wants to sponsor it instead, as Nicholas has said, then the original donors can just redeem their tokens for the proportional overflow which might be the full amount they paid.
+That's pretty cool if you take into account open source codes that no one is technically responsible for. Although I guess in the sense of Juicebox the JuiceboxDAO has somewhat claimed stewardship over the repo, there are many projects could be more open-ended. So creating a treasury where anyone from the public or anyone who's depending on that piece of infrastructure can contribute to, will help fund the wardens to look over a code, which would be pretty cool. Obviously if an organization wants to sponsor it instead, as Nicholas has said, then the original donors can just cash out their tokens for the proportional overflow which might be the full amount they paid.
 
 **nicholas:**
 It's cool, and the partnership potential is actually really exciting because it's basically a win for everybody:

@@ -163,14 +163,14 @@ Here's a complete example of how a project launch can look:
         token: 0x000000000000000000000000000000000000EEEe, // Rules for accessing ETH from the terminal.
         payoutLimits: [{
           amount: 4_200_000_000_000_000_000, // 4.2 ETH can be paid out.
-          currency: 61166 // ETH
+          currency: 1 // ETH
         }, {
           amount: 6_900_000_000_000_000_000, // 6.9 USD worth of ETH can be paid out.
-          currency: 1 // USD 
+          currency: 1 // ETH 
         }],
         surplusAllowances: [{
           amount: 700_000_000_000_000_000_000, // 700 USD worth of ETH can be used by the project owner discretionarily from the project's surplus.
-          currency: 1 // USD
+          currency: 1 // ETH
         }]
       }]
     }]

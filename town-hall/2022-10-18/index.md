@@ -25,7 +25,7 @@ Although a proposal for the JuiceboxDAO to fund this audit contest has been appr
 
 So Nicholas created the [Audit Fund project](https://juicebox.money/@auditfund) to help  raising funds for this contest first, the donors to this project can have their full refund by the time the grant from the DAO is added to balance of the Audit Fund project.
 
-Nicholas also launch a 3-tiered (0.1 ETH / 1 ETH / 10 ETH) NFT collection to help boosting the fundraising, with the proceeds of its minting directly routed to the Audit Fund project, so that minters can later on redeem their project tokens to get their refund and get to keep this NFT.
+Nicholas also launch a 3-tiered (0.1 ETH / 1 ETH / 10 ETH) NFT collection to help boosting the fundraising, with the proceeds of its minting directly routed to the Audit Fund project, so that minters can later on cash out their project tokens to get their refund and get to keep this NFT.
 
 ![Image](FfUATYGWYAAbx6k.jpeg)
 

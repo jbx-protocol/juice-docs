@@ -16,7 +16,7 @@ Code4rena is a great option for projects looking to audit their smart contracts,
 1. Set up a Code4rena contest and figure out your budget.
 2. Deploy a Juicebox project and begin accepting ETH from your supporters. You can pre-program your Juicebox project's rules so that no funds can be taken out while the fundraiser takes place. Later on, you can update your project such that it can pay for the audit.
 2. In exchange for supporting your project with ETH, your community will receive your project's tokens (or NFTs).
-3. If you fail to meet your budget, you can allow your token holders to redeem their tokens for a full refund. If you *exceed* your budget, token holders will be able to redeem for a proportional share of the surplus.
+3. If you fail to meet your budget, you can allow your token holders to cash out their tokens for a full refund. If you *exceed* your budget, token holders will be able to redeem for a proportional share of the surplus.
 
 Regardless of whether or not your budget is met, you'll have an on-chain record of support which you can use for airdrops, whitelist access, governance, or other rewards in the future. And if you continue to use Juicebox, you can continue to evolve your project over time to manage tokenomics, payouts, and funds.
 
@@ -96,7 +96,7 @@ You'll want to queue your next cycle *before* your edit deadline – if you chos
 
 To update your project's cycle, visit your project's page on [juicebox.money](https://juicebox.money) and connect the wallet which you used to deploy the project.
 
-**If you haven't met your budget goal,** no changes are needed. Announce this to your community, and they will be able to redeem their tokens for a full refund (less gas fees) at any time.
+**If you haven't met your budget goal,** no changes are needed. Announce this to your community, and they will be able to cash out their tokens for a full refund (less gas fees) at any time.
 
 **If you've met your budget goal,** open the "Settings" menu in the upper-right hand corner of the screen and navigate to the "Cycle" tab on the left-hand side of the settings page.
 
