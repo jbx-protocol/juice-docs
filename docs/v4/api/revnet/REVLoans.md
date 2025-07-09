@@ -689,7 +689,7 @@ function repayLoan(
 |----|----|-----------|
 |`loanId`|`uint256`|The ID of the loan being adjusted.|
 |`maxRepayBorrowAmount`|`uint256`|The maximum amount being paid off, denominated in the token of the source's accounting context.|
-|`collateralCountToReturn`|`uint256`|The amount of collateral to return being returned from the loan.|
+|`collateralCountToReturn`|`uint256`|The amount of collateral being returned from the loan.|
 |`beneficiary`|`address payable`|The address receiving the returned collateral and any tokens resulting from paying fees.|
 |`allowance`|`JBSingleAllowance`|An allowance to faciliate permit2 interactions.|
 

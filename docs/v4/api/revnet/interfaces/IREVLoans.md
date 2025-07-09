@@ -201,7 +201,7 @@ function liquidateExpiredLoansFrom(uint256 revnetId, uint256 startingLoanId, uin
 function repayLoan(
     uint256 loanId,
     uint256 maxRepayBorrowAmount,
-    uint256 newCollateral,
+    uint256 collateralCountToReturn,
     address payable beneficiary,
     JBSingleAllowance calldata allowance
 )
