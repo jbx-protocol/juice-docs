@@ -3,6 +3,18 @@ sidebar_position: 6
 ---
 # Change Log
 
+### August 23, 2025 - JBSwapTerminal1_1 
+
+Proposal to deploy `JBSwapTerminal1_1` which works for non-ETH based projects, for example allowing a USDC-based project to get paid in ETH.
+
+### July 23, 2025 - REVLoans1_1 
+
+Proposal to deploy `REVLoans1_1` and use it for all new projects.
+
+Currently `REVLoan` does not work for non-ETH based revnets unless the fee projects accepts that token. 
+
+`REVLoans1_1` fixes this so that the fee is bypassed if the fee project does not accept the token backing the revnet that is paying the fee.
+
 ### May 23, 2025 - JBController4_1 and JBOmnichainDeployer4_1 
 
 Proposal to deploy `JBController4_1` and `JBOmniController4_1`. 

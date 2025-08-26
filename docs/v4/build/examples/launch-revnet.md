@@ -69,7 +69,7 @@ Here's a complete example of how a revnet deployment can look:
           token: 0x000000000000000000000000000000000000EEEe, // The token that is being loaned.
           terminal: <address of JBMultiTerminal>, // The terminal that the loan is being made from.
         }],
-        loans: <address of REVLoans>, // The address of the loans contract.
+        loans: <address of REVLoans1_1>, // The address of the loans contract.
     }
     ```
 
