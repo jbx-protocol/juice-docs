@@ -1,10 +1,10 @@
-# JBSwapTerminal4_1
+# JBSwapTerminal1_1
 [Git Source](https://github.com/Bananapus/nana-swap-terminal/blob/4a28a64a13cddc45d16438f876b10e41975e1a79/src/JBSwapTerminal.sol)
 
 **Inherits:**
 JBPermissioned, Ownable, IJBTerminal, IJBPermitTerminal, [IJBSwapTerminal](/docs/v4/api/swap-terminal/interfaces/IJBSwapTerminal.md), IUniswapV3SwapCallback
 
-The `JBSwapTerminal4_1` accepts payments in any token. When the `JBSwapTerminal4_1` is paid, it uses a Uniswap
+The `JBSwapTerminal1_1` accepts payments in any token. When the `JBSwapTerminal1_1` is paid, it uses a Uniswap
 pool to exchange the tokens it received for tokens that another one of its project's terminals can accept. Then, it
 pays that terminal with the tokens it got from the pool, forwarding the specified beneficiary to receive any tokens
 or NFTs minted by that payment, as well as payment metadata and other arguments.
