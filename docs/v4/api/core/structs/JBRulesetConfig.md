@@ -21,9 +21,9 @@ project owner hasn't queued the subsequent ruleset with an explicit `weight`. If
 equal weight. If the number is 90%, the next ruleset will have a 10% smaller weight. This weight is out of
 `JBConstants.MAX_WEIGHT_CUT_PERCENT`.
 
-- member: approvalHook An address of a contract that says whether a proposed ruleset should be accepted or
-rejected. It
-can be used to create rules around how a project owner can change ruleset parameters over time.
+- member: approvalHook A contract which implements IJBRulesetApprovalHook and says whether a proposed ruleset
+should be accepted or rejected. It can be used to create rules around how a project owner can change ruleset
+parameters over time.
 
 - member: metadata Metadata specifying the controller-specific parameters that a ruleset can have. These
 properties cannot change until the next ruleset starts.
