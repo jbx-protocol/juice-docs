@@ -78,7 +78,7 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "v4",
+            sidebarId: "dev",
             label: "Docs",
           },
           {
@@ -179,7 +179,7 @@ const config = {
         appId: "6C0XLHGK46",
         apiKey: "cf4910b7f8d618e1ee356e575db8120b",
         indexName: "juicebox",
-      },
+      }
     }),
 };
 

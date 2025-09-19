@@ -28,7 +28,7 @@ Taking a closer look at the configuration settings for `Cycle #1`, we can see t
 
 - `Target: No target` means that there is no predefined funding target (e.g. $15 million USD). This gave ConstitutionDAO the flexibility to raise as much as they could in order to try and win the auction. In other words, even if they raised $50 million USD, they could distribute the entire amount.
 
-- Please note that `Target` is now [`Distribution Limit`](https://docs.juicebox.money/v4/deprecated/v3/learn/overview#distribution-limit) for v2/v3 projects on Juicebox, so in this example they set `Distribution Limit` to `Infinite`.
+- Please note that `Target` is now [`Distribution Limit`](https://docs.juicebox.money/dev/v3/learn/overview#distribution-limit) for v2/v3 projects on Juicebox, so in this example they set `Distribution Limit` to `Infinite`.
 
 - `Duration: Not set` means that the project owner can start a new funding cycle with new configuration settings at any time without notice. This is a very flexible strategy but can seem risky to potential contributors because the project owner might change the project rules at any time. In ConstitutionDAO’s case, `Duration` could have potentially been set to `7 days` to match the deadline for the auction at Sotheby’s.
 

@@ -46,7 +46,7 @@ Once your cycle rules are active, take the following steps to continue the upgra
 
    This transaction will do the following:
 
-   - Sets your project's [`JBController`](/docs/v4/deprecated/v3/learn/architecture/README.md#surface-contracts) contract to [`JBController v3.1`](/docs/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md).
+   - Sets your project's [`JBController`](/docs/dev/v3/learn/architecture/README.md#surface-contracts) contract to [`JBController v3.1`](/docs/dev/v3/api/contracts/or-controllers/jbcontroller3_1.md).
    - Distributes any available reserved tokens.
 
 ![JBController upgrade](controller.png)
@@ -75,6 +75,6 @@ Once your cycle rules are active, take the following steps to continue the upgra
 
 ### Verify your upgrade
 
-To verify your upgrade, navigate to your project's **Contracts** page `juicebox.money/YOUR_PROJECT/contracts`. Check that your **JBController** and **Primary Terminal** addresses match the **JBController3_1** and **JBETHPaymentTerminal3_1** addresses from the [Contract Addresses list](/docs/v4/deprecated/v3/resources/addresses.md#ethereum-mainnet).
+To verify your upgrade, navigate to your project's **Contracts** page `juicebox.money/YOUR_PROJECT/contracts`. Check that your **JBController** and **Primary Terminal** addresses match the **JBController3_1** and **JBETHPaymentTerminal3_1** addresses from the [Contract Addresses list](/docs/dev/v3/resources/addresses.md#ethereum-mainnet).
 
 ![Contracts](contracts.png)

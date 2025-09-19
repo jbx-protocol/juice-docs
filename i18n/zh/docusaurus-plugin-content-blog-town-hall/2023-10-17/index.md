@@ -58,13 +58,13 @@ Filipv 认为“衰减率”似乎是一个好的替代方案。
 
 #### Funding Cycle vs. Cycle vs. Ruleset
 
-我们现在使用[筹款周期](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/funding-cycle/)或周期来定义一个项目的一组规则，这组规则会以周期时间为有限期限，如果项目没有设置周期时长，则会一直生效至被更改。
+我们现在使用[筹款周期](https://docs.juicebox.money/dev/v3/learn/glossary/funding-cycle/)或周期来定义一个项目的一组规则，这组规则会以周期时间为有限期限，如果项目没有设置周期时长，则会一直生效至被更改。
 
 Jango 认为 Ruleset （规则集）或许可以更准确地描述这个概念，但这个叫法跟我们当前讨论时的表达方式有些差异。
 
 #### Ballot vs. Approver
 
-[选票 ](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/ballot/)合约是一个管理项目配置更改的合约，由它来批准或拒绝对项目配置的编辑。
+[选票 ](https://docs.juicebox.money/dev/v3/learn/glossary/ballot/)合约是一个管理项目配置更改的合约，由它来批准或拒绝对项目配置的编辑。
 
 #### State vs. Approval status
 
@@ -76,19 +76,19 @@ Jango 认为 Ruleset （规则集）或许可以更准确地描述这个概念�
 
 #### JBProjects vs. JBProjectNFTs
 
-[JBProjects](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbprojects/) 是一个 NFT 合约，用于铸造代表 Juicebox 项目所有权的管理权限 NFT 代币。
+[JBProjects](https://docs.juicebox.money/dev/v3/api/contracts/jbprojects/) 是一个 NFT 合约，用于铸造代表 Juicebox 项目所有权的管理权限 NFT 代币。
 
 #### Operator vs. Admin
 
-[JBOperatorStore](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jboperatorstore/) 是一个允许项目方地址授予任何其他地址权限来代表他们与协议交互的合约。Filipv 认为我们可以称其为管理员而不是操作员，因为获得授权的地址实际上执行的是代表其他人进行的管理工作。
+[JBOperatorStore](https://docs.juicebox.money/dev/v3/api/contracts/jboperatorstore/) 是一个允许项目方地址授予任何其他地址权限来代表他们与协议交互的合约。Filipv 认为我们可以称其为管理员而不是操作员，因为获得授权的地址实际上执行的是代表其他人进行的管理工作。
 
 #### JBDirectory vs. JBContractDirectory vs. JBContractRegistry
 
-[JBDirectory](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbdirectory/) 这个合约可以看作是项目与它们正在使用的控制器和终端之间的一个映射。Filipv 建议在名称中添加“合约”以明确它合约目录的性质。
+[JBDirectory](https://docs.juicebox.money/dev/v3/api/contracts/jbdirectory/) 这个合约可以看作是项目与它们正在使用的控制器和终端之间的一个映射。Filipv 建议在名称中添加“合约”以明确它合约目录的性质。
 
 #### JBController vs. JBProjectManager
 
-[JBController](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md) 在某种程度上类似于一个表面层合同，人们可以直接跟它进行交互来管理项目的规则和代币等等。人们启动或重新配置项目的时候，就会与 JBController 合约进行交互。另一个可选名称是 JBProject Manager。
+[JBController](https://docs.juicebox.money/dev/v3/api/contracts/or-controllers/jbcontroller3_1.md) 在某种程度上类似于一个表面层合同，人们可以直接跟它进行交互来管理项目的规则和代币等等。人们启动或重新配置项目的时候，就会与 JBController 合约进行交互。另一个可选名称是 JBProject Manager。
 
 #### Distribution Limit vs. Payout Limit
 
@@ -100,7 +100,7 @@ Jango 认为 Ruleset （规则集）或许可以更准确地描述这个概念�
 
 #### Overflow vs. Excess Tokens vs. Redeemable Tokens
 
-[溢出](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/overflow/) 指的是项目在特定周期内超过分配限额部分的金库 ETH 资产。Bananapus 在不同的 L2 上的部署之后，原生代币可能就不一定再是 ETH，而是 Matic、OP、ARB 等，因此把溢出改称为超额代币可能更可取。
+[溢出](https://docs.juicebox.money/dev/v3/learn/glossary/overflow/) 指的是项目在特定周期内超过分配限额部分的金库 ETH 资产。Bananapus 在不同的 L2 上的部署之后，原生代币可能就不一定再是 ETH，而是 Matic、OP、ARB 等，因此把溢出改称为超额代币可能更可取。
 
 #### Refund Held Fees vs. Unlock Held Fees
 

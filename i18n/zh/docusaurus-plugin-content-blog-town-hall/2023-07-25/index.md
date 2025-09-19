@@ -86,7 +86,7 @@ Rob 补充说，这是一个经过拥有非常高影响力的法官充分审议�
 
 我们在 [Legend](https://juicebox.money/v2/p/548) 项目的筹款活动期间，发现了 `JBPayoutRedemptionPaymentTerminal3_1` 一个中等严重性的持有费用计算错误。该项目启用了缓缴费用功能，并在筹款活动结束后将筹集的资金转移出去参与一个拍卖。拍卖失败之后，当他们把这些资金退回项目并开展全额退款时，由于支付终端的计算错误，导致实际的退款比例略微低于原定的 100%。
 
-Filipv 发表了[关于这个问题的事后剖析](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-07-24/)，对这个错误的原因以及解决方法进行了详细解释。
+Filipv 发表了[关于这个问题的事后剖析](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-07-24/)，对这个错误的原因以及解决方法进行了详细解释。
 
 ![Hold fees buy explanation](hold_fees_bug.webp)
 

@@ -86,7 +86,7 @@ On the town hall, Filipv executed the switching of payment terminals successfull
 
 We had a medium severity error in the hold fees calculation on the `JBPayoutRedemptionPaymentTerminal3_1`, which was discovered during the fundraising campaign of the project [Legend](https://juicebox.money/v2/p/548). This project had the Hold fees enabled and transferred the raised funds out for an auction. When the funds were returned back to the project for full refunding after the auction, a discrepancy occurred due to a erroneous calculation of the payment terminal, which resulted in a slightly lower refunding than the expected 100%.
 
-Filipv had published a [postmortem on this issue](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-07-24/) to explain in detail the reason of this error and the remedy to it.
+Filipv had published a [postmortem on this issue](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-07-24/) to explain in detail the reason of this error and the remedy to it.
 
 ![Hold fees buy explanation](hold_fees_bug.webp)
 

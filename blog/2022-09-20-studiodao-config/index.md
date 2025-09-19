@@ -52,7 +52,7 @@ Digging further into the project’s config, we can see that the following choic
 
 ### Reserved token allocation 🪙
 
-We can also take a look at how the [Reserved Tokens](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/reserved-tokens) are split:
+We can also take a look at how the [Reserved Tokens](https://docs.juicebox.money/dev/v3/learn/glossary/reserved-tokens) are split:
 
 - 50% to filmmakers of the project
 - 40% to StudioDAO Community wallet
