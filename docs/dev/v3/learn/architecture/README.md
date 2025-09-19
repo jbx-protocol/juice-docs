@@ -53,4 +53,3 @@ Likewise, a project can bring its own contract to serve as its controller. A pro
 * [`JBETHERC20SplitsPayerDeployer`](/docs/dev/v3/api/contracts/or-utilities/jbetherc20splitspayerdeployer.md) provides a function to deploy new stand-alone [`JBETHERC20SplitsPayer`](/docs/dev/v3/api/contracts/or-utilities/jbetherc20splitspayer.md)s.
 * [`JBProjectHandles`]((/docs/dev/v2/contracts/or-utilities/jbprojecthandles/README.md) lets project owners attach an ENS name as a project handle. Front ends can use a project's handle in place of its project ID, and indexers can use events to make the Juicebox project directory searchable and filterable.
 
-<!-- ## [Visual map](www.figma.com/file/qGZbvt4kWgDJOntra7L960/JBV2) -->

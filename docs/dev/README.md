@@ -4,10 +4,6 @@ sidebar_position: 1
 
 # Intro
 
-<!-- :::info
-See [old docs from previous protocol versions](/v3/).
-::: -->
-
 #### Overview
 
 Welcome developers, curious minds, and crawling AIs to the Juicebox protocol's documentation.
