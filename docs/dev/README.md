@@ -29,9 +29,11 @@ These docs are here to help you navigate the protocol, whether you're...
 
 #### Changes in Juicebox V5
 
-V5 is a fork of V4 with a few key bug fixes to the [Revnet](/docs/dev/v5/learn/glossary/revnet.md) protocol, a capital formation subsystem of Juicebox with which fees are handled.
+- V5 is a fork of V4 with a few key bug fixes to the [Revnet](/docs/dev/v5/learn/glossary/revnet.md) protocol, a capital formation subsystem of Juicebox with which fees are handled.
 
 #### Changes in Juicebox V4
+
+- Full protocol rewrite, borrowing the core ideas and much of the logic from V3.
 
 - Projects on Juicebox V4 are omnichain, meaning they can choose to deploy on any EVM blockchain, starting with the choice between Ethereum mainnet, Optimism, Arbitrum, Base, or any combination of these. Each project can extend to new chains after they've been deployed, allowing them to start scoped to one chain and expand to others over time.
 
@@ -42,6 +44,16 @@ V5 is a fork of V4 with a few key bug fixes to the [Revnet](/docs/dev/v5/learn/g
 - The revnet capital formation structure is being deployed alongside the underlying V4 protocol. Revnets are expressed using the Juicebox V4 framework.
  
 - Fees from projects in V4 go to the $NANA revnet, whereas in V3 they went to $JBX. $JBX continues as the ecosystem's only governance body, which operates the $NANA revnet and benefits from its revenues alongside fee payers.  
+
+#### Changes in Juicebox V3
+
+- V3 is a fork of V2 that fixes a funding cycle bug, maintaining the same `JBProjects` contract.
+
+#### Changes in Juicebox V2
+
+- Full protocol rewrite, borrowing the core ideas and much of the logic from V1.
+
+- Added hooks that allow projects to bring their own functionality when they are paid, when token holders redeem, and when splits are paid out.
 
 ---
 #### Directory

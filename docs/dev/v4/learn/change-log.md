@@ -3,6 +3,12 @@ sidebar_position: 6
 ---
 # Change Log
 
+### September 2, 2025 - V5
+
+Currently deployed revnets have a bug that causes buyback hooks to not work as intended, forcing issuance in many cases where buybacks would be prefered. Since the protocol runs its fees on the $NANA revnet with project ID 1, we propose redeploying the protocol with this issue resolved while volume is still relatively low and while a few platforms being planned have yet to launch.
+
+V4 token holders of revnets 1-4 ($NANA, $REV, $CPN, and $BAN) will be airdropped their V5 counterpart. 
+
 ### August 23, 2025 - JBSwapTerminal1_1 
 
 Proposal to deploy `JBSwapTerminal1_1` which works for non-ETH based projects, for example allowing a USDC-based project to get paid in ETH.
