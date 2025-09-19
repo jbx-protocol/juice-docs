@@ -148,7 +148,7 @@ Theoretically, this could be exploited to make the V1 treasury keep paying itsel
 
 Filipv quickly hid the "Send payouts" button in the front end of V1 project, and Jango queued a transaction to set the right V1 allocator, which was signed and executed by multisig members soon after.
 
-To recount and analyze this bug, Filipv had posted a post mortem [here](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-06-05/), he also  outlined some procedures to be taken in order to prevent similar problems in this article.
+To recount and analyze this bug, Filipv had posted a post mortem [here](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-06-05/), he also  outlined some procedures to be taken in order to prevent similar problems in this article.
 
 ## Community Feedback by Gogo
 

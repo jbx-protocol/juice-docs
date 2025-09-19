@@ -1,0 +1,10 @@
+# Structs 
+- [JBClaim](JBClaim.md)
+- [JBInboxTreeRoot](JBInboxTreeRoot.md)
+- [JBLeaf](JBLeaf.md)
+- [JBMessageRoot](JBMessageRoot.md)
+- [JBOutboxTree](JBOutboxTree.md)
+- [JBRemoteToken](JBRemoteToken.md)
+- [JBSuckerDeployerConfig](JBSuckerDeployerConfig.md)
+- [JBSuckersPair](JBSuckersPair.md)
+- [JBTokenMapping](JBTokenMapping.md)

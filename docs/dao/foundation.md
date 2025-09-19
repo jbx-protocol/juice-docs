@@ -18,7 +18,7 @@ JuiceboxDAO builds revenues and maximizes the value of its assets by helping peo
 DAO members are responsible for proposing and voting on:
 
 - how the DAO's resources are allocated.
-- changes to the protocol the DAO has agreed to steward, see [administration](/docs/v4/learn/administration.md).
+- changes to the protocol the DAO has agreed to steward, see [administration](/docs/dev/v4/learn/administration.md).
 - changes to formal processes the DAO has agreed to follow.
 - criteria for membership admission and boundaries for cashing out.
 

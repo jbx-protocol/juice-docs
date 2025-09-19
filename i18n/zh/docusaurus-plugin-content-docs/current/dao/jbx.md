@@ -80,9 +80,9 @@ Juicebox 上的所有项目在以下情形需缴纳 2.5% 的费用：
 
 收取的费用将会支付到 JuiceboxDAO 的项目，然后用于在 Uniswap 上购买 JBX 代币，除非发行新 JBX 代币的价格低于 Uniswap 的交易价格。缴纳费用的项目的项目方会收到 50% 的 JBX 代币，剩余 50% 则分配给 JBX 代币选举出来的保留代币受益人。
 
-收费的费率可以在 0% 至 5% 的区间进行设置，由 JBX 治理投票决定具体数字。Juicebox 协议需要治理投票来决定的全局性参数极少，可以在[这里](https://docs.juicebox.money/v4/deprecated/v3/learn/administration/)查看。
+收费的费率可以在 0% 至 5% 的区间进行设置，由 JBX 治理投票决定具体数字。Juicebox 协议需要治理投票来决定的全局性参数极少，可以在[这里](https://docs.juicebox.money/dev/v3/learn/administration/)查看。
 
-项目可以启用[缓缴费用](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/hold-fees/)的功能来暂时扣起他们支出时需要支付的费用。这一功能适用于项目需要临时向外提取资金，但预计之后可能会把资金退回项目，因此不希望因为资金的进出额外产生费用。
+项目可以启用[缓缴费用](https://docs.juicebox.money/dev/v3/learn/glossary/hold-fees/)的功能来暂时扣起他们支出时需要支付的费用。这一功能适用于项目需要临时向外提取资金，但预计之后可能会把资金退回项目，因此不希望因为资金的进出额外产生费用。
 
 ## 预挖代币
 

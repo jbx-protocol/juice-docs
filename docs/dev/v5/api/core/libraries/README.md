@@ -1,0 +1,10 @@
+# Libraries 
+- [JBCashOuts](JBCashOuts.md)
+- [JBConstants](JBConstants.md)
+- [JBCurrencyIds](JBCurrencyIds.md)
+- [JBFees](JBFees.md)
+- [JBFixedPointNumber](JBFixedPointNumber.md)
+- [JBMetadataResolver](JBMetadataResolver.md)
+- [JBRulesetMetadataResolver](JBRulesetMetadataResolver.md)
+- [JBSplitGroupIds](JBSplitGroupIds.md)
+- [JBSurplus](JBSurplus.md)

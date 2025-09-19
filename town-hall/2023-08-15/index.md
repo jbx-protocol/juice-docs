@@ -28,7 +28,7 @@ The contract crew had written a library to allow not only clients to pass data t
 
 The buyback delegate should give a lot more price efficiency to everyone involved, including the reserved token recipients. If ETH funds are paid into a project deployed with buyback delegate and there is a better price on the secondary market, the project treasury will not take in the funds and mint new tokens correspondingly, but instead route the funds to the market and get the best price there before allocating the tokens between payers and reserved token recipients.
 
-Alongside with the deployment of buyback delegate, there was also the payment terminal 3.1.2 deployed which fixed [the Hold fees calculation error](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-07-24/), and a 721 delegate update which uses the new metadata pattern to support multiple delegates attachment to a project, as well as the payment terminal 3.1.1 spec for passing data from a data source to a delegate.
+Alongside with the deployment of buyback delegate, there was also the payment terminal 3.1.2 deployed which fixed [the Hold fees calculation error](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-07-24/), and a 721 delegate update which uses the new metadata pattern to support multiple delegates attachment to a project, as well as the payment terminal 3.1.1 spec for passing data from a data source to a delegate.
 
 ![payment terminal 3.1.2 and 721 delegate that supports multiple attchment](bbd_721_delegate.webp)
 

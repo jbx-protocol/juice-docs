@@ -102,7 +102,7 @@ Filipv 最近在 Revnets 模拟网站上更新了关于 Revnet 的详细介绍�
 
 为了避免这个项目发生意外情况，大家决定将该项目归档并创建一个新的配置正确的 Artizen 项目来替代旧的项目。由于旧项目的周期时间配置为 101 天，金库里的资金短时间内无法取出，Jango 和 Filipv 决定先用他们的个人资金进行垫付，稍后再向 DAO 发起提案要求报销这些费用。
 
-Wraeth 和 JohnnyD 创建了一个 PR 并已经进行合并，目前这个错误已经得到解决。可以在[这里](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-10-26/)查看有关发现、处理这个问题的整个过程。
+Wraeth 和 JohnnyD 创建了一个 PR 并已经进行合并，目前这个错误已经得到解决。可以在[这里](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-10-26/)查看有关发现、处理这个问题的整个过程。
 
 ![Postmortem of redemption rate error](postmortem_redemption.png)
 

@@ -100,7 +100,7 @@ Last week a slight issue occurred with the front end while Artizen project was b
 
 To avoid any unexpected behavior in this project, a decision was made to archive this project and create a new Artizen project with the correct configuration to replace it. As the old project was configured with a duration of 101 days, the funds inside can't be retrived temporarily, Jango and Filipv decided to put forward their personal funds to the new project instead, and they will submit a proposal to get reimbursement from the DAO later.
 
-The error has been mitigated with a PR created by Wraeth and JohnnyD, and the whole process of treatment of this issue written by Filipv can be found [here](https://docs.juicebox.money/v4/deprecated/v3/resources/post-mortem/2023-10-26/).
+The error has been mitigated with a PR created by Wraeth and JohnnyD, and the whole process of treatment of this issue written by Filipv can be found [here](https://docs.juicebox.money/dev/v3/resources/post-mortem/2023-10-26/).
 
 ![Postmortem of redemption rate error](postmortem_redemption.webp)
 

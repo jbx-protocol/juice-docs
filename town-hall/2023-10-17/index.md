@@ -58,13 +58,13 @@ Filipv thought that Decay Rate might be a good alternative.
 
 #### Funding Cycle vs. Cycle vs. Ruleset
 
-We are now using [Funding Cycle](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/funding-cycle/) or Cycle to define a set of rules of a project, which will last for an infinite or finite length of time.
+We are now using [Funding Cycle](https://docs.juicebox.money/dev/v3/learn/glossary/funding-cycle/) or Cycle to define a set of rules of a project, which will last for an infinite or finite length of time.
 
 Jango thought that a Ruleset might be more specifically accurate for this concept, although it will be a departure from the way we currently talk about things a bit more than Cycle would be.
 
 #### Ballot vs. Approver
 
-[Ballot](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/ballot/) contract is a contract which looks at the upcoming changes made to a project, and then either approves or rejects them.
+[Ballot](https://docs.juicebox.money/dev/v3/learn/glossary/ballot/) contract is a contract which looks at the upcoming changes made to a project, and then either approves or rejects them.
 
 #### State vs. Approval status
 
@@ -76,19 +76,19 @@ Weight is a term we currently use for issuance rate, which is just the number of
 
 #### JBProjects vs. JBProjectNFTs
 
-[JBProjects](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbprojects/) is the name of the NFT contract which mints the administrative NFTs representing the ownership of Juicebox projects.
+[JBProjects](https://docs.juicebox.money/dev/v3/api/contracts/jbprojects/) is the name of the NFT contract which mints the administrative NFTs representing the ownership of Juicebox projects.
 
 #### Operator vs. Admin
 
-The [JBOperatorStore](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jboperatorstore/) is a contract that allows addresses to grant permission to any other addresses to interact with the protocol on their behalf. Filipv felt that we can call them admins instead of operators, as those addresses receiving permissions are actually administrating on behalf of someone else.
+The [JBOperatorStore](https://docs.juicebox.money/dev/v3/api/contracts/jboperatorstore/) is a contract that allows addresses to grant permission to any other addresses to interact with the protocol on their behalf. Filipv felt that we can call them admins instead of operators, as those addresses receiving permissions are actually administrating on behalf of someone else.
 
 #### JBDirectory vs. JBContractDirectory vs. JBContractRegistry
 
-[JBDirectory](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/jbdirectory/) is a contract that can be thought of as a mapping between projects, the controllers and terminals that they are using. Filipv suggested that we add contract in its name to make it clear that it's a directory of contracts.
+[JBDirectory](https://docs.juicebox.money/dev/v3/api/contracts/jbdirectory/) is a contract that can be thought of as a mapping between projects, the controllers and terminals that they are using. Filipv suggested that we add contract in its name to make it clear that it's a directory of contracts.
 
 #### JBController vs. JBProjectManager
 
-[JBController](https://docs.juicebox.money/v4/deprecated/v3/api/contracts/or-controllers/jbcontroller3_1.md) is sort of like a surface layer contract that people directly interact with, and administers project rules and tokens etc. When people launch or reconfigure their projects, they will be interacting with JBController contract. The suggested alternative is JBProject Manager.
+[JBController](https://docs.juicebox.money/dev/v3/api/contracts/or-controllers/jbcontroller3_1.md) is sort of like a surface layer contract that people directly interact with, and administers project rules and tokens etc. When people launch or reconfigure their projects, they will be interacting with JBController contract. The suggested alternative is JBProject Manager.
 
 #### Distribution Limit vs. Payout Limit
 
@@ -100,7 +100,7 @@ Payment Terminals are the contracts that administer the inflow and outflow of fu
 
 #### Overflow vs. Excess Tokens vs. Redeemable Tokens
 
-[Overflow](https://docs.juicebox.money/v4/deprecated/v3/learn/glossary/overflow/) is the treasury ETH assets that a project has in excess of the distribution limit in a given cycle. With the upcoming depolyments of Bananapus on different L2s, the native tokens might not be ETH, but Matic, OP, ARB and etc, so it might be wise to call it excess tokens.
+[Overflow](https://docs.juicebox.money/dev/v3/learn/glossary/overflow/) is the treasury ETH assets that a project has in excess of the distribution limit in a given cycle. With the upcoming depolyments of Bananapus on different L2s, the native tokens might not be ETH, but Matic, OP, ARB and etc, so it might be wise to call it excess tokens.
 
 #### Refund Held Fees vs. Unlock Held Fees
 
