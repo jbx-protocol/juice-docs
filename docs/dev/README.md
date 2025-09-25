@@ -25,7 +25,7 @@ These docs are here to help you navigate the protocol, whether you're...
 
 #### Changes in Juicebox V5
 
-- V5 is a fork of V4 with a few key bug fixes to the [Revnet](/docs/dev/v5/learn/glossary/revnet.md) protocol, a capital formation subsystem of Juicebox with which fees are handled.
+- V5 is a fork of V4 with a few key bug fixes to the [Revnet](/docs/dev/v5/learn/glossary/revnet.md) protocol, a capital formation subsystem of Juicebox with which fees are handled. See [this](https://jango.eth.sucks/32736EB3-2906-45AC-8887-3A328355799C/) blog post for more info.
 
 #### Changes in Juicebox V4
 
