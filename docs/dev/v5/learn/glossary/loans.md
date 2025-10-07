@@ -66,8 +66,8 @@ This means:
 
 #### What you'll want to know if you're building
 
-* Loans are created by calling [`REVLoans.borrowFrom(...)`](/docs/dev/v5/api/revloans/REVLoans.md#borrowfrom).
-* Loans can be repaid or adjusted by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#repayloan).
+* Loans are created by calling [`REVLoans.borrowFrom(...)`](/docs/dev/v5/api/revnet/REVLoans.md#borrowfrom).
+* Loans can be repaid or adjusted by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#repayloan).
 * Each loan is represented as an ERC-721 NFT, allowing for easy tracking and transfer.
-* Loans can be refinanced by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#reallocatecollateralfromloan).
-* Expired loans can be liquidated by calling [`REVLoans.liquidateExpiredLoansFrom(...)`](/docs/dev/v5/api/revloans/REVLoans.md#liquidateexpiredloansfrom).
+* Loans can be refinanced by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#reallocatecollateralfromloan).
+* Expired loans can be liquidated by calling [`REVLoans.liquidateExpiredLoansFrom(...)`](/docs/dev/v5/api/revnet/REVLoans.md#liquidateexpiredloansfrom).

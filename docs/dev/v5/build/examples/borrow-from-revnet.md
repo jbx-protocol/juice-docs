@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Borrowing from a revnet
 
-If you know the ID of the revnet you want to borrow from, the address of the [`REVLoans`](/docs/dev/v5/api/revloans/REVLoans.md) contract, and have tokens to use as collateral, you can borrow funds from the revnet. 
+If you know the ID of the revnet you want to borrow from, the address of the [`REVLoans`](/docs/dev/v5/api/revnet/REVLoans.md) contract, and have tokens to use as collateral, you can borrow funds from the revnet. 
 
-You can borrow from a revnet by calling [`REVLoans.borrowFrom(...)`](/docs/dev/v5/api/revloans/REVLoans.md#borrowfrom).
+You can borrow from a revnet by calling [`REVLoans.borrowFrom(...)`](/docs/dev/v5/api/revnet/REVLoans.md#borrowfrom).
 
 ```javascript
 function borrowFrom(
@@ -32,7 +32,7 @@ Here's a complete example of how to borrow from a revnet:
     123
     ```
 
-*   For `source` send a [`REVLoanSource`](/docs/dev/v5/api/revloans/structs/REVLoanSource.md):
+*   For `source` send a [`REVLoanSource`](/docs/dev/v5/api/revnet/structs/REVLoanSource.md):
 
     ```javascript
     Example:
@@ -134,9 +134,9 @@ Here's a complete example of borrowing from a revnet:
 
 Once you have a loan, you can:
 
-* **Repay the loan** by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#repayloan)
-* **Refinance the loan** by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#reallocatecollateralfromloan)
-* **Check loan details** by calling [`REVLoans.loanOf(...)`](/docs/dev/v5/api/revloans/REVLoans.md#loanofloanid)
+* **Repay the loan** by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#repayloan)
+* **Refinance the loan** by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#reallocatecollateralfromloan)
+* **Check loan details** by calling [`REVLoans.loanOf(...)`](/docs/dev/v5/api/revnet/REVLoans.md#loanofloanid)
 
 Each loan is represented as an ERC-721 NFT, allowing for easy tracking and transfer of loan ownership.
 
@@ -146,7 +146,7 @@ When you repay a loan, you can choose to pay off the entire loan or just a porti
 
 The repayment amount includes any additional fees that have accumulated since the prepaid duration expired.
 
-You can repay a loan by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#repayloan).
+You can repay a loan by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#repayloan).
 
 ```javascript
 function repayLoan(
@@ -188,7 +188,7 @@ When you refinance, you can transfer some of your collateral from the existing l
 
 This process creates two new loans: one with the remaining collateral from the original loan, and one with the transferred collateral. Both loans will have the same creation timestamp and prepaid fee settings as the original loan.
 
-You can refinance a loan by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revloans/REVLoans.md#reallocatecollateralfromloan).
+You can refinance a loan by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#reallocatecollateralfromloan).
 
 ```javascript
 function reallocateCollateralFromLoan(
