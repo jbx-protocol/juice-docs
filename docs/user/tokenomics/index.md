@@ -5,7 +5,7 @@ sidebar_postion: 5
 
 # Juicebox Tokenomics
 
-Juicebox projects have a unique token model based on *continuous token issuance*. As long as your project's rules allow it, new tokens can be issued at any time by paying your project. And if your project has redemptions enabled, tokens can be burned at any time to reclaim some of your project's ETH. This means that your token has a *variable supply* – just like your project's ETH balance, the total number of tokens can go up or down over time as the demand for your token changes.
+Juicebox projects have a unique token model based on *continuous token issuance*. As long as your project's rules allow it, new tokens can be issued at any time by paying your project. And if your project has cash outs enabled, tokens can be cashed out at any time to reclaim some of your project's ETH. This means that your token has a *variable supply* – just like your project's ETH balance, the total number of tokens can go up or down over time as the demand for your token changes.
 
 ## Fixed Token Supplies
 
@@ -25,7 +25,7 @@ In response, project creators sometimes ask: *If I don't have a limited supply, 
 
 For context, a *ruleset* is a set of rules which determines how your project behaves (more on these later). Juicebox rulesets give you a few tools to manage demand:
 
-1. You can set up a *decay rate*: each ruleset, your decay rate reduces the number of tokens your project issues per ETH paid in. If your project issues 1,000 tokens per ETH in its first ruleset, and you have a 5% decay rate, your project will issue 950 tokens per ETH in its next ruleset, and 902.5 tokens per ETH in the ruleset after that. This encourages people to pay your project earlier, when they can get more tokens for their ETH.
+1. You can set up an *issuance reduction rate*: each locked ruleset cycle, your issuance reduction rate automatically reduces the number of tokens your project issues per ETH paid in. If your project issues 1,000 tokens per ETH in its first ruleset, and you have a 5% issuance reduction rate, your project will issue 950 tokens per ETH in its next ruleset, and 902.5 tokens per ETH in the ruleset after that. This encourages people to pay your project earlier, when they can get more tokens for their ETH. You can also adjust issuance rate manually as you schedule new rulesets.
 2. As a more aggressive option, you can completely turn off token issuance after a period of time: pick a number of tokens to issue per ETH for a ruleset lasting anywhere from 3-30 days, and set up your next ruleset so it disables payments. This creates a lot of excitement as the first ruleset comes to a close – projects like [CryoDAO](https://juicebox.money/@cryodao) and [MoonDAO](https://juicebox.money/p/moondao) have used this strategy to raise thousands of ETH, and they both received the majority of their funding closer to the end of their campaigns.
 
 These tools can be used along with other token perks (like voting power, or access to private websites or chatrooms) to make people want your token and pay your project.
@@ -55,27 +55,27 @@ If your project's rules were permanently locked in place, you wouldn't have the 
 
 Another option is to not use a specific duration for your rulesets, and to only use an edit deadline to build trust. This lets you queue a new ruleset at any time, which will go into effect exactly 72 hours later. This gives you the flexibility to make changes relatively quickly, but still gives your community the guarantee that they can see changes before they happen.
 
-### Token Redemptions
+### Token Cash Outs
 
 A final question: *even if people can see changes before they happen, what can they do if they don't like them?*
 
 Some projects will have tokens which are popular enough for holders to sell on markets like Uniswap, but what can other projects do?
 
-Like with other options in Juicebox, you can choose how much safety to guarantee to your token's holders with *redemptions*, which let people cash out their tokens to reclaim some ETH from your project (destroying the tokens in the process).
+Like with other options in Juicebox, you can choose how much safety to guarantee to your token's holders with *cash outs*, which let people cash out their tokens to reclaim some ETH from your project (destroying the tokens in the process).
 
-- Some project owners keep redemptions disabled (a 0% redemption rate).
-- Some project owners fully enable redemptions (a 100% redemption rate). This means that someone with 10% of your project's tokens can cash out their tokens to get 10% of the ETH currently in your project.
-- You can set your redemption rate somewhere between 0% and 100% to enable redemptions along a bonding curve, meaning people who redeem first will get less ETH per token, and people who redeem later will get more ETH per token. This encourages people to hold onto your token longer, and to wait for others to redeem first.
+- Some project owners keep cash outs disabled (a 100% cash out tax rate).
+- Some project owners fully enable cash outs (a 0% cash out tax rate). This means that someone with 10% of your project's tokens can cash out their tokens to get 10% of the ETH currently in your project.
+- You can set your cash out tax rate somewhere between 0% and 100% to enable cash outs along a bonding curve, meaning people who cash out first will get less ETH per token, and people who cash out later will get more ETH per token. This encourages people to hold onto your token longer, and to wait for others to cash out first.
 
-ETH that you're using for payouts won't be available for redemptions. If you're using unlimited payouts (paying out all the ETH from your project), redemptions will be impossible. Keep in mind that token holders will only get a full refund if all the ETH is still in the project. If you've used some of it, they'll only get a partial refund. Although this isn't perfect, it's much better than nothing at all.
+ETH that you're using for payouts won't be available for cash outs. If you're using unlimited payouts (paying out all the ETH from your project), cash outs will be impossible. Keep in mind that token holders will only get a full refund if all the ETH is still in the project. If you've used some of it, they'll only get a partial refund. Although this isn't perfect, it's much better than nothing at all.
 
 ## Token Stability
 
-In practice, having ongoing token issuance and redemptions from your project can work out like this:
+In practice, having ongoing token issuance and cash outs from your project can work out like this:
 
-![A chart showing a Uniswap token price fluctuating between an issuance price and a redemption price.](token-price.png)
+![A chart showing a Uniswap token price fluctuating between an issuance price and a cash out price.](token-price.png)
 
-When your project first launches, people will have to pay your project to get tokens, funding your project's treasury with ETH. Typically, once there are enough tokens out there, someone will launch a market for your tokens (usually on Uniswap). From then on out, whenever the Uniswap price becomes more expensive than the price to issue new tokens from your project, people will pay your project instead of buying tokens on Uniswap. And whenever the Uniswap price falls below the redemption "price" (how much ETH they can get back by redeeming), people will redeem from your project instead of selling their tokens on Uniswap.
+When your project first launches, people will have to pay your project to get tokens, funding your project's treasury with ETH. Typically, once there are enough tokens out there, someone will launch a market for your tokens (usually on Uniswap). From then on out, whenever the Uniswap price becomes more expensive than the price to issue new tokens from your project, people will pay your project instead of buying tokens on Uniswap. And whenever the Uniswap price falls below the cash out "price" (how much ETH they can get back by cashing out), people will redeem from your project instead of selling their tokens on Uniswap.
 
 The result is that the token's price will have a "ceiling" and "floor", making the token much less volatile than other tokens with a similar supply and demand. This can lead to more stable governance and make people more confident when deciding to support your project.
 

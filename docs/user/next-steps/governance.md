@@ -14,7 +14,7 @@ Many projects have no need for formal governance — the project creator or a sm
 ## 2. Offchain Governance (Recommended)
 
 :::info
-Most projects ratify a Governance Process to use alongside Snapshot voting. Feel free to use [our process](/dao/process/) as a starting point. You can also join our [Discord](https://discord.gg/juicebox) and tag `filipvv` and `0xSTVG.eth#7744` for help creating a new one.
+Most projects ratify a Governance Process to use alongside Snapshot voting. Feel free to use [our process](/dao/process/) as a starting point. You can also join our [Discord](https://discord.gg/juicebox) for help creating a new one.
 :::
 
 Although this could be as simple as conducting polls in a Discord server, project creators are advised to use [Snapshot](https://snapshot.org):
@@ -41,6 +41,5 @@ JuiceboxDAO contributors have built an [alternative Snapshot interface](https://
 
 You can also govern your Juicebox project on-chain. Take a look at:
 
-- [blunt.finance](https://blunt.finance/), a tool for Juicebox projects to launch trustless funding rounds where contributors can get refunds if the fundraising target isn't reached.
+- [revnets](https://app.revnet.eth.sucks/), a tool to launch trustless juiceboxes.
 - [Defifa](https://defifa.net), an onchain sports prediction game built with Juicebox. If you're interested in running a similar competition, inquire in their [Discord](https://discord.gg/hrZnvs65Nh).
-- [juice-kickstart-governance](https://github.com/xBA5ED/juice-kickstart-governance). A helper to launch a (or reconfigure an existing) project on Juicebox preconfigured to use on-chain governance. If you're interested in using this, get in touch with `0xBA5ED#9353` in the [JuiceboxDAO Discord](https://discord.gg/juicebox)

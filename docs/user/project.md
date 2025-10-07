@@ -32,7 +32,7 @@ With locked cycles, you can lock your project's rules for a period of time (like
 
 If you try to edit your rules in the middle of a locked cycle, the edits get *queued* for the next cycle. In other words: instead of going into effect immediately, they go into effect when your next cycle starts. If your don't queue a new cycle, Juicebox copies your current rules over.
 
-*How to choose:* If you **need** the flexibility, you can use unlocked cycles — otherwise, locked cycles are the better option for building confidence with your supporters.
+*How to choose:* If you **need** the flexibility, you can use unlocked cycles — otherwise, locked cycles are the better option for building confidence with your supporters. If you've never used Juicebox before, we suggest you keep unlocked cycles for flexibility in case you made a mistake and want to make changes, unless you really know what you're doing.
 
 #### Payouts
 
@@ -46,9 +46,9 @@ The amount of ETH which can be paid out from your project during the cycle. Payo
 The ETH not needed for a cycle's payouts will:
 
 1. Serve as a runway. Your payouts reset every cycle, so leaving ETH in the project gives you a head-start for next cycle.
-2. Allow your supporters to cash out their tokens to receive some ETH back from the project. You can choose the amount of ETH they receive by setting up a [redemption rate](#redemption-rate).
+2. Allow your supporters to cash out their tokens to receive some ETH back from the project. You can choose the amount of ETH they receive by setting up a [cash out tax rate](#cash-out-tax-rate).
 
-*How to choose:* The lower you set your payouts, the more ETH will be available for redemptions, making supporters more likely to trust your project — and if you start with **no** payouts, you can offer your supporters a full refund. Keep in mind that payouts are the only way for you to access funds. If you need more flexibility, set this to a higher amount.
+*How to choose:* The lower you set your payouts, the more ETH will be available for cash outs, making supporters more likely to trust your project — and if you start with **no** payouts, you can offer your supporters a full refund by setting cash out tax to zero. Keep in mind that payouts are the only way for you to access funds. If you need more flexibility, set this to a higher amount.
 
 #### Payout Recipients
 
@@ -57,7 +57,7 @@ This is where your payouts are sent. By default, payouts go to your wallet (the 
 You can define payouts by percentage (50% of funds go to `vitalik.eth`) or by amount (3 ETH goes to the `@peel` project, or $2,500 worth of ETH goes to `jango.eth`). You can use these payouts to manage your organization's entire payroll — JuiceboxDAO does.
 
 :::info
-Payouts to wallets (like `vitalik.eth`) will incur a 2.5% fee, which is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. Payouts to Juicebox projects don't incur any fees. To learn more, read [JBX & Fees](/dao/jbx/).
+Payouts to wallets (like `vitalik.eth`) will incur a 2.5% fee, which is paid to JuiceboxDAO. In exchange, your project will receive the Juicebox ecosystem's revenue token ($NANA), allowing you to automatically benefit from future protocol revenues. You can also cash out these tokens to reclaim some of the fees as cash back, or reclaim future earnings as the protocol grows. Payouts to other Juicebox projects don't incur any fees. To learn more, read [JBX & Fees](/dao/jbx/).
 :::
 
 #### Edit deadline
@@ -92,18 +92,18 @@ This makes your token more expensive over time. With an issuance reduction rate 
 
 *How to choose:* The issuance reduction rate can have a dramatic effect: the higher you set it, the more you reward earlier supporters over later ones. Most projects will keep this disabled, or use a rate from 1-3%.
 
-#### Redemption rate
+#### Cash out tax rate
 
-Supporters can burn their tokens to reclaim some of the ETH not needed for payouts. The amount of ETH they receive depends on the redemption rate.
+Supporters can cash out their tokens to reclaim some of the ETH not needed for payouts. The amount of ETH they receive depends on the cash out tax rate.
 
-At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the overflow. At 0%, redemptions are turned off. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH per token redeemed, and later redeemers will get more.
+At 0%, cash outs are 1:1 — somebody cashing out 10% of all project tokens will receive 10% of the project's surplus. At 100%, cash outs are turned off. Anywhere else, cash outs take place along a bonding curve, meaning those who cash out earlier will get less ETH per token, and those who keep their tokens or cash out later will get more.
 
-The lower this rate is, the less of an incentive there is to redeem tokens before others.
+The higher this rate is, the less of an incentive there is to redeem tokens before others.
 
-*How to choose:* To start, you should keep this rate at 100% (redemptions on) or 0% (redemptions off), and then adjust from there.
+*How to choose:* To start, you should keep this rate at 0% (cash outs on) or 100% (cash outs off), and then adjust from there.
 
 :::info
-Redemptions incur a 2.5% fee while the redemption rate is less than 100%. This fee is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. To learn more, read [JBX & Fees](/dao/jbx/).
+Cash outs incur a 2.5% fee while the cash outs tax rate is greater than 0%. This fee is paid to the Juicebox ecosystem's revenue token ($NANA). In exchange, your project will receive $NANA, allowing you to automatically benefit from future protocol revenues. You can also cash out these tokens to reclaim some of the fees as cash back, or reclaim future earnings as the protocol grows. To learn more, read [JBX & Fees](/dao/jbx/).
 :::
 
 #### Owner token minting
@@ -116,18 +116,12 @@ If this is enabled, you (the project owner) can issue tokens on demand.
 
 Juicebox also lets you reward your supporters with one or more custom NFT tiers:
 
-- **You can use NFTs for redemption instead of using tokens.**
+- **You can use NFTs for cash outs instead of using tokens.**
 - You can set up tiers when creating your project, and can also add or remove tiers over time.
 - Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
 
-You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance.*](#on-chain-governance)
-
 :::info
 These NFTs are a great way to create an NFT collection for your artwork — some projects use Juicebox for this alone, turning off tokens entirely.
-:::
-
-:::caution
-Adding NFTs may increase the gas fee for creating your project.
 :::
 
 #### Tiers
@@ -141,7 +135,6 @@ You need to have at least one tier for your project to have NFTs. To add a tier,
 You can also set advanced options:
 
 - **Reserved NFTs.** For every `N` NFTs minted, mint an extra one to the address of your choosing. This can be a helpful way to reward your collaborators.
-- **Voting weight.** Give each tier a custom voting weight, which can be used for off-chain governance (with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance.
 - **External link.** Link minters to your project's website, Discord, or somewhere else.
 
 #### Collection Settings
@@ -150,21 +143,3 @@ These settings apply to all of your NFTs:
 
 - "Collection Name", "Collection Symbol", and "Collection Description" are each a different piece of collection metadata which will be displayed in wallets and on websites like [Zora](https://zora.co/) and [OpenSea](https://opensea.io/).
 - The **Payment Success Pop-up** is an optional pop-up shown when people mint an NFT. You can use this to direct contributors to your project's website, Discord, or somewhere else.
-
-#### On-chain Governance
-
-:::info
-Snapshot strategies can read each NFT's voting power, even if your project is set to `No on-chain governance`. See [*Using Snapshot With Juicebox*](/user/resources/snapshot/).
-:::
-
-Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard, meaning you can use them with on-chain governance tools like [Tally](https://tally.xyz/).
-
-This works by tracking an NFT's ownership over time as it is minted, burned, traded, or transferred, meaning that you can calculate the voting power of any address at any time (even for times in the past).
-
-[juicebox.money](https://juicebox.money) lists three on-chain governance options:
-
-| Option | Description |
-| --- | --- |
-| **No on-chain governance** | Your project won't track voting power over time. |
-| **Standard on-chain governance** | Track the total voting power of each address over time. |
-| **Tier-based on-chain governance** | Instead of tracking total voting power, the contract tracks each address' voting power within each NFT tier over time. This can be useful for running multiple voting processes out of one treasury, or for complex on-chain governance. |

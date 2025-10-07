@@ -18,7 +18,7 @@ JuiceboxDAO has the first project on each early version (versions 1-3) of the Ju
 
 $JBX voting on [Nance](https://nance.app/s/) decides all $JBX rules, including the amount of $JBX which gets created when JuiceboxDAO is paid, as well as the amount of ETH $JBX holders can get back by cashing out their tokens. Approved proposals are implemented by the DAO's 6/9 [Gnosis Safe Multisig](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/), which has signers who are elected by $JBX voters. You can see the our full Governance Process [here](https://docs.juicebox.money/dao/process/) — this process is also decided upon and ratified by JBX voters.
 
-$JBX is no longer a built-in component of the Juicebox V4's fee process. Instead, project ID #1 on V4 is the $NANA [revnet](https://docs.juicebox.money/v4/learn/revnet/) that is used to collect fees. $JBX governance owns 62% of $NANA issuance, and therefor 62% of all fees collected on Juicebox V4 – the rest is owned by fee payers.
+$JBX is no longer a built-in component of the Juicebox V4's fee process. Instead, project ID #1 on V4 is the $NANA [revnet](https://docs.juicebox.money/v5/learn/revnet/) that is used to collect fees. $JBX governance owns 62% of $NANA issuance, and therefor 62% of all fees collected on Juicebox V5 – the rest is owned by fee payers.
 
 ## Buyback Hook 
 
@@ -67,7 +67,7 @@ You can see the current JBX distribution in the chart below (or on [Dune](https:
 
 ## About Fees
 
-Juicebox projects pay a 2.5% $JBX membership fee and receive $JBX when
+Juicebox projects pay a 2.5% $JBX membership fee and receive $JBX (v1-3) or $NANA (v4-5) when
 
 1. They send a payout to a wallet outside of the Juicebox ecosystem, or when
 2. Funds are cashed out while a project's redemption rate is less than 100%.
@@ -75,10 +75,10 @@ Juicebox projects pay a 2.5% $JBX membership fee and receive $JBX when
 To be clear:
 
 - There are no fees when projects receive payments.
-- There are no fees on redemptions if the redemption rate is 100%.
+- There are no fees on redemptions if the cash out tax rate is 0%.
 - There are no fees on payouts to other Juicebox projects.
 
-These fees are used to buy $JBX on Uniswap. The project owner paying the fee gets 50% of the $JBX, and the rest goes to JuiceboxDAO (governed by $JBX holders). If the project owner immediately sells that $JBX, it's as if they paid a ~1.25% fee. In practice, project owners usually hold onto their $JBX and influence [JuiceboxDAO governance](/dao/process/) while participating in the protocol's economic growth.
+These fees are used to buy $JBX on Uniswap, or feed the $NANA revnet. The project owner paying the fee gets 50% of the $JBX, or 38% of the $NANA, and the rest goes to JuiceboxDAO (governed by $JBX holders).
 
 The fee is fixed at 2.5%. The Juicebox protocol itself has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/v4/learn/administration/).
 
