@@ -22,6 +22,7 @@ The reason that slightly more than 5% of assets would be returned: a cash out ta
 
 ![](/img/misc/redemption-formula.png)
 
+
 Where:
 
 - **r** is the cash out tax rate (from 0 to 1),
@@ -29,9 +30,9 @@ Where:
 - **s** is the current token supply, and
 - **x** is the amount of tokens being cashed out.
 
-Here is an example bonding curve with a surplus of 100 ETH, a total supply of 200 tokens, and a cash out tax rate of 0.71. The X axis represents the number of tokens being cashed out, and the Y axis represents the ETH that would be returned. You can try [editing the variables yourself](https://www.desmos.com/calculator/sp9ru6zbpk).
+Here is an example bonding curve with a surplus of 100 ETH, a total supply of 200 tokens, and a cash out tax rate of 0.71. The X axis represents the number of tokens being cashed out, and the Y axis represents the ETH that would be returned. You can try [editing the variables yourself](https://www.desmos.com/calculator/ygmmje1s2l).
 
-<iframe src="https://www.desmos.com/calculator/wqpqxwcnxi?embed" width="500" height="500"></iframe>
+<iframe src="https://www.desmos.com/calculator/ygmmje1s2l" width="500" height="500"></iframe>
 
 </details>
 

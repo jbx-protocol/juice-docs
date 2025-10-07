@@ -21,7 +21,7 @@ The other ~5% will remain in the treasury, thereby increasing the redemption val
 
 The reason that slightly more than 5% of assets would be returned: a redemption rate of 0% < `x`% < 100% allows for redemptions along a *bonding curve*. Specifically, the formula is:
 
-![](/img/misc/redemption-formula.png)
+![](/img/misc/redemption-formula-v3.png)
 
 Where:
 

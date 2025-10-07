@@ -82,7 +82,7 @@ Here's a complete example of how a revnet deployment can look:
       terminal: <address of JBMultiTerminal>, // A terminal to access funds through.
       // The tokens to accept through the given terminal, and how they should be accounted for.
       accountingContextsToAccept: [{
-        token: 0x000000000000000000000000000000000000EEEe, // The token to accept through the given terminal.
+        token: 0x000000000000000000000000000000000000EEEe, // The token to accept through the given terminal. NATIVE_TOKEN is shown here.
         decimals: 18, // The number of decimals the token is accounted with as a fixed point number.
         currency: 61166 // The currency used with the token is NATIVE_CURRENCY. This ensures proper price conversion when necessary.
       }]
