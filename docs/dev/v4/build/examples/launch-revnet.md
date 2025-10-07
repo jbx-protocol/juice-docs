@@ -105,7 +105,6 @@ Here's a complete example of how a revnet deployment can look:
       }]
     }]
     ```
-   ```
 
 *   For `suckerDeploymentConfiguration` send a [`REVSuckerDeploymentConfig`](/docs/dev/v4/api/revnet/structs/REVSuckerDeploymentConfig.md) that specifies a salt and a set of sucker deployers.
 
