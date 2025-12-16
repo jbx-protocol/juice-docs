@@ -80,9 +80,9 @@ To be clear:
 
 These fees are used to buy $JBX on Uniswap, or feed the $NANA revnet. The project owner paying the fee gets 50% of the $JBX, or 38% of the $NANA, and the rest goes to JuiceboxDAO (governed by $JBX holders).
 
-The fee is fixed at 2.5%. The Juicebox protocol itself has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/v4/learn/administration/).
+The fee is fixed at 2.5%. The Juicebox protocol itself has very minimal global governance, which you can learn about [here](https://docs.juicebox.money/v5/learn/administration/).
 
-Projects can also temporarily set fees on payouts aside with [Hold fees](https://docs.juicebox.money/v4/glossary/hold-fees/). This can be useful if a project needs to temporarily pull funds out of their project, but plans to return those funds to the project later on and does not want to pay fees in the interim. If the project does not return the funds in 28 days, the fees are processed.
+Projects can also temporarily set fees on payouts aside with [Hold fees](https://docs.juicebox.money/v5/glossary/hold-fees/). This can be useful if a project needs to temporarily pull funds out of their project, but plans to return those funds to the project later on and does not want to pay fees in the interim. If the project does not return the funds in 28 days, the fees are processed.
 
 ## Initial Supply 
 

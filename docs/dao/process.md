@@ -19,7 +19,7 @@ Day 15 / Day 1 - Funding Cycle Updated - Saturday (19:19 UTC) <br/>
 
 #### Step 0 - Discussion
 
-Proposals can be made on [jbdao.org](https://www.jbdao.org/) at any time. When ready, authors can change a proposal's status from `Draft` to `Discussion` to start a discussion thread in [JuiceboxDAO's Discord](https://www.discord.gg/juicebox).
+Proposals can be made on [nance.app/s/juicebox](https://nance.app/s/juicebox) at any time. When ready, authors can change a proposal's status from `Draft` to `Discussion` to start a discussion thread in [JuiceboxDAO's Discord](https://www.discord.gg/juicebox).
 
 *See [How to Make a Governance Proposal](../proposals) for help.*
 
