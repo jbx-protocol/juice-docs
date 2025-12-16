@@ -4,15 +4,14 @@ sidebar_position: 1
 
 # About JuiceboxDAO
 
-JuiceboxDAO invests in the development of the Juicebox protocol and the ecosystem around it, enabling capital formation for people and projects.
+JuiceboxDAO invests in the development of the Juicebox protocol and the ecosystem around it, enabling global capital formation for people and projects.
 
-JuiceboxDAO's finances and developments are accounted for entirely in the open, and it invests exclusively in open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). The DAO has Discord Town Halls every Tuesday at 23:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello.
+JuiceboxDAO's finances and developments are accounted for entirely in the open, and it invests exclusively in open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox).
 
-We believe open operations gives investors, builders, and consumers the best possible outcomes for the least possible costs or risks of power aggregating to intermediaries.
+We believe open operations established entirely on blockchains gives investors, builders, and consumers access to the global internet market at an unprecedented scale, while reducing risks of intermediary control.
 
 - Learn about the DAO's core values in the [Foundation](foundation).
 - If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
-- Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
 - To learn more about JBX, read [JBX & Fees](/dao/jbx/).
 - Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
 
@@ -31,15 +30,10 @@ We believe open operations gives investors, builders, and consumers the best pos
 
 [Discord](https://discord.gg/juicebox)<br/>
 [Twitter](https://twitter.com/juiceboxETH)<br/>
-[Cryptovoxels Lounge](http://juicebox.lexicondevils.xyz/)<br/>
-[YouTube](https://www.youtube.com/c/juiceboxdao)
 
 #### Resources
 
 [Github](https://github.com/jbx-protocol)<br/>
-[Analytics](reference/analytics/)<br/>
-[JuiceTool](https://juicetool.xyz/)<br/>
-[Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3)<br/>
 [Brand Kit](/user/brand-kit/)
 
 </details>
@@ -48,13 +42,11 @@ We believe open operations gives investors, builders, and consumers the best pos
 
 <summary>Governance</summary>
 
-Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [Snapshot space](https://juicetool.xyz/snapshot/jbdao.eth). You can follow this through our governance portal [jbdao.org](https://jbdao.org), or read our [Governance Process](process) to learn more.
+Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [governance forum](https://nance.app/s/juicebox). You can read our [Governance Process](process) to learn more.
 
 #### Main Links
 
-[Governance Portal](https://jbdao.org)<br/>
-[Juicebox Snapshot](https://snapshot.org/#/jbdao.eth)<br/>
-[Snapshot Delegation](https://vote.juicebox.money/#/delegate/jbdao.eth)
+[Governance forum](https://nance.app/s/juicebox)<br/>
 
 #### Resources
 
