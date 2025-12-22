@@ -25,7 +25,7 @@ The first five core contracts are generic. They don't know anything specific to 
 The other four core contracts are self explanatory. They store the core opinionated components of the protocol.
 
 * [`JBTokens`](/docs/dev/v5/api/core/JBTokens.md) manages token minting and burning for all projects.
-* [`JBRulesets`](/docs/dev/v5/api/core/JBRulesets.md) manages rulesets configurations and scheduling. Rulesets are represented as a [`JBRuleset`](/docs/dev/v5/api/core/structs/JBRuleset.md) data structure.
+* [`JBRulesets`](/docs/dev/v5/api/core/JBRulesets.md) manages rulesets configurations and scheduling. Rulesets are represented as a [`JBRuleset`](/docs/dev/v5/api/core/structs/JBRuleset.md) data structure. 
 * [`JBSplits`](/docs/dev/v5/api/core/JBSplits.md) stores information about how arbitrary distributions should be split. The information is represented as a [`JBSplit`](/docs/dev/v5/api/core/structs/JBSplit.md) data structure.
   The surface contracts currently use these to split up payout distributions and reserved token distributions.
 * [`JBPrices`](/docs/dev/v5/api/core/JBPrices.md) manages and normalizes price feeds between various currencies.

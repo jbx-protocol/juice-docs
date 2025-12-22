@@ -6,6 +6,8 @@ sidebar_position: 1
 
 To launch a project, call [`JBController.launchProjectFor(...)`](/docs/dev/v5/api/core/JBController.md#launchprojectfor).
 
+New projects and integrations should use `JBController5_1` address, and `JBTerminal5_1` address within the `terminalConfigurations`. See [`Addresses`](/docs/dev/v5/addresses.md).
+
 ```
 function launchProjectFor(
   address owner,

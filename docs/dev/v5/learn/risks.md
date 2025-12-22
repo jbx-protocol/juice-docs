@@ -157,4 +157,6 @@ The following values can be reconfigured by a project's owner on a per-funding c
 
 The protocol uses price oracles to normalize prices throughout the its standard operations. These oracles are smart contract mechanisms external to the core Juicebox protocol. Projects using multiple currencies for certain functionality bare the risk of these external oracle systems misreporting price values, or halting all together. To avoid this risk, projects should account distribution limits in the same currency as the token being collected. -->
 
+### 4. Version risk
 
+The protocol may deploy updated versions of some contracts as it finds issues or ineficiencies that need addressesing. See the [changelog](/docs/dev/v5/change-log.md). It is possible that some versioned contracts only work in coordination with other contract on the same version. Be sure to verify your contract versions when building integrations or deploying projects.

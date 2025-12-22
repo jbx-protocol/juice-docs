@@ -20,6 +20,7 @@ To deploy a new Juicebox project, you will:
 4. Deploy the project, generating an NFT representing its ownership.
 
 [Learn more about projects](/docs/dev/v5/learn/glossary/project.md)
+[Get started with integrations](/docs/dev/v5/build/life-of-a-project.md)
 
 ---
 

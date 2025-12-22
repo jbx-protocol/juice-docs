@@ -8,6 +8,8 @@ A revnet is a Juicebox project owned by a special contract that enforces a certa
 
 To launch a revnet, call [`REVDeployer.deployFor(...)`](/docs/dev/v5/api/revnet/REVDeployer.md#deployfor).
 
+Revnets should use `JBTerminal` address within the `terminalConfigurations`, **NOT** `JBTerminal5_1`. See [`Addresses`](/docs/dev/v5/addresses.md).
+  
 ```
 function deployFor(
     uint256 revnetId,
