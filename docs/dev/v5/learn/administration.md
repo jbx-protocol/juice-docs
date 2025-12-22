@@ -16,5 +16,11 @@ The protocol has very minimal global governance - ensuring that each project own
   <br/>
 * **[`JBFeelessAddresses.setFeelessAddress(...)`](/docs/dev/v5/api/core/JBFeelessAddresses.md#setfeelessaddress)**<br/>
   Allows the owner of the [`JBFeelessAddresses`](/docs/dev/v5/api/core/JBFeelessAddresses.md) contract to add/remove addresses that can receive funds from projects without incurring fees typically taken any time funds leave the ecosystem. 
+* **[`JBBuybackHookRegistry.allowHook(...)`](/docs/dev/v5/api/buyback-hook/JBBuybackHookRegistry.md#allowhook) && [`JBBuybackHookRegistry.disallowHook(...)`](/docs/dev/v5/api/buyback-hook/JBBuybackHookRegistry.md#disallowhook)**<br/>
+  Allows the owner of the [`JBBuybackHookRegistry`](/docs/dev/v5/api/buyback-hook/JBBuybackHookRegistry.md) contract to add/remove addresses that serve as the buyback hook. Projects using the registry as the buyback hook can either inherit changes made by this owner, or set their own hook among those allowed by the owner.
+* **[`JBSwapTerminalRegistry.allowTerminal(...)`](/docs/dev/v5/api/swap-terminal/JBSwapTerminalRegistry.md#allowterminal) && [`JBSwapTermianlRegistry.disallowTerminal(...)`](/docs/dev/v5/api/swap-terminal/JBSwapTerminalRegistry.md#disallowterminal)**<br/>
+  Allows the owner of the [`JBSwapTerminalRegistry`](/docs/dev/v5/api/swap-terminal/JBSwapTerminalRegistry.md) contract to add/remove addresses that serve as the swap terminal. Projects using the registry as a terminal can either inherit changes made by this owner, or set their own swap terminal among those allowed by the owner.
+* **[`JBSuckersRegistry.allowSuckerDeployer(...)`](/docs/dev/v5/api/suckers/JBSuckerRegistry.md#allowsuckerdeployer) && [`JBSuckersRegistry.allowSuckerDeployer(...)`](/docs/dev/v5/api/suckers/JBSuckerRegistry.md#allowsuckerdeployers) && [`JBSuckersRegistry.removedSuckerDeployer(...)`](/docs/dev/v5/api/suckers/JBSuckerRegistry.md#removesuckerdeployer)**<br/>
+  Allows the owner of the [`JBSuckersRegistry`](/docs/dev/v5/api/suckers/JBSuckerRegistry.md) contract to add/remove addresses that can deploy new suckers. The owner must approve of infrastructure that extends existing projects to new chains.
 
 Ownership for each contract is managed independently and can be transferred to a new owner by the current owner.
