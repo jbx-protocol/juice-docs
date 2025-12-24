@@ -28,7 +28,7 @@ const config = {
         routeBasePath: "town-hall",
         path: "./town-hall",
         showReadingTime: true,
-        editUrl: "https://github.com/jbx-protocol/juice-docs-v3/blob/main",
+        editUrl: "https://github.com/jbx-protocol/juice-docs/blob/master",
         blogSidebarTitle: "Town Halls",
         blogSidebarCount: "ALL",
         authorsMapPath: "../blog/authors.yml",
