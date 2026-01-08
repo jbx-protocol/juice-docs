@@ -15,8 +15,7 @@
     "webp": "bash scripts/webp.sh",
     "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'",
     "mcp:build-index": "cd mcp-server && npm run build-index",
-    "mcp:install": "cd mcp-server && npm install",
-    "vercel-build": "npm run mcp:install && npm run mcp:build-index && docusaurus build"
+    "mcp:install": "cd mcp-server && npm install"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
