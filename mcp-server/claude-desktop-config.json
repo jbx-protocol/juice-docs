@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "juice-docs": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/juice-docs/mcp-server/src/index.js"
+      ],
+      "cwd": "/absolute/path/to/juice-docs"
+    }
+  }
+}

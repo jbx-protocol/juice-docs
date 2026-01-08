@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/mcp/[...path].js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/mcp/(.*)",
+      "dest": "/api/mcp/$1"
+    }
+  ],
+  "functions": {
+    "api/mcp/[...path].js": {
+      "maxDuration": 30
+    }
+  }
+}

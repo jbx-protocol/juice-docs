@@ -13,7 +13,9 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "webp": "bash scripts/webp.sh",
-    "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'"
+    "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'",
+    "mcp:build-index": "cd mcp-server && npm run build-index",
+    "mcp:install": "cd mcp-server && npm install"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",

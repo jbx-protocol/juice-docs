@@ -57,7 +57,8 @@ These docs are here to help you navigate the protocol, whether you're...
 1. **[Learn](/docs/dev/v5/learn/overview.md)** - Step-by-step guidance on how the protocol works.
 2. **[Build](/docs/dev/v5/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
 3. **[API](/docs/dev/v5/api/core/README.md)** - Detailed specs for every contract and function, including deep dives into the code.
-3. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
+4. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
+5. **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Access documentation programmatically via MCP (Model Context Protocol).
 
 ---
 

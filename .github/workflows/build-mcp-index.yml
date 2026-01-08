@@ -1,0 +1,35 @@
+name: Build MCP Index
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'mcp-server/**'
+  workflow_dispatch:
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        working-directory: ./mcp-server
+        run: npm ci
+      
+      - name: Build documentation index
+        working-directory: ./mcp-server
+        run: npm run build-index
+      
+      - name: Commit index if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add mcp-server/src/docs-index.json
+          git diff --staged --quiet || (git commit -m "chore: update MCP index [skip ci]" && git push)
