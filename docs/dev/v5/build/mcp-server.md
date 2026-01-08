@@ -249,6 +249,6 @@ For local development with Claude Desktop, you can use the stdio MCP server:
 
 ## More Information
 
-- [MCP Server Documentation](/MCP_SERVER.md) - Full setup guide
+- [MCP Server Documentation](https://github.com/jbx-protocol/juice-docs-v3/blob/main/MCP_SERVER.md) - Full setup guide
 - [Remote Access Guide](https://github.com/jbx-protocol/juice-docs-v3/blob/main/mcp-server/REMOTE_ACCESS.md) - Detailed API documentation
 - [MCP Specification](https://modelcontextprotocol.io) - Learn about the Model Context Protocol
