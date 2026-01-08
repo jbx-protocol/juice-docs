@@ -63,7 +63,8 @@ app.use(async (req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
+// Health check - handle both / and /api/mcp/
+app.get(["/", "/api/mcp", "/api/mcp/"], (req, res) => {
   res.json({
     name: "Juicebox Docs MCP Server",
     version: "1.0.0",
@@ -73,7 +74,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/search", async (req, res) => {
+app.post(["/search", "/api/mcp/search"], async (req, res) => {
   try {
     const { query, category = "all", version = "all", limit = 10 } = req.body;
     if (!query) return res.status(400).json({ error: "query parameter is required" });
@@ -109,7 +110,7 @@ app.post("/search", async (req, res) => {
   }
 });
 
-app.post("/get-doc", async (req, res) => {
+app.post(["/get-doc", "/api/mcp/get-doc"], async (req, res) => {
   try {
     const { path: docPath } = req.body;
     if (!docPath) return res.status(400).json({ error: "path parameter is required" });
@@ -126,7 +127,7 @@ app.post("/get-doc", async (req, res) => {
   }
 });
 
-app.get("/list-docs", async (req, res) => {
+app.get(["/list-docs", "/api/mcp/list-docs"], async (req, res) => {
   try {
     const { category, version = "all" } = req.query;
     if (!category) return res.status(400).json({ error: "category parameter is required" });
@@ -142,7 +143,7 @@ app.get("/list-docs", async (req, res) => {
   }
 });
 
-app.get("/structure", (req, res) => {
+app.get(["/structure", "/api/mcp/structure"], (req, res) => {
   try {
     const structure = { categories: {}, versions: ["v3", "v4", "v5"], totalDocuments: docIndex.length };
     for (const doc of docIndex) {
