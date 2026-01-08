@@ -82,6 +82,40 @@ async function buildIndex() {
           const versionMatch = relativePath.match(/v([345])/);
           const version = versionMatch ? `v${versionMatch[1]}` : null;
           
+          // Determine document type for better search relevance
+          let docType = "general";
+          let tags = [];
+          
+          if (relativePath.includes("/build/")) {
+            docType = "build";
+            tags.push("integration", "development", "tutorial");
+          }
+          if (relativePath.includes("/api/")) {
+            docType = "api";
+            tags.push("reference", "contract", "interface");
+          }
+          if (relativePath.includes("/learn/")) {
+            docType = "learn";
+            tags.push("concept", "explanation");
+          }
+          if (relativePath.includes("/examples/")) {
+            docType = "example";
+            tags.push("code", "tutorial", "integration");
+          }
+          if (relativePath.includes("/hooks/")) {
+            tags.push("hook", "extension", "custom");
+          }
+          if (relativePath.includes("addresses")) {
+            tags.push("address", "deployment");
+          }
+          
+          // Boost priority for integrator-relevant content
+          let integratorRelevance = 0;
+          if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 10;
+          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 8;
+          else if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 9;
+          else if (relativePath.startsWith("dev/v5/")) integratorRelevance = 5;
+          
           docIndex.push({
             path: relativePath,
             fullPath: fullPath,
@@ -91,6 +125,9 @@ async function buildIndex() {
             headings: headings,
             category: category,
             version: version,
+            docType: docType,
+            tags: tags,
+            integratorRelevance: integratorRelevance,
             sidebarPosition: frontmatter.sidebar_position || 999,
             url: `https://docs.juicebox.money/${relativePath.replace(/\.md$/, "")}`,
           });
@@ -114,14 +151,19 @@ let fuse = null;
 function initializeSearch() {
   fuse = new Fuse(docIndex, {
     keys: [
-      { name: "title", weight: 0.4 },
-      { name: "description", weight: 0.3 },
-      { name: "content", weight: 0.2 },
+      { name: "title", weight: 0.35 },
+      { name: "description", weight: 0.25 },
+      { name: "content", weight: 0.15 },
       { name: "headings", weight: 0.1 },
+      { name: "tags", weight: 0.15 },
     ],
     threshold: 0.4,
     includeScore: true,
     minMatchCharLength: 2,
+    getFn: (obj, path) => {
+      if (path === "tags") return obj.tags?.join(" ") || "";
+      return Fuse.config.getFn(obj, path);
+    },
   });
 }
 
@@ -273,28 +315,54 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           initializeSearch();
         }
         
+        // Detect query intent for building/integration queries
+        const queryLower = query.toLowerCase();
+        const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|api|contract|hook|example|tutorial|how to|getting started)\b/i.test(query);
+        const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
+        
+        // Auto-filter to v5 for building queries if version not specified
+        let effectiveVersion = version;
+        if (version === "all" && isBuildingQuery && !isV5Query) {
+          effectiveVersion = "v5";
+        }
+        
         // Filter by category and version
         let filteredIndex = docIndex;
         if (category !== "all") {
           filteredIndex = filteredIndex.filter((d) => d.category === category);
         }
-        if (version !== "all") {
-          filteredIndex = filteredIndex.filter((d) => d.version === version);
+        if (effectiveVersion !== "all") {
+          filteredIndex = filteredIndex.filter((d) => d.version === effectiveVersion);
         }
         
-        // Create new Fuse instance with filtered index
+        // Boost integrator-relevant content in search
         const filteredFuse = new Fuse(filteredIndex, {
           keys: [
-            { name: "title", weight: 0.4 },
-            { name: "description", weight: 0.3 },
-            { name: "content", weight: 0.2 },
+            { name: "title", weight: 0.35 },
+            { name: "description", weight: 0.25 },
+            { name: "content", weight: 0.15 },
             { name: "headings", weight: 0.1 },
+            { name: "tags", weight: 0.15 }, // Boost tagged content
           ],
           threshold: 0.4,
           includeScore: true,
+          getFn: (obj, path) => {
+            if (path === "tags") return obj.tags?.join(" ") || "";
+            return Fuse.config.getFn(obj, path);
+          },
         });
         
-        const results = filteredFuse.search(query, { limit: parseInt(limit) });
+        let results = filteredFuse.search(query, { limit: parseInt(limit) * 2 }); // Get more, then re-rank
+        
+        // Re-rank by integrator relevance for building queries
+        if (isBuildingQuery) {
+          results = results.map(r => ({
+            ...r,
+            score: r.score - (r.item.integratorRelevance || 0) * 0.1 // Boost integrator-relevant docs
+          })).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
+        } else {
+          results = results.slice(0, parseInt(limit));
+        }
         
         return {
           content: [

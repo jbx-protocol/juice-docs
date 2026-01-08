@@ -57,6 +57,40 @@ async function buildIndex() {
           const versionMatch = relativePath.match(/v([345])/);
           const version = versionMatch ? `v${versionMatch[1]}` : null;
           
+          // Determine document type for better search relevance
+          let docType = "general";
+          let tags = [];
+          
+          if (relativePath.includes("/build/")) {
+            docType = "build";
+            tags.push("integration", "development", "tutorial");
+          }
+          if (relativePath.includes("/api/")) {
+            docType = "api";
+            tags.push("reference", "contract", "interface");
+          }
+          if (relativePath.includes("/learn/")) {
+            docType = "learn";
+            tags.push("concept", "explanation");
+          }
+          if (relativePath.includes("/examples/")) {
+            docType = "example";
+            tags.push("code", "tutorial", "integration");
+          }
+          if (relativePath.includes("/hooks/")) {
+            tags.push("hook", "extension", "custom");
+          }
+          if (relativePath.includes("addresses")) {
+            tags.push("address", "deployment");
+          }
+          
+          // Boost priority for integrator-relevant content
+          let integratorRelevance = 0;
+          if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 10;
+          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 8;
+          else if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 9;
+          else if (relativePath.startsWith("dev/v5/")) integratorRelevance = 5;
+          
           docIndex.push({
             path: relativePath,
             fullPath: fullPath,
@@ -66,6 +100,9 @@ async function buildIndex() {
             headings: headings,
             category: category,
             version: version,
+            docType: docType,
+            tags: tags,
+            integratorRelevance: integratorRelevance,
             sidebarPosition: frontmatter.sidebar_position || 999,
             url: `https://docs.juicebox.money/${relativePath.replace(/\.md$/, "")}`,
           });

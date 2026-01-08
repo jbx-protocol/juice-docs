@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# MCP Server for Documentation
+# MCP Server  
 
 The Juicebox documentation is available through an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server, making it easy for AI assistants and automated tools to search and retrieve documentation.
 

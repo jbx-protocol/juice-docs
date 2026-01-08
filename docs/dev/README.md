@@ -13,13 +13,24 @@ Juicebox is a payment processor and capital formation engine for tokenized fundr
 Through scheduled rulesets, projects can adapt and evolve over time, adding structure, constraints, extensions, and incentives as needed. Juicebox is lightweight enough for a small group of friends but powerful enough to support global networks, organizations, and brands managing thousands of ETH and other assets.
 
 These docs are here to help you navigate the protocol, whether you're...
+- Building a platform on Juicebox
+- Configuring a capital formation design using Juicebox
 - Auditing a Juicebox project
 - Designing your own Juicebox project
-- Developing extensions
+- Developing extensions usable by Juicebox projects
 - Learning Solidity and contract design
 - or, exploring the ecosystem for inspiration
 
 ... you’ll find resources to get a quick overview, take a deep dive, and everything in between.
+
+---
+#### Directory
+
+1. **[Learn](/docs/dev/v5/learn/overview.md)** - Step-by-step guidance on how the protocol works.
+2. **[Build](/docs/dev/v5/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
+3. **[API](/docs/dev/v5/api/core/README.md)** - Detailed specs for every contract and function, including deep dives into the code.
+4. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
+5. **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Access documentation programmatically via MCP (Model Context Protocol).
 
 ---
 
@@ -51,14 +62,6 @@ These docs are here to help you navigate the protocol, whether you're...
 
 - Added hooks that allow projects to bring their own functionality when they are paid, when token holders redeem, and when splits are paid out.
 
----
-#### Directory
-
-1. **[Learn](/docs/dev/v5/learn/overview.md)** - Step-by-step guidance on how the protocol works.
-2. **[Build](/docs/dev/v5/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
-3. **[API](/docs/dev/v5/api/core/README.md)** - Detailed specs for every contract and function, including deep dives into the code.
-4. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
-5. **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Access documentation programmatically via MCP (Model Context Protocol).
 
 ---
 

@@ -80,17 +80,48 @@ app.post(["/search", "/api/mcp/search"], async (req, res) => {
     if (!query) return res.status(400).json({ error: "query parameter is required" });
     if (docIndex.length === 0) return res.status(503).json({ error: "Index not available" });
     
+    // Detect query intent for building/integration queries
+    const queryLower = query.toLowerCase();
+    const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|api|contract|hook|example|tutorial|how to|getting started)\b/i.test(query);
+    const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
+    
+    // Auto-filter to v5 for building queries if version not specified
+    let effectiveVersion = version;
+    if (version === "all" && isBuildingQuery && !isV5Query) {
+      effectiveVersion = "v5";
+    }
+    
     let filteredIndex = docIndex;
     if (category !== "all") filteredIndex = filteredIndex.filter((d) => d.category === category);
-    if (version !== "all") filteredIndex = filteredIndex.filter((d) => d.version === version);
+    if (effectiveVersion !== "all") filteredIndex = filteredIndex.filter((d) => d.version === effectiveVersion);
     
     const filteredFuse = new Fuse(filteredIndex, {
-      keys: [{ name: "title", weight: 0.4 }, { name: "description", weight: 0.3 }, { name: "content", weight: 0.2 }, { name: "headings", weight: 0.1 }],
+      keys: [
+        { name: "title", weight: 0.35 },
+        { name: "description", weight: 0.25 },
+        { name: "content", weight: 0.15 },
+        { name: "headings", weight: 0.1 },
+        { name: "tags", weight: 0.15 },
+      ],
       threshold: 0.4,
       includeScore: true,
+      getFn: (obj, path) => {
+        if (path === "tags") return obj.tags?.join(" ") || "";
+        return Fuse.config.getFn(obj, path);
+      },
     });
     
-    const results = filteredFuse.search(query, { limit: parseInt(limit) });
+    let results = filteredFuse.search(query, { limit: parseInt(limit) * 2 });
+    
+    // Re-rank by integrator relevance for building queries
+    if (isBuildingQuery) {
+      results = results.map(r => ({
+        ...r,
+        score: r.score - (r.item.integratorRelevance || 0) * 0.1
+      })).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
+    } else {
+      results = results.slice(0, parseInt(limit));
+    }
     res.json({
       query,
       results: results.map((result) => ({
