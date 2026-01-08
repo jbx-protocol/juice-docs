@@ -8,4 +8,4 @@ Once you've deployed your project, you'll want to consider:
 4. [**Visibility.**](visibility) How can you help people find your project?
 5. [**Analytics.**](analytics) Where can you get information to make future decisions?
 
-The documents in this section should give you a good starting point. As always, join the [Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact) if you're looking for more help.
+The documents in this section should give you a good starting point. As always, join the [Discord](https://discord.gg/juicebox) or [get in touch](https://juicebox.money/contact) if you're looking for more help.

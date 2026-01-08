@@ -3,13 +3,13 @@ title: Multisig Process
 sidebar_position: 5
 ---
 
-# JuiceboxDAO Multisig Process
+# JBX Multisig Process
 
-The JuiceboxDAO Multisig, [`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e), is responsible for interpreting and executing the outcomes of the [Governance Process](https://docs.juicebox.money/dao/process/).
+The JBX Multisig, [`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e), is responsible for interpreting and executing the outcomes of the [Decision Process](https://docs.juicebox.money/dao/process/).
 
 ## Rules
 
-1. Multisig signers must agree to execute the will of JBX token holders, as expressed through the Governance Process.
+1. Multisig signers must agree to execute the will of JBX token holders, as expressed through the Decision Process.
 2. The Multisig threshold must be at or above 60% of signers at all times.
 3. The Multisig can reimburse gas fees paid to execute previous Multisig transactions.
 4. In an emergency, the Multisig can execute transactions according to the [Juicebox Emergency Procedures](https://docs.juicebox.money/dao/security/emergency/).

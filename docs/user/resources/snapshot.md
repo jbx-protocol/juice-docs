@@ -6,7 +6,7 @@ sidebar_position: 3
 # Using Snapshot With Juicebox
 
 :::info
-Most projects ratify some type of Governance Process to use alongside Snapshot voting. Feel free to use [our process](https://docs.juicebox.money/dao/process/) as a starting point. You can also [contact onboarding](https://juicebox.money/contact), or join the [Juicebox Discord](https://discord.gg/juicebox) and tag `filipvv` and `0xSTVG.eth#7744` for help!
+Most projects ratify some type of Governance Process to use alongside Snapshot voting. Feel free to use [our process](https://docs.juicebox.money/dao/process/) as a starting point. You can also [get in touch](https://juicebox.money/contact), or join the [Juicebox Discord](https://discord.gg/juicebox) and tag `filipvv` and `0xSTVG.eth#7744` for help!
 :::
 
 ## What's Snapshot?

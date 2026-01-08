@@ -12,8 +12,8 @@ hide_table_of_contents: true
       <div class="col col--7">
         <h1 style={{fontSize: "3.7rem", color: "var(--ifm-heading-color)"}}>Juice Docs</h1>
         <p style={{fontSize: "2rem"}}>Fund your thing.</p>
-        <a class="button button--primary" href="/user/" style={{marginBottom: "5px"}}>Start learning</a>
-        <a class="button button--link" href="https://juicebox.money/contact" style={{marginBottom: "5px", paddingLeft: "calc(var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier) * 0.5)"}}>Contact onboarding →</a>
+        <a class="button button--primary" href="/dev/README" style={{marginBottom: "5px"}}>Start learning</a>
+        <a class="button button--link" href="https://juicebox.money/contact" style={{marginBottom: "5px", paddingLeft: "calc(var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier) * 0.5)"}}>Get in touch →</a>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@ hide_table_of_contents: true
 `}</style>
 
 <div class="container" style={{marginTop: "30px"}}>
-  <div class="row">
+  <div class="row" style={{justifyContent: "center"}}>
     <div class="col col--4">
       <div class="card" style={{marginBottom: "30px"}}>
         <div class="card__header">
@@ -47,38 +47,22 @@ hide_table_of_contents: true
           </p>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/dev">Docs →</a>
+          <a class="button button--primary button--block" href="/dev/README">Developer docs →</a>
         </div>
       </div>
     </div>
     <div class="col col--4">
       <div class="card" style={{marginBottom: "30px"}}>
         <div class="card__header">
-          <h3>For Project Creators</h3>
+          <h3>About JBX</h3>
         </div>
         <div class="card__body">
           <p>
-            How to fund your thing with Juicebox. Join
-            the <a href="https://discord.gg/juicebox">Discord</a> for more help!
+            Learn about how JBX invests in the Juicebox ecosystem.
           </p>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/user">Project Creators →</a>
-        </div>
-      </div>
-    </div>
-    <div class="col col--4">
-      <div class="card" style={{marginBottom: "30px"}}>
-        <div class="card__header">
-          <h3>About JuiceboxDAO and $JBX</h3>
-        </div>
-        <div class="card__body">
-          <p>
-            Learn about $JBX and the DAO investing in the build out of the Juicebox ecosystem.
-          </p>
-        </div>
-        <div class="card__footer">
-          <a class="button button--primary button--block" href="/dao">JuiceboxDAO →</a>
+          <a class="button button--primary button--block" href="/dao/README">JBX →</a>
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ These docs are here to help you navigate the protocol, whether you're...
 
 - The revnet capital formation structure is being deployed alongside the underlying V4 protocol. Revnets are expressed using the Juicebox V4 framework.
  
-- Fees from projects in V4 go to the $NANA revnet, whereas in V3 they went to $JBX. $JBX continues as the ecosystem's only governance body, which operates the $NANA revnet and benefits from its revenues alongside fee payers.  
+- Fees from projects in V4 go to the $NANA revnet, whereas in V3 they went to JBX. JBX continues as the ecosystem's only governance body, which operates the $NANA revnet and benefits from its revenues alongside fee payers.  
 
 #### Changes in Juicebox V3
 

@@ -44,7 +44,7 @@ TerminalDirectory Kovan: [`0x71BA69044CbD951AC87124cBEdbC0334AB21F26D`](https://
 
 ## Juicebox DAO
 
-### $JBX
+### JBX
 
 Mainnet ERC-20 Token: [0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66](https://etherscan.io/token/0x3abf2a4f8452ccc2cf7b4c1e4663147600646f66)
 

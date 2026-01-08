@@ -53,9 +53,36 @@ async function buildIndex() {
       const fullPath = path.join(dir, entry.name);
       const relativePath = path.join(basePath, entry.name);
       
+      // Skip blog, town-hall, and excluded dao directories
       if (entry.isDirectory()) {
+        if (
+          entry.name === "blog" || 
+          entry.name === "town-hall" || 
+          entry.name === "archive" ||
+          entry.name === "reference" ||
+          entry.name === "security" ||
+          basePath.includes("/blog") || 
+          basePath.includes("/town-hall") ||
+          basePath.includes("/dao/archive") ||
+          basePath.includes("/dao/reference") ||
+          basePath.includes("/dao/security") ||
+          basePath.includes("docusaurus-plugin-content-blog")
+        ) {
+          continue;
+        }
         await processDirectory(fullPath, relativePath);
       } else if (entry.name.endsWith(".md")) {
+        // Skip files in blog, town-hall, or excluded dao paths
+        if (
+          relativePath.includes("/blog") || 
+          relativePath.includes("/town-hall") ||
+          relativePath.includes("/dao/archive") ||
+          relativePath.includes("/dao/reference") ||
+          relativePath.includes("/dao/security") ||
+          relativePath.includes("docusaurus-plugin-content-blog")
+        ) {
+          continue;
+        }
         try {
           const content = await fs.readFile(fullPath, "utf-8");
           const { data: frontmatter, content: body } = matter(content);

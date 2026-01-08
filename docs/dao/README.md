@@ -2,18 +2,18 @@
 sidebar_position: 1
 ---
 
-# About JuiceboxDAO
+# About JBX 
 
-JuiceboxDAO invests in the development of the Juicebox protocol and the ecosystem around it, enabling global capital formation for people and projects.
+JBX runs as a business investing in the development of the Juicebox protocol and the ecosystem around it, enabling global capital formation for people and projects.
 
-JuiceboxDAO's finances and developments are accounted for entirely in the open, and it invests exclusively in open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox).
+JBX's finances and developments are accounted for entirely in the open, and it invests growth oriented open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox).
 
-We believe open operations established entirely on blockchains gives investors, builders, and consumers access to the global internet market at an unprecedented scale, while reducing risks of intermediary control.
+We believe open operations established entirely on blockchains gives investors, builders, and consumers access to the global internet market at an unprecedented scale, while reducing risks of intermediary control. The Juicebox protocol serves as a tool to establish competative business models that support the open internet's success.
 
-- Learn about the DAO's core values in the [Foundation](foundation).
-- If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
-- To learn more about JBX, read [JBX & Fees](/dao/jbx/).
-- Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
+- Learn about the JBX's core values in the [Principles](principles).
+- If you are interested in contributing to JBX, read the [Contributor Guide](contribute).
+- To learn more about JBX's business, read [JBX & Fees](/dao/jbx/).
+- Learn more about the [Juicebox protocol](/docs/dev/).
 
 <details>
 
@@ -29,7 +29,7 @@ We believe open operations established entirely on blockchains gives investors, 
 #### Community
 
 [Discord](https://discord.gg/juicebox)<br/>
-[Twitter](https://twitter.com/juiceboxETH)<br/>
+[X](https://x.com/juiceboxETH)<br/>
 
 #### Resources
 
@@ -40,27 +40,27 @@ We believe open operations established entirely on blockchains gives investors, 
 
 <details>
 
-<summary>Governance</summary>
+<summary>Business operations</summary>
 
-Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [governance forum](https://nance.app/s/juicebox). You can read our [Governance Process](process) to learn more.
+JBX decision making runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the organization's [public decision forum](https://nance.app/s/juicebox). You can read the [process](process) to learn more.
 
 #### Main Links
 
-[Governance forum](https://nance.app/s/juicebox)<br/>
+[Decision forum](https://nance.app/s/juicebox)<br/>
 
 #### Resources
 
-[How to Make a Governance Proposal](proposals)<br/>
-[Governance Process](process)<br/>
-[Juicebox DAO Foundation](foundation)
+[How to Make a Proposal](proposals)<br/>
+[Decision Process](process)<br/>
+[JBX Principles](principles)
 
 </details>
 
-### Who is Juicebox DAO?
+### Who makes up the JBX organization?
 
 From [JBX & Fees](/dao/jbx/):
 
-> Juicebox is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed by the $JBX token. "DAO" stands for *Decentralized Autonomous Organization* — by using token governance and the Juicebox platform, JuiceboxDAO is able to manage strategic decisions and build the Juicebox protocol and ecosystem.
+> Juicebox is developed by an open organization of JBX holders. JBX has no CEO, no hiring department, and no Board of Directors; instead, it is operated by JBX token holders with financial stake in its success. By using tokens and the Juicebox protocol itself, the organization is able to manage strategic decisions and build the Juicebox protocol and ecosystem without at a global scale entirely through the internet.
 
 >
 > You can see current JBX holders ranked below:

@@ -15,10 +15,6 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
 
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh"],
-  },
 
   plugins: [
     [
@@ -79,33 +75,13 @@ const config = {
             type: "docSidebar",
             position: "left",
             sidebarId: "dev",
-            label: "Docs",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "user",
-            label: "Project Creators",
+            label: "Developers",
           },
           {
             type: "docSidebar",
             position: "left",
             sidebarId: "dao",
-            label: "JuiceboxDAO",
-          },
-          {
-            to: "blog",
-            label: "Blog",
-            position: "left",
-          },
-          {
-            label: "Town Halls",
-            to: "town-hall",
-            position: "left",
-          },
-          {
-            type: "localeDropdown",
-            position: "right",
+            label: "JBX",
           },
           {
             type: "dropdown",
@@ -137,8 +113,8 @@ const config = {
                 to: "https://jbdao.org",
               },
               {
-                label: "Twitter",
-                to: "https://twitter.com/juiceboxETH",
+                label: "X",
+                to: "https://x.com/juiceboxETH",
               },
               {
                 label: "YouTube",
