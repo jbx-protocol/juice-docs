@@ -12,7 +12,7 @@ hide_table_of_contents: true
       <div class="col col--7">
         <h1 style={{fontSize: "3.7rem", color: "var(--ifm-heading-color)"}}>Juice Docs</h1>
         <p style={{fontSize: "2rem"}}>Fund your thing.</p>
-        <a class="button button--primary" href="/dev/README" style={{marginBottom: "5px"}}>Start learning</a>
+        <a class="button button--primary" href="/dev" style={{marginBottom: "5px"}}>Start learning</a>
         <a class="button button--link" href="https://juicebox.money/contact" style={{marginBottom: "5px", paddingLeft: "calc(var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier) * 0.5)"}}>Get in touch →</a>
       </div>
     </div>
@@ -47,7 +47,7 @@ hide_table_of_contents: true
           </p>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/dev/README">Developer docs →</a>
+          <a class="button button--primary button--block" href="/dev">Developer docs →</a>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@ hide_table_of_contents: true
           </p>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/dao/README">JBX →</a>
+          <a class="button button--primary button--block" href="/dao">JBX →</a>
         </div>
       </div>
     </div>

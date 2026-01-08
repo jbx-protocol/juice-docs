@@ -35,9 +35,8 @@ This document outlines actionable improvements for the Juicebox documentation ac
 **Example additions**:
 ```markdown
 ## Related Documentation
-- **For developers**: See [Developer Documentation](/docs/dev/README.md)
+- **For developers**: See [Developer Documentation](/docs/dev/)
 - **For DAO contributors**: See [Contributing Guide](/docs/dao/contribute.md)
-- **For project creators**: See [User Guide](/docs/user/README.md)
 ```
 
 ### 3. Standardize README Files
@@ -228,7 +227,7 @@ Brief overview (2-3 sentences)
 [Main content here]
 
 ## Related Documentation
-- [For Developers](/docs/dev/README.md)
+- [For Developers](/docs/dev)
 - [For DAO Contributors](/docs/dao/contribute.md)
 
 ## Next Steps
