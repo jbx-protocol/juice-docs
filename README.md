@@ -66,6 +66,14 @@ Files in the `static` directory will be accessible from the base URL. For exampl
 
 To speed up load times, we use `webp` images. To convert `png` files to `webp` files, run `pnpm webp`. You will need to have [`cwebp`](https://developers.google.com/speed/webp/download) installed for this to work.
 
+### MCP Server
+
+The documentation is available via an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server for AI assistants:
+
+- **HTTP API**: `https://docs.juicebox.money/api/mcp`
+- **Documentation**: See [`mcp-server/README.md`](./mcp-server/README.md) for setup and API reference
+- **Developer Guide**: See [MCP Server Guide](/docs/dev/v5/build/mcp-server.md)
+
 ### Contact
 
 If you would like to contribute or have questions, you can make an issue here on GitHub, join our [Discord server](https://discord.gg/juicebox), or [contact us via juicebox.money](https://juicebox.money/contact).

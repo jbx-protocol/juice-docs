@@ -6,14 +6,12 @@ import express from "express";
 import cors from "cors";
 import fs from "fs/promises";
 import path from "path";
-import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import removeMarkdown from "remove-markdown";
 import Fuse from "fuse.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const PROJECT_ROOT = path.resolve(__dirname, "../..");
+// Use process.cwd() for Vercel compatibility (works in both CJS and ESM)
+const PROJECT_ROOT = process.cwd();
 const INDEX_FILE = path.join(PROJECT_ROOT, "mcp-server/src/docs-index.json");
 
 let docIndex = [];

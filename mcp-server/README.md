@@ -2,190 +2,130 @@
 
 An [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that provides AI assistants with structured access to Juicebox documentation.
 
-## Features
+## Quick Start
 
-- **Semantic Search**: Search across all documentation with fuzzy matching
-- **Structured Access**: Retrieve specific docs by path or title
-- **Category Filtering**: Filter by developer, user, dao, or ecosystem docs
-- **Version Filtering**: Filter by protocol version (v3, v4, v5)
-- **Resource API**: Access docs as MCP resources for direct retrieval
+### HTTP API (Recommended)
 
-## Installation
+The MCP server is available as an HTTP API at **`https://docs.juicebox.money/api/mcp`**
 
 ```bash
-cd mcp-server
-npm install
+# Search docs
+curl -X POST https://docs.juicebox.money/api/mcp/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "deploy project", "category": "developer", "limit": 5}'
+
+# Get document
+curl -X POST https://docs.juicebox.money/api/mcp/get-doc \
+  -H "Content-Type: application/json" \
+  -d '{"path": "dev/v5/learn/overview.md"}'
 ```
 
-## Building the Index
+**JavaScript:**
+```javascript
+const response = await fetch('https://docs.juicebox.money/api/mcp/search', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ query: 'deploy project', category: 'developer' })
+});
+const data = await response.json();
+```
 
-Before using the server, build the documentation index:
+## Installation (Local Stdio MCP)
+
+For local development with Claude Desktop:
 
 ```bash
-npm run build-index
+# From repo root
+npm run mcp:install
+npm run mcp:build-index
 ```
 
-This will:
-- Scan all markdown files in the `docs/` directory
-- Extract metadata (title, description, headings, etc.)
-- Build a searchable index saved to `src/docs-index.json`
+## API Endpoints
 
-The index is automatically rebuilt when the server starts if it doesn't exist.
-
-## Running the Server
-
-### Development
-
-```bash
-npm run dev
-```
-
-### Production
-
-```bash
-npm start
-```
-
-The server communicates via stdio, which is the standard for MCP servers.
-
-## MCP Tools
-
-### `search_docs`
-
-Search documentation by keyword or phrase.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/mcp/search` | Search docs (query, category, version, limit) |
+| `POST` | `/api/mcp/get-doc` | Get full document by path or title |
+| `GET` | `/api/mcp/list-docs?category=developer&version=v5` | List docs in category |
+| `GET` | `/api/mcp/structure` | Get documentation structure/stats |
 
 **Parameters:**
-- `query` (required): Search query
-- `category` (optional): Filter by category (developer, user, dao, ecosystem, all)
-- `version` (optional): Filter by version (v3, v4, v5, all)
-- `limit` (optional): Max results (default: 10)
+- `query` (string, required for search): Search terms
+- `category`: `developer` | `user` | `dao` | `ecosystem` | `all`
+- `version`: `v3` | `v4` | `v5` | `all`
+- `limit` (number): Max results (default: 10)
+- `path` (string, required for get-doc): Document path or title
 
-**Example:**
-```json
-{
-  "query": "how to deploy a project",
-  "category": "developer",
-  "version": "v5",
-  "limit": 5
-}
-```
+## MCP Tools (Stdio Server)
 
-### `get_doc`
+When using the local stdio MCP server:
 
-Retrieve a specific documentation page.
-
-**Parameters:**
-- `path` (required): Document path or title
-
-**Example:**
-```json
-{
-  "path": "dev/v5/learn/overview.md"
-}
-```
-
-### `list_docs_by_category`
-
-List all docs in a category.
-
-**Parameters:**
-- `category` (required): Category name
-- `version` (optional): Filter by version
-
-**Example:**
-```json
-{
-  "category": "developer",
-  "version": "v5"
-}
-```
-
-### `get_doc_structure`
-
-Get the hierarchical structure of all documentation.
-
-## MCP Resources
-
-All documentation pages are available as MCP resources with the URI format:
-```
-juice-docs://{path}
-```
-
-For example:
-```
-juice-docs://dev/v5/learn/overview.md
-```
+- `search_docs` - Search documentation by keyword or phrase
+- `get_doc` - Retrieve a specific documentation page
+- `list_docs_by_category` - List all docs in a category
+- `get_doc_structure` - Get the complete documentation structure
 
 ## Configuration
 
-To use this MCP server with an AI assistant (like Claude Desktop), add it to your MCP configuration:
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS):
 
 ```json
 {
   "mcpServers": {
     "juice-docs": {
       "command": "node",
-      "args": ["/path/to/juice-docs/mcp-server/src/index.js"],
-      "cwd": "/path/to/juice-docs"
+      "args": ["/path/to/juice-docs-v3/mcp-server/src/index.js"],
+      "cwd": "/path/to/juice-docs-v3"
     }
   }
 }
 ```
 
-## Deployment
+**Important:** Use absolute paths. Restart Claude Desktop after configuration.
 
-### Option 1: Deploy as Separate Service
+## Features
 
-You can deploy this as a standalone service that AI assistants can connect to:
-
-1. Deploy to a server with Node.js
-2. Build the index: `npm run build-index`
-3. Run the server: `npm start`
-4. Configure AI assistants to connect via stdio or HTTP (if you add HTTP transport)
-
-### Option 2: Integrate with Vercel
-
-Since your docs are on Vercel, you could:
-
-1. Add this as a Vercel serverless function
-2. Build the index during the build process
-3. Serve the MCP server via API routes
-
-### Option 3: GitHub Actions + Index as Artifact
-
-1. Build the index in a GitHub Action
-2. Store it as an artifact or commit it
-3. Use it in the MCP server
+- **Semantic Search**: Fuzzy search across all documentation
+- **Category Filtering**: Filter by developer, user, dao, or ecosystem docs
+- **Version Filtering**: Filter by protocol version (v3, v4, v5)
+- **Full Document Retrieval**: Get complete markdown content with metadata
+- **Always Up-to-Date**: Index automatically rebuilds when docs change
 
 ## Development
 
-The server automatically rebuilds the index if it's missing. For development, you can:
-
 ```bash
-# Watch mode (auto-restart on changes)
-npm run dev
-
 # Build index manually
 npm run build-index
+
+# Run stdio server
+npm start
+
+# Watch mode (auto-restart)
+npm run dev
+
+# Run HTTP server locally
+npm run start:http
 ```
 
-## Index Structure
+## Troubleshooting
 
-The index file (`src/docs-index.json`) contains an array of document objects:
+**Index not found:** Run `npm run mcp:build-index` from repo root
 
-```json
-{
-  "path": "dev/v5/learn/overview.md",
-  "title": "Overview",
-  "description": "The Juicebox protocol is...",
-  "content": "Full text content...",
-  "headings": ["Overview", "Deploy a project", ...],
-  "category": "developer",
-  "version": "v5",
-  "url": "https://docs.juicebox.money/dev/v5/learn/overview"
-}
-```
+**Cannot find module:** Run `npm run mcp:install` from repo root
 
-## License
+**Claude Desktop not connecting:**
+- Use absolute paths in config
+- Verify Node.js 24+ is installed
+- Check Claude Desktop logs
 
-Same as the main Juicebox Docs repository.
+**HTTP API not responding:**
+- Verify deployment at `https://docs.juicebox.money/api/mcp/`
+- Check that index file exists: `mcp-server/src/docs-index.json`
+- Check Vercel function logs
+
+## More Information
+
+- [MCP Specification](https://modelcontextprotocol.io)
+- [Documentation Guide](/docs/dev/v5/build/mcp-server.md)
