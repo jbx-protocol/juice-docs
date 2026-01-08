@@ -84,7 +84,7 @@ This system allows projects to maintain consistent token economics across all su
 
 #### What you'll want to know if you're building
 
-* Currency IDs are used in [`JBRulesetMetadata.baseCurrency`](/docs/dev/v5/api/core/structs/JBRulesetMetadata.md#basecurrency) to define token issuance rates.
-* Token currencies are specified in [`JBAccountingContext.currency`](/docs/dev/v5/api/core/structs/JBAccountingContext.md#currency) for each accepted token.
+* Currency IDs are used in [`JBRulesetMetadata.baseCurrency`](/docs/dev/v5/api/core/structs/JBRulesetMetadata.md) to define token issuance rates.
+* Token currencies are specified in [`JBAccountingContext.currency`](/docs/dev/v5/api/core/structs/JBAccountingContext.md) for each accepted token.
 * Price conversion is handled by the [`JBPrices`](/docs/dev/v5/api/core/JBPrices.md) contract when payments are made in currencies different from the project's base currency.
 * The native token address `0x000000000000000000000000000000000000EEEe` always maps to currency ID 61166 across all chains where it exists.

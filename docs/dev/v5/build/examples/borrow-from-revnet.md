@@ -136,7 +136,7 @@ Once you have a loan, you can:
 
 * **Repay the loan** by calling [`REVLoans.repayLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#repayloan)
 * **Refinance the loan** by calling [`REVLoans.reallocateCollateralFromLoan(...)`](/docs/dev/v5/api/revnet/REVLoans.md#reallocatecollateralfromloan)
-* **Check loan details** by calling [`REVLoans.loanOf(...)`](/docs/dev/v5/api/revnet/REVLoans.md#loanofloanid)
+* **Check loan details** by calling [`REVLoans.loanOf(...)`](/docs/dev/v5/api/revnet/REVLoans.md#loanof)
 
 Each loan is represented as an ERC-721 NFT, allowing for easy tracking and transfer of loan ownership.
 

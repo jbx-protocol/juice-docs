@@ -13,7 +13,7 @@ We believe open operations established entirely on blockchains gives investors, 
 - Learn about the JBX's core values in the [Principles](principles).
 - If you are interested in contributing to JBX, read the [Contributor Guide](contribute).
 - To learn more about JBX's business, read [JBX & Fees](/dao/jbx/).
-- Learn more about the [Juicebox protocol](/docs/dev/).
+- Learn more about the [Juicebox protocol](/dev/).
 
 <details>
 
