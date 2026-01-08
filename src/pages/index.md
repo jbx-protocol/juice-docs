@@ -84,6 +84,6 @@ hide_table_of_contents: true
       <span class="footer__link-separator">&middot;</span>
       <a class="footer__link-item" href="/tos/">Terms of Service</a>
     </div>
-    <div>Made by <a href="https://juicebox.money/p/juicebox">JuiceboxDAO</a></div>
+    <div>Made possible by <a href="https://docs.juicebox.money/dao">JBX</a></div>
   </div>
 </footer>
