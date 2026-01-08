@@ -9,12 +9,17 @@
   "routes": [
     {
       "src": "/api/mcp/(.*)",
-      "dest": "/api/mcp/$1"
+      "dest": "/api/mcp/[...path]"
+    },
+    {
+      "src": "/api/mcp",
+      "dest": "/api/mcp/[...path]"
     }
   ],
   "functions": {
     "api/mcp/[...path].js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "memory": 1024
     }
   }
 }

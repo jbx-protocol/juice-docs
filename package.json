@@ -15,16 +15,24 @@
     "webp": "bash scripts/webp.sh",
     "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'",
     "mcp:build-index": "cd mcp-server && npm run build-index",
-    "mcp:install": "cd mcp-server && npm install"
+    "mcp:install": "cd mcp-server && npm install",
+    "vercel-build": "npm run mcp:install && npm run mcp:build-index && docusaurus build"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
     "@docusaurus/preset-classic": "^3.4.0",
     "@mdx-js/react": "^3.0.1",
+    "@modelcontextprotocol/sdk": "^0.5.0",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fuse.js": "^7.0.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.0.0",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "remove-markdown": "^0.5.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.4.0",
