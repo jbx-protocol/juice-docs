@@ -423,64 +423,6 @@ function NavbarSearchBar() {
                 </>
               )}
             </div>
-          {isLoading ? (
-            <div className={styles.loadingState}>
-              <div className={styles.thinkingChatbot}>
-                <svg 
-                  className={styles.chatbotIcon}
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2"
-                >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
-                <div className={styles.thinkingDots}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          ) : results.length === 0 ? (
-            <div className={styles.noResults}>
-              <div className={styles.gptResponse}>
-                {response ? renderMarkdown(response) : <p>No results found. Try different keywords or check your spelling.</p>}
-              </div>
-            </div>
-          ) : (
-            <>
-              {response && (
-                <div className={styles.gptResponse}>
-                  {renderMarkdown(response)}
-                </div>
-              )}
-              <div className={styles.resultsList}>
-                <div className={styles.resultsHeader}>Relevant documentation:</div>
-                {results.map((result, index) => (
-                  <a
-                    key={index}
-                    href={result.url}
-                    className={styles.resultItem}
-                    onClick={() => {
-                      // Don't close overlay, just navigate
-                    }}
-                  >
-                    <div className={styles.resultTitle}>{result.title}</div>
-                    {result.description && (
-                      <div className={styles.resultDescription}>
-                        {result.description.substring(0, 120)}
-                        {result.description.length > 120 ? '...' : ''}
-                      </div>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </>
-          )}
-            </div>
           </div>
         </div>
       )}
