@@ -39,7 +39,7 @@ hide_table_of_contents: true
     <div class="col col--4">
       <div class="card" style={{marginBottom: "30px"}}>
         <div class="card__header">
-          <h3>For Developers, Integrators, and project builders</h3>
+          <h3>For Builders</h3>
         </div>
         <div class="card__body">
           <p>
