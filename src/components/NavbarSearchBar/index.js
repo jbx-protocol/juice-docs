@@ -369,33 +369,6 @@ function NavbarSearchBar() {
               </button>
             </div>
 
-            {/* Overlay Input */}
-            <form onSubmit={handleSubmit} className={styles.overlayForm}>
-              <div className={styles.overlayInputWrapper}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={input}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Ask a question about the documentation..."
-                  className={styles.overlayInput}
-                  disabled={isLoading}
-                />
-                <button
-                  type="submit"
-                  disabled={!input.trim() || isLoading}
-                  className={styles.sendButton}
-                  aria-label="Send"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </div>
-            </form>
-
             {/* Overlay Content */}
             <div ref={resultsRef} className={styles.overlayContentArea}>
               {messages.length === 0 && !isLoading ? (
@@ -481,6 +454,33 @@ function NavbarSearchBar() {
                 </div>
               )}
             </div>
+
+            {/* Overlay Input - Fixed at Bottom */}
+            <form onSubmit={handleSubmit} className={styles.overlayForm}>
+              <div className={styles.overlayInputWrapper}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={handleInputChange}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask a question about the documentation..."
+                  className={styles.overlayInput}
+                  disabled={isLoading}
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className={styles.sendButton}
+                  aria-label="Send"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

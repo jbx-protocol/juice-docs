@@ -155,6 +155,20 @@ const config = {
         appId: "6C0XLHGK46",
         apiKey: "cf4910b7f8d618e1ee356e575db8120b",
         indexName: "juicebox",
+        searchParameters: {
+          // Boost v5 results by using optionalFilters
+          // If your Algolia index has a 'version' attribute or facet, uncomment:
+          // optionalFilters: ['version:v5'],
+          // 
+          // Alternatively, if you have a custom ranking attribute set up in Algolia dashboard:
+          // This requires configuring custom ranking in Algolia dashboard:
+          // 1. Go to Algolia Dashboard > Indices > juicebox > Ranking
+          // 2. Add a custom ranking attribute (e.g., 'version_priority')
+          // 3. Set v5 docs to have higher priority values
+          // 4. Then use: optionalFilters: ['version_priority:>5'],
+        },
+        // Contextual search can help with relevance
+        contextualSearch: true,
       }
     }),
 };
