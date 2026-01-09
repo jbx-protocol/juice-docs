@@ -5,7 +5,7 @@ sidebar_position: 3
 
 ### Why JBX  
 
-Juicebox is developed by an open organization of JBX holders. JBX has no CEO, no hiring department, and no Board of Directors; instead, it is operated by JBX token holders with financial stake in its success. By using tokens and the Juicebox protocol itself, the organization is able to manage strategic decisions and build the Juicebox protocol and ecosystem without at a global scale entirely through the internet.
+Juicebox is developed by an open organization of JBX holders. JBX has no CEO, no hiring department, and no Board of Directors; instead, it is operated by JBX token holders with financial stake in its success. By using tokens and the Juicebox protocol itself, the organization is able to manage strategic decisions and build the Juicebox protocol and ecosystem at a global scale entirely through the internet.
 
 ### How JBX Works
 

@@ -112,10 +112,17 @@ async function buildIndex() {
           }
           
           // Boost priority for integrator-relevant content
+          // Higher score = higher priority for learn/build, lower for API
           let integratorRelevance = 0;
-          if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 10;
-          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 8;
-          else if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 9;
+          if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 10; // Examples highest
+          else if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 9; // Build guides high
+          else if (relativePath.startsWith("dev/v5/learn/")) integratorRelevance = 8; // Learn content high
+          else if (relativePath.startsWith("dev/v5/api/core/")) integratorRelevance = 7; // Core API highest priority
+          else if (relativePath.startsWith("dev/v5/api/suckers/")) integratorRelevance = 6; // Suckers API
+          else if (relativePath.startsWith("dev/v5/api/721-hook/")) integratorRelevance = 6; // 721 hook API
+          else if (relativePath.startsWith("dev/v5/api/buyback-hook/")) integratorRelevance = 6; // Buyback hook API
+          else if (relativePath.startsWith("dev/v5/api/revnet/")) integratorRelevance = 6; // Revnet API
+          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 3; // Other API lower priority
           else if (relativePath.startsWith("dev/v5/")) integratorRelevance = 5;
           
           docIndex.push({

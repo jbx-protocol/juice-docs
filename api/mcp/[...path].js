@@ -9,6 +9,7 @@ import path from "path";
 import matter from "gray-matter";
 import removeMarkdown from "remove-markdown";
 import Fuse from "fuse.js";
+import Anthropic from "@anthropic-ai/sdk";
 
 // Use process.cwd() for Vercel compatibility (works in both CJS and ESM)
 const PROJECT_ROOT = process.cwd();
@@ -80,14 +81,16 @@ app.post(["/search", "/api/mcp/search"], async (req, res) => {
     if (!query) return res.status(400).json({ error: "query parameter is required" });
     if (docIndex.length === 0) return res.status(503).json({ error: "Index not available" });
     
-    // Detect query intent for building/integration queries
+    // Detect query intent
     const queryLower = query.toLowerCase();
-    const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|api|contract|hook|example|tutorial|how to|getting started)\b/i.test(query);
+    const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) || 
+                       /\b(ICT|CT|JB|REV)[A-Z]/.test(query); // Contract/interface names
+    const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
     const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
     
     // Auto-filter to v5 for building queries if version not specified
     let effectiveVersion = version;
-    if (version === "all" && isBuildingQuery && !isV5Query) {
+    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
       effectiveVersion = "v5";
     }
     
@@ -111,16 +114,44 @@ app.post(["/search", "/api/mcp/search"], async (req, res) => {
       },
     });
     
-    let results = filteredFuse.search(query, { limit: parseInt(limit) * 2 });
+    let results = filteredFuse.search(query, { limit: parseInt(limit) * 3 });
     
-    // Re-rank by integrator relevance for building queries
-    if (isBuildingQuery) {
-      results = results.map(r => ({
-        ...r,
-        score: r.score - (r.item.integratorRelevance || 0) * 0.1
-      })).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
+    // Re-rank results based on query type and document type
+    if (isAPIQuery) {
+      // For API queries, prioritize API docs with core API highest
+      results = results.map(r => {
+        let adjustedScore = r.score;
+        if (r.item.docType === "api") {
+          // Use integratorRelevance to rank API sections (core=7, others=6 or 3)
+          adjustedScore -= (r.item.integratorRelevance || 0) * 0.15;
+        } else if (r.item.docType === "learn" || r.item.docType === "build") {
+          adjustedScore += 0.1; // Slight penalty for non-API
+        }
+        return { ...r, score: adjustedScore };
+      }).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
     } else {
-      results = results.slice(0, parseInt(limit));
+      // For all non-API queries, prioritize learn/build over API
+      results = results.map(r => {
+        let adjustedScore = r.score;
+        // Strong boost for learn/build content based on integratorRelevance
+        if (r.item.docType === "learn" || r.item.docType === "build" || r.item.docType === "example") {
+          adjustedScore -= (r.item.integratorRelevance || 0) * 0.2; // Stronger boost
+        }
+        // Penalty for API docs in non-API queries, but less for core API
+        if (r.item.docType === "api") {
+          if (r.item.path.includes("/api/core/")) {
+            adjustedScore += 0.2; // Smaller penalty for core API
+          } else if (r.item.path.includes("/api/suckers/") || 
+                     r.item.path.includes("/api/721-hook/") || 
+                     r.item.path.includes("/api/buyback-hook/") || 
+                     r.item.path.includes("/api/revnet/")) {
+            adjustedScore += 0.3; // Medium penalty for priority API sections
+          } else {
+            adjustedScore += 0.4; // Larger penalty for other API docs
+          }
+        }
+        return { ...r, score: adjustedScore };
+      }).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
     }
     res.json({
       query,
@@ -188,6 +219,187 @@ app.get(["/structure", "/api/mcp/structure"], (req, res) => {
     res.json(structure);
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+// Claude-powered ask endpoint with full document context
+app.post(["/ask", "/api/mcp/ask"], async (req, res) => {
+  try {
+    const { query, category = "all", version = "all", maxDocs = 5 } = req.body;
+    if (!query) return res.status(400).json({ error: "query parameter is required" });
+    if (docIndex.length === 0) return res.status(503).json({ error: "Index not available" });
+
+    // Check for API key
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ 
+        error: "ANTHROPIC_API_KEY environment variable is not set. Please configure it in your Vercel project settings." 
+      });
+    }
+
+    // Use the same search logic as /search endpoint
+    const queryLower = query.toLowerCase();
+    const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) || 
+                       /\b(ICT|CT|JB|REV)[A-Z]/.test(query);
+    const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
+    const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
+    
+    let effectiveVersion = version;
+    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
+      effectiveVersion = "v5";
+    }
+    
+    let filteredIndex = docIndex;
+    if (category !== "all") filteredIndex = filteredIndex.filter((d) => d.category === category);
+    if (effectiveVersion !== "all") filteredIndex = filteredIndex.filter((d) => d.version === effectiveVersion);
+    
+    const filteredFuse = new Fuse(filteredIndex, {
+      keys: [
+        { name: "title", weight: 0.35 },
+        { name: "description", weight: 0.25 },
+        { name: "content", weight: 0.15 },
+        { name: "headings", weight: 0.1 },
+        { name: "tags", weight: 0.15 },
+      ],
+      threshold: 0.4,
+      includeScore: true,
+      getFn: (obj, path) => {
+        if (path === "tags") return obj.tags?.join(" ") || "";
+        return Fuse.config.getFn(obj, path);
+      },
+    });
+    
+    let searchResults = filteredFuse.search(query, { limit: parseInt(maxDocs) * 2 });
+    
+    // Re-rank results (same logic as /search)
+    if (isAPIQuery) {
+      searchResults = searchResults.map(r => {
+        let adjustedScore = r.score;
+        if (r.item.docType === "api") {
+          adjustedScore -= (r.item.integratorRelevance || 0) * 0.15;
+        } else if (r.item.docType === "learn" || r.item.docType === "build") {
+          adjustedScore += 0.1;
+        }
+        return { ...r, score: adjustedScore };
+      }).sort((a, b) => a.score - b.score).slice(0, parseInt(maxDocs));
+    } else {
+      searchResults = searchResults.map(r => {
+        let adjustedScore = r.score;
+        if (r.item.docType === "learn" || r.item.docType === "build" || r.item.docType === "example") {
+          adjustedScore -= (r.item.integratorRelevance || 0) * 0.2;
+        }
+        if (r.item.docType === "api") {
+          if (r.item.path.includes("/api/core/")) {
+            adjustedScore += 0.2;
+          } else if (r.item.path.includes("/api/suckers/") || 
+                     r.item.path.includes("/api/721-hook/") || 
+                     r.item.path.includes("/api/buyback-hook/") || 
+                     r.item.path.includes("/api/revnet/")) {
+            adjustedScore += 0.3;
+          } else {
+            adjustedScore += 0.4;
+          }
+        }
+        return { ...r, score: adjustedScore };
+      }).sort((a, b) => a.score - b.score).slice(0, parseInt(maxDocs));
+    }
+
+    // Fetch full content of top results
+    const docsWithContent = await Promise.all(
+      searchResults.slice(0, parseInt(maxDocs)).map(async (result) => {
+        try {
+          const content = await fs.readFile(result.item.fullPath, "utf-8");
+          const { content: markdownContent } = matter(content);
+          return {
+            title: result.item.title,
+            path: result.item.path,
+            url: result.item.url,
+            description: result.item.description,
+            content: markdownContent,
+            headings: result.item.headings,
+          };
+        } catch (error) {
+          console.error(`Error reading ${result.item.fullPath}:`, error.message);
+          return {
+            title: result.item.title,
+            path: result.item.path,
+            url: result.item.url,
+            description: result.item.description,
+            content: result.item.content, // Fallback to indexed content
+            headings: result.item.headings,
+          };
+        }
+      })
+    );
+
+    // Build context for Claude
+    const contextSections = docsWithContent.map((doc, idx) => {
+      return `## Document ${idx + 1}: ${doc.title}
+Path: ${doc.path}
+URL: ${doc.url}
+${doc.description ? `Description: ${doc.description}\n` : ''}
+${doc.headings && doc.headings.length > 0 ? `Headings: ${doc.headings.join(' → ')}\n` : ''}
+Content:
+${doc.content.substring(0, 8000)}${doc.content.length > 8000 ? '\n[... content truncated ...]' : ''}
+---`;
+    }).join('\n\n');
+
+    // Initialize Claude client
+    const anthropic = new Anthropic({ apiKey });
+
+    // Build the prompt
+    const systemPrompt = `You are a helpful assistant for the Juicebox protocol documentation. You have access to relevant documentation sections that have been retrieved based on the user's question.
+
+Your role:
+- Answer questions about the Juicebox protocol using the provided documentation
+- Be accurate and cite specific documents when referencing information
+- If the documentation doesn't contain the answer, say so clearly
+- Provide code examples when relevant
+- Be conversational and helpful
+- Focus on practical, actionable information
+
+When referencing documentation, mention the document title or path.`;
+
+    const userMessage = `User Question: ${query}
+
+Relevant Documentation:
+${contextSections}
+
+Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.`;
+
+    // Call Claude API
+    const message = await anthropic.messages.create({
+      model: "claude-3-5-sonnet-20241022",
+      max_tokens: 2048,
+      system: systemPrompt,
+      messages: [
+        {
+          role: "user",
+          content: userMessage,
+        },
+      ],
+    });
+
+    const claudeResponse = message.content[0].text;
+
+    // Return response with metadata
+    res.json({
+      query,
+      response: claudeResponse,
+      sources: docsWithContent.map(doc => ({
+        title: doc.title,
+        path: doc.path,
+        url: doc.url,
+        description: doc.description,
+      })),
+      totalSources: docsWithContent.length,
+    });
+  } catch (error) {
+    console.error("Claude API error:", error);
+    res.status(500).json({ 
+      error: error.message || "Failed to get response from Claude",
+      details: error.stack 
+    });
   }
 });
 

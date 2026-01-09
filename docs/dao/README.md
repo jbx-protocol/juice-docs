@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # About JBX 
 
-JBX runs as a business investing in the development of the Juicebox protocol and the ecosystem around it, enabling global capital formation for people and projects.
+JBX runs as a business investing in the development of the Juicebox protocol and the ecosystem around it, powering the "pay" and "cash out" functions of the open internet.
 
 JBX's finances and developments are accounted for entirely in the open, and it invests growth oriented open source initiatives. To participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox).
 

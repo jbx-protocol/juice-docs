@@ -1,0 +1,331 @@
+/* Search Container */
+.searchContainer {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+/* Search Form */
+.searchForm {
+  width: 100%;
+}
+
+/* Search Input Wrapper */
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Chat Icon */
+.chatIcon {
+  position: absolute;
+  left: 16px;
+  color: var(--ifm-color-content-secondary);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Search Input */
+.searchInput {
+  width: 100%;
+  padding: 12px 48px 12px 48px;
+  font-size: 16px;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 24px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.searchInput:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--ifm-color-primary-rgb), 0.1);
+}
+
+.searchInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.searchInput::placeholder {
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Clear Button */
+.clearButton {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--ifm-color-content-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.clearButton:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content);
+}
+
+/* Loading Dots */
+.loadingDots {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  z-index: 1;
+}
+
+.loadingDots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loadingDots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loadingDots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Results Dropdown */
+.resultsDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+[data-theme="dark"] .resultsDropdown {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.resultsDropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.resultsDropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.resultsDropdown::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+}
+
+.resultsDropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  color: var(--ifm-color-content-secondary);
+  justify-content: center;
+}
+
+/* GPT Response */
+.gptResponse {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-50);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+[data-theme="dark"] .gptResponse {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.gptResponse p {
+  margin: 0 0 12px 0;
+  color: var(--ifm-color-content);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.gptResponse p:last-child {
+  margin-bottom: 0;
+}
+
+.gptResponse strong {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.responseLine {
+  margin: 8px 0;
+  color: var(--ifm-color-content);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.responseLine:first-child {
+  margin-top: 0;
+}
+
+.responseLine:last-child {
+  margin-bottom: 0;
+}
+
+.inlineCode {
+  background: var(--ifm-color-emphasis-200);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  color: var(--ifm-color-primary);
+}
+
+.codeBlock {
+  background: var(--ifm-color-emphasis-200);
+  padding: 12px;
+  border-radius: 6px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  margin: 12px 0;
+  overflow-x: auto;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .codeBlock {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* No Results */
+.noResults {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.noResults p {
+  margin: 0;
+  color: var(--ifm-color-content);
+}
+
+.noResultsHint {
+  margin-top: 8px !important;
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary) !important;
+}
+
+/* Results List */
+.resultsList {
+  padding: 8px;
+}
+
+.resultsHeader {
+  padding: 12px 16px 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ifm-color-content-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Result Item */
+.resultItem {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  transition: background 0.2s;
+  margin-bottom: 4px;
+}
+
+.resultItem:hover {
+  background: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+
+[data-theme="dark"] .resultItem:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.resultTitle {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ifm-heading-color);
+  margin-bottom: 4px;
+}
+
+.resultDescription {
+  font-size: 13px;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .searchContainer {
+    max-width: 100%;
+    margin: 0 16px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 10px 44px 10px 44px;
+  }
+
+  .resultsDropdown {
+    left: -16px;
+    right: -16px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchContainer {
+    margin: 0 8px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 8px 40px 8px 40px;
+  }
+
+  .chatIcon {
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
+}

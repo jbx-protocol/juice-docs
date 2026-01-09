@@ -137,10 +137,17 @@ async function buildIndex() {
           }
           
           // Boost priority for integrator-relevant content
+          // Higher score = higher priority for learn/build, lower for API
           let integratorRelevance = 0;
-          if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 10;
-          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 8;
-          else if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 9;
+          if (relativePath.startsWith("dev/v5/build/examples/")) integratorRelevance = 10; // Examples highest
+          else if (relativePath.startsWith("dev/v5/build/")) integratorRelevance = 9; // Build guides high
+          else if (relativePath.startsWith("dev/v5/learn/")) integratorRelevance = 8; // Learn content high
+          else if (relativePath.startsWith("dev/v5/api/core/")) integratorRelevance = 7; // Core API highest priority
+          else if (relativePath.startsWith("dev/v5/api/suckers/")) integratorRelevance = 6; // Suckers API
+          else if (relativePath.startsWith("dev/v5/api/721-hook/")) integratorRelevance = 6; // 721 hook API
+          else if (relativePath.startsWith("dev/v5/api/buyback-hook/")) integratorRelevance = 6; // Buyback hook API
+          else if (relativePath.startsWith("dev/v5/api/revnet/")) integratorRelevance = 6; // Revnet API
+          else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 3; // Other API lower priority
           else if (relativePath.startsWith("dev/v5/")) integratorRelevance = 5;
           
           docIndex.push({
@@ -342,14 +349,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           initializeSearch();
         }
         
-        // Detect query intent for building/integration queries
+        // Detect query intent
         const queryLower = query.toLowerCase();
-        const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|api|contract|hook|example|tutorial|how to|getting started)\b/i.test(query);
+        const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) || 
+                           /\b(ICT|CT|JB|REV)[A-Z]/.test(query); // Contract/interface names
+        const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
         const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
         
-        // Auto-filter to v5 for building queries if version not specified
+        // Auto-filter to v5 for building/API queries if version not specified
         let effectiveVersion = version;
-        if (version === "all" && isBuildingQuery && !isV5Query) {
+        if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
           effectiveVersion = "v5";
         }
         
@@ -379,16 +388,44 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           },
         });
         
-        let results = filteredFuse.search(query, { limit: parseInt(limit) * 2 }); // Get more, then re-rank
+        let results = filteredFuse.search(query, { limit: parseInt(limit) * 3 }); // Get more, then re-rank
         
-        // Re-rank by integrator relevance for building queries
-        if (isBuildingQuery) {
-          results = results.map(r => ({
-            ...r,
-            score: r.score - (r.item.integratorRelevance || 0) * 0.1 // Boost integrator-relevant docs
-          })).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
+        // Re-rank results based on query type and document type
+        if (isAPIQuery) {
+          // For API queries, prioritize API docs with core API highest
+          results = results.map(r => {
+            let adjustedScore = r.score;
+            if (r.item.docType === "api") {
+              // Use integratorRelevance to rank API sections (core=7, others=6 or 3)
+              adjustedScore -= (r.item.integratorRelevance || 0) * 0.15;
+            } else if (r.item.docType === "learn" || r.item.docType === "build") {
+              adjustedScore += 0.1; // Slight penalty for non-API
+            }
+            return { ...r, score: adjustedScore };
+          }).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
         } else {
-          results = results.slice(0, parseInt(limit));
+          // For all non-API queries, prioritize learn/build over API
+          results = results.map(r => {
+            let adjustedScore = r.score;
+            // Strong boost for learn/build content based on integratorRelevance
+            if (r.item.docType === "learn" || r.item.docType === "build" || r.item.docType === "example") {
+              adjustedScore -= (r.item.integratorRelevance || 0) * 0.2; // Stronger boost
+            }
+            // Penalty for API docs in non-API queries, but less for core API
+            if (r.item.docType === "api") {
+              if (r.item.path.includes("/api/core/")) {
+                adjustedScore += 0.2; // Smaller penalty for core API
+              } else if (r.item.path.includes("/api/suckers/") || 
+                         r.item.path.includes("/api/721-hook/") || 
+                         r.item.path.includes("/api/buyback-hook/") || 
+                         r.item.path.includes("/api/revnet/")) {
+                adjustedScore += 0.3; // Medium penalty for priority API sections
+              } else {
+                adjustedScore += 0.4; // Larger penalty for other API docs
+              }
+            }
+            return { ...r, score: adjustedScore };
+          }).sort((a, b) => a.score - b.score).slice(0, parseInt(limit));
         }
         
         return {
