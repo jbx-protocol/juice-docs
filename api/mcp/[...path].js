@@ -222,6 +222,64 @@ app.get(["/structure", "/api/mcp/structure"], (req, res) => {
   }
 });
 
+// Test endpoint to verify Claude API key and model access
+app.get(["/test-claude", "/api/mcp/test-claude"], async (req, res) => {
+  try {
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ 
+        error: "ANTHROPIC_API_KEY not configured",
+        configured: false 
+      });
+    }
+
+    const anthropic = new Anthropic({ apiKey });
+    const testModels = [
+      "claude-3-5-sonnet-20241022",
+      "claude-3-5-sonnet-20240620",
+      "claude-3-opus-20240229",
+      "claude-3-sonnet-20240229",
+      "claude-3-haiku-20240307",
+    ];
+
+    const results = [];
+    for (const model of testModels) {
+      try {
+        const testMessage = await anthropic.messages.create({
+          model: model,
+          max_tokens: 10,
+          messages: [{ role: "user", content: "Hi" }],
+        });
+        results.push({ model, status: "available", response: "success" });
+        break; // Found a working model
+      } catch (error) {
+        const errorMsg = error.error?.message || error.message || JSON.stringify(error);
+        results.push({ 
+          model, 
+          status: "unavailable", 
+          error: errorMsg,
+          statusCode: error.status 
+        });
+      }
+    }
+
+    const workingModel = results.find(r => r.status === "available");
+    res.json({
+      apiKeyConfigured: true,
+      workingModel: workingModel?.model || null,
+      testResults: results,
+      recommendation: workingModel 
+        ? `Use model: ${workingModel.model}`
+        : "No models available. Check your API key permissions and billing status."
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      error: error.message,
+      details: error.stack 
+    });
+  }
+});
+
 // Claude-powered ask endpoint with full document context
 app.post(["/ask", "/api/mcp/ask"], async (req, res) => {
   try {
@@ -368,17 +426,21 @@ ${contextSections}
 Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.`;
 
     // Call Claude API
-    // Try models in order of preference
+    // Try models in order of preference - using most current and widely available models
     const modelsToTry = [
-      "claude-3-5-sonnet-20240620",  // Stable Claude 3.5 Sonnet
-      "claude-3-5-sonnet",            // Alternative format
-      "claude-3-sonnet-20240229",     // Claude 3 Sonnet fallback
+      "claude-3-5-sonnet-20241022",  // Latest Claude 3.5 Sonnet
+      "claude-3-5-sonnet-20240620",  // Previous Claude 3.5 Sonnet
+      "claude-3-opus-20240229",      // Claude 3 Opus
+      "claude-3-sonnet-20240229",    // Claude 3 Sonnet
+      "claude-3-haiku-20240307",     // Claude 3 Haiku (fastest, cheapest)
     ];
     
     let message;
     let lastError;
+    const attemptedModels = [];
     
     for (const modelName of modelsToTry) {
+      attemptedModels.push(modelName);
       try {
         message = await anthropic.messages.create({
           model: modelName,
@@ -391,14 +453,24 @@ Please answer the user's question based on the provided documentation. If the do
             },
           ],
         });
+        console.log(`Successfully used model: ${modelName}`);
         break; // Success, exit loop
       } catch (error) {
         lastError = error;
-        // Check if it's a model not found error (could be in message, error.error.message, etc.)
+        // Check if it's a model not found error
         const errorMessage = error.message || error.error?.message || JSON.stringify(error);
-        if (errorMessage.includes("not_found") || errorMessage.includes("model:") || error.status === 404) {
+        const isNotFound = errorMessage.includes("not_found") || 
+                          errorMessage.includes("model:") || 
+                          error.status === 404 ||
+                          (error.error && error.error.type === "not_found_error");
+        
+        if (isNotFound) {
           console.log(`Model ${modelName} not found, trying next...`);
           continue;
+        }
+        // For authentication errors, provide helpful message
+        if (error.status === 401 || error.status === 403) {
+          throw new Error(`Authentication failed. Please check that your ANTHROPIC_API_KEY is valid and has access to Claude models.`);
         }
         // For other errors, throw immediately
         throw error;
@@ -406,7 +478,13 @@ Please answer the user's question based on the provided documentation. If the do
     }
     
     if (!message) {
-      throw new Error(`None of the Claude models are available. Last error: ${lastError?.message || 'Unknown error'}`);
+      const errorDetails = lastError?.error ? JSON.stringify(lastError.error) : lastError?.message || 'Unknown error';
+      throw new Error(
+        `None of the Claude models are available. ` +
+        `Tried: ${attemptedModels.join(', ')}. ` +
+        `Last error: ${errorDetails}. ` +
+        `Please check your API key has access to Claude models.`
+      );
     }
 
     const claudeResponse = message.content[0].text;

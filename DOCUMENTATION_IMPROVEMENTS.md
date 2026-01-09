@@ -35,7 +35,7 @@ This document outlines actionable improvements for the Juicebox documentation ac
 **Example additions**:
 ```markdown
 ## Related Documentation
-- **For developers**: See [Developer Documentation](/docs/dev/)
+- **For developers and integrators**: See [Developer Documentation](/docs/dev/)
 - **For DAO contributors**: See [Contributing Guide](/docs/dao/contribute.md)
 ```
 

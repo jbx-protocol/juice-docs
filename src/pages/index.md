@@ -39,11 +39,11 @@ hide_table_of_contents: true
     <div class="col col--4">
       <div class="card" style={{marginBottom: "30px"}}>
         <div class="card__header">
-          <h3>For Developers</h3>
+          <h3>For Developers, Integrators, and project builders</h3>
         </div>
         <div class="card__body">
           <p>
-            Learn about the smart contracts that power the Juicebox protocol.
+            Learn about the how the Juicebox protocol works and how you can use it.
           </p>
         </div>
         <div class="card__footer">

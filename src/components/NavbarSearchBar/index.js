@@ -223,12 +223,24 @@ function NavbarSearchBar() {
         <div ref={resultsRef} className={styles.resultsDropdown}>
           {isLoading ? (
             <div className={styles.loadingState}>
-              <div className={styles.loadingDots}>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div className={styles.thinkingChatbot}>
+                <svg 
+                  className={styles.chatbotIcon}
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2"
+                >
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <div className={styles.thinkingDots}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </div>
-              <span>Searching documentation...</span>
             </div>
           ) : results.length === 0 ? (
             <div className={styles.noResults}>

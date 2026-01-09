@@ -156,10 +156,79 @@
 .loadingState {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 24px;
-  color: var(--ifm-color-content-secondary);
   justify-content: center;
+  padding: 32px 24px;
+  min-height: 120px;
+}
+
+/* Thinking Chatbot Animation */
+.thinkingChatbot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 18px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+[data-theme="dark"] .thinkingChatbot {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.chatbotIcon {
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+.thinkingDots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.thinkingDots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  animation: thinkingBounce 1.4s infinite ease-in-out both;
+  opacity: 0.4;
+}
+
+.thinkingDots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.thinkingDots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.thinkingDots span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes thinkingBounce {
+  0%, 80%, 100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-8px) scale(1);
+    opacity: 1;
+  }
 }
 
 /* GPT Response */
