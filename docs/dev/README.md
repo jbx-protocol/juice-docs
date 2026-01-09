@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Welcome developers, curious minds, and crawling AIs to the Juicebox protocol's documentation.
 
-Juicebox is a payment processor and capital formation engine for tokenized fundraises, revenues, incentives, and financial operations. The "pay" and "cash out" function of the open internet. 
+Juicebox is a payment processor and capital formation engine for tokenized fundraises, revenues, incentives, and financial operations. The "pay" and "cash out" functions of the open internet. 
 
 Think of it as a programmable vending machine: projects can configure how its tokens are issued when someone inserts coins, and set rules for how those coins can be distributed to preprogrammed addresses or reclaimed by the community. 
 

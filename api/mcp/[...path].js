@@ -368,17 +368,46 @@ ${contextSections}
 Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.`;
 
     // Call Claude API
-    const message = await anthropic.messages.create({
-      model: "claude-3-5-sonnet-20241022",
-      max_tokens: 2048,
-      system: systemPrompt,
-      messages: [
-        {
-          role: "user",
-          content: userMessage,
-        },
-      ],
-    });
+    // Try models in order of preference
+    const modelsToTry = [
+      "claude-3-5-sonnet-20240620",  // Stable Claude 3.5 Sonnet
+      "claude-3-5-sonnet",            // Alternative format
+      "claude-3-sonnet-20240229",     // Claude 3 Sonnet fallback
+    ];
+    
+    let message;
+    let lastError;
+    
+    for (const modelName of modelsToTry) {
+      try {
+        message = await anthropic.messages.create({
+          model: modelName,
+          max_tokens: 2048,
+          system: systemPrompt,
+          messages: [
+            {
+              role: "user",
+              content: userMessage,
+            },
+          ],
+        });
+        break; // Success, exit loop
+      } catch (error) {
+        lastError = error;
+        // Check if it's a model not found error (could be in message, error.error.message, etc.)
+        const errorMessage = error.message || error.error?.message || JSON.stringify(error);
+        if (errorMessage.includes("not_found") || errorMessage.includes("model:") || error.status === 404) {
+          console.log(`Model ${modelName} not found, trying next...`);
+          continue;
+        }
+        // For other errors, throw immediately
+        throw error;
+      }
+    }
+    
+    if (!message) {
+      throw new Error(`None of the Claude models are available. Last error: ${lastError?.message || 'Unknown error'}`);
+    }
 
     const claudeResponse = message.content[0].text;
 
