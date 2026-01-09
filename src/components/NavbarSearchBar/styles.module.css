@@ -235,7 +235,7 @@
 
 /* GPT Response */
 .gptResponse {
-  padding: 32px 36px;
+  padding: 40px 48px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-color-emphasis-50);
   max-height: none;
@@ -247,10 +247,10 @@
 }
 
 .gptResponse p {
-  margin: 0 0 20px 0;
+  margin: 0 0 24px 0;
   color: var(--ifm-color-content);
-  line-height: 1.8;
-  font-size: 18px;
+  line-height: 1.9;
+  font-size: 19px;
 }
 
 .gptResponse p:last-child {
@@ -263,10 +263,10 @@
 }
 
 .responseLine {
-  margin: 16px 0;
+  margin: 20px 0;
   color: var(--ifm-color-content);
-  line-height: 1.8;
-  font-size: 18px;
+  line-height: 1.9;
+  font-size: 19px;
 }
 
 .responseLine:first-child {
@@ -368,12 +368,12 @@
 /* Result Item */
 .resultItem {
   display: block;
-  padding: 16px 20px;
-  border-radius: 10px;
+  padding: 20px 24px;
+  border-radius: 12px;
   text-decoration: none;
   color: var(--ifm-font-color-base);
   transition: background 0.2s;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .resultItem:hover {
@@ -387,15 +387,15 @@
 
 .resultTitle {
   font-weight: 600;
-  font-size: 19px;
+  font-size: 20px;
   color: var(--ifm-heading-color);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .resultDescription {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--ifm-color-content-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Overlay Backdrop */
@@ -405,13 +405,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
   animation: fadeIn 0.2s ease;
 }
 
@@ -429,14 +429,16 @@
   background: var(--ifm-background-color);
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 1400px;
-  max-height: 92vh;
+  width: 92%;
+  max-width: 1800px;
+  height: 88vh;
+  max-height: 88vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   animation: slideUp 0.3s ease;
   margin: auto;
+  position: relative;
 }
 
 @keyframes slideUp {
@@ -459,9 +461,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 40px;
+  padding: 32px 48px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-background-surface-color);
+  flex-shrink: 0;
 }
 
 .overlayHeaderLeft {
@@ -497,9 +500,10 @@
 
 /* Overlay Form */
 .overlayForm {
-  padding: 28px 40px;
+  padding: 32px 48px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-background-surface-color);
+  flex-shrink: 0;
 }
 
 .overlayInputWrapper {
@@ -559,7 +563,7 @@
 .overlayContentArea {
   flex: 1;
   overflow-y: auto;
-  padding: 40px;
+  padding: 48px;
   min-height: 400px;
 }
 
@@ -607,8 +611,15 @@
   }
 
   .overlayContent {
+    width: 98vw;
+    height: 95vh;
     max-width: 98vw;
-    max-height: 92vh;
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+  
+  .overlayBackdrop {
+    padding: 10px;
   }
 }
 
