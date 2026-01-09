@@ -15,9 +15,20 @@ function NavbarSearchBar() {
   const inputRef = useRef(null);
   const resultsRef = useRef(null);
   const overlayRef = useRef(null);
+  const messagesEndRef = useRef(null);
+  
+  // Conversation history
+  const [messages, setMessages] = useState([]);
   
   // Store conversation context when closing
   const [savedContext, setSavedContext] = useState(null);
+  
+  // Auto-scroll to bottom when new messages are added
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isLoading]);
 
   // Handle click outside to close overlay
   useEffect(() => {
@@ -29,12 +40,13 @@ function NavbarSearchBar() {
         !inputRef.current?.contains(event.target)
       ) {
         // Save context before closing
-        if (hasSearched || results.length > 0 || response) {
+        if (hasSearched || results.length > 0 || response || messages.length > 0) {
           setSavedContext({
             results,
             response,
             input,
             hasSearched,
+            messages,
           });
         }
         setIsOverlayOpen(false);
@@ -56,9 +68,15 @@ function NavbarSearchBar() {
   const handleSearch = async (query) => {
     if (!query.trim() || isLoading) return;
 
+    // Add user message to conversation
+    const userMessage = { type: 'user', content: query };
+    setMessages(prev => [...prev, userMessage]);
     setHasSearched(true);
     setIsLoading(true);
     setIsOverlayOpen(true);
+    
+    // Clear input after adding message
+    setInput('');
 
     try {
       // Auto-detect if query is about building/integration (will auto-filter to v5)
@@ -66,6 +84,8 @@ function NavbarSearchBar() {
       
       // Try Claude-powered ask endpoint first, fallback to regular search if it fails
       let claudeSuccess = false;
+      let assistantResponse = '';
+      let assistantSources = [];
       
       try {
         const claudeResponse = await fetch(`${API_BASE}/ask`, {
@@ -81,13 +101,15 @@ function NavbarSearchBar() {
 
         if (claudeResponse.ok) {
           const data = await claudeResponse.json();
-          setResponse(data.response || 'No response from Claude.');
-          setResults((data.sources || []).map((source, index) => ({
+          assistantResponse = data.response || 'No response from Claude.';
+          assistantSources = (data.sources || []).map((source, index) => ({
             title: source.title,
             url: source.url,
             description: source.description || `Documentation source ${index + 1}`,
             path: source.path,
-          })));
+          }));
+          setResponse(assistantResponse);
+          setResults(assistantSources);
           claudeSuccess = true;
         }
       } catch (claudeErr) {
@@ -114,16 +136,34 @@ function NavbarSearchBar() {
         }
 
         const searchData = await searchResponse.json();
-        setResults(searchData.results || []);
+        assistantSources = searchData.results || [];
+        setResults(assistantSources);
         
         // Generate template-based conversational response
-        const conversationalResponse = generateConversationalResponse(searchData.results || [], query);
-        setResponse(conversationalResponse);
+        assistantResponse = generateConversationalResponse(assistantSources, query);
+        setResponse(assistantResponse);
       }
+      
+      // Add assistant message to conversation
+      const assistantMessage = {
+        type: 'assistant',
+        content: assistantResponse,
+        sources: assistantSources,
+      };
+      setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Search error:', error);
       setResults([]);
-      setResponse(`I encountered an error: ${error.message}. Please try again.`);
+      const errorMessage = `I encountered an error: ${error.message}. Please try again.`;
+      setResponse(errorMessage);
+      
+      // Add error message to conversation
+      const errorAssistantMessage = {
+        type: 'assistant',
+        content: errorMessage,
+        sources: [],
+      };
+      setMessages(prev => [...prev, errorAssistantMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -185,12 +225,13 @@ function NavbarSearchBar() {
       handleSubmit(e);
     } else if (e.key === 'Escape') {
       // Save context before closing
-      if (hasSearched || results.length > 0 || response) {
+      if (hasSearched || results.length > 0 || response || messages.length > 0) {
         setSavedContext({
           results,
           response,
           input,
           hasSearched,
+          messages,
         });
       }
       setIsOverlayOpen(false);
@@ -213,6 +254,7 @@ function NavbarSearchBar() {
       setResponse(savedContext.response || '');
       setInput(savedContext.input || '');
       setHasSearched(savedContext.hasSearched || false);
+      setMessages(savedContext.messages || []);
       setIsOverlayOpen(true);
     } else if (!isOverlayOpen) {
       setIsOverlayOpen(true);
@@ -224,6 +266,7 @@ function NavbarSearchBar() {
     setResults([]);
     setResponse('');
     setHasSearched(false);
+    setMessages([]);
     setSavedContext(null);
     inputRef.current?.focus();
   };
@@ -312,8 +355,8 @@ function NavbarSearchBar() {
               <button
                 className={styles.closeButton}
                 onClick={() => {
-                  if (hasSearched || results.length > 0 || response) {
-                    setSavedContext({ results, response, input, hasSearched });
+                  if (hasSearched || results.length > 0 || response || messages.length > 0) {
+                    setSavedContext({ results, response, input, hasSearched, messages });
                   }
                   setIsOverlayOpen(false);
                 }}
@@ -355,28 +398,7 @@ function NavbarSearchBar() {
 
             {/* Overlay Content */}
             <div ref={resultsRef} className={styles.overlayContentArea}>
-              {isLoading ? (
-                <div className={styles.loadingState}>
-                  <div className={styles.thinkingChatbot}>
-                    <svg 
-                      className={styles.chatbotIcon}
-                      width="24" 
-                      height="24" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2"
-                    >
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    <div className={styles.thinkingDots}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-              ) : results.length === 0 && !hasSearched ? (
+              {messages.length === 0 && !isLoading ? (
                 <div className={styles.welcomeMessage}>
                   <p>👋 Hi! I can help you find information in the Juicebox documentation.</p>
                   <p>Try asking:</p>
@@ -386,41 +408,77 @@ function NavbarSearchBar() {
                     <li>"How to configure a ruleset?"</li>
                   </ul>
                 </div>
-              ) : results.length === 0 ? (
-                <div className={styles.noResults}>
-                  <div className={styles.gptResponse}>
-                    {response ? renderMarkdown(response) : <p>No results found. Try different keywords or check your spelling.</p>}
-                  </div>
-                </div>
               ) : (
-                <>
-                  {response && (
-                    <div className={styles.gptResponse}>
-                      {renderMarkdown(response)}
+                <div className={styles.messagesContainer}>
+                  {messages.map((message, index) => (
+                    <div
+                      key={index}
+                      className={message.type === 'user' ? styles.userMessage : styles.assistantMessage}
+                    >
+                      {message.type === 'user' ? (
+                        <div className={styles.messageContent}>
+                          <div className={styles.messageText}>{message.content}</div>
+                        </div>
+                      ) : (
+                        <div className={styles.messageContent}>
+                          <div className={styles.assistantResponse}>
+                            {renderMarkdown(message.content)}
+                          </div>
+                          {message.sources && message.sources.length > 0 && (
+                            <div className={styles.resultsList}>
+                              <div className={styles.resultsHeader}>Relevant documentation:</div>
+                              {message.sources.map((result, resultIndex) => (
+                                <a
+                                  key={resultIndex}
+                                  href={result.url}
+                                  className={styles.resultItem}
+                                  onClick={() => {
+                                    // Don't close overlay, just navigate
+                                  }}
+                                >
+                                  <div className={styles.resultTitle}>{result.title}</div>
+                                  {result.description && (
+                                    <div className={styles.resultDescription}>
+                                      {result.description.substring(0, 120)}
+                                      {result.description.length > 120 ? '...' : ''}
+                                    </div>
+                                  )}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                  {isLoading && (
+                    <div className={styles.assistantMessage}>
+                      <div className={styles.messageContent}>
+                        <div className={styles.loadingState}>
+                          <div className={styles.thinkingChatbot}>
+                            <svg 
+                              className={styles.chatbotIcon}
+                              width="24" 
+                              height="24" 
+                              viewBox="0 0 24 24" 
+                              fill="none" 
+                              stroke="currentColor" 
+                              strokeWidth="2"
+                            >
+                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div className={styles.thinkingDots}>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   )}
-                  <div className={styles.resultsList}>
-                    <div className={styles.resultsHeader}>Relevant documentation:</div>
-                    {results.map((result, index) => (
-                      <a
-                        key={index}
-                        href={result.url}
-                        className={styles.resultItem}
-                        onClick={() => {
-                          // Don't close overlay, just navigate
-                        }}
-                      >
-                        <div className={styles.resultTitle}>{result.title}</div>
-                        {result.description && (
-                          <div className={styles.resultDescription}>
-                            {result.description.substring(0, 120)}
-                            {result.description.length > 120 ? '...' : ''}
-                          </div>
-                        )}
-                      </a>
-                    ))}
-                  </div>
-                </>
+                  <div ref={messagesEndRef} />
+                </div>
               )}
             </div>
           </div>

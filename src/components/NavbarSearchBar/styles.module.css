@@ -161,6 +161,11 @@
   min-height: 200px;
 }
 
+.assistantMessage .loadingState {
+  padding: 20px 0;
+  min-height: auto;
+}
+
 /* Thinking Chatbot Animation */
 .thinkingChatbot {
   display: flex;
@@ -356,6 +361,11 @@
   padding: 24px 0;
 }
 
+.assistantMessage .resultsList {
+  padding: 0;
+  margin-top: 0;
+}
+
 .resultsHeader {
   padding: 16px 0 12px 0;
   font-size: 14px;
@@ -396,6 +406,97 @@
   font-size: 17px;
   color: var(--ifm-color-content-secondary);
   line-height: 1.7;
+}
+
+/* Messages Container */
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0;
+}
+
+/* User Message */
+.userMessage {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.userMessage .messageContent {
+  max-width: 75%;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 18px 18px 4px 18px;
+  word-wrap: break-word;
+}
+
+.userMessage .messageText {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Assistant Message */
+.assistantMessage {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.assistantMessage .messageContent {
+  max-width: 85%;
+  width: 100%;
+}
+
+.assistantResponse {
+  background: var(--ifm-color-emphasis-50);
+  padding: 20px 24px;
+  border-radius: 18px 18px 18px 4px;
+  margin-bottom: 16px;
+}
+
+.assistantResponse p {
+  margin: 0 0 16px 0;
+  color: var(--ifm-color-content);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.assistantResponse p:last-child {
+  margin-bottom: 0;
+}
+
+.assistantResponse strong {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.assistantResponse code {
+  background: var(--ifm-color-emphasis-200);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  color: var(--ifm-color-primary);
+}
+
+.assistantResponse pre {
+  background: var(--ifm-color-emphasis-200);
+  padding: 12px;
+  border-radius: 6px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  margin: 12px 0;
+  overflow-x: auto;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Message Content */
+.messageContent {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Overlay Backdrop */
