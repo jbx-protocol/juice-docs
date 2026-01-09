@@ -69,5 +69,5 @@ These docs are here to help you navigate the protocol, whether you're...
 
 #### Get Involved
 
-Have feedback or ideas? Reach out to the DAO contributors on [Discord](https://www.discord.gg/juicebox).  
+Have feedback or ideas? Reach out to contributors on [Discord](https://www.discord.gg/juicebox).  
 Want to make a direct contribution? Submit a pull request to the [documentation repo](https://github.com/jbx-protocol/juice-docs) on GitHub.

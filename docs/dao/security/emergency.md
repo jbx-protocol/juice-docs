@@ -42,7 +42,7 @@ This is a non-exhaustive list of possible emergency scenarios:
 
 ## Roles
 
-In the event of an emergency situation, the following roles should be assigned to JuiceboxDAO contributors working to resolve the situation:
+In the event of an emergency situation, the following roles should be assigned to volunteers contributors working to resolve the situation:
 
 - Facilitator
 - Multisig Lead
