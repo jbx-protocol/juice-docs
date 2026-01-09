@@ -87,16 +87,31 @@ app.post(["/search", "/api/mcp/search"], async (req, res) => {
                        /\b(ICT|CT|JB|REV)[A-Z]/.test(query); // Contract/interface names
     const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
     const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
+    const isV4Query = /\bv4\b/i.test(query) || queryLower.includes("v4");
+    const isV3Query = /\bv3\b/i.test(query) || queryLower.includes("v3");
+    const isV2Query = /\bv2\b/i.test(query) || queryLower.includes("v2");
+    const isV1Query = /\bv1\b/i.test(query) || queryLower.includes("v1");
+    
+    // Only include v1-v3 if explicitly requested
+    const explicitlyRequestsOldVersion = isV1Query || isV2Query || isV3Query;
     
     // Auto-filter to v5 for building queries if version not specified
     let effectiveVersion = version;
-    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
+    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query && !isV4Query) {
       effectiveVersion = "v5";
     }
     
     let filteredIndex = docIndex;
     if (category !== "all") filteredIndex = filteredIndex.filter((d) => d.category === category);
     if (effectiveVersion !== "all") filteredIndex = filteredIndex.filter((d) => d.version === effectiveVersion);
+    
+    // Exclude v1-v3 docs unless explicitly requested
+    if (!explicitlyRequestsOldVersion && effectiveVersion === "all") {
+      filteredIndex = filteredIndex.filter((d) => {
+        const docVersion = d.version?.toLowerCase() || "";
+        return docVersion === "v4" || docVersion === "v5" || !docVersion || docVersion === "";
+      });
+    }
     
     const filteredFuse = new Fuse(filteredIndex, {
       keys: [
@@ -301,15 +316,30 @@ app.post(["/ask", "/api/mcp/ask"], async (req, res) => {
                        /\b(ICT|CT|JB|REV)[A-Z]/.test(query);
     const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
     const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
+    const isV4Query = /\bv4\b/i.test(query) || queryLower.includes("v4");
+    const isV3Query = /\bv3\b/i.test(query) || queryLower.includes("v3");
+    const isV2Query = /\bv2\b/i.test(query) || queryLower.includes("v2");
+    const isV1Query = /\bv1\b/i.test(query) || queryLower.includes("v1");
+    
+    // Only include v1-v3 if explicitly requested
+    const explicitlyRequestsOldVersion = isV1Query || isV2Query || isV3Query;
     
     let effectiveVersion = version;
-    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
+    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query && !isV4Query) {
       effectiveVersion = "v5";
     }
     
     let filteredIndex = docIndex;
     if (category !== "all") filteredIndex = filteredIndex.filter((d) => d.category === category);
     if (effectiveVersion !== "all") filteredIndex = filteredIndex.filter((d) => d.version === effectiveVersion);
+    
+    // Exclude v1-v3 docs unless explicitly requested
+    if (!explicitlyRequestsOldVersion && effectiveVersion === "all") {
+      filteredIndex = filteredIndex.filter((d) => {
+        const docVersion = d.version?.toLowerCase() || "";
+        return docVersion === "v4" || docVersion === "v5" || !docVersion || docVersion === "";
+      });
+    }
     
     const filteredFuse = new Fuse(filteredIndex, {
       keys: [
@@ -429,18 +459,30 @@ Think of it as a programmable vending machine: projects can configure how tokens
 - **Core API** has highest priority, followed by Suckers, 721-hook, Buyback-hook, and Revnet APIs
 - **Learn** and **Build** content should be prioritized for general queries
 
+**CRITICAL TERMINOLOGY RULES:**
+- **NEVER use "funding cycles"** - This term is deprecated. Always use "rulesets" or "ruleset cycles" for v4 and v5
+- **Version Priority**: Focus on v4 and v5 documentation. Only reference v1-v3 documentation if the user explicitly asks about those versions
+- When discussing project configuration, always refer to "rulesets" and "ruleset cycles", never "funding cycles"
+- If you see "funding cycles" in older documentation, translate it to "rulesets" in your response
+
 **Important Notes:**
 - When referencing documentation, mention the document title or path
 - If you're unsure about something, say so rather than guessing
 - Focus on helping users accomplish their goals efficiently
-- Be encouraging and supportive, especially for beginners`;
+- Be encouraging and supportive, especially for beginners
+- Always use current terminology (rulesets, not funding cycles) unless the user specifically asks about v1-v3`;
 
     const userMessage = `User Question: ${query}
 
 Relevant Documentation:
 ${contextSections}
 
-Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.`;
+Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.
+
+**IMPORTANT**: 
+- NEVER use the term "funding cycles" - always use "rulesets" or "ruleset cycles" for v4 and v5
+- If you see "funding cycles" in the documentation, translate it to "rulesets" in your response
+- Focus on v4 and v5 terminology unless the user explicitly asks about v1-v3`;
 
     // Call Claude API
     // Try models in order of preference - using most current and widely available models

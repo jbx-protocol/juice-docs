@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const API_BASE = '/api/mcp';
 
 function NavbarSearchBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [results, setResults] = useState([]);
   const [response, setResponse] = useState('');
   const [input, setInput] = useState('');
@@ -14,36 +14,51 @@ function NavbarSearchBar() {
   const [hasSearched, setHasSearched] = useState(false);
   const inputRef = useRef(null);
   const resultsRef = useRef(null);
+  const overlayRef = useRef(null);
+  
+  // Store conversation context when closing
+  const [savedContext, setSavedContext] = useState(null);
 
+  // Handle click outside to close overlay
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        resultsRef.current &&
-        !resultsRef.current.contains(event.target) &&
+        isOverlayOpen &&
+        overlayRef.current &&
+        !overlayRef.current.contains(event.target) &&
         !inputRef.current?.contains(event.target)
       ) {
-        setIsOpen(false);
+        // Save context before closing
+        if (hasSearched || results.length > 0 || response) {
+          setSavedContext({
+            results,
+            response,
+            input,
+            hasSearched,
+          });
+        }
+        setIsOverlayOpen(false);
       }
     };
 
-    if (isOpen) {
+    if (isOverlayOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       return () => document.removeEventListener('mousedown', handleClickOutside);
     }
-  }, [isOpen]);
+  }, [isOverlayOpen, hasSearched, results, response, input]);
 
   useEffect(() => {
-    if (isOpen && inputRef.current) {
+    if (isOverlayOpen && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [isOpen]);
+  }, [isOverlayOpen]);
 
   const handleSearch = async (query) => {
     if (!query.trim() || isLoading) return;
 
     setHasSearched(true);
     setIsLoading(true);
-    setIsOpen(true);
+    setIsOverlayOpen(true);
 
     try {
       // Auto-detect if query is about building/integration (will auto-filter to v5)
@@ -194,89 +209,245 @@ function NavbarSearchBar() {
       e.preventDefault();
       handleSubmit(e);
     } else if (e.key === 'Escape') {
-      setIsOpen(false);
-      setInput('');
-      setResults([]);
-      setResponse('');
-      setHasSearched(false);
+      // Save context before closing
+      if (hasSearched || results.length > 0 || response) {
+        setSavedContext({
+          results,
+          response,
+          input,
+          hasSearched,
+        });
+      }
+      setIsOverlayOpen(false);
     }
   };
 
   const handleInputChange = (e) => {
-    setInput(e.target.value);
-    if (e.target.value.trim()) {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
-      setResults([]);
-      setResponse('');
-      setHasSearched(false);
+    const value = e.target.value;
+    setInput(value);
+    // Expand overlay when user starts typing
+    if (value.trim()) {
+      setIsOverlayOpen(true);
     }
+  };
+  
+  const handleInputFocus = () => {
+    // Restore previous context when clicking back into the input
+    if (savedContext && !isOverlayOpen) {
+      setResults(savedContext.results || []);
+      setResponse(savedContext.response || '');
+      setInput(savedContext.input || '');
+      setHasSearched(savedContext.hasSearched || false);
+      setIsOverlayOpen(true);
+    } else if (!isOverlayOpen) {
+      setIsOverlayOpen(true);
+    }
+  };
+  
+  const handleClear = () => {
+    setInput('');
+    setResults([]);
+    setResponse('');
+    setHasSearched(false);
+    setSavedContext(null);
+    inputRef.current?.focus();
   };
 
   return (
-    <div className={styles.searchContainer}>
-      <form onSubmit={handleSubmit} className={styles.searchForm}>
-        <div className={styles.searchInputWrapper}>
-          <svg
-            className={styles.chatIcon}
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-            onFocus={() => {
-              if (input.trim() || hasSearched) {
-                setIsOpen(true);
-              }
-            }}
-            placeholder="Ask the docs with GPT"
-            className={styles.searchInput}
-            disabled={isLoading}
-          />
-          {isLoading && (
-            <div className={styles.loadingDots}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          )}
-          {input && !isLoading && (
-            <button
-              type="button"
-              onClick={() => {
-                setInput('');
-                setResults([]);
-                setResponse('');
-                setIsOpen(false);
-                setHasSearched(false);
-                inputRef.current?.focus();
-              }}
-              className={styles.clearButton}
-              aria-label="Clear search"
+    <>
+      {/* Compact Input in Navbar */}
+      <div className={styles.searchContainer}>
+        <form onSubmit={handleSubmit} className={styles.searchForm}>
+          <div className={styles.searchInputWrapper}>
+            <svg
+              className={styles.chatIcon}
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          )}
-        </div>
-      </form>
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              onFocus={handleInputFocus}
+              placeholder="Ask the docs with GPT"
+              className={styles.searchInput}
+              disabled={isLoading}
+            />
+            {isLoading && (
+              <div className={styles.loadingDots}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
+            {input && !isLoading && (
+              <button
+                type="button"
+                onClick={handleClear}
+                className={styles.clearButton}
+                aria-label="Clear search"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
 
-      {/* Results Dropdown */}
-      {isOpen && (hasSearched || results.length > 0) && (
-        <div ref={resultsRef} className={styles.resultsDropdown}>
+      {/* Centered Overlay */}
+      {isOverlayOpen && (
+        <div className={styles.overlayBackdrop} onClick={() => {
+          if (hasSearched || results.length > 0 || response) {
+            setSavedContext({ results, response, input, hasSearched });
+          }
+          setIsOverlayOpen(false);
+        }}>
+          <div 
+            ref={overlayRef}
+            className={styles.overlayContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Overlay Header */}
+            <div className={styles.overlayHeader}>
+              <div className={styles.overlayHeaderLeft}>
+                <svg
+                  className={styles.chatIcon}
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <h3>Ask the docs with GPT</h3>
+              </div>
+              <button
+                className={styles.closeButton}
+                onClick={() => {
+                  if (hasSearched || results.length > 0 || response) {
+                    setSavedContext({ results, response, input, hasSearched });
+                  }
+                  setIsOverlayOpen(false);
+                }}
+                aria-label="Close"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            {/* Overlay Input */}
+            <form onSubmit={handleSubmit} className={styles.overlayForm}>
+              <div className={styles.overlayInputWrapper}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={handleInputChange}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask a question about the documentation..."
+                  className={styles.overlayInput}
+                  disabled={isLoading}
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className={styles.sendButton}
+                  aria-label="Send"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            {/* Overlay Content */}
+            <div ref={resultsRef} className={styles.overlayContentArea}>
+              {isLoading ? (
+                <div className={styles.loadingState}>
+                  <div className={styles.thinkingChatbot}>
+                    <svg 
+                      className={styles.chatbotIcon}
+                      width="24" 
+                      height="24" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2"
+                    >
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <div className={styles.thinkingDots}>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              ) : results.length === 0 && !hasSearched ? (
+                <div className={styles.welcomeMessage}>
+                  <p>👋 Hi! I can help you find information in the Juicebox documentation.</p>
+                  <p>Try asking:</p>
+                  <ul>
+                    <li>"How do I deploy a project?"</li>
+                    <li>"What are hooks?"</li>
+                    <li>"How to configure a ruleset?"</li>
+                  </ul>
+                </div>
+              ) : results.length === 0 ? (
+                <div className={styles.noResults}>
+                  <div className={styles.gptResponse}>
+                    {response ? renderMarkdown(response) : <p>No results found. Try different keywords or check your spelling.</p>}
+                  </div>
+                </div>
+              ) : (
+                <>
+                  {response && (
+                    <div className={styles.gptResponse}>
+                      {renderMarkdown(response)}
+                    </div>
+                  )}
+                  <div className={styles.resultsList}>
+                    <div className={styles.resultsHeader}>Relevant documentation:</div>
+                    {results.map((result, index) => (
+                      <a
+                        key={index}
+                        href={result.url}
+                        className={styles.resultItem}
+                        onClick={() => {
+                          // Don't close overlay, just navigate
+                        }}
+                      >
+                        <div className={styles.resultTitle}>{result.title}</div>
+                        {result.description && (
+                          <div className={styles.resultDescription}>
+                            {result.description.substring(0, 120)}
+                            {result.description.length > 120 ? '...' : ''}
+                          </div>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           {isLoading ? (
             <div className={styles.loadingState}>
               <div className={styles.thinkingChatbot}>
@@ -319,11 +490,7 @@ function NavbarSearchBar() {
                     href={result.url}
                     className={styles.resultItem}
                     onClick={() => {
-                      setIsOpen(false);
-                      setInput('');
-                      setResults([]);
-                      setResponse('');
-                      setHasSearched(false);
+                      // Don't close overlay, just navigate
                     }}
                   >
                     <div className={styles.resultTitle}>{result.title}</div>
@@ -338,9 +505,11 @@ function NavbarSearchBar() {
               </div>
             </>
           )}
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
