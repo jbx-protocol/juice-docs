@@ -49,49 +49,105 @@ function NavbarSearchBar() {
       // Auto-detect if query is about building/integration (will auto-filter to v5)
       const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|api|contract|hook|example|tutorial|how to|getting started)\b/i.test(query);
       
-      // Call Claude-powered ask endpoint
-      const response = await fetch(`${API_BASE}/ask`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: query,
-          category: isBuildingQuery ? 'developer' : 'all',
-          version: 'all', // Server will auto-filter to v5 for building queries
-          maxDocs: 5, // Number of docs to include in context
-        }),
-      });
+      // Try Claude-powered ask endpoint first, fallback to regular search if it fails
+      let claudeSuccess = false;
+      
+      try {
+        const claudeResponse = await fetch(`${API_BASE}/ask`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            query: query,
+            category: isBuildingQuery ? 'developer' : 'all',
+            version: 'all',
+            maxDocs: 5,
+          }),
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ error: `HTTP ${response.status}` }));
-        const errorMessage = errorData.error || `Request failed with status ${response.status}`;
-        
-        // Check if it's an API key error
-        if (errorMessage.includes('ANTHROPIC_API_KEY')) {
-          throw new Error('Claude API key not configured. Please set ANTHROPIC_API_KEY in your environment variables.');
+        if (claudeResponse.ok) {
+          const data = await claudeResponse.json();
+          setResponse(data.response || 'No response from Claude.');
+          setResults((data.sources || []).map((source, index) => ({
+            title: source.title,
+            url: source.url,
+            description: source.description || `Documentation source ${index + 1}`,
+            path: source.path,
+          })));
+          claudeSuccess = true;
         }
-        
-        throw new Error(errorMessage);
+      } catch (claudeErr) {
+        // Claude failed, will fall back to regular search
+        console.warn('Claude API unavailable, using fallback search:', claudeErr);
       }
 
-      const data = await response.json();
-      
-      // Set Claude's response
-      setResponse(data.response || 'No response from Claude.');
-      
-      // Convert sources to results format for display
-      setResults((data.sources || []).map((source, index) => ({
-        title: source.title,
-        url: source.url,
-        description: source.description || `Documentation source ${index + 1}`,
-        path: source.path,
-      })));
+      // Fallback to regular search if Claude isn't available
+      if (!claudeSuccess) {
+        const searchResponse = await fetch(`${API_BASE}/search`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            query: query,
+            category: isBuildingQuery ? 'developer' : 'all',
+            version: 'all',
+            limit: 5,
+          }),
+        });
+
+        if (!searchResponse.ok) {
+          const errorData = await searchResponse.json().catch(() => ({ error: `HTTP ${searchResponse.status}` }));
+          throw new Error(errorData.error || `Search failed with status ${searchResponse.status}`);
+        }
+
+        const searchData = await searchResponse.json();
+        setResults(searchData.results || []);
+        
+        // Generate template-based conversational response
+        const conversationalResponse = generateConversationalResponse(searchData.results || [], query);
+        setResponse(conversationalResponse);
+      }
     } catch (error) {
-      console.error('Claude API error:', error);
+      console.error('Search error:', error);
       setResults([]);
-      setResponse(`I encountered an error: ${error.message}. Please try again or check that the Claude API key is configured.`);
+      setResponse(`I encountered an error: ${error.message}. Please try again.`);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // Generate conversational response when Claude isn't available
+  const generateConversationalResponse = (results, query) => {
+    if (!results || results.length === 0) {
+      return `I couldn't find specific documentation matching "${query}". Try rephrasing your question or using different keywords. You might also want to browse the documentation sections directly.`;
+    }
+
+    const queryLower = query.toLowerCase();
+    const isQuestion = query.trim().endsWith('?');
+    const isHowTo = /^(how|what|when|where|why|can|does|do|is|are)\b/i.test(query);
+    
+    let intro = '';
+    if (isQuestion || isHowTo) {
+      intro = `Based on your question about "${query}", `;
+    } else {
+      intro = `Here's what I found about "${query}": `;
+    }
+
+    if (results.length === 1) {
+      return `${intro}I found a relevant document that should help: **${results[0].title}**. ${results[0].description ? `It covers ${results[0].description.toLowerCase()}.` : ''} This should answer your question.`;
+    }
+
+    const topResult = results[0];
+    const otherCount = results.length - 1;
+    
+    let response = `${intro}I found ${results.length} relevant ${results.length === 1 ? 'document' : 'documents'}. `;
+    response += `The most relevant is **${topResult.title}**${topResult.description ? `, which covers ${topResult.description.toLowerCase()}` : ''}. `;
+    
+    if (otherCount > 0) {
+      response += `I also found ${otherCount} other ${otherCount === 1 ? 'document' : 'documents'} that might be helpful. `;
+    }
+    
+    response += `Check out the results below for more details.`;
+    
+    return response;
   };
 
   // Render markdown-like text with basic formatting
