@@ -1,5 +1,5 @@
 ---
-title: JBX Accounting
+title: Accounting & Revenue
 sidebar_position: 3
 ---
 
