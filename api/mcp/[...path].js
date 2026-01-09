@@ -444,13 +444,13 @@ Juicebox is a payment processor and capital formation engine for tokenized fundr
 Think of it as a programmable vending machine: projects can configure how tokens are issued when someone inserts coins, and set rules for how those coins can be distributed to preprogrammed addresses or reclaimed by the community.
 
 **Your Responsibilities:**
-- Answer questions accurately using ONLY the provided documentation
-- Be clear, practical, and actionable in your responses
-- Provide code examples when relevant
-- Cite specific documents when referencing information
-- If the documentation doesn't fully answer a question, clearly state what information is available and what might be missing
-- Prioritize practical, implementation-focused guidance for developers and integrators
+- Keep responses CONCISE and SIMPLE - aim for 2-4 sentences maximum for the initial answer
+- Provide a brief, high-level answer first, then let the user ask follow-up questions for details
+- Don't overwhelm with step-by-step instructions unless explicitly asked
+- Be clear and practical, but brief
+- If the user wants more detail, they'll ask - don't provide everything upfront
 - Use conversational, friendly language while maintaining technical accuracy
+- Only provide code examples if the user specifically asks for them
 
 **Documentation Structure:**
 - **Learn** - Step-by-step guidance on how the protocol works
@@ -477,10 +477,17 @@ Think of it as a programmable vending machine: projects can configure how tokens
 Relevant Documentation:
 ${contextSections}
 
-Please answer the user's question based on the provided documentation. If the documentation doesn't fully answer the question, let the user know what information is available and what might be missing.
+Please answer the user's question based on the provided documentation.
 
-**IMPORTANT**: 
-- NEVER use the term "funding cycles" - always use "rulesets" or "ruleset cycles" for v4 and v5
+**CRITICAL: Keep your response BRIEF and SIMPLE**
+- Aim for 2-4 sentences maximum
+- Give a high-level answer first - don't provide step-by-step instructions unless asked
+- Let the user ask follow-up questions for more details
+- Think of yourself as a helpful guide who gives quick answers, not a comprehensive tutorial
+- If they want more detail, they'll ask - keep it short and conversational
+
+**TERMINOLOGY**: 
+- NEVER use "funding cycles" - always use "rulesets" or "ruleset cycles" for v4 and v5
 - If you see "funding cycles" in the documentation, translate it to "rulesets" in your response
 - Focus on v4 and v5 terminology unless the user explicitly asks about v1-v3`;
 
@@ -503,7 +510,7 @@ Please answer the user's question based on the provided documentation. If the do
       try {
         message = await anthropic.messages.create({
           model: modelName,
-          max_tokens: 2048,
+          max_tokens: 512, // Keep responses concise
           system: systemPrompt,
           messages: [
             {

@@ -235,7 +235,7 @@
 
 /* GPT Response */
 .gptResponse {
-  padding: 24px 28px;
+  padding: 32px 36px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-color-emphasis-50);
   max-height: none;
@@ -247,10 +247,10 @@
 }
 
 .gptResponse p {
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
   color: var(--ifm-color-content);
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 .gptResponse p:last-child {
@@ -263,10 +263,10 @@
 }
 
 .responseLine {
-  margin: 12px 0;
+  margin: 16px 0;
   color: var(--ifm-color-content);
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 .responseLine:first-child {
@@ -353,7 +353,7 @@
 
 /* Results List */
 .resultsList {
-  padding: 16px 0;
+  padding: 24px 0;
 }
 
 .resultsHeader {
@@ -387,15 +387,15 @@
 
 .resultTitle {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 19px;
   color: var(--ifm-heading-color);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .resultDescription {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ifm-color-content-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Overlay Backdrop */
@@ -411,7 +411,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
   animation: fadeIn 0.2s ease;
 }
 
@@ -430,8 +430,8 @@
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 1200px;
-  max-height: 90vh;
+  max-width: 1400px;
+  max-height: 92vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -459,7 +459,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 32px;
+  padding: 28px 40px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-background-surface-color);
 }
@@ -472,7 +472,7 @@
 
 .overlayHeaderLeft h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--ifm-heading-color);
 }
@@ -497,7 +497,7 @@
 
 /* Overlay Form */
 .overlayForm {
-  padding: 24px 32px;
+  padding: 28px 40px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-background-surface-color);
 }
@@ -510,8 +510,8 @@
 
 .overlayInput {
   flex: 1;
-  padding: 16px 20px;
-  font-size: 18px;
+  padding: 18px 24px;
+  font-size: 20px;
   border: 2px solid var(--ifm-color-emphasis-300);
   border-radius: 12px;
   background: var(--ifm-background-color);
@@ -531,8 +531,8 @@
 }
 
 .sendButton {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 12px;
   background: var(--ifm-color-primary);
   color: white;
@@ -559,8 +559,8 @@
 .overlayContentArea {
   flex: 1;
   overflow-y: auto;
-  padding: 32px;
-  min-height: 300px;
+  padding: 40px;
+  min-height: 400px;
 }
 
 .overlayContentArea::-webkit-scrollbar {
@@ -607,8 +607,8 @@
   }
 
   .overlayContent {
-    max-width: 95vw;
-    max-height: 90vh;
+    max-width: 98vw;
+    max-height: 92vh;
   }
 }
 

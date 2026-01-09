@@ -132,37 +132,12 @@ function NavbarSearchBar() {
   // Generate conversational response when Claude isn't available
   const generateConversationalResponse = (results, query) => {
     if (!results || results.length === 0) {
-      return `I couldn't find specific documentation matching "${query}". Try rephrasing your question or using different keywords. You might also want to browse the documentation sections directly.`;
+      return `I couldn't find documentation matching "${query}". Try rephrasing or browse the docs directly.`;
     }
 
-    const queryLower = query.toLowerCase();
-    const isQuestion = query.trim().endsWith('?');
-    const isHowTo = /^(how|what|when|where|why|can|does|do|is|are)\b/i.test(query);
-    
-    let intro = '';
-    if (isQuestion || isHowTo) {
-      intro = `Based on your question about "${query}", `;
-    } else {
-      intro = `Here's what I found about "${query}": `;
-    }
-
-    if (results.length === 1) {
-      return `${intro}I found a relevant document that should help: **${results[0].title}**. ${results[0].description ? `It covers ${results[0].description.toLowerCase()}.` : ''} This should answer your question.`;
-    }
-
+    // Keep it simple - just point to the most relevant doc
     const topResult = results[0];
-    const otherCount = results.length - 1;
-    
-    let response = `${intro}I found ${results.length} relevant ${results.length === 1 ? 'document' : 'documents'}. `;
-    response += `The most relevant is **${topResult.title}**${topResult.description ? `, which covers ${topResult.description.toLowerCase()}` : ''}. `;
-    
-    if (otherCount > 0) {
-      response += `I also found ${otherCount} other ${otherCount === 1 ? 'document' : 'documents'} that might be helpful. `;
-    }
-    
-    response += `Check out the results below for more details.`;
-    
-    return response;
+    return `I found **${topResult.title}** which should help. Check it out below, or ask me a follow-up question for more details.`;
   };
 
   // Render markdown-like text with basic formatting
