@@ -295,7 +295,7 @@ function NavbarSearchBar() {
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               onFocus={handleInputFocus}
-              placeholder="Ask the docs with GPT"
+              placeholder="Ask"
               className={styles.searchInput}
               disabled={isLoading}
             />
