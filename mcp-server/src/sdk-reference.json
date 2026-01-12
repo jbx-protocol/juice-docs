@@ -250,19 +250,27 @@
         },
         {
           "name": "useGetRelayrTxQuote",
-          "description": "Get a quote for gasless/relayed transactions via Relayr",
+          "description": "Get a quote for multi-chain transaction bundle via Relayr. User signs ERC-2771 meta-transactions for each chain.",
           "category": "relayr",
-          "usage": "Estimate costs for sponsored multi-chain transactions",
-          "example": "const { getRelayrTxQuote, data, reset } = useGetRelayrTxQuote();",
-          "relatedDocs": []
+          "usage": "Build transactions for multiple chains, get gas quotes, and have user sign each. Returns bundle_uuid and payment_info for each chain option.",
+          "example": "const { getRelayrTxQuote, data: quote, isPending } = useGetRelayrTxQuote();\n\nconst transactions = [{ chainId: 1, data: { from, to, value: 0n, gas: 1000000n, data: calldata } }];\nconst result = await getRelayrTxQuote(transactions);\n// result.payment_info contains gas cost options for each chain",
+          "relatedDocs": ["dev/v5/build/relayr.md"]
         },
         {
           "name": "useSendRelayrTx",
-          "description": "Send a gasless transaction via Relayr",
+          "description": "Submit payment transaction to execute the Relayr bundle on chosen chain",
           "category": "relayr",
-          "usage": "Execute sponsored cross-chain transactions with a single signature",
-          "example": "const { sendTransaction } = useSendRelayrTx();",
-          "relatedDocs": []
+          "usage": "After getting a quote, user selects payment chain and submits. Relayr relayers then execute on all other chains.",
+          "example": "const { sendRelayrTx, isPending, isSuccess } = useSendRelayrTx();\n\nconst payment = quote.payment_info.find(p => p.chain === selectedChain);\nawait sendRelayrTx(payment);\n// Automatically switches chain if needed",
+          "relatedDocs": ["dev/v5/build/relayr.md"]
+        },
+        {
+          "name": "useGetRelayrTxBundle",
+          "description": "Poll for Relayr bundle completion status across all chains",
+          "category": "relayr",
+          "usage": "After sending payment, poll to track execution status on each chain. Returns transaction hashes when complete.",
+          "example": "const { startPolling, isComplete, response, stopPolling } = useGetRelayrTxBundle();\n\nstartPolling(quote.bundle_uuid);\n// response.transactions contains status for each chain: 'Pending' | 'Success' | 'Failed'",
+          "relatedDocs": ["dev/v5/build/relayr.md"]
         }
       ],
       "generatedHooks": {

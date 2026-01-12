@@ -153,6 +153,36 @@
       "relatedDocs": ["dev/v5/learn/glossary/suckers.md", "dev/v5/learn/glossary/surplus.md"]
     },
     {
+      "id": "omnichain-pay",
+      "name": "Pay on Any Chain",
+      "description": "Allow users to pay an omnichain project on their preferred chain",
+      "category": "omnichain",
+      "tags": ["omnichain", "pay", "cross-chain", "multi-chain"],
+      "code": "import { JBProjectProvider, useSuckers, useWriteJbMultiTerminalPay, useJBContractContext } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { useState } from 'react';\nimport { parseEther } from 'viem';\nimport { useAccount, useSwitchChain } from 'wagmi';\nimport { mainnet, optimism, base, arbitrum } from 'viem/chains';\n\nconst CHAINS = [\n  { id: mainnet.id, name: 'Ethereum', icon: '⟠' },\n  { id: optimism.id, name: 'Optimism', icon: '🔴' },\n  { id: base.id, name: 'Base', icon: '🔵' },\n  { id: arbitrum.id, name: 'Arbitrum', icon: '🔷' },\n];\n\nfunction OmnichainPayWidget({ projectId }) {\n  const [chainId, setChainId] = useState(mainnet.id);\n\n  return (\n    <JBProjectProvider projectId={projectId} chainId={chainId}>\n      <OmnichainPayForm selectedChainId={chainId} onChainChange={setChainId} projectId={projectId} />\n    </JBProjectProvider>\n  );\n}\n\nfunction OmnichainPayForm({ selectedChainId, onChainChange, projectId }) {\n  const { address } = useAccount();\n  const { switchChain } = useSwitchChain();\n  const { data: suckers } = useSuckers();\n  const { contracts } = useJBContractContext();\n  const [amount, setAmount] = useState('');\n  const { writeContract, isPending } = useWriteJbMultiTerminalPay();\n\n  const availableChains = CHAINS.filter(c =>\n    c.id === selectedChainId || suckers?.some(s => s.peerChainId === c.id)\n  );\n\n  async function handlePay() {\n    if (!address || !contracts.primaryNativeTerminal.data) return;\n    await switchChain({ chainId: selectedChainId });\n    writeContract({\n      address: contracts.primaryNativeTerminal.data,\n      args: [projectId, NATIVE_TOKEN, parseEther(amount), address, 0n, '', '0x'],\n      value: parseEther(amount),\n    });\n  }\n\n  return (\n    <div>\n      <div className=\"chain-selector\">\n        {availableChains.map(chain => (\n          <button key={chain.id} onClick={() => onChainChange(chain.id)}>\n            {chain.icon} {chain.name}\n          </button>\n        ))}\n      </div>\n      <input type=\"number\" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder=\"0.0 ETH\" />\n      <button onClick={handlePay} disabled={isPending}>\n        {isPending ? 'Processing...' : `Pay on ${CHAINS.find(c => c.id === selectedChainId)?.name}`}\n      </button>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "viem", "wagmi"],
+      "relatedDocs": ["dev/v5/build/sdk.md#omnichain-payments", "dev/v5/learn/glossary/suckers.md"]
+    },
+    {
+      "id": "relayr-deploy",
+      "name": "Cross-Chain Deploy with Relayr",
+      "description": "Deploy or update a project across multiple chains using Relayr",
+      "category": "omnichain",
+      "tags": ["relayr", "deploy", "cross-chain", "omnichain", "multi-chain"],
+      "code": "import { useGetRelayrTxQuote, useSendRelayrTx, useGetRelayrTxBundle } from 'juice-sdk-react';\nimport { JB_CHAINS } from 'juice-sdk-core';\nimport { useState, useEffect } from 'react';\nimport { useAccount } from 'wagmi';\nimport { encodeFunctionData } from 'viem';\n\nfunction OmnichainDeployer() {\n  const { address } = useAccount();\n  const [selectedChains, setSelectedChains] = useState([1, 10]); // Ethereum, Optimism\n  const [paymentChain, setPaymentChain] = useState(null);\n\n  const { getRelayrTxQuote, data: quote, isPending: quotePending } = useGetRelayrTxQuote();\n  const { sendRelayrTx, isPending: sendPending } = useSendRelayrTx();\n  const { startPolling, isComplete, response } = useGetRelayrTxBundle();\n\n  // Step 1: Get quote - user signs for each chain\n  async function handleGetQuote() {\n    const transactions = selectedChains.map(chainId => ({\n      chainId,\n      data: {\n        from: address,\n        to: JB_CHAINS[chainId].omnichainDeployer,\n        value: 0n,\n        gas: 1_000_000n * BigInt(selectedChains.length),\n        data: encodeFunctionData({ abi: deployerAbi, functionName: 'launchProjectFor', args: [...] }),\n      },\n    }));\n    await getRelayrTxQuote(transactions);\n  }\n\n  // Step 2: Send payment on chosen chain\n  async function handleSend() {\n    const payment = quote.payment_info.find(p => p.chain === paymentChain);\n    await sendRelayrTx(payment);\n    startPolling(quote.bundle_uuid);\n  }\n\n  return (\n    <div>\n      {!quote && (\n        <button onClick={handleGetQuote} disabled={quotePending}>\n          {quotePending ? 'Signing...' : 'Sign for All Chains'}\n        </button>\n      )}\n      {quote && !isComplete && (\n        <div>\n          <p>Select payment chain:</p>\n          {quote.payment_info.map(p => (\n            <button key={p.chain} onClick={() => { setPaymentChain(p.chain); handleSend(); }}>\n              Pay ~{(Number(p.amount) / 1e18).toFixed(4)} ETH on Chain {p.chain}\n            </button>\n          ))}\n        </div>\n      )}\n      {isComplete && <p>Deployed on {selectedChains.length} chains!</p>}\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "viem", "wagmi"],
+      "relatedDocs": ["dev/v5/build/relayr.md", "dev/v5/learn/glossary/suckers.md"]
+    },
+    {
+      "id": "omnichain-cash-out",
+      "name": "Cross-Chain Cash Out Quote",
+      "description": "Show cash out quote considering surplus from all chains",
+      "category": "omnichain",
+      "tags": ["omnichain", "cash-out", "redeem", "cross-chain"],
+      "code": "import { useSuckersCashOutQuote, useSuckersUserTokenBalance, useSuckersNativeTokenSurplus } from 'juice-sdk-react';\nimport { formatEther } from 'viem';\nimport { useAccount } from 'wagmi';\n\nfunction OmnichainCashOutQuote() {\n  const { address } = useAccount();\n  const { data: userBalance } = useSuckersUserTokenBalance(address);\n  const { data: totalSurplus } = useSuckersNativeTokenSurplus();\n  const { data: cashOutQuote } = useSuckersCashOutQuote(userBalance || 0n);\n\n  if (!address) return <p>Connect wallet to see your balance</p>;\n\n  return (\n    <div>\n      <h3>Your Holdings (All Chains)</h3>\n      <p>Balance: {formatEther(userBalance || 0n)} tokens</p>\n      <p>Total Project Surplus: {formatEther(totalSurplus || 0n)} ETH</p>\n      <div className=\"quote\">\n        <p>If you cash out all tokens:</p>\n        <p><strong>~{formatEther(cashOutQuote || 0n)} ETH</strong></p>\n        <small>Calculated across all connected chains</small>\n      </div>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "viem", "wagmi"],
+      "relatedDocs": ["dev/v5/build/sdk.md#omnichain-payments", "dev/v5/learn/glossary/cash-out.md"]
+    },
+    {
       "id": "form-validation",
       "name": "Form with Formik + Zod",
       "description": "Validated form pattern using Formik and Zod (from revnet-app)",

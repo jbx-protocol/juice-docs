@@ -12,7 +12,9 @@ The Juicebox SDK provides React hooks and utilities for building frontend applic
 - [Cash Out Modal](#cash-out-modal) - Let users redeem tokens
 - [Dashboard Data](#dashboard-data) - Display project stats
 - [User Holdings](#user-holdings-component) - Show user balances
+- [Omnichain Payments](#omnichain-payments) - Pay projects on any chain
 - [Bendystraw (Data API)](/docs/dev/v5/build/bendystraw.md) - Query indexed data via GraphQL
+- [Relayr (Cross-Chain Deploy)](/docs/dev/v5/build/relayr.md) - Deploy projects across chains
 :::
 
 ## Packages
@@ -700,6 +702,370 @@ export function UserHoldings() {
           %
         </value>
       </div>
+    </div>
+  );
+}
+```
+
+---
+
+## Omnichain Payments
+
+Juicebox V5 supports **omnichain projects** - projects deployed across multiple chains that share the same token and treasury. Users can pay the project on any chain and receive tokens, which can be bridged between chains via **suckers**.
+
+### How Omnichain Works
+
+1. **Suckers** connect project instances across chains (Ethereum, Optimism, Arbitrum, Base)
+2. **Tokens** can be bridged between any connected chains
+3. **Treasury** is aggregated across all chains for redemption calculations
+4. **Users** can pay on any chain and cash out from any chain
+
+### Checking if a Project is Omnichain
+
+```tsx
+import { useSuckers } from 'juice-sdk-react';
+
+function OmnichainBadge() {
+  const { data: suckers, isLoading } = useSuckers();
+
+  if (isLoading) return null;
+
+  const isOmnichain = suckers && suckers.length > 0;
+
+  if (!isOmnichain) return null;
+
+  return (
+    <span className="badge">
+      🌐 Available on {suckers.length + 1} chains
+    </span>
+  );
+}
+```
+
+### Paying on Any Chain
+
+Users can pay your project on whichever chain they prefer. The `JBProjectProvider` can be configured for any chain:
+
+```tsx
+import { JBProjectProvider } from 'juice-sdk-react';
+import { useWriteJbMultiTerminalPay } from 'juice-sdk-react';
+import { optimism, base, arbitrum, mainnet } from 'viem/chains';
+
+// Chain selector for omnichain projects
+function OmnichainPayPage({ projectId }: { projectId: bigint }) {
+  const [selectedChain, setSelectedChain] = useState(mainnet);
+
+  return (
+    <div>
+      {/* Chain selector */}
+      <ChainSelector
+        projectId={projectId}
+        selectedChain={selectedChain}
+        onChainSelect={setSelectedChain}
+      />
+
+      {/* Project provider for selected chain */}
+      <JBProjectProvider
+        projectId={projectId}
+        chainId={selectedChain.id}
+      >
+        <PayForm />
+      </JBProjectProvider>
+    </div>
+  );
+}
+
+// Chain selector showing available chains
+function ChainSelector({ projectId, selectedChain, onChainSelect }) {
+  const chainOptions = [
+    { chain: mainnet, name: 'Ethereum', icon: '⟠' },
+    { chain: optimism, name: 'Optimism', icon: '🔴' },
+    { chain: base, name: 'Base', icon: '🔵' },
+    { chain: arbitrum, name: 'Arbitrum', icon: '🔷' },
+  ];
+
+  return (
+    <div className="chain-selector">
+      <p>Pay on:</p>
+      <div className="chain-options">
+        {chainOptions.map(({ chain, name, icon }) => (
+          <button
+            key={chain.id}
+            className={selectedChain.id === chain.id ? 'selected' : ''}
+            onClick={() => onChainSelect(chain)}
+          >
+            {icon} {name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+```
+
+### Complete Omnichain Pay Component
+
+This component lets users pay on their preferred chain with full token quote support:
+
+```tsx
+import {
+  JBProjectProvider,
+  useJBContractContext,
+  useJBProjectId,
+  useJBChainId,
+  useSuckers,
+  useWriteJbMultiTerminalPay,
+} from 'juice-sdk-react';
+import { getTokenAToBQuote, NATIVE_TOKEN } from 'juice-sdk-core';
+import { useState, useMemo } from 'react';
+import { parseEther, formatEther, zeroAddress } from 'viem';
+import { useAccount, useSwitchChain } from 'wagmi';
+import { mainnet, optimism, base, arbitrum } from 'viem/chains';
+
+const SUPPORTED_CHAINS = [
+  { id: mainnet.id, name: 'Ethereum', icon: '⟠' },
+  { id: optimism.id, name: 'Optimism', icon: '🔴' },
+  { id: base.id, name: 'Base', icon: '🔵' },
+  { id: arbitrum.id, name: 'Arbitrum', icon: '🔷' },
+];
+
+function OmnichainPayWidget({ projectId }: { projectId: bigint }) {
+  const [chainId, setChainId] = useState(mainnet.id);
+
+  return (
+    <JBProjectProvider projectId={projectId} chainId={chainId}>
+      <OmnichainPayForm
+        selectedChainId={chainId}
+        onChainChange={setChainId}
+      />
+    </JBProjectProvider>
+  );
+}
+
+function OmnichainPayForm({ selectedChainId, onChainChange }) {
+  const { address } = useAccount();
+  const { switchChain } = useSwitchChain();
+  const { data: suckers } = useSuckers();
+  const projectId = useJBProjectId();
+  const currentChainId = useJBChainId();
+  const { contracts } = useJBContractContext();
+
+  const [amount, setAmount] = useState('');
+  const [memo, setMemo] = useState('');
+
+  // Get token quote
+  const payAmountWei = amount ? parseEther(amount) : 0n;
+  const tokenQuote = useMemo(() => {
+    if (!contracts.primaryNativeTerminal.data || payAmountWei === 0n) return 0n;
+    // Simplified - in production use ruleset weight
+    return payAmountWei; // 1:1 default
+  }, [payAmountWei, contracts]);
+
+  // Get available chains from suckers
+  const availableChains = useMemo(() => {
+    const chains = [{ id: currentChainId, ...SUPPORTED_CHAINS.find(c => c.id === currentChainId) }];
+    suckers?.forEach(s => {
+      const chain = SUPPORTED_CHAINS.find(c => c.id === s.peerChainId);
+      if (chain) chains.push(chain);
+    });
+    return chains;
+  }, [suckers, currentChainId]);
+
+  const { writeContract, isPending, isSuccess } = useWriteJbMultiTerminalPay();
+
+  async function handlePay() {
+    if (!address || !contracts.primaryNativeTerminal.data) return;
+
+    // Switch chain if needed
+    if (currentChainId !== selectedChainId) {
+      await switchChain({ chainId: selectedChainId });
+    }
+
+    writeContract({
+      address: contracts.primaryNativeTerminal.data,
+      args: [
+        projectId,          // projectId
+        NATIVE_TOKEN,       // token (ETH)
+        payAmountWei,       // amount
+        address,            // beneficiary
+        0n,                 // minReturnedTokens
+        memo,               // memo
+        '0x',               // metadata
+      ],
+      value: payAmountWei,
+    });
+  }
+
+  return (
+    <div className="omnichain-pay">
+      {/* Chain selector */}
+      <div className="chain-selector">
+        <label>Pay on chain:</label>
+        <div className="chain-buttons">
+          {availableChains.map(chain => (
+            <button
+              key={chain.id}
+              className={selectedChainId === chain.id ? 'active' : ''}
+              onClick={() => onChainChange(chain.id)}
+            >
+              {chain.icon} {chain.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Amount input */}
+      <div className="amount-input">
+        <input
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          placeholder="0.0"
+          step="0.01"
+        />
+        <span>ETH</span>
+      </div>
+
+      {/* Token quote */}
+      {tokenQuote > 0n && (
+        <p className="token-quote">
+          You'll receive: {formatEther(tokenQuote)} tokens
+        </p>
+      )}
+
+      {/* Memo */}
+      <input
+        type="text"
+        value={memo}
+        onChange={(e) => setMemo(e.target.value)}
+        placeholder="Add a memo (optional)"
+      />
+
+      {/* Pay button */}
+      <button
+        onClick={handlePay}
+        disabled={!amount || isPending}
+      >
+        {isPending ? 'Processing...' : `Pay on ${SUPPORTED_CHAINS.find(c => c.id === selectedChainId)?.name}`}
+      </button>
+
+      {isSuccess && <p className="success">Payment successful!</p>}
+    </div>
+  );
+}
+```
+
+### Aggregated Cross-Chain Dashboard
+
+Display treasury and user data aggregated across all chains:
+
+```tsx
+import {
+  useSuckers,
+  useSuckersUserTokenBalance,
+  useSuckersNativeTokenSurplus,
+  useSuckersCashOutQuote,
+  useNativeTokenSurplus,
+} from 'juice-sdk-react';
+import { formatEther } from 'viem';
+import { useAccount } from 'wagmi';
+
+function OmnichainDashboard() {
+  const { address } = useAccount();
+  const { data: suckers, isLoading: suckersLoading } = useSuckers();
+
+  // Single-chain data
+  const { data: localSurplus } = useNativeTokenSurplus();
+
+  // Cross-chain aggregated data
+  const { data: totalSurplus } = useSuckersNativeTokenSurplus();
+  const { data: userBalance } = useSuckersUserTokenBalance(address);
+  const { data: cashOutQuote } = useSuckersCashOutQuote(userBalance || 0n);
+
+  const isOmnichain = suckers && suckers.length > 0;
+
+  if (suckersLoading) return <div>Loading...</div>;
+
+  return (
+    <div className="omnichain-dashboard">
+      {/* Omnichain indicator */}
+      {isOmnichain && (
+        <div className="omnichain-badge">
+          🌐 Omnichain Project
+          <span className="chain-count">
+            Active on {suckers.length + 1} chains
+          </span>
+        </div>
+      )}
+
+      {/* Treasury */}
+      <div className="stat-card">
+        <label>Total Treasury</label>
+        <value>
+          {formatEther(isOmnichain ? (totalSurplus || 0n) : (localSurplus || 0n))} ETH
+        </value>
+        {isOmnichain && (
+          <small>Aggregated across all chains</small>
+        )}
+      </div>
+
+      {/* Connected chains */}
+      {isOmnichain && (
+        <div className="connected-chains">
+          <label>Connected Chains</label>
+          <ul>
+            {suckers.map((sucker) => (
+              <li key={sucker.peerChainId}>
+                Chain {sucker.peerChainId} → Project #{sucker.projectId.toString()}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* User holdings */}
+      {address && (
+        <div className="stat-card">
+          <label>Your Balance (All Chains)</label>
+          <value>{formatEther(userBalance || 0n)} tokens</value>
+          {cashOutQuote && cashOutQuote > 0n && (
+            <small>
+              Worth {formatEther(cashOutQuote)} ETH if redeemed
+            </small>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+### Cross-Chain Token Bridging
+
+Tokens earned on any chain can be bridged to other chains via suckers. See [Suckers documentation](/docs/dev/v5/learn/glossary/suckers.md) for details on how token bridging works.
+
+```tsx
+import { useSuckers } from 'juice-sdk-react';
+
+function BridgeOptions() {
+  const { data: suckers } = useSuckers();
+
+  if (!suckers || suckers.length === 0) {
+    return <p>This project is not omnichain</p>;
+  }
+
+  return (
+    <div className="bridge-options">
+      <h3>Bridge Tokens To:</h3>
+      <ul>
+        {suckers.map((sucker) => (
+          <li key={sucker.peerChainId}>
+            <button onClick={() => handleBridge(sucker.peerChainId)}>
+              Bridge to Chain {sucker.peerChainId}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
