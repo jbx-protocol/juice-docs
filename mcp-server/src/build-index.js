@@ -3,6 +3,11 @@
 /**
  * Standalone script to build the documentation index
  * Can be run independently or as part of the build process
+ *
+ * Enhanced to extract:
+ * - Code examples with language tags
+ * - Contract addresses
+ * - SDK usage patterns
  */
 
 import fs from "fs/promises";
@@ -16,10 +21,69 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, "../..");
 const DOCS_DIR = path.join(PROJECT_ROOT, "docs");
 const INDEX_FILE = path.join(__dirname, "docs-index.json");
+const CODE_EXAMPLES_FILE = path.join(__dirname, "code-examples-index.json");
+
+/**
+ * Extract code blocks from markdown content
+ * Returns array of { language, code, context } objects
+ */
+function extractCodeBlocks(content, docTitle, docPath) {
+  const codeBlocks = [];
+  // Match fenced code blocks with optional language
+  const codeRegex = /```(\w+)?\n([\s\S]*?)```/g;
+  let match;
+
+  while ((match = codeRegex.exec(content)) !== null) {
+    const language = match[1] || "text";
+    const code = match[2].trim();
+
+    // Skip very short code blocks (likely not useful examples)
+    if (code.length < 20) continue;
+
+    // Get surrounding context (heading before the code block)
+    const beforeCode = content.substring(0, match.index);
+    const headingMatch = beforeCode.match(/#{1,6}\s+(.+)$/m);
+    const context = headingMatch ? headingMatch[1].trim() : docTitle;
+
+    // Categorize the code example
+    let category = "general";
+    if (language === "solidity" || code.includes("contract ") || code.includes("function ")) {
+      category = "contract";
+    } else if (language === "typescript" || language === "javascript" || language === "ts" || language === "js") {
+      if (code.includes("useWrite") || code.includes("useRead") || code.includes("useJB")) {
+        category = "sdk-react";
+      } else if (code.includes("wagmi") || code.includes("viem")) {
+        category = "web3";
+      } else if (code.includes("fetch") || code.includes("axios") || code.includes("graphql")) {
+        category = "api";
+      } else {
+        category = "javascript";
+      }
+    } else if (language === "json") {
+      category = "config";
+    } else if (language === "bash" || language === "shell") {
+      category = "cli";
+    } else if (language === "graphql") {
+      category = "graphql";
+    }
+
+    codeBlocks.push({
+      language,
+      code,
+      context,
+      category,
+      docPath,
+      docTitle,
+    });
+  }
+
+  return codeBlocks;
+}
 
 async function buildIndex() {
   console.log("Building documentation index...");
   const docIndex = [];
+  const codeExamples = [];
   
   async function processDirectory(dir, basePath = "") {
     const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -124,7 +188,12 @@ async function buildIndex() {
           else if (relativePath.startsWith("dev/v5/api/revnet/")) integratorRelevance = 6; // Revnet API
           else if (relativePath.startsWith("dev/v5/api/")) integratorRelevance = 3; // Other API lower priority
           else if (relativePath.startsWith("dev/v5/")) integratorRelevance = 5;
-          
+
+          // Extract code examples from the document
+          const docTitle = frontmatter.title || headings[0] || path.basename(entry.name, ".md");
+          const extractedCode = extractCodeBlocks(body, docTitle, relativePath);
+          codeExamples.push(...extractedCode);
+
           docIndex.push({
             path: relativePath,
             fullPath: fullPath,
@@ -148,26 +217,41 @@ async function buildIndex() {
   }
   
   await processDirectory(DOCS_DIR);
-  
-  // Save index
+
+  // Save documentation index
   await fs.writeFile(INDEX_FILE, JSON.stringify(docIndex, null, 2));
   console.log(`✓ Indexed ${docIndex.length} documents`);
   console.log(`✓ Index saved to ${INDEX_FILE}`);
-  
+
+  // Save code examples index
+  await fs.writeFile(CODE_EXAMPLES_FILE, JSON.stringify(codeExamples, null, 2));
+  console.log(`✓ Extracted ${codeExamples.length} code examples`);
+  console.log(`✓ Code examples saved to ${CODE_EXAMPLES_FILE}`);
+
   // Print summary
   const byCategory = {};
   const byVersion = {};
-  
+  const codeByCategory = {};
+  const codeByLanguage = {};
+
   for (const doc of docIndex) {
     byCategory[doc.category] = (byCategory[doc.category] || 0) + 1;
     if (doc.version) {
       byVersion[doc.version] = (byVersion[doc.version] || 0) + 1;
     }
   }
-  
-  console.log("\nSummary:");
+
+  for (const example of codeExamples) {
+    codeByCategory[example.category] = (codeByCategory[example.category] || 0) + 1;
+    codeByLanguage[example.language] = (codeByLanguage[example.language] || 0) + 1;
+  }
+
+  console.log("\nDocumentation Summary:");
   console.log("By category:", byCategory);
   console.log("By version:", byVersion);
+  console.log("\nCode Examples Summary:");
+  console.log("By category:", codeByCategory);
+  console.log("By language:", codeByLanguage);
 }
 
 buildIndex().catch(console.error);

@@ -161,15 +161,26 @@
   min-height: 200px;
 }
 
-.assistantMessage .loadingState {
-  padding: 20px 0;
+/* Loading state in messages should align left */
+.messagesContainer .loadingState {
+  justify-content: flex-start;
+  padding: 0;
   min-height: auto;
 }
 
+.assistantMessage .loadingState {
+  padding: 0;
+  min-height: auto;
+  justify-content: flex-start;
+  width: 100%;
+}
+
 .assistantMessage .thinkingChatbot {
-  background: transparent;
-  border: none;
-  padding: 12px 0;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  padding: 16px 24px;
+  display: inline-flex;
 }
 
 /* Thinking Chatbot Animation */

@@ -21,8 +21,16 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, "../..");
 const DOCS_DIR = path.join(PROJECT_ROOT, "docs");
 const INDEX_FILE = path.join(__dirname, "docs-index.json");
+const CODE_EXAMPLES_FILE = path.join(__dirname, "code-examples-index.json");
+const SDK_REFERENCE_FILE = path.join(__dirname, "sdk-reference.json");
+const CONTRACT_ADDRESSES_FILE = path.join(__dirname, "contract-addresses.json");
+const INTEGRATION_PATTERNS_FILE = path.join(__dirname, "integration-patterns.json");
 
 let docIndex = [];
+let codeExamples = [];
+let sdkReference = null;
+let contractAddresses = null;
+let integrationPatterns = null;
 let fuse = null;
 
 async function loadIndex() {
@@ -35,6 +43,43 @@ async function loadIndex() {
     console.error("Index not found, building new index...");
     await buildIndex();
     initializeSearch();
+  }
+
+  // Load code examples
+  try {
+    const codeData = await fs.readFile(CODE_EXAMPLES_FILE, "utf-8");
+    codeExamples = JSON.parse(codeData);
+    console.log(`Loaded ${codeExamples.length} code examples`);
+  } catch (error) {
+    console.log("Code examples index not found");
+    codeExamples = [];
+  }
+
+  // Load SDK reference
+  try {
+    const sdkData = await fs.readFile(SDK_REFERENCE_FILE, "utf-8");
+    sdkReference = JSON.parse(sdkData);
+    console.log("Loaded SDK reference");
+  } catch (error) {
+    console.log("SDK reference not found");
+  }
+
+  // Load contract addresses
+  try {
+    const addressData = await fs.readFile(CONTRACT_ADDRESSES_FILE, "utf-8");
+    contractAddresses = JSON.parse(addressData);
+    console.log("Loaded contract addresses");
+  } catch (error) {
+    console.log("Contract addresses not found");
+  }
+
+  // Load integration patterns
+  try {
+    const patternsData = await fs.readFile(INTEGRATION_PATTERNS_FILE, "utf-8");
+    integrationPatterns = JSON.parse(patternsData);
+    console.log(`Loaded ${integrationPatterns.patterns.length} integration patterns`);
+  } catch (error) {
+    console.log("Integration patterns not found");
   }
 }
 
@@ -196,15 +241,20 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
     name: "Juicebox Docs MCP Server",
-    version: "1.0.0",
+    version: "2.0.0",
     status: "running",
     totalDocs: docIndex.length,
+    totalCodeExamples: codeExamples.length,
     endpoints: [
       "GET /",
       "POST /mcp/search",
       "POST /mcp/get-doc",
       "GET /mcp/list-docs",
       "GET /mcp/structure",
+      "POST /mcp/search-code",
+      "GET /mcp/contracts",
+      "GET /mcp/sdk",
+      "GET /mcp/patterns",
     ],
   });
 });
@@ -212,23 +262,24 @@ app.get("/", (req, res) => {
 // Search endpoint
 app.post("/mcp/search", async (req, res) => {
   try {
-    const { query, category = "all", version = "all", limit = 10 } = req.body;
-    
+    const { query, category = "all", version = "v5", limit = 10 } = req.body;
+
     if (!query) {
       return res.status(400).json({ error: "query parameter is required" });
     }
-    
+
     // Detect query intent
     const queryLower = query.toLowerCase();
-    const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) || 
+    const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) ||
                        /\b(ICT|CT|JB|REV)[A-Z]/.test(query); // Contract/interface names
-    const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
-    const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
-    
-    // Auto-filter to v5 for building/API queries if version not specified
+
+    // Check if explicitly requesting old versions
+    const wantsOldVersion = /\b(v3|v4)\b/i.test(query) || queryLower.includes("v3") || queryLower.includes("v4");
+
+    // Default to v5 unless explicitly requesting older versions or "all"
     let effectiveVersion = version;
-    if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
-      effectiveVersion = "v5";
+    if (version === "all" && !wantsOldVersion) {
+      effectiveVersion = "v5"; // Always prioritize v5 for new developers
     }
     
     let filteredIndex = docIndex;
@@ -405,7 +456,7 @@ app.get("/mcp/structure", (req, res) => {
       versions: ["v3", "v4", "v5"],
       totalDocuments: docIndex.length,
     };
-    
+
     for (const doc of docIndex) {
       if (!structure.categories[doc.category]) {
         structure.categories[doc.category] = {
@@ -413,9 +464,9 @@ app.get("/mcp/structure", (req, res) => {
           versions: {},
         };
       }
-      
+
       structure.categories[doc.category].total++;
-      
+
       if (doc.version) {
         if (!structure.categories[doc.category].versions[doc.version]) {
           structure.categories[doc.category].versions[doc.version] = 0;
@@ -423,8 +474,265 @@ app.get("/mcp/structure", (req, res) => {
         structure.categories[doc.category].versions[doc.version]++;
       }
     }
-    
+
     res.json(structure);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Search code examples
+app.post("/mcp/search-code", async (req, res) => {
+  try {
+    const { query, language = "all", category = "all", limit = 10 } = req.body;
+
+    if (!query) {
+      return res.status(400).json({ error: "query parameter is required" });
+    }
+
+    if (!codeExamples || codeExamples.length === 0) {
+      return res.status(503).json({ error: "Code examples index not available" });
+    }
+
+    let filtered = codeExamples;
+
+    if (language !== "all") {
+      filtered = filtered.filter((ex) =>
+        ex.language === language ||
+        (ex.language === "ts" && language === "typescript") ||
+        (ex.language === "js" && language === "javascript")
+      );
+    }
+
+    if (category !== "all") {
+      filtered = filtered.filter((ex) => ex.category === category);
+    }
+
+    const queryLower = query.toLowerCase();
+    const results = filtered
+      .filter((ex) =>
+        ex.code.toLowerCase().includes(queryLower) ||
+        ex.context.toLowerCase().includes(queryLower) ||
+        ex.docTitle.toLowerCase().includes(queryLower)
+      )
+      .slice(0, parseInt(limit))
+      .map((ex) => ({
+        language: ex.language,
+        category: ex.category,
+        context: ex.context,
+        code: ex.code,
+        docPath: ex.docPath,
+        docTitle: ex.docTitle,
+      }));
+
+    res.json({
+      query,
+      language,
+      category,
+      results,
+      total: results.length,
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get contract addresses
+app.get("/mcp/contracts", async (req, res) => {
+  try {
+    const { contract, chainId = "all", category = "all" } = req.query;
+
+    if (!contractAddresses) {
+      return res.status(503).json({ error: "Contract addresses not available" });
+    }
+
+    let results = {};
+
+    const categories = category === "all"
+      ? Object.keys(contractAddresses.contracts)
+      : [category];
+
+    for (const cat of categories) {
+      const catContracts = contractAddresses.contracts[cat];
+      if (!catContracts) continue;
+
+      for (const [name, data] of Object.entries(catContracts)) {
+        if (contract && !name.toLowerCase().includes(contract.toLowerCase())) {
+          continue;
+        }
+
+        const contractInfo = {
+          category: cat,
+          description: data.description,
+          docs: data.docs,
+        };
+
+        if (data.addresses) {
+          if (chainId === "all") {
+            contractInfo.addresses = data.addresses;
+          } else {
+            contractInfo.address = data.addresses[chainId];
+          }
+        } else if (data.address) {
+          contractInfo.address = data.address;
+          if (data.note) contractInfo.note = data.note;
+        }
+
+        results[name] = contractInfo;
+      }
+    }
+
+    const response = {
+      chains: contractAddresses.chains,
+      contracts: results,
+      notes: contractAddresses.notes,
+      constants: contractAddresses.constants,
+    };
+
+    if (chainId !== "all") {
+      response.selectedChain = contractAddresses.chains[chainId];
+    }
+
+    res.json(response);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get SDK reference
+app.get("/mcp/sdk", async (req, res) => {
+  try {
+    const { package: pkg = "all", hook, category = "all" } = req.query;
+
+    if (!sdkReference) {
+      return res.status(503).json({ error: "SDK reference not available" });
+    }
+
+    const results = {};
+
+    const packages = pkg === "all"
+      ? Object.keys(sdkReference.packages)
+      : [pkg];
+
+    for (const pkgName of packages) {
+      const pkgData = sdkReference.packages[pkgName];
+      if (!pkgData) continue;
+
+      const pkgResult = {
+        description: pkgData.description,
+        npm: pkgData.npm,
+      };
+
+      if (pkgData.hooks) {
+        let hooks = pkgData.hooks;
+        if (hook) {
+          hooks = hooks.filter((h) =>
+            h.name.toLowerCase().includes(hook.toLowerCase())
+          );
+        }
+        if (category !== "all") {
+          hooks = hooks.filter((h) => h.category === category);
+        }
+        if (hooks.length > 0) {
+          pkgResult.hooks = hooks;
+        }
+      }
+
+      if (pkgData.utilities) {
+        let utilities = pkgData.utilities;
+        if (hook) {
+          utilities = utilities.filter((u) =>
+            u.name.toLowerCase().includes(hook.toLowerCase())
+          );
+        }
+        if (category !== "all") {
+          utilities = utilities.filter((u) => u.category === category);
+        }
+        if (utilities.length > 0) {
+          pkgResult.utilities = utilities;
+        }
+      }
+
+      if (pkgResult.hooks || pkgResult.utilities) {
+        results[pkgName] = pkgResult;
+      }
+    }
+
+    let commonPatterns = [];
+    if (hook && sdkReference.commonPatterns) {
+      commonPatterns = sdkReference.commonPatterns.filter((p) =>
+        p.relatedHooks?.some((h) =>
+          h.toLowerCase().includes(hook.toLowerCase())
+        )
+      );
+    }
+
+    res.json({
+      packages: results,
+      commonPatterns: commonPatterns.length > 0 ? commonPatterns : undefined,
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get integration patterns
+app.get("/mcp/patterns", async (req, res) => {
+  try {
+    const { pattern, category = "all", projectType, tags } = req.query;
+
+    if (!integrationPatterns) {
+      return res.status(503).json({ error: "Integration patterns not available" });
+    }
+
+    let patterns = integrationPatterns.patterns;
+
+    if (pattern) {
+      patterns = patterns.filter((p) =>
+        p.id === pattern ||
+        p.id.includes(pattern) ||
+        p.name.toLowerCase().includes(pattern.toLowerCase())
+      );
+    }
+
+    if (category !== "all") {
+      patterns = patterns.filter((p) => p.category === category);
+    }
+
+    if (tags) {
+      const tagArray = Array.isArray(tags) ? tags : [tags];
+      patterns = patterns.filter((p) =>
+        tagArray.some((tag) => p.tags?.includes(tag.toLowerCase()))
+      );
+    }
+
+    let projectTypeInfo = null;
+    if (projectType) {
+      projectTypeInfo = integrationPatterns.projectTypes.find(
+        (pt) => pt.id === projectType
+      );
+      if (projectTypeInfo) {
+        patterns = patterns.filter((p) =>
+          projectTypeInfo.recommendedPatterns.includes(p.id)
+        );
+      }
+    }
+
+    res.json({
+      patterns: patterns.map((p) => ({
+        id: p.id,
+        name: p.name,
+        description: p.description,
+        category: p.category,
+        tags: p.tags,
+        code: p.code,
+        dependencies: p.dependencies,
+        relatedDocs: p.relatedDocs,
+      })),
+      projectType: projectTypeInfo,
+      projectTypes: integrationPatterns.projectTypes,
+      total: patterns.length,
+    });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

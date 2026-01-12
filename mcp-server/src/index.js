@@ -27,9 +27,17 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, "../..");
 const DOCS_DIR = path.join(PROJECT_ROOT, "docs");
 const INDEX_FILE = path.join(__dirname, "docs-index.json");
+const CODE_EXAMPLES_FILE = path.join(__dirname, "code-examples-index.json");
+const SDK_REFERENCE_FILE = path.join(__dirname, "sdk-reference.json");
+const CONTRACT_ADDRESSES_FILE = path.join(__dirname, "contract-addresses.json");
+const INTEGRATION_PATTERNS_FILE = path.join(__dirname, "integration-patterns.json");
 
 // Load or build index
 let docIndex = [];
+let codeExamples = [];
+let sdkReference = null;
+let contractAddresses = null;
+let integrationPatterns = null;
 
 async function loadIndex() {
   try {
@@ -39,6 +47,46 @@ async function loadIndex() {
   } catch (error) {
     console.error("Index not found, building new index...");
     await buildIndex();
+  }
+
+  // Load code examples index
+  try {
+    const codeData = await fs.readFile(CODE_EXAMPLES_FILE, "utf-8");
+    codeExamples = JSON.parse(codeData);
+    console.error(`Loaded ${codeExamples.length} code examples`);
+  } catch (error) {
+    console.error("Code examples index not found");
+    codeExamples = [];
+  }
+
+  // Load SDK reference
+  try {
+    const sdkData = await fs.readFile(SDK_REFERENCE_FILE, "utf-8");
+    sdkReference = JSON.parse(sdkData);
+    console.error("Loaded SDK reference");
+  } catch (error) {
+    console.error("SDK reference not found");
+    sdkReference = null;
+  }
+
+  // Load contract addresses
+  try {
+    const addressData = await fs.readFile(CONTRACT_ADDRESSES_FILE, "utf-8");
+    contractAddresses = JSON.parse(addressData);
+    console.error("Loaded contract addresses");
+  } catch (error) {
+    console.error("Contract addresses not found");
+    contractAddresses = null;
+  }
+
+  // Load integration patterns
+  try {
+    const patternsData = await fs.readFile(INTEGRATION_PATTERNS_FILE, "utf-8");
+    integrationPatterns = JSON.parse(patternsData);
+    console.error(`Loaded ${integrationPatterns.patterns.length} integration patterns`);
+  } catch (error) {
+    console.error("Integration patterns not found");
+    integrationPatterns = null;
   }
 }
 
@@ -274,8 +322,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             version: {
               type: "string",
               enum: ["v3", "v4", "v5", "all"],
-              description: "Filter by protocol version",
-              default: "all",
+              description: "Filter by protocol version. Defaults to v5 (latest) for new developers.",
+              default: "v5",
             },
             limit: {
               type: "number",
@@ -316,8 +364,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             version: {
               type: "string",
               enum: ["v3", "v4", "v5", "all"],
-              description: "Filter by protocol version",
-              default: "all",
+              description: "Filter by protocol version. Defaults to v5 (latest) for new developers.",
+              default: "v5",
             },
           },
           required: ["category"],
@@ -332,6 +380,120 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {},
         },
       },
+      {
+        name: "search_code_examples",
+        description:
+          "Search for code examples by language, category, or keyword. Returns code snippets from documentation with context.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            query: {
+              type: "string",
+              description: "Search query - keywords or phrases to find in code examples",
+            },
+            language: {
+              type: "string",
+              enum: ["solidity", "typescript", "javascript", "json", "graphql", "bash", "all"],
+              description: "Filter by programming language",
+              default: "all",
+            },
+            category: {
+              type: "string",
+              enum: ["contract", "sdk-react", "web3", "api", "config", "cli", "graphql", "all"],
+              description: "Filter by code category",
+              default: "all",
+            },
+            limit: {
+              type: "number",
+              description: "Maximum number of results to return",
+              default: 10,
+            },
+          },
+          required: ["query"],
+        },
+      },
+      {
+        name: "get_contract_addresses",
+        description:
+          "Get Juicebox contract addresses for a specific contract or chain. Returns addresses with explorer links.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            contract: {
+              type: "string",
+              description: "Contract name (e.g., 'JBController', 'JBMultiTerminal', 'REVDeployer'). Leave empty for all contracts.",
+            },
+            chainId: {
+              type: "string",
+              enum: ["1", "10", "42161", "8453", "11155111", "11155420", "421614", "84532", "all"],
+              description: "Chain ID to get address for. Use 'all' for all chains.",
+              default: "all",
+            },
+            category: {
+              type: "string",
+              enum: ["core", "revnet", "hooks", "suckers", "omnichain", "croptop", "all"],
+              description: "Contract category",
+              default: "all",
+            },
+          },
+        },
+      },
+      {
+        name: "get_sdk_reference",
+        description:
+          "Get SDK reference for juice-sdk-react hooks, juice-sdk-core utilities, or revnet-sdk functions.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            package: {
+              type: "string",
+              enum: ["juice-sdk-react", "juice-sdk-core", "revnet-sdk", "all"],
+              description: "SDK package to get reference for",
+              default: "all",
+            },
+            hookOrUtility: {
+              type: "string",
+              description: "Specific hook or utility name (e.g., 'useJBProjectProvider', 'getTokenAToBQuote')",
+            },
+            category: {
+              type: "string",
+              enum: ["context", "read", "write", "omnichain", "utility", "math", "formatting", "parsing", "constants", "abi", "deploy", "all"],
+              description: "Filter by category",
+              default: "all",
+            },
+          },
+        },
+      },
+      {
+        name: "get_integration_patterns",
+        description:
+          "Get common integration patterns for building Juicebox applications. Includes code templates and recommended approaches.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            pattern: {
+              type: "string",
+              description: "Specific pattern ID (e.g., 'wagmi-setup', 'pay-project', 'cash-out-tokens')",
+            },
+            category: {
+              type: "string",
+              enum: ["setup", "payments", "calculations", "components", "data", "deployment", "omnichain", "utilities", "all"],
+              description: "Filter patterns by category",
+              default: "all",
+            },
+            projectType: {
+              type: "string",
+              enum: ["crowdfunding", "revnet", "dao-treasury", "subscription"],
+              description: "Get patterns recommended for a specific project type",
+            },
+            tags: {
+              type: "array",
+              items: { type: "string" },
+              description: "Filter by tags (e.g., ['wallet', 'payment', 'tokens'])",
+            },
+          },
+        },
+      },
     ],
   };
 });
@@ -343,23 +505,25 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     switch (name) {
       case "search_docs": {
-        const { query, category = "all", version = "all", limit = 10 } = args;
-        
+        const { query, category = "all", version = "v5", limit = 10 } = args;
+
         if (!fuse) {
           initializeSearch();
         }
-        
+
         // Detect query intent
         const queryLower = query.toLowerCase();
-        const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) || 
+        const isAPIQuery = /\b(api|interface|contract|function|method|struct|enum|event|abi|specification|spec)\b/i.test(query) ||
                            /\b(ICT|CT|JB|REV)[A-Z]/.test(query); // Contract/interface names
         const isBuildingQuery = /\b(build|integrate|integration|deploy|launch|setup|configure|implement|develop|code|hook|example|tutorial|how to|getting started)\b/i.test(query);
-        const isV5Query = /\bv5\b/i.test(query) || queryLower.includes("v5");
-        
-        // Auto-filter to v5 for building/API queries if version not specified
+
+        // Check if explicitly requesting old versions
+        const wantsOldVersion = /\b(v3|v4)\b/i.test(query) || queryLower.includes("v3") || queryLower.includes("v4");
+
+        // Default to v5 unless explicitly requesting older versions or "all"
         let effectiveVersion = version;
-        if (version === "all" && (isBuildingQuery || isAPIQuery) && !isV5Query) {
-          effectiveVersion = "v5";
+        if (version === "all" && !wantsOldVersion) {
+          effectiveVersion = "v5"; // Always prioritize v5 for new developers
         }
         
         // Filter by category and version
@@ -559,7 +723,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           versions: ["v3", "v4", "v5"],
           totalDocuments: docIndex.length,
         };
-        
+
         for (const doc of docIndex) {
           if (!structure.categories[doc.category]) {
             structure.categories[doc.category] = {
@@ -567,9 +731,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
               versions: {},
             };
           }
-          
+
           structure.categories[doc.category].total++;
-          
+
           if (doc.version) {
             if (!structure.categories[doc.category].versions[doc.version]) {
               structure.categories[doc.category].versions[doc.version] = 0;
@@ -577,12 +741,298 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             structure.categories[doc.category].versions[doc.version]++;
           }
         }
-        
+
         return {
           content: [
             {
               type: "text",
               text: JSON.stringify(structure, null, 2),
+            },
+          ],
+        };
+      }
+
+      case "search_code_examples": {
+        const { query, language = "all", category = "all", limit = 10 } = args;
+
+        if (!codeExamples || codeExamples.length === 0) {
+          return {
+            content: [{ type: "text", text: "Code examples index not available. Run build-index to generate." }],
+            isError: true,
+          };
+        }
+
+        let filtered = codeExamples;
+
+        if (language !== "all") {
+          filtered = filtered.filter((ex) => ex.language === language || ex.language === "ts" && language === "typescript" || ex.language === "js" && language === "javascript");
+        }
+
+        if (category !== "all") {
+          filtered = filtered.filter((ex) => ex.category === category);
+        }
+
+        // Search in code and context
+        const queryLower = query.toLowerCase();
+        const results = filtered
+          .filter((ex) =>
+            ex.code.toLowerCase().includes(queryLower) ||
+            ex.context.toLowerCase().includes(queryLower) ||
+            ex.docTitle.toLowerCase().includes(queryLower)
+          )
+          .slice(0, parseInt(limit))
+          .map((ex) => ({
+            language: ex.language,
+            category: ex.category,
+            context: ex.context,
+            code: ex.code,
+            docPath: ex.docPath,
+            docTitle: ex.docTitle,
+          }));
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                query,
+                language,
+                category,
+                results,
+                total: results.length,
+              }, null, 2),
+            },
+          ],
+        };
+      }
+
+      case "get_contract_addresses": {
+        const { contract, chainId = "all", category = "all" } = args;
+
+        if (!contractAddresses) {
+          return {
+            content: [{ type: "text", text: "Contract addresses not available." }],
+            isError: true,
+          };
+        }
+
+        let results = {};
+
+        // Get contracts from specified category or all categories
+        const categories = category === "all"
+          ? Object.keys(contractAddresses.contracts)
+          : [category];
+
+        for (const cat of categories) {
+          const catContracts = contractAddresses.contracts[cat];
+          if (!catContracts) continue;
+
+          for (const [name, data] of Object.entries(catContracts)) {
+            // Filter by contract name if specified
+            if (contract && !name.toLowerCase().includes(contract.toLowerCase())) {
+              continue;
+            }
+
+            const contractInfo = {
+              category: cat,
+              description: data.description,
+              docs: data.docs,
+            };
+
+            // Handle contracts with per-chain addresses
+            if (data.addresses) {
+              if (chainId === "all") {
+                contractInfo.addresses = data.addresses;
+              } else {
+                contractInfo.address = data.addresses[chainId];
+              }
+            } else if (data.address) {
+              // Same address across all chains
+              contractInfo.address = data.address;
+              if (data.note) contractInfo.note = data.note;
+            }
+
+            results[name] = contractInfo;
+          }
+        }
+
+        // Add chain info
+        const response = {
+          chains: contractAddresses.chains,
+          contracts: results,
+          notes: contractAddresses.notes,
+          constants: contractAddresses.constants,
+        };
+
+        if (chainId !== "all") {
+          response.selectedChain = contractAddresses.chains[chainId];
+        }
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(response, null, 2),
+            },
+          ],
+        };
+      }
+
+      case "get_sdk_reference": {
+        const { package: pkg = "all", hookOrUtility, category = "all" } = args;
+
+        if (!sdkReference) {
+          return {
+            content: [{ type: "text", text: "SDK reference not available." }],
+            isError: true,
+          };
+        }
+
+        const results = {};
+
+        const packages = pkg === "all"
+          ? Object.keys(sdkReference.packages)
+          : [pkg];
+
+        for (const pkgName of packages) {
+          const pkgData = sdkReference.packages[pkgName];
+          if (!pkgData) continue;
+
+          const pkgResult = {
+            description: pkgData.description,
+            npm: pkgData.npm,
+          };
+
+          // Get hooks if available
+          if (pkgData.hooks) {
+            let hooks = pkgData.hooks;
+
+            if (hookOrUtility) {
+              hooks = hooks.filter((h) =>
+                h.name.toLowerCase().includes(hookOrUtility.toLowerCase())
+              );
+            }
+
+            if (category !== "all") {
+              hooks = hooks.filter((h) => h.category === category);
+            }
+
+            if (hooks.length > 0) {
+              pkgResult.hooks = hooks;
+            }
+          }
+
+          // Get utilities if available
+          if (pkgData.utilities) {
+            let utilities = pkgData.utilities;
+
+            if (hookOrUtility) {
+              utilities = utilities.filter((u) =>
+                u.name.toLowerCase().includes(hookOrUtility.toLowerCase())
+              );
+            }
+
+            if (category !== "all") {
+              utilities = utilities.filter((u) => u.category === category);
+            }
+
+            if (utilities.length > 0) {
+              pkgResult.utilities = utilities;
+            }
+          }
+
+          if (pkgResult.hooks || pkgResult.utilities) {
+            results[pkgName] = pkgResult;
+          }
+        }
+
+        // Include common patterns if searching for a specific hook
+        let commonPatterns = [];
+        if (hookOrUtility && sdkReference.commonPatterns) {
+          commonPatterns = sdkReference.commonPatterns.filter((p) =>
+            p.relatedHooks?.some((h) =>
+              h.toLowerCase().includes(hookOrUtility.toLowerCase())
+            )
+          );
+        }
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                packages: results,
+                commonPatterns: commonPatterns.length > 0 ? commonPatterns : undefined,
+              }, null, 2),
+            },
+          ],
+        };
+      }
+
+      case "get_integration_patterns": {
+        const { pattern, category = "all", projectType, tags } = args;
+
+        if (!integrationPatterns) {
+          return {
+            content: [{ type: "text", text: "Integration patterns not available." }],
+            isError: true,
+          };
+        }
+
+        let patterns = integrationPatterns.patterns;
+
+        // Filter by specific pattern ID
+        if (pattern) {
+          patterns = patterns.filter((p) =>
+            p.id === pattern || p.id.includes(pattern) || p.name.toLowerCase().includes(pattern.toLowerCase())
+          );
+        }
+
+        // Filter by category
+        if (category !== "all") {
+          patterns = patterns.filter((p) => p.category === category);
+        }
+
+        // Filter by tags
+        if (tags && tags.length > 0) {
+          patterns = patterns.filter((p) =>
+            tags.some((tag) => p.tags?.includes(tag.toLowerCase()))
+          );
+        }
+
+        // Get patterns recommended for a project type
+        let projectTypeInfo = null;
+        if (projectType) {
+          projectTypeInfo = integrationPatterns.projectTypes.find(
+            (pt) => pt.id === projectType
+          );
+
+          if (projectTypeInfo) {
+            // Filter to only recommended patterns
+            patterns = patterns.filter((p) =>
+              projectTypeInfo.recommendedPatterns.includes(p.id)
+            );
+          }
+        }
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                patterns: patterns.map((p) => ({
+                  id: p.id,
+                  name: p.name,
+                  description: p.description,
+                  category: p.category,
+                  tags: p.tags,
+                  code: p.code,
+                  dependencies: p.dependencies,
+                  relatedDocs: p.relatedDocs,
+                })),
+                projectType: projectTypeInfo,
+                total: patterns.length,
+              }, null, 2),
             },
           ],
         };

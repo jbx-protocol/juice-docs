@@ -1,0 +1,671 @@
+{
+  "description": "Reference data for Juicebox SDK hooks and utilities - based on juice-sdk-v4 and production apps (revnet-app, juice-interface)",
+  "source": "https://github.com/juicebox-money/juice-sdk-v4",
+  "version": "2.0.0",
+  "packages": {
+    "juice-sdk-react": {
+      "description": "React hooks and contexts for interacting with Juicebox V5 contracts",
+      "npm": "juice-sdk-react",
+      "version": "1.9.15-beta",
+      "peerDependencies": ["juice-sdk-core", "wagmi@2.10+", "viem@2.14+", "react@18.3+"],
+      "contexts": [
+        {
+          "name": "JBProjectProvider",
+          "description": "Main composite provider that wraps all project-specific contexts. Use this to provide project data to your entire app.",
+          "category": "provider",
+          "usage": "Wrap your project pages with this provider, passing projectId and chainId",
+          "example": "<JBProjectProvider projectId={1n} chainId={sepolia.id} ctxProps={{ metadata: { ipfsGatewayHostname: 'jbm.infura-ipfs.io' }, bendystraw: { apiKey: BENDYSTRAW_KEY } }}>{children}</JBProjectProvider>",
+          "props": {
+            "projectId": "bigint - The project ID",
+            "chainId": "number - Chain ID (1, 10, 8453, 42161, or testnets)",
+            "version": "string - Protocol version (optional, defaults to latest)",
+            "ctxProps": "Optional configuration for nested contexts (metadata, token, contract, bendystraw)"
+          },
+          "relatedDocs": ["dev/v5/build/life-of-a-project.md", "dev/v5/build/sdk.md"]
+        },
+        {
+          "name": "JBChainContext",
+          "description": "Manages the current chain ID for the project",
+          "category": "context",
+          "hook": "useJBChainId()",
+          "relatedDocs": []
+        },
+        {
+          "name": "JBContractContext",
+          "description": "Loads and provides project-specific contract addresses (Controller, Terminal, etc.)",
+          "category": "context",
+          "hook": "useJBContractContext()",
+          "contracts": ["Controller", "PrimaryNativeTerminal", "FundAccessLimits", "Tokens", "Splits", "Rulesets"],
+          "relatedDocs": ["dev/v5/api/core/JBDirectory.md"]
+        },
+        {
+          "name": "JBRulesetContext",
+          "description": "Provides current ruleset and ruleset metadata",
+          "category": "context",
+          "hook": "useJBRulesetContext()",
+          "data": ["ruleset", "rulesetMetadata"],
+          "relatedDocs": ["dev/v5/api/core/JBRulesets.md", "dev/v5/learn/glossary/rulesets.md"]
+        },
+        {
+          "name": "JBProjectMetadataContext",
+          "description": "Fetches and provides project metadata from IPFS",
+          "category": "context",
+          "hook": "useJBProjectMetadataContext()",
+          "data": ["metadata (name, description, logoUri, etc.)"],
+          "relatedDocs": ["dev/v5/build/life-of-a-project.md"]
+        },
+        {
+          "name": "JBTokenContext",
+          "description": "Provides project token details (ERC-20 info, total supply)",
+          "category": "context",
+          "hook": "useJBTokenContext()",
+          "data": ["token", "totalOutstanding"],
+          "relatedDocs": ["dev/v5/api/core/JBTokens.md"]
+        },
+        {
+          "name": "JBTerminalContext",
+          "description": "Provides primary native payment terminal for the project",
+          "category": "context",
+          "provider": "JBPrimaryNativeTerminalProvider",
+          "relatedDocs": ["dev/v5/api/core/JBMultiTerminal.md"]
+        }
+      ],
+      "hooks": [
+        {
+          "name": "useJBChainId",
+          "description": "Get the current chain ID from project context",
+          "category": "context",
+          "usage": "Access the chain ID that the current project is deployed on",
+          "example": "const chainId = useJBChainId();",
+          "returns": "number",
+          "relatedDocs": []
+        },
+        {
+          "name": "useJBProjectId",
+          "description": "Get project ID, optionally for a different chain",
+          "category": "context",
+          "usage": "Get project ID on the current or specified chain",
+          "example": "const { projectId } = useJBProjectId(optimism.id);",
+          "returns": "{ projectId: bigint }",
+          "relatedDocs": []
+        },
+        {
+          "name": "useJBContractContext",
+          "description": "Access contract addresses and write functions for the current project",
+          "category": "context",
+          "usage": "Get addresses for Controller, Terminal, Tokens, etc., and contractAddress() helper",
+          "example": "const { contracts, contractAddress } = useJBContractContext();",
+          "relatedDocs": ["dev/v5/api/core/JBDirectory.md"]
+        },
+        {
+          "name": "useJBRulesetContext",
+          "description": "Access current ruleset and metadata",
+          "category": "context",
+          "usage": "Get weight, reserved rate, cash out tax rate, and other ruleset parameters",
+          "example": "const { ruleset, rulesetMetadata } = useJBRulesetContext();",
+          "returns": "{ ruleset: AsyncData<JBRuleset>, rulesetMetadata: AsyncData<JBRulesetMetadata> }",
+          "relatedDocs": ["dev/v5/api/core/JBRulesets.md", "dev/v5/learn/glossary/rulesets.md"]
+        },
+        {
+          "name": "useJBProjectMetadataContext",
+          "description": "Access project metadata from IPFS",
+          "category": "context",
+          "usage": "Get project name, description, logo URI, and other metadata",
+          "example": "const { metadata } = useJBProjectMetadataContext();",
+          "returns": "{ metadata: AsyncData<JBProjectMetadata> }",
+          "relatedDocs": ["dev/v5/build/life-of-a-project.md"]
+        },
+        {
+          "name": "useJBTokenContext",
+          "description": "Access project token information",
+          "category": "context",
+          "usage": "Get token symbol, decimals, address, and total supply",
+          "example": "const { token, totalOutstanding } = useJBTokenContext();",
+          "relatedDocs": ["dev/v5/api/core/JBTokens.md"]
+        },
+        {
+          "name": "useJBRuleset",
+          "description": "Fetch ruleset data for a project",
+          "category": "ruleset",
+          "usage": "Get ruleset by ID or current ruleset",
+          "example": "const ruleset = useJBRuleset();",
+          "relatedDocs": ["dev/v5/api/core/JBRulesets.md"]
+        },
+        {
+          "name": "useJBUpcomingRuleset",
+          "description": "Fetch the upcoming/queued ruleset",
+          "category": "ruleset",
+          "usage": "Get the next ruleset that will become active",
+          "example": "const upcomingRuleset = useJBUpcomingRuleset();",
+          "relatedDocs": ["dev/v5/api/core/JBRulesets.md"]
+        },
+        {
+          "name": "useNativeTokenSurplus",
+          "description": "Get the native token (ETH) surplus for the project",
+          "category": "token",
+          "usage": "Calculate available surplus for redemptions",
+          "example": "const { data: surplus } = useNativeTokenSurplus();",
+          "returns": "AsyncData<bigint>",
+          "relatedDocs": ["dev/v5/learn/glossary/surplus.md"]
+        },
+        {
+          "name": "useNativeTokenSymbol",
+          "description": "Get the native token symbol for the current chain",
+          "category": "token",
+          "usage": "Display ETH or other native token symbol",
+          "example": "const symbol = useNativeTokenSymbol();",
+          "returns": "string",
+          "relatedDocs": []
+        },
+        {
+          "name": "useSuckers",
+          "description": "Get cross-chain token pairs (suckers) for the project",
+          "category": "omnichain",
+          "usage": "List all chains where project tokens can be bridged. Returns sucker pairs with peerChainId.",
+          "example": "const { data: suckers } = useSuckers();",
+          "returns": "AsyncData<SuckerPair[]>",
+          "relatedDocs": ["dev/v5/api/suckers/JBSucker.md", "dev/v5/learn/glossary/suckers.md"]
+        },
+        {
+          "name": "useSuckersUserTokenBalance",
+          "description": "Get user's token balance across all connected chains",
+          "category": "omnichain",
+          "usage": "Sum up user's project tokens across all sucker-connected chains",
+          "example": "const { data: totalBalance } = useSuckersUserTokenBalance(userAddress);",
+          "returns": "AsyncData<bigint>",
+          "relatedDocs": ["dev/v5/api/suckers/JBSucker.md"]
+        },
+        {
+          "name": "useSuckersNativeTokenBalance",
+          "description": "Get native token balance across all chains",
+          "category": "omnichain",
+          "usage": "Sum treasury balance across sucker-connected chains",
+          "example": "const { data: balance } = useSuckersNativeTokenBalance();",
+          "relatedDocs": []
+        },
+        {
+          "name": "useSuckersNativeTokenSurplus",
+          "description": "Get native token surplus across all chains",
+          "category": "omnichain",
+          "usage": "Calculate total redeemable surplus across chains",
+          "example": "const { data: surplus } = useSuckersNativeTokenSurplus();",
+          "relatedDocs": []
+        },
+        {
+          "name": "useSuckersCashOutQuote",
+          "description": "Get a cash out quote across all chains",
+          "category": "omnichain",
+          "usage": "Calculate redemption value considering multi-chain surplus",
+          "example": "const { data: quote } = useSuckersCashOutQuote(tokenAmount);",
+          "relatedDocs": ["dev/v5/learn/glossary/cash-out.md"]
+        },
+        {
+          "name": "useTokenCashOutQuoteEth",
+          "description": "Get cash out quote in ETH for token amount",
+          "category": "token",
+          "usage": "Calculate how much ETH a token holder receives when cashing out",
+          "example": "const { data: ethAmount } = useTokenCashOutQuoteEth(tokenAmount);",
+          "relatedDocs": ["dev/v5/learn/glossary/cash-out.md"]
+        },
+        {
+          "name": "usePreparePayMetadata",
+          "description": "Prepare metadata for pay transactions (including NFT tier minting)",
+          "category": "utility",
+          "usage": "Encode metadata for JBMultiTerminal.pay() including 721 hook data",
+          "example": "const metadata = usePreparePayMetadata({ jb721Hook: { dataHookAddress, tierIdsToMint: [1n, 2n] } });",
+          "relatedDocs": ["dev/v5/build/examples/pay.md", "dev/v5/api/721-hook/JB721TiersHook.md"]
+        },
+        {
+          "name": "useEtherPrice",
+          "description": "Get current ETH price in USD",
+          "category": "utility",
+          "usage": "Display USD values in your UI",
+          "example": "const { data: ethPrice } = useEtherPrice();",
+          "returns": "AsyncData<number>",
+          "relatedDocs": []
+        },
+        {
+          "name": "useFind721DataHook",
+          "description": "Find the 721 data hook for a project",
+          "category": "721-hook",
+          "usage": "Get NFT tier hook address for the project",
+          "example": "const { data: hookAddress } = useFind721DataHook();",
+          "relatedDocs": ["dev/v5/api/721-hook/JB721TiersHook.md"]
+        },
+        {
+          "name": "use721HookMetadataId",
+          "description": "Get the metadata ID for 721 hook",
+          "category": "721-hook",
+          "usage": "Get the unique ID used in pay metadata",
+          "example": "const metadataId = use721HookMetadataId();",
+          "relatedDocs": ["dev/v5/api/721-hook/JB721TiersHook.md"]
+        },
+        {
+          "name": "useBendystrawQuery",
+          "description": "Query Bendystraw GraphQL API for indexed Juicebox data (projects, participants, events, NFTs, loans)",
+          "category": "data",
+          "usage": "Execute GraphQL queries against Bendystraw API with caching and polling. Supports all V5 entities including activityEvents, participants, nfts, loans.",
+          "example": "const { data, isLoading } = useBendystrawQuery(gql`query { project(projectId: 1, chainId: 1, version: 5) { name balance } }`, { projectId, chainId }, { pollInterval: 30000 });",
+          "relatedDocs": ["dev/v5/build/bendystraw.md"]
+        },
+        {
+          "name": "useGetRelayrTxQuote",
+          "description": "Get a quote for gasless/relayed transactions via Relayr",
+          "category": "relayr",
+          "usage": "Estimate costs for sponsored multi-chain transactions",
+          "example": "const { getRelayrTxQuote, data, reset } = useGetRelayrTxQuote();",
+          "relatedDocs": []
+        },
+        {
+          "name": "useSendRelayrTx",
+          "description": "Send a gasless transaction via Relayr",
+          "category": "relayr",
+          "usage": "Execute sponsored cross-chain transactions with a single signature",
+          "example": "const { sendTransaction } = useSendRelayrTx();",
+          "relatedDocs": []
+        }
+      ],
+      "generatedHooks": {
+        "description": "Auto-generated type-safe hooks from contract ABIs via Wagmi CLI. These provide direct access to all contract functions.",
+        "pattern": "useRead{Contract}{Function} / useWrite{Contract}{Function} / useWatch{Contract}{Event}",
+        "examples": [
+          "useReadJbControllerCurrentRulesetOf",
+          "useReadJbMultiTerminalCurrentSurplusOf",
+          "useWriteJbMultiTerminalPay",
+          "useWriteJbMultiTerminalCashOutTokensOf",
+          "useWriteJbControllerLaunchProjectFor",
+          "useWriteJbControllerMintTokensOf",
+          "useWatchJbMultiTerminalPayEvent",
+          "useReadJb721TiersHookTiersOf",
+          "useReadJbRulesetsAllOf"
+        ],
+        "contracts": [
+          "JBController", "JBController4_1", "JBDirectory", "JBMultiTerminal",
+          "JBRulesets", "JBPermissions", "JBProjects", "JBSplits", "JBTokens",
+          "JBTerminalStore", "JBFundAccessLimits", "JBPrices",
+          "JB721TiersHook", "JB721TiersHookStore", "JB721TiersHookDeployer",
+          "JBSuckerRegistry", "JBSwapTerminal", "JBBuybackHook",
+          "JBOmnichainDeployer"
+        ]
+      },
+      "components": [
+        {
+          "name": "NativeTokenValue",
+          "description": "Renders native token amounts with proper formatting",
+          "category": "display",
+          "usage": "Display ETH amounts in your UI",
+          "example": "<NativeTokenValue wei={amount} />"
+        }
+      ]
+    },
+    "juice-sdk-core": {
+      "description": "Core utilities, types, ABIs, and Viem functions for Juicebox V5 protocol",
+      "npm": "juice-sdk-core",
+      "version": "1.8.8-beta",
+      "dependencies": ["bs58", "fpnum"],
+      "utilities": [
+        {
+          "name": "getTokenAToBQuote",
+          "description": "Calculate how many project tokens a payment will mint",
+          "category": "math",
+          "usage": "Quote token issuance for a given payment amount",
+          "example": "const tokens = getTokenAToBQuote(payAmountWei, { weight: ruleset.weight, reservedPercent });",
+          "params": ["payAmount: bigint", "{ weight: bigint, reservedPercent: number }"],
+          "returns": "bigint",
+          "relatedDocs": ["dev/v5/learn/glossary/tokens.md"]
+        },
+        {
+          "name": "getTokenBPrice",
+          "description": "Get the current price of project tokens",
+          "category": "math",
+          "usage": "Calculate token price for display",
+          "example": "const price = getTokenBPrice({ weight: ruleset.weight });",
+          "returns": "RulesetWeight",
+          "relatedDocs": []
+        },
+        {
+          "name": "getTokenBtoAQuote",
+          "description": "Calculate payment amount needed for a specific token amount",
+          "category": "math",
+          "usage": "Reverse calculation - how much to pay for X tokens",
+          "example": "const payAmount = getTokenBtoAQuote(tokenAmount, { weight });",
+          "relatedDocs": []
+        },
+        {
+          "name": "getTokenCashOutQuoteEth",
+          "description": "Calculate ETH received when cashing out tokens",
+          "category": "math",
+          "usage": "Show users how much ETH they'll receive for their tokens",
+          "example": "const ethOut = getTokenCashOutQuoteEth(tokenAmount, { surplus, totalSupply, cashOutTaxRate });",
+          "relatedDocs": ["dev/v5/learn/glossary/cash-out.md"]
+        },
+        {
+          "name": "getNextRulesetWeight",
+          "description": "Calculate the weight for the next ruleset",
+          "category": "math",
+          "usage": "Project future token prices based on decay",
+          "example": "const nextWeight = getNextRulesetWeight(currentWeight, decayPercent);",
+          "relatedDocs": ["dev/v5/learn/glossary/rulesets.md"]
+        },
+        {
+          "name": "getPrevRulesetWeight",
+          "description": "Calculate the weight from a previous ruleset",
+          "category": "math",
+          "usage": "Historical token price calculation",
+          "example": "const prevWeight = getPrevRulesetWeight(currentWeight, decayPercent);",
+          "relatedDocs": []
+        },
+        {
+          "name": "formatEther",
+          "description": "Format wei values to human-readable ether strings",
+          "category": "formatting",
+          "usage": "Display ETH amounts in UIs",
+          "example": "const display = formatEther(weiAmount, { fractionDigits: 4 });",
+          "relatedDocs": []
+        },
+        {
+          "name": "formatUnits",
+          "description": "Format token amounts with custom decimals",
+          "category": "formatting",
+          "usage": "Display token amounts for any ERC-20",
+          "example": "const display = formatUnits(amount, 18);",
+          "relatedDocs": []
+        },
+        {
+          "name": "formatEthAddress",
+          "description": "Truncate Ethereum addresses for display",
+          "category": "formatting",
+          "usage": "Show shortened addresses in UI",
+          "example": "const short = formatEthAddress('0x1234...', { truncateTo: 4 });",
+          "relatedDocs": []
+        },
+        {
+          "name": "createHookMetadata",
+          "description": "Encode hook metadata for pay/cash-out transactions",
+          "category": "encoding",
+          "usage": "Prepare metadata bytes for terminal operations",
+          "example": "const metadata = createHookMetadata({ hook721: { tierIds: [1n] } });",
+          "relatedDocs": ["dev/v5/build/examples/pay.md"]
+        },
+        {
+          "name": "parseSuckerDeployerConfig",
+          "description": "Parse configuration for CCIP sucker deployment",
+          "category": "omnichain",
+          "usage": "Configure cross-chain token bridges",
+          "example": "const config = parseSuckerDeployerConfig({ peerChainId, salt });",
+          "relatedDocs": ["dev/v5/api/suckers/JBSucker.md"]
+        },
+        {
+          "name": "applyJbDaoCashOutFee",
+          "description": "Apply the 2.5% JuiceboxDAO fee to cash out amounts",
+          "category": "math",
+          "usage": "Calculate net redemption after protocol fee",
+          "example": "const netAmount = applyJbDaoCashOutFee(grossAmount);",
+          "relatedDocs": ["dev/v5/learn/glossary/cash-out.md"]
+        },
+        {
+          "name": "ipfsGatewayUrl",
+          "description": "Convert IPFS URI to gateway URL",
+          "category": "utility",
+          "usage": "Load IPFS content via HTTP gateway",
+          "example": "const url = ipfsGatewayUrl('ipfs://Qm...', 'ipfs.io');",
+          "relatedDocs": []
+        },
+        {
+          "name": "createSalt",
+          "description": "Create a random salt for deterministic deployment",
+          "category": "utility",
+          "usage": "Generate salt for CREATE2 deployments",
+          "example": "const salt = createSalt();",
+          "relatedDocs": []
+        }
+      ],
+      "fixedPointClasses": {
+        "description": "Fixed-point math classes using fpnum for precise decimal calculations. Essential for working with Juicebox protocol values.",
+        "classes": [
+          {
+            "name": "ReservedPercent",
+            "description": "4 decimal precision, max 10,000 (100%). Used for reserved token rate.",
+            "example": "new ReservedPercent(5000) // 50%"
+          },
+          {
+            "name": "CashOutTaxRate",
+            "description": "4 decimal precision, max 10,000 (100%). Used for redemption tax.",
+            "example": "new CashOutTaxRate(2500) // 25% tax"
+          },
+          {
+            "name": "WeightCutPercent",
+            "description": "9 decimal precision, max 1,000,000,000. Used for weight decay between rulesets.",
+            "example": "new WeightCutPercent(100_000_000) // 10%"
+          },
+          {
+            "name": "SplitPortion",
+            "description": "9 decimal precision, max 1B = 100%. Used for payout/reserved token splits.",
+            "example": "new SplitPortion(500_000_000) // 50%"
+          },
+          {
+            "name": "RulesetWeight",
+            "description": "18 decimal precision for token weights (tokens per ETH)",
+            "example": "new RulesetWeight(1_000_000_000_000_000_000n) // 1.0"
+          },
+          {
+            "name": "Ether",
+            "description": "18 decimal precision for ETH amounts",
+            "example": "new Ether(parseEther('1.5'))"
+          },
+          {
+            "name": "JBProjectToken",
+            "description": "18 decimal precision for project token amounts",
+            "example": "new JBProjectToken(tokenAmount)"
+          }
+        ]
+      },
+      "constants": [
+        {
+          "name": "NATIVE_TOKEN",
+          "description": "Address representing native token (ETH)",
+          "value": "0x000000000000000000000000000000000000EEEe"
+        },
+        {
+          "name": "JB_CHAINS",
+          "description": "Configuration for all supported Juicebox chains",
+          "chains": ["Ethereum (1)", "Optimism (10)", "Base (8453)", "Arbitrum (42161)", "+ Sepolia testnets"]
+        },
+        {
+          "name": "ETH_CURRENCY_ID",
+          "value": "1"
+        },
+        {
+          "name": "USD_CURRENCY_ID",
+          "value": "2",
+          "note": "V5 uses 2 for USD (V4 used 3)"
+        },
+        {
+          "name": "MAX_RESERVED_PERCENT",
+          "value": "10_000"
+        },
+        {
+          "name": "MAX_CASH_OUT_TAX_RATE",
+          "value": "10_000"
+        },
+        {
+          "name": "SPLIT_GROUP_ETH_PAYOUT",
+          "value": "1"
+        },
+        {
+          "name": "SPLIT_GROUP_RESERVED_TOKENS",
+          "value": "2"
+        }
+      ],
+      "types": [
+        {
+          "name": "JBProjectMetadata",
+          "description": "Full project metadata structure from IPFS",
+          "fields": ["name", "description", "logoUri", "infoUri", "twitter", "discord", "telegram", "tokens", "tags"]
+        },
+        {
+          "name": "JBChainId",
+          "description": "Union type of supported chain IDs",
+          "values": ["1", "10", "8453", "42161", "11155111", "11155420", "84532", "421614"]
+        },
+        {
+          "name": "JBRulesetData",
+          "description": "On-chain ruleset data",
+          "fields": ["duration", "weight", "decayPercent", "approvalHook"]
+        },
+        {
+          "name": "JBRulesetMetadata",
+          "description": "Ruleset configuration metadata",
+          "fields": ["reservedPercent", "cashOutTaxRate", "baseCurrency", "pausePay", "pauseCashOut", "allowOwnerMinting", "allowSetCustomToken", "allowTerminalMigration", "allowSetTerminals", "allowSetController", "allowAddAccountingContext", "allowAddPriceFeed", "ownerMustSendPayouts", "holdFees", "useTotalSurplusForCashOuts", "useDataHookForPay", "useDataHookForCashOut", "dataHook", "metadata", "allowCrosschainSuckerExtension"]
+        },
+        {
+          "name": "JBSplit",
+          "description": "Split configuration for payouts or reserved tokens",
+          "fields": ["preferAddToBalance", "percent", "projectId", "beneficiary", "lockedUntil", "hook"]
+        },
+        {
+          "name": "SplitGroup",
+          "description": "Enum for split group types",
+          "values": ["ETHPayout = 1", "ReservedTokens = 2"]
+        }
+      ],
+      "abis": {
+        "description": "All contract ABIs are exported for use with viem/wagmi",
+        "exports": [
+          "jbControllerAbi",
+          "jbController4_1Abi",
+          "jbMultiTerminalAbi",
+          "jbDirectoryAbi",
+          "jbRulesetsAbi",
+          "jbTokensAbi",
+          "jbPermissionsAbi",
+          "jbProjectsAbi",
+          "jb721TiersHookAbi",
+          "jb721TiersHookStoreAbi",
+          "revDeployerAbi",
+          "revLoansAbi"
+        ]
+      }
+    },
+    "revnet-sdk": {
+      "description": "SDK for Revnet-specific functionality (automated tokenomics, loans)",
+      "npm": "revnet-sdk",
+      "version": "1.1.1-beta",
+      "peerDependencies": ["wagmi@2.10+", "viem@2.14+", "react@18.3+"],
+      "utilities": [
+        {
+          "name": "calcPrepaidFee",
+          "description": "Calculate prepaid fees for Revnet contracts",
+          "category": "math",
+          "usage": "Estimate fees when deploying or interacting with Revnets",
+          "example": "const fee = calcPrepaidFee(amount);",
+          "relatedDocs": ["dev/v5/learn/glossary/revnet.md"]
+        }
+      ],
+      "generatedHooks": {
+        "description": "Auto-generated type-safe hooks for Revnet contracts",
+        "examples": [
+          "useReadRevDeployerDeployerOf",
+          "useWriteRevDeployerDeployFor",
+          "useWriteRevDeployerDeployWith721sFor",
+          "useReadRevLoansLoanOf",
+          "useWriteRevLoansBorrowFrom",
+          "useWriteRevLoansRepayLoan"
+        ]
+      }
+    }
+  },
+  "commonPatterns": [
+    {
+      "name": "Complete Provider Setup",
+      "description": "Full setup with wagmi, react-query, and JBProjectProvider",
+      "code": "import { WagmiProvider, createConfig, http } from 'wagmi';\nimport { mainnet, optimism, base, arbitrum, sepolia } from 'wagmi/chains';\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\nimport { JBProjectProvider } from 'juice-sdk-react';\nimport { ConnectKitProvider, getDefaultConfig } from 'connectkit';\n\nconst config = createConfig(\n  getDefaultConfig({\n    chains: [mainnet, optimism, base, arbitrum, sepolia],\n    transports: {\n      [mainnet.id]: http(process.env.NEXT_PUBLIC_MAINNET_RPC),\n      [optimism.id]: http(process.env.NEXT_PUBLIC_OPTIMISM_RPC),\n      [base.id]: http(process.env.NEXT_PUBLIC_BASE_RPC),\n      [arbitrum.id]: http(process.env.NEXT_PUBLIC_ARBITRUM_RPC),\n      [sepolia.id]: http(process.env.NEXT_PUBLIC_SEPOLIA_RPC),\n    },\n    walletConnectProjectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID,\n    appName: 'My Juicebox App',\n  })\n);\n\nconst queryClient = new QueryClient();\n\nfunction App({ projectId, chainId }) {\n  return (\n    <WagmiProvider config={config}>\n      <QueryClientProvider client={queryClient}>\n        <ConnectKitProvider>\n          <JBProjectProvider\n            projectId={BigInt(projectId)}\n            chainId={chainId}\n            ctxProps={{\n              metadata: { ipfsGatewayHostname: 'jbm.infura-ipfs.io' },\n              bendystraw: { apiKey: process.env.NEXT_PUBLIC_BENDYSTRAW_KEY }\n            }}\n          >\n            <YourProjectContent />\n          </JBProjectProvider>\n        </ConnectKitProvider>\n      </QueryClientProvider>\n    </WagmiProvider>\n  );\n}",
+      "relatedHooks": ["JBProjectProvider"]
+    },
+    {
+      "name": "Display Project Info",
+      "description": "Show project name, description, and token info",
+      "code": "import { useJBProjectMetadataContext, useJBTokenContext, useJBRulesetContext } from 'juice-sdk-react';\n\nfunction ProjectInfo() {\n  const { metadata } = useJBProjectMetadataContext();\n  const { token } = useJBTokenContext();\n  const { ruleset } = useJBRulesetContext();\n\n  if (metadata.isLoading) return <div>Loading...</div>;\n\n  return (\n    <div>\n      <h1>{metadata.data?.name}</h1>\n      <p>{metadata.data?.description}</p>\n      {metadata.data?.logoUri && <img src={metadata.data.logoUri} alt=\"\" />}\n      <p>Token: {token.data?.symbol}</p>\n      <p>Weight: {ruleset.data?.weight.toString()}</p>\n    </div>\n  );\n}",
+      "relatedHooks": ["useJBProjectMetadataContext", "useJBTokenContext", "useJBRulesetContext"]
+    },
+    {
+      "name": "Pay with Generated Hook",
+      "description": "Execute payment using auto-generated wagmi hook",
+      "code": "import { useWriteJbMultiTerminalPay } from 'juice-sdk-react';\nimport { useJBContractContext, useJBChainId } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { parseEther } from 'viem';\nimport { useAccount } from 'wagmi';\n\nfunction PayButton({ projectId, amount }) {\n  const { address } = useAccount();\n  const chainId = useJBChainId();\n  const { contracts } = useJBContractContext();\n  const { writeContractAsync, isPending } = useWriteJbMultiTerminalPay();\n\n  const handlePay = async () => {\n    const amountWei = parseEther(amount);\n    await writeContractAsync({\n      chainId,\n      address: contracts.primaryNativeTerminal.data,\n      args: [\n        BigInt(projectId),\n        NATIVE_TOKEN,\n        amountWei,\n        address,\n        0n, // minReturnedTokens\n        'Payment memo',\n        '0x', // metadata\n      ],\n      value: amountWei,\n    });\n  };\n\n  return <button onClick={handlePay} disabled={isPending}>Pay {amount} ETH</button>;\n}",
+      "relatedHooks": ["useWriteJbMultiTerminalPay", "useJBContractContext"]
+    },
+    {
+      "name": "Cash Out Tokens",
+      "description": "Redeem project tokens for ETH",
+      "code": "import { useWriteJbMultiTerminalCashOutTokensOf } from 'juice-sdk-react';\nimport { useJBContractContext, useJBChainId } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { useAccount } from 'wagmi';\n\nfunction RedeemButton({ projectId, tokenAmount }) {\n  const { address } = useAccount();\n  const chainId = useJBChainId();\n  const { contracts } = useJBContractContext();\n  const { writeContractAsync, isPending } = useWriteJbMultiTerminalCashOutTokensOf();\n\n  const handleRedeem = async () => {\n    await writeContractAsync({\n      chainId,\n      address: contracts.primaryNativeTerminal.data,\n      args: [\n        address, // holder\n        BigInt(projectId),\n        tokenAmount,\n        NATIVE_TOKEN,\n        0n, // minReclaimed\n        address, // beneficiary\n        '0x', // metadata\n      ],\n    });\n  };\n\n  return <button onClick={handleRedeem} disabled={isPending}>Redeem</button>;\n}",
+      "relatedHooks": ["useWriteJbMultiTerminalCashOutTokensOf", "useJBContractContext"]
+    },
+    {
+      "name": "Multi-Chain Token Balance",
+      "description": "Display user's token balance across all connected chains",
+      "code": "import { useSuckers, useSuckersUserTokenBalance } from 'juice-sdk-react';\nimport { formatEther } from 'juice-sdk-core';\nimport { useAccount } from 'wagmi';\n\nfunction CrossChainBalance() {\n  const { address } = useAccount();\n  const { data: suckers, isLoading: suckersLoading } = useSuckers();\n  const { data: totalBalance, isLoading: balanceLoading } = useSuckersUserTokenBalance(address);\n\n  if (suckersLoading || balanceLoading) return <div>Loading...</div>;\n\n  return (\n    <div>\n      <h3>Your Total Balance</h3>\n      <p>{formatEther(totalBalance || 0n, { fractionDigits: 4 })} tokens</p>\n      <h4>Connected Chains:</h4>\n      <ul>\n        {suckers?.map((s) => (\n          <li key={s.peerChainId}>Chain {s.peerChainId}</li>\n        ))}\n      </ul>\n    </div>\n  );\n}",
+      "relatedHooks": ["useSuckers", "useSuckersUserTokenBalance"]
+    }
+  ],
+  "customHooksFromProduction": {
+    "description": "Common custom hooks patterns from revnet-app and juice-interface",
+    "hooks": [
+      {
+        "name": "useRulesets",
+        "description": "Fetch all rulesets for a project using jbRulesetsAbi",
+        "source": "revnet-app",
+        "pattern": "Uses useJBContractContext() + useReadContract() to fetch rulesets.allOf()",
+        "returns": "{ rulesets: RulesetWeight[], isLoading, error }"
+      },
+      {
+        "name": "usePaymentQuote",
+        "description": "Calculate payment quotes comparing issuance vs AMM (Uniswap) across multiple chains",
+        "source": "revnet-app",
+        "pattern": "Combines useJBRulesetContext, useCurrencyPrice, and Uniswap quote fetching",
+        "returns": "{ tokenAToBQuote, isPriceLoading }"
+      },
+      {
+        "name": "useCurrencyPrice",
+        "description": "Fetch USD/ETH price from JBPrices contract",
+        "source": "revnet-app",
+        "pattern": "useReadContract with jbPricesAbi.pricePerUnitOf()",
+        "returns": "{ price, isLoading, refetch }"
+      },
+      {
+        "name": "useTokenBalances",
+        "description": "Batch fetch ERC20 + native token balances",
+        "source": "revnet-app",
+        "pattern": "useReadContracts() for ERC20 + useBalance() for native, returns Map",
+        "returns": "Map<address, bigint>"
+      },
+      {
+        "name": "useUserPermissions",
+        "description": "Query user permissions from Bendystraw and provide hasPermission() helper",
+        "source": "revnet-app",
+        "pattern": "useBendystrawQuery(ProjectWithPermissionsDocument) + memoized lookup",
+        "returns": "{ hasPermission(key), permissions, isLoading }"
+      },
+      {
+        "name": "useAllowance",
+        "description": "Manage ERC20 token approvals with ensureAllowance() helper",
+        "source": "revnet-app",
+        "pattern": "Reads current allowance, provides ensureAllowance(token, spender, value)",
+        "returns": "{ allowance, ensureAllowance, isApproving }"
+      },
+      {
+        "name": "useSuckersTokenBalance",
+        "description": "Fetch token balances across all sucker chains with polling",
+        "source": "revnet-app",
+        "pattern": "useQuery with 10s polling, exponential backoff retry",
+        "returns": "{ data: { balance, chainId, projectId }[], isLoading }"
+      },
+      {
+        "name": "useSuckersTokenSurplus",
+        "description": "Fetch surplus across all sucker chains",
+        "source": "revnet-app",
+        "pattern": "useQuery calling terminal.read.currentSurplusOf() per chain",
+        "returns": "{ data: surplusMap, isLoading }"
+      }
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "description": "Common integration patterns for building Juicebox V5 applications",
+  "version": "2.0.0",
+  "patterns": [
+    {
+      "id": "wagmi-setup",
+      "name": "Wagmi + Viem Setup",
+      "description": "Configure wagmi for multi-chain Juicebox support with ConnectKit",
+      "category": "setup",
+      "tags": ["wagmi", "viem", "setup", "wallet", "chains", "connectkit"],
+      "code": "import { createConfig, http } from 'wagmi';\nimport { mainnet, optimism, arbitrum, base, sepolia } from 'wagmi/chains';\nimport { getDefaultConfig } from 'connectkit';\nimport { safe, coinbaseWallet, walletConnect } from 'wagmi/connectors';\n\nexport const config = createConfig(\n  getDefaultConfig({\n    chains: [mainnet, optimism, arbitrum, base, sepolia],\n    connectors: [\n      safe(),\n      coinbaseWallet({ appName: 'My Juicebox App' }),\n      walletConnect({ projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID }),\n    ],\n    transports: {\n      [mainnet.id]: http(process.env.NEXT_PUBLIC_MAINNET_RPC),\n      [optimism.id]: http(process.env.NEXT_PUBLIC_OPTIMISM_RPC),\n      [arbitrum.id]: http(process.env.NEXT_PUBLIC_ARBITRUM_RPC),\n      [base.id]: http(process.env.NEXT_PUBLIC_BASE_RPC),\n      [sepolia.id]: http(process.env.NEXT_PUBLIC_SEPOLIA_RPC),\n    },\n    walletConnectProjectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID,\n    appName: 'My Juicebox App',\n  })\n);",
+      "dependencies": ["wagmi", "viem", "connectkit", "@wagmi/connectors"],
+      "relatedDocs": ["dev/v5/build/life-of-a-project.md", "dev/v5/build/sdk.md"]
+    },
+    {
+      "id": "project-provider",
+      "name": "JBProjectProvider Setup",
+      "description": "Wrap your app with JBProjectProvider for full project context",
+      "category": "setup",
+      "tags": ["provider", "context", "project", "sdk", "bendystraw"],
+      "code": "import { JBProjectProvider } from 'juice-sdk-react';\nimport { WagmiProvider } from 'wagmi';\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\nimport { ConnectKitProvider } from 'connectkit';\n\nconst queryClient = new QueryClient();\n\nfunction App({ projectId, chainId }) {\n  return (\n    <WagmiProvider config={config}>\n      <QueryClientProvider client={queryClient}>\n        <ConnectKitProvider>\n          <JBProjectProvider\n            projectId={BigInt(projectId)}\n            chainId={chainId}\n            ctxProps={{\n              metadata: { ipfsGatewayHostname: 'jbm.infura-ipfs.io' },\n              bendystraw: { apiKey: process.env.NEXT_PUBLIC_BENDYSTRAW_KEY }\n            }}\n          >\n            <YourProjectContent />\n          </JBProjectProvider>\n        </ConnectKitProvider>\n      </QueryClientProvider>\n    </WagmiProvider>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "wagmi", "@tanstack/react-query", "connectkit"],
+      "relatedDocs": ["dev/v5/build/life-of-a-project.md", "dev/v5/build/sdk.md"]
+    },
+    {
+      "id": "pay-project",
+      "name": "Pay a Project",
+      "description": "Implement payment functionality to a Juicebox project using generated hooks",
+      "category": "payments",
+      "tags": ["pay", "payment", "terminal", "tokens"],
+      "code": "import { useWriteJbMultiTerminalPay } from 'juice-sdk-react';\nimport { useJBContractContext, useJBChainId } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { parseEther } from 'viem';\nimport { useAccount } from 'wagmi';\n\nfunction PayButton({ projectId, amount, memo = '' }) {\n  const { address } = useAccount();\n  const chainId = useJBChainId();\n  const { contracts } = useJBContractContext();\n  const { writeContractAsync, isPending } = useWriteJbMultiTerminalPay();\n\n  const handlePay = async () => {\n    const amountWei = parseEther(amount);\n    \n    await writeContractAsync({\n      chainId,\n      address: contracts.primaryNativeTerminal.data,\n      args: [\n        BigInt(projectId),\n        NATIVE_TOKEN,\n        amountWei,\n        address, // beneficiary - receives project tokens\n        0n, // minReturnedTokens - set to 0 for no slippage protection\n        memo,\n        '0x', // metadata\n      ],\n      value: amountWei,\n    });\n  };\n\n  return (\n    <button onClick={handlePay} disabled={isPending}>\n      {isPending ? 'Processing...' : `Pay ${amount} ETH`}\n    </button>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "viem", "wagmi"],
+      "relatedDocs": ["dev/v5/build/examples/pay.md", "dev/v5/api/core/JBMultiTerminal.md"]
+    },
+    {
+      "id": "cash-out-tokens",
+      "name": "Cash Out (Redeem) Tokens",
+      "description": "Allow users to redeem project tokens for underlying assets",
+      "category": "payments",
+      "tags": ["redeem", "cash-out", "tokens", "terminal"],
+      "code": "import { useWriteJbMultiTerminalCashOutTokensOf } from 'juice-sdk-react';\nimport { useJBContractContext, useJBChainId } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { useAccount } from 'wagmi';\n\nfunction RedeemButton({ projectId, tokenAmount }) {\n  const { address } = useAccount();\n  const chainId = useJBChainId();\n  const { contracts } = useJBContractContext();\n  const { writeContractAsync, isPending } = useWriteJbMultiTerminalCashOutTokensOf();\n\n  const handleRedeem = async () => {\n    await writeContractAsync({\n      chainId,\n      address: contracts.primaryNativeTerminal.data,\n      args: [\n        address, // holder\n        BigInt(projectId),\n        tokenAmount, // amount of project tokens to redeem\n        NATIVE_TOKEN, // token to receive (ETH)\n        0n, // minReturnedTokens - minimum ETH to receive\n        address, // beneficiary\n        '0x', // metadata\n      ],\n    });\n  };\n\n  return (\n    <button onClick={handleRedeem} disabled={isPending}>\n      {isPending ? 'Redeeming...' : 'Redeem Tokens'}\n    </button>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "wagmi"],
+      "relatedDocs": ["dev/v5/learn/glossary/cash-out.md", "dev/v5/api/core/JBMultiTerminal.md"]
+    },
+    {
+      "id": "pay-with-nft",
+      "name": "Pay and Mint NFT Tier",
+      "description": "Pay a project and mint NFT rewards using 721 hook metadata",
+      "category": "payments",
+      "tags": ["pay", "nft", "721-hook", "tier", "mint"],
+      "code": "import { useWriteJbMultiTerminalPay, usePreparePayMetadata, useFind721DataHook } from 'juice-sdk-react';\nimport { useJBContractContext, useJBChainId } from 'juice-sdk-react';\nimport { NATIVE_TOKEN } from 'juice-sdk-core';\nimport { parseEther } from 'viem';\nimport { useAccount } from 'wagmi';\n\nfunction PayWithNFT({ projectId, amount, tierIds }) {\n  const { address } = useAccount();\n  const chainId = useJBChainId();\n  const { contracts } = useJBContractContext();\n  const { data: hookAddress } = useFind721DataHook();\n  const { writeContractAsync, isPending } = useWriteJbMultiTerminalPay();\n\n  // Prepare metadata with NFT tier info\n  const metadata = usePreparePayMetadata({\n    jb721Hook: hookAddress ? {\n      dataHookAddress: hookAddress,\n      tierIdsToMint: tierIds.map(id => BigInt(id)),\n    } : undefined,\n  });\n\n  const handlePay = async () => {\n    const amountWei = parseEther(amount);\n    \n    await writeContractAsync({\n      chainId,\n      address: contracts.primaryNativeTerminal.data,\n      args: [\n        BigInt(projectId),\n        NATIVE_TOKEN,\n        amountWei,\n        address,\n        0n,\n        'Minting NFT',\n        metadata || '0x',\n      ],\n      value: amountWei,\n    });\n  };\n\n  return (\n    <button onClick={handlePay} disabled={isPending || !hookAddress}>\n      {isPending ? 'Minting...' : `Mint NFT Tier ${tierIds.join(', ')}`}\n    </button>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "viem", "wagmi"],
+      "relatedDocs": ["dev/v5/api/721-hook/JB721TiersHook.md", "dev/v5/build/examples/pay.md"]
+    },
+    {
+      "id": "token-quote",
+      "name": "Calculate Token Quote",
+      "description": "Calculate how many tokens a payment will mint",
+      "category": "calculations",
+      "tags": ["quote", "tokens", "calculation", "price", "issuance"],
+      "code": "import { getTokenAToBQuote } from 'juice-sdk-core';\nimport { useJBRulesetContext } from 'juice-sdk-react';\nimport { parseEther, formatEther } from 'viem';\n\nfunction PaymentQuote({ payAmount }) {\n  const { ruleset, rulesetMetadata } = useJBRulesetContext();\n\n  if (!ruleset.data || !rulesetMetadata.data) return null;\n\n  const tokensReceived = getTokenAToBQuote(\n    parseEther(payAmount),\n    {\n      weight: ruleset.data.weight,\n      reservedPercent: rulesetMetadata.data.reservedPercent,\n    }\n  );\n\n  return (\n    <div>\n      <p>Pay: {payAmount} ETH</p>\n      <p>Receive: {formatEther(tokensReceived)} tokens</p>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-core", "juice-sdk-react", "viem"],
+      "relatedDocs": ["dev/v5/learn/glossary/tokens.md"]
+    },
+    {
+      "id": "cash-out-quote",
+      "name": "Calculate Cash Out Quote",
+      "description": "Calculate ETH received when cashing out tokens",
+      "category": "calculations",
+      "tags": ["quote", "cash-out", "redeem", "calculation"],
+      "code": "import { getTokenCashOutQuoteEth, applyJbDaoCashOutFee } from 'juice-sdk-core';\nimport { useJBRulesetContext, useNativeTokenSurplus, useJBTokenContext } from 'juice-sdk-react';\nimport { formatEther } from 'viem';\n\nfunction CashOutQuote({ tokenAmount }) {\n  const { rulesetMetadata } = useJBRulesetContext();\n  const { data: surplus } = useNativeTokenSurplus();\n  const { totalOutstanding } = useJBTokenContext();\n\n  if (!rulesetMetadata.data || !surplus || !totalOutstanding.data) return null;\n\n  const grossEth = getTokenCashOutQuoteEth(tokenAmount, {\n    surplus,\n    totalSupply: totalOutstanding.data,\n    cashOutTaxRate: rulesetMetadata.data.cashOutTaxRate,\n  });\n\n  const netEth = applyJbDaoCashOutFee(grossEth);\n\n  return (\n    <div>\n      <p>Redeem: {formatEther(tokenAmount)} tokens</p>\n      <p>Receive: ~{formatEther(netEth)} ETH (after 2.5% fee)</p>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-core", "juice-sdk-react", "viem"],
+      "relatedDocs": ["dev/v5/learn/glossary/cash-out.md"]
+    },
+    {
+      "id": "button-with-wallet",
+      "name": "Smart Wallet Button",
+      "description": "Button that handles wallet connection and chain switching",
+      "category": "components",
+      "tags": ["wallet", "button", "connect", "chain-switch", "ui"],
+      "code": "import { useAccount, useChainId, useSwitchChain } from 'wagmi';\nimport { useModal } from 'connectkit';\n\nfunction ButtonWithWallet({ targetChainId, onClick, children, disabled }) {\n  const { isConnected } = useAccount();\n  const chainId = useChainId();\n  const { switchChainAsync } = useSwitchChain();\n  const { setOpen } = useModal();\n\n  const needsChainSwitch = isConnected && chainId !== targetChainId;\n\n  const handleClick = async () => {\n    if (!isConnected) {\n      setOpen(true);\n      return;\n    }\n\n    if (needsChainSwitch) {\n      await switchChainAsync({ chainId: targetChainId });\n      return;\n    }\n\n    await onClick();\n  };\n\n  const buttonText = !isConnected\n    ? 'Connect Wallet'\n    : needsChainSwitch\n    ? `Switch Network`\n    : children;\n\n  return (\n    <button onClick={handleClick} disabled={disabled}>\n      {buttonText}\n    </button>\n  );\n}",
+      "dependencies": ["wagmi", "connectkit"],
+      "relatedDocs": []
+    },
+    {
+      "id": "project-metadata",
+      "name": "Fetch Project Metadata",
+      "description": "Display project name, description, and logo from IPFS",
+      "category": "data",
+      "tags": ["metadata", "ipfs", "project", "name", "logo"],
+      "code": "import { useJBProjectMetadataContext, useJBTokenContext } from 'juice-sdk-react';\n\nfunction ProjectHeader() {\n  const { metadata } = useJBProjectMetadataContext();\n  const { token } = useJBTokenContext();\n\n  if (metadata.isLoading) return <div>Loading...</div>;\n  if (!metadata.data) return <div>No metadata found</div>;\n\n  return (\n    <div>\n      {metadata.data.logoUri && (\n        <img src={metadata.data.logoUri} alt={metadata.data.name} />\n      )}\n      <h1>{metadata.data.name}</h1>\n      <p>{metadata.data.description}</p>\n      <span>Token: ${token.data?.symbol}</span>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react"],
+      "relatedDocs": ["dev/v5/build/life-of-a-project.md"]
+    },
+    {
+      "id": "bendystraw-query",
+      "name": "GraphQL Data with Bendystraw",
+      "description": "Query Juicebox indexed data using Bendystraw GraphQL API",
+      "category": "data",
+      "tags": ["graphql", "subgraph", "query", "data", "bendystraw"],
+      "code": "import { useBendystrawQuery } from 'juice-sdk-react';\nimport { gql } from 'graphql-request';\nimport { formatEther } from 'viem';\n\nconst PROJECT_QUERY = gql`\n  query GetProject($projectId: Int!, $chainId: Int!) {\n    project(projectId: $projectId, chainId: $chainId, version: 5) {\n      name\n      balance\n      volume\n      volumeUsd\n      tokenSupply\n      contributorsCount\n      tokenSymbol\n    }\n  }\n`;\n\nfunction ProjectData({ projectId, chainId }) {\n  const { data, isLoading, error } = useBendystrawQuery(\n    PROJECT_QUERY,\n    { projectId: Number(projectId), chainId: Number(chainId) },\n    { pollInterval: 30000 }\n  );\n\n  if (isLoading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error.message}</div>;\n\n  return (\n    <div>\n      <h2>{data?.project?.name}</h2>\n      <p>Balance: {formatEther(data?.project?.balance || 0n)} ETH</p>\n      <p>Contributors: {data?.project?.contributorsCount}</p>\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "@tanstack/react-query", "graphql-request"],
+      "relatedDocs": ["dev/v5/build/bendystraw.md"]
+    },
+    {
+      "id": "activity-feed",
+      "name": "Activity Feed with Bendystraw",
+      "description": "Display real-time project activity using Bendystraw activityEvents",
+      "category": "data",
+      "tags": ["activity", "events", "feed", "bendystraw", "real-time"],
+      "code": "import { useBendystrawQuery } from 'juice-sdk-react';\nimport { gql } from 'graphql-request';\nimport { formatEther } from 'viem';\n\nconst ACTIVITY_QUERY = gql`\n  query GetActivity($projectId: Int!, $chainId: Int!) {\n    activityEvents(\n      where: { projectId: $projectId, chainId: $chainId, version: 5 }\n      orderBy: \"timestamp\"\n      orderDirection: \"desc\"\n      limit: 20\n    ) {\n      items {\n        id\n        type\n        timestamp\n        txHash\n        from\n        payEvent { amount, beneficiary, memo }\n        cashOutTokensEvent { cashOutCount, reclaimAmount }\n        mintNftEvent { tierId, tokenId }\n      }\n    }\n  }\n`;\n\nfunction ActivityFeed({ projectId, chainId }) {\n  const { data, isLoading } = useBendystrawQuery(\n    ACTIVITY_QUERY,\n    { projectId: Number(projectId), chainId: Number(chainId) },\n    { pollInterval: 10000 }\n  );\n\n  if (isLoading) return <div>Loading...</div>;\n\n  return (\n    <div>\n      {data?.activityEvents?.items?.map((event) => (\n        <div key={event.id}>\n          <span>{event.type}</span>\n          <span>{new Date(event.timestamp * 1000).toLocaleString()}</span>\n          {event.payEvent && (\n            <p>{formatEther(BigInt(event.payEvent.amount))} ETH paid</p>\n          )}\n        </div>\n      ))}\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "@tanstack/react-query", "graphql-request", "viem"],
+      "relatedDocs": ["dev/v5/build/bendystraw.md"]
+    },
+    {
+      "id": "token-holders-leaderboard",
+      "name": "Token Holders Leaderboard",
+      "description": "Display top token holders using Bendystraw participants query",
+      "category": "data",
+      "tags": ["holders", "leaderboard", "participants", "bendystraw"],
+      "code": "import { useBendystrawQuery } from 'juice-sdk-react';\nimport { gql } from 'graphql-request';\nimport { formatEther } from 'viem';\n\nconst HOLDERS_QUERY = gql`\n  query GetHolders($projectId: Int!, $chainId: Int!) {\n    participants(\n      where: { projectId: $projectId, chainId: $chainId, version: 5 }\n      orderBy: \"balance\"\n      orderDirection: \"desc\"\n      limit: 50\n    ) {\n      items { address, balance, volume, paymentsCount }\n      totalCount\n    }\n  }\n`;\n\nfunction HoldersLeaderboard({ projectId, chainId, tokenSymbol }) {\n  const { data, isLoading } = useBendystrawQuery(\n    HOLDERS_QUERY,\n    { projectId: Number(projectId), chainId: Number(chainId) }\n  );\n\n  if (isLoading) return <div>Loading...</div>;\n\n  return (\n    <table>\n      <thead>\n        <tr><th>Rank</th><th>Address</th><th>Balance</th></tr>\n      </thead>\n      <tbody>\n        {data?.participants?.items?.map((h, i) => (\n          <tr key={h.address}>\n            <td>{i + 1}</td>\n            <td>{h.address.slice(0,6)}...{h.address.slice(-4)}</td>\n            <td>{formatEther(BigInt(h.balance))} {tokenSymbol}</td>\n          </tr>\n        ))}\n      </tbody>\n    </table>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "@tanstack/react-query", "graphql-request", "viem"],
+      "relatedDocs": ["dev/v5/build/bendystraw.md"]
+    },
+    {
+      "id": "launch-project",
+      "name": "Launch a New Project",
+      "description": "Deploy a new Juicebox project with initial ruleset",
+      "category": "deployment",
+      "tags": ["launch", "deploy", "project", "create"],
+      "code": "import { useWriteJbControllerLaunchProjectFor } from 'juice-sdk-react';\nimport { encodeRulesetMetadata } from 'juice-sdk-core';\nimport { parseEther, zeroAddress } from 'viem';\n\nfunction LaunchProject({ ownerAddress, metadataCid }) {\n  const { writeContractAsync, isPending } = useWriteJbControllerLaunchProjectFor();\n\n  const handleLaunch = async () => {\n    // Encode ruleset metadata\n    const metadata = encodeRulesetMetadata({\n      reservedPercent: 0,\n      cashOutTaxRate: 0,\n      baseCurrency: 1, // ETH\n      pausePay: false,\n      pauseCashOut: false,\n      allowOwnerMinting: true,\n      useDataHookForPay: false,\n      useDataHookForCashOut: false,\n      dataHook: zeroAddress,\n    });\n\n    await writeContractAsync({\n      args: [\n        ownerAddress,\n        `ipfs://${metadataCid}`,\n        [\n          {\n            mustStartAtOrAfter: 0n,\n            duration: 0n, // No duration = open-ended\n            weight: parseEther('1000000'), // Tokens per ETH\n            decayPercent: 0n,\n            approvalHook: zeroAddress,\n            metadata,\n          },\n        ],\n        [], // terminalConfigurations\n        'Project launched',\n      ],\n    });\n  };\n\n  return <button onClick={handleLaunch} disabled={isPending}>Launch Project</button>;\n}",
+      "dependencies": ["juice-sdk-react", "juice-sdk-core", "viem"],
+      "relatedDocs": ["dev/v5/build/examples/launch-project.md", "dev/v5/api/core/JBController.md"]
+    },
+    {
+      "id": "cross-chain-tokens",
+      "name": "Cross-Chain Token Display",
+      "description": "Show user's token balance across all chains using suckers",
+      "category": "omnichain",
+      "tags": ["omnichain", "suckers", "cross-chain", "balance"],
+      "code": "import { useSuckers, useSuckersUserTokenBalance } from 'juice-sdk-react';\nimport { useAccount } from 'wagmi';\nimport { formatEther } from 'viem';\n\nfunction CrossChainBalance() {\n  const { address } = useAccount();\n  const { data: suckers } = useSuckers();\n  const { data: totalBalance } = useSuckersUserTokenBalance(address);\n\n  return (\n    <div>\n      <h3>Your Balance Across Chains</h3>\n      <p>Total: {totalBalance ? formatEther(totalBalance) : '0'} tokens</p>\n      \n      {suckers && suckers.length > 0 && (\n        <div>\n          <h4>Connected Chains:</h4>\n          <ul>\n            {suckers.map((sucker) => (\n              <li key={sucker.peerChainId}>\n                Chain {sucker.peerChainId}: Connected\n              </li>\n            ))}\n          </ul>\n        </div>\n      )}\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "wagmi", "viem"],
+      "relatedDocs": ["dev/v5/learn/glossary/suckers.md", "dev/v5/api/suckers/JBSucker.md"]
+    },
+    {
+      "id": "cross-chain-surplus",
+      "name": "Cross-Chain Surplus Display",
+      "description": "Show project surplus aggregated across all chains",
+      "category": "omnichain",
+      "tags": ["omnichain", "suckers", "surplus", "treasury"],
+      "code": "import { useSuckersNativeTokenSurplus, useSuckers } from 'juice-sdk-react';\nimport { formatEther } from 'viem';\n\nfunction CrossChainSurplus() {\n  const { data: suckers } = useSuckers();\n  const { data: totalSurplus } = useSuckersNativeTokenSurplus();\n\n  const isOmnichain = suckers && suckers.length > 0;\n\n  return (\n    <div>\n      <h3>Project Treasury</h3>\n      <p>Total Surplus: {totalSurplus ? formatEther(totalSurplus) : '0'} ETH</p>\n      {isOmnichain && (\n        <span>Aggregated across {suckers.length + 1} chains</span>\n      )}\n    </div>\n  );\n}",
+      "dependencies": ["juice-sdk-react", "viem"],
+      "relatedDocs": ["dev/v5/learn/glossary/suckers.md", "dev/v5/learn/glossary/surplus.md"]
+    },
+    {
+      "id": "form-validation",
+      "name": "Form with Formik + Zod",
+      "description": "Validated form pattern using Formik and Zod (from revnet-app)",
+      "category": "utilities",
+      "tags": ["form", "validation", "formik", "zod"],
+      "code": "import { Formik, Field, useField, useFormikContext } from 'formik';\nimport { withZodSchema } from 'formik-validator-zod';\nimport { z } from 'zod';\n\nconst schema = z.object({\n  name: z.string().min(1, 'Required').max(50),\n  description: z.string().min(1, 'Required'),\n  tokenSymbol: z.string().min(2).max(10).regex(/^[A-Z]+$/, 'Uppercase only'),\n  initialIssuance: z.string().refine(v => !isNaN(Number(v)), 'Must be a number'),\n});\n\nfunction CustomField({ name, label, ...props }) {\n  const [field, meta] = useField(name);\n  const { submitCount } = useFormikContext();\n  const showError = meta.error && (meta.touched || submitCount > 0);\n\n  return (\n    <div>\n      <label>{label}</label>\n      <input {...field} {...props} />\n      {showError && <span className=\"error\">{meta.error}</span>}\n    </div>\n  );\n}\n\nfunction ProjectForm({ onSubmit }) {\n  return (\n    <Formik\n      initialValues={{ name: '', description: '', tokenSymbol: '', initialIssuance: '1000000' }}\n      validate={withZodSchema(schema)}\n      onSubmit={onSubmit}\n    >\n      {({ handleSubmit, isSubmitting }) => (\n        <form onSubmit={handleSubmit}>\n          <CustomField name=\"name\" label=\"Project Name\" />\n          <CustomField name=\"description\" label=\"Description\" />\n          <CustomField name=\"tokenSymbol\" label=\"Token Symbol\" />\n          <CustomField name=\"initialIssuance\" label=\"Initial Issuance\" />\n          <button type=\"submit\" disabled={isSubmitting}>Create</button>\n        </form>\n      )}\n    </Formik>\n  );\n}",
+      "dependencies": ["formik", "formik-validator-zod", "zod"],
+      "relatedDocs": []
+    },
+    {
+      "id": "ipfs-upload",
+      "name": "Upload Metadata to IPFS",
+      "description": "Upload project metadata to IPFS via Infura gateway",
+      "category": "utilities",
+      "tags": ["ipfs", "metadata", "upload", "infura"],
+      "code": "const INFURA_IPFS_API = 'https://ipfs.infura.io:5001/api/v0';\n\nasync function uploadToIPFS(data, auth) {\n  const formData = new FormData();\n  formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' }));\n\n  const response = await fetch(`${INFURA_IPFS_API}/add`, {\n    method: 'POST',\n    headers: {\n      Authorization: `Basic ${auth}`,\n    },\n    body: formData,\n  });\n\n  const result = await response.json();\n  return result.Hash;\n}\n\nexport async function uploadProjectMetadata({ name, description, logoUri, twitter, discord }) {\n  const metadata = {\n    name,\n    description,\n    logoUri: logoUri || '',\n    infoUri: '',\n    twitter: twitter || '',\n    discord: discord || '',\n    telegram: '',\n    tags: [],\n  };\n\n  const auth = Buffer.from(\n    `${process.env.INFURA_IPFS_ID}:${process.env.INFURA_IPFS_SECRET}`\n  ).toString('base64');\n\n  return uploadToIPFS(metadata, auth);\n}",
+      "dependencies": [],
+      "relatedDocs": ["dev/v5/build/life-of-a-project.md"]
+    },
+    {
+      "id": "token-allowance",
+      "name": "ERC20 Token Allowance",
+      "description": "Check and set ERC20 token allowances before transactions",
+      "category": "utilities",
+      "tags": ["erc20", "allowance", "approve", "tokens"],
+      "code": "import { useReadContract, useWriteContract, useAccount, useWaitForTransactionReceipt } from 'wagmi';\nimport { erc20Abi } from 'viem';\nimport { useState } from 'react';\n\nexport function useTokenAllowance(tokenAddress, spenderAddress) {\n  const { address } = useAccount();\n  const [approvalTxHash, setApprovalTxHash] = useState();\n\n  const { data: allowance, refetch } = useReadContract({\n    address: tokenAddress,\n    abi: erc20Abi,\n    functionName: 'allowance',\n    args: [address, spenderAddress],\n    enabled: !!address && !!tokenAddress && !!spenderAddress,\n  });\n\n  const { writeContractAsync } = useWriteContract();\n  const { isLoading: isApproving } = useWaitForTransactionReceipt({ hash: approvalTxHash });\n\n  const ensureAllowance = async (amount) => {\n    if (allowance && allowance >= amount) return true;\n\n    const hash = await writeContractAsync({\n      address: tokenAddress,\n      abi: erc20Abi,\n      functionName: 'approve',\n      args: [spenderAddress, amount],\n    });\n\n    setApprovalTxHash(hash);\n    await refetch();\n    return true;\n  };\n\n  return { allowance, ensureAllowance, isApproving };\n}",
+      "dependencies": ["wagmi", "viem"],
+      "relatedDocs": []
+    },
+    {
+      "id": "permission-check",
+      "name": "Check User Permissions",
+      "description": "Query and check user permissions for project operations",
+      "category": "utilities",
+      "tags": ["permissions", "access-control", "roles"],
+      "code": "import { useBendystrawQuery } from 'juice-sdk-react';\nimport { ProjectWithPermissionsDocument } from '@/generated/graphql';\nimport { useAccount } from 'wagmi';\nimport { useMemo } from 'react';\n\nexport function useUserPermissions(projectId, chainId) {\n  const { address } = useAccount();\n\n  const { data, isLoading } = useBendystrawQuery(\n    ProjectWithPermissionsDocument,\n    { projectId: Number(projectId), chainId: Number(chainId) },\n    { enabled: !!projectId && !!chainId }\n  );\n\n  const permissions = useMemo(() => {\n    if (!data?.project?.permissions || !address) return [];\n    return data.project.permissions.filter(\n      p => p.wallet?.id?.toLowerCase() === address.toLowerCase()\n    );\n  }, [data, address]);\n\n  const hasPermission = useMemo(() => {\n    return (permissionKey) => {\n      return permissions.some(p => p.permissions?.includes(permissionKey));\n    };\n  }, [permissions]);\n\n  return { hasPermission, permissions, isLoading };\n}\n\n// Usage:\nfunction EditButton({ projectId, chainId }) {\n  const { hasPermission, isLoading } = useUserPermissions(projectId, chainId);\n\n  if (isLoading) return null;\n  if (!hasPermission('MINT_TOKENS')) return null;\n\n  return <button>Edit Project</button>;\n}",
+      "dependencies": ["juice-sdk-react", "wagmi"],
+      "relatedDocs": ["dev/v5/api/core/JBPermissions.md"]
+    }
+  ],
+  "projectTypes": [
+    {
+      "id": "crowdfunding",
+      "name": "Crowdfunding Campaign",
+      "description": "Time-limited fundraising with contributor rewards",
+      "recommendedPatterns": ["wagmi-setup", "project-provider", "pay-project", "project-metadata", "token-quote"],
+      "features": ["Fixed duration ruleset", "Token issuance for contributors", "Goal tracking"],
+      "relatedDocs": ["dev/v5/build/examples/launch-project.md"]
+    },
+    {
+      "id": "revnet",
+      "name": "Revnet (Revenue Network)",
+      "description": "Automated tokenomics with programmatic pricing and cross-chain support",
+      "recommendedPatterns": ["wagmi-setup", "project-provider", "pay-project", "cash-out-tokens", "token-quote", "cross-chain-tokens", "cross-chain-surplus"],
+      "features": ["Automated price curves", "Loan facility", "Cross-chain support", "Auto-issuance"],
+      "relatedDocs": ["dev/v5/build/examples/launch-revnet.md", "dev/v5/learn/glossary/revnet.md"]
+    },
+    {
+      "id": "dao-treasury",
+      "name": "DAO Treasury",
+      "description": "Community-controlled treasury with governance",
+      "recommendedPatterns": ["wagmi-setup", "project-provider", "pay-project", "bendystraw-query", "permission-check"],
+      "features": ["Multi-sig control", "Proposal-based spending", "Token voting", "Permission system"],
+      "relatedDocs": ["dev/v5/build/life-of-a-project.md"]
+    },
+    {
+      "id": "subscription",
+      "name": "Subscription Model",
+      "description": "Recurring payments with NFT membership benefits",
+      "recommendedPatterns": ["wagmi-setup", "project-provider", "pay-project", "pay-with-nft"],
+      "features": ["NFT membership tiers", "Recurring ruleset cycles", "Tiered access control"],
+      "relatedDocs": ["dev/v5/api/721-hook/JB721TiersHook.md"]
+    },
+    {
+      "id": "omnichain",
+      "name": "Omnichain Project",
+      "description": "Multi-chain project with cross-chain token bridging",
+      "recommendedPatterns": ["wagmi-setup", "project-provider", "pay-project", "cross-chain-tokens", "cross-chain-surplus", "cash-out-tokens"],
+      "features": ["Multi-chain deployment", "Cross-chain token bridging via suckers", "Aggregated treasury"],
+      "relatedDocs": ["dev/v5/learn/glossary/suckers.md", "dev/v5/api/suckers/JBSucker.md"]
+    }
+  ]
+}

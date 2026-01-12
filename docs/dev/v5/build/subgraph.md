@@ -1,62 +1,46 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-# Subgraph
+# Subgraph (Legacy)
 
-The Juicebox subgraphs index events from the Juicebox contracts, and provide data to apps like [Crypto Fundraising & DAO Management](https://juicebox.money) and [Revnets](https://app.revnet.eth.sucks).  
+:::tip Recommended: Use Bendystraw
+For V5 protocol data, we recommend using [Bendystraw](/docs/dev/v5/build/bendystraw.md) - a modern GraphQL API with better performance, cross-chain support, and active maintenance.
+:::
 
-There are two subgraph versions: one for legacy contracts versions 1-3, and another for the current v5 contracts. Both maintain extensive, up-to-date data reflecting nearly every aspect of the contracts, including Projects (or Revents) and their balances/configurations, activity events like Payments and Redemptions, token holders, token balances and transfers, and much more.  
+The legacy Juicebox subgraphs index events from Juicebox contracts V1-V3. These are maintained for backwards compatibility with older projects.
 
-Both subgraphs are developed primarily by Peri (peri.eth, [@peri](https://twitter.com/peri)), and hosted by [Alchemy Subgraphs - By Satsuma](https://subgraph.satsuma-prod.com).  
+## Legacy Subgraph Access
 
----
-
-## Querying the subgraph  
-
-**URLs:**  
-Query URLs use this format:  
+**URL Format:**
 ```
 https://subgraph.satsuma-prod.com/<api-key>/juicebox/<name>/api
-```  
+```
 
-If you don’t have your own Alchemy subgraphs API key, you can use the free dev key `bc505571c408`, which is restricted by a monthly query limit.  
+**Free dev key:** `bc505571c408` (rate limited)
 
-**For current (v5) contracts, Subgraph names follow their network name:**  
-- ethereum  
-- sepolia  
-- base  
-- base-sepolia  
-- arbitrum  
-- arbitrum-sepolia  
-- optimism  
-- optimism-sepolia  
+**Available networks (V1-V3 only):**
+- `ethereum-v3`
+- `sepolia-v3`
 
-> **Note:** data from v1-v3 contracts are NOT available in the current (v5) subgraphs.  
-
-**For previous contracts (v1-v3), network names are suffixed with `-v3`. Only Ethereum networks are available:**  
-- ethereum-v3  
-- sepolia-v3  
-
----
-
-## Query structure  
-
-Juicebox subgraphs accept standard graphql queries. More info [here](https://graphql.org/learn/).  
-
-You can use Alchemy’s Playground to make sample queries to a specific subgraph, and explore the schema for queryable entities:  
+**Playground:**
 ```
 https://subgraph.satsuma-prod.com/juicebox/<network>/playground
-```  
+```
 
-Schemas for each subgraph can also be found on Github.  
+## V5 Data
 
----
+For V5 protocol data across all chains (Ethereum, Optimism, Arbitrum, Base), use [Bendystraw](/docs/dev/v5/build/bendystraw.md):
 
-## Github  
+| Feature | Legacy Subgraph | Bendystraw |
+|---------|-----------------|------------|
+| Protocol versions | V1-V3 only | V5 |
+| Chains | Ethereum only | Ethereum, Optimism, Arbitrum, Base |
+| Cross-chain queries | No | Yes (Sucker Groups) |
+| SDK integration | Manual | `useBendystrawQuery` hook |
+| Maintenance | Minimal | Active |
 
-- **Current v5:** [peripheralist/nana-subgraph: 🧃 Juicebox Subgraph implementation.](https://github.com/peripheralist/nana-subgraph)  
-- **Previous versions 1-3:** [jbx-protocol/juice-subgraph: 🧃 Juicebox Subgraph implementation.](https://github.com/jbx-protocol/juice-subgraph)  
+## Source Code
 
-See the Readme in each repo for more information on development/contributing.
-
+- **V1-V3 Subgraph:** [jbx-protocol/juice-subgraph](https://github.com/jbx-protocol/juice-subgraph)
+- **Bendystraw (V5):** [peripheralist/bendystraw](https://github.com/peripheralist/bendystraw)

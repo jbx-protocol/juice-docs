@@ -1,0 +1,214 @@
+{
+  "description": "Juicebox V5 contract addresses across all supported chains",
+  "version": "v5",
+  "chains": {
+    "1": { "name": "Ethereum Mainnet", "explorer": "https://etherscan.io" },
+    "10": { "name": "Optimism", "explorer": "https://optimistic.etherscan.io" },
+    "42161": { "name": "Arbitrum", "explorer": "https://arbiscan.io" },
+    "8453": { "name": "Base", "explorer": "https://basescan.org" },
+    "11155111": { "name": "Sepolia", "explorer": "https://sepolia.etherscan.io" },
+    "11155420": { "name": "Optimism Sepolia", "explorer": "https://sepolia.optimism.io" },
+    "421614": { "name": "Arbitrum Sepolia", "explorer": "https://sepolia.arbiscan.io" },
+    "84532": { "name": "Base Sepolia", "explorer": "https://sepolia.basescan.org" }
+  },
+  "contracts": {
+    "core": {
+      "JBController": {
+        "description": "Main controller for managing projects, rulesets, and splits",
+        "address": "0x27da30646502e2f642be5281322ae8c394f7668a",
+        "note": "For revnets, use original JBController, NOT JBController5_1",
+        "docs": "dev/v5/api/core/JBController.md"
+      },
+      "JBController5_1": {
+        "description": "Updated controller with bug fixes - use for new projects (not revnets)",
+        "address": "0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1",
+        "note": "Use for new project deployments, NOT for revnets",
+        "docs": "dev/v5/api/core/JBController.md"
+      },
+      "JBDirectory": {
+        "description": "Registry for project controllers and terminals",
+        "address": "0x0061e516886a0540f63157f112c0588ee0651dcf",
+        "docs": "dev/v5/api/core/JBDirectory.md"
+      },
+      "JBProjects": {
+        "description": "NFT-based project ownership registry",
+        "address": "0x885f707efa18d2cb12f05a3a8eba6b4b26c8c1d4",
+        "docs": "dev/v5/api/core/JBProjects.md"
+      },
+      "JBTokens": {
+        "description": "Token management and accounting",
+        "address": "0x4d0edd347fb1fa21589c1e109b3474924be87636",
+        "docs": "dev/v5/api/core/JBTokens.md"
+      },
+      "JBRulesets": {
+        "description": "Ruleset storage and configuration",
+        "address": "0x6292281d69c3593fcf6ea074e5797341476ab428",
+        "note": "For revnets, use original JBRulesets",
+        "docs": "dev/v5/api/core/JBRulesets.md"
+      },
+      "JBRulesets5_1": {
+        "description": "Updated rulesets contract - use for new projects (not revnets)",
+        "address": "0xd4257005ca8d27bbe11f356453b0e4692414b056",
+        "docs": "dev/v5/api/core/JBRulesets.md"
+      },
+      "JBSplits": {
+        "description": "Split management for payment distribution",
+        "address": "0x7160a322fea44945a6ef9adfd65c322258df3c5e",
+        "docs": "dev/v5/api/core/JBSplits.md"
+      },
+      "JBMultiTerminal": {
+        "description": "Payment terminal for receiving and distributing funds",
+        "address": "0x2db6d704058e552defe415753465df8df0361846",
+        "note": "For revnets, use original JBMultiTerminal",
+        "docs": "dev/v5/api/core/JBMultiTerminal.md"
+      },
+      "JBMultiTerminal5_1": {
+        "description": "Updated terminal - use for new projects (not revnets)",
+        "address": "0x52869db3d61dde1e391967f2ce5039ad0ecd371c",
+        "docs": "dev/v5/api/core/JBMultiTerminal.md"
+      },
+      "JBPermissions": {
+        "description": "Permission management system",
+        "address": "0x04fd6913d6c32d8c216e153a43c04b1857a7793d",
+        "docs": "dev/v5/api/core/JBPermissions.md"
+      },
+      "JBPrices": {
+        "description": "Price feed registry",
+        "address": "0x9b90e507cf6b7eb681a506b111f6f50245e614c4",
+        "docs": "dev/v5/api/core/JBPrices.md"
+      },
+      "JBTerminalStore": {
+        "description": "Terminal accounting storage",
+        "address": "0xfe33b439ec53748c87dcedacb83f05add5014744",
+        "docs": "dev/v5/api/core/JBTerminalStore.md"
+      },
+      "JBTerminalStore5_1": {
+        "description": "Updated terminal store - use with 5_1 contracts",
+        "address": "0x5cdfcf7f5f25da0dcb0eccd027e5feebada1d964",
+        "docs": "dev/v5/api/core/JBTerminalStore.md"
+      },
+      "JBFundAccessLimits": {
+        "description": "Fund access limit management",
+        "address": "0x3a46b21720c8b70184b0434a2293b2fdcc497ce7",
+        "docs": "dev/v5/api/core/JBFundAccessLimits.md"
+      },
+      "JBERC20": {
+        "description": "ERC20 token implementation for projects",
+        "address": "0xaeac450c8522e40244bdfb8120ee398207be5d31",
+        "docs": "dev/v5/api/core/JBERC20.md"
+      }
+    },
+    "revnet": {
+      "REVDeployer": {
+        "description": "Deploy new Revnet projects with automated tokenomics",
+        "address": "0x2ca27bde7e7d33e353b44c27acfcf6c78dde251d",
+        "docs": "dev/v5/api/revnet/REVDeployer.md"
+      },
+      "REVLoans": {
+        "description": "Loan facility for Revnet token holders",
+        "address": "0x1880d832aa283d05b8eab68877717e25fbd550bb",
+        "docs": "dev/v5/api/revnet/REVLoans.md"
+      }
+    },
+    "hooks": {
+      "JBBuybackHook": {
+        "description": "Buyback hook for automatic token buybacks",
+        "addresses": {
+          "1": "0xd342490ec41d5982c23951253a74a1c940fe0f9b",
+          "10": "0x318f8aa6a95cb83419985c0d797c762f5a7824f3",
+          "42161": "0x4ac3e20edd1d398def0dfb44d3adb9fc244f0320",
+          "8453": "0xb6133a222315f8e9d25e7c77bac5ddeb3451d088",
+          "11155111": "0xf082e3218a690ea6386506bed338f6878d21815f",
+          "11155420": "0x79e5ca5ebe4f110965248afad88b8e539e1aa8fd",
+          "421614": "0xb35ab801c008a64d8f3eea0a8a6209b0d176f2df",
+          "84532": "0x79e5ca5ebe4f110965248afad88b8e539e1aa8fd"
+        },
+        "docs": "dev/v5/api/buyback-hook/JBBuybackHook.md"
+      },
+      "JBSwapTerminal": {
+        "description": "Swap terminal for token swaps",
+        "addresses": {
+          "1": "0x259385b97dfbd5576bd717dc7b25967ec8b145dd",
+          "10": "0x73d04584bde126242c36c2c7b219cbdec7aad774",
+          "42161": "0x483c9b12c5bd2da73133aae30642ce0008c752ad",
+          "8453": "0x4fd73d8b285e82471f08a4ef9861d6248b832edd",
+          "11155111": "0xca3f2cc5a35c0412e8147746602b76ba4ac29fc5",
+          "11155420": "0xc7369f75bd678e1a9a46b82e2512e84489d4d32d",
+          "421614": "0x5f820a86d63eb1b98c562728719dc1e30967c41c",
+          "84532": "0xc7369f75bd678e1a9a46b82e2512e84489d4d32d"
+        },
+        "docs": "dev/v5/api/swap-terminal/JBSwapTerminal.md"
+      },
+      "JB721TiersHookDeployer": {
+        "description": "Deploy NFT tier hooks for projects",
+        "address": "0xef60878d00378ac5f93d209f4616450ee8d41ca7",
+        "docs": "dev/v5/api/721-hook/JB721TiersHookDeployer.md"
+      },
+      "JB721TiersHookDeployer5_1": {
+        "description": "Updated NFT tier hook deployer",
+        "address": "0x792bdd4dd1e52fcf8fb3e80278a2b4e4396d2732",
+        "docs": "dev/v5/api/721-hook/JB721TiersHookDeployer.md"
+      }
+    },
+    "suckers": {
+      "JBSuckerRegistry": {
+        "description": "Registry for cross-chain token bridges (suckers)",
+        "address": "0x07c8c5bf08f0361883728a8a5f8824ba5724ece3",
+        "docs": "dev/v5/api/suckers/JBSuckerRegistry.md"
+      },
+      "JBArbitrumSuckerDeployer": {
+        "description": "Deploy suckers for Ethereum <-> Arbitrum bridging",
+        "address": "0xea06bd663a1cec97b5bdec9375ab9a63695c9699",
+        "chains": ["1", "42161", "11155111", "421614"],
+        "docs": "dev/v5/api/suckers/JBArbitrumSucker.md"
+      },
+      "JBOptimismSuckerDeployer": {
+        "description": "Deploy suckers for Ethereum <-> Optimism bridging",
+        "address": "0x77cdb0f5eef8febd67dd6e594ff654fb12cc3057",
+        "chains": ["1", "10", "11155111", "11155420"],
+        "docs": "dev/v5/api/suckers/JBOptimismSucker.md"
+      },
+      "JBBaseSuckerDeployer": {
+        "description": "Deploy suckers for Ethereum <-> Base bridging",
+        "address": "0xd9f35d8dd36046f14479e6dced03733724947efd",
+        "chains": ["1", "8453", "11155111", "84532"],
+        "docs": "dev/v5/api/suckers/JBBaseSucker.md"
+      }
+    },
+    "omnichain": {
+      "JBOmnichainDeployer": {
+        "description": "Deploy omnichain projects across multiple chains",
+        "address": "0x8f5ded85c40b50d223269c1f922a056e72101590",
+        "docs": "dev/v5/api/omnichain-deployers/JBOmnichainDeployer.md"
+      },
+      "JBOmnichainDeployer5_1": {
+        "description": "Updated omnichain deployer",
+        "address": "0x587bf86677ec0d1b766d9ba0d7ac2a51c6c2fc71",
+        "docs": "dev/v5/api/omnichain-deployers/JBOmnichainDeployer.md"
+      }
+    },
+    "croptop": {
+      "CTPublisher": {
+        "description": "Croptop content publisher",
+        "address": "0x03ef9ea1467df70d4b1e1d619aa9a2a2f820ee24",
+        "docs": "dev/v5/api/croptop/CTPublisher.md"
+      },
+      "CTDeployer": {
+        "description": "Deploy new Croptop instances",
+        "address": "0xc3c26682ef39a4a5f4a1dc2459a6fbcba4e5d8ea",
+        "docs": "dev/v5/api/croptop/CTDeployer.md"
+      }
+    }
+  },
+  "constants": {
+    "NATIVE_TOKEN": {
+      "description": "Address representing native token (ETH)",
+      "address": "0x000000000000000000000000000000000000EEEe"
+    }
+  },
+  "notes": {
+    "5_1_contracts": "Use 5_1 contracts (JBController5_1, JBMultiTerminal5_1, etc.) for new project deployments. Do NOT use 5_1 contracts for Revnets - use the original contracts instead.",
+    "same_address": "Most core contracts have the same address across all chains (deterministic deployment).",
+    "hooks": "Hook contracts (JBBuybackHook, JBSwapTerminal) may have different addresses per chain."
+  }
+}
