@@ -373,13 +373,23 @@ function NavbarSearchBar() {
             <div ref={resultsRef} className={styles.overlayContentArea}>
               {messages.length === 0 && !isLoading ? (
                 <div className={styles.welcomeMessage}>
-                  <p>👋 Hi! I can help you find information in the Juicebox documentation.</p>
-                  <p>Try asking:</p>
-                  <ul>
-                    <li>"How do I deploy a project?"</li>
-                    <li>"What are hooks?"</li>
-                    <li>"How to configure a ruleset?"</li>
+                  <p>👋 Hi! I'm your Juicebox documentation assistant. I can help you build on the Juicebox protocol.</p>
+                  <p><strong>Common developer questions:</strong></p>
+                  <ul className={styles.suggestionList}>
+                    <li onClick={() => { setInput('How do I build a pay button for my project?'); }} className={styles.suggestionItem}>
+                      "How do I build a pay button for my project?"
+                    </li>
+                    <li onClick={() => { setInput('How do I query project data with Bendystraw?'); }} className={styles.suggestionItem}>
+                      "How do I query project data with Bendystraw?"
+                    </li>
+                    <li onClick={() => { setInput('What SDK hooks do I need for a token dashboard?'); }} className={styles.suggestionItem}>
+                      "What SDK hooks do I need for a token dashboard?"
+                    </li>
+                    <li onClick={() => { setInput('How do cash outs and redemptions work?'); }} className={styles.suggestionItem}>
+                      "How do cash outs and redemptions work?"
+                    </li>
                   </ul>
+                  <p className={styles.suggestionHint}><strong>Or ask about:</strong> rulesets, reserved tokens, NFT hooks, omnichain projects, contract addresses, SDK setup</p>
                 </div>
               ) : (
                 <div className={styles.messagesContainer}>

@@ -356,6 +356,66 @@
   left: 0;
 }
 
+/* Suggestion List - Clickable */
+.suggestionList {
+  text-align: left;
+  margin: 24px auto;
+  max-width: 500px;
+  list-style: none;
+  padding: 0;
+}
+
+.suggestionItem {
+  margin: 12px 0;
+  font-size: 16px;
+  padding: 14px 20px;
+  padding-left: 48px;
+  position: relative;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--ifm-color-content);
+  border: 1px solid transparent;
+}
+
+.suggestionItem:before {
+  content: "→";
+  position: absolute;
+  left: 20px;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.suggestionItem:hover {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-primary);
+  transform: translateX(4px);
+}
+
+.suggestionItem:hover:before {
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .suggestionItem {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme="dark"] .suggestionItem:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.suggestionHint {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary);
+  margin-top: 24px;
+}
+
+.suggestionHint strong {
+  color: var(--ifm-color-content);
+}
+
 /* No Results */
 .noResults {
   padding: 32px 24px;
