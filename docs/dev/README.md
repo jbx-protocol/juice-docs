@@ -36,7 +36,7 @@ These docs are here to help you navigate the protocol, whether you're...
 2. **[Build](/docs/dev/v5/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
 3. **[API](/docs/dev/v5/api/core/README.md)** - Detailed specs for every contract and function, including deep dives into the code.
 4. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
-5. **[AI Integration](/docs/dev/v5/build/mcp-server.md)** - MCP server, Claude Code skills, and machine-readable resources.
+5. **[AI Integration](/docs/dev/v5/build/ai.md)** - MCP server, Claude Code skills, and machine-readable resources.
 
 ---
 #### For AI Agents
@@ -48,7 +48,7 @@ If you're an AI assistant or automated tool:
 - **[/api/contracts.json](https://docs.juicebox.money/api/contracts.json)** - Machine-readable contract addresses for all networks
 - **[/api/sdk.json](https://docs.juicebox.money/api/sdk.json)** - SDK hooks and types reference
 - **[Claude Code Skills](https://github.com/mejango/juicebox-skills)** - Comprehensive skills for deploying projects, generating hooks, and querying state
-- **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Model Context Protocol endpoints for documentation search
+- **[MCP Server](/docs/dev/v5/build/ai.md)** - Query docs, get contract addresses, and search code examples via HTTP API
 
 ---
 
