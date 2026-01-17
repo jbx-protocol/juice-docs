@@ -9,7 +9,7 @@ keywords: [deploy, launch, project, JBController, terminal, rulesets, payments, 
 
 To launch a project, call [`JBController.launchProjectFor(...)`](/docs/dev/v5/api/core/JBController.md#launchprojectfor).
 
-New projects and integrations should use `JBController5_1` address, and `JBTerminal5_1` address within the `terminalConfigurations`. See [`Addresses`](/docs/dev/v5/addresses.md).
+New projects and integrations should use `JBController5_1` address, and `JBMultiTerminal5_1` address within the `terminalConfigurations`. See [`Addresses`](/docs/dev/v5/addresses.md).
 
 ```
 function launchProjectFor(
