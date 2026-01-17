@@ -350,7 +350,7 @@ function NavbarSearchBar() {
                 >
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                <h3>Ask the docs with GPT</h3>
+                <h3>Ask the docs</h3>
               </div>
               <button
                 className={styles.closeButton}
@@ -373,23 +373,45 @@ function NavbarSearchBar() {
             <div ref={resultsRef} className={styles.overlayContentArea}>
               {messages.length === 0 && !isLoading ? (
                 <div className={styles.welcomeMessage}>
-                  <p>👋 Hi! I'm your Juicebox documentation assistant. I can help you build on the Juicebox protocol.</p>
-                  <p><strong>Common developer questions:</strong></p>
-                  <ul className={styles.suggestionList}>
-                    <li onClick={() => { setInput('How do I build a pay button for my project?'); }} className={styles.suggestionItem}>
-                      "How do I build a pay button for my project?"
-                    </li>
-                    <li onClick={() => { setInput('How do I query project data with Bendystraw?'); }} className={styles.suggestionItem}>
-                      "How do I query project data with Bendystraw?"
-                    </li>
-                    <li onClick={() => { setInput('What SDK hooks do I need for a token dashboard?'); }} className={styles.suggestionItem}>
-                      "What SDK hooks do I need for a token dashboard?"
-                    </li>
-                    <li onClick={() => { setInput('How do cash outs and redemptions work?'); }} className={styles.suggestionItem}>
-                      "How do cash outs and redemptions work?"
-                    </li>
-                  </ul>
-                  <p className={styles.suggestionHint}><strong>Or ask about:</strong> rulesets, reserved tokens, NFT hooks, omnichain projects, contract addresses, SDK setup</p>
+                  <p>Ask me anything about Juicebox V5. I can help with protocol concepts, building integrations, deploying projects, and more.</p>
+
+                  <div className={styles.suggestionCategory}>
+                    <p><strong>Building on Juicebox:</strong></p>
+                    <ul className={styles.suggestionList}>
+                      <li onClick={() => { setInput('How do I deploy a project with JBController?'); }} className={styles.suggestionItem}>
+                        "How do I deploy a project with JBController?"
+                      </li>
+                      <li onClick={() => { setInput('What SDK hooks do I need to build a pay button?'); }} className={styles.suggestionItem}>
+                        "What SDK hooks do I need to build a pay button?"
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.suggestionCategory}>
+                    <p><strong>Understanding the protocol:</strong></p>
+                    <ul className={styles.suggestionList}>
+                      <li onClick={() => { setInput('How do rulesets and payout limits work?'); }} className={styles.suggestionItem}>
+                        "How do rulesets and payout limits work?"
+                      </li>
+                      <li onClick={() => { setInput('What is a revnet and how is it different from a regular project?'); }} className={styles.suggestionItem}>
+                        "What is a revnet and how is it different from a regular project?"
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.suggestionCategory}>
+                    <p><strong>Reference:</strong></p>
+                    <ul className={styles.suggestionList}>
+                      <li onClick={() => { setInput('What are the V5 contract addresses?'); }} className={styles.suggestionItem}>
+                        "What are the V5 contract addresses?"
+                      </li>
+                      <li onClick={() => { setInput('How do I integrate with AI tools like Claude Code?'); }} className={styles.suggestionItem}>
+                        "How do I integrate with AI tools like Claude Code?"
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className={styles.suggestionHint}><strong>Topics:</strong> payments, cash outs, tokens, splits, hooks, terminals, omnichain, suckers, reserved rate, surplus</p>
                 </div>
               ) : (
                 <div className={styles.messagesContainer}>

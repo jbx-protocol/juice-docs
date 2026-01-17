@@ -1,0 +1,582 @@
+# Juicebox Protocol V5 - Complete Reference for LLMs
+
+> This document provides comprehensive context for AI systems to understand and interact with the Juicebox protocol.
+
+## What is Juicebox?
+
+Juicebox is an Ethereum-native programmable treasury protocol for tokenized fundraising, revenue management, and financial operations. It enables:
+
+- **Tokenized treasuries**: Projects issue tokens to contributors proportional to their payments
+- **Programmable rulesets**: Time-bound configurations controlling fund distribution and token issuance
+- **Omnichain operations**: Unified token/treasury across Ethereum, Optimism, Arbitrum, and Base
+- **Automated distributions**: Preprogrammed splits for payouts and reserved tokens
+- **Community exit mechanisms**: Token holders can cash out for proportional treasury surplus
+
+## Protocol Architecture
+
+### Core Contracts
+
+| Contract | Purpose | Mainnet Address |
+|----------|---------|-----------------|
+| JBController5_1 | Manages project rulesets, tokens, splits | 0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1 |
+| JBMultiTerminal5_1 | Handles payments, cashouts, distributions | 0x52869db3d61dde1e391967f2ce5039ad0ecd371c |
+| JBDirectory | Registry of project terminals/controllers | 0x0061e516886a0540f63157f112c0588ee0651dcf |
+| JBProjects | ERC-721 representing project ownership | 0x885f707efa18d2cb12f05a3a8eba6b4b26c8c1d4 |
+| JBTokens | Manages project token accounting | 0x4d0edd347fb1fa21589c1e109b3474924be87636 |
+| JBRulesets5_1 | Stores ruleset configurations | 0xd4257005ca8d27bbe11f356453b0e4692414b056 |
+| JBSplits | Manages payout and reserved token splits | 0x7160a322fea44945a6ef9adfd65c322258df3c5e |
+| JBPrices | Currency price conversions | 0x9b90e507cf6b7eb681a506b111f6f50245e614c4 |
+| JBPermissions | Permission delegation system | 0x04fd6913d6c32d8c216e153a43c04b1857a7793d |
+| JBFundAccessLimits | Payout limits and surplus allowances | 0x3a46b21720c8b70184b0434a2293b2fdcc497ce7 |
+| JBTerminalStore5_1 | Terminal balance and accounting | 0x5cdfcf7f5f25da0dcb0eccd027e5feebada1d964 |
+| REVDeployer | Revnet deployment and management | 0x2ca27bde7e7d33e353b44c27acfcf6c78dde251d |
+| REVLoans | Token-collateralized loans for revnets | 0x1880d832aa283d05b8eab68877717e25fbd550bb |
+
+### Supported Networks
+
+| Network | Chain ID | Status |
+|---------|----------|--------|
+| Ethereum Mainnet | 1 | Production |
+| Optimism | 10 | Production |
+| Arbitrum | 42161 | Production |
+| Base | 8453 | Production |
+| Ethereum Sepolia | 11155111 | Testnet |
+| Optimism Sepolia | 11155420 | Testnet |
+| Arbitrum Sepolia | 421614 | Testnet |
+| Base Sepolia | 84532 | Testnet |
+
+All core contracts share the same address across all chains (CREATE2 deployment).
+
+---
+
+## Core Concepts
+
+### 1. Projects
+
+Each Juicebox project is an ERC-721 NFT managed by JBProjects. The NFT owner has administrative control over:
+- Ruleset configuration
+- Token issuance
+- Split management
+- Terminal settings
+
+```solidity
+// Get project owner
+address owner = JBProjects.ownerOf(projectId);
+
+// Get project metadata URI
+string memory uri = JBController.uriOf(projectId);
+```
+
+### 2. Rulesets
+
+Rulesets are time-bound configurations defining project operations. Key properties:
+
+| Property | Description |
+|----------|-------------|
+| duration | How long the ruleset lasts (0 = infinite) |
+| weight | Tokens issued per unit of payment |
+| weightCutPercent | Automatic weight reduction per cycle (max 100% = 1_000_000_000) |
+| approvalHook | Contract that must approve ruleset changes |
+| metadata.reservedPercent | % of tokens reserved for splits (max 100% = 10_000) |
+| metadata.cashOutTaxRate | Tax on surplus cashouts (max 100% = 10_000) |
+| metadata.baseCurrency | Currency for weight calculations (1=ETH, 2=USD) |
+| metadata.pausePay | Disable payments |
+| metadata.pauseCreditTransfers | Disable credit transfers |
+| metadata.allowOwnerMinting | Allow owner to mint tokens |
+| metadata.allowTerminalMigration | Allow terminal changes |
+| metadata.allowSetTerminals | Allow setting new terminals |
+| metadata.allowSetController | Allow controller changes |
+| metadata.allowAddAccountingContext | Allow new token accounting |
+| metadata.allowAddPriceFeed | Allow new price feeds |
+| metadata.ownerMustSendPayouts | Only owner can distribute payouts |
+| metadata.holdFees | Hold fees for potential return |
+| metadata.useTotalSurplusForCashOuts | Include all terminal surplus |
+| metadata.useDataHookForPay | Use data hook for payments |
+| metadata.useDataHookForCashOut | Use data hook for cashouts |
+| metadata.dataHook | Custom logic contract address |
+
+```solidity
+// Get current ruleset
+(JBRuleset memory ruleset, JBRulesetMetadata memory metadata) =
+    JBController.currentRulesetOf(projectId);
+
+// Get upcoming ruleset
+(JBRuleset memory upcoming, JBRulesetMetadata memory upcomingMetadata) =
+    JBController.upcomingRulesetOf(projectId);
+```
+
+### 3. Tokens
+
+Projects issue tokens to payment beneficiaries. Tokens can be:
+- **Credits**: Internal protocol accounting (default)
+- **ERC-20**: Claimed from credits or issued directly
+
+```solidity
+// Get total token balance (credits + ERC-20)
+uint256 balance = JBTokens.totalBalanceOf(holder, projectId);
+
+// Get only credit balance
+uint256 credits = JBTokens.creditBalanceOf(holder, projectId);
+
+// Get project's ERC-20 token
+IJBToken token = JBTokens.tokenOf(projectId);
+
+// Claim credits as ERC-20
+JBTokens.claimTokensFor(holder, projectId, amount, beneficiary);
+
+// Deploy ERC-20 for project
+IJBToken token = JBController.deployERC20For(projectId, "Name", "SYMBOL", salt);
+```
+
+### 4. Payments
+
+Pay a project to receive tokens:
+
+```solidity
+function pay(
+    uint256 projectId,
+    address token,           // Use JBConstants.NATIVE_TOKEN for ETH
+    uint256 amount,
+    address beneficiary,     // Receives tokens
+    uint256 minReturnedTokens,
+    string calldata memo,
+    bytes calldata metadata
+) external payable returns (uint256 beneficiaryTokenCount);
+
+// Example: Pay 1 ETH to project 1
+uint256 tokens = JBMultiTerminal.pay{value: 1 ether}(
+    1,                       // projectId
+    JBConstants.NATIVE_TOKEN,
+    1 ether,
+    msg.sender,              // beneficiary
+    0,                       // minReturnedTokens
+    "Supporting the project",
+    ""
+);
+```
+
+### 5. Cash Outs (Redemptions)
+
+Token holders can exit by cashing out for proportional surplus:
+
+```solidity
+function cashOutTokensOf(
+    address holder,
+    uint256 projectId,
+    uint256 cashOutCount,    // Tokens to burn
+    address tokenToReclaim,  // Token to receive (ETH, USDC, etc.)
+    uint256 minTokensReclaimed,
+    address payable beneficiary,
+    bytes calldata metadata
+) external returns (uint256 reclaimAmount);
+
+// Cash out formula (simplified):
+// reclaimAmount = surplus * cashOutCount / totalSupply * (1 - cashOutTaxRate)
+```
+
+### 6. Distributions
+
+Distribute funds to preprogrammed splits:
+
+```solidity
+// Send payouts (up to payout limit)
+function sendPayoutsOf(
+    uint256 projectId,
+    address token,
+    uint256 amount,
+    uint256 currency,
+    uint256 minTokensPaidOut
+) external returns (uint256 netLeftoverPayoutAmount);
+
+// Use surplus allowance (owner only)
+function useAllowanceOf(
+    uint256 projectId,
+    address token,
+    uint256 amount,
+    uint256 currency,
+    uint256 minTokensPaidOut,
+    address payable beneficiary,
+    address payable feeBeneficiary,
+    string calldata memo
+) external returns (uint256 netAmountPaidOut);
+
+// Distribute reserved tokens
+JBController.sendReservedTokensToSplitsOf(projectId);
+```
+
+### 7. Splits
+
+Splits define automated fund/token distribution:
+
+```solidity
+struct JBSplit {
+    bool preferAddToBalance;  // Add to balance vs pay
+    uint32 percent;           // Out of 1_000_000_000 (100%)
+    uint256 projectId;        // 0 for external address
+    address payable beneficiary;
+    uint48 lockedUntil;       // Timestamp
+    IJBSplitHook hook;        // Custom logic
+}
+
+// Get splits for a ruleset
+JBSplit[] memory splits = JBSplits.splitsOf(
+    projectId,
+    rulesetId,
+    1 // groupId (1 = payouts, 2 = reserved tokens)
+);
+```
+
+---
+
+## Deploying a Project
+
+### Basic Project
+
+```solidity
+function launchProjectFor(
+    address owner,
+    string calldata projectUri,
+    JBRulesetConfig[] calldata rulesetConfigurations,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    string calldata memo
+) external returns (uint256 projectId);
+```
+
+### Example Configuration
+
+```javascript
+const rulesetConfig = {
+  mustStartAtOrAfter: 0,
+  duration: 0,                    // Infinite ruleset
+  weight: 1_000_000_000_000_000_000_000_000, // 1M tokens per ETH
+  weightCutPercent: 0,
+  approvalHook: ethers.ZeroAddress,
+  metadata: {
+    reservedPercent: 5_000,       // 50%
+    cashOutTaxRate: 0,
+    baseCurrency: 1,              // ETH
+    pausePay: false,
+    pauseCreditTransfers: false,
+    allowOwnerMinting: false,
+    allowTerminalMigration: false,
+    allowSetTerminals: false,
+    allowSetController: false,
+    allowAddAccountingContext: false,
+    allowAddPriceFeed: false,
+    ownerMustSendPayouts: false,
+    holdFees: false,
+    useTotalSurplusForCashOuts: false,
+    useDataHookForPay: false,
+    useDataHookForCashOut: false,
+    dataHook: ethers.ZeroAddress,
+    metadata: 0
+  },
+  splitGroups: [
+    {
+      groupId: 1, // Payouts
+      splits: [
+        {
+          preferAddToBalance: false,
+          percent: 500_000_000,   // 50%
+          projectId: 0,
+          beneficiary: "0x...",
+          lockedUntil: 0,
+          hook: ethers.ZeroAddress
+        }
+      ]
+    }
+  ],
+  fundAccessLimitGroups: [
+    {
+      terminal: JBMultiTerminal.address,
+      token: ethers.ZeroAddress, // Native token
+      payoutLimits: [
+        { amount: ethers.parseEther("10"), currency: 1 }
+      ],
+      surplusAllowances: []
+    }
+  ]
+};
+
+const terminalConfig = {
+  terminal: JBMultiTerminal.address,
+  accountingContextsToAccept: [
+    {
+      token: ethers.ZeroAddress, // ETH
+      decimals: 18,
+      currency: 61166           // Native token currency
+    }
+  ]
+};
+```
+
+### Omnichain Project
+
+Deploy across multiple chains with suckers for token bridging:
+
+```solidity
+function launchProjectFor(
+    address owner,
+    string calldata projectUri,
+    JBRulesetConfig[] calldata rulesetConfigurations,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    string calldata memo,
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration
+) external returns (uint256 projectId, address[] memory suckers);
+```
+
+---
+
+## Hooks
+
+Hooks enable custom logic at key protocol points:
+
+### IJBRulesetDataHook
+Called before pay/cashOut to modify behavior:
+```solidity
+interface IJBRulesetDataHook {
+    function beforePayRecordedWith(JBBeforePayRecordedContext calldata context)
+        external view returns (uint256 weight, JBPayHookSpecification[] memory hookSpecifications);
+
+    function beforeCashOutRecordedWith(JBBeforeCashOutRecordedContext calldata context)
+        external view returns (uint256 cashOutTaxRate, uint256 cashOutCount, uint256 totalSupply, JBCashOutHookSpecification[] memory hookSpecifications);
+}
+```
+
+### IJBPayHook
+Called after payment is recorded:
+```solidity
+interface IJBPayHook {
+    function afterPayRecordedWith(JBAfterPayRecordedContext calldata context) external payable;
+}
+```
+
+### IJBCashOutHook
+Called after cashout is recorded:
+```solidity
+interface IJBCashOutHook {
+    function afterCashOutRecordedWith(JBAfterCashOutRecordedContext calldata context) external payable;
+}
+```
+
+### IJBSplitHook
+Called when split is processed:
+```solidity
+interface IJBSplitHook {
+    function processSplitWith(JBSplitHookContext calldata context) external payable;
+}
+```
+
+### IJBRulesetApprovalHook
+Controls ruleset change approval:
+```solidity
+interface IJBRulesetApprovalHook {
+    function approvalStatusOf(uint256 projectId, uint256 rulesetId, uint256 start)
+        external view returns (JBApprovalStatus);
+}
+```
+
+---
+
+## Revnets
+
+Revnets are a specialized project type with deterministic, transparent tokenomics:
+
+- **No owner control**: Operations are fully automated
+- **Predictable issuance**: Weight cuts scheduled in advance
+- **Token loans**: Borrow against tokens without selling
+- **Omnichain native**: Deploy simultaneously across chains
+
+### Deploy a Revnet
+
+```solidity
+// Via REVDeployer
+function deployFor(
+    uint256 revnetId,
+    REVConfig calldata configuration,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    REVBuybackHookConfig calldata buybackHookConfiguration,
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration,
+    REVCroptopAllowedPost[] calldata allowedPosts,
+    bytes calldata extraHookMetadata,
+    JBPayHookSpecification[] memory otherPayHooksSpecifications
+) external returns (uint256, address);
+```
+
+---
+
+## Common Queries
+
+### Get Project Balance
+```solidity
+uint256 balance = JBTerminalStore.balanceOf(terminal, projectId, token);
+```
+
+### Get Project Surplus
+```solidity
+uint256 surplus = JBTerminalStore.currentSurplusOf(
+    terminal,
+    projectId,
+    accountingContexts,
+    18,  // decimals
+    1    // currency (ETH)
+);
+```
+
+### Get Reclaimable Amount
+```solidity
+uint256 reclaimable = JBTerminalStore.currentReclaimableSurplusOf(
+    projectId,
+    tokenCount,
+    totalSupply,
+    surplus
+);
+```
+
+### Get Price Conversion
+```solidity
+uint256 price = JBPrices.pricePerUnitOf(
+    projectId,
+    pricingCurrency,
+    unitCurrency,
+    18  // decimals
+);
+```
+
+---
+
+## Currency System
+
+| Currency ID | Description |
+|-------------|-------------|
+| 1 | ETH |
+| 2 | USD |
+| 61166 | Native token (derived from JBConstants.NATIVE_TOKEN) |
+| uint32(address) | ERC-20 tokens use truncated address |
+
+---
+
+## Fee Structure
+
+- **2.5% JBX membership fee** on taxed cashouts (cashOutTaxRate > 0)
+- **2.5% fee** on payouts to non-Juicebox addresses
+- Fees can be held and potentially returned via holdFees flag
+
+---
+
+## API Access
+
+### MCP Server Endpoints
+
+```bash
+# Search documentation
+POST https://docs.juicebox.money/api/mcp/search
+Body: {"query": "deploy project", "category": "developer", "limit": 5}
+
+# Get document
+POST https://docs.juicebox.money/api/mcp/get-doc
+Body: {"path": "dev/v5/learn/overview.md"}
+
+# Get contract addresses
+GET https://docs.juicebox.money/api/mcp/contracts?contract=JBController
+
+# Get SDK reference
+GET https://docs.juicebox.money/api/mcp/sdk?package=juice-sdk-react
+
+# Get integration patterns
+GET https://docs.juicebox.money/api/mcp/patterns?projectType=revnet
+
+# Search code examples
+POST https://docs.juicebox.money/api/mcp/search-code
+Body: {"query": "pay", "language": "solidity"}
+```
+
+### Subgraph
+
+Query indexed protocol data:
+```graphql
+{
+  projects(first: 10) {
+    id
+    projectId
+    owner
+    createdAt
+    volume
+    volumeUSD
+    balance
+  }
+}
+```
+
+---
+
+## SDK (juice-sdk-react)
+
+### Setup
+```typescript
+import { JBProjectProvider } from "juice-sdk-react";
+
+function App() {
+  return (
+    <JBProjectProvider projectId={1n} ctxProps={{ metadata: { ipfsGatewayHostname: "..." }}}>
+      <ProjectComponent />
+    </JBProjectProvider>
+  );
+}
+```
+
+### Read Hooks
+```typescript
+import { useJBProjectMetadata, useJBRuleset, useJBTokenContext } from "juice-sdk-react";
+
+const { data: metadata } = useJBProjectMetadata();
+const { ruleset, rulesetMetadata } = useJBRuleset();
+const { token } = useJBTokenContext();
+```
+
+### Write Hooks
+```typescript
+import { usePay, useCashOut } from "juice-sdk-react";
+
+const { write: pay } = usePay();
+const { write: cashOut } = useCashOut();
+```
+
+---
+
+## AI Agent Skills
+
+For Claude Code and other AI coding assistants, Juicebox provides a comprehensive skills plugin:
+
+**GitHub**: https://github.com/mejango/juicebox-skills
+
+Available skills:
+- `/jb-project` - Create and configure Juicebox V5 projects
+- `/jb-ruleset` - Configure and queue rulesets
+- `/jb-pay-hook` - Generate custom pay hooks
+- `/jb-cash-out-hook` - Generate custom cash out hooks
+- `/jb-split-hook` - Generate custom split hooks
+- `/jb-decode` - Decode and analyze transaction calldata
+- `/jb-query` - Query project state from the blockchain
+- `/jb-docs` - Query documentation via MCP server
+- `/jb-v5-api` - API reference for all contracts
+- `/jb-v5-impl` - Deep implementation knowledge
+
+These skills enable AI agents to:
+- Deploy projects and revnets programmatically
+- Generate custom Solidity hooks with Foundry tests
+- Query live blockchain data
+- Decode existing transactions
+- Access up-to-date documentation
+
+---
+
+## Links
+
+- Documentation: https://docs.juicebox.money
+- App: https://juicebox.money
+- GitHub: https://github.com/jbx-protocol
+- Claude Code Skills: https://github.com/mejango/juicebox-skills
+- Discord: https://discord.gg/juicebox
+- Governance: https://jbdao.org
+- Subgraph: Available on each supported network

@@ -1,0 +1,116 @@
+# Juicebox Protocol
+
+> Juicebox is a programmable treasury protocol for tokenized fundraising and financial operations on Ethereum and L2s.
+
+## Overview
+
+Juicebox V5 is an onchain payment processor and capital formation engine. Projects deploy tokenized treasuries with programmable rulesets that govern fund distribution, token issuance, and cashouts.
+
+## Core Concepts
+
+- **Projects**: Each project is an NFT granting administrative control over treasury operations
+- **Rulesets**: Time-bound configurations controlling payments, distributions, and token issuance
+- **Terminals**: Payment processors accepting ETH and ERC-20 tokens
+- **Tokens**: Project tokens issued to contributors (credits or ERC-20)
+- **Splits**: Automated fund and token distribution rules
+- **Hooks**: Custom logic for payments, cashouts, and ruleset changes
+
+## Documentation
+
+- Overview: https://docs.juicebox.money/dev/v5/learn/overview/
+- Glossary: https://docs.juicebox.money/dev/v5/learn/glossary/
+- Project Lifecycle: https://docs.juicebox.money/dev/v5/build/life-of-a-project/
+- Revnet Guide: https://docs.juicebox.money/dev/v5/build/life-of-a-revnet/
+- Contract Addresses: https://docs.juicebox.money/dev/v5/addresses/
+- API Reference: https://docs.juicebox.money/dev/v5/api/core/
+
+## Machine-Readable Resources
+
+- MCP API: https://docs.juicebox.money/api/mcp/
+- Contract Addresses JSON: https://docs.juicebox.money/api/contracts.json
+- SDK Reference JSON: https://docs.juicebox.money/api/sdk.json
+- Full LLM Context: https://docs.juicebox.money/llms-full.txt
+- Claude Code Skills (AI agents): https://github.com/mejango/juicebox-skills
+
+## Quick Start (Deploying a Project)
+
+1. Define project metadata (name, description, logo)
+2. Configure initial ruleset (duration, payout limit, token weight, reserved percent)
+3. Set terminal configuration (accepted tokens)
+4. Deploy via JBController.launchProjectFor()
+
+## Key Contracts (Ethereum Mainnet)
+
+- JBController5_1: 0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1
+- JBMultiTerminal5_1: 0x52869db3d61dde1e391967f2ce5039ad0ecd371c
+- JBDirectory: 0x0061e516886a0540f63157f112c0588ee0651dcf
+- JBProjects: 0x885f707efa18d2cb12f05a3a8eba6b4b26c8c1d4
+- JBTokens: 0x4d0edd347fb1fa21589c1e109b3474924be87636
+- REVDeployer: 0x2ca27bde7e7d33e353b44c27acfcf6c78dde251d
+
+## Supported Chains
+
+- Ethereum Mainnet (chainId: 1)
+- Optimism (chainId: 10)
+- Arbitrum (chainId: 42161)
+- Base (chainId: 8453)
+- Sepolia Testnet (chainId: 11155111)
+
+## API Endpoints
+
+### MCP Server
+POST https://docs.juicebox.money/api/mcp/search
+  Body: { "query": "deploy project", "category": "developer", "limit": 5 }
+
+POST https://docs.juicebox.money/api/mcp/get-doc
+  Body: { "path": "dev/v5/learn/overview.md" }
+
+GET https://docs.juicebox.money/api/mcp/contracts?contract=JBController
+GET https://docs.juicebox.money/api/mcp/sdk?package=juice-sdk-react
+GET https://docs.juicebox.money/api/mcp/patterns?projectType=revnet
+
+## Common Operations
+
+### Pay a Project
+```solidity
+IJBMultiTerminal(terminal).pay{value: amount}(
+  projectId,
+  token,           // Use JBConstants.NATIVE_TOKEN for ETH
+  amount,
+  beneficiary,
+  minReturnedTokens,
+  memo,
+  metadata
+);
+```
+
+### Cash Out Tokens
+```solidity
+IJBMultiTerminal(terminal).cashOutTokensOf(
+  holder,
+  projectId,
+  cashOutCount,
+  token,
+  minTokensReclaimed,
+  beneficiary,
+  metadata
+);
+```
+
+### Deploy a Project
+```solidity
+IJBController(controller).launchProjectFor(
+  owner,
+  projectUri,
+  rulesetConfigurations,
+  terminalConfigurations,
+  memo
+);
+```
+
+## Links
+
+- Website: https://juicebox.money
+- GitHub: https://github.com/jbx-protocol
+- Discord: https://discord.gg/juicebox
+- Governance: https://jbdao.org

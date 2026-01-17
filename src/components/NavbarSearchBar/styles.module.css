@@ -356,10 +356,22 @@
   left: 0;
 }
 
+/* Suggestion Category */
+.suggestionCategory {
+  margin: 24px 0 16px 0;
+}
+
+.suggestionCategory p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Suggestion List - Clickable */
 .suggestionList {
   text-align: left;
-  margin: 24px auto;
+  margin: 8px auto 0 auto;
   max-width: 500px;
   list-style: none;
   padding: 0;

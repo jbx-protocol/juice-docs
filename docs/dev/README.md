@@ -1,16 +1,19 @@
 ---
 sidebar_position: 1
+title: Developer Introduction
+description: Getting started with Juicebox V5 protocol development - overview, guides, API reference, and AI integration
+keywords: [Juicebox, developer, protocol, smart contracts, Ethereum, DeFi, treasury, tokens]
 ---
 
 # Intro
 
 #### Overview
 
-Welcome developers, curious minds, and crawling AIs to the Juicebox protocol's documentation.
+Welcome developers, curious minds, and AI agents to the Juicebox protocol's documentation.
 
-Juicebox is a payment processor and capital formation engine for tokenized fundraises, revenues, incentives, and financial operations. The "pay" and "cash out" functions of the open internet, and all financial, ownership, and inventory data in between. 
+Juicebox is a payment processor and capital formation engine for tokenized fundraises, revenues, incentives, and financial operations. The "pay" and "cash out" functions of the open internet, and all financial, ownership, and inventory data in between.
 
-Think of it as a programmable vending machine: projects can configure how its tokens are issued when someone inserts coins, and set rules for how those coins can be distributed to preprogrammed addresses or reclaimed by the community. 
+Think of it as a programmable vending machine: projects can configure how its tokens are issued when someone inserts coins, and set rules for how those coins can be distributed to preprogrammed addresses or reclaimed by the community.
 
 Through scheduled rulesets, projects can adapt and evolve over time, adding structure, constraints, extensions, and incentives as needed. Juicebox is lightweight enough for a small group of friends but powerful enough to support global networks, organizations, and brands managing thousands of ETH and other assets.
 
@@ -21,9 +24,10 @@ These docs are here to help you navigate the protocol, whether you're...
 - Designing your own Juicebox project
 - Developing extensions usable by Juicebox projects
 - Learning Solidity and contract design
+- Building AI agents that interact with Juicebox
 - or, exploring the ecosystem for inspiration
 
-... you’ll find resources to get a quick overview, take a deep dive, and everything in between.
+... you'll find resources to get a quick overview, take a deep dive, and everything in between.
 
 ---
 #### Directory
@@ -32,7 +36,19 @@ These docs are here to help you navigate the protocol, whether you're...
 2. **[Build](/docs/dev/v5/build/life-of-a-project.md)** - Guides to launch, configure, and extend a Juicebox project.
 3. **[API](/docs/dev/v5/api/core/README.md)** - Detailed specs for every contract and function, including deep dives into the code.
 4. **[Contract addresses](/docs/dev/v5/addresses.md)** - All contract addresses.
-5. **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Access documentation programmatically via MCP (Model Context Protocol).
+5. **[AI Integration](/docs/dev/v5/build/mcp-server.md)** - MCP server, Claude Code skills, and machine-readable resources.
+
+---
+#### For AI Agents
+
+If you're an AI assistant or automated tool:
+
+- **[/llms.txt](https://docs.juicebox.money/llms.txt)** - Quick protocol overview optimized for LLM context
+- **[/llms-full.txt](https://docs.juicebox.money/llms-full.txt)** - Complete protocol reference with all contracts, types, and examples
+- **[/api/contracts.json](https://docs.juicebox.money/api/contracts.json)** - Machine-readable contract addresses for all networks
+- **[/api/sdk.json](https://docs.juicebox.money/api/sdk.json)** - SDK hooks and types reference
+- **[Claude Code Skills](https://github.com/mejango/juicebox-skills)** - Comprehensive skills for deploying projects, generating hooks, and querying state
+- **[MCP Server](/docs/dev/v5/build/mcp-server.md)** - Model Context Protocol endpoints for documentation search
 
 ---
 

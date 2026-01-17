@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Juicebox SDK Reference",
+  "description": "Machine-readable SDK reference for juice-sdk-react and related packages",
+  "version": "1.0.0",
+  "updatedAt": "2025-01-17",
+  "packages": {
+    "juice-sdk-react": {
+      "name": "juice-sdk-react",
+      "description": "React hooks and components for Juicebox protocol integration",
+      "npm": "https://www.npmjs.com/package/juice-sdk-react",
+      "github": "https://github.com/jbx-protocol/juice-sdk-v4",
+      "hooks": {
+        "context": {
+          "JBProjectProvider": {
+            "description": "Context provider for a Juicebox project. Wrap components that need project data.",
+            "props": {
+              "projectId": "bigint - The project ID to load",
+              "ctxProps": "{ metadata?: { ipfsGatewayHostname?: string } }"
+            },
+            "example": "<JBProjectProvider projectId={1n}><App /></JBProjectProvider>"
+          },
+          "useJBProjectContext": {
+            "description": "Access the current project context",
+            "returns": "{ projectId, contracts, chainId }"
+          },
+          "useJBChainId": {
+            "description": "Get the current chain ID from context",
+            "returns": "number"
+          }
+        },
+        "read": {
+          "useJBProjectMetadata": {
+            "description": "Fetch project metadata (name, description, logo, etc.)",
+            "returns": "{ data: ProjectMetadata | undefined, isLoading, error }"
+          },
+          "useJBRuleset": {
+            "description": "Get current ruleset and metadata",
+            "returns": "{ ruleset, rulesetMetadata, isLoading }"
+          },
+          "useJBUpcomingRuleset": {
+            "description": "Get upcoming ruleset configuration",
+            "returns": "{ ruleset, rulesetMetadata, isLoading }"
+          },
+          "useJBTokenContext": {
+            "description": "Get project token information",
+            "returns": "{ token: { address, name, symbol, decimals } }"
+          },
+          "useJBContractContext": {
+            "description": "Access contract instances for the project",
+            "returns": "{ controller, terminal, directory, projects, tokens }"
+          },
+          "useProjectOwner": {
+            "description": "Get the owner address of a project",
+            "params": "projectId: bigint",
+            "returns": "address | undefined"
+          },
+          "useTotalTokenSupply": {
+            "description": "Get total token supply including pending reserved",
+            "returns": "bigint"
+          },
+          "useTokenBalance": {
+            "description": "Get token balance for an address",
+            "params": "{ holder: address, projectId: bigint }",
+            "returns": "bigint"
+          },
+          "useProjectSurplus": {
+            "description": "Get current project surplus",
+            "returns": "{ surplus: bigint, currency }"
+          },
+          "usePayoutLimit": {
+            "description": "Get current payout limit",
+            "returns": "{ amount: bigint, currency }"
+          },
+          "useSplits": {
+            "description": "Get splits for a group (payouts or reserved)",
+            "params": "groupId: number",
+            "returns": "JBSplit[]"
+          }
+        },
+        "write": {
+          "usePay": {
+            "description": "Pay a project to receive tokens",
+            "returns": "{ write, isLoading, isSuccess, data }",
+            "params": {
+              "amount": "bigint - Amount to pay",
+              "token": "address - Token to pay with (use NATIVE_TOKEN for ETH)",
+              "beneficiary": "address - Who receives the tokens",
+              "minReturnedTokens": "bigint - Minimum tokens to receive",
+              "memo": "string - Payment memo",
+              "metadata": "bytes - Additional metadata"
+            }
+          },
+          "useCashOut": {
+            "description": "Cash out tokens for treasury funds",
+            "returns": "{ write, isLoading, isSuccess, data }",
+            "params": {
+              "holder": "address - Token holder",
+              "projectId": "bigint",
+              "cashOutCount": "bigint - Tokens to burn",
+              "tokenToReclaim": "address - Token to receive",
+              "minTokensReclaimed": "bigint",
+              "beneficiary": "address"
+            }
+          },
+          "useSendPayouts": {
+            "description": "Distribute payouts to splits",
+            "returns": "{ write, isLoading, isSuccess }",
+            "params": {
+              "amount": "bigint",
+              "currency": "number",
+              "minTokensPaidOut": "bigint"
+            }
+          },
+          "useDeployERC20": {
+            "description": "Deploy ERC-20 token for project",
+            "params": {
+              "name": "string",
+              "symbol": "string"
+            }
+          },
+          "useClaimTokens": {
+            "description": "Claim credit balance as ERC-20 tokens",
+            "params": {
+              "amount": "bigint",
+              "beneficiary": "address"
+            }
+          },
+          "useLaunchProject": {
+            "description": "Launch a new Juicebox project",
+            "params": {
+              "owner": "address",
+              "projectUri": "string",
+              "rulesetConfigurations": "JBRulesetConfig[]",
+              "terminalConfigurations": "JBTerminalConfig[]",
+              "memo": "string"
+            }
+          },
+          "useQueueRulesets": {
+            "description": "Queue new rulesets for a project",
+            "params": {
+              "rulesetConfigurations": "JBRulesetConfig[]",
+              "memo": "string"
+            }
+          }
+        },
+        "utilities": {
+          "useEthPrice": {
+            "description": "Get current ETH/USD price",
+            "returns": "bigint"
+          },
+          "useFormattedAmount": {
+            "description": "Format token amount with decimals",
+            "params": "{ amount: bigint, decimals: number, symbol?: string }",
+            "returns": "string"
+          }
+        }
+      }
+    },
+    "juice-sdk-core": {
+      "name": "juice-sdk-core",
+      "description": "Core utilities and types for Juicebox protocol",
+      "npm": "https://www.npmjs.com/package/juice-sdk-core",
+      "utilities": {
+        "constants": {
+          "NATIVE_TOKEN": "0x000000000000000000000000000000000000eeee",
+          "ETH_CURRENCY": 1,
+          "USD_CURRENCY": 2,
+          "MAX_RESERVED_PERCENT": 10000,
+          "MAX_CASH_OUT_TAX_RATE": 10000,
+          "SPLITS_TOTAL_PERCENT": 1000000000
+        },
+        "formatting": {
+          "formatEther": "Format wei to ETH string",
+          "parseEther": "Parse ETH string to wei",
+          "formatPercent": "Format basis points to percentage",
+          "formatSplitPercent": "Format split percent (out of 1B)"
+        },
+        "calculations": {
+          "calculateTokensReceived": "Calculate tokens for a payment amount",
+          "calculateCashOutAmount": "Calculate funds received for token cashout",
+          "calculateWeightAfterCuts": "Calculate weight after discount cycles"
+        }
+      }
+    },
+    "revnet-sdk": {
+      "name": "revnet-sdk",
+      "description": "SDK for deploying and interacting with Revnets",
+      "npm": "https://www.npmjs.com/package/revnet-sdk",
+      "functions": {
+        "deployRevnet": "Deploy a new revnet with configuration",
+        "getRevnetConfig": "Get configuration for existing revnet",
+        "calculateLoanAmount": "Calculate borrowable amount against tokens",
+        "prepayLoan": "Calculate prepayment for loan duration"
+      }
+    }
+  },
+  "types": {
+    "JBRulesetConfig": {
+      "mustStartAtOrAfter": "uint256 - Earliest start timestamp",
+      "duration": "uint256 - Ruleset duration in seconds (0 = infinite)",
+      "weight": "uint256 - Tokens per unit of payment (18 decimals)",
+      "weightCutPercent": "uint256 - Weight reduction per cycle (out of 1B)",
+      "approvalHook": "address - Contract approving ruleset changes",
+      "metadata": "JBRulesetMetadata",
+      "splitGroups": "JBSplitGroup[]",
+      "fundAccessLimitGroups": "JBFundAccessLimitGroup[]"
+    },
+    "JBRulesetMetadata": {
+      "reservedPercent": "uint16 - Reserved tokens (out of 10000)",
+      "cashOutTaxRate": "uint16 - Cashout tax (out of 10000)",
+      "baseCurrency": "uint32 - Currency for weight (1=ETH, 2=USD)",
+      "pausePay": "bool",
+      "pauseCreditTransfers": "bool",
+      "allowOwnerMinting": "bool",
+      "allowTerminalMigration": "bool",
+      "allowSetTerminals": "bool",
+      "allowSetController": "bool",
+      "allowAddAccountingContext": "bool",
+      "allowAddPriceFeed": "bool",
+      "ownerMustSendPayouts": "bool",
+      "holdFees": "bool",
+      "useTotalSurplusForCashOuts": "bool",
+      "useDataHookForPay": "bool",
+      "useDataHookForCashOut": "bool",
+      "dataHook": "address",
+      "metadata": "uint16"
+    },
+    "JBSplit": {
+      "preferAddToBalance": "bool",
+      "percent": "uint32 - Out of 1B (1_000_000_000)",
+      "projectId": "uint256 - 0 for external address",
+      "beneficiary": "address",
+      "lockedUntil": "uint48 - Timestamp",
+      "hook": "address - IJBSplitHook"
+    },
+    "JBTerminalConfig": {
+      "terminal": "address",
+      "accountingContextsToAccept": "JBAccountingContext[]"
+    },
+    "JBAccountingContext": {
+      "token": "address - Token address (NATIVE_TOKEN for ETH)",
+      "decimals": "uint8",
+      "currency": "uint32"
+    }
+  },
+  "integrationPatterns": {
+    "simplePayment": {
+      "description": "Basic payment to a project",
+      "steps": [
+        "1. Get project's primary terminal from JBDirectory",
+        "2. Call terminal.pay() with ETH value",
+        "3. Receive project tokens to beneficiary"
+      ]
+    },
+    "projectSetup": {
+      "description": "Setting up juice-sdk-react in a React app",
+      "steps": [
+        "1. Install: npm install juice-sdk-react wagmi viem @tanstack/react-query",
+        "2. Wrap app with WagmiProvider and QueryClientProvider",
+        "3. Wrap project components with JBProjectProvider",
+        "4. Use hooks to read/write project data"
+      ]
+    },
+    "revnetDeployment": {
+      "description": "Deploying a revnet",
+      "steps": [
+        "1. Configure REVConfig with stages and parameters",
+        "2. Set up terminal configurations",
+        "3. Configure buyback hook (optional)",
+        "4. Set up sucker deployment for omnichain",
+        "5. Call REVDeployer.deployFor()"
+      ]
+    }
+  }
+}

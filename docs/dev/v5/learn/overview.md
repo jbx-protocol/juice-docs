@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+title: Juicebox V5 Overview
+description: Programmable treasury protocol for tokenized fundraising and financial operations on Ethereum and L2s
+keywords: [Juicebox, treasury, fundraising, tokens, rulesets, Ethereum, DeFi, protocol]
 ---
 
 # Overview 

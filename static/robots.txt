@@ -1,7 +1,31 @@
+# Juicebox Documentation - Robot Directives
+# https://docs.juicebox.money
+
 User-agent: *
 Disallow: /search/
 Disallow: /zh/search/
 Disallow: /dev/deprecated/v2/
 Disallow: /zh/dev/deprecated/v2/
+
+# Machine-Readable Resources for AI/LLM Systems
+# These files are optimized for programmatic parsing:
+#
+# LLM Discovery:
+#   /llms.txt - Quick protocol overview for LLMs
+#   /llms-full.txt - Complete protocol reference and context
+#
+# Structured Data:
+#   /api/contracts.json - All V5 contract addresses as JSON
+#   /api/sdk.json - juice-sdk-react hooks and types reference
+#
+# MCP Server (Model Context Protocol):
+#   /api/mcp/search - Search documentation
+#   /api/mcp/get-doc - Get full document content
+#   /api/mcp/contracts - Get contract addresses
+#   /api/mcp/sdk - Get SDK reference
+#   /api/mcp/patterns - Get integration patterns
+#
+# Claude Code Skills:
+#   https://github.com/mejango/juicebox-skills
 
 Sitemap: https://docs.juicebox.money/sitemap.xml

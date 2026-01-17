@@ -1,8 +1,13 @@
 ---
 sidebar_position: 5
+title: Contract Addresses
+description: Juicebox V5 contract addresses for Ethereum, Optimism, Arbitrum, Base, and testnets
+keywords: [addresses, contracts, mainnet, Ethereum, Optimism, Arbitrum, Base, Sepolia, JBController, JBMultiTerminal]
 ---
 
 # Contract Addresses
+
+For machine-readable contract addresses, see [/api/contracts.json](https://docs.juicebox.money/api/contracts.json).
 
 :::info
 Visit the deprecated section for [V4 contract addresses](/docs/dev/v4/addresses.md), [V3 contract addresses](/docs/dev/v3/resources/addresses.md), [V2 contract addresses](/docs/dev/v2/addresses.md), and [V1 contract addresses](/docs/dev/v1/resources/contract-addresses.md).

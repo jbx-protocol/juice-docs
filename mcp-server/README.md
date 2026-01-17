@@ -181,7 +181,15 @@ npm run start:http
 - Check that index file exists: `mcp-server/src/docs-index.json`
 - Check Vercel function logs
 
+## Related Resources
+
+- **[Claude Code Skills](https://github.com/mejango/juicebox-skills)** - Comprehensive skills plugin for AI-assisted Juicebox development
+- **[/llms.txt](https://docs.juicebox.money/llms.txt)** - Quick protocol overview for LLMs
+- **[/llms-full.txt](https://docs.juicebox.money/llms-full.txt)** - Complete protocol reference
+- **[/api/contracts.json](https://docs.juicebox.money/api/contracts.json)** - Machine-readable contract addresses
+- **[/api/sdk.json](https://docs.juicebox.money/api/sdk.json)** - SDK hooks and types reference
+
 ## More Information
 
 - [MCP Specification](https://modelcontextprotocol.io)
-- [Documentation Guide](/docs/dev/v5/build/mcp-server.md)
+- [AI Integration Guide](/docs/dev/v5/build/mcp-server.md)

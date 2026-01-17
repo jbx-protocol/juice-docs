@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+title: Life of a Project
+description: Complete guide to deploying and managing Juicebox V5 projects - launch, configure rulesets, accept payments, distribute funds
+keywords: [deploy, launch, project, JBController, terminal, rulesets, payments, tokens, distribution]
 ---
 
 # Life of a project
