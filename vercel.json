@@ -2,7 +2,8 @@
   "functions": {
     "api/mcp/[...path].js": {
       "maxDuration": 60,
-      "memory": 1024
+      "memory": 1024,
+      "includeFiles": "mcp-server/src/*.json"
     }
   }
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "npm run mcp:build-index && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "webp": "bash scripts/webp.sh",
     "spaces": "find -type f -name '*.md' -print0 | xargs -0 sed -Ei 's/[[:blank:]]+$//g'",
-    "mcp:build-index": "cd mcp-server && npm run build-index",
+    "mcp:build-index": "cd mcp-server && npm install && npm run build-index",
     "mcp:install": "cd mcp-server && npm install"
   },
   "dependencies": {
@@ -51,6 +51,6 @@
     ]
   },
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=18.0.0"
   }
 }

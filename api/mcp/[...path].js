@@ -6,8 +6,6 @@ import express from "express";
 import cors from "cors";
 import fs from "fs/promises";
 import path from "path";
-import matter from "gray-matter";
-import removeMarkdown from "remove-markdown";
 import Fuse from "fuse.js";
 import Anthropic from "@anthropic-ai/sdk";
 
@@ -192,13 +190,13 @@ app.post(["/get-doc", "/api/mcp/get-doc"], async (req, res) => {
     const { path: docPath } = req.body;
     if (!docPath) return res.status(400).json({ error: "path parameter is required" });
     if (docIndex.length === 0) return res.status(503).json({ error: "Index not available" });
-    
+
     let doc = docIndex.find((d) => d.path === docPath || d.path.endsWith(docPath));
     if (!doc) doc = docIndex.find((d) => d.title.toLowerCase().includes(docPath.toLowerCase()) || docPath.toLowerCase().includes(d.title.toLowerCase()));
     if (!doc) return res.status(404).json({ error: `Document not found: ${docPath}` });
-    
-    const content = await fs.readFile(doc.fullPath, "utf-8");
-    res.json({ title: doc.title, path: doc.path, url: doc.url, category: doc.category, version: doc.version, content, metadata: { headings: doc.headings, description: doc.description } });
+
+    // Use indexed content - file reads don't work on Vercel
+    res.json({ title: doc.title, path: doc.path, url: doc.url, category: doc.category, version: doc.version, content: doc.content, metadata: { headings: doc.headings, description: doc.description } });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -392,33 +390,15 @@ app.post(["/ask", "/api/mcp/ask"], async (req, res) => {
       }).sort((a, b) => a.score - b.score).slice(0, parseInt(maxDocs));
     }
 
-    // Fetch full content of top results
-    const docsWithContent = await Promise.all(
-      searchResults.slice(0, parseInt(maxDocs)).map(async (result) => {
-        try {
-          const content = await fs.readFile(result.item.fullPath, "utf-8");
-          const { content: markdownContent } = matter(content);
-          return {
-            title: result.item.title,
-            path: result.item.path,
-            url: result.item.url,
-            description: result.item.description,
-            content: markdownContent,
-            headings: result.item.headings,
-          };
-        } catch (error) {
-          console.error(`Error reading ${result.item.fullPath}:`, error.message);
-          return {
-            title: result.item.title,
-            path: result.item.path,
-            url: result.item.url,
-            description: result.item.description,
-            content: result.item.content, // Fallback to indexed content
-            headings: result.item.headings,
-          };
-        }
-      })
-    );
+    // Use indexed content directly - file reads don't work on Vercel
+    const docsWithContent = searchResults.slice(0, parseInt(maxDocs)).map((result) => ({
+      title: result.item.title,
+      path: result.item.path,
+      url: result.item.url,
+      description: result.item.description,
+      content: result.item.content,
+      headings: result.item.headings,
+    }));
 
     // Build context for Claude
     const contextSections = docsWithContent.map((doc, idx) => {
