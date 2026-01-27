@@ -30,6 +30,53 @@ The fastest way to build on Juicebox with AI assistance is using our Claude Code
 | `/jb-v5-api` | API reference for all contract functions |
 | `/jb-v5-impl` | Deep implementation knowledge and edge cases |
 
+### Skill Details
+
+#### `/jb-project` - Project Creation
+Creates complete deployment scripts for Juicebox V5 projects. Handles:
+- Ruleset configuration (weight, reserved rate, cash out tax)
+- Terminal setup (ETH, ERC-20 tokens)
+- Split configurations (payout and reserved token splits)
+- Metadata (name, description, logo URI)
+- Multi-chain deployment with suckers
+
+#### `/jb-ruleset` - Ruleset Configuration
+Designs and queues ruleset changes. Parameters include:
+- `duration` - Cycle length (0 for no cycles)
+- `weight` - Token issuance rate
+- `decayPercent` - Issuance decay per cycle
+- `approvalHook` - Ruleset approval mechanism
+- `metadata` - Permissions and settings flags
+
+#### `/jb-pay-hook` & `/jb-cash-out-hook` - Hook Generation
+Generates Solidity contracts implementing `IJBPayHook` or `IJBCashOutHook`:
+- Evaluates if off-the-shelf hooks (like Bananapus 721) work first
+- Creates custom hook contracts with full Foundry test suites
+- Handles data hook integration for ruleset-level configuration
+
+#### `/jb-split-hook` - Split Hook Generation
+Creates hooks for processing individual splits:
+- Payout split processing
+- Reserved token split processing
+- Custom distribution logic
+
+#### `/jb-query` - Blockchain Queries
+Queries live project state using `cast` or ethers.js:
+- Project configurations and rulesets
+- Terminal balances and token supplies
+- Token holder data and split configurations
+- Supports mainnet and all testnets
+
+#### `/jb-decode` - Transaction Analysis
+Decodes Juicebox transaction calldata:
+- Function parameter extraction
+- Historical transaction analysis
+- Cross-chain transaction decoding
+
+#### `/jb-v5-api` vs `/jb-v5-impl`
+- **`/jb-v5-api`**: Function signatures, parameters, return values - "what functions exist?"
+- **`/jb-v5-impl`**: Internal mechanics, edge cases, gas considerations - "how does it work?"
+
 ### Example Usage
 
 ```
