@@ -17,65 +17,125 @@ The fastest way to build on Juicebox with AI assistance is using our Claude Code
 
 ### Available Skills
 
+#### Core Protocol
+
 | Skill | Description |
 |-------|-------------|
 | `/jb-project` | Create and configure Juicebox V5 projects |
 | `/jb-ruleset` | Configure and queue rulesets with all parameters |
+| `/jb-query` | Query project state from the blockchain |
+| `/jb-decode` | Decode and analyze transaction calldata |
+| `/jb-v5-api` | API reference for all contract functions |
+| `/jb-v5-impl` | Deep implementation knowledge and edge cases |
+| `/jb-docs` | Search documentation via MCP server |
+| `/jb-v5-v51-contracts` | V5.0 vs V5.1 contract differences and migration |
+
+#### Hook Generation
+
+| Skill | Description |
+|-------|-------------|
 | `/jb-pay-hook` | Generate custom pay hooks with Foundry tests |
 | `/jb-cash-out-hook` | Generate custom cash out hooks with tests |
 | `/jb-split-hook` | Generate custom split hooks with tests |
-| `/jb-decode` | Decode and analyze transaction calldata |
-| `/jb-query` | Query project state from the blockchain |
-| `/jb-docs` | Search documentation via MCP server |
-| `/jb-v5-api` | API reference for all contract functions |
-| `/jb-v5-impl` | Deep implementation knowledge and edge cases |
+
+#### UI Generation
+
+| Skill | Description |
+|-------|-------------|
+| `/jb-deploy-ui` | Generate deploy frontends for projects and hooks |
+| `/jb-interact-ui` | Generate interaction frontends (pay, cash out, claim) |
+| `/jb-explorer-ui` | Etherscan-like contract explorer for projects |
+| `/jb-event-explorer-ui` | Browse and decode Juicebox project events |
+| `/jb-hook-deploy-ui` | Deploy custom hooks from browser |
+| `/jb-nft-gallery-ui` | Interactive gallery for 721 hook NFTs |
+| `/jb-omnichain-ui` | Cross-chain UI for multi-chain projects |
+| `/jb-ruleset-timeline-ui` | Visual timeline of ruleset history |
+
+#### Data & APIs
+
+| Skill | Description |
+|-------|-------------|
+| `/jb-bendystraw` | GraphQL API for cross-chain project data |
+| `/jb-relayr` | Multi-chain transaction bundling API |
+| `/jb-fund-access-limits` | Query payout limits and surplus allowances |
+| `/jb-loan-queries` | Query loan data from Revloans |
+
+#### Specialized
+
+| Skill | Description |
+|-------|-------------|
+| `/jb-permit2-metadata` | Encode Permit2 metadata for gasless ERC20 payments |
+| `/jb-cash-out-curve` | Cash out redemption curve calculations |
+| `/jb-multi-currency` | Multi-currency terminal support |
+| `/jb-simplify` | Checklist to simplify project designs |
+| `/jb-patterns` | Common integration patterns |
+| `/jb-suckers` | Cross-chain token bridging with Suckers |
+| `/jb-terminal-selection` | Terminal selection logic |
+| `/jb-terminal-wrapper` | Terminal wrapper patterns |
+| `/jb-v5-currency-types` | Currency type reference |
+| `/jbx-fee-flows` | JBX fee flow analysis |
+| `/jb-revloans` | Revloans borrowing functionality |
+
+#### Revnet
+
+| Skill | Description |
+|-------|-------------|
+| `/revnet-economics` | Revnet economic modeling and analysis |
+| `/revnet-modeler` | Revnet simulation and projections |
 
 ### Skill Details
 
-#### `/jb-project` - Project Creation
-Creates complete deployment scripts for Juicebox V5 projects. Handles:
-- Ruleset configuration (weight, reserved rate, cash out tax)
-- Terminal setup (ETH, ERC-20 tokens)
-- Split configurations (payout and reserved token splits)
-- Metadata (name, description, logo URI)
-- Multi-chain deployment with suckers
+#### Core Protocol Skills
 
-#### `/jb-ruleset` - Ruleset Configuration
-Designs and queues ruleset changes. Parameters include:
-- `duration` - Cycle length (0 for no cycles)
-- `weight` - Token issuance rate
-- `decayPercent` - Issuance decay per cycle
-- `approvalHook` - Ruleset approval mechanism
-- `metadata` - Permissions and settings flags
+**`/jb-project`** - Creates complete deployment scripts for Juicebox V5 projects including ruleset configuration, terminal setup, split configurations, metadata, and multi-chain deployment with suckers.
 
-#### `/jb-pay-hook` & `/jb-cash-out-hook` - Hook Generation
-Generates Solidity contracts implementing `IJBPayHook` or `IJBCashOutHook`:
-- Evaluates if off-the-shelf hooks (like Bananapus 721) work first
-- Creates custom hook contracts with full Foundry test suites
-- Handles data hook integration for ruleset-level configuration
+**`/jb-ruleset`** - Designs and queues ruleset changes including duration, weight, decay, approval hooks, and metadata flags.
 
-#### `/jb-split-hook` - Split Hook Generation
-Creates hooks for processing individual splits:
-- Payout split processing
-- Reserved token split processing
-- Custom distribution logic
+**`/jb-query`** - Queries live project state (configurations, rulesets, balances, token holders, splits) using `cast` or ethers.js.
 
-#### `/jb-query` - Blockchain Queries
-Queries live project state using `cast` or ethers.js:
-- Project configurations and rulesets
-- Terminal balances and token supplies
-- Token holder data and split configurations
-- Supports mainnet and all testnets
+**`/jb-decode`** - Decodes Juicebox transaction calldata with function parameter extraction and historical analysis.
 
-#### `/jb-decode` - Transaction Analysis
-Decodes Juicebox transaction calldata:
-- Function parameter extraction
-- Historical transaction analysis
-- Cross-chain transaction decoding
+**`/jb-v5-api`** vs **`/jb-v5-impl`** - API gives function signatures ("what exists?"), impl gives internal mechanics ("how does it work?").
 
-#### `/jb-v5-api` vs `/jb-v5-impl`
-- **`/jb-v5-api`**: Function signatures, parameters, return values - "what functions exist?"
-- **`/jb-v5-impl`**: Internal mechanics, edge cases, gas considerations - "how does it work?"
+#### Hook Generation Skills
+
+**`/jb-pay-hook`**, **`/jb-cash-out-hook`**, **`/jb-split-hook`** - Generate Solidity contracts with Foundry tests. First evaluates if off-the-shelf hooks (721 hook, buyback hook, Revnet) fit before creating custom implementations.
+
+#### UI Generation Skills
+
+**`/jb-deploy-ui`** - Standalone HTML files for deploying projects with wallet connection and transaction forms.
+
+**`/jb-interact-ui`** - Frontends for paying, cashing out, and claiming tokens from existing projects.
+
+**`/jb-explorer-ui`** - Etherscan-like interface to read contract state, write transactions, and decode events.
+
+**`/jb-hook-deploy-ui`** - Compile Solidity in browser, deploy contracts, verify on explorers, attach to projects.
+
+**`/jb-omnichain-ui`** - Build interfaces for multi-chain projects with unified cross-chain data display.
+
+#### Data & API Skills
+
+**`/jb-bendystraw`** - GraphQL API reference for querying project stats, payments, token holders, loans, NFTs, and activity feeds across all chains.
+
+**`/jb-relayr`** - Multi-chain transaction bundling: pay gas on one chain, execute on many. Used for omnichain deployments.
+
+**`/jb-fund-access-limits`** - Query payout limits and surplus allowances. Detects "unlimited" values and handles the array-based return format.
+
+#### Specialized Skills
+
+**`/jb-permit2-metadata`** - Encode metadata for gasless ERC20 payments using JBMetadataResolver. Fixes "AllowanceExpired" errors and Permit2 signature issues.
+
+**`/jb-cash-out-curve`** - Cash out redemption calculations using the bonding curve formula. Shows what percentage of treasury a cash out receives.
+
+**`/jb-suckers`** - Cross-chain token bridging setup. Links projects across chains for token portability while maintaining treasury backing.
+
+**`/jb-simplify`** - Checklist to reduce custom contracts by leveraging native protocol mechanics.
+
+#### Revnet Skills
+
+**`/revnet-economics`** - Revnet economic modeling: boost periods, price ceilings, operator fees, and token dynamics.
+
+**`/revnet-modeler`** - Simulate revnet behavior with different parameters and project future states.
 
 ### Example Usage
 
@@ -229,10 +289,17 @@ If you're building AI agents that interact with Juicebox:
 | Deploy a project | `/jb-project` skill |
 | Generate custom hook | `/jb-pay-hook`, `/jb-cash-out-hook`, or `/jb-split-hook` |
 | Query project state | `/jb-query` skill with cast/ethers |
+| Query cross-chain data | `/jb-bendystraw` skill (GraphQL API) |
 | Decode transaction | `/jb-decode` skill |
 | Look up function signature | `/jb-v5-api` skill or MCP `/get-doc` |
 | Understand internal mechanics | `/jb-v5-impl` skill |
 | Get contract address | MCP `/contracts` or `/api/contracts.json` |
+| Build project frontend | `/jb-deploy-ui` or `/jb-interact-ui` skills |
+| Deploy hooks from browser | `/jb-hook-deploy-ui` skill |
+| Set up cross-chain bridging | `/jb-suckers` skill |
+| Model revnet economics | `/revnet-economics` or `/revnet-modeler` |
+| Fix Permit2 errors | `/jb-permit2-metadata` skill |
+| Simplify project design | `/jb-simplify` skill |
 
 ### Example: AI Agent Workflow
 
