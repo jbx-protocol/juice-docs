@@ -404,6 +404,6 @@ type WebSocketEvent =
 
 ## See Also
 
-- [AI Agent Integration](/docs/dev/v5/build/ai) - MCP server and Claude Code skills
+- [AI Agent Integration](./ai.md) - MCP server and Claude Code skills
 - [Smart Account Architecture](https://github.com/jbx-protocol/juice-docs-v3) - ERC-4337 implementation details
 - [Stripe Integration](https://stripe.com/docs) - Payment processing documentation

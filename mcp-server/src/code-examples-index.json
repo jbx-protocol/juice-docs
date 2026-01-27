@@ -66281,6 +66281,70 @@
   },
   {
     "language": "text",
+    "code": "/jb-project\n\nCreate a crowdfunding project that:\n- Accepts ETH\n- Issues 1M tokens per ETH\n- Reserves 20% for the team\n- Has a 100 ETH payout limit per 30-day cycle\n- Allows token holders to cash out at any time",
+    "context": "AI Agent Integration",
+    "category": "general",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "bash",
+    "code": "curl -X POST https://docs.juicebox.money/api/mcp/search \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"query\": \"deploy project\", \"category\": \"developer\", \"limit\": 5}'",
+    "context": "AI Agent Integration",
+    "category": "cli",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "bash",
+    "code": "curl \"https://docs.juicebox.money/api/mcp/contracts?contract=JBController\"",
+    "context": "AI Agent Integration",
+    "category": "cli",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "bash",
+    "code": "curl \"https://docs.juicebox.money/api/mcp/patterns?projectType=revnet\"",
+    "context": "AI Agent Integration",
+    "category": "cli",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "bash",
+    "code": "curl -X POST https://docs.juicebox.money/api/mcp/search-code \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"query\": \"pay\", \"language\": \"solidity\", \"limit\": 5}'",
+    "context": "AI Agent Integration",
+    "category": "cli",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "bash",
+    "code": "git clone https://github.com/jbx-protocol/juice-docs-v3\n   cd juice-docs-v3\n   npm run mcp:install && npm run mcp:build-index",
+    "context": "AI Agent Integration",
+    "category": "cli",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "json",
+    "code": "{\n     \"mcpServers\": {\n       \"juice-docs\": {\n         \"command\": \"node\",\n         \"args\": [\"/path/to/juice-docs-v3/mcp-server/src/index.js\"],\n         \"cwd\": \"/path/to/juice-docs-v3\"\n       }\n     }\n   }",
+    "context": "AI Agent Integration",
+    "category": "config",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "javascript",
+    "code": "// 1. Get contract addresses\nconst contracts = await fetch('https://docs.juicebox.money/api/contracts.json')\n  .then(r => r.json());\n\n// 2. Search for relevant documentation\nconst docs = await fetch('https://docs.juicebox.money/api/mcp/search', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ query: 'launch project', category: 'developer' })\n}).then(r => r.json());\n\n// 3. Get specific document\nconst guide = await fetch('https://docs.juicebox.money/api/mcp/get-doc', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ path: 'dev/v5/build/life-of-a-project.md' })\n}).then(r => r.json());",
+    "context": "AI Agent Integration",
+    "category": "contract",
+    "docPath": "dev/v5/build/ai.md",
+    "docTitle": "AI Agent Integration"
+  },
+  {
+    "language": "text",
     "code": "POST https://<base-url>/<api-key>/graphql",
     "context": "Bendystraw (Data API)",
     "category": "general",
@@ -66696,12 +66760,236 @@
     "docTitle": "Split Hook"
   },
   {
+    "language": "bash",
+    "code": "# Get authentication options\nGET /api/passkey/authenticate/options\n\n# Verify authentication\nPOST /api/passkey/authenticate/verify\nContent-Type: application/json\n{\n  \"credential\": { /* WebAuthn credential response */ }\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"token\": \"jwt_token_here\",\n    \"user\": {\n      \"id\": \"uuid\",\n      \"walletAddress\": \"0x...\"\n    }\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "# Get nonce\nGET /api/auth/siwe/nonce\n\n# Verify signature\nPOST /api/auth/siwe/verify\nContent-Type: application/json\n{\n  \"message\": \"Sign this message...\",\n  \"signature\": \"0x...\"\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "# Include in all requests for session continuity\nX-Session-ID: your-session-id",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "# Required for all requests\nX-Session-ID: <session-id>\n\n# For authenticated users (passkey/managed mode)\nAuthorization: Bearer <jwt-token>\n\n# For wallet users (SIWE)\nX-Wallet-Session: <wallet-session-token>",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/chat\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  \"name\": \"My Project Discussion\",\n  \"isPrivate\": false\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/chat/:chatId/messages\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  \"content\": \"Help me create a crowdfunding project\",\n  \"invokeAi\": true\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "text",
+    "code": "data: {\"type\":\"message\",\"content\":\"I'll help you...\"}\ndata: {\"type\":\"tool_use\",\"name\":\"createProject\",\"input\":{...}}\ndata: {\"type\":\"tool_result\",\"result\":{...}}\ndata: {\"type\":\"done\"}",
+    "context": "Juicy Vision API",
+    "category": "general",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "javascript",
+    "code": "const ws = new WebSocket('wss://juicy.vision/api/chat/:chatId/ws');\n\nws.onmessage = (event) => {\n  const data = JSON.parse(event.data);\n  // Handle real-time messages\n};",
+    "context": "Juicy Vision API",
+    "category": "javascript",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "GET /api/juice/balance\nAuthorization: Bearer <token>",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"balance\": \"25.00\",\n    \"lifetime_purchased\": \"100.00\",\n    \"lifetime_spent\": \"75.00\"\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/juice/purchase\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  \"amount\": 25.00\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"clientSecret\": \"pi_xxx_secret_xxx\"\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/juice/spend\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  \"projectId\": 1,\n  \"chainId\": 1,\n  \"amount\": 10.00,\n  \"memo\": \"Supporting the project\"\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "GET /api/smart-account/address\nAuthorization: Bearer <token>",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"address\": \"0x...\",\n    \"deployed\": true,\n    \"chainId\": 1\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "GET /api/smart-account/balances\nAuthorization: Bearer <token>",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"eth\": \"0.05\",\n    \"usdc\": \"100.00\",\n    \"tokens\": [\n      { \"symbol\": \"JBX\", \"balance\": \"1000.00\", \"projectId\": 1 }\n    ]\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "GET /api/identity/check?emoji=🍋&username=mooch",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"available\": true\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "PUT /api/identity/me\nAuthorization: Bearer <token>\nContent-Type: application/json\n\n{\n  \"emoji\": \"🍋\",\n  \"username\": \"mooch\"\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "GET /api/identity/me\nAuthorization: Bearer <token>",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": true,\n  \"data\": {\n    \"emoji\": \"🍋\",\n    \"username\": \"mooch\",\n    \"formatted\": \"🍋 mooch\"\n  }\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/proxy/bendystraw\nContent-Type: application/json\n\n{\n  \"query\": \"query { projects(first: 10) { id name } }\"\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "bash",
+    "code": "POST /api/proxy/rpc/1\nContent-Type: application/json\n\n{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"eth_blockNumber\",\n  \"params\": [],\n  \"id\": 1\n}",
+    "context": "Juicy Vision API",
+    "category": "cli",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"name\": \"Juicy Vision API\",\n  \"version\": \"0.1.0\",\n  \"status\": \"healthy\"\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "json",
+    "code": "{\n  \"success\": false,\n  \"error\": \"Error message here\"\n}",
+    "context": "Juicy Vision API",
+    "category": "config",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
+    "language": "typescript",
+    "code": "type WebSocketEvent =\n  | { type: 'message', data: ChatMessage }\n  | { type: 'member_joined', data: { address: string } }\n  | { type: 'member_left', data: { address: string } }\n  | { type: 'typing', data: { address: string } }\n  | { type: 'ai_start', data: { messageId: string } }\n  | { type: 'ai_token', data: { content: string } }\n  | { type: 'ai_done', data: { messageId: string } }\n  | { type: 'error', data: { message: string } }",
+    "context": "Juicy Vision API",
+    "category": "javascript",
+    "docPath": "dev/v5/build/juicy-vision-api.md",
+    "docTitle": "Juicy Vision API"
+  },
+  {
     "language": "text",
     "code": "function launchProjectFor(\n  address owner,\n  string calldata projectUri,\n  JBRulesetConfig[] calldata rulesetConfigurations,\n  JBTerminalConfig[] calldata terminalConfigurations,\n  string calldata memo\n) external override returns (uint256 projectId) { ... }",
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66709,7 +66997,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66717,7 +67005,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66725,7 +67013,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66733,7 +67021,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66741,7 +67029,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66749,7 +67037,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66757,7 +67045,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66765,7 +67053,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66773,7 +67061,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "javascript",
@@ -66781,7 +67069,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "javascript",
@@ -66789,7 +67077,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66797,7 +67085,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66805,7 +67093,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66813,7 +67101,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66821,7 +67109,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66829,7 +67117,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66837,7 +67125,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66845,7 +67133,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66853,7 +67141,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66861,7 +67149,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66869,7 +67157,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66877,7 +67165,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66885,7 +67173,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66893,7 +67181,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66901,7 +67189,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66909,7 +67197,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66917,7 +67205,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66925,7 +67213,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66933,7 +67221,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66941,7 +67229,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66949,7 +67237,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66957,7 +67245,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66965,7 +67253,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66973,7 +67261,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66981,7 +67269,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66989,7 +67277,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -66997,7 +67285,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67005,7 +67293,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67013,7 +67301,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67021,7 +67309,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67029,7 +67317,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67037,7 +67325,7 @@
     "context": "Life of a project",
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-project.md",
-    "docTitle": "Life of a project"
+    "docTitle": "Life of a Project"
   },
   {
     "language": "text",
@@ -67270,38 +67558,6 @@
     "category": "contract",
     "docPath": "dev/v5/build/life-of-a-revnet.md",
     "docTitle": "Life of a revnet"
-  },
-  {
-    "language": "bash",
-    "code": "curl -X POST https://docs.juicebox.money/api/mcp/search \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"query\": \"deploy project\", \"category\": \"developer\", \"limit\": 5}'",
-    "context": "MCP Server",
-    "category": "cli",
-    "docPath": "dev/v5/build/mcp-server.md",
-    "docTitle": "MCP Server"
-  },
-  {
-    "language": "bash",
-    "code": "curl -X POST https://docs.juicebox.money/api/mcp/get-doc \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"dev/v5/learn/overview.md\"}'",
-    "context": "MCP Server",
-    "category": "cli",
-    "docPath": "dev/v5/build/mcp-server.md",
-    "docTitle": "MCP Server"
-  },
-  {
-    "language": "javascript",
-    "code": "const response = await fetch('https://docs.juicebox.money/api/mcp/search', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ query: 'deploy project', category: 'developer' })\n});\nconst data = await response.json();",
-    "context": "MCP Server",
-    "category": "api",
-    "docPath": "dev/v5/build/mcp-server.md",
-    "docTitle": "MCP Server"
-  },
-  {
-    "language": "json",
-    "code": "{\n     \"mcpServers\": {\n       \"juice-docs\": {\n         \"command\": \"node\",\n         \"args\": [\"/path/to/juice-docs-v3/mcp-server/src/index.js\"],\n         \"cwd\": \"/path/to/juice-docs-v3\"\n       }\n     }\n   }",
-    "context": "MCP Server",
-    "category": "config",
-    "docPath": "dev/v5/build/mcp-server.md",
-    "docTitle": "MCP Server"
   },
   {
     "language": "text",
