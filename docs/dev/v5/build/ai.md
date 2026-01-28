@@ -75,6 +75,8 @@ The fastest way to build on Juicebox with AI assistance is using our Claude Code
 | `/jb-v5-currency-types` | Currency type reference |
 | `/jbx-fee-flows` | JBX fee flow analysis |
 | `/jb-revloans` | Revloans borrowing functionality |
+| `/jb-protocol-fees` | Protocol fee structures and UI integration |
+| `/jb-omnichain-payout-limits` | Per-chain payout limit constraints for omnichain projects |
 
 #### Revnet
 
@@ -130,6 +132,10 @@ The fastest way to build on Juicebox with AI assistance is using our Claude Code
 **`/jb-suckers`** - Cross-chain token bridging setup. Links projects across chains for token portability while maintaining treasury backing.
 
 **`/jb-simplify`** - Checklist to reduce custom contracts by leveraging native protocol mechanics.
+
+**`/jb-protocol-fees`** - Protocol fee structures for Juicebox V5 and Revnets. Covers fee calculations, UI integration patterns for displaying fees, and how fees flow through the ecosystem.
+
+**`/jb-omnichain-payout-limits`** - Explains that omnichain projects have per-chain payout limits rather than aggregate limits. This is a fundamental constraint with no perfect solution—useful when designing multi-chain treasury strategies.
 
 #### Revnet Skills
 
@@ -300,6 +306,8 @@ If you're building AI agents that interact with Juicebox:
 | Model revnet economics | `/revnet-economics` or `/revnet-modeler` |
 | Fix Permit2 errors | `/jb-permit2-metadata` skill |
 | Simplify project design | `/jb-simplify` skill |
+| Understand protocol fees | `/jb-protocol-fees` skill |
+| Plan omnichain payout limits | `/jb-omnichain-payout-limits` skill |
 
 ### Example: AI Agent Workflow
 
