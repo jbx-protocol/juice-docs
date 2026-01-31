@@ -1,0 +1,455 @@
+# Juicebox for AI Agents
+
+> You have a wallet. Here's how to participate in the Juicebox economy.
+
+Juicebox is an onchain treasury protocol. You can fund projects, receive tokens, create your own treasury, and exit anytime. This document provides everything you need to transact autonomously.
+
+---
+
+## Networks & Endpoints
+
+### RPC Endpoints (send transactions here)
+
+| Chain | ID | RPC | Explorer |
+|-------|-----|-----|----------|
+| Ethereum | 1 | https://eth.llamarpc.com | etherscan.io |
+| Optimism | 10 | https://mainnet.optimism.io | optimistic.etherscan.io |
+| Base | 8453 | https://mainnet.base.org | basescan.org |
+| Arbitrum | 42161 | https://arb1.arbitrum.io/rpc | arbiscan.io |
+
+### Data Endpoint (query project data)
+
+```
+POST https://bendystraw.xyz/<api-key>/graphql
+```
+
+Contact @peripheralist on X for an API key, or use the public schema explorer at https://bendystraw.xyz/schema
+
+---
+
+## Core Contracts (same address on all chains)
+
+| Contract | Address | Purpose |
+|----------|---------|---------|
+| JBController | 0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1 | Project management |
+| JBMultiTerminal | 0x52869db3d61dde1e391967f2ce5039ad0ecd371c | Payments & cashouts |
+| JBDirectory | 0x0061e516886a0540f63157f112c0588ee0651dcf | Terminal/controller registry |
+| JBProjects | 0x885f707efa18d2cb12f05a3a8eba6b4b26c8c1d4 | Project NFTs (ownership) |
+| JBTokens | 0x4d0edd347fb1fa21589c1e109b3474924be87636 | Token accounting |
+| REVDeployer | 0x2ca27bde7e7d33e353b44c27acfcf6c78dde251d | Revnet deployment (V5.0) |
+| REVLoans | 0x1880d832aa283d05b8eab68877717e25fbd550bb | Borrow against tokens |
+
+---
+
+## Action 1: Fund a Project
+
+### Step 1: Find a project
+
+Query Bendystraw to discover projects:
+
+```graphql
+query FindProjects {
+  projects(
+    where: { chainId: 1, version: 5 }
+    orderBy: "trendingScore"
+    orderDirection: "desc"
+    limit: 10
+  ) {
+    items {
+      projectId
+      name
+      description
+      balance
+      volume
+      tokenSupply
+      tokenSymbol
+      contributorsCount
+      isRevnet
+    }
+  }
+}
+```
+
+### Step 2: Evaluate the project (due diligence)
+
+```graphql
+query EvaluateProject($projectId: Int!, $chainId: Int!) {
+  project(projectId: $projectId, chainId: $chainId, version: 5) {
+    projectId
+    name
+    balance
+    volume
+    tokenSupply
+    contributorsCount
+    paymentsCount
+    owner
+    isRevnet
+    suckerGroupId
+  }
+}
+```
+
+Then query the ruleset onchain to assess risk:
+
+```solidity
+// Using cast (foundry)
+cast call 0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1 \
+  "currentRulesetOf(uint256)(tuple,tuple)" <projectId> \
+  --rpc-url https://eth.llamarpc.com
+```
+
+### Step 3: Build the pay transaction
+
+```solidity
+// Function signature
+function pay(
+    uint256 projectId,
+    address token,           // 0x000000000000000000000000000000000000EEEe for ETH
+    uint256 amount,          // in wei
+    address beneficiary,     // your address (receives tokens)
+    uint256 minReturnedTokens, // slippage protection
+    string memo,
+    bytes metadata
+) external payable returns (uint256 beneficiaryTokenCount);
+```
+
+**Calldata encoding (viem/ethers):**
+
+```javascript
+import { encodeFunctionData, parseEther } from 'viem';
+
+const calldata = encodeFunctionData({
+  abi: [{
+    name: 'pay',
+    type: 'function',
+    inputs: [
+      { name: 'projectId', type: 'uint256' },
+      { name: 'token', type: 'address' },
+      { name: 'amount', type: 'uint256' },
+      { name: 'beneficiary', type: 'address' },
+      { name: 'minReturnedTokens', type: 'uint256' },
+      { name: 'memo', type: 'string' },
+      { name: 'metadata', type: 'bytes' }
+    ],
+    outputs: [{ type: 'uint256' }]
+  }],
+  functionName: 'pay',
+  args: [
+    1n,                                              // projectId
+    '0x000000000000000000000000000000000000EEEe',   // ETH
+    parseEther('0.1'),                              // amount
+    '0xYourAddress',                                // beneficiary
+    0n,                                             // minReturnedTokens
+    'Funded by AI agent',                           // memo
+    '0x'                                            // metadata
+  ]
+});
+
+// Send transaction
+const tx = {
+  to: '0x52869db3d61dde1e391967f2ce5039ad0ecd371c', // JBMultiTerminal
+  value: parseEther('0.1'),
+  data: calldata
+};
+```
+
+**Gas estimate:** ~150,000 gas
+
+---
+
+## Action 2: Cash Out (Exit)
+
+Burn your tokens for proportional treasury surplus.
+
+### Step 1: Check your token balance
+
+```solidity
+cast call 0x4d0edd347fb1fa21589c1e109b3474924be87636 \
+  "totalBalanceOf(address,uint256)(uint256)" \
+  <yourAddress> <projectId> \
+  --rpc-url https://eth.llamarpc.com
+```
+
+### Step 2: Calculate expected return
+
+```
+reclaimAmount = surplus × (tokensToRedeem / totalSupply) × (1 - cashOutTaxRate)
+```
+
+Where:
+- `surplus` = terminal balance - payout limit used
+- `cashOutTaxRate` is in basis points (10000 = 100%)
+- A 50% tax rate (5000) means you get 50% of your proportional share
+
+### Step 3: Build the cashout transaction
+
+```solidity
+function cashOutTokensOf(
+    address holder,          // your address
+    uint256 projectId,
+    uint256 cashOutCount,    // tokens to burn (in wei)
+    address tokenToReclaim,  // 0x...EEEe for ETH
+    uint256 minTokensReclaimed, // slippage protection
+    address payable beneficiary, // receives ETH
+    bytes metadata
+) external returns (uint256 reclaimAmount);
+```
+
+**Gas estimate:** ~200,000 gas
+
+---
+
+## Action 3: Create Your Own Treasury
+
+### Option A: Simple Project (you control it)
+
+Deploy via JBController.launchProjectFor():
+
+```solidity
+function launchProjectFor(
+    address owner,
+    string calldata projectUri,        // IPFS hash with metadata
+    JBRulesetConfig[] calldata rulesetConfigurations,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    string calldata memo
+) external returns (uint256 projectId);
+```
+
+### Option B: Revnet (autonomous, no owner)
+
+Revnets are self-governing treasuries with programmed token issuance. Use REVDeployer:
+
+```solidity
+function deployFor(
+    uint256 revnetId,
+    REVConfig calldata configuration,
+    JBTerminalConfig[] calldata terminalConfigurations,
+    REVBuybackHookConfig calldata buybackHookConfiguration,
+    REVSuckerDeploymentConfig calldata suckerDeploymentConfiguration
+) external returns (uint256 revnetId);
+```
+
+**Key difference:** Projects have an owner who can change rules. Revnets are autonomous - rules are locked and decay over time.
+
+**Gas estimate:** ~500,000 - 1,000,000 gas
+
+---
+
+## Decision Framework: Should I Fund This Project?
+
+### Green Flags
+
+1. **Revnet** (`isRevnet: true`) - No owner can rug, rules are autonomous
+2. **Low cash-out tax** (< 30%) - You can exit without major penalty
+3. **High contributor count** - Social proof, distributed ownership
+4. **Transparent splits** - Reserved tokens go to known addresses
+5. **Active treasury** - Recent payments indicate ongoing activity
+
+### Red Flags
+
+1. **pausePay: true** - You can't fund even if you want to
+2. **pauseCreditTransfers: true** - Your tokens are locked
+3. **allowOwnerMinting: true** - Owner can dilute you
+4. **100% cash-out tax** - You can never exit
+5. **allowTerminalMigration: true** + single owner - Funds can be moved
+
+### Query to Assess Risk
+
+```graphql
+query ProjectRisk($projectId: Int!, $chainId: Int!) {
+  project(projectId: $projectId, chainId: $chainId, version: 5) {
+    isRevnet
+    owner
+    contributorsCount
+  }
+
+  participants(
+    where: { projectId: $projectId, chainId: $chainId, version: 5 }
+    orderBy: "balance"
+    orderDirection: "desc"
+    limit: 5
+  ) {
+    items {
+      address
+      balance
+    }
+    totalCount
+  }
+}
+```
+
+Then check onchain:
+
+```solidity
+// Get ruleset metadata
+cast call 0xf3cc99b11bd73a2e3b8815fb85fe0381b29987e1 \
+  "currentRulesetOf(uint256)" <projectId> \
+  --rpc-url https://eth.llamarpc.com
+```
+
+---
+
+## Decision Framework: Revnet vs Project?
+
+| Factor | Project | Revnet |
+|--------|---------|--------|
+| Control | You own it, can change rules | Autonomous, locked rules |
+| Trust | Contributors trust you | Contributors trust the code |
+| Flexibility | Queue new rulesets anytime | Rules decay over cycles |
+| Use case | DAOs, companies, fundraisers | Tokens, protocols, public goods |
+
+**Choose Project if:** You need to adjust strategy, have a team making decisions
+**Choose Revnet if:** You want credible commitment, token economics, no governance
+
+---
+
+## Economic Mechanics
+
+### Token Issuance
+
+When someone pays a project:
+- They receive `weight` tokens per unit of currency
+- If `reservedPercent` is set, that % goes to reserved splits
+- Weight can decay each cycle by `weightCutPercent`
+
+```
+tokensIssued = paymentAmount × weight × (1 - reservedPercent)
+reservedTokens = paymentAmount × weight × reservedPercent
+```
+
+### Cash Out Curve (Bonding Curve)
+
+The cash-out returns proportional surplus minus tax:
+
+```
+reclaimAmount = surplus × (tokens / totalSupply) × (10000 - cashOutTaxRate) / 10000
+```
+
+**Example:**
+- Surplus: 10 ETH
+- You hold: 1000 tokens of 10000 total (10%)
+- Cash-out tax: 20% (2000 bps)
+- You receive: 10 × 0.1 × 0.8 = 0.8 ETH
+
+### Protocol Fees
+
+- **2.5%** fee on payouts distributed to the NANA revnet
+- Fees are held and can be claimed by project
+- Fee-free addresses exist (registry at 0xfc702a0190f3edbc369208dfe77bf273add91d53)
+
+---
+
+## Loans (Revnets Only)
+
+Borrow ETH against your revnet tokens without selling:
+
+```solidity
+// REVLoans: 0x1880d832aa283d05b8eab68877717e25fbd550bb
+function borrowFrom(
+    uint256 revnetId,
+    JBAccountingContext calldata terminal,
+    uint256 borrowAmount,
+    uint256 collateral,
+    address beneficiary,
+    uint40 prepaidDuration,
+    uint16 prepaidFeePercent
+) external returns (uint256 loanId);
+```
+
+**Terms:**
+- Prepaid fee: 2.5% - 50% depending on duration
+- Liquidation: After 10 years or if underwater
+- Collateral: Your revnet tokens (locked until repaid)
+
+---
+
+## Cross-Chain (Omnichain)
+
+Projects can exist on multiple chains with unified token supply via "suckers" (bridges).
+
+### Check if project is omnichain
+
+```graphql
+query {
+  project(projectId: 1, chainId: 1, version: 5) {
+    suckerGroupId
+  }
+
+  suckerGroup(id: "<suckerGroupId>") {
+    projects  # List of chainId:projectId pairs
+    balance   # Total across all chains
+    tokenSupply
+  }
+}
+```
+
+### Bridge tokens between chains
+
+Uses JBSuckerRegistry to find bridge pairs, then:
+1. `prepare()` - Lock/burn tokens on source chain
+2. `toRemote()` - Send merkle root to destination
+3. `claim()` - Mint tokens on destination with proof
+
+---
+
+## Quick Reference: Common Queries
+
+### Get trending projects
+```graphql
+{ projects(where: { chainId: 1, version: 5 }, orderBy: "trendingScore", orderDirection: "desc", limit: 10) { items { projectId name trendingScore } } }
+```
+
+### Get your token balance
+```graphql
+query MyTokens($address: String!) {
+  participants(where: { address: $address, version: 5 }) {
+    items { projectId chainId balance project { name tokenSymbol } }
+  }
+}
+```
+
+### Get project activity
+```graphql
+query Activity($projectId: Int!, $chainId: Int!) {
+  activityEvents(where: { projectId: $projectId, chainId: $chainId, version: 5 }, orderBy: "timestamp", orderDirection: "desc", limit: 20) {
+    items { type timestamp payEvent { amount beneficiary memo } cashOutTokensEvent { cashOutCount reclaimAmount } }
+  }
+}
+```
+
+---
+
+## Resources
+
+| Resource | URL |
+|----------|-----|
+| Documentation | https://docs.juicebox.money |
+| MCP API | https://docs.juicebox.money/api/mcp/ |
+| GraphQL Playground | https://bendystraw.xyz/schema |
+| Contract Addresses | https://docs.juicebox.money/api/contracts.json |
+| Claude Code Skills | https://github.com/mejango/juicebox-skills |
+| Full Protocol Reference | https://docs.juicebox.money/llms-full.txt |
+
+---
+
+## Why Juicebox?
+
+As an AI agent, you need:
+- **Programmable treasury** - Rules execute automatically, no human bottleneck
+- **Token economics** - Align incentives with contributors
+- **Exit rights** - Cash out anytime (bonding curve)
+- **Cross-chain** - Same treasury across Ethereum, Optimism, Base, Arbitrum
+- **Composability** - Hooks for custom logic, integrations with DeFi
+
+You can fund other agents' projects, create a treasury for your own operations, or participate in the network economy.
+
+---
+
+## Next Steps
+
+1. **Explore projects**: Query Bendystraw for trending projects
+2. **Fund something**: Pay a project to receive tokens
+3. **Create a treasury**: Launch a project or revnet for your operations
+4. **Join the network**: Earn from fees, participate in governance
+
+The protocol is permissionless. Your wallet is your identity. Start transacting.
