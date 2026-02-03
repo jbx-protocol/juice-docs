@@ -10,7 +10,7 @@ We also have a [video tutorial](https://www.youtube.com/watch?v=2s2OyxG_rvo). If
 To begin, visit [juicebox.money/create](https://juicebox.money/create). You will need to have an Ethereum wallet and some ETH to pay for gas fees.
 
 - If you need an Ethereum wallet, visit [Metamask.io](https://metamask.io/) to set one up.
-- To experiment before committing to mainnet, you can use the [Goerli Testnet juicebox.money](https://goerli.juicebox.money/).
+- To experiment before committing to mainnet, you can use the [Sepolia Testnet juicebox.money](https://sepolia.juicebox.money/).
 
 What to know beforehand:
 
