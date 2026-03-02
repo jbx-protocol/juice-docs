@@ -9,5 +9,4 @@
 #### What you'll want to know if you're building
 
 * Splits can be set for a ruleset configuration during the [`JBController.launchProjectFor(...)`](/docs/dev/v5/api/core/JBController.md#launchprojectfor), [`JBController.queueRulesetsOf(...)`](/docs/dev/v5/api/core/JBController.md#queuerulesetsof), or [`JBController.launchRulesetsFor(...)`](/docs/dev/v5/api/core/JBController.md#launchrulesetsfor) transactions, or separately using [`JBController.setSplitGroupsOf(...)`](/docs/dev/v5/api/core/JBController.md#setsplitgroupsof).
-
-
+* When a split targets a project (`projectId` is non-zero), the split's `beneficiary` receives any project tokens minted from the payment. If `beneficiary` is `address(0)`, the terminal defaults to the `msg.sender` of the `sendPayoutsOf` call as the token recipient. Always set an explicit `beneficiary` to ensure tokens are routed to the intended address.
